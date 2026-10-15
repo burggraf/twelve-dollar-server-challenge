@@ -1,0 +1,43 @@
+ Image grafana/k6:1.3.0@sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d Pulling 
+ 6e174226ea69 Pulling fs layer 0B
+ 8a9f36f5f66b Pulling fs layer 0B
+ b07aa85bd044 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 4f4fb700ef54 Waiting 0B
+ 8a9f36f5f66b Downloading 935B
+ 8a9f36f5f66b Verifying Checksum 0B
+ 8a9f36f5f66b Download complete 0B
+ 6e174226ea69 Downloading 48.51kB
+ b07aa85bd044 Downloading 291kB
+ 6e174226ea69 Downloading 1.179MB
+ 4f4fb700ef54 Downloading 32B
+ 4f4fb700ef54 Verifying Checksum 0B
+ 4f4fb700ef54 Download complete 0B
+ b07aa85bd044 Downloading 1.758MB
+ 6e174226ea69 Downloading 3.882MB
+ 6e174226ea69 Verifying Checksum 0B
+ 6e174226ea69 Download complete 0B
+ 6e174226ea69 Extracting 65.54kB
+ b07aa85bd044 Downloading 5.59MB
+ 6e174226ea69 Extracting 3.604MB
+ 6e174226ea69 Extracting 4.131MB
+ 6e174226ea69 Pull complete 0B
+ 8a9f36f5f66b Extracting 935B
+ 8a9f36f5f66b Extracting 935B
+ 8a9f36f5f66b Pull complete 0B
+ b07aa85bd044 Downloading 11.18MB
+ b07aa85bd044 Downloading 18.01MB
+ b07aa85bd044 Downloading 23.91MB
+ b07aa85bd044 Verifying Checksum 0B
+ b07aa85bd044 Download complete 0B
+ b07aa85bd044 Extracting 294.9kB
+ b07aa85bd044 Extracting 8.552MB
+ b07aa85bd044 Extracting 23MB
+ b07aa85bd044 Extracting 28.86MB
+ b07aa85bd044 Pull complete 0B
+ 4f4fb700ef54 Extracting 32B
+ 4f4fb700ef54 Extracting 32B
+ 4f4fb700ef54 Pull complete 0B
+ Image grafana/k6:1.3.0@sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d Pulled 
+ Container baas-trailbase-load Creating 
+ Container baas-trailbase-load Created 

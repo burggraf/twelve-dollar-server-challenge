@@ -1,0 +1,14 @@
+server {
+  application_name: "BaaS Feed Benchmark"
+  site_url: "http://localhost:4000"
+  logs_retention_sec: 86400
+}
+auth {
+  disable_password_auth: true
+}
+# Read-only native Record API verifies the platform, outside the timed app journey.
+record_apis: [{
+  name: "benchmark_posts"
+  table_name: "posts"
+  acl_world: [READ]
+}]

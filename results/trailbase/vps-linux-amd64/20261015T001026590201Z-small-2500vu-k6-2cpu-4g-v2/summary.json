@@ -1,0 +1,15 @@
+{
+  "outcome": "invalid",
+  "reason": "missing k6 scenario-start clock",
+  "vus": 2500,
+  "tier": "small",
+  "mode": "capacity",
+  "runner_profile": "k6-2cpu-4g-v2",
+  "deployment_track": "vps-linux-amd64",
+  "platform": "linux/amd64",
+  "hold_requests": 0,
+  "hold_rps": 0.0,
+  "latency_ms": {},
+  "request_errors": {},
+  "schema_errors": {}
+}

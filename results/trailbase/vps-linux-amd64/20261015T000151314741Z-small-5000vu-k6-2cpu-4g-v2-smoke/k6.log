@@ -1,0 +1,37 @@
+ Image grafana/k6:1.3.0@sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d Pulling 
+ 4f4fb700ef54 Pulling fs layer 0B
+ 9824c27679d3 Pulling fs layer 0B
+ 14c020c6cf1f Pulling fs layer 0B
+ e488bc2c5497 Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ 4f4fb700ef54 Pull complete 0B
+ e488bc2c5497 Download complete 0B
+ 9824c27679d3 Downloading 1.049MB
+ 9824c27679d3 Downloading 3.146MB
+ 9824c27679d3 Download complete 0B
+ 14c020c6cf1f Downloading 2.097MB
+ 9824c27679d3 Extracting 1B
+ ecfdb57cf3d2 Download complete 0B
+ 14c020c6cf1f Downloading 4.194MB
+ e488bc2c5497 Pull complete 0B
+ 9824c27679d3 Pull complete 0B
+ 14c020c6cf1f Downloading 6.291MB
+ 14c020c6cf1f Downloading 9.437MB
+ 14c020c6cf1f Downloading 11.53MB
+ 14c020c6cf1f Downloading 13.63MB
+ 14c020c6cf1f Downloading 16.78MB
+ 14c020c6cf1f Downloading 18.87MB
+ 14c020c6cf1f Downloading 21.53MB
+ 14c020c6cf1f Downloading 24.12MB
+ 14c020c6cf1f Downloading 26.21MB
+ 14c020c6cf1f Downloading 29.36MB
+ 14c020c6cf1f Download complete 0B
+ 14c020c6cf1f Extracting 1B
+ 14c020c6cf1f Extracting 1B
+ 14c020c6cf1f Extracting 1B
+ 14c020c6cf1f Extracting 1B
+ 14c020c6cf1f Extracting 1B
+ 14c020c6cf1f Pull complete 0B
+ Image grafana/k6:1.3.0@sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d Pulled 
+ Container baas-trailbase-vps-load Creating 
+ Container baas-trailbase-vps-load Created 

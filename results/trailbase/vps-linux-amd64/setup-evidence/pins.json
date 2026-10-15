@@ -1,0 +1,19 @@
+{
+  "trailbase_version": "0.34.6",
+  "trailbase_index": "sha256:ab8f6d9dc943520b3902cdb7e6a8bd07f7701d34eea003a00897790bdd56d11c",
+  "trailbase_amd64": "sha256:c35590c8016bda42aff7157aa617aa91301cd1f5e29a9db594519b05602b8de5",
+  "buildkit_amd64": "sha256:98cc6a3fc46220d00f8224ae483f3274fc874e9be8d7dd1e2e2c5481209228b5",
+  "compose_version": "5.5.0",
+  "compose_amd64_sha256": "c57ab918abd5b05ca7e7d0f275875dd1330a695074f309dc9eab1b49efafcd4b",
+  "buildx_version": "0.37.2",
+  "buildx_amd64_sha256": "982ca20490b45ed1ec8d99795974d3d874a358f75938c9c237305010e6b7e548",
+  "k6_version": "1.3.0",
+  "k6_index": "sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d",
+  "k6_amd64": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656",
+  "build_limits": {
+    "cpus": 2,
+    "memory_bytes": 2147483648,
+    "swap_bytes": 0
+  },
+  "source_transfer_sha256": "5a1a2fb05a97bea8250e37088ef843b6e04156ca2931d6d24cca1d212bf823a6"
+}

@@ -1,0 +1,1214 @@
+diff --git a/.github/workflows/test.yml b/.github/workflows/test.yml
+deleted file mode 100644
+index f46a824..0000000
+--- a/.github/workflows/test.yml
++++ /dev/null
+@@ -1,51 +0,0 @@
+-# Runs every submission a pull request adds or changes through test/run.sh on a clean Ubuntu 24.04.
+-name: test submissions
+-on:
+-  pull_request:
+-  push:
+-    branches: [main]
+-  workflow_dispatch:   # re-tests every submission
+-permissions:
+-  contents: read
+-
+-jobs:
+-  find:
+-    runs-on: ubuntu-24.04
+-    outputs:
+-      dirs: ${{ steps.dirs.outputs.dirs }}
+-    steps:
+-      - uses: actions/checkout@v4
+-        with: { fetch-depth: 0 }
+-      - id: dirs
+-        run: |
+-          if [ "${{ github.event_name }}" = pull_request ]; then
+-            changed=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
+-          elif [ "${{ github.event_name }}" = push ] && git rev-parse -q --verify HEAD~1 >/dev/null; then
+-            changed=$(git diff --name-only HEAD~1 HEAD)
+-          else
+-            changed=$(ls -d submissions/*/ 2>/dev/null | sed 's#/$#/x#')
+-          fi
+-          # a change outside submissions/ (spec, tests, seed) re-tests every submission
+-          if echo "$changed" | grep -qv '^submissions/'; then changed=$(ls -d submissions/*/ 2>/dev/null | sed 's#/$#/x#'); fi
+-          dirs=$(echo "$changed" | awk -F/ '$1=="submissions" && NF>2 {print $1"/"$2}' | sort -u | while read -r d; do [ -d "$d" ] && echo "$d"; done)
+-          echo "dirs=$(echo "$dirs" | jq -R . | jq -sc 'map(select(length>0))')" >> "$GITHUB_OUTPUT"
+-          echo "testing: $dirs"
+-
+-  test:
+-    needs: find
+-    if: needs.find.outputs.dirs != '[]'
+-    runs-on: ubuntu-24.04
+-    strategy:
+-      fail-fast: false
+-      matrix:
+-        dir: ${{ fromJson(needs.find.outputs.dirs) }}
+-    steps:
+-      - uses: actions/checkout@v4
+-      - name: tools
+-        run: sudo apt-get update -qq && sudo apt-get install -y -qq sqlite3 jq curl openssl
+-      - name: seed
+-        run: bash seed/make-seed.sh
+-      - name: install.sh
+-        run: sudo bash ${{ matrix.dir }}/install.sh
+-      - name: build, start, test
+-        run: bash test/run.sh ${{ matrix.dir }}
+diff --git a/.gitignore b/.gitignore
+deleted file mode 100644
+index ad07ad0..0000000
+--- a/.gitignore
++++ /dev/null
+@@ -1,5 +0,0 @@
+-seed/feed.db*
+-seed/tokens.json
+-seed/tsv/
+-results/
+-.DS_Store
+diff --git a/LICENSE b/LICENSE
+deleted file mode 100644
+index 312b0ed..0000000
+--- a/LICENSE
++++ /dev/null
+@@ -1,21 +0,0 @@
+-MIT License
+-
+-Copyright (c) 2026 arjaythedev and the challenge contributors
+-
+-Permission is hereby granted, free of charge, to any person obtaining a copy
+-of this software and associated documentation files (the "Software"), to deal
+-in the Software without restriction, including without limitation the rights
+-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-copies of the Software, and to permit persons to whom the Software is
+-furnished to do so, subject to the following conditions:
+-
+-The above copyright notice and this permission notice shall be included in all
+-copies or substantial portions of the Software.
+-
+-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-SOFTWARE.
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index 55a058a..0000000
+--- a/README.md
++++ /dev/null
+@@ -1,108 +0,0 @@
+-# The $12 Server Challenge
+-
+-How many users can one **$12/month server** (1 vCPU, 2 GB RAM) handle? 
+-
+-I benchmarked 8 languages with basic unoptimized code using language defaults. https://www.youtube.com/watch?v=sQXFhh_PiG4
+-
+-**Now it's your turn: implement the same API in any language and framework, make it as fast as you can on
+-SQLite, and I'll benchmark it on the same VM.**
+-
+-## What's here
+-
+-| | |
+-|---|---|
+-| [`SPEC.md`](SPEC.md) | The API you implement: 5 endpoints, exact JSON and errors |
+-| [`schema.sql`](schema.sql) | The SQLite schema (fixed) |
+-| [`seed/make-seed.sh`](seed/make-seed.sh) | Builds the seed database `seed/feed.db` (50k users, 500k posts, 2M likes) and `seed/tokens.json` |
+-| [`test/test.sh`](test/test.sh) | The test suite (42 checks). Your server must pass all of them |
+-| [`test/run.sh`](test/run.sh) | Builds your submission, starts it on a fresh database copy and runs the tests (what CI runs) |
+-| [`bench/load.js`](bench/load.js) | The k6 load test we score with (you can test this yourself before submission) |
+-| [`bench/nginx.conf`](bench/nginx.conf) | The Nginx config in front of your server, if you want Nginx (rule 9) |
+-
+-## Quick start
+-
+-```bash
+-bash seed/make-seed.sh                          # needs node >= 18 and sqlite3; about a minute
+-mkdir submissions/rust-axum-yourname            # your code + install.sh, build.sh, start.sh, README.md
+-bash test/run.sh submissions/rust-axum-yourname # needs curl, jq, openssl
+-k6 run -e VUS=1000 bench/load.js                # optional: load test your server yourself
+-```
+-
+-## Rules
+-
+-**The stack**
+-1. Any language, framework, runtime and SQLite driver/binding. Any number of processes or threads.
+-2. **The database is SQLite**: the file at `$SQLITE_PATH`, used in-process. No other database, cache
+-   server, or external service (no Postgres, Redis, Memcached).
+-3. The schema and data are fixed. Don't add or change tables, columns, indexes or triggers. Any SQL
+-   you like against the schema as given.
+-
+-**Correctness**
+-4. Pass `test/test.sh` 100%, with the exact bytes it expects.
+-5. **No caching across requests.** Every request reads its data from SQLite while it is being served:
+-   no response caches, query-result caches, in-memory copies of tables, or remembered JWT verifications
+-   (verify every token's signature). SQLite's own page cache and `mmap` are fine. That's the database.
+-   Reusing prepared statements is fine too: they cache the query plan, not the data.
+-6. **Writes are durable before you respond.** A 201 means the row is committed. Use WAL with
+-   `synchronous=NORMAL` or stronger: no `synchronous=OFF`, no `journal_mode=OFF/MEMORY`, no in-memory database.
+-   Batching several requests' writes into one transaction (group commit) is allowed if each response waits for
+-   its commit.
+-7. No hard-coded responses, no detecting the load test, nothing that only works because it's a benchmark.
+-
+-**VM Specs and Info**
+-8. It runs on Ubuntu 24.04 x86_64 on a DigitalOcean Basic droplet: 1 vCPU, 2 GB RAM, no swap. You share
+-   the CPU and RAM with the OS (and Nginx, if you use it). If you run out of memory, you lose.
+-9. **Nginx is optional.** Either run behind our Nginx ([`bench/nginx.conf`](bench/nginx.conf), as in the video)
+-   on `127.0.0.1:3000`, or serve the internet directly on `0.0.0.0:80`. Going direct saves the CPU Nginx uses
+-   (14–20% in the video), but then your server has to handle up to ~15,000 open keep-alive connections by
+-   itself. Say which one you chose in your README.
+-10. It is built from source on the box with your `install.sh` and `build.sh`. Pin your dependency versions,
+-   and don't ship prebuilt binaries. It must come up healthy within 60 seconds of `start.sh`.
+-11. Nothing on the box gets tuned for you: no kernel parameters, and no pinning of CPU or other processes.
+-    Settings inside your own process (GC, thread counts, allocator, pragmas allowed by rule 6) are fair game.
+-
+-## Submitting
+-
+-Open a pull request that adds one folder, `submissions/<language>-<framework>-<github-username>/`, containing:
+-
+-| File | What it does |
+-|---|---|
+-| `install.sh` | Run once as root on a clean Ubuntu 24.04: installs your toolchain/runtime (apt, official tarballs) |
+-| `build.sh` | Builds your app as a normal user (may download pinned dependencies) |
+-| `start.sh` | Runs the server **in the foreground**, configured only by the env vars in SPEC.md |
+-| `README.md` | Language, framework, driver and versions; **Nginx or direct**; the optimizations you made and why |
+-| your code | Source only: don't commit build output (`bin/`, `target/`, `node_modules/`, …). Add a `.gitignore` |
+-
+-For example, the three scripts for a Go server:
+-
+-```bash
+-# install.sh: runs once as root on a clean Ubuntu 24.04
+-set -euo pipefail
+-apt-get update && apt-get install -y build-essential curl
+-curl -fsSL https://go.dev/dl/go1.27.1.linux-amd64.tar.gz | tar -C /usr/local -xz
+-
+-# build.sh: runs as a normal user
+-set -euo pipefail
+-cd "$(dirname "$0")" && /usr/local/go/bin/go build -o bin/server .
+-
+-# start.sh: runs the server in the foreground
+-exec "$(dirname "$0")/bin/server"
+-```
+-
+-CI runs `install.sh` and `test/run.sh` on every pull request, and it must be green. Don't touch files outside your folder.
+-By submitting, you license your code under the repo's [MIT license](LICENSE).
+-
+-## Scoring
+-
+-We benchmark each passing submission exactly like the languages video: on the same droplet, with k6 on a
+-separate machine. Every implementation in the video ran behind Nginx.
+-
+-1. **Warm-up**: 1,000 users for 2 minutes (not scored).
+-2. **Find the limit**: `bench/load.js` starting at 2,500 users, doubling until a run fails, then narrowing
+-   down to within 250 users.
+-3. **Confirm it**: one 5-minute hold at that number. If it fails, step down 250 users and try again.
+-
+-**Your score is the most users that pass a 5-minute hold** with p95 under 500 ms, p99 under 1 s and under 1% errors.
+-
+-**After your pull request is merged**, it waits for the next benchmark batch. I run merged submissions in batches,
+-not one at a time, on no fixed schedule, and share the results once a batch is done.
+diff --git a/SPEC.md b/SPEC.md
+deleted file mode 100644
+index c1280db..0000000
+--- a/SPEC.md
++++ /dev/null
+@@ -1,84 +0,0 @@
+-# API spec
+-
+-A small feed API (think a stripped-down Twitter). Five endpoints, JSON in and out. `test/test.sh`
+-checks everything on this page, and when the two disagree, the test suite wins.
+-
+-## Runtime contract
+-
+-Your server reads its config from these environment variables:
+-
+-| Variable | Value on the benchmark box |
+-|---|---|
+-| `SQLITE_PATH` | path to a fresh copy of `seed/feed.db` (WAL mode, schema in `schema.sql`) |
+-| `JWT_SECRET` | `twelve-dollar-challenge` |
+-| `HOST`, `PORT` | `127.0.0.1`, `3000` behind Nginx; `0.0.0.0`, `80` if you serve directly |
+-
+-Listen on `HOST:PORT` and speak HTTP/1.1 with keep-alive. Compression is optional.
+-
+-- **Behind Nginx** (`bench/nginx.conf`): Nginx keeps up to 64 idle connections to you. Keep idle connections
+-  open for at least 65 s so Nginx never reuses a socket you just closed.
+-- **Direct**: every k6 user holds its own keep-alive connection, so expect up to ~15,000 open connections.
+-  Your service gets `LimitNOFILE=65535` and `CAP_NET_BIND_SERVICE` (it doesn't run as root).
+-
+-## Responses
+-
+-- Every body is **compact JSON**, `Content-Type: application/json` (`; charset=utf-8` is fine). A trailing newline is fine.
+-- **Key order is exactly as shown.**
+-- **Post object**: `{"id":<int>,"body":<string>,"created_at":<string>,"author":<string>,"like_count":<int>}`
+-  - `author` is the post author's `users.username`.
+-  - `like_count` is the number of rows in `likes` for that post, **as of this request**.
+-  - `created_at` is UTC with millisecond precision and a `Z` suffix: `2025-12-31T23:59:19.409Z`. It is stored in exactly
+-    this format, so send it as stored. New rows get `strftime('%Y-%m-%dT%H:%M:%fZ','now')` (the column default).
+-- Escaping `<>&/` or non-ASCII characters is optional. Load-test payloads are plain ASCII.
+-
+-## Endpoints
+-
+-| Request | Success | Body |
+-|---|---|---|
+-| `GET /health` | 200 | `{"status":"ok","db":"ok","uptime_s":<int>}` after a `SELECT 1` succeeds. If it fails: 503 `{"status":"degraded","db":"unreachable","error":<string>}` |
+-| `GET /feed` | 200 | `{"posts":[<post> × 20]}`: the 20 newest posts, `ORDER BY created_at DESC, id DESC` |
+-| `GET /posts/:id` | 200 | `{"post":<post>}` |
+-| `POST /posts` (auth) | 201 | `{"post":{"id":…,"body":<trimmed body>,"created_at":…,"author":<token username>,"like_count":0}}`. Request body: `{"body":"..."}` |
+-| `POST /posts/:id/like` (auth) | 201 first time, 200 on repeats | `{"liked":true,"already_liked":<bool>,"post_id":<int>}`. One like per (user, post) |
+-
+-For reference, these are the queries the implementations in the video ran (one per request). You can write your own SQL.
+-
+-```sql
+--- post object (+ "ORDER BY p.created_at DESC, p.id DESC LIMIT 20" for the feed, or "WHERE p.id = ?")
+-SELECT p.id, p.body, p.created_at, u.username,
+-       (SELECT count(*) FROM likes l WHERE l.post_id = p.id) AS like_count
+-  FROM posts p JOIN users u ON u.id = p.user_id
+-INSERT INTO posts (user_id, body) VALUES (?, ?) RETURNING id, created_at
+-INSERT INTO likes (user_id, post_id) VALUES (?, ?) ON CONFLICT (user_id, post_id) DO NOTHING
+-```
+-
+-## Errors
+-
+-Every error body is `{"error":"<message>"}`.
+-
+-| Condition | Status | Message |
+-|---|---|---|
+-| unknown path | 404 | `not found` |
+-| `:id` is not a positive integer (`0`, `-1`, `abc`, `1.5`) | 400 | `invalid post id` |
+-| the post doesn't exist (GET or like) | 404 | `post not found` |
+-| no `Authorization` header, or it doesn't start with `Bearer ` | 401 | `missing bearer token` |
+-| bad signature, expired, not HS256, or malformed JWT | 401 | `invalid or expired token` |
+-| valid JWT, but `sub` isn't a positive integer string or `username` isn't a string | 401 | `invalid token payload` |
+-| request body isn't valid JSON | 400 | `malformed JSON body` |
+-| `body` is missing, not a string, or empty after trimming whitespace | 400 | `body is required` |
+-| `body` is longer than 500 characters after trimming | 400 | `body must be at most 500 characters` |
+-| anything else | 500 | `internal server error` |
+-
+-On authenticated routes, **check auth first, then the id**: `POST /posts/abc/like` without a token returns 401, and with a valid token it returns 400.
+-
+-## Auth
+-
+-`Authorization: Bearer <jwt>`, HS256 signed with `JWT_SECRET`, payload `{"sub":"<user id>","username":"<name>","iat":…,"exp":…}`.
+-Verify the signature and `exp`, and accept HS256 only. The user id is the integer in `sub`, and `username` is used as-is
+-(it isn't looked up). There is no login endpoint. `seed/make-seed.sh` writes pre-signed tokens for users 1–20,000 to
+-`seed/tokens.json`.
+-
+-## Out of scope
+-
+-These are not tested, so do whatever your framework does: bodies over 16 KB, ids beyond 2^53, hex or exponent ids,
+-wrong HTTP methods on known paths.
+diff --git a/bench/load.js b/bench/load.js
+deleted file mode 100644
+index f4066f7..0000000
+--- a/bench/load.js
++++ /dev/null
+@@ -1,70 +0,0 @@
+-/**
+- * The load test. One virtual user (VU) = one person browsing the feed, with think time.
+- * A submission's score is the highest VUS that passes a 5-minute hold (see README.md).
+- *
+- *   k6 run -e VUS=2000 bench/load.js
+- *   k6 run -e BASE_URL=http://10.0.0.5 -e VUS=8000 bench/load.js
+- *
+- * Env: BASE_URL (default http://127.0.0.1:3000), VUS (default 100), DURATION (default 5m),
+- *      RAMP_UP (default 60s), TOKENS (default seed/tokens.json).
+- *
+- * User loop: GET /feed -> think 3-7 s -> GET /posts/:id (one from the feed) -> think 3-8 s
+- *   -> like it (15% chance) -> write a post (2% chance) -> idle 5-15 s -> repeat.
+- *
+- * Pass: p95 < 500 ms, p99 < 1000 ms, under 1% failed requests (k6 exits non-zero on a fail).
+- */
+-import http from 'k6/http';
+-import { check, sleep } from 'k6';
+-import { SharedArray } from 'k6/data';
+-
+-const BASE_URL = __ENV.BASE_URL || 'http://127.0.0.1:3000';
+-const VUS = Number(__ENV.VUS || 100);
+-const LIKE_PROB = 0.15;
+-const POST_PROB = 0.02;
+-const tokens = new SharedArray('tokens', () => JSON.parse(open(__ENV.TOKENS || '../seed/tokens.json')));
+-
+-export const options = {
+-  scenarios: {
+-    users: {
+-      executor: 'ramping-vus',
+-      stages: [
+-        { duration: __ENV.RAMP_UP || '60s', target: VUS },
+-        { duration: __ENV.DURATION || '5m', target: VUS },
+-        { duration: '30s', target: 0 },
+-      ],
+-      gracefulRampDown: '10s',
+-    },
+-  },
+-  thresholds: {
+-    http_req_duration: ['p(95)<500', 'p(99)<1000'],
+-    http_req_failed: ['rate<0.01'],
+-  },
+-  summaryTrendStats: ['avg', 'med', 'p(95)', 'p(99)', 'max'],
+-};
+-
+-const between = (lo, hi) => lo + Math.random() * (hi - lo);
+-
+-export default function () {
+-  const user = tokens[(__VU - 1) % tokens.length];
+-  const auth = { headers: { Authorization: `Bearer ${user.token}`, 'Content-Type': 'application/json' } };
+-  if (__ITER === 0) sleep(between(0, 5)); // spread out VUs that start in the same tick
+-
+-  const feed = http.get(`${BASE_URL}/feed`, { tags: { name: 'GET /feed' } });
+-  if (!check(feed, { 'feed 200': (r) => r.status === 200 })) { sleep(between(3, 7)); return; }
+-  const posts = feed.json('posts');
+-  const post = posts[Math.floor(Math.random() * posts.length)];
+-  sleep(between(3, 7));
+-
+-  check(http.get(`${BASE_URL}/posts/${post.id}`, { tags: { name: 'GET /posts/:id' } }), { 'post 200': (r) => r.status === 200 });
+-  sleep(between(3, 8));
+-
+-  if (Math.random() < LIKE_PROB) {
+-    const r = http.post(`${BASE_URL}/posts/${post.id}/like`, null, { ...auth, tags: { name: 'POST /posts/:id/like' } });
+-    check(r, { 'like 200/201': (r) => r.status === 200 || r.status === 201 });
+-  }
+-  if (Math.random() < POST_PROB) {
+-    const body = JSON.stringify({ body: `${user.username} says hi at ${new Date().toISOString()} (VU ${__VU}, iter ${__ITER})` });
+-    check(http.post(`${BASE_URL}/posts`, body, { ...auth, tags: { name: 'POST /posts' } }), { 'create 201': (r) => r.status === 201 });
+-  }
+-  sleep(between(5, 15));
+-}
+diff --git a/bench/nginx.conf b/bench/nginx.conf
+deleted file mode 100644
+index 2813c7a..0000000
+--- a/bench/nginx.conf
++++ /dev/null
+@@ -1,30 +0,0 @@
+-# The Nginx site config in front of every submission on the benchmark box (not yours to change).
+-# /etc/nginx/nginx.conf also sets worker_rlimit_nofile 65535 and worker_connections 16384.
+-upstream app {
+-    server 127.0.0.1:3000;
+-    keepalive 64;
+-}
+-
+-log_format bench '$remote_addr [$time_local] "$request" $status $body_bytes_sent '
+-                 'rt=$request_time urt=$upstream_response_time';
+-
+-server {
+-    listen 80 default_server;
+-    server_name _;
+-
+-    access_log /var/log/nginx/bench.access.log bench buffer=64k flush=5s;
+-    error_log  /var/log/nginx/bench.error.log warn;
+-
+-    gzip on;
+-    gzip_types application/json;
+-    gzip_min_length 1024;
+-
+-    location / {
+-        proxy_pass http://app;
+-        proxy_http_version 1.1;
+-        proxy_set_header Connection "";
+-        proxy_set_header Host $host;
+-        proxy_connect_timeout 5s;
+-        proxy_read_timeout 30s;
+-    }
+-}
+diff --git a/schema.sql b/schema.sql
+deleted file mode 100644
+index 191a3e1..0000000
+--- a/schema.sql
++++ /dev/null
+@@ -1,26 +0,0 @@
+--- The database every submission uses (SQLite). seed/make-seed.sh builds seed/feed.db from it.
+--- The schema is fixed: submissions may not add or change tables, columns, indexes or triggers.
+--- Timestamps are TEXT in the exact wire format (YYYY-MM-DDTHH:MM:SS.mmmZ, UTC), which also sorts correctly.
+-CREATE TABLE users (
+-  id          INTEGER PRIMARY KEY,
+-  username    TEXT NOT NULL UNIQUE,
+-  created_at  TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))
+-);
+-
+-CREATE TABLE posts (
+-  id          INTEGER PRIMARY KEY,
+-  user_id     INTEGER NOT NULL REFERENCES users(id),
+-  body        TEXT NOT NULL CHECK (length(body) BETWEEN 1 AND 500),
+-  created_at  TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))
+-);
+-
+-CREATE TABLE likes (
+-  user_id     INTEGER NOT NULL REFERENCES users(id),
+-  post_id     INTEGER NOT NULL REFERENCES posts(id),
+-  created_at  TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now')),
+-  PRIMARY KEY (user_id, post_id)
+-);
+-
+-CREATE INDEX posts_created_at_id_idx ON posts (created_at DESC, id DESC);
+-CREATE INDEX posts_user_id_idx       ON posts (user_id);
+-CREATE INDEX likes_post_id_idx       ON likes (post_id);
+diff --git a/seed/generate.mjs b/seed/generate.mjs
+deleted file mode 100644
+index d3bbe4c..0000000
+--- a/seed/generate.mjs
++++ /dev/null
+@@ -1,137 +0,0 @@
+-// Deterministic seed data: users.tsv, posts.tsv, likes.tsv and tokens.json in the given directory.
+-// No dependencies (Node >= 18). Run it through make-seed.sh, which also builds feed.db from the TSVs.
+-//
+-//   node seed/generate.mjs <out-dir>
+-//
+-// Everything comes from one PRNG (mulberry32, seed 42), so every run produces byte-identical files:
+-// 50,000 users, 500,000 posts, ~2,000,000 likes. Do not change this file; the golden test files
+-// depend on its exact output.
+-import { createWriteStream, mkdirSync, writeFileSync } from 'node:fs';
+-import { createHmac } from 'node:crypto';
+-
+-const OUT = process.argv[2];
+-if (!OUT) { console.error('usage: node generate.mjs <out-dir>'); process.exit(1); }
+-const SEED = 42, USERS = 50_000, POSTS = 500_000, LIKES = 2_000_000;
+-const JWT_SECRET = process.env.JWT_SECRET ?? 'twelve-dollar-challenge';
+-const TOKEN_COUNT = 20_000;
+-
+-const END = Date.parse('2026-01-01T00:00:00Z');
+-const DAY = 86_400_000;
+-
+-function mulberry32(seed) {
+-  let a = seed >>> 0;
+-  return () => {
+-    a = (a + 0x6d2b79f5) >>> 0;
+-    let t = a;
+-    t = Math.imul(t ^ (t >>> 15), t | 1);
+-    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+-  };
+-}
+-const rand = mulberry32(SEED);
+-const randInt = (lo, hi) => lo + Math.floor(rand() * (hi - lo + 1));
+-const pick = (arr) => arr[Math.floor(rand() * arr.length)];
+-const expo = (mean) => -mean * Math.log(1 - rand());
+-
+-const ADJECTIVES = ['quiet', 'brave', 'clever', 'sunny', 'rusty', 'swift', 'lazy', 'mellow', 'sharp', 'wild', 'cosmic', 'tiny', 'golden', 'silver', 'happy', 'grumpy', 'curious', 'lucky', 'salty', 'zesty'];
+-const NOUNS = ['otter', 'falcon', 'badger', 'comet', 'river', 'maple', 'pixel', 'walrus', 'ember', 'glacier', 'lantern', 'meadow', 'nebula', 'orchid', 'pebble', 'quartz', 'raven', 'sparrow', 'thistle', 'willow'];
+-const WORDS = (
+-  'the a an and but or so because while after before just really very kind of sort of maybe probably definitely ' +
+-  'server database request latency cache index query benchmark droplet cpu memory disk network throughput users ' +
+-  'coffee morning weekend project deploy release bug feature test rewrite refactor commit branch merge review ' +
+-  'thinking building shipping learning reading writing debugging measuring watching waiting running walking ' +
+-  'fast slow small big cheap simple boring clever weird surprising honest careful lucky tired ready done broken ' +
+-  'today tonight tomorrow yesterday again finally never always sometimes usually rarely once twice ' +
+-  'this that these those here there everywhere nowhere something nothing everything anything someone ' +
+-  'nginx node postgres typescript express linux ubuntu systemd load steal swap kernel socket keepalive pool'
+-).split(/\s+/);
+-const OPENERS = ['Hot take:', 'TIL', 'Unpopular opinion:', 'Note to self:', 'PSA:', 'Okay so', 'Update:', 'Honestly,', 'Reminder:', 'Question:'];
+-
+-function sentence() {
+-  const n = randInt(4, 14);
+-  const words = [];
+-  for (let i = 0; i < n; i++) words.push(pick(WORDS));
+-  const s = words.join(' ');
+-  return s.charAt(0).toUpperCase() + s.slice(1) + pick(['.', '.', '.', '!', '?', '...']);
+-}
+-function postBody() {
+-  const parts = [];
+-  if (rand() < 0.25) parts.push(pick(OPENERS));
+-  const sentences = randInt(1, 3);
+-  for (let i = 0; i < sentences; i++) parts.push(sentence());
+-  let body = parts.join(' ');
+-  if (body.length > 500) body = body.slice(0, 497) + '...';
+-  return body;
+-}
+-const ts = (ms) => new Date(ms).toISOString();
+-
+-async function writeRows(name, total, rowFn) {
+-  const stream = createWriteStream(`${OUT}/${name}.tsv`);
+-  const done = new Promise((resolve, reject) => { stream.on('finish', resolve); stream.on('error', reject); });
+-  let buf = [];
+-  for (let i = 0; i < total; i++) {
+-    buf.push(rowFn(i));
+-    if (buf.length === 2_000 || i === total - 1) {
+-      if (!stream.write(buf.join('\n') + '\n')) await new Promise((res) => stream.once('drain', res));
+-      buf = [];
+-    }
+-  }
+-  stream.end();
+-  await done;
+-  console.log(`  ${name}.tsv: ${total.toLocaleString()} rows`);
+-}
+-
+-mkdirSync(OUT, { recursive: true });
+-
+-const usernames = [];
+-await writeRows('users', USERS, (i) => {
+-  const id = i + 1;
+-  const username = `${pick(ADJECTIVES)}_${pick(NOUNS)}_${id}`;
+-  usernames.push(username);
+-  return `${id}\t${username}\t${ts(END - 730 * DAY + rand() * 365 * DAY)}`;
+-});
+-
+-// Posts are spread evenly over 2025 in id order (small jitter); authorship is skewed toward low user ids.
+-const postStart = END - 365 * DAY;
+-const step = (365 * DAY) / POSTS;
+-const postCreatedAt = new Float64Array(POSTS);
+-await writeRows('posts', POSTS, (i) => {
+-  const userId = 1 + Math.floor(USERS * rand() * rand());
+-  const createdAt = postStart + i * step + rand() * step * 0.9;
+-  postCreatedAt[i] = createdAt;
+-  return `${i + 1}\t${userId}\t${postBody()}\t${ts(createdAt)}`;
+-});
+-
+-// Likes per post: exponential around the mean, 1% "popular" posts at ~20x. Distinct users per post.
+-const meanPerPost = LIKES / POSTS;
+-const popularMean = meanPerPost * 20;
+-const normalMean = Math.max(0.05, (meanPerPost - 0.01 * popularMean + 0.5) / 0.99);
+-const cap = Math.min(USERS, Math.max(50, Math.round(popularMean * 10)));
+-let likeTotal = 0;
+-const perPost = new Array(POSTS);
+-for (let i = 0; i < POSTS; i++) {
+-  perPost[i] = Math.min(cap, Math.floor(expo(rand() < 0.01 ? popularMean : normalMean)));
+-  likeTotal += perPost[i];
+-}
+-let postIdx = 0, remaining = 0;
+-const seen = new Set();
+-await writeRows('likes', likeTotal, () => {
+-  while (remaining === 0) { postIdx++; remaining = perPost[postIdx - 1]; seen.clear(); }
+-  remaining--;
+-  let userId;
+-  do userId = randInt(1, USERS); while (seen.has(userId));
+-  seen.add(userId);
+-  return `${userId}\t${postIdx}\t${ts(postCreatedAt[postIdx - 1] + rand() * 7 * DAY)}`;
+-});
+-
+-// Pre-signed HS256 tokens for the first TOKEN_COUNT users (for bench/load.js). Valid for 10 years.
+-const b64url = (s) => Buffer.from(s).toString('base64url');
+-const header = b64url(JSON.stringify({ alg: 'HS256', typ: 'JWT' }));
+-const iat = Math.floor(Date.now() / 1000);
+-const tokens = usernames.slice(0, TOKEN_COUNT).map((username, i) => {
+-  const payload = b64url(JSON.stringify({ sub: String(i + 1), username, iat, exp: iat + 3650 * 86400 }));
+-  const sig = createHmac('sha256', JWT_SECRET).update(`${header}.${payload}`).digest('base64url');
+-  return { id: i + 1, username, token: `${header}.${payload}.${sig}` };
+-});
+-writeFileSync(`${OUT}/tokens.json`, JSON.stringify(tokens));
+-console.log(`  tokens.json: ${tokens.length.toLocaleString()} tokens (JWT_SECRET=${JWT_SECRET})`);
+diff --git a/seed/make-seed.sh b/seed/make-seed.sh
+deleted file mode 100755
+index a3939b9..0000000
+--- a/seed/make-seed.sh
++++ /dev/null
+@@ -1,38 +0,0 @@
+-#!/usr/bin/env bash
+-# Builds the seed database: seed/feed.db (~250 MB, WAL mode) plus seed/tokens.json.
+-#
+-#   bash seed/make-seed.sh
+-#
+-# Needs: node >= 18 and the sqlite3 CLI (Ubuntu: apt install sqlite3; macOS has it).
+-# Takes about a minute. The output is deterministic: the check at the end must print OK.
+-# Never serve feed.db directly — every test or benchmark run starts from a fresh copy of it.
+-set -euo pipefail
+-HERE="$(cd "$(dirname "$0")" && pwd)"
+-DB="$HERE/feed.db"; TSV="$HERE/tsv"
+-EXPECTED=738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d  # sha256 of every row, ordered
+-
+-node "$HERE/generate.mjs" "$TSV"
+-mv "$TSV/tokens.json" "$HERE/tokens.json"
+-
+-rm -f "$DB" "$DB-wal" "$DB-shm"
+-# ascii mode with tab/newline separators: fields are imported verbatim (no CSV quoting).
+-sqlite3 "$DB" >/dev/null <<SQL
+-PRAGMA journal_mode = OFF;
+-PRAGMA synchronous = OFF;
+-.read $HERE/../schema.sql
+-.mode ascii
+-.separator "\t" "\n"
+-.import $TSV/users.tsv users
+-.import $TSV/posts.tsv posts
+-.import $TSV/likes.tsv likes
+-ANALYZE;
+-VACUUM;
+-PRAGMA journal_mode = WAL;
+-SQL
+-sqlite3 "$DB" "PRAGMA wal_checkpoint(TRUNCATE);" >/dev/null
+-rm -rf "$TSV"
+-
+-sha() { if command -v sha256sum >/dev/null; then sha256sum; else shasum -a 256; fi; }
+-sum="$(sqlite3 "$DB" "SELECT * FROM users ORDER BY id; SELECT * FROM posts ORDER BY id; SELECT * FROM likes ORDER BY post_id, user_id;" | sha | cut -d' ' -f1)"
+-if [ "$sum" = "$EXPECTED" ]; then echo "OK: $DB ($(du -h "$DB" | cut -f1)), content sha256 matches"
+-else echo "MISMATCH: content sha256 $sum, expected $EXPECTED"; exit 1; fi
+diff --git a/submissions/README.md b/submissions/README.md
+deleted file mode 100644
+index e99a444..0000000
+--- a/submissions/README.md
++++ /dev/null
+@@ -1,3 +0,0 @@
+-# Submissions
+-
+-One folder per submission: `submissions/<language>-<framework>-<github-username>/`. See the main README for the rules and the required files.
+diff --git a/submissions/python-fastapi-cknutson12/.gitignore b/submissions/python-fastapi-cknutson12/.gitignore
+deleted file mode 100644
+index a230a78..0000000
+--- a/submissions/python-fastapi-cknutson12/.gitignore
++++ /dev/null
+@@ -1,2 +0,0 @@
+-.venv/
+-__pycache__/
+diff --git a/submissions/python-fastapi-cknutson12/README.md b/submissions/python-fastapi-cknutson12/README.md
+deleted file mode 100644
+index a27e3b0..0000000
+--- a/submissions/python-fastapi-cknutson12/README.md
++++ /dev/null
+@@ -1,52 +0,0 @@
+-# Python + FastAPI
+-
+-| | |
+-|---|---|
+-| Language | Python 3.12.3 (Ubuntu 24.04's `python3` package) |
+-| Framework | FastAPI 0.142.2 (Starlette 1.7.0) |
+-| Server | uvicorn 0.54.0 with uvloop 0.23.0 (event loop) and httptools 0.8.0 (HTTP parser) |
+-| SQLite driver | the standard library `sqlite3` module, linked to Ubuntu's SQLite 3.45.1 |
+-| JSON | orjson 3.12.0 |
+-| **Nginx or direct** | **Direct**: serves `0.0.0.0:80` itself |
+-
+-All dependency versions, transitive ones included, are pinned in `requirements.txt`.
+-
+-## Running it
+-
+-```bash
+-sudo bash install.sh   # apt: python3, python3-venv
+-bash build.sh          # creates .venv and installs requirements.txt
+-SQLITE_PATH=... JWT_SECRET=... HOST=0.0.0.0 PORT=80 bash start.sh
+-```
+-
+-## Optimizations, and why
+-
+-- **One process, async handlers, SQLite called inline on the event loop.** The box has one vCPU, so
+-  extra worker processes or a threadpool would only add context switches. Every query is an index or
+-  primary-key lookup that takes well under a millisecond. One connection also means writes never wait
+-  on SQLite locks.
+-- **Direct instead of Nginx.** On one core, Nginx's CPU comes straight out of Python's budget. In my
+-  1-core load tests, direct mode had the better p99 near saturation, and p99 < 1 s is the limit that
+-  fails first. Nginx's `worker_connections 16384` also counts upstream connections, so it caps out
+-  around 16k users. With 15,000 extra idle keep-alive connections held open during a load run, uvicorn
+-  dropped none of them and served 0 errors, using about 250 MB extra.
+-- **uvloop + httptools**: the fastest event loop and HTTP parser uvicorn supports. Access log and
+-  proxy-headers middleware are off.
+-- **Lean FastAPI handlers.** There are no pydantic models or response models. Handlers take a raw
+-  `str` path parameter, validate it themselves, and return a prebuilt `Response` with orjson bytes,
+-  which skips FastAPI's validation and `jsonable_encoder` work. `/docs` and `/openapi.json` are
+-  disabled, so unknown paths really return 404.
+-- **JWT verified by hand** with `hmac` + `hashlib` on every request: HS256 only, constant-time
+-  signature compare, `exp`/`nbf` checked. No PyJWT overhead, and no caching of verifications (rule 5).
+-- **SQL**: the reference queries. Each like is a single statement,
+-  `INSERT ... SELECT ... WHERE EXISTS (post) ON CONFLICT DO NOTHING`; a post-existence check runs only
+-  when it inserted nothing, to tell "already liked" from "no such post".
+-- **Pragmas**: `journal_mode=WAL`, `synchronous=NORMAL` (rule 6), 1 GiB `mmap_size`, 64 MiB page cache.
+-  Autocommit mode commits each write before its response is sent.
+-- **GC**: objects created at startup are frozen and the gen-0 threshold is raised, because request
+-  handling creates almost no reference cycles.
+-- **Keep-alive timeout of 75 s** (uvicorn's default is 5 s), so idle clients keep their connections.
+-
+-## License
+-
+-MIT, under the repo's [license](../../LICENSE).
+diff --git a/submissions/python-fastapi-cknutson12/app.py b/submissions/python-fastapi-cknutson12/app.py
+deleted file mode 100644
+index 245a11e..0000000
+--- a/submissions/python-fastapi-cknutson12/app.py
++++ /dev/null
+@@ -1,215 +0,0 @@
+-"""The $12 server challenge API: FastAPI on SQLite, tuned for one vCPU.
+-
+-Every handler is `async def` and calls SQLite inline on the event loop. The queries are all
+-index lookups that finish in well under a millisecond, so handing them to a threadpool would
+-only add a thread hop per request on a machine that has a single core anyway.
+-"""
+-import base64
+-import gc
+-import hashlib
+-import hmac
+-import os
+-import re
+-import sqlite3
+-import time
+-
+-import orjson
+-from fastapi import FastAPI, Request
+-from fastapi.responses import Response
+-from starlette.exceptions import HTTPException as StarletteHTTPException
+-
+-SQLITE_PATH = os.environ["SQLITE_PATH"]
+-JWT_SECRET = os.environ["JWT_SECRET"].encode()
+-START = time.monotonic()
+-MAX_ID = 2**63 - 1  # SQLite's INTEGER range; larger ids cannot exist
+-
+-# --- database ---------------------------------------------------------------------------------
+-
+-# Autocommit (isolation_level=None): every INSERT is its own transaction, committed before
+-# execute()/fetchall() returns, so a 201 is only sent for a committed row.
+-db = sqlite3.connect(SQLITE_PATH, isolation_level=None, check_same_thread=False, cached_statements=32)
+-db.execute("PRAGMA journal_mode = WAL")
+-db.execute("PRAGMA synchronous = NORMAL")  # rule 6: WAL + NORMAL
+-db.execute("PRAGMA busy_timeout = 5000")
+-db.execute("PRAGMA mmap_size = 1073741824")  # read the file through the OS page cache, no copies
+-db.execute("PRAGMA cache_size = -65536")  # 64 MiB
+-db.execute("PRAGMA temp_store = MEMORY")
+-
+-POST_SELECT = """
+-SELECT p.id, p.body, p.created_at, u.username,
+-       (SELECT count(*) FROM likes l WHERE l.post_id = p.id)
+-  FROM posts p JOIN users u ON u.id = p.user_id
+-"""
+-FEED_SQL = POST_SELECT + " ORDER BY p.created_at DESC, p.id DESC LIMIT 20"
+-POST_SQL = POST_SELECT + " WHERE p.id = ?"
+-INSERT_POST_SQL = "INSERT INTO posts (user_id, body) VALUES (?, ?) RETURNING id, created_at"
+-# Inserts only if the post exists; 0 changes means "already liked" or "no such post".
+-INSERT_LIKE_SQL = """
+-INSERT INTO likes (user_id, post_id)
+-SELECT ?1, ?2 WHERE EXISTS (SELECT 1 FROM posts WHERE id = ?2)
+-ON CONFLICT (user_id, post_id) DO NOTHING
+-"""
+-POST_EXISTS_SQL = "SELECT 1 FROM posts WHERE id = ?"
+-
+-# --- responses --------------------------------------------------------------------------------
+-
+-
+-def json_response(status: int, data) -> Response:
+-    return Response(orjson.dumps(data), status_code=status, media_type="application/json")
+-
+-
+-def error(status: int, message: str) -> Response:
+-    return json_response(status, {"error": message})
+-
+-
+-def post_object(row) -> dict:
+-    return {"id": row[0], "body": row[1], "created_at": row[2], "author": row[3], "like_count": row[4]}
+-
+-
+-def parse_id(raw: str):
+-    """A positive integer in plain decimal digits, else None."""
+-    if not (raw.isascii() and raw.isdigit()):
+-        return None
+-    n = int(raw)
+-    return n if n > 0 else None
+-
+-
+-# --- auth -------------------------------------------------------------------------------------
+-
+-B64URL = re.compile(r"[A-Za-z0-9_-]*")
+-
+-
+-def b64url_decode(s: str) -> bytes:
+-    if not B64URL.fullmatch(s):
+-        raise ValueError("not base64url")
+-    return base64.urlsafe_b64decode(s + "=" * (-len(s) % 4))
+-
+-
+-def authenticate(request: Request):
+-    """Returns (user_id, username), or an error Response."""
+-    header = request.headers.get("authorization")
+-    if header is None or not header.startswith("Bearer "):
+-        return error(401, "missing bearer token")
+-    try:
+-        head_b64, payload_b64, sig_b64 = header[7:].split(".")
+-        head = orjson.loads(b64url_decode(head_b64))
+-        if not isinstance(head, dict) or head.get("alg") != "HS256":
+-            raise ValueError("alg")
+-        digest = hmac.new(JWT_SECRET, f"{head_b64}.{payload_b64}".encode(), hashlib.sha256).digest()
+-        expected = base64.urlsafe_b64encode(digest).rstrip(b"=")
+-        if not hmac.compare_digest(expected, sig_b64.encode()):
+-            raise ValueError("signature")
+-        payload = orjson.loads(b64url_decode(payload_b64))
+-        if not isinstance(payload, dict):
+-            raise ValueError("payload")
+-        now = int(time.time())
+-        exp = payload.get("exp")
+-        if exp is not None and (not isinstance(exp, (int, float)) or isinstance(exp, bool) or now >= exp):
+-            raise ValueError("exp")
+-        nbf = payload.get("nbf")
+-        if nbf is not None and (not isinstance(nbf, (int, float)) or isinstance(nbf, bool) or now < nbf):
+-            raise ValueError("nbf")
+-    except (ValueError, UnicodeError):  # includes orjson.JSONDecodeError and binascii.Error
+-        return error(401, "invalid or expired token")
+-    sub = payload.get("sub")
+-    username = payload.get("username")
+-    user_id = parse_id(sub) if isinstance(sub, str) else None
+-    if user_id is None or user_id > MAX_ID or not isinstance(username, str):
+-        return error(401, "invalid token payload")
+-    return user_id, username
+-
+-
+-# JavaScript's String.prototype.trim() set (WhiteSpace + LineTerminator), so bodies are trimmed
+-# exactly like the reference implementations.
+-WHITESPACE = "\t\n\v\f\r                  　﻿"
+-
+-# --- app --------------------------------------------------------------------------------------
+-
+-app = FastAPI(openapi_url=None, docs_url=None, redoc_url=None, redirect_slashes=False)
+-
+-
+-@app.exception_handler(StarletteHTTPException)
+-async def http_exception_handler(request: Request, exc: StarletteHTTPException):
+-    if exc.status_code == 404:
+-        return error(404, "not found")
+-    return error(exc.status_code, str(exc.detail).lower())
+-
+-
+-@app.exception_handler(Exception)
+-async def unhandled_exception_handler(request: Request, exc: Exception):
+-    return error(500, "internal server error")
+-
+-
+-@app.get("/health")
+-async def health():
+-    try:
+-        db.execute("SELECT 1").fetchone()
+-    except Exception as exc:
+-        return json_response(503, {"status": "degraded", "db": "unreachable", "error": str(exc)})
+-    return json_response(200, {"status": "ok", "db": "ok", "uptime_s": int(time.monotonic() - START)})
+-
+-
+-@app.get("/feed")
+-async def feed():
+-    rows = db.execute(FEED_SQL).fetchall()
+-    return json_response(200, {"posts": [post_object(r) for r in rows]})
+-
+-
+-@app.get("/posts/{post_id}")
+-async def get_post(post_id: str):
+-    pid = parse_id(post_id)
+-    if pid is None:
+-        return error(400, "invalid post id")
+-    row = db.execute(POST_SQL, (pid,)).fetchone() if pid <= MAX_ID else None
+-    if row is None:
+-        return error(404, "post not found")
+-    return json_response(200, {"post": post_object(row)})
+-
+-
+-@app.post("/posts")
+-async def create_post(request: Request):
+-    user = authenticate(request)
+-    if isinstance(user, Response):
+-        return user
+-    user_id, username = user
+-    try:
+-        data = orjson.loads(await request.body())
+-    except orjson.JSONDecodeError:
+-        return error(400, "malformed JSON body")
+-    body = data.get("body") if isinstance(data, dict) else None
+-    if not isinstance(body, str):
+-        return error(400, "body is required")
+-    body = body.strip(WHITESPACE)
+-    if not body:
+-        return error(400, "body is required")
+-    if len(body) > 500:
+-        return error(400, "body must be at most 500 characters")
+-    # fetchall() steps the statement to completion, which commits the autocommit transaction.
+-    post_id, created_at = db.execute(INSERT_POST_SQL, (user_id, body)).fetchall()[0]
+-    return json_response(
+-        201,
+-        {"post": {"id": post_id, "body": body, "created_at": created_at, "author": username, "like_count": 0}},
+-    )
+-
+-
+-@app.post("/posts/{post_id}/like")
+-async def like_post(post_id: str, request: Request):
+-    user = authenticate(request)  # auth before the id, per the spec
+-    if isinstance(user, Response):
+-        return user
+-    pid = parse_id(post_id)
+-    if pid is None:
+-        return error(400, "invalid post id")
+-    if pid <= MAX_ID:
+-        if db.execute(INSERT_LIKE_SQL, (user[0], pid)).rowcount == 1:
+-            return json_response(201, {"liked": True, "already_liked": False, "post_id": pid})
+-        if db.execute(POST_EXISTS_SQL, (pid,)).fetchone() is not None:
+-            return json_response(200, {"liked": True, "already_liked": True, "post_id": pid})
+-    return error(404, "post not found")
+-
+-
+-# Request handling allocates almost nothing that forms reference cycles, so the cyclic GC mostly
+-# wastes time walking long-lived objects. Freeze everything created at import and run it less often.
+-gc.collect()
+-gc.freeze()
+-gc.set_threshold(50_000, 20, 20)
+diff --git a/submissions/python-fastapi-cknutson12/build.sh b/submissions/python-fastapi-cknutson12/build.sh
+deleted file mode 100755
+index e8a3d20..0000000
+--- a/submissions/python-fastapi-cknutson12/build.sh
++++ /dev/null
+@@ -1,6 +0,0 @@
+-#!/usr/bin/env bash
+-# Builds the app as a normal user: a virtualenv with the pinned dependencies from requirements.txt.
+-set -euo pipefail
+-cd "$(dirname "$0")"
+-python3 -m venv --clear .venv
+-.venv/bin/pip install --disable-pip-version-check --no-input --quiet --only-binary=:all: -r requirements.txt
+diff --git a/submissions/python-fastapi-cknutson12/install.sh b/submissions/python-fastapi-cknutson12/install.sh
+deleted file mode 100755
+index fb60cd0..0000000
+--- a/submissions/python-fastapi-cknutson12/install.sh
++++ /dev/null
+@@ -1,7 +0,0 @@
+-#!/usr/bin/env bash
+-# Runs once as root on a clean Ubuntu 24.04: installs Python 3.12 (Ubuntu's own package) and venv.
+-set -euo pipefail
+-export DEBIAN_FRONTEND=noninteractive
+-apt-get update
+-apt-get install -y --no-install-recommends python3 python3-venv
+-python3 --version
+diff --git a/submissions/python-fastapi-cknutson12/requirements.txt b/submissions/python-fastapi-cknutson12/requirements.txt
+deleted file mode 100644
+index 9e887c6..0000000
+--- a/submissions/python-fastapi-cknutson12/requirements.txt
++++ /dev/null
+@@ -1,19 +0,0 @@
+-# Direct dependencies
+-fastapi==0.142.2
+-uvicorn==0.54.0
+-uvloop==0.23.0
+-httptools==0.8.0
+-orjson==3.12.0
+-# Transitive dependencies (pip freeze on Ubuntu 24.04, Python 3.12.3)
+-annotated-doc==0.0.5
+-annotated-types==0.8.0
+-anyio==4.15.1
+-click==8.5.0
+-h11==0.16.0
+-idna==3.20
+-opentelemetry-api==1.45.0
+-pydantic==2.13.5
+-pydantic_core==2.46.5
+-starlette==1.7.0
+-typing-inspection==0.4.4
+-typing_extensions==4.16.0
+diff --git a/submissions/python-fastapi-cknutson12/server.py b/submissions/python-fastapi-cknutson12/server.py
+deleted file mode 100644
+index 1a2099e..0000000
+--- a/submissions/python-fastapi-cknutson12/server.py
++++ /dev/null
+@@ -1,20 +0,0 @@
+-"""Starts the app with uvicorn: one process, uvloop event loop, httptools HTTP parser."""
+-import os
+-
+-import uvicorn
+-
+-if __name__ == "__main__":
+-    uvicorn.run(
+-        "app:app",
+-        host=os.environ.get("HOST", "127.0.0.1"),
+-        port=int(os.environ.get("PORT", "3000")),
+-        loop="uvloop",
+-        http="httptools",
+-        lifespan="off",
+-        access_log=False,
+-        proxy_headers=False,  # no proxy in front: skip uvicorn's X-Forwarded-* middleware
+-        log_level="warning",
+-        server_header=False,
+-        timeout_keep_alive=75,  # SPEC: keep idle connections open for at least 65 s
+-        backlog=4096,
+-    )
+diff --git a/submissions/python-fastapi-cknutson12/start.sh b/submissions/python-fastapi-cknutson12/start.sh
+deleted file mode 100755
+index b39a23e..0000000
+--- a/submissions/python-fastapi-cknutson12/start.sh
++++ /dev/null
+@@ -1,5 +0,0 @@
+-#!/usr/bin/env bash
+-# Runs the server in the foreground. Config: SQLITE_PATH, JWT_SECRET, HOST, PORT.
+-set -euo pipefail
+-cd "$(dirname "$0")"
+-exec .venv/bin/python server.py
+diff --git a/test/golden/feed.json b/test/golden/feed.json
+deleted file mode 100644
+index 8bc5e46..0000000
+--- a/test/golden/feed.json
++++ /dev/null
+@@ -1 +0,0 @@
+-{"posts":[{"id":500000,"body":"TIL So keepalive the an watching lucky measuring usually everywhere droplet waiting... Nowhere building test those here keepalive network someone and of load? Server big learning ubuntu deploy careful coffee.","created_at":"2025-12-31T23:59:19.409Z","author":"swift_ember_22228","like_count":5},{"id":499999,"body":"Something latency boring after users pool lucky linux usually. Cheap because lucky never of index feature cpu those someone! Really writing waiting rewrite fast just while broken surprising weird request...","created_at":"2025-12-31T23:58:21.902Z","author":"quiet_thistle_7672","like_count":18},{"id":499998,"body":"Index surprising cheap latency watching!","created_at":"2025-12-31T23:56:51.393Z","author":"sharp_nebula_115","like_count":6},{"id":499997,"body":"Honestly, Node merge bug today throughput tomorrow again ready latency shipping tonight really droplet this. Of shipping watching this users done release bug probably while once users!","created_at":"2025-12-31T23:56:31.189Z","author":"rusty_glacier_23474","like_count":8},{"id":499996,"body":"Question: This finally sometimes refactor and yesterday cheap ready branch anything debugging surprising... Postgres kernel steal request keepalive ready benchmark careful of tomorrow bug request! Express building load after express node because here.","created_at":"2025-12-31T23:55:08.752Z","author":"cosmic_nebula_25516","like_count":6},{"id":499995,"body":"TIL These droplet project benchmark sort nowhere ubuntu?","created_at":"2025-12-31T23:54:00.056Z","author":"golden_falcon_8818","like_count":2},{"id":499994,"body":"Socket server debugging merge someone. Memory fast cpu there there keepalive server again before fast something after feature... Really honest something of sort ubuntu socket building never benchmark surprising request network these?","created_at":"2025-12-31T23:53:00.608Z","author":"rusty_quartz_402","like_count":0},{"id":499993,"body":"Postgres tired tired someone express project because nowhere cpu today of nginx of today.","created_at":"2025-12-31T23:52:19.685Z","author":"golden_sparrow_1928","like_count":5},{"id":499992,"body":"Linux today network pool review running. Sometimes project ready deploy usually writing ready there anything...","created_at":"2025-12-31T23:51:13.831Z","author":"curious_falcon_17531","like_count":1},{"id":499991,"body":"Query merge broken tonight maybe because just keepalive nginx index these typescript weird morning.","created_at":"2025-12-31T23:49:33.087Z","author":"grumpy_meadow_21370","like_count":9},{"id":499990,"body":"So because nowhere always cpu here weird of systemd. Kernel server ready honest query kernel review branch small walking again systemd thinking!","created_at":"2025-12-31T23:48:47.363Z","author":"sunny_glacier_16639","like_count":10},{"id":499989,"body":"Sometimes socket release small careful steal careful review debugging fast.","created_at":"2025-12-31T23:48:18.271Z","author":"clever_comet_7958","like_count":6},{"id":499988,"body":"Droplet database definitely project these always feature yesterday twice broken while systemd twice? Systemd definitely shipping typescript. Someone throughput and load shipping of rarely.","created_at":"2025-12-31T23:46:59.354Z","author":"quiet_sparrow_499","like_count":0},{"id":499987,"body":"Honestly, Refactor big anything nowhere someone... Ready there steal big so tired rarely. Boring merge merge of test bug and this because load.","created_at":"2025-12-31T23:45:45.155Z","author":"wild_badger_40287","like_count":1},{"id":499986,"body":"Database yesterday or never these so something tired an linux everywhere an commit! Maybe done request of.","created_at":"2025-12-31T23:44:35.397Z","author":"cosmic_walrus_3278","like_count":2},{"id":499985,"body":"Unpopular opinion: Finally rarely deploy honest nowhere today very! While nginx again honest once rarely steal debugging release. Fast disk steal review slow someone rarely!","created_at":"2025-12-31T23:43:55.871Z","author":"quiet_quartz_3271","like_count":0},{"id":499984,"body":"Usually done these cpu everything or once rarely benchmark done boring? Lucky writing review an maybe kind? Rewrite slow this never deploy kind yesterday coffee shipping.","created_at":"2025-12-31T23:42:30.285Z","author":"grumpy_otter_11118","like_count":4},{"id":499983,"body":"Review big of again. Morning cache yesterday running after socket everywhere postgres steal the usually.","created_at":"2025-12-31T23:41:40.595Z","author":"zesty_nebula_8232","like_count":1},{"id":499982,"body":"Note to self: But that broken small that test there debugging yesterday very shipping deploy cheap. Slow careful weird everywhere pool.","created_at":"2025-12-31T23:40:02.341Z","author":"sharp_falcon_2327","like_count":3},{"id":499981,"body":"PSA: Thinking index tonight running careful deploy that everywhere thinking branch waiting of boring anything. Tomorrow these postgres thinking shipping after just reading usually throughput simple.","created_at":"2025-12-31T23:38:58.882Z","author":"lucky_orchid_22025","like_count":0}]}
+\ No newline at end of file
+diff --git a/test/golden/post-1.json b/test/golden/post-1.json
+deleted file mode 100644
+index 77dc888..0000000
+--- a/test/golden/post-1.json
++++ /dev/null
+@@ -1 +0,0 @@
+-{"post":{"id":1,"body":"Fast tomorrow small bug big droplet. Weird cache really project rarely everything?","created_at":"2025-01-01T00:00:34.152Z","author":"happy_nebula_10241","like_count":11}}
+\ No newline at end of file
+diff --git a/test/golden/post-250000.json b/test/golden/post-250000.json
+deleted file mode 100644
+index 7c01192..0000000
+--- a/test/golden/post-250000.json
++++ /dev/null
+@@ -1 +0,0 @@
+-{"post":{"id":250000,"body":"Network of debugging release.","created_at":"2025-07-02T11:59:09.160Z","author":"sharp_nebula_34835","like_count":0}}
+\ No newline at end of file
+diff --git a/test/golden/post-500000.json b/test/golden/post-500000.json
+deleted file mode 100644
+index ea817b1..0000000
+--- a/test/golden/post-500000.json
++++ /dev/null
+@@ -1 +0,0 @@
+-{"post":{"id":500000,"body":"TIL So keepalive the an watching lucky measuring usually everywhere droplet waiting... Nowhere building test those here keepalive network someone and of load? Server big learning ubuntu deploy careful coffee.","created_at":"2025-12-31T23:59:19.409Z","author":"swift_ember_22228","like_count":5}}
+\ No newline at end of file
+diff --git a/test/run.sh b/test/run.sh
+deleted file mode 100755
+index 3d08303..0000000
+--- a/test/run.sh
++++ /dev/null
+@@ -1,31 +0,0 @@
+-#!/usr/bin/env bash
+-# Builds a submission, starts it on a fresh copy of the seed database and runs the test suite.
+-# This is exactly what CI runs on every pull request.
+-#
+-#   bash test/run.sh submissions/<your-folder>
+-#
+-# Run install.sh yourself first (once, as root). Needs seed/feed.db: bash seed/make-seed.sh
+-set -euo pipefail
+-DIR="$(cd "${1:?usage: test/run.sh submissions/<folder>}" && pwd)"
+-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+-[ -f "$ROOT/seed/feed.db" ] || { echo "no seed/feed.db — run: bash seed/make-seed.sh"; exit 1; }
+-for f in build.sh start.sh; do [ -f "$DIR/$f" ] || { echo "missing $DIR/$f"; exit 1; }; done
+-
+-export JWT_SECRET=twelve-dollar-challenge HOST=127.0.0.1 PORT="${PORT:-3000}"
+-export SQLITE_PATH="$(mktemp -d)/feed.db"
+-cp "$ROOT/seed/feed.db" "$SQLITE_PATH"
+-
+-echo "== build"; bash "$DIR/build.sh"
+-echo "== start ($SQLITE_PATH)"
+-bash "$DIR/start.sh" > "$(dirname "$SQLITE_PATH")/server.log" 2>&1 &
+-PID=$!
+-cleanup() { pkill -P $PID 2>/dev/null || true; kill $PID 2>/dev/null || true; wait $PID 2>/dev/null || true; rm -rf "$(dirname "$SQLITE_PATH")"; }
+-trap cleanup EXIT
+-for _ in $(seq 60); do curl -sf "http://$HOST:$PORT/health" >/dev/null && break; sleep 1; done
+-curl -sf "http://$HOST:$PORT/health" >/dev/null || { echo "no healthy /health after 60 s"; cat "$(dirname "$SQLITE_PATH")/server.log"; exit 1; }
+-
+-echo "== test"
+-rc=0; bash "$ROOT/test/test.sh" "http://$HOST:$PORT" || rc=$?
+-[ $rc = 0 ] || { echo "== server log (last 30 lines)"; tail -30 "$(dirname "$SQLITE_PATH")/server.log"; }
+-trap - EXIT; cleanup
+-exit $rc
+diff --git a/test/test.sh b/test/test.sh
+deleted file mode 100755
+index 381effb..0000000
+--- a/test/test.sh
++++ /dev/null
+@@ -1,126 +0,0 @@
+-#!/usr/bin/env bash
+-# The test suite. A submission must pass every check before it is benchmarked.
+-#
+-#   bash test/test.sh                        # http://127.0.0.1:3000
+-#   bash test/test.sh http://127.0.0.1:8080
+-#
+-# Run it against a server that was started on a FRESH copy of seed/feed.db: it compares exact
+-# response bytes with test/golden/*.json, then writes one post and a few likes, so a second run
+-# against the same database fails the golden checks.
+-#
+-# Needs: curl, jq, openssl. JWT_SECRET defaults to the challenge secret.
+-set -uo pipefail
+-BASE="${1:-http://127.0.0.1:3000}"
+-GOLDEN="$(cd "$(dirname "$0")" && pwd)/golden"
+-JWT_SECRET="${JWT_SECRET:-twelve-dollar-challenge}"
+-USER_ID=1; USER_NAME=golden_ember_1          # user 1 in the seed
+-TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
+-
+-pass=0; fail=0
+-ok()  { echo "  ok   $1"; pass=$((pass+1)); }
+-bad() { echo "  FAIL $1"; [ -n "${2:-}" ] && echo "       $2"; fail=$((fail+1)); }
+-
+-# req <method> <path> [authorization|-] [raw-body]  ->  STATUS, BODY (one trailing newline stripped), CTYPE
+-req() {
+-  local args=(-s -o "$TMP/body" -D "$TMP/headers" -w '%{http_code}' -X "$1" "$BASE$2")
+-  [ -n "${3:-}" ] && [ "$3" != "-" ] && args+=(-H "Authorization: $3")
+-  [ -n "${4+x}" ] && args+=(-H 'Content-Type: application/json' --data-binary "$4")
+-  STATUS="$(curl "${args[@]}")"
+-  BODY="$(cat "$TMP/body")"
+-  CTYPE="$(grep -i '^content-type:' "$TMP/headers" | head -1 | cut -d' ' -f2- | tr -d '\r')"
+-}
+-# expect <label> <status> <exact body>
+-expect() {
+-  if [ "$STATUS" = "$2" ] && [ "$BODY" = "$3" ]; then ok "$1 -> $STATUS"
+-  else bad "$1" "want $2 $3"$'\n'"       got  $STATUS $BODY"; fi
+-}
+-json_ctype() { case "$CTYPE" in application/json*) ok "$1 content-type ($CTYPE)";; *) bad "$1 content-type" "got '$CTYPE'";; esac; }
+-
+-b64url() { openssl base64 -A | tr '+/' '-_' | tr -d '='; }
+-sign() { # sign <json-payload> -> HS256 JWT
+-  local h p s
+-  h="$(printf '%s' '{"alg":"HS256","typ":"JWT"}' | b64url)"; p="$(printf '%s' "$1" | b64url)"
+-  s="$(printf '%s' "$h.$p" | openssl dgst -sha256 -hmac "$JWT_SECRET" -binary | b64url)"
+-  echo "$h.$p.$s"
+-}
+-now=$(date +%s)
+-TOKEN="$(sign "{\"sub\":\"$USER_ID\",\"username\":\"$USER_NAME\",\"iat\":$now,\"exp\":$((now+3600))}")"
+-
+-echo "Testing $BASE"
+-
+-echo "-- golden reads (fresh database)"
+-req GET /feed;           expect "GET /feed == golden" 200 "$(cat "$GOLDEN/feed.json")"; json_ctype "GET /feed"
+-for f in "$GOLDEN"/post-*.json; do
+-  id="$(basename "$f" .json)"; id="${id#post-}"
+-  req GET "/posts/$id";  expect "GET /posts/$id == golden" 200 "$(cat "$f")"
+-done
+-json_ctype "GET /posts/:id"
+-
+-echo "-- health, 404s, id validation"
+-req GET /health
+-if [ "$STATUS" = 200 ] && [[ "$BODY" =~ ^\{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":[0-9]+\}$ ]]; then ok "GET /health -> 200 $BODY"; else bad "GET /health" "got $STATUS $BODY"; fi
+-req GET /nope;           expect "GET /nope" 404 '{"error":"not found"}'
+-for id in 0 -1 abc 1.5; do
+-  req GET "/posts/$id";  expect "GET /posts/$id" 400 '{"error":"invalid post id"}'
+-done
+-req GET /posts/999999999; expect "GET /posts/999999999" 404 '{"error":"post not found"}'
+-
+-echo "-- auth"
+-now=$(date +%s)
+-expired="$(sign "{\"sub\":\"$USER_ID\",\"username\":\"$USER_NAME\",\"iat\":$((now-7200)),\"exp\":$((now-3600))}")"
+-bad_sub="$(sign "{\"sub\":\"abc\",\"username\":\"$USER_NAME\",\"iat\":$now,\"exp\":$((now+3600))}")"
+-no_name="$(sign "{\"sub\":\"$USER_ID\",\"iat\":$now,\"exp\":$((now+3600))}")"
+-none="$(printf '%s' '{"alg":"none","typ":"JWT"}' | b64url).$(echo "$TOKEN" | cut -d. -f2)."
+-req POST /posts - '{"body":"x"}';                  expect "POST /posts, no token" 401 '{"error":"missing bearer token"}'
+-req POST /posts "Basic abc" '{"body":"x"}';        expect "POST /posts, Basic auth" 401 '{"error":"missing bearer token"}'
+-req POST /posts "Bearer abc" '{"body":"x"}';       expect "POST /posts, garbage token" 401 '{"error":"invalid or expired token"}'
+-req POST /posts "Bearer ${TOKEN%.*}.c2lnbmF0dXJlLWlzLW5vdC12YWxpZC1hdC1hbGwtYXQtYWxsLTEyMzQ" '{"body":"x"}'
+-                                                   expect "POST /posts, bad signature" 401 '{"error":"invalid or expired token"}'
+-req POST /posts "Bearer $none" '{"body":"x"}';     expect "POST /posts, alg=none" 401 '{"error":"invalid or expired token"}'
+-req POST /posts "Bearer $expired" '{"body":"x"}';  expect "POST /posts, expired token" 401 '{"error":"invalid or expired token"}'
+-req POST /posts "Bearer $bad_sub" '{"body":"x"}';  expect "POST /posts, sub not an integer" 401 '{"error":"invalid token payload"}'
+-req POST /posts "Bearer $no_name" '{"body":"x"}';  expect "POST /posts, no username" 401 '{"error":"invalid token payload"}'
+-req POST /posts/abc/like -;                        expect "POST /posts/abc/like, no token (auth before id)" 401 '{"error":"missing bearer token"}'
+-
+-echo "-- create validation"
+-A="Bearer $TOKEN"
+-req POST /posts "$A" '{"body":""}';          expect "empty body" 400 '{"error":"body is required"}'
+-req POST /posts "$A" '{"body":"   "}';       expect "whitespace body" 400 '{"error":"body is required"}'
+-req POST /posts "$A" '{"body":123}';         expect "numeric body" 400 '{"error":"body is required"}'
+-req POST /posts "$A" '{}';                   expect "missing body" 400 '{"error":"body is required"}'
+-req POST /posts "$A" '{bad json';            expect "malformed JSON" 400 '{"error":"malformed JSON body"}'
+-req POST /posts "$A" "{\"body\":\"$(printf 'a%.0s' $(seq 501))\"}"
+-                                             expect "501-char body" 400 '{"error":"body must be at most 500 characters"}'
+-
+-echo "-- create, like, read back"
+-req POST /posts "$A" '{"body":"  test: <b>&amp;</b> \"quoted\" / café ✓  "}'
+-if [ "$STATUS" = 201 ] && [ "$(echo "$BODY" | jq -r '.post.body')" = 'test: <b>&amp;</b> "quoted" / café ✓' ]; then ok "special characters round-trip (trimmed) -> 201"
+-else bad "special characters round-trip" "got $STATUS $BODY"; fi
+-
+-BODY500="$(printf 'b%.0s' $(seq 500))"
+-req POST /posts "$A" "{\"body\":\"  $BODY500 \"}"
+-NEW_ID="$(echo "$BODY" | jq -r '.post.id' 2>/dev/null)"; CREATED="$(echo "$BODY" | jq -r '.post.created_at' 2>/dev/null)"
+-expect "create 500-char post" 201 "{\"post\":{\"id\":$NEW_ID,\"body\":\"$BODY500\",\"created_at\":\"$CREATED\",\"author\":\"$USER_NAME\",\"like_count\":0}}"
+-json_ctype "POST /posts"
+-[[ "$CREATED" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$ ]] && ok "created_at format $CREATED" || bad "created_at format" "got '$CREATED'"
+-created_s="$(date -j -u -f '%Y-%m-%dT%H:%M:%S' "${CREATED%.*}" +%s 2>/dev/null || date -u -d "${CREATED%.*}" +%s 2>/dev/null || echo 0)"
+-drift=$(( $(date -u +%s) - created_s )); drift=${drift#-}
+-[ "$drift" -le 60 ] && ok "created_at is now (UTC, ${drift}s)" || bad "created_at is not UTC now" "drift ${drift}s"
+-
+-req POST "/posts/$NEW_ID/like" "$A";         expect "like (first)" 201 "{\"liked\":true,\"already_liked\":false,\"post_id\":$NEW_ID}"
+-req POST "/posts/$NEW_ID/like" "$A";         expect "like (repeat)" 200 "{\"liked\":true,\"already_liked\":true,\"post_id\":$NEW_ID}"
+-req POST /posts/999999999/like "$A";         expect "like missing post" 404 '{"error":"post not found"}'
+-req POST /posts/abc/like "$A";               expect "like bad id (with token)" 400 '{"error":"invalid post id"}'
+-req GET "/posts/$NEW_ID";                    expect "read back, like_count 1" 200 "{\"post\":{\"id\":$NEW_ID,\"body\":\"$BODY500\",\"created_at\":\"$CREATED\",\"author\":\"$USER_NAME\",\"like_count\":1}}"
+-req POST /posts/1/like "$A"
+-req GET /posts/1
+-want_likes=$(( $(jq '.post.like_count' "$GOLDEN/post-1.json") + 1 ))
+-[ "$(echo "$BODY" | jq '.post.like_count')" = "$want_likes" ] && ok "like on a seeded post is counted at once ($want_likes)" || bad "seeded post like_count" "want $want_likes, got $(echo "$BODY" | jq -c '.post.like_count')"
+-req GET /feed
+-[ "$(echo "$BODY" | jq '.posts | length')" = 20 ] && ok "feed has 20 posts" || bad "feed length" "$(echo "$BODY" | jq '.posts | length')"
+-[ "$(echo "$BODY" | jq '.posts[0].id')" = "$NEW_ID" ] && ok "new post is at the top of the feed" || bad "top of feed" "$(echo "$BODY" | jq -c '.posts[0]')"
+-[ "$(echo "$BODY" | jq -c '.posts[0]')" = "{\"id\":$NEW_ID,\"body\":\"$BODY500\",\"created_at\":\"$CREATED\",\"author\":\"$USER_NAME\",\"like_count\":1}" ] \
+-  && ok "feed entry matches the post" || bad "feed entry" "$(echo "$BODY" | jq -c '.posts[0]')"
+-
+-echo "passed=$pass failed=$fail"
+-[ "$fail" = 0 ]

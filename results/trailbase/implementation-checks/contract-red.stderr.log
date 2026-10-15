@@ -1,0 +1,58 @@
+    Updating crates.io index
+     Locking 114 packages to latest Rust 1.91.1 compatible versions
+      Adding generic-array v0.14.7 (available: v0.14.9)
+      Adding hmac v0.12.1 (available: v0.13.0)
+      Adding serde_json v1.0.151 (available: v1.0.154)
+      Adding sha2 v0.10.9 (available: v0.11.1)
+ Downloading crates ...
+  Downloaded unicode-ident v1.0.27
+  Downloaded syn v3.0.9
+   Compiling version_check v0.9.5
+   Compiling proc-macro2 v1.0.107
+   Compiling typenum v1.20.1
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling serde_core v1.0.229
+   Compiling libc v0.2.190
+   Compiling subtle v2.6.1
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.151
+   Compiling generic-array v0.14.7
+   Compiling serde v1.0.229
+   Compiling cfg-if v1.0.5
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling base64 v0.23.1
+   Compiling syn v3.0.9
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling digest v0.10.7
+   Compiling cpufeatures v0.2.17
+   Compiling hmac v0.12.1
+   Compiling sha2 v0.10.9
+   Compiling serde_derive v1.0.229
+   Compiling feed-benchmark v0.1.0 (/Users/markb/dev/twelve-dollar-server-challenge/services/trailbase/app)
+warning: function `positive_id` is never used
+ --> src/contract.rs:3:8
+  |
+3 | pub fn positive_id(_raw: &str) -> Option<i64> { None }
+  |        ^^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `body` is never used
+ --> src/contract.rs:4:8
+  |
+4 | pub fn body(_value: Value) -> Result<String, &'static str> { Err("not implemented") }
+  |        ^^^^
+
+warning: function `authenticate` is never used
+ --> src/contract.rs:5:8
+  |
+5 | pub fn authenticate(_header: Option<&str>, _secret: &[u8], _now: f64) -> Result<(i64, String), &'static str> {
+  |        ^^^^^^^^^^^^
+
+warning: `feed-benchmark` (lib) generated 3 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.93s
+     Running unittests src/lib.rs (services/trailbase/app/target/debug/deps/feed_benchmark-eb837462d653b8ec)
+error: test failed, to rerun pass `--lib`

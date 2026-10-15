@@ -1,0 +1,6 @@
+source-vps16.tar.gz: OK
+native-images-vps16.tar: OK
+VPS16_SOURCE_IMAGES_PROFILE_HEADROOM_VERIFIED
+TRAILBASE_CORRECTNESS_PASSED (.state/trailbase/correctness.log)
+VPS16_FULL_CORRECTNESS_PASSED
+BENCHMARK_ATTEMPT_FINISHED fail 10000vu results/trailbase/vps16-linux-amd64/20261015T011353569718Z-standard-10000vu-k6-2cpu-8g-v3-smoke: hold latency/error/schema gate failed

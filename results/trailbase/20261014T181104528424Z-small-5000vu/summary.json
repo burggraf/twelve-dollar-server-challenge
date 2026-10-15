@@ -1,0 +1,12 @@
+{
+  "outcome": "invalid",
+  "reason": "missing k6 scenario-start clock",
+  "vus": 5000,
+  "tier": "small",
+  "mode": "capacity",
+  "hold_requests": 0,
+  "hold_rps": 0.0,
+  "latency_ms": {},
+  "request_errors": {},
+  "schema_errors": {}
+}

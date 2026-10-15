@@ -1,0 +1,3 @@
+TRAILBASE_CORRECTNESS_PASSED (.state/trailbase/correctness.log)
+BENCHMARK_ATTEMPT_FINISHED pass 5000vu results/trailbase/vps-linux-amd64/20261015T001908243915Z-small-5000vu-k6-2cpu-4g-v2-smoke: hold gates passed
+VPS_NATIVE_BOUNDARY_REVALIDATED

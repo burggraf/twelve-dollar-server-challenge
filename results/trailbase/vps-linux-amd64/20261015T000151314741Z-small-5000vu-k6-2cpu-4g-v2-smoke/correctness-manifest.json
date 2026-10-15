@@ -1,0 +1,12 @@
+{
+  "app_source_sha256": "0f392ae2fd3f508611133580c22c020447db202a86d04d8edc79fe3048531ce3",
+  "verification_source_sha256": "f6b6e01ef215ff12125b1b4d1dd18cfc1bd32321c2abca8315563462442c9853",
+  "image": "sha256:94bd4ee85dc711f344f9198ea53f3ae0bbc69609759bd0cf35d940c91a89b088",
+  "limits": {
+    "NanoCpus": 1000000000,
+    "Memory": 2147483648,
+    "MemorySwap": 2147483648
+  },
+  "log_sha256": "0f7e55231e11f99b157c7ce0b018be76084c6b84043d8238f827f84de3da6b55",
+  "completed_utc": "2026-10-15T00:01:51.094249+00:00"
+}

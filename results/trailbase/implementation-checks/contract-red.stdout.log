@@ -1,0 +1,38 @@
+
+running 3 tests
+test contract::tests::verifies_each_signature_and_expiry_before_payload ... FAILED
+test contract::tests::validates_decimal_positive_ids ... FAILED
+test contract::tests::trims_ecmascript_whitespace_and_counts_unicode_scalars ... FAILED
+
+failures:
+
+---- contract::tests::verifies_each_signature_and_expiry_before_payload stdout ----
+
+thread 'contract::tests::verifies_each_signature_and_expiry_before_payload' (35278754) panicked at src/contract.rs:50:9:
+assertion `left == right` failed
+  left: Err("not implemented")
+ right: Ok((1, "name from token"))
+
+---- contract::tests::validates_decimal_positive_ids stdout ----
+
+thread 'contract::tests::validates_decimal_positive_ids' (35278753) panicked at src/contract.rs:26:9:
+assertion `left == right` failed
+  left: None
+ right: Some(1)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- contract::tests::trims_ecmascript_whitespace_and_counts_unicode_scalars stdout ----
+
+thread 'contract::tests::trims_ecmascript_whitespace_and_counts_unicode_scalars' (35278752) panicked at src/contract.rs:35:9:
+assertion `left == right` failed
+  left: Err("not implemented")
+ right: Ok("café 😀")
+
+
+failures:
+    contract::tests::trims_ecmascript_whitespace_and_counts_unicode_scalars
+    contract::tests::validates_decimal_positive_ids
+    contract::tests::verifies_each_signature_and_expiry_before_payload
+
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

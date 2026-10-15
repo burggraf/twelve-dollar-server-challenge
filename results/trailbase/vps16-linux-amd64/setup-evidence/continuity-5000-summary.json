@@ -1,0 +1,6 @@
+{
+  "existing_persistent_service_count": 26,
+  "changed_existing_persistent_service_count": 0,
+  "root_ssh_session_manager_identity_changed": true,
+  "original_port4000_listener_unchanged": true
+}

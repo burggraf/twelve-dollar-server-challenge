@@ -1,0 +1,122 @@
+test_k6_cannot_read_signing_keys_or_private_service_state (test_isolation.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.142s
+
+OK
+ Image baas-benchmark-tools:0.1.0 Building 
+ Image baas-trailbase-feed:0.1.0 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.36kB done
+#1 DONE 0.0s
+
+#2 [tools internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.15kB 0.0s done
+#2 DONE 0.1s
+
+#3 [trailbase internal] load build definition from Dockerfile
+#3 transferring dockerfile: 1.09kB done
+#3 DONE 0.1s
+
+#4 [trailbase] resolve image config for docker-image://docker.io/docker/dockerfile:1
+#4 ...
+
+#5 [tools internal] load metadata for docker.io/library/rust:1.91.1-bookworm@sha256:c1e5f19e773b7878c3f7a805dd00a495e747acbdc76fb2337a4ebf0418896b33
+#5 DONE 0.1s
+
+#6 [tools internal] load metadata for docker.io/library/node:22.20.0-bookworm-slim@sha256:b21fe589dfbe5cc39365d0544b9be3f1f33f55f3c86c87a76ff65a02f8f5848e
+#6 DONE 0.1s
+
+#7 [tools internal] load .dockerignore
+#7 transferring context: 135B done
+#7 DONE 0.0s
+
+#8 [tools certificates 1/1] FROM docker.io/library/rust:1.91.1-bookworm@sha256:c1e5f19e773b7878c3f7a805dd00a495e747acbdc76fb2337a4ebf0418896b33
+#8 DONE 0.0s
+
+#9 [tools stage-1 1/4] FROM docker.io/library/node:22.20.0-bookworm-slim@sha256:b21fe589dfbe5cc39365d0544b9be3f1f33f55f3c86c87a76ff65a02f8f5848e
+#9 DONE 0.0s
+
+#10 [tools stage-1 2/4] COPY --from=certificates /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#10 CACHED
+
+#11 [tools stage-1 3/4] RUN rm -f /etc/apt/sources.list.d/debian.sources  && printf 'deb [check-valid-until=no] https://snapshot.debian.org/archive/debian/20251210T000000Z bookworm main\ndeb [check-valid-until=no] https://snapshot.debian.org/archive/debian-security/20251210T000000Z bookworm-security main\n' > /etc/apt/sources.list  && apt-get update  && apt-get install -y --no-install-recommends bash ca-certificates curl jq openssl python3 sqlite3  && dpkg-query -W > /tool-packages.txt  && rm -rf /var/lib/apt/lists/*
+#11 CACHED
+
+#12 [tools stage-1 4/4] WORKDIR /work
+#12 CACHED
+
+#13 [tools] exporting to image
+#13 exporting layers done
+#13 writing image sha256:c9c40e2944b624d311f7fbcec219c2dae8c4bef8ddfd7c58eb7e74868f300516 done
+#13 naming to docker.io/library/baas-benchmark-tools:0.1.0 done
+#13 DONE 0.0s
+
+#14 [tools] resolving provenance for metadata file
+#14 DONE 0.0s
+
+#4 [trailbase] resolve image config for docker-image://docker.io/docker/dockerfile:1
+#4 DONE 0.9s
+
+#15 [trailbase] docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#15 CACHED
+
+#5 [trailbase internal] load metadata for docker.io/library/rust:1.91.1-bookworm@sha256:c1e5f19e773b7878c3f7a805dd00a495e747acbdc76fb2337a4ebf0418896b33
+#5 DONE 0.2s
+
+#16 [trailbase internal] load metadata for docker.io/trailbase/trailbase@sha256:8855cbaed2fe0d8fe77d9dca38e42cf119632a5a84bc6f150940bdc0068038f8
+#16 DONE 0.0s
+
+#7 [trailbase internal] load .dockerignore
+#7 CACHED
+
+#8 [trailbase app 1/6] FROM docker.io/library/rust:1.91.1-bookworm@sha256:c1e5f19e773b7878c3f7a805dd00a495e747acbdc76fb2337a4ebf0418896b33
+#8 DONE 0.0s
+
+#17 [trailbase stage-1 1/6] FROM docker.io/trailbase/trailbase@sha256:8855cbaed2fe0d8fe77d9dca38e42cf119632a5a84bc6f150940bdc0068038f8
+#17 DONE 0.0s
+
+#18 [trailbase internal] load build context
+#18 transferring context: 656B done
+#18 DONE 0.0s
+
+#19 [trailbase app 2/6] RUN rustup target add wasm32-wasip2
+#19 CACHED
+
+#20 [trailbase stage-1 4/6] COPY services/trailbase/migrations /app/migrations/main
+#20 CACHED
+
+#21 [trailbase app 4/6] COPY services/trailbase/app/Cargo.toml services/trailbase/app/Cargo.lock ./
+#21 CACHED
+
+#22 [trailbase stage-1 2/6] COPY --from=app /build/target/wasm32-wasip2/release/feed_benchmark.wasm /app/wasm/feed.wasm
+#22 CACHED
+
+#23 [trailbase stage-1 3/6] RUN mkdir -p /app/traildepot && chown -R 1000:1000 /app/traildepot
+#23 CACHED
+
+#24 [trailbase app 6/6] RUN cargo test --locked && cargo build --locked --release --target wasm32-wasip2
+#24 CACHED
+
+#25 [trailbase stage-1 5/6] COPY services/trailbase/config.textproto /app/config.textproto
+#25 CACHED
+
+#26 [trailbase app 3/6] WORKDIR /build
+#26 CACHED
+
+#27 [trailbase app 5/6] COPY services/trailbase/app/src ./src
+#27 CACHED
+
+#28 [trailbase stage-1 6/6] COPY --chmod=755 services/trailbase/entrypoint.sh /app/feed-entrypoint.sh
+#28 CACHED
+
+#29 [trailbase] exporting to image
+#29 exporting layers done
+#29 writing image sha256:4127fea30bc1611b379d0c8c1b5a523ab46007964b369e87d77fc777e8d70374 done
+#29 naming to docker.io/library/baas-trailbase-feed:0.1.0 done
+#29 DONE 0.0s
+
+#30 [trailbase] resolving provenance for metadata file
+#30 DONE 0.0s
+ Image baas-benchmark-tools:0.1.0 Built 
+ Image baas-trailbase-feed:0.1.0 Built 

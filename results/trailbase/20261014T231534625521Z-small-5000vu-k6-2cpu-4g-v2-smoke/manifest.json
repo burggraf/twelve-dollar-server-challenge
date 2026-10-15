@@ -1,0 +1,187 @@
+{
+  "service": "trailbase",
+  "version": "0.34.6",
+  "sdk": "0.6.1",
+  "tier": "small",
+  "vus": 5000,
+  "mode": "smoke",
+  "workload": "baas-v1",
+  "runner_profile": "k6-2cpu-4g-v2",
+  "runner_limits": {
+    "NanoCpus": 2000000000,
+    "Memory": 4294967296,
+    "MemorySwap": 4294967296
+  },
+  "vm_os_reserve_bytes": 1073741824,
+  "started_utc": "2026-10-14T23:16:20.873317+00:00",
+  "git_commit": "026bdb68d94d0d932bb5981321ad82c70618d752",
+  "git_status": " M .gitignore\n M README.md\n M seed/generate.mjs\n?? .dockerignore\n?? .github/workflows/trailbase.yml\n?? MASTER_PLAN.md\n?? bench/baas-contract.mjs\n?? bench/baas-contract.test.mjs\n?? bench/baas.mjs\n?? contracts/\n?? results/\n?? runner/\n?? scripts/\n?? services/\n?? test/baas/\n",
+  "app_source_sha256": "b0b8219b7319816f9a93879aafcbad5a203f2c91d690e0be1d258032fc84215a",
+  "target_before": {
+    "Id": "1703fb7239962192a6c628f051af93472ae7534245ec80dc625970849a08ecf4",
+    "Image": "sha256:4127fea30bc1611b379d0c8c1b5a523ab46007964b369e87d77fc777e8d70374",
+    "RestartCount": 0,
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 39245,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-14T23:16:18.09907014Z",
+      "FinishedAt": "2026-10-14T23:15:35.910266839Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-14T16:15:28.047766623-07:00",
+            "End": "2026-10-14T16:15:28.107431185-07:00",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":92}"
+          },
+          {
+            "Start": "2026-10-14T16:15:30.108789926-07:00",
+            "End": "2026-10-14T16:15:30.179768412-07:00",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":94}"
+          },
+          {
+            "Start": "2026-10-14T16:15:32.183878367-07:00",
+            "End": "2026-10-14T16:15:32.219913557-07:00",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":96}"
+          },
+          {
+            "Start": "2026-10-14T16:15:34.221476619-07:00",
+            "End": "2026-10-14T16:15:34.268855898-07:00",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":98}"
+          },
+          {
+            "Start": "2026-10-14T16:16:20.199862573-07:00",
+            "End": "2026-10-14T16:16:20.277544759-07:00",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":2}"
+          }
+        ]
+      }
+    },
+    "limits": {
+      "NanoCpus": 1000000000,
+      "Memory": 2147483648,
+      "MemorySwap": 2147483648
+    },
+    "source_sha256": "b0b8219b7319816f9a93879aafcbad5a203f2c91d690e0be1d258032fc84215a"
+  },
+  "target_kernel_cgroup_limits": [
+    "100000 100000",
+    "2147483648",
+    "0"
+  ],
+  "allocated_data_kib_before": "292964\t/app/traildepot/data",
+  "docker": "Client=29.8.2 Server=29.8.2\n",
+  "docker_vm": "OS=OrbStack Arch=aarch64 CPUs=8 MemoryBytes=8392929280\n",
+  "host": "Darwin arm64\n",
+  "host_memory_cpu": "hw.ncpu: 8\nhw.memsize: 17179869184\nmachdep.cpu.brand_string: Apple M1\n",
+  "orbstack_version": "Version: 2.2.4 (2020400)\nCommit: 1c4c8267f3256f8df9e4d80a2e50ac8f1136956c (v2.2.4)\n",
+  "cost": "local hardware; cloud monthly cost/request not applicable",
+  "auth": "HS256 compatibility verification inside native WASM handlers; not native TrailBase login throughput",
+  "path": "k6 container -> TrailBase HTTP -> Rust WASM guest -> TrailBase database/transaction SDK -> SQLite",
+  "limitations": [
+    "Shared host/VM and storage cache; no dedicated-machine equivalence",
+    "Host thermal/background activity requires human review; see raw resources.jsonl"
+  ],
+  "allocated_data_kib_after": "301876\t/app/traildepot/data",
+  "target_after": {
+    "Id": "1703fb7239962192a6c628f051af93472ae7534245ec80dc625970849a08ecf4",
+    "Image": "sha256:4127fea30bc1611b379d0c8c1b5a523ab46007964b369e87d77fc777e8d70374",
+    "RestartCount": 0,
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 39245,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-14T23:16:18.09907014Z",
+      "FinishedAt": "2026-10-14T23:15:35.910266839Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-14T16:16:47.543832626-07:00",
+            "End": "2026-10-14T16:16:51.150642966-07:00",
+            "ExitCode": -1,
+            "Output": "Health check exceeded timeout (2s)"
+          },
+          {
+            "Start": "2026-10-14T16:16:53.166608545-07:00",
+            "End": "2026-10-14T16:16:55.953578877-07:00",
+            "ExitCode": -1,
+            "Output": "Health check exceeded timeout (2s)"
+          },
+          {
+            "Start": "2026-10-14T16:16:57.961796454-07:00",
+            "End": "2026-10-14T16:16:59.79195024-07:00",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":41}"
+          },
+          {
+            "Start": "2026-10-14T16:17:01.832559789-07:00",
+            "End": "2026-10-14T16:17:02.528364041-07:00",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":44}"
+          },
+          {
+            "Start": "2026-10-14T16:17:04.530158245-07:00",
+            "End": "2026-10-14T16:17:04.613553388-07:00",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":46}"
+          }
+        ]
+      }
+    },
+    "limits": {
+      "NanoCpus": 1000000000,
+      "Memory": 2147483648,
+      "MemorySwap": 2147483648
+    },
+    "source_sha256": "b0b8219b7319816f9a93879aafcbad5a203f2c91d690e0be1d258032fc84215a"
+  },
+  "load_after": {
+    "Id": "b87ab156cd3d48db528bc25e1a3e4f78c0d10796f96493e608b1394fa08753e3",
+    "Image": "sha256:bb9d6a44e05b6383398fd19f572b87d29a36aeb5053b9fa2182afbeca27953cb",
+    "RestartCount": 0,
+    "State": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 99,
+      "Error": "",
+      "StartedAt": "2026-10-14T23:16:21.423284178Z",
+      "FinishedAt": "2026-10-14T23:17:04.145643624Z"
+    },
+    "limits": {
+      "NanoCpus": 2000000000,
+      "Memory": 4294967296,
+      "MemorySwap": 4294967296
+    },
+    "source_sha256": null
+  },
+  "k6_exit_code": 99,
+  "result": "invalid",
+  "reason": "resource monitor failed",
+  "finished_utc": "2026-10-14T23:17:04.990038+00:00"
+}

@@ -1,0 +1,13 @@
+BENCHMARK_ATTEMPT_FINISHED invalid 2500vu results/trailbase/vps-linux-amd64/20261015T001026590201Z-small-2500vu-k6-2cpu-4g-v2: missing k6 scenario-start clock
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-benchmark/src/scripts/benchmark.py", line 458, in <module>
+    main()
+  File "/opt/twelve-dollar-baas-benchmark/src/scripts/benchmark.py", line 451, in main
+    if args.campaign: campaign(args, tier)
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-benchmark/src/scripts/benchmark.py", line 382, in campaign
+    while run(high):
+          ^^^^^^^^^
+  File "/opt/twelve-dollar-baas-benchmark/src/scripts/benchmark.py", line 374, in run
+    raise RuntimeError('Invalid measurements: campaign paused, not treated as target capacity failure')
+RuntimeError: Invalid measurements: campaign paused, not treated as target capacity failure

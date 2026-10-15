@@ -134,4 +134,4 @@ const tokens = usernames.slice(0, TOKEN_COUNT).map((username, i) => {
   return { id: i + 1, username, token: `${header}.${payload}.${sig}` };
 });
 writeFileSync(`${OUT}/tokens.json`, JSON.stringify(tokens));
-console.log(`  tokens.json: ${tokens.length.toLocaleString()} tokens (JWT_SECRET=${JWT_SECRET})`);
+console.log(`  tokens.json: ${tokens.length.toLocaleString()} tokens (signing key not logged)`);

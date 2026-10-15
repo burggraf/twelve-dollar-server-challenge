@@ -1,0 +1,100 @@
+{
+  "scope": "15,000-VU confirmed lower bound; not a target maximum",
+  "phase": "confirmed_lower_bound_pending_human_review",
+  "runs": [
+    {
+      "run_id": "20261015T023034390461Z-standard-15000vu-k6-2cpu-8g-v3",
+      "requests": 476047,
+      "rps": 1586.8233333333333,
+      "latency_ms": {
+        "min": 0.339516,
+        "max": 229.951134,
+        "avg": 4.240428521370721,
+        "med": 0.908262,
+        "p(95)": 24.37728739999996,
+        "p(99)": 62.19604159999977
+      },
+      "runner_cpu_peak_percent": 201.36,
+      "runner_cpu_mean_percent": 103.00219999999999,
+      "runner_memory_peak_percent": 87.54,
+      "target_cpu_peak_percent": 90.59,
+      "target_memory_peak_percent": 14.23,
+      "minimum_host_available_kib": 7177676,
+      "hold_monitor_samples": 50,
+      "sample_span_seconds": 295.6505091190338,
+      "host_steal_percent": 0.014694823100261914,
+      "host_iowait_percent": 0.21264273427437827,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "host_cpu_pressure_some_percent": 18.314413921134044,
+      "host_memory_pressure_some_percent": 0.0,
+      "host_memory_pressure_full_percent": 0.0,
+      "host_io_pressure_some_percent": 0.3409370080246233,
+      "host_io_pressure_full_percent": 0.22184774920713096
+    },
+    {
+      "run_id": "20261015T024045880287Z-standard-15000vu-k6-2cpu-8g-v3",
+      "requests": 475587,
+      "rps": 1585.29,
+      "latency_ms": {
+        "avg": 5.856578396682059,
+        "med": 0.900077,
+        "p(95)": 31.857678299999986,
+        "p(99)": 99.09406634000001,
+        "min": 0.339485,
+        "max": 2522.260479
+      },
+      "runner_cpu_peak_percent": 202.31,
+      "runner_cpu_mean_percent": 102.53299999999999,
+      "runner_memory_peak_percent": 87.03,
+      "target_cpu_peak_percent": 88.3,
+      "target_memory_peak_percent": 14.2,
+      "minimum_host_available_kib": 7222852,
+      "hold_monitor_samples": 50,
+      "sample_span_seconds": 295.67915534973145,
+      "host_steal_percent": 0.010441592342832281,
+      "host_iowait_percent": 0.21666304111376986,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "host_cpu_pressure_some_percent": 18.24348792399545,
+      "host_memory_pressure_some_percent": 6.76408858661134e-07,
+      "host_memory_pressure_full_percent": 1.0146132879917011e-06,
+      "host_io_pressure_some_percent": 0.3494706952804269,
+      "host_io_pressure_full_percent": 0.22479027958999603
+    },
+    {
+      "run_id": "20261015T025057973204Z-standard-15000vu-k6-2cpu-8g-v3",
+      "requests": 476024,
+      "rps": 1586.7466666666667,
+      "latency_ms": {
+        "p(99)": 93.64873988000014,
+        "min": 0.343986,
+        "max": 2192.652407,
+        "avg": 6.039184899080752,
+        "med": 0.901715,
+        "p(95)": 24.94109034999999
+      },
+      "runner_cpu_peak_percent": 200.07,
+      "runner_cpu_mean_percent": 98.2792,
+      "runner_memory_peak_percent": 87.11,
+      "target_cpu_peak_percent": 87.24,
+      "target_memory_peak_percent": 14.82,
+      "minimum_host_available_kib": 7170056,
+      "hold_monitor_samples": 50,
+      "sample_span_seconds": 295.7086327075958,
+      "host_steal_percent": 0.012768022063142126,
+      "host_iowait_percent": 0.20769315889377857,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "host_cpu_pressure_some_percent": 18.219932406665936,
+      "host_memory_pressure_some_percent": 0.0,
+      "host_memory_pressure_full_percent": 0.0,
+      "host_io_pressure_some_percent": 0.33896102079344304,
+      "host_io_pressure_full_percent": 0.2194467554289061
+    }
+  ],
+  "continuity": {
+    "changed_persistent_services": 0,
+    "original_port4000_listener_unchanged": true
+  }
+}

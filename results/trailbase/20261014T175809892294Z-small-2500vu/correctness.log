@@ -1,0 +1,143 @@
+test_k6_cannot_read_signing_keys_or_private_service_state (test_isolation.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.371s
+
+OK
+ Container baas-trailbase-trailbase-1 Running 
+ Container baas-trailbase-trailbase-1 Waiting 
+ Container baas-trailbase-trailbase-1 Healthy 
+ Container baas-trailbase-trailbase-1 Stopping 
+ Container baas-trailbase-trailbase-1 Stopped 
+ Container baas-trailbase-tools-run-159306628fd9 Creating 
+ Container baas-trailbase-tools-run-159306628fd9 Created 
+{"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d"}
+ Container baas-trailbase-trailbase-1 Starting 
+ Container baas-trailbase-trailbase-1 Started 
+ Container baas-trailbase-trailbase-1 Waiting 
+ Container baas-trailbase-trailbase-1 Healthy 
+ Container baas-trailbase-tools-run-e80f82a09737 Creating 
+ Container baas-trailbase-tools-run-e80f82a09737 Created 
+Testing http://trailbase:4000
+-- golden reads (fresh database)
+  ok   GET /feed == golden -> 200
+  ok   GET /feed content-type (application/json)
+  ok   GET /posts/1 == golden -> 200
+  ok   GET /posts/250000 == golden -> 200
+  ok   GET /posts/500000 == golden -> 200
+  ok   GET /posts/:id content-type (application/json)
+-- health, 404s, id validation
+  ok   GET /health -> 200 {"status":"ok","db":"ok","uptime_s":4}
+  ok   GET /nope -> 404
+  ok   GET /posts/0 -> 400
+  ok   GET /posts/-1 -> 400
+  ok   GET /posts/abc -> 400
+  ok   GET /posts/1.5 -> 400
+  ok   GET /posts/999999999 -> 404
+-- auth
+  ok   POST /posts, no token -> 401
+  ok   POST /posts, Basic auth -> 401
+  ok   POST /posts, garbage token -> 401
+  ok   POST /posts, bad signature -> 401
+  ok   POST /posts, alg=none -> 401
+  ok   POST /posts, expired token -> 401
+  ok   POST /posts, sub not an integer -> 401
+  ok   POST /posts, no username -> 401
+  ok   POST /posts/abc/like, no token (auth before id) -> 401
+-- create validation
+  ok   empty body -> 400
+  ok   whitespace body -> 400
+  ok   numeric body -> 400
+  ok   missing body -> 400
+  ok   malformed JSON -> 400
+  ok   501-char body -> 400
+-- create, like, read back
+  ok   special characters round-trip (trimmed) -> 201
+  ok   create 500-char post -> 201
+  ok   POST /posts content-type (application/json)
+  ok   created_at format 2026-10-14T17:52:09.394Z
+  ok   created_at is now (UTC, 0s)
+  ok   like (first) -> 201
+  ok   like (repeat) -> 200
+  ok   like missing post -> 404
+  ok   like bad id (with token) -> 400
+  ok   read back, like_count 1 -> 200
+  ok   like on a seeded post is counted at once (12)
+  ok   feed has 20 posts
+  ok   new post is at the top of the feed
+  ok   feed entry matches the post
+passed=42 failed=0
+test_concurrent_duplicate_likes_commit_once (test_api.FeedContract.test_concurrent_duplicate_likes_commit_once) ... ok
+test_concurrent_post_ids_and_immediate_reads (test_api.FeedContract.test_concurrent_post_ids_and_immediate_reads) ... ok
+test_identity_is_bound_to_signed_subject (test_api.FeedContract.test_identity_is_bound_to_signed_subject) ... ok
+test_storage_health (test_api.FeedContract.test_storage_health) ... ok
+test_strict_jwt_payload_and_expiry (test_api.FeedContract.test_strict_jwt_payload_and_expiry) ... ok
+test_unicode_limits_and_ecmascript_trim (test_api.FeedContract.test_unicode_limits_and_ecmascript_trim) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.304s
+
+OK
+PASS: native read-only Record API sees the canonical data and denies direct writes
+PASS: storage-probe failure returns 503 and recovers after storage restoration
+ Container baas-trailbase-trailbase-1 Restarting 
+ Container baas-trailbase-trailbase-1 Started 
+ Container baas-trailbase-trailbase-1 Running 
+ Container baas-trailbase-trailbase-1 Waiting 
+ Container baas-trailbase-trailbase-1 Healthy 
+ Container baas-trailbase-tools-run-488b9e24ee91 Creating 
+ Container baas-trailbase-tools-run-488b9e24ee91 Created 
+PASS: acknowledged post and like survive a real container restart
+TAP version 13
+# Subtest: phase boundaries exclude warmup, ramp and drain from the hold
+ok 1 - phase boundaries exclude warmup, ramp and drain from the hold
+  ---
+  duration_ms: 0.921604
+  type: 'test'
+  ...
+# Subtest: post validation rejects malformed successful responses
+ok 2 - post validation rejects malformed successful responses
+  ---
+  duration_ms: 0.209912
+  type: 'test'
+  ...
+# Subtest: feed validates size, ordering, uniqueness and status
+ok 3 - feed validates size, ordering, uniqueness and status
+  ---
+  duration_ms: 0.271702
+  type: 'test'
+  ...
+# Subtest: writes validate idempotency flags, identity and actual created content
+ok 4 - writes validate idempotency flags, identity and actual created content
+  ---
+  duration_ms: 0.209954
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 59.534037
+test_generator_does_not_log_signing_key (test_seed.SeedSafety.test_generator_does_not_log_signing_key) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 7.893s
+
+OK
+test_accepts_complete_passing_hold (test_benchmark.Scoring.test_accepts_complete_passing_hold) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (test_benchmark.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (test_benchmark.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (test_benchmark.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (test_benchmark.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (test_benchmark.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (test_benchmark.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (test_benchmark.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK

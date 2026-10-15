@@ -1,0 +1,9 @@
+.git
+.state
+results
+seed/feed.db*
+seed/tsv
+seed/tokens.json
+**/target
+**/__pycache__
+.DS_Store

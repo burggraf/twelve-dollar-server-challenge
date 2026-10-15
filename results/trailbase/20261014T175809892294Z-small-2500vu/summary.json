@@ -1,0 +1,27 @@
+{
+  "outcome": "pass",
+  "reason": "hold gates passed",
+  "vus": 2500,
+  "tier": "small",
+  "mode": "capacity",
+  "hold_requests": 79191,
+  "hold_rps": 263.97,
+  "latency_ms": {
+    "p(95)": 4.032283999999999,
+    "p(99)": 7.338108799999998,
+    "min": 0.211938,
+    "max": 74.277486,
+    "avg": 2.1740961861449,
+    "med": 1.85886
+  },
+  "request_errors": {
+    "rate": 0,
+    "passes": 0,
+    "fails": 79191
+  },
+  "schema_errors": {
+    "rate": 0,
+    "passes": 0,
+    "fails": 79191
+  }
+}

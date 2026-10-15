@@ -1,0 +1,12 @@
+ Container baas-trailbase-vps-trailbase-1 Running 
+ Container baas-trailbase-vps-trailbase-1 Waiting 
+ Container baas-trailbase-vps-trailbase-1 Healthy 
+ Container baas-trailbase-vps-trailbase-1 Stopping 
+ Container baas-trailbase-vps-trailbase-1 Stopped 
+ Container baas-trailbase-vps-tools-run-681039311a2b Creating 
+ Container baas-trailbase-vps-tools-run-681039311a2b Created 
+{"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d"}
+ Container baas-trailbase-vps-trailbase-1 Starting 
+ Container baas-trailbase-vps-trailbase-1 Started 
+ Container baas-trailbase-vps-trailbase-1 Waiting 
+ Container baas-trailbase-vps-trailbase-1 Healthy 

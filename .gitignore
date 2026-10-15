@@ -1,5 +1,25 @@
+# Generated dataset and private runtime state
 seed/feed.db*
 seed/tokens.json
 seed/tsv/
-results/
+.state/
+
+# Dependencies, build output, and Python caches
+node_modules/
+.venv/
+**/target/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Bulk benchmark artifacts: generated per run; retain local copies as evidence.
+# Reports, summaries, checksums, and small supporting evidence stay tracked.
+/results/**/samples.json
+/results/**/samples.json.gz
+/results/**/source.tar.gz
+
+# Local configuration and OS metadata
+.env
+.env.*
+!.env.example
 .DS_Store

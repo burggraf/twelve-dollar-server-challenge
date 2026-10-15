@@ -1,0 +1,7 @@
+{
+  "role": "generator-validity backoff probe after 20,000-VU runner OOM",
+  "probe_vus": 15000,
+  "prior_completed_capacity_attempts": 4,
+  "total_attempt_budget": 12,
+  "note": "20,000 runner OOM is not a failing target bracket; no code/resource/threshold change; full capacity timing"
+}

@@ -1,0 +1,296 @@
+# BaaS benchmark master plan
+
+## Goal and current state
+
+Retool this fork of the **$12 Server Challenge** to implement the same feed application on each BaaS, exercise its supported APIs, verify correctness, benchmark it, and publish a reproducible result **before starting the next service**.
+
+**Current primary setup (owner amendment, 2026-10-15):** all future BaaS product tests use the designated **16-GiB native AMD64 host**. The common aggregate serving baseline is now **standard: 1 CPU / 4 GiB**, with a separate **2 CPU / 8 GiB** runner (`k6-2cpu-8g-v3`). Preserve every existing service and the occupied loopback port 4000; benchmark ingress is loopback 14000 in a new owned namespace. Private CLI/source/image verification and fresh full native correctness passed at the new 4-GiB serving limit. A short unscored 10,000-VU calibration failed latency without OOM; the follow-up 5,000-VU calibration passed with zero errors. Current-source artifact checksums/attestation and 26 persistent services/original port-4000 listener identities were verified; the root login manager's normal SSH-session PID changes are disclosed. The full 2,500-, 5,000-, and 10,000-VU holds passed (10,000: 317,156 requests, 1,057.19 requests/s, p95 7.15 ms / p99 21.76 ms, zero errors). The 20,000-VU attempt then paused invalid on **8-GiB runner OOM**, with TrailBase healthy and all 26 persistent services/original listener unchanged. The full 15,000-VU follow-up passed at unchanged limits (475,756 requests, 1,585.85 requests/s, p95 23.05 ms / p99 65.35 ms, zero errors), and its complete evidence is retrieved/verified. Three additional independent 15,000-VU confirmation holds completed as attempts 6–8 within the original 12-attempt budget: **3/3 passed**; full source/checksum/artifact/resource review is complete, with a [verified lower-bound report](results/trailbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md). The owner authorized commit/push and direct progression to Supabase. OOM supplies no target-failure bracket. No maximum or accepted final report yet. The prior 8-GiB VPS campaign passed 2,500/5,000 VUs, then paused at 10,000 due to **runner OOM**, not target failure. No host/tier/profile holds are pooled. [Current 16-GiB track](results/trailbase/vps16-linux-amd64/README.md). TrailBase is **6/7 pending the authorized push**; Supabase is next by owner priority, with PocketBase deferred.
+
+**Historical implementation milestones:** TrailBase's native application, pinned Docker lifecycle, full-data correctness suite, and shared runner/reporting pipeline are implemented. TrailBase is **4/7 delivery gates complete**; 25- and 1,000-VU unscored pipeline checks passed and are retained. The original small-tier campaign passed at 2,500 VUs and paused on k6 OOM at 5,000 VUs. The owner approved a versioned 4-GiB runner and command-scoped sleep inhibition; fresh full correctness passed, but the first v2 calibration had host paging and the single retry lost resource monitoring. Mac load attempts are paused. The owner subsequently approved isolated native-amd64 VPS setup and bounded shared-host small-tier tests; private CLI plugins are installed and Linux/namespace regressions pass. The native VPS app build, initial full correctness, and unscored calibration passed. The first capacity launch failed before k6 execution because platform inference was not propagated to Compose; the launcher/selected-manifest fix passed fresh full native correctness/calibration. The restarted 8-GiB VPS campaign passed 2,500/5,000-VU holds and then paused on runner OOM at 10,000; no target maximum was measured. Confirmation and final acceptance remain pending. No other BaaS application has been started. See [TrailBase evidence](results/trailbase/README.md). Checked boxes denote completed work, not intended work.
+
+**Order (owner amendment, 2026-10-15):** TrailBase → **Supabase** → PocketBase → Convex → Nhost → Directus → Appwrite → Neon (feasibility-gated). Retain the compatibility-auth scope and common azabab.com 1-CPU/4-GiB serving plus 2-CPU/8-GiB runner configuration.
+
+### Confirmed decisions and remaining setup
+
+The owner confirmed local OrbStack Docker, self-hosted-first comparisons, the original small tier plus a larger common tier, and repository publication. The selected limits and run controls are now frozen in [contracts/BENCHMARK.md](contracts/BENCHMARK.md) before capacity scoring.
+
+- **Deployment:** all future self-hosted BaaS product tests run sequentially on the owner-designated **16-GiB native AMD64 VPS**. Preserve existing services; use benchmark-owned namespaces and an unoccupied loopback port. OrbStack and the 8-GiB VPS are retained historical tracks. Managed/emulated deployments remain separate.
+- **Resources:** the new common **standard** serving budget is **1 CPU / 4 GiB aggregate**, with **2 CPU / 8 GiB** for `k6-2cpu-8g-v3`; container swap is disabled. Enforce aggregate budgets across required serving components. Reserve at least **1 CPU and 1 GiB** for OS/host overhead and check existing workload headroom before starting. The four-CPU host fits standard, not legacy large (4 CPU serving + 2 CPU runner). Historical small (1 CPU/2 GiB), large (4 CPU/4 GiB), and older runner cohorts remain explicit and unpooled. A stack that cannot fit receives an evidenced `does-not-fit` report, never a quiet resource increase or fabricated score. This is not a dedicated $12-cloud-VM equivalence.
+- **Publishing:** versioned Markdown reports, machine-readable summaries, and raw benchmark artifacts in this repository. Use durable linked artifacts only if raw data is impractical to store in Git. No report site needed for the first result.
+- **Execution:** native Linux AMD64 on the new primary host: Ubuntu 24.04.5 LTS, 4 CPUs, 16,770,072,576 bytes RAM, no swap, Docker 29.8.1. Recheck/record host details and current service continuity per campaign. k6 runs in its separately limited container on the same host; shared-host/cache/provider interference remains disclosed. Do not pool previous native ARM64/AMD64 hosts or emulate a primary result.
+- **Application:** retain the existing HTTP contract through product-native routes/functions where possible and a thin service-specific HTTP adapter where necessary. The measured system includes any adapter.
+- **Scope:** application performance, correctness, resource usage, and operating cost—not a comprehensive feature comparison. Realtime subscriptions, storage, login throughput, and frontend performance are outside the initial workload.
+
+## 1. Baseline and repository transition
+
+### Inspection completed
+
+- [x] Read `README.md`, `SPEC.md`, `schema.sql`, seed generation/import, correctness runner, golden fixtures' usage, load script, proxy config, existing submission, and CI workflow.
+- [x] Identify reusable workload: health, feed, post detail, create post, idempotent like; 50,000 users, 500,000 posts, approximately 2 million likes, and 20,000 load identities.
+- [x] Identify SQLite-specific assumptions: fixed physical schema, local database copies, shared HS256 tokens, and submission-oriented CI.
+- [x] Check deployment constraints: Convex supports self-hosting; Supabase documents a larger full-stack minimum than the original tier; Neon Local connects to a remote Neon branch.
+
+### Foundation to implement with TrailBase, not as a separate platform project
+
+- [x] Preserve the upstream spec, seed data algorithm, golden fixtures, and submission as reference; distinguish fork rules from old SQLite-only rules. Only unsafe seed key logging was changed.
+- [x] Add [the BaaS benchmark contract](contracts/BENCHMARK.md), retaining endpoint semantics and superseding SQLite-only runtime/schema rules.
+- [x] Freeze workload v1, benchmark protocol, hardware tiers, deployment profile, and cache/auth policies before capacity scoring.
+- [x] Define the backend-neutral TSV data contract and verified offline reset. Reuse unchanged `seed/generate.mjs` application data, without requiring an intermediate upstream SQLite file.
+- [x] Verify canonical counts, full logical hash, foreign keys, unique likes, timestamps, and golden reads after import: actual likes = **2,016,005**.
+- [x] Separate deterministic data hashes from time/key-dependent tokens, remove signing-key logging with a red/green regression test, and exclude keys/tokens from build contexts and published artifacts.
+- [x] Implement only TrailBase and the shared tooling it needs; no later applications scaffolded. Capacity execution/acceptance remains separate from tooling implementation.
+
+## 2. Shared application and fairness contract
+
+### Required behavior
+
+Retain `SPEC.md`'s five endpoints, ordering (`created_at DESC, id DESC`), 20-post feed, exact response/error shape, body validation, timestamps, read-after-write behavior, authentication-before-ID validation, and idempotent likes. Preserve the original exact-byte golden tests for the compatibility HTTP surface; do not edit goldens to make a backend pass.
+
+- Map service-generated IDs to stable public integer IDs where required. Seed IDs and relationships must survive import. New IDs must be unique under concurrent writes; never implement allocation as an unprotected `max(id) + 1`.
+- Translate physical schemas to supported service models. Equivalent indexes and required platform metadata are allowed and documented; the original SQLite-only physical-schema restriction does not apply across products.
+- Begin with normalized users/posts/likes and request-time counts. Transactionally maintained counters, denormalization, and other optimizations require a separately labelled variant, new correctness coverage, and fresh measurements—not a quiet change to the baseline.
+- Success means a committed write under the product's documented persistence guarantees, not a queued or fire-and-forget write. Test read-after-write and restart persistence; disclose durability differences. SQLite WAL `synchronous=NORMAL` is the upstream baseline, not proof of identical power-loss guarantees across products.
+- No hand-written response caches, seeded answers, remembered JWT verification, or application-side table replicas. Disclose unavoidable product query caches, memoization, retries, and consistency behavior; do not claim all engine internals are equivalent or disable core native behavior just to imitate SQLite.
+
+### Use the actual BaaS
+
+Every service README must diagram the timed path: **k6 → public app endpoint → service API/function/extension → platform storage**.
+
+- Product-owned SQL APIs, RPCs, server functions, and documented extension data APIs are allowed. A generic application connecting straight to the platform's underlying database is not a BaaS implementation.
+- Prefer native server-side composition to avoid artificial client-side N+1 calls. Record backend calls per user action, function runtime/language, deployment topology, and any nonstandard tuning.
+- An adapter may validate requests, translate identities/IDs, compose supported API calls, and serialize the common response. It must not replace the service's storage/transaction logic with its own database driver.
+- The exception is the separately labelled **Neon database-backed application** track: use Neon's supported driver/API and include the application server, auth, and networking in the measurement. Do not present it as equivalent feature coverage to a complete BaaS.
+- Keep a service-native API integration test in addition to the common HTTP suite, so a passing compatibility facade cannot hide a bypassed or unused platform.
+
+### Authentication and authorization
+
+The inherited benchmark uses pre-signed HS256 identities and does not measure login. Preserve signature, expiry, algorithm, and payload validation on each authenticated request. Default to verification inside the product-native route/function; when an external adapter must bridge identities, document the trust boundary and test that callers cannot forge the downstream identity.
+
+Use supported native identity mapping where practical. If compatibility requires a scoped server credential after JWT verification, keep it server-side, restrict network exposure, enforce ownership in the app, and label that result **trusted-server compatibility auth**, not native end-user authorization throughput. No admin keys in k6 or public artifacts. Native auth/RLS comparisons can be additional, separately versioned variants; never silently change the auth model between ranked entries.
+
+## 3. Docker and runner architecture
+
+**Use Docker Compose per service, a reusable correctness/seed runner image, and a pinned upstream k6 image for load generation.** This shares tooling without rebuilding a test image for every product or embedding all BaaS stacks into one image. Do not force multi-service BaaS products into a single custom image. Prefer pinned upstream images (version and digest); build custom images only for application code, extensions, tooling, or products without an appropriate image.
+
+Proposed layout below is a target, not files already implemented:
+
+```text
+MASTER_PLAN.md
+contracts/                 # BaaS behavior, data mapping, benchmark protocol
+services/<service>/        # README, pinned compose, app/functions, migrations,
+                           # import/reset scripts, integration tests, .env.example
+runner/                    # correctness/seed tooling image and pinned k6 image
+scripts/                   # lifecycle, run orchestration, artifact/report helpers
+bench/                     # inherited load test plus versioned BaaS workload
+results/<service>/<run-id>/ # report.md, summary.json, manifest, checksums,
+                           # correctness logs, raw metrics/logs or durable links
+```
+
+`results/` is now trackable for reports and raw evidence. `.state/`, generated databases/tokens/TSVs, local environment files, compiler output, and Python caches are ignored; Docker build context excludes private/generated state.
+
+### Lifecycle interface
+
+TrailBase implements `build`, `up`, `wait-ready`, `seed`, `reset`, `test`, `bench`, and `down` in `services/trailbase/run.sh`; `bench` automatically generates reports, so it does not need a separate `report` command. Other products will implement the same small lifecycle as they are reached. See [TrailBase's concrete commands](services/trailbase/README.md). Reset/teardown operate only on explicitly named benchmark resources; never delete unrelated Docker volumes or cloud branches.
+
+- [x] Pin image digests, SDK/compiler/runner versions, apt snapshot, and Cargo.lock; add credential-free `.env.example`. Files exist locally; no commit/push performed.
+- [ ] Keep health checks, migrations, import/index completion, and readiness distinct. Record cold-start/import durations outside scored latency. Health must probe real storage through the platform, not return a static success.
+- [ ] Account for the **sum** of service, adapter, function workers, database, required caches, and ingress resources. Select and verify an aggregate enforcement mechanism supported by OrbStack, or fixed per-container allocations whose totals stay within the tier; do not just observe usage and call it a limit. Record CPU throttling, memory/swap enforcement, and shared VM/OS overhead. Reserve runner/VM headroom before fixing the larger tier; do not change global OrbStack settings or stop unrelated workloads without approval.
+- [ ] Select/document one deployment profile: required production serving components on; optional UI/storage/realtime/telemetry components consistently excluded where supported, with exclusions explicit. Never strip correctness, auth, or durability to fit.
+- [ ] Start only the active product's stack. Reuse the runner image, not persistent service data. Reset before each independent attempt; use a disposable correctness instance so test writes never leak into scored runs.
+- [ ] Run correctness and seeding jobs outside the timed interval. For the approved local setup, run k6 in a separate resource-limited container, reserve capacity for it and the VM/host, and verify it can generate the target load without saturation. Shared-host scheduling/cache contention remains a disclosed limitation; a second host is an optional future validation track, not required for this local campaign.
+- [ ] Capture host/VM and whole-stack CPU, peak/steady RAM, I/O, disk growth, network, OOM/restarts, runner saturation, host memory pressure, and swap activity. Keep monitoring overhead consistent. Record power/thermal conditions and unrelated workload activity; pause/request owner action when interference makes a run invalid.
+- [ ] Isolate service networks and benchmark-only credentials; redact sensitive logs at collection. Do not blindly publish environment dumps or resolved Compose configs containing secrets.
+
+## 4. Correctness and benchmark protocol
+
+### Correctness gate
+
+- [x] Run all 42 inherited checks against freshly imported TrailBase data via the new BaaS lifecycle runner; keep the original SQLite submission runner unchanged.
+- [ ] Add regression tests for concurrent duplicate likes (one row/one first-success), concurrent post IDs, unauthorized/cross-user actions, exact ordering ties, current like counts, Unicode/trim boundaries, missing/deleted data, and health failure.
+- [x] Verify immediate reads and acknowledged post/like persistence across a real container restart; document WAL/NORMAL versus power-loss guarantees.
+- [ ] Add direct service integration tests for permissions, identity mapping, migration/import/reset correctness, and each supported data API/function used by the app.
+- [x] Add native ARM64 service-aware correctness CI, retaining legacy CI. Workflow not run remotely in this session; scored runs remain manual/local.
+
+### Scoring gate
+
+Preserve the upstream user journey: feed → think 3–7 s → post detail → think 3–8 s → like with 15% probability → create with 2% probability → idle 5–15 s. Primary score remains **maximum passing concurrent virtual users**, not registered users or requests/second. Report achieved requests/second and endpoint mix alongside it.
+
+The existing `bench/load.js` is the reference, not a complete scoring harness: it aggregates ramp/hold/drain latency, does not fail on `check()` failures via a threshold, and lacks a publication pipeline.
+
+- [x] Add workload v1 with defensive parsing, content/status/schema validation, failure accounting, stable tags, fixed timeouts, compressed raw export, and red/green helper/scoring tests.
+- [ ] Collect/tag the **steady-state hold separately** from ramp-up and ramp-down, and score only that interval. Keep whole-run results too. Apply p95 < 500 ms, p99 < 1,000 ms, and < 1% failed requests to the hold; publish per-endpoint latency/error breakdowns as well as aggregates.
+- [ ] Warm up at 1,000 VUs for 2 minutes; if infeasible, record that failure and use a predefined lower-load fallback. Search from 2,500 VUs, doubling to failure and narrowing to 250-VU increments; search downward when the first attempt fails. Use smaller steps below 250 so low-capacity services can still be measured.
+- [ ] Reset to the canonical dataset before each attempt, then perform that attempt's standard warm-up and ramp. Warm-up writes are allowed only as part of this identical protocol; never reuse writes from a previous attempt.
+- [ ] Confirm a candidate with **three independent 5-minute holds**. Require every hold to pass; publish each result and the range, not just the best. Step down and repeat if a hold fails. Label this stricter confirmation rule as a fork protocol change, not an unchanged upstream score.
+- [ ] Freeze timeout/retry/backoff/connection policies, ingress/TLS mode, runner/network placement, OrbStack version/configuration, native/emulated architecture, storage configuration, resource tiers, and dataset/workload revision. Disclose platform-mandated differences rather than hiding them.
+- [ ] Reject runs with load-generator saturation, material unrelated host interference, host swapping, or invalid measurements; retain and label them with a predefined reason. Treat rate limits, target OOM, restarts, and platform failures within the tier as outcomes, not as discarded “outliers.”
+- [ ] Keep cold starts, scale-to-zero, alternative caches/auth/models, and managed autoscaling in separate experiments. Do not mix those samples with warm steady-state capacity.
+
+### Publication gate (required before advancing)
+
+Every report must include:
+
+1. Service/version, app commit, clean/dirty-tree status and patch if applicable, image digests, runner/workload revisions, data checksum/counts, schema/indexes, and exact reproduction commands.
+2. Deployment profile, complete timed-path diagram, auth mode, resource tier, host/OS/architecture/disk/network details, OrbStack/Docker versions and VM budget, runner budget, native/emulated execution, host contention/thermal conditions, region if managed, ingress/TLS, limits, timeouts/retries, caching, consistency, and durability caveats.
+3. Correctness output; all search attempts and failed/invalid runs; three final holds; steady-state p50/p95/p99, throughput, errors/check failures by endpoint, and resource metrics.
+4. Cost basis: local OrbStack results have no measured cloud monthly price; mark cloud cost/request as not applicable rather than implying the local limits cost $12. For managed runs or an explicitly labelled cost model, include infrastructure/plan price, extra adapter costs, requests/operations/egress, and estimated cost per million workload requests with assumptions.
+5. Raw measurements and sanitized logs, checksums, machine-readable summary, and durable artifact references. Use release assets or another approved durable store if raw data is too large for Git; do not rely solely on expiring CI artifacts.
+6. Limitations and a clear outcome: `scored`, `does-not-fit`, `blocked`, or `unsupported`. Missing/incompatible services get no numeric score. Negative reports must show evidence and the blocker; scope changes/skips require an explicit decision before advancing.
+
+Publication initially means a checked-in report/summary with retained evidence. Pushing changes, creating releases, public uploads, and cloud purchases need explicit approval and credentials; do not mark a report externally published when it exists only locally.
+
+## 5. Progress dashboard
+
+Each service has **seven delivery gates**: (1) feasibility/version/profile, (2) application/data/auth, (3) correctness, (4) reproducible deployment/reset, (5) measured benchmarks, (6) retained report/artifacts, (7) publication/acceptance. Update counts only with linked evidence. All later services remain queued until the previous service's final gate is accepted.
+
+| Order | Service | State | Gates | Result / blocker |
+|---|---|---|---|---|
+| 1 | TrailBase | Verified 15,000-VU lower bound; owner authorized publication/progression | 6/7 | [Final report](results/trailbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md); authorized push pending, no target maximum |
+| 2 | Supabase | Next by owner priority | 0/7 | Same native VPS/budgets/auth; validate full serving profile fit |
+| 3 | PocketBase | Deferred until after Supabase | 0/7 | No implementation started |
+| 4 | Convex | Queued after Supabase | 0/7 | Validate full dataset/query limits and compatibility auth |
+| 5 | Nhost | Queued after Convex | 0/7 | Validate reproducible self-hosted profile |
+| 6 | Directus | Queued after Nhost | 0/7 | Validate transaction-safe like API/extension |
+| 7 | Appwrite | Queued after Directus | 0/7 | Validate stack footprint and atomic API support |
+| 8 | Neon | Queued; feasibility-gated | 0/7 | Separate database-backed/managed track; not a full BaaS |
+
+### 1 — TrailBase
+
+- [x] **Feasibility:** pinned native ARM64 TrailBase v0.34.6, Rust 1.91.1, published guest SDK 0.6.1 (release source SDK 0.7.0 is unpublished). Native WASM handlers, query/transaction APIs, crypto, health, and committed writes are verified against the actual server.
+- [x] **Application:** all five endpoints use native custom handlers and TrailBase database/transaction APIs. Full canonical data imported without replacing platform metadata; schema retains the original logical model/indexes with required `STRICT` tables.
+- [x] **Correctness:** all 42 inherited checks, six extra black-box tests, native Record API permissions, storage failure/recovery, and real restart persistence passed. Added Rust, seed privacy, workload, scoring/monitor, and container-isolation regressions; GitHub CI added but not remotely executed.
+- [x] **Deployment:** pinned Compose/app/tool builds, migration, verified import/reset, readiness, secret isolation/examples, and reusable correctness/load runners implemented. Actual small-tier cgroup quota/RAM/no-swap verified.
+- [ ] **Benchmarks:** smoke test unscored, then execute controlled search and three confirmation holds per selected tier; retain failures and resource usage.
+- [ ] **Report:** populate `results/trailbase/<run-id>/` with evidence, reproduction commands, limitations, and summary.
+- [ ] **Publish/accept:** verify artifact availability and accepted outcome; link report in dashboard before starting PocketBase.
+
+### 2 — PocketBase
+
+- [ ] **Feasibility:** pin a release and choose a documented native extension path (Go or JS hooks); verify JWT/crypto availability, transaction support, and collection/system metadata requirements. Build a pinned image if a suitable upstream image is unavailable.
+- [ ] **Application:** create collections/migrations and native custom routes using PocketBase's supported app/data APIs. Map public seed IDs and import data without assuming the raw upstream SQLite file is a valid PocketBase database.
+- [ ] **Correctness:** pass shared/native tests; stress unique likes, record-ID mapping, concurrent writes, permissions, and restart persistence.
+- [ ] **Deployment:** implement the same lifecycle, fresh reset, readiness, pinned build, and resource accounting.
+- [ ] **Benchmarks:** run the frozen protocol and retain all attempts plus three passing confirmation holds where feasible.
+- [ ] **Report:** retain evidence and report under `results/pocketbase/<run-id>/`.
+- [ ] **Publish/accept:** link accepted report before starting Supabase.
+
+### 3 — Supabase
+
+- [ ] **Feasibility:** pin the self-hosted Compose release/digests and select a documented serving profile. Check the small tier honestly; official full-stack guidance currently specifies at least 2 CPU cores and 4 GB RAM.
+- [ ] **Application:** import equivalent PostgreSQL tables/indexes; implement via supported REST/RPC and/or Edge Functions. Use transactional SQL functions for composition/idempotency where appropriate, exposed through Supabase APIs—not an adapter's direct PostgreSQL connection. Declare JWT mapping and RLS/trusted-server policy.
+- [ ] **Correctness:** pass shared/native tests, including RLS/identity boundaries, unique likes, transactional errors, and persistence.
+- [ ] **Deployment:** automate configuration, migrations, import/reset, readiness, function deployment, and whole-stack resource capture.
+- [ ] **Benchmarks:** measure matching tiers/profiles; record `does-not-fit` where applicable rather than giving this service extra unreported resources.
+- [ ] **Report:** retain profile/disabled-component details and evidence under `results/supabase/<run-id>/`.
+- [ ] **Publish/accept:** link accepted report before starting Convex.
+
+### 4 — Convex
+
+- [ ] **Feasibility:** pin the self-hosted backend/CLI/SDK and storage configuration. Prove full seed import and required queries fit documented transaction, read, execution, and import limits before building the complete app.
+- [ ] **Application:** define documents/indexes with stable public IDs; implement native queries/mutations behind HTTP actions or a thin adapter using the supported client. Verify JWT on writes; enforce duplicate-like invariants transactionally. No direct access to backend storage.
+- [ ] **Correctness:** pass shared/native tests for ID allocation, ordering, transaction retries, duplicate likes, identity, counts, and persistence. If normalized count queries exceed limits, document the blocker; do not silently substitute counters into the baseline.
+- [ ] **Deployment:** automate backend setup, function deployment, batch import, canonical reset, readiness, and resource capture.
+- [ ] **Benchmarks:** apply the common protocol, documenting native query caching and transaction retry behavior.
+- [ ] **Report:** retain function/runtime/storage choices and evidence under `results/convex/<run-id>/`.
+- [ ] **Publish/accept:** link accepted report before starting Nhost.
+
+### 5 — Nhost
+
+- [ ] **Feasibility:** verify current self-hosting instructions/components, pin a reproducible deployment, and establish required footprint. Do not treat an undocumented hand-assembled stack or a local development CLI as a production-equivalent deployment.
+- [ ] **Application:** import PostgreSQL schema/data and configure GraphQL metadata/permissions. Implement via Nhost's supported GraphQL/functions path, with transactional native mutations/functions for idempotent likes and explicit identity mapping; no direct database bypass.
+- [ ] **Correctness:** pass shared/native tests, permission/claim mapping, ordering/counts, concurrency, and persistence.
+- [ ] **Deployment:** automate metadata/migrations, function deployment where needed, seed/reset, readiness, and full-stack accounting.
+- [ ] **Benchmarks:** run the common protocol on eligible tiers or document the blocker with evidence.
+- [ ] **Report:** retain configuration/profile and evidence under `results/nhost/<run-id>/`.
+- [ ] **Publish/accept:** link accepted report before starting Directus.
+
+### 6 — Directus
+
+- [ ] **Feasibility:** pin Directus and database versions; check license/deployment requirements and supported endpoint-extension/service APIs for transactions, identity, and count queries.
+- [ ] **Application:** create schema/metadata/roles; import canonical data; use REST/GraphQL and documented endpoint extensions/services to expose the common app. Implement atomic duplicate-like detection through supported platform mechanisms, not a parallel raw-SQL server.
+- [ ] **Correctness:** pass shared/native tests, including item permissions, aggregates, concurrent likes, ID allocation, and restart persistence.
+- [ ] **Deployment:** pin Compose/extensions, export reproducible schema/config, and implement import/reset/readiness/resource capture.
+- [ ] **Benchmarks:** execute the common protocol with cache settings and all timed adapter/extension overhead disclosed.
+- [ ] **Report:** retain database/profile and evidence under `results/directus/<run-id>/`.
+- [ ] **Publish/accept:** link accepted report before starting Appwrite.
+
+### 7 — Appwrite
+
+- [ ] **Feasibility:** pin the self-hosted release and supported database API generation. Validate footprint, query/index limits, atomic uniqueness/transactions, counts, and function runtime requirements on that exact release.
+- [ ] **Application:** create tables/collections and indexes using supported APIs, map public IDs, and import the seed. Use the server SDK/REST and native Functions or a thin adapter. Prove API-supported atomic first-like/repeat semantics; no application-side lock that fails across replicas or direct storage access.
+- [ ] **Correctness:** pass shared/native tests for permissions, partial failures, concurrent likes/writes, fresh counts, ordering, and persistence.
+- [ ] **Deployment:** automate platform/project provisioning, schema/index readiness, function deployment if used, seed/reset, and accounting for the entire required stack.
+- [ ] **Benchmarks:** run matching profiles/tiers; retain rate-limit, queueing, cold-function, and resource evidence separately where relevant.
+- [ ] **Report:** retain API/runtime/profile choices and evidence under `results/appwrite/<run-id>/`.
+- [ ] **Publish/accept:** link accepted report before deciding the Neon run.
+
+### 8 — Neon (if feasible)
+
+- [ ] **Feasibility:** explicitly choose the comparison scope. Default: managed Neon plus a containerized application using its supported serverless driver/API, reported separately. Neon Local is a proxy to cloud branches, not an offline self-hosted Neon database; plain local PostgreSQL must never be labelled Neon. A full self-hosted Neon research project is outside this initial plan.
+- [ ] **Application:** port schema/indexes/data to PostgreSQL; implement the five endpoints, JWT validation, and atomic writes in the app using Neon's supported access path. Document that this supplies application/auth functionality the other products may include.
+- [ ] **Correctness:** pass shared tests and driver/transaction integration tests, including concurrency and persistence.
+- [ ] **Deployment:** pin app/driver, choose approved plan/region/compute limits, isolate a benchmark branch, and implement safe import/reset/teardown. Obtain budget/credentials approval before provisioning.
+- [ ] **Benchmarks:** document app placement and app-to-database network latency; fix or disclose autoscaling/scale-to-zero. Separate warm capacity from cold-resume tests and do not insert this score into the fixed-hardware self-hosted ranking.
+- [ ] **Report:** retain cost/network/compute limits and evidence under `results/neon/<run-id>/`, or publish an accepted unsupported/blocked feasibility report.
+- [ ] **Publish/accept:** link accepted outcome and complete the sequential campaign.
+
+## 6. Next execution checkpoint
+
+**Continue only TrailBase on the designated 16-GiB native AMD64 host**, preserving existing services. Use [the current guide](services/trailbase/VPS16.md): standard **1 CPU/4 GiB serving**, `k6-2cpu-8g-v3` **2 CPU/8 GiB runner**, loopback **14000**, owned namespace. Current-source full correctness and 5,000-VU unscored calibration passed; both calibration outcomes and verified source/log/checksum/continuity evidence are retained. The automatic campaign paused on generator OOM at 20,000; all full artifacts are now retrieved/verified. The full 15,000-VU probe passed as attempt 5, and all probe artifacts/source/log/checksum proofs are verified. Three additional independent 15,000-VU holds all passed (attempts 6–8 of 12), with unchanged code/caps/SLOs. Complete full artifact/checksum/source/resource/tail review, then report a confirmed **lower bound**, not a maximum; generator OOM supplies no failing target bracket. Post-phase persistent services/listener matched and both owned units are inactive. Obtain acceptance before PocketBase. Review every attempt, retain invalid/failed evidence, and pause on host/generator invalidity; do not tune or weaken gates during the campaign. All previous hosts/tiers/profiles remain historical and supply no confirmations. A maximum requires bracketed search, three independent passing five-minute holds, resource/continuity review, and acceptance; report a lower bound/blocked outcome rather than inventing a maximum if limited by the runner. No PocketBase or later application work before acceptance.
+
+### Progress log
+
+- Planning checkpoint: owner confirmed local OrbStack, self-hosted-first tracks, small plus larger resource tiers, and repository reports/raw artifacts. Read-only host/Docker inventory captured above; no implementation had started at that checkpoint.
+- 2026-10-14 — TrailBase gates 1–4 completed. Canonical import verifies 50,000 users, 500,000 posts, **2,016,005 likes**, and the original full logical hash. `bash services/trailbase/run.sh build` and `bash services/trailbase/run.sh test` pass locally; short unscored load/artifact checks retained under `results/trailbase/`. Added least-privilege k6 mounts, scenario-clock anchoring, resource invalidation, source/image/correctness attestations, and raw artifact retention. Completed-runner 1,000-VU calibration passed (20-second unscored hold, 2,215 requests, zero errors, p95 5.84 ms / p99 16.89 ms). Fresh-volume boot also passed without manual permission repair. The bounded small-tier capacity campaign is now running; three confirmations and final report review/acceptance remain. No later service started.
+
+- 2026-10-14 — Original runner campaign paused: one passing 2,500-VU five-minute hold (79,191 requests, 263.97 requests/s, p95 4.03 ms / p99 7.34 ms, zero errors), then load-generator OOM at 5,000 VUs (exit 137; target healthy). Preserved all artifacts and [reviewed the incident](results/trailbase/runner-v1-campaign-review.md). Added failing/passing OOM-diagnostic, profile-budget, and VM-headroom regressions. Owner approved 2-CPU/4-GiB k6 profile v2 and command-scoped sleep inhibition; fresh full correctness passed and 5,000-VU unscored calibration is running. Serving/app/workload limits remain unchanged; large-tier benchmarking is headroom-blocked on the current VM. Next: review calibration, restart v2 small-tier search/confirmation. Gates remain 4/7.
+
+- 2026-10-14 — Runner-v2 full correctness passed (42 inherited, six API regressions, native permissions/storage/restart, four workload tests, seed privacy, 13 scoring/profile/headroom tests, Compose isolation). First 5,000-VU v2 unscored calibration completed with no runner OOM and zero request/schema errors, but host swap-outs increased by 334.25 MiB, so the measurement is **invalid**. Retained [raw evidence](results/trailbase/20261014T231310540419Z-small-5000vu-k6-2cpu-4g-v2-smoke/report.md); one same-profile recalibration retry is running. Repeated paging blocks capacity search pending host review. No serving changes or later-service work.
+
+- 2026-10-14 — The single runner-v2 recalibration retry was invalid: macOS `top -l 2 -s 1 -n 0` timed out after 5 seconds, leaving only two monitoring samples. k6 exited 99 with severe diagnostic latency/errors; no target/runner OOM or target restart, but the monitoring window was not certifiable. Retained [v2 investigation/evidence](results/trailbase/runner-v2-calibration-review.md). Further load attempts are paused for owner direction (free host resources, explicitly choose lower-load exploration, or request blocked-outcome publication). No maximum score, acceptance, or later-service advancement. Gates remain 4/7.
+
+- 2026-10-14 — Owner requested the existing Contabo VPS and approved an isolated `/opt/twelve-dollar-baas-benchmark` setup, private checksum-verified Compose/Buildx plugins, and bounded small-tier tests alongside existing services. Read-only preflight: native x86-64 Ubuntu 24.04.4, 4 CPUs, 8,326,942,720-byte RAM, no swap, Docker 29.1.3, five existing containers, port 4000 free. Installed only project-private Compose v5.5.0 / Buildx v0.37.2. Added red/green Linux raw-counter, native-platform, separate-track, and namespace regressions (18 scoring/host tests, two Compose isolation tests, four workload tests pass locally). Pinned same-release multi-arch TrailBase index; native VPS build and full correctness/calibration remain pending. No existing service was changed; gates remain 4/7.
+
+- 2026-10-14 — Sanitized source overlay plus the original shallow base commit uploaded to the approved VPS workspace; archive SHA256 verified, namespace/image/volume/network collision checks passed. Started the managed remote native build → full correctness → unscored 5,000-VU calibration job (`trailbase-vps-native-build-correctness-calibration`, transient systemd unit). Builder is explicitly 2 CPU / 2 GiB / no swap and stopped before test/load; serving and runner-v2 limits stay unchanged. Local executable checks passed before upload; native build/correctness/calibration results remain pending. No existing service containers were changed. No scored campaign or later-service progression yet.
+
+- 2026-10-15 — Native VPS build passed within verified 2-CPU/2-GiB/no-swap limits; three Rust tests and full native correctness passed. Initial 5,000-VU unscored calibration passed (10,918 hold requests, zero errors, p95 85.25 ms / p99 137.39 ms, no guest swap-outs). Retrieved and verified [VPS evidence](results/trailbase/vps-linux-amd64/README.md). A later continuity audit observed one existing app's final clean-restart timestamp after calibration; no lifecycle command was issued against it, and no broad unchanged-service claim is made.
+- 2026-10-15 — First VPS capacity launch invalid before execution: direct controller omitted the inferred native platform from Compose subprocess environment, so k6 pulled ARM64 on AMD64 and exited 255 (`exec format error`). A create-only probe also reproduced Docker 29 image-index inspection reporting AMD64 for an ARM64-selected container. Preserved raw failed attempt/campaign. Added meaningful red/green boundary regressions; 20 scoring/host tests, two isolation tests, four workload tests pass locally. Fixed explicit Compose environment propagation and actual container-manifest platform/digest verification. Uploaded checksummed changes; full native correctness and direct-controller 5,000-VU calibration revalidation is running. No image/app/data/workload/resource-profile change or maximum score. Gates remain 4/7.
+
+- 2026-10-15 — Current-source full native correctness passed again, including 20 scoring/host/native-boundary tests. Direct-controller 5,000-VU calibration passed (11,089 requests, zero errors, p95 57.78 ms / p99 88.51 ms, selected AMD64 manifest digests verified, zero guest swap-outs). Restarted the bounded VPS campaign without further code/resource changes. First independent five-minute search hold at 2,500 VUs passed: 79,424 requests, 264.75 requests/s, p95 4.63 ms / p99 15.12 ms, zero request/schema errors. [Progress/evidence](results/trailbase/vps-linux-amd64/README.md); proceeding to 5,000 VUs. Complete raw campaign artifacts stay on the VPS until pause/completion to avoid bulk retrieval during load. Search, three confirmations, full evidence review, and acceptance remain pending; gates stay 4/7.
+
+- 2026-10-15 — 8-GiB VPS passed 5,000-VU hold (158,750 requests, 529.17 requests/s, p95 7.54 ms / p99 24.09 ms, zero errors), then k6 OOM-killed at 10,000 VUs (exit 137, 4-GiB cap). TrailBase stayed running, no OOM/restart; invalid attempt supplies no failing target bracket. Retrieved all campaign attempts and verified checksums. Owner designated the 16-GiB host for every future BaaS test, preserving existing services, and changed the common serving budget to **1 CPU/4 GiB**, runner **2 CPU/8 GiB**. Read-only inventory confirmed 4 CPUs and ample memory/disk; existing port 4000 is untouched, benchmark port 14000 is free. Added standard tier, versioned runner v3, separate host track, and CPU reserve guard: 24 scoring/host tests and three isolation tests passed under both profiles, plus four workload tests/syntax checks. Isolated workspace/private pinned CLI setup passed; unchanged native image archive transferred, no runtime state/credentials. Fresh correctness/calibration/search remain pending. Gates stay 4/7.
+
+- 2026-10-15 — New 16-GiB primary setup/image import/source-label verification passed without global changes. Fresh full native correctness passed under **1 CPU/4 GiB**, including 42 inherited checks, six API tests, native permissions/storage/restart tests, four workload tests, seed privacy, 24 scoring/host tests and three isolation tests. Unscored 10,000-VU calibration failed latency (no OOM); retained unchanged. Follow-up 5,000-VU calibration passed: 11,106 requests, 555.30 requests/s, p95 7.39 ms / p99 31.59 ms, zero errors. Both selected AMD64 image/cap/source/log/checksum proofs verified after retrieval. All 26 persistent services and original port-4000 listener identities matched; the root `user@0.service` PID changed normally between SSH sessions (`Linger=no`, lifecycle journal retained), not a production-app restart. Started `trailbase-vps16-standard-capacity-campaign` with frozen code/caps and existing 20,000-VU/12-attempt ceiling. [Evidence](results/trailbase/vps16-linux-amd64/README.md). No maximum/confirmation/acceptance yet; 4/7 gates.
+
+- 2026-10-15 — Current primary **standard 1-CPU/4-GiB** full capacity campaign passed its first **2,500-VU five-minute hold**: 79,401 requests, 264.67 requests/s, p95 0.95 ms / p99 2.44 ms, zero request/schema errors. Exact [progress summary](results/trailbase/vps16-linux-amd64/progress/20261015T012840173938Z-standard-2500vu-summary.json) retained; full raw artifacts stay on the VPS until pause/end to avoid transfer interference. Proceeding to full 5,000-VU attempt. No maximum/confirmation/acceptance yet; gates stay 4/7.
+
+- 2026-10-15 — Current primary **1-CPU/4-GiB** campaign passed the full **5,000-VU five-minute hold**: 158,849 requests, 529.50 requests/s, p95 1.23 ms / p99 8.06 ms, zero request/schema errors. Exact [summary](results/trailbase/vps16-linux-amd64/progress/20261015T013845471643Z-standard-5000vu-summary.json) retained; full raw artifacts remain on the VPS during load. Proceeding to full 10,000-VU attempt; no maximum/three-hold confirmation/acceptance yet, 4/7 gates unchanged.
+
+- 2026-10-15 — Current primary **1-CPU/4-GiB** campaign passed the full **10,000-VU five-minute hold**: 317,156 requests, 1,057.19 requests/s, p95 7.15 ms / p99 21.76 ms, zero request/schema errors. [Exact summary](results/trailbase/vps16-linux-amd64/progress/20261015T014851697125Z-standard-10000vu-summary.json) retained. This differs from the failed short 10,000-VU calibration; both are retained under their respective protocols. Proceeding to 20,000 VUs (existing safety ceiling), no cap/resource/code changes. No maximum/confirmation/acceptance yet; 4/7 gates.
+
+- 2026-10-15 — At 20,000 VUs the new 8-GiB runner was OOM-killed (exit 137); campaign paused invalid, **not target capacity failure**. TrailBase stayed running with no OOM/restart and unchanged start identity; post-campaign comparison matched all 26 persistent services and the original port-4000 listener. Owner approved 15,000 VUs next. Managed follow-up retrieves/checksums full campaign evidence before a same-code/caps/data/SLO **full 15,000-VU probe**, attempt 5 within the original total 12 budget; no failing target bracket is inferred from OOM and no resource increase occurs. Confirmation/maximum/acceptance remain pending, 4/7 gates.
+
+- 2026-10-15 — Full **15,000-VU five-minute probe passed**: 475,756 requests, 1,585.85 requests/s, p95 23.05 ms / p99 65.35 ms, zero request/schema errors. Generator hold peak RAM 87.07% and CPU 201.01% (brief quota spikes, no sustained-gate invalidation) indicate limited headroom; target start identity, all 26 persistent services and original listener unchanged. Full probe/source/log/checksum evidence retrieved/verified. Started **three additional independent 15,000-VU confirmations**, attempts 6–8 within original 12 budget, one-hour hard cap, unchanged baseline/code/SLO. Any invalid/failing hold pauses; all passing can establish only a confirmed lower bound pending human review, never a maximum from the 20,000-VU generator OOM. No acceptance yet; 4/7 gates.
+
+- 2026-10-15 — **15,000-VU confirmation 1/3 passed**: independent 300-second hold, 476,047 requests, 1,586.82 requests/s, p95 24.38 ms / p99 62.20 ms, zero request/schema errors. [Exact summary](results/trailbase/vps16-linux-amd64/progress/20261015T023034390461Z-standard-15000vu-summary.json) retained. Two confirmations remain under unchanged caps/code/protocol. No confirmed lower bound/maximum/acceptance yet, gates remain 4/7.
+
+- 2026-10-15 — **15,000-VU confirmation 2/3 passed**: independent 300-second hold, 475,587 requests, 1,585.29 requests/s, p95 31.86 ms / p99 99.09 ms, zero request/schema errors. [Exact summary](results/trailbase/vps16-linux-amd64/progress/20261015T024045880287Z-standard-15000vu-summary.json) retained, including a 2,522.26-ms maximum outlier for final tail/resource review; p95/p99 gates passed without changes. One confirmation remains. No confirmed outcome/acceptance yet; 4/7 gates.
+
+- 2026-10-15 — **15,000-VU confirmation 3/3 passed**: 476,024 requests, 1,586.75 requests/s, p95 24.94 ms / p99 93.65 ms, zero request/schema errors, maximum 2,192.65 ms. All three additional independent five-minute holds passed. Post-phase continuity matched all 26 persistent services/original listener; owned confirmation and logger units inactive. Full raw/source/checksum/resource review is running before a final confirmed-lower-bound report; no target maximum or owner acceptance. Gates remain 4/7 pending review.
+
+- 2026-10-15 — All three native 15,000-VU confirmations retrieved and replay-verified against fixed scoring/resource gates, image/cgroup/source/log/archive/checksum proofs. Final report retains 1,427,658 scored requests, zero errors, tail outliers and shared-host pressure/steal caveats. Owner explicitly authorized **commit and push now**, then **Supabase next**, preserving azabab.com 1-CPU/4-GiB serving and 2-CPU/8-GiB runner plus compatibility-auth scope. TrailBase 6/7 until push succeeds; maximum remains blocked by generator OOM, not fabricated. PocketBase deferred. Continue through Supabase runs/report without stopping except for necessary explicit input.
+
+When updating this plan, append a short dated entry with the service, gate completed, commands/evidence location, blocker, and next action. Never mark benchmarks complete based on code existing or smoke tests passing.
+
+## 7. Documentation used for planning
+
+Recheck these official sources at each service's feasibility gate; planning links are not version pins or proof that a particular implementation works.
+
+- [TrailBase endpoints](https://trailbase.io/documentation/apis_overview/) and [custom APIs](https://trailbase.io/documentation/apis_js/) (runtime/API version must be verified).
+- [PocketBase JS extensions](https://pocketbase.io/docs/js-overview/) and [routing](https://pocketbase.io/docs/js-routing/).
+- [Supabase self-hosted Docker](https://supabase.com/docs/guides/self-hosting/docker) (full-stack resource guidance and configuration).
+- [Convex self-hosting](https://docs.convex.dev/self-hosting).
+- [Nhost self-hosting](https://docs.nhost.io/platform/self-hosting) (deployment recipe still to validate).
+- [Directus extensions](https://directus.com/docs/guides/extensions/quickstart).
+- [Appwrite self-hosted installation](https://appwrite.io/docs/advanced/self-hosting/installation).
+- [Neon Local](https://neon.com/docs/local/neon-local) (cloud proxy, branch lifecycle, and driver support).
