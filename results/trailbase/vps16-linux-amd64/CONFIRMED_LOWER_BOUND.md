@@ -1,5 +1,14 @@
 # TrailBase: verified lower bound of 15,000 VUs
 
+## Tested software and VPS slice
+
+| Item | Exact tested version / allocation |
+|---|---|
+| BaaS software | **TrailBase v0.34.6**, upstream commit `8359b240cc4ae1d229738385bf42f8f40d5d59af`; Rust 1.91.1; published WASM SDK 0.6.1; locked dependencies and native image references below |
+| Entire serving slice | **1 vCPU quota / 4 GiB RAM (4,294,967,296 bytes) / no swap**, total for TrailBase and its embedded database |
+| Separate load generator | **k6 1.3.0; 2 vCPU quota / 8 GiB RAM (8,589,934,592 bytes) / no swap**, profile `k6-2cpu-8g-v3` |
+| Host context | Quota-limited slice on the existing shared native AMD64 `azabab.com` host: 4 CPUs, 16,770,072,576 bytes total RAM; not a dedicated 1-vCPU VPS or a measured $12/month offering |
+
 **Date:** 2026-10-15. **Outcome:** maximum discovery **blocked by the load generator**, with a verified **confirmed lower bound of 15,000 concurrent VUs** under the frozen workload/SLOs. **Not a maximum-capacity score. Owner authorized publication and progression to Supabase on 2026-10-15.**
 
 Machine-readable result: [confirmed-lower-bound.json](confirmed-lower-bound.json). The owner authorized repository commit/push; source, report and evidence were published to remote `main` at commit `3b1fa99a4ecf241b40d322aef029879061f8b25e`. No release or unrelated upload is authorized.

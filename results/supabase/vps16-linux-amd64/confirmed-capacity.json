@@ -1,5 +1,16 @@
 {
   "service": "Supabase",
+  "tested_software": {
+    "profile": "API-serving subset",
+    "upstream_reference_commit": "7767e1ab6ef0914ba77d5835a4255fff8de90966",
+    "postgresql": "17.6",
+    "supabase_postgres_image": "17.6.1.136",
+    "auth_gotrue": "v2.196.0",
+    "postgrest": "v14.17",
+    "edge_runtime": "v1.76.2",
+    "envoy": "v1.39.1",
+    "immutable_image_references": "services/supabase/versions.json"
+  },
   "outcome": "scored",
   "confirmed_vus": 2000,
   "interpretation": "Highest candidate confirmed by three independent passing holds in the fixed 250-VU-resolution protocol; not an exact mathematical maximum. 2,250 passed one probe but failed all 3 independent confirmations.",
@@ -9,6 +20,8 @@
   "confirmation_schema_errors": 0,
   "quantiles": "Reported per hold, never averaged or pooled",
   "serving_budget": {
+    "allocation_type": "Quota-limited slice on shared host; entire five-component serving stack",
+    "memory_gib": 4,
     "cpu": 1,
     "memory_bytes": 4294967296,
     "swap_bytes": 0,
@@ -23,6 +36,9 @@
   },
   "runner_profile": "k6-2cpu-8g-v3",
   "runner_budget": {
+    "software": "k6",
+    "version": "1.3.0",
+    "memory_gib": 8,
     "cpu": 2,
     "memory_bytes": 8589934592,
     "swap_bytes": 0

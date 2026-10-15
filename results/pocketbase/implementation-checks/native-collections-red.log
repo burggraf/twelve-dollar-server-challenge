@@ -1,0 +1,12 @@
+=== RUN   TestNativeApplicationCollectionsAndWriteBoundary
+    schema_test.go:37: required native application collection "feed_users" is missing: sql: no rows in result set
+--- FAIL: TestNativeApplicationCollectionsAndWriteBoundary (0.04s)
+=== RUN   TestNativeNumericIdentityAndLosslessTextRoundtrip
+    schema_test.go:49: required native application collection "feed_users" is missing: sql: no rows in result set
+--- FAIL: TestNativeNumericIdentityAndLosslessTextRoundtrip (0.03s)
+=== RUN   TestNativeRelationValidationAndUniqueLikes
+    schema_test.go:73: required native application collection "feed_users" is missing: sql: no rows in result set
+--- FAIL: TestNativeRelationValidationAndUniqueLikes (0.03s)
+FAIL
+FAIL	twelve-dollar-server-challenge/pocketbase-feed	0.120s
+FAIL

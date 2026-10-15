@@ -1,0 +1,12 @@
+{
+  "native_machine": "x86_64",
+  "cpu_count": 4,
+  "memory_total_bytes": 16770072576,
+  "memory_available_bytes": 15518334976,
+  "host_swap_enabled": false,
+  "docker": "29.8.1",
+  "active_container_names": [],
+  "benchmark_ingress14000_free": true,
+  "original4000_listener_present": true,
+  "prior_owned_targets_stopped": true
+}

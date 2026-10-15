@@ -27,7 +27,7 @@ bash services/trailbase/run.sh bench --smoke --vus 5000 # unscored pipeline cali
 bash services/trailbase/run.sh bench --campaign --max-vus 20000 --max-attempts 12
 ```
 
-See [TrailBase setup and architecture](services/trailbase/README.md) for requirements, resource limits, auth scope, safe lifecycle operations, result locations, and caveats. Supabase's measured implementation/report is complete. PocketBase and later services remain deferred; no later application has been started or authorized by this publication. The same compatibility-auth scope, host and aggregate resource budgets apply unless explicitly amended.
+See [TrailBase setup and architecture](services/trailbase/README.md) for requirements, resource limits, auth scope, safe lifecycle operations, result locations, and caveats. Supabase's measured implementation/report is complete. The owner subsequently authorized **PocketBase next**: **v0.40.5 / Go 1.27.2**, with its [native profile](services/pocketbase/README.md) and first native collection/identity/Unicode/relation tests in progress. PocketBase has no capacity score yet; Convex and later services remain queued. The same compatibility-auth scope, host and aggregate resource budgets apply unless explicitly amended.
 
 Supabase lifecycle (designated native host and owned profile prerequisites required):
 

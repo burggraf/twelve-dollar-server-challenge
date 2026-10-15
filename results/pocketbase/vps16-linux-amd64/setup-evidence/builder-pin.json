@@ -1,0 +1,7 @@
+{
+  "tag": "golang:1.27.2-bookworm",
+  "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+  "raw_document_sha256": "5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+  "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+  "native_platform": "linux/amd64"
+}

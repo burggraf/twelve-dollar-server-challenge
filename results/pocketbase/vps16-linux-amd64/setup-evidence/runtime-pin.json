@@ -1,0 +1,7 @@
+{
+  "tag": "debian:bookworm-slim",
+  "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+  "raw_document_sha256": "7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+  "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+  "native_platform": "linux/amd64"
+}

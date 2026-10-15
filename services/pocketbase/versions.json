@@ -1,0 +1,23 @@
+{
+  "service": "PocketBase",
+  "version": "v0.40.5",
+  "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+  "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+  "go_module": "github.com/pocketbase/pocketbase",
+  "go_version": "1.27.2",
+  "native_platform": "linux/amd64",
+  "builder": {
+    "tag": "golang:1.27.2-bookworm",
+    "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+    "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+  },
+  "runtime": {
+    "tag": "debian:bookworm-slim",
+    "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+    "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+  },
+  "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+  "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+  "serving_budget": {"cpus": 1, "memory_bytes": 4294967296, "swap_bytes": 0},
+  "runner_profile": "k6-2cpu-8g-v3"
+}

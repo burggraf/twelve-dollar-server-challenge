@@ -1,5 +1,14 @@
 # Supabase — 2,000-VU confirmed capacity
 
+## Tested software and VPS slice
+
+| Item | Exact tested version / allocation |
+|---|---|
+| BaaS software | Supabase API-serving subset, reference commit `7767e1ab6ef0914ba77d5835a4255fff8de90966`; **PostgreSQL 17.6** (Supabase image `17.6.1.136`), **Auth/GoTrue v2.196.0**, **PostgREST v14.17**, **Edge Runtime v1.76.2**, **Envoy v1.39.1**; [immutable image references](../../../services/supabase/versions.json) |
+| Entire serving slice | **1 vCPU quota / 4 GiB RAM (4,294,967,296 bytes) / no swap**, one aggregate kernel limit shared by all five required serving components—not this allowance per component |
+| Separate load generator | **k6 1.3.0; 2 vCPU quota / 8 GiB RAM (8,589,934,592 bytes) / no swap**, profile `k6-2cpu-8g-v3` |
+| Host context | Quota-limited slice on the existing shared native AMD64 `azabab.com` host: 4 CPUs, 16,770,072,576 bytes total RAM; not a dedicated 1-vCPU VPS or a measured $12/month offering |
+
 **Outcome: scored, 2,000 virtual users**, the highest candidate confirmed by three independent passing five-minute holds under the fixed **250-VU search resolution**. This is **not an exact mathematical maximum**: 2,250 VUs passed one probe but failed all three subsequent confirmations; no finer search was performed. 2,500 VUs also failed. No failed hold is discarded, no generator-invalid run forms the bracket, and no single-run pass substitutes for confirmation.
 
 ## Three independent confirmations
@@ -89,4 +98,4 @@ Full protocol: 30s warm ramp, 120s warm hold at up to 1,000 VUs, 60s target ramp
 
 [Machine-readable result](confirmed-capacity.json), [campaign state](campaign.json), all 13 calibration/scored run directories and original per-run `SHA256SUMS` are retained. Reports, logs, metrics summaries, resources, manifests, code, helpers and checksums are checked in. **The latest Git tree excludes bulky `samples.json.gz` and `source.tar.gz` under the preexisting [artifact policy](../../README.md); they remain intact locally and on the designated VPS, not publicly downloaded from this checkout. No external artifact location/upload has been established.** A partial clone cannot satisfy all original per-run checksums until those original files are restored. New runs cannot regenerate historical timing samples. Do not rewrite checksums or raw evidence to disguise partial availability.
 
-Source, report and readable evidence were pushed and remote `main` verified at **`4c06a8d2f9af4cca4bb0eca90da2a09b5df1bf3a`**. Subsequent publication bookkeeping preserves the original measured evidence. Owner authorization covers repository commit/push, not release creation or unrelated uploads. No runtime keys, issued JWTs, private gateway config, database volumes, bootstrap logs, SSH material or complete container environments are published. PocketBase and all later implementations remain deferred; this report does not authorize starting them.
+Source, report and readable evidence were pushed and remote `main` verified at **`4c06a8d2f9af4cca4bb0eca90da2a09b5df1bf3a`**. Subsequent publication bookkeeping preserves the original measured evidence. Owner authorization covers repository commit/push, not release creation or unrelated uploads. No runtime keys, issued JWTs, private gateway config, database volumes, bootstrap logs, SSH material or complete container environments are published. This report does not itself authorize later implementations; progression requires separate owner authorization (subsequently provided for PocketBase).

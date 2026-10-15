@@ -1,0 +1,8 @@
+=== RUN   TestNativeApplicationCollectionsAndWriteBoundary
+--- PASS: TestNativeApplicationCollectionsAndWriteBoundary (0.05s)
+=== RUN   TestNativeNumericIdentityAndLosslessTextRoundtrip
+--- PASS: TestNativeNumericIdentityAndLosslessTextRoundtrip (0.04s)
+=== RUN   TestNativeRelationValidationAndUniqueLikes
+--- PASS: TestNativeRelationValidationAndUniqueLikes (0.05s)
+PASS
+ok  	twelve-dollar-server-challenge/pocketbase-feed	0.143s
