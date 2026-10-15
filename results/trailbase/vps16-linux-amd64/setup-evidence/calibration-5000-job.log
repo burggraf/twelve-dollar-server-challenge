@@ -1,0 +1,4 @@
+BENCHMARK_ATTEMPT_FINISHED pass 5000vu results/trailbase/vps16-linux-amd64/20261015T012102394670Z-standard-5000vu-k6-2cpu-8g-v3-smoke: hold gates passed
+Read-only service snapshot saved; service count: 27 ; existing listener PID count: 1
+Continuity summary: {"existing_persistent_service_count": 26, "changed_existing_persistent_service_count": 0, "root_ssh_session_manager_identity_changed": true, "original_port4000_listener_unchanged": true}
+VPS16_5000_CALIBRATION_AND_PERSISTENT_SERVICE_CONTINUITY_PASSED

@@ -1,0 +1,199 @@
+{
+  "service": "trailbase",
+  "version": "0.34.6",
+  "sdk": "0.6.1",
+  "tier": "standard",
+  "vus": 10000,
+  "deployment_track": "vps16-linux-amd64",
+  "platform": "linux/amd64",
+  "compose_project": "baas-trailbase-vps16",
+  "mode": "smoke",
+  "workload": "baas-v1",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "runner_limits": {
+    "NanoCpus": 2000000000,
+    "Memory": 8589934592,
+    "MemorySwap": 8589934592
+  },
+  "vm_os_reserve_bytes": 1073741824,
+  "vm_os_reserve_cpus": 1,
+  "vm_cpu_count": 4,
+  "started_utc": "2026-10-15T01:14:45.374819+00:00",
+  "git_commit": "026bdb68d94d0d932bb5981321ad82c70618d752",
+  "git_status": " M .gitignore\n M README.md\n M seed/generate.mjs\n?? .dockerignore\n?? .github/workflows/trailbase.yml\n?? MASTER_PLAN.md\n?? bench/baas-contract.mjs\n?? bench/baas-contract.test.mjs\n?? bench/baas.mjs\n?? contracts/\n?? results/\n?? runner/\n?? scripts/\n?? services/\n?? test/baas/\n",
+  "app_source_sha256": "0f392ae2fd3f508611133580c22c020447db202a86d04d8edc79fe3048531ce3",
+  "target_before": {
+    "Id": "b3bf990b23b8060df9ddd1b3175170abd7b3bda4e42e2002017d569cb907c615",
+    "Image": "sha256:94bd4ee85dc711f344f9198ea53f3ae0bbc69609759bd0cf35d940c91a89b088",
+    "RestartCount": 0,
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 1711863,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-15T01:14:42.686170419Z",
+      "FinishedAt": "2026-10-15T01:13:54.458333543Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-15T01:13:47.781212076Z",
+            "End": "2026-10-15T01:13:47.81875878Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":2}"
+          },
+          {
+            "Start": "2026-10-15T01:13:49.819580227Z",
+            "End": "2026-10-15T01:13:49.857108347Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":4}"
+          },
+          {
+            "Start": "2026-10-15T01:13:51.857898767Z",
+            "End": "2026-10-15T01:13:51.895396578Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":6}"
+          },
+          {
+            "Start": "2026-10-15T01:13:53.896766001Z",
+            "End": "2026-10-15T01:13:53.932621346Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":8}"
+          },
+          {
+            "Start": "2026-10-15T01:14:44.795531481Z",
+            "End": "2026-10-15T01:14:44.830470007Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":2}"
+          }
+        ]
+      }
+    },
+    "limits": {
+      "NanoCpus": 1000000000,
+      "Memory": 4294967296,
+      "MemorySwap": 4294967296
+    },
+    "source_sha256": "0f392ae2fd3f508611133580c22c020447db202a86d04d8edc79fe3048531ce3",
+    "platform": "linux/amd64",
+    "image_manifest_digest": "sha256:94bd4ee85dc711f344f9198ea53f3ae0bbc69609759bd0cf35d940c91a89b088"
+  },
+  "target_kernel_cgroup_limits": [
+    "100000 100000",
+    "4294967296",
+    "0"
+  ],
+  "allocated_data_kib_before": "268836\t/app/traildepot/data",
+  "docker": "Client=29.8.1 Server=29.8.1\n",
+  "docker_vm": "OS=Ubuntu 24.04.5 LTS Arch=x86_64 CPUs=4 MemoryBytes=16770072576\n",
+  "host": "Linux x86_64\n",
+  "host_memory_cpu": "MemTotal:       16377024 kB\nMemFree:          448108 kB\nMemAvailable:   15031476 kB\nBuffers:           89768 kB\nCached:         13758108 kB\nSwapCached:            0 kB\nActive:          2045776 kB\nInactive:       12491760 kB\nActive(anon):     690028 kB\nInactive(anon):    21316 kB\nActive(file):    1355748 kB\nInactive(file): 12470444 kB\nUnevictable:       27456 kB\nMlocked:           27456 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              1820 kB\nWriteback:             0 kB\nAnonPages:        711168 kB\nMapped:           427212 kB\nShmem:             12924 kB\nKReclaimable:    1094896 kB\nSlab:            1230632 kB\nSReclaimable:    1094896 kB\nSUnreclaim:       135736 kB\nKernelStack:        4448 kB\nPageTables:         8992 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     8188512 kB\nCommitted_AS:    1402000 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       19788 kB\nVmallocChunk:          0 kB\nPercpu:             7008 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:    411648 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      173928 kB\nDirectMap2M:     9263104 kB\nDirectMap1G:     9437184 kB\nprocessor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 49\nmodel name\t: AMD EPYC 7452 32-Core Processor\nstepping\t: 0\nmicrocode\t: 0x830107d\ncpu MHz\t\t: 2345.590\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 4\ncore id\t\t: 0\ncpu cores\t: 4\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 16\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip rdpid overflow_recov succor\nbugs\t\t: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret\nbogomips\t: 4691.18\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 49\nmodel name\t: AMD EPYC 7452 32-Core Processor\nstepping\t: 0\nmicrocode\t: 0x830107d\ncpu MHz\t\t: 2345.590\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 4\ncore id\t\t: 1\ncpu cores\t: 4\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 16\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip rdpid overflow_recov succor\nbugs\t\t: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret\nbogomips\t: 4691.18\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 2\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 49\nmodel name\t: AMD EPYC 7452 32-Core Processor\nstepping\t: 0\nmicrocode\t: 0x830107d\ncpu MHz\t\t: 2345.590\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 4\ncore id\t\t: 2\ncpu cores\t: 4\napicid\t\t: 2\ninitial apicid\t: 2\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 16\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip rdpid overflow_recov succor\nbugs\t\t: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret\nbogomips\t: 4691.18\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 3\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 49\nmodel name\t: AMD EPYC 7452 32-Core Processor\nstepping\t: 0\nmicrocode\t: 0x830107d\ncpu MHz\t\t: 2345.590\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 4\ncore id\t\t: 3\ncpu cores\t: 4\napicid\t\t: 3\ninitial apicid\t: 3\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 16\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip rdpid overflow_recov succor\nbugs\t\t: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret\nbogomips\t: 4691.18\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\n",
+  "orbstack_version": null,
+  "cost": "existing shared VPS; monthly price not supplied; cost/request not calculated",
+  "auth": "HS256 compatibility verification inside native WASM handlers; not native TrailBase login throughput",
+  "path": "k6 container -> TrailBase HTTP -> Rust WASM guest -> TrailBase database/transaction SDK -> SQLite",
+  "limitations": [
+    "Shared host/VM and storage cache; no dedicated-machine equivalence",
+    "Background activity requires human review; see raw resources.jsonl",
+    "VPS hardware thermals are unavailable; Linux CPU steal/pressure/I/O counters are retained"
+  ],
+  "allocated_data_kib_after": "279892\t/app/traildepot/data",
+  "target_after": {
+    "Id": "b3bf990b23b8060df9ddd1b3175170abd7b3bda4e42e2002017d569cb907c615",
+    "Image": "sha256:94bd4ee85dc711f344f9198ea53f3ae0bbc69609759bd0cf35d940c91a89b088",
+    "RestartCount": 0,
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 1711863,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-15T01:14:42.686170419Z",
+      "FinishedAt": "2026-10-15T01:13:54.458333543Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-15T01:15:24.907519589Z",
+            "End": "2026-10-15T01:15:24.943751519Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":42}"
+          },
+          {
+            "Start": "2026-10-15T01:15:26.945251213Z",
+            "End": "2026-10-15T01:15:26.984689941Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":44}"
+          },
+          {
+            "Start": "2026-10-15T01:15:28.985905603Z",
+            "End": "2026-10-15T01:15:29.025346517Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":47}"
+          },
+          {
+            "Start": "2026-10-15T01:15:31.026332508Z",
+            "End": "2026-10-15T01:15:31.067359914Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":49}"
+          },
+          {
+            "Start": "2026-10-15T01:15:33.068794957Z",
+            "End": "2026-10-15T01:15:33.108369671Z",
+            "ExitCode": 0,
+            "Output": "{\"status\":\"ok\",\"db\":\"ok\",\"uptime_s\":51}"
+          }
+        ]
+      }
+    },
+    "limits": {
+      "NanoCpus": 1000000000,
+      "Memory": 4294967296,
+      "MemorySwap": 4294967296
+    },
+    "source_sha256": "0f392ae2fd3f508611133580c22c020447db202a86d04d8edc79fe3048531ce3",
+    "platform": "linux/amd64",
+    "image_manifest_digest": "sha256:94bd4ee85dc711f344f9198ea53f3ae0bbc69609759bd0cf35d940c91a89b088"
+  },
+  "load_after": {
+    "Id": "a80af6f030355aea4a5e6b4f5a9c332d637d21d481ae0d27d6c023eeb7551990",
+    "Image": "sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d",
+    "RestartCount": 0,
+    "State": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 99,
+      "Error": "",
+      "StartedAt": "2026-10-15T01:14:47.555454665Z",
+      "FinishedAt": "2026-10-15T01:15:34.624689487Z"
+    },
+    "limits": {
+      "NanoCpus": 2000000000,
+      "Memory": 8589934592,
+      "MemorySwap": 8589934592
+    },
+    "source_sha256": null,
+    "platform": "linux/amd64",
+    "image_manifest_digest": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656"
+  },
+  "k6_exit_code": 99,
+  "result": "fail",
+  "reason": "hold latency/error/schema gate failed",
+  "finished_utc": "2026-10-15T01:15:35.036011+00:00"
+}

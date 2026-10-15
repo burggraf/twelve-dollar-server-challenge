@@ -1,0 +1,37 @@
+ Image grafana/k6:1.3.0@sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d Pulling 
+ 4f4fb700ef54 Pulling fs layer 0B
+ 8a9f36f5f66b Pulling fs layer 0B
+ b07aa85bd044 Pulling fs layer 0B
+ 6e174226ea69 Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ 4f4fb700ef54 Pull complete 0B
+ 8a9f36f5f66b Download complete 0B
+ 6e174226ea69 Downloading 1.049MB
+ 6e174226ea69 Downloading 3.146MB
+ b07aa85bd044 Downloading 2.097MB
+ 6e174226ea69 Download complete 0B
+ 6e174226ea69 Extracting 1B
+ b07aa85bd044 Downloading 4.194MB
+ 6e174226ea69 Extracting 1B
+ b07aa85bd044 Downloading 7.34MB
+ 8a9f36f5f66b Pull complete 0B
+ 6e174226ea69 Pull complete 0B
+ b07aa85bd044 Downloading 9.437MB
+ 9ae1788b5fec Download complete 0B
+ b07aa85bd044 Downloading 11.53MB
+ b07aa85bd044 Downloading 14.68MB
+ b07aa85bd044 Downloading 16.78MB
+ b07aa85bd044 Downloading 18.87MB
+ b07aa85bd044 Downloading 22.02MB
+ b07aa85bd044 Downloading 24.12MB
+ b07aa85bd044 Downloading 26.21MB
+ b07aa85bd044 Download complete 0B
+ b07aa85bd044 Extracting 1B
+ b07aa85bd044 Extracting 1B
+ b07aa85bd044 Extracting 1B
+ b07aa85bd044 Pull complete 0B
+ Image grafana/k6:1.3.0@sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d Pulled 
+ Container baas-trailbase-vps-load Creating 
+ Container baas-trailbase-vps-load Created 
+exec /usr/bin/k6: exec format error
+

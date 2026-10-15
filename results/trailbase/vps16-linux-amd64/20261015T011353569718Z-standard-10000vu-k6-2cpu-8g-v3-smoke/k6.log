@@ -1,0 +1,34 @@
+ Image grafana/k6:1.3.0@sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d Pulling 
+ 4f4fb700ef54 Pulling fs layer 0B
+ e488bc2c5497 Pulling fs layer 0B
+ 9824c27679d3 Pulling fs layer 0B
+ 14c020c6cf1f Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ e488bc2c5497 Download complete 0B
+ 4f4fb700ef54 Pull complete 0B
+ 14c020c6cf1f Downloading 2.097MB
+ 9824c27679d3 Downloading 2.097MB
+ 14c020c6cf1f Downloading 2.097MB
+ ecfdb57cf3d2 Download complete 0B
+ 9824c27679d3 Download complete 0B
+ 14c020c6cf1f Downloading 5.243MB
+ 9824c27679d3 Pull complete 0B
+ 14c020c6cf1f Downloading 8.389MB
+ e488bc2c5497 Pull complete 0B
+ 14c020c6cf1f Downloading 11.53MB
+ 14c020c6cf1f Downloading 14.68MB
+ 14c020c6cf1f Downloading 17.83MB
+ 14c020c6cf1f Downloading 20.97MB
+ 14c020c6cf1f Downloading 24.12MB
+ 14c020c6cf1f Downloading 27.26MB
+ 14c020c6cf1f Downloading 30.41MB
+ 14c020c6cf1f Download complete 0B
+ 14c020c6cf1f Extracting 1B
+ 14c020c6cf1f Extracting 1B
+ 14c020c6cf1f Pull complete 0B
+ Image grafana/k6:1.3.0@sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d Pulled 
+ Container baas-trailbase-vps16-load Creating 
+ Container baas-trailbase-vps16-load Created 
+time="2026-10-15T01:15:11Z" level=warning msg="Request Failed" error="request timeout"
+time="2026-10-15T01:15:34Z" level=error msg="thresholds on metrics 'http_req_duration{phase:hold}' have been crossed"
+

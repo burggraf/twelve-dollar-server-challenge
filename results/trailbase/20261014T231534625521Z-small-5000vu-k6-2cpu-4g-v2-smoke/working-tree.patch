@@ -1,0 +1,62 @@
+diff --git a/.gitignore b/.gitignore
+index ad07ad0..e71257f 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,5 +1,10 @@
+ seed/feed.db*
+ seed/tokens.json
+ seed/tsv/
+-results/
++.state/
++**/target/
++**/__pycache__/
++.env
++.env.*
++!.env.example
+ .DS_Store
+diff --git a/README.md b/README.md
+index 55a058a..2f3dfa9 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,30 @@
+-# The $12 Server Challenge
++# BaaS Benchmark Campaign
++
++This fork is being retooled to benchmark the same feed application using each product's supported APIs, one service at a time:
++
++**TrailBase → PocketBase → Supabase → Convex → Nhost → Directus → Appwrite → Neon (if feasible).**
++
++See **[the master plan and progress checklists](MASTER_PLAN.md)** for the application contract, Docker/runner design, resource tiers, correctness gates, benchmark protocol, and per-service publication requirements.
++
++The primary environment is **local OrbStack Docker on this machine**, with **small (1 CPU / 2 GiB)** and **large (4 CPU / 4 GiB)** serving-stack tiers. The owner-approved `k6-2cpu-4g-v2` load runner has a separate 2 CPU / 4 GiB / no-swap container budget, but shares the host/VM. Historical 2-GiB runner attempts are retained separately. Larger-tier benchmarks require a VM headroom review; the current ~8-GiB VM permits small but not large plus this runner and the 1-GiB OS reserve. Managed services and emulated architectures are separate comparison tracks; local results are not the original $12 cloud-VM scores. See the [frozen benchmark contract](contracts/BENCHMARK.md).
++
++**TrailBase is implemented first**, using native WASM routes and TrailBase database/transaction APIs. The full-data golden, concurrency, native API, storage-failure, and restart tests are available; capacity results require the search and confirmation protocol. Each service must have an accepted published outcome before the next starts.
++
++```bash
++bash services/trailbase/run.sh build
++bash services/trailbase/run.sh test
++caffeinate -i bash services/trailbase/run.sh bench --smoke --vus 25 # unscored pipeline check
++caffeinate -i bash services/trailbase/run.sh bench --campaign      # bounded search + confirmations
++bash services/trailbase/run.sh down
++```
++
++See [TrailBase setup and architecture](services/trailbase/README.md) for requirements, resource limits, auth scope, safe lifecycle operations, result locations, and caveats. No other BaaS application has been started.
++
++---
++
++## Upstream reference: The $12 Server Challenge
++
++The original challenge documentation below, along with `SPEC.md`, the seed, tests, and existing submission, is retained as the workload reference. Its SQLite-only rules, submission workflow, and original scoring procedure are historical upstream rules, not the cross-product benchmark policy; see the master plan for planned changes.
+ 
+ How many users can one **$12/month server** (1 vCPU, 2 GB RAM) handle? 
+ 
+diff --git a/seed/generate.mjs b/seed/generate.mjs
+index d3bbe4c..2672c68 100644
+--- a/seed/generate.mjs
++++ b/seed/generate.mjs
+@@ -134,4 +134,4 @@ const tokens = usernames.slice(0, TOKEN_COUNT).map((username, i) => {
+   return { id: i + 1, username, token: `${header}.${payload}.${sig}` };
+ });
+ writeFileSync(`${OUT}/tokens.json`, JSON.stringify(tokens));
+-console.log(`  tokens.json: ${tokens.length.toLocaleString()} tokens (JWT_SECRET=${JWT_SECRET})`);
++console.log(`  tokens.json: ${tokens.length.toLocaleString()} tokens (signing key not logged)`);

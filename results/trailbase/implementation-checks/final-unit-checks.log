@@ -1,0 +1,47 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.09s
+     Running unittests src/lib.rs (services/trailbase/app/target/debug/deps/feed_benchmark-eb837462d653b8ec)
+
+running 3 tests
+test contract::tests::validates_decimal_positive_ids ... ok
+test contract::tests::trims_ecmascript_whitespace_and_counts_unicode_scalars ... ok
+test contract::tests::verifies_each_signature_and_expiry_before_payload ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests feed_benchmark
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+✔ phase boundaries exclude warmup, ramp and drain from the hold (0.590917ms)
+✔ post validation rejects malformed successful responses (0.218792ms)
+✔ feed validates size, ordering, uniqueness and status (0.299708ms)
+✔ writes validate idempotency flags, identity and actual created content (0.59375ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 165.389292
+test_accepts_complete_passing_hold (test_benchmark.Scoring.test_accepts_complete_passing_hold) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (test_benchmark.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (test_benchmark.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (test_benchmark.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (test_benchmark.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (test_benchmark.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (test_benchmark.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (test_benchmark.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.004s
+
+OK
+test_k6_cannot_read_signing_keys_or_private_service_state (test_isolation.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.208s
+
+OK

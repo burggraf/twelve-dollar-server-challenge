@@ -1,0 +1,95 @@
+test_foreign_architecture_load_image_is_invalid (test_benchmark.HostPortability.test_foreign_architecture_load_image_is_invalid) ... FAIL
+test_foreign_platforms_and_unrelated_project_names_are_rejected (test_benchmark.HostPortability.test_foreign_platforms_and_unrelated_project_names_are_rejected) ... FAIL
+test_linux_samples_preserve_raw_proc_evidence_without_mac_commands (test_benchmark.HostPortability.test_linux_samples_preserve_raw_proc_evidence_without_mac_commands) ... FAIL
+test_linux_swapouts_are_checked_without_weakening_mac_checks (test_benchmark.HostPortability.test_linux_swapouts_are_checked_without_weakening_mac_checks) ... FAIL
+test_native_platforms_and_result_tracks_are_separate (test_benchmark.HostPortability.test_native_platforms_and_result_tracks_are_separate) ... FAIL
+test_accepts_complete_passing_hold (test_benchmark.Scoring.test_accepts_complete_passing_hold) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (test_benchmark.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (test_benchmark.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (test_benchmark.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_mismatched_actual_runner_budget_cannot_claim_the_new_profile (test_benchmark.Scoring.test_mismatched_actual_runner_budget_cannot_claim_the_new_profile) ... ok
+test_missing_clock_still_invalidates_non_oom_attempt (test_benchmark.Scoring.test_missing_clock_still_invalidates_non_oom_attempt) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (test_benchmark.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_oom_remains_primary_reason_when_k6_loses_summary_and_clock (test_benchmark.Scoring.test_oom_remains_primary_reason_when_k6_loses_summary_and_clock) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (test_benchmark.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (test_benchmark.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_runner_profile_is_versioned_and_matches_the_approved_budget (test_benchmark.Scoring.test_runner_profile_is_versioned_and_matches_the_approved_budget) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (test_benchmark.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+test_vm_headroom_accepts_small_but_rejects_large_on_current_vm (test_benchmark.Scoring.test_vm_headroom_accepts_small_but_rejects_large_on_current_vm) ... ok
+
+======================================================================
+FAIL: test_foreign_architecture_load_image_is_invalid (test_benchmark.HostPortability.test_foreign_architecture_load_image_is_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/markb/dev/twelve-dollar-server-challenge/test/baas/test_benchmark.py", line 179, in test_foreign_architecture_load_image_is_invalid
+    self.assertEqual(verdict, ('invalid', 'load-generator image is not native to the selected host'))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: ('invalid', 'missing k6 scenario-start clock') != ('invalid', 'load-generator image is not native to the selected host')
+
+First differing element 1:
+'missing k6 scenario-start clock'
+'load-generator image is not native to the selected host'
+
+- ('invalid', 'missing k6 scenario-start clock')
++ ('invalid', 'load-generator image is not native to the selected host')
+
+======================================================================
+FAIL: test_foreign_platforms_and_unrelated_project_names_are_rejected (test_benchmark.HostPortability.test_foreign_platforms_and_unrelated_project_names_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/markb/dev/twelve-dollar-server-challenge/test/baas/test_benchmark.py", line 134, in test_foreign_platforms_and_unrelated_project_names_are_rejected
+    self.assertTrue(callable(getattr(benchmark, 'deployment_settings', None)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_linux_samples_preserve_raw_proc_evidence_without_mac_commands (test_benchmark.HostPortability.test_linux_samples_preserve_raw_proc_evidence_without_mac_commands)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/markb/dev/twelve-dollar-server-challenge/test/baas/test_benchmark.py", line 142, in test_linux_samples_preserve_raw_proc_evidence_without_mac_commands
+    self.assertTrue(callable(getattr(benchmark, 'host_sample', None)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_linux_swapouts_are_checked_without_weakening_mac_checks (test_benchmark.HostPortability.test_linux_swapouts_are_checked_without_weakening_mac_checks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/markb/dev/twelve-dollar-server-challenge/test/baas/test_benchmark.py", line 163, in test_linux_swapouts_are_checked_without_weakening_mac_checks
+    self.assertTrue(callable(getattr(benchmark, 'host_swapouts', None)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_native_platforms_and_result_tracks_are_separate (test_benchmark.HostPortability.test_native_platforms_and_result_tracks_are_separate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/markb/dev/twelve-dollar-server-challenge/test/baas/test_benchmark.py", line 127, in test_native_platforms_and_result_tracks_are_separate
+    self.assertTrue(callable(getattr(benchmark, 'deployment_settings', None)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.007s
+
+FAILED (failures=5)
+test_k6_cannot_read_signing_keys_or_private_service_state (test_isolation.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... ok
+test_vps_platform_and_resources_are_isolated_from_existing_projects (test_isolation.ContainerIsolation.test_vps_platform_and_resources_are_isolated_from_existing_projects) ... FAIL
+
+======================================================================
+FAIL: test_vps_platform_and_resources_are_isolated_from_existing_projects (test_isolation.ContainerIsolation.test_vps_platform_and_resources_are_isolated_from_existing_projects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/markb/dev/twelve-dollar-server-challenge/test/baas/test_isolation.py", line 33, in test_vps_platform_and_resources_are_isolated_from_existing_projects
+    self.assertEqual(config['name'], 'baas-trailbase-vps')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'baas-trailbase' != 'baas-trailbase-vps'
+- baas-trailbase
++ baas-trailbase-vps
+?               ++++
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.376s
+
+FAILED (failures=1)

@@ -1,0 +1,53 @@
+baas-trailbase-vps-builder
+#1 [internal] booting buildkit
+#1 pulling image moby/buildkit@sha256:98cc6a3fc46220d00f8224ae483f3274fc874e9be8d7dd1e2e2c5481209228b5
+#1 pulling image moby/buildkit@sha256:98cc6a3fc46220d00f8224ae483f3274fc874e9be8d7dd1e2e2c5481209228b5 7.2s done
+#1 creating container buildx_buildkit_baas-trailbase-vps-builder0
+#1 creating container buildx_buildkit_baas-trailbase-vps-builder0 0.7s done
+#1 DONE 7.9s
+Name:          baas-trailbase-vps-builder
+Driver:        docker-container
+Last Activity: 2026-10-14 23:58:08 +0000 UTC
+
+Nodes:
+Name:                  baas-trailbase-vps-builder0
+Endpoint:              unix:///var/run/docker.sock
+Driver Options:        cpu-period="100000" cpu-quota="200000" image="moby/buildkit@sha256:98cc6a3fc46220d00f8224ae483f3274fc874e9be8d7dd1e2e2c5481209228b5" memory="2g" memory-swap="2g" restart-policy="no"
+Status:                running
+BuildKit daemon flags: --allow-insecure-entitlement=network.host
+BuildKit version:      v0.33.1
+Platforms:             linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/386
+Labels:
+ org.mobyproject.buildkit.worker.executor:         oci
+ org.mobyproject.buildkit.worker.hostname:         2f8a4e2e62d7
+ org.mobyproject.buildkit.worker.network:          host
+ org.mobyproject.buildkit.worker.oci.process-mode: sandbox
+ org.mobyproject.buildkit.worker.selinux.enabled:  false
+ org.mobyproject.buildkit.worker.snapshotter:      overlayfs
+GC Policy rule#0:
+ All:            false
+ Filters:        type==source.local type==exec.cachemount type==source.git.checkout
+ Keep Duration:  48h0m0s
+ Max Used Space: 488.3MiB
+GC Policy rule#1:
+ All:            false
+ Keep Duration:  1440h0m0s
+ Reserved Space: 9.313GiB
+ Max Used Space: 71.71GiB
+ Min Free Space: 18.63GiB
+GC Policy rule#2:
+ All:            false
+ Reserved Space: 9.313GiB
+ Max Used Space: 71.71GiB
+ Min Free Space: 18.63GiB
+GC Policy rule#3:
+ All:            true
+ Reserved Space: 9.313GiB
+ Max Used Space: 71.71GiB
+ Min Free Space: 18.63GiB
+VPS_BUILDER_LIMITS_VERIFIED: 2 CPU / 2 GiB / no swap
+VPS_NATIVE_BUILD_PASSED
+VPS_PREEXISTING_CONTAINERS_UNCHANGED
+TRAILBASE_CORRECTNESS_PASSED (.state/trailbase/correctness.log)
+BENCHMARK_ATTEMPT_FINISHED pass 5000vu results/trailbase/vps-linux-amd64/20261015T000151314741Z-small-5000vu-k6-2cpu-4g-v2-smoke: hold gates passed
+VPS_CORRECTNESS_AND_CALIBRATION_PASSED

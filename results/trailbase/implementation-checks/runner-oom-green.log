@@ -1,0 +1,15 @@
+test_accepts_complete_passing_hold (test_benchmark.Scoring.test_accepts_complete_passing_hold) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (test_benchmark.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (test_benchmark.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (test_benchmark.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_missing_clock_still_invalidates_non_oom_attempt (test_benchmark.Scoring.test_missing_clock_still_invalidates_non_oom_attempt) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (test_benchmark.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_oom_remains_primary_reason_when_k6_loses_summary_and_clock (test_benchmark.Scoring.test_oom_remains_primary_reason_when_k6_loses_summary_and_clock) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (test_benchmark.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (test_benchmark.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (test_benchmark.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.004s
+
+OK

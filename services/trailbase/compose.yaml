@@ -1,0 +1,71 @@
+name: ${BENCHMARK_PROJECT:-baas-trailbase}
+services:
+  trailbase:
+    image: ${BENCHMARK_PROJECT:-baas-trailbase}-feed:0.1.0
+    build:
+      context: ../..
+      dockerfile: services/trailbase/Dockerfile
+    platform: ${BENCHMARK_PLATFORM:-linux/arm64}
+    cpus: ${SERVICE_CPUS:-1}
+    mem_limit: ${SERVICE_MEMORY:-2g}
+    memswap_limit: ${SERVICE_MEMORY:-2g}
+    environment:
+      RUNTIME_THREADS: ${SERVICE_THREADS:-1}
+      RUST_LOG: warn
+    ports:
+      - "127.0.0.1:${TRAILBASE_PORT:-4000}:4000"
+    volumes:
+      - data:/app/traildepot
+    tmpfs:
+      - /runtime:uid=1000,gid=1000,mode=0700,size=1048576
+    secrets:
+      - jwt_secret
+    ulimits:
+      nofile: {soft: 65535, hard: 65535}
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:4000/health"]
+      interval: 2s
+      timeout: 2s
+      retries: 60
+    stop_grace_period: 30s
+  tools:
+    image: ${BENCHMARK_PROJECT:-baas-trailbase}-tools:0.1.0
+    platform: ${BENCHMARK_PLATFORM:-linux/arm64}
+    build:
+      context: ../..
+      dockerfile: runner/Dockerfile
+    profiles: [tools]
+    cpus: 2
+    mem_limit: 2g
+    memswap_limit: 2g
+    volumes:
+      - ../../scripts:/work/scripts:ro
+      - ../../test:/work/test:ro
+      - ../../bench:/work/bench:ro
+      - ../../seed/generate.mjs:/work/seed/generate.mjs:ro
+      - ../../.state:/state
+      - data:/depot
+    environment:
+      BASE_URL: http://trailbase:4000
+    secrets:
+      - jwt_secret
+  k6:
+    image: grafana/k6:1.3.0@sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d
+    profiles: [load]
+    platform: ${BENCHMARK_PLATFORM:-linux/arm64}
+    cpus: 2
+    mem_limit: ${RUNNER_MEMORY:-4g}
+    memswap_limit: ${RUNNER_MEMORY:-4g}
+    user: "0:0"
+    volumes:
+      - ../../bench:/work/bench:ro
+      - ../../.state/seed/tokens.json:/tokens.json:ro
+      - ../../.state/runs:/runs
+    working_dir: /work/bench
+    ulimits:
+      nofile: {soft: 65535, hard: 65535}
+volumes:
+  data:
+secrets:
+  jwt_secret:
+    file: ../../.state/trailbase/jwt-secret

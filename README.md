@@ -1,4 +1,37 @@
-# The $12 Server Challenge
+# BaaS Benchmark Campaign
+
+This fork is being retooled to benchmark the same feed application using each product's supported APIs, one service at a time:
+
+**TrailBase → Supabase → PocketBase → Convex → Nhost → Directus → Appwrite → Neon (if feasible).**
+
+Owner priority amendment (2026-10-15): Supabase is next, before PocketBase.
+
+See **[the master plan and progress checklists](MASTER_PLAN.md)** for the application contract, Docker/runner design, resource tiers, correctness gates, benchmark protocol, and per-service publication requirements.
+
+All future BaaS product tests use the owner-designated **16-GiB native AMD64 VPS**, preserving its existing services. The common **standard** budget is **1 CPU / 4 GiB for the entire serving stack**, with a separate **2 CPU / 8 GiB / no-swap** k6 runner (`k6-2cpu-8g-v3`). Required database/API/functions/adapters/caches/ingress share the aggregate serving budget. Headroom is checked before reset; no global settings or unrelated-service changes are permitted. See [current host setup](services/trailbase/VPS16.md) and [the frozen contract](contracts/BENCHMARK.md).
+
+Earlier OrbStack and 8-GiB VPS attempts, including 1-CPU/2-GiB serving results, remain immutable historical tracks. The latter passed 5,000 VUs then hit a **runner** OOM at 10,000; this was not a TrailBase maximum. All correctness/scored holds restart on the new host/tier/profile. No cross-host/tier confirmations are pooled, and none of these results is an original dedicated $12-cloud-VM score. See [current evidence/status](results/trailbase/README.md).
+
+**TrailBase completed three independent 15,000-VU confirmation holds**, at 1,585.29–1,586.82 requests/s with zero request/schema errors. This is a **confirmed lower bound, not a maximum**: the 20,000-VU attempt hit the generator's 8-GiB limit. Read the [verified report](results/trailbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md), including tail outliers, resource review, compatibility-auth scope and all raw evidence. The owner authorized committing/pushing this outcome and moving directly to Supabase. Each subsequent service needs a reproducible report before progression.
+
+After isolated setup and verified native images per the host guide:
+
+```bash
+export BENCHMARK_PROJECT=baas-trailbase-vps16 BENCHMARK_RUNNER_PROFILE=k6-2cpu-8g-v3
+export TIER=standard TRAILBASE_PORT=14000
+bash services/trailbase/run.sh test
+bash services/trailbase/run.sh bench --smoke --vus 5000 # unscored pipeline calibration
+# Only after calibration review:
+bash services/trailbase/run.sh bench --campaign --max-vus 20000 --max-attempts 12
+```
+
+See [TrailBase setup and architecture](services/trailbase/README.md) for requirements, resource limits, auth scope, safe lifecycle operations, result locations, and caveats. Supabase is the next active implementation; PocketBase remains queued. The same compatibility-auth scope, host and aggregate resource budgets apply unless explicitly amended.
+
+---
+
+## Upstream reference: The $12 Server Challenge
+
+The original challenge documentation below, along with `SPEC.md`, the seed, tests, and existing submission, is retained as the workload reference. Its SQLite-only rules, submission workflow, and original scoring procedure are historical upstream rules, not the cross-product benchmark policy; see the master plan for planned changes.
 
 How many users can one **$12/month server** (1 vCPU, 2 GB RAM) handle? 
 

@@ -1,0 +1,15 @@
+test_generator_does_not_log_signing_key (test_seed.SeedSafety.test_generator_does_not_log_signing_key) ... FAIL
+
+======================================================================
+FAIL: test_generator_does_not_log_signing_key (test_seed.SeedSafety.test_generator_does_not_log_signing_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/markb/dev/twelve-dollar-server-challenge/test/baas/test_seed.py", line 18, in test_generator_does_not_log_signing_key
+    self.assertNotIn(marker, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'NONSECRET_SEED_LOGGING_REGRESSION_CANARY' unexpectedly found in '  users.tsv: 50,000 rows\n  posts.tsv: 500,000 rows\n  likes.tsv: 2,016,005 rows\n  tokens.json: 20,000 tokens (JWT_SECRET=NONSECRET_SEED_LOGGING_REGRESSION_CANARY)\n'
+
+----------------------------------------------------------------------
+Ran 1 test in 3.052s
+
+FAILED (failures=1)

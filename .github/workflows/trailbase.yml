@@ -1,0 +1,34 @@
+name: TrailBase correctness
+on:
+  pull_request:
+    paths: ['services/trailbase/**', 'runner/**', 'scripts/**', 'bench/baas*', 'test/**', 'seed/**', '.dockerignore', '.github/workflows/trailbase.yml']
+  push:
+    branches: [main]
+    paths: ['services/trailbase/**', 'runner/**', 'scripts/**', 'bench/baas*', 'test/**', 'seed/**', '.dockerignore', '.github/workflows/trailbase.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  correctness:
+    # Native ARM64, matching the approved local architecture; no emulated score.
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build pinned service and tooling (includes Rust unit tests)
+        run: bash services/trailbase/run.sh build
+      - name: Full canonical dataset and correctness gates
+        run: bash services/trailbase/run.sh test
+      - name: Retain credential-free correctness evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trailbase-correctness
+          path: |
+            .state/trailbase/correctness.log
+            .state/trailbase/correctness-manifest.json
+            .state/trailbase/dataset.json
+          include-hidden-files: true
+      - name: Stop this benchmark stack only
+        if: always()
+        run: bash services/trailbase/run.sh down

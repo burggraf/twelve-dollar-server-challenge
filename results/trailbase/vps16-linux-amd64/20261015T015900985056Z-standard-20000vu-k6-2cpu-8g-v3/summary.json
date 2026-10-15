@@ -1,0 +1,15 @@
+{
+  "outcome": "invalid",
+  "reason": "load generator OOM (not target capacity)",
+  "vus": 20000,
+  "tier": "standard",
+  "mode": "capacity",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "platform": "linux/amd64",
+  "hold_requests": 0,
+  "hold_rps": 0.0,
+  "latency_ms": {},
+  "request_errors": {},
+  "schema_errors": {}
+}

@@ -1,0 +1,3 @@
+BENCHMARK_ATTEMPT_FINISHED pass 15000vu results/trailbase/vps16-linux-amd64/20261015T023034390461Z-standard-15000vu-k6-2cpu-8g-v3: hold gates passed
+BENCHMARK_ATTEMPT_FINISHED pass 15000vu results/trailbase/vps16-linux-amd64/20261015T024045880287Z-standard-15000vu-k6-2cpu-8g-v3: hold gates passed
+BENCHMARK_ATTEMPT_FINISHED pass 15000vu results/trailbase/vps16-linux-amd64/20261015T025057973204Z-standard-15000vu-k6-2cpu-8g-v3: hold gates passed

@@ -1,0 +1,26 @@
+ Image baas-trailbase-feed:0.1.0 Building 
+ Image baas-benchmark-tools:0.1.0 Building 
+Dockerfile:3
+
+--------------------
+
+   2 |     # Freeze apt resolution too, rather than taking today's drifting package set.
+
+   3 | >>> RUN rm -f /etc/apt/sources.list.d/debian.sources \
+
+   4 | >>>  && printf 'deb [check-valid-until=no] https://snapshot.debian.org/archive/debian/20251210T000000Z bookworm main\ndeb [check-valid-until=no] https://snapshot.debian.org/archive/debian-security/20251210T000000Z bookworm-security main\n' > /etc/apt/sources.list \
+
+   5 | >>>  && apt-get update \
+
+   6 | >>>  && apt-get install -y --no-install-recommends bash ca-certificates curl jq openssl python3 sqlite3 \
+
+   7 | >>>  && dpkg-query -W > /tool-packages.txt \
+
+   8 | >>>  && rm -rf /var/lib/apt/lists/*
+
+   9 |     WORKDIR /work
+
+--------------------
+
+target tools: failed to solve: process "/bin/sh -c rm -f /etc/apt/sources.list.d/debian.sources  && printf 'deb [check-valid-until=no] https://snapshot.debian.org/archive/debian/20251210T000000Z bookworm main\\ndeb [check-valid-until=no] https://snapshot.debian.org/archive/debian-security/20251210T000000Z bookworm-security main\\n' > /etc/apt/sources.list  && apt-get update  && apt-get install -y --no-install-recommends bash ca-certificates curl jq openssl python3 sqlite3  && dpkg-query -W > /tool-packages.txt  && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+

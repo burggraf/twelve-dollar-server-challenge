@@ -1,0 +1,29 @@
+{
+  "tier": "standard",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "status": "paused",
+  "attempts": [
+    {
+      "vus": 2500,
+      "outcome": "pass",
+      "path": "results/trailbase/vps16-linux-amd64/20261015T012840173938Z-standard-2500vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 5000,
+      "outcome": "pass",
+      "path": "results/trailbase/vps16-linux-amd64/20261015T013845471643Z-standard-5000vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 10000,
+      "outcome": "pass",
+      "path": "results/trailbase/vps16-linux-amd64/20261015T014851697125Z-standard-10000vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 20000,
+      "outcome": "invalid",
+      "path": "results/trailbase/vps16-linux-amd64/20261015T015900985056Z-standard-20000vu-k6-2cpu-8g-v3"
+    }
+  ],
+  "reason": "Invalid measurements: campaign paused, not treated as target capacity failure"
+}

@@ -1,0 +1,15 @@
+BENCHMARK_ATTEMPT_FINISHED pass 2500vu results/trailbase/vps-linux-amd64/20261015T002336457284Z-small-2500vu-k6-2cpu-4g-v2: hold gates passed
+BENCHMARK_ATTEMPT_FINISHED pass 5000vu results/trailbase/vps-linux-amd64/20261015T003407762465Z-small-5000vu-k6-2cpu-4g-v2: hold gates passed
+BENCHMARK_ATTEMPT_FINISHED invalid 10000vu results/trailbase/vps-linux-amd64/20261015T004436971373Z-small-10000vu-k6-2cpu-4g-v2: load generator OOM (not target capacity)
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-benchmark/src/scripts/benchmark.py", line 477, in <module>
+    main()
+  File "/opt/twelve-dollar-baas-benchmark/src/scripts/benchmark.py", line 470, in main
+    if args.campaign: campaign(args, tier)
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-benchmark/src/scripts/benchmark.py", line 401, in campaign
+    while run(high):
+          ^^^^^^^^^
+  File "/opt/twelve-dollar-baas-benchmark/src/scripts/benchmark.py", line 393, in run
+    raise RuntimeError('Invalid measurements: campaign paused, not treated as target capacity failure')
+RuntimeError: Invalid measurements: campaign paused, not treated as target capacity failure

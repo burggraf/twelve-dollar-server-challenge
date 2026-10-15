@@ -1,0 +1,28 @@
+{
+  "outcome": "invalid",
+  "reason": "resource monitor failed",
+  "vus": 5000,
+  "tier": "small",
+  "mode": "smoke",
+  "runner_profile": "k6-2cpu-4g-v2",
+  "hold_requests": 8105,
+  "hold_rps": 405.25,
+  "latency_ms": {
+    "avg": 6053.098037597284,
+    "med": 7919.79359,
+    "p(95)": 14199.8655076,
+    "p(99)": 15314.086637319999,
+    "min": 0.235944,
+    "max": 17107.246475
+  },
+  "request_errors": {
+    "rate": 0.4714852467146045,
+    "passes": 3803,
+    "fails": 4263
+  },
+  "schema_errors": {
+    "rate": 0,
+    "passes": 0,
+    "fails": 8066
+  }
+}

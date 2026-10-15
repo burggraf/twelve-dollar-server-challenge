@@ -1,0 +1,2 @@
+Docker Compose version v5.5.0
+github.com/docker/buildx v0.37.2 2d379c0c3f22da0d2759d132a0ec81ca949098f0

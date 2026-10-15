@@ -1,0 +1,41 @@
+{
+  "status": "confirmed_lower_bound_pending_human_review",
+  "role": "three additional independent passing 15,000-VU confirmation holds",
+  "outcome_scope": "confirmed lower bound only; 20,000-VU generator OOM is not a target-failure bracket",
+  "vus": 15000,
+  "planned_holds": 3,
+  "prior_run_ids": [
+    "20261015T012840173938Z-standard-2500vu-k6-2cpu-8g-v3",
+    "20261015T013845471643Z-standard-5000vu-k6-2cpu-8g-v3",
+    "20261015T014851697125Z-standard-10000vu-k6-2cpu-8g-v3",
+    "20261015T015900985056Z-standard-20000vu-k6-2cpu-8g-v3",
+    "20261015T021146350933Z-standard-15000vu-k6-2cpu-8g-v3"
+  ],
+  "total_attempt_budget": 12,
+  "tier": "standard",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "attempts": [
+    {
+      "run_id": "20261015T023034390461Z-standard-15000vu-k6-2cpu-8g-v3",
+      "vus": 15000,
+      "outcome": "pass",
+      "reason": "hold gates passed"
+    },
+    {
+      "run_id": "20261015T024045880287Z-standard-15000vu-k6-2cpu-8g-v3",
+      "vus": 15000,
+      "outcome": "pass",
+      "reason": "hold gates passed"
+    },
+    {
+      "run_id": "20261015T025057973204Z-standard-15000vu-k6-2cpu-8g-v3",
+      "vus": 15000,
+      "outcome": "pass",
+      "reason": "hold gates passed"
+    }
+  ],
+  "continuity": {
+    "changed_persistent_services": 0,
+    "original_port4000_listener_unchanged": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "outcome": "pass",
+  "reason": "hold gates passed",
+  "vus": 2500,
+  "tier": "standard",
+  "mode": "capacity",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "platform": "linux/amd64",
+  "hold_requests": 79401,
+  "hold_rps": 264.67,
+  "latency_ms": {
+    "p(99)": 2.435273,
+    "min": 0.341872,
+    "max": 49.093041,
+    "avg": 0.655883419163479,
+    "med": 0.57562,
+    "p(95)": 0.947706
+  },
+  "request_errors": {
+    "rate": 0,
+    "passes": 0,
+    "fails": 79401
+  },
+  "schema_errors": {
+    "rate": 0,
+    "passes": 0,
+    "fails": 79401
+  }
+}

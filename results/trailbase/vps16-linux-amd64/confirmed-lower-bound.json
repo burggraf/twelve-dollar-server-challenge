@@ -1,0 +1,429 @@
+{
+  "outcome": "blocked",
+  "blocker": "Maximum discovery blocked by 20,000-VU load-generator OOM; no failing target bracket",
+  "confirmed_lower_bound_vus": 15000,
+  "maximum_passing_vus": null,
+  "owner_acceptance": "Owner authorized repository publication and progression to Supabase, 2026-10-15",
+  "publication": "Authorized commit/push in progress",
+  "serving": {
+    "cpus": 1,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0
+  },
+  "runner": {
+    "profile": "k6-2cpu-8g-v3",
+    "cpus": 2,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0
+  },
+  "host": {
+    "name": "azabab.com",
+    "cpus": 4,
+    "memory_bytes": 16770072576,
+    "platform": "linux/amd64",
+    "os": "Ubuntu 24.04.5 LTS",
+    "docker": "29.8.1",
+    "monthly_price": null,
+    "region": null
+  },
+  "service": {
+    "name": "TrailBase",
+    "version": "0.34.6",
+    "sdk": "0.6.1",
+    "compiler": "Rust 1.91.1",
+    "timed_path": "k6 -> native TrailBase WASM routes -> TrailBase database APIs -> SQLite WAL/NORMAL"
+  },
+  "correctness": {
+    "app_source_sha256": "0f392ae2fd3f508611133580c22c020447db202a86d04d8edc79fe3048531ce3",
+    "verification_source_sha256": "8eefb234b3f7b29494c3b0984a9f101c90e01b030400d3fb7b4c381f84a51b45",
+    "image": "sha256:94bd4ee85dc711f344f9198ea53f3ae0bbc69609759bd0cf35d940c91a89b088",
+    "limits": {
+      "NanoCpus": 1000000000,
+      "Memory": 4294967296,
+      "MemorySwap": 4294967296
+    },
+    "log_sha256": "d0f35db2d654b208f555eeeb494b610a4e11b07e792fd7f845e2d56f77b1a578",
+    "completed_utc": "2026-10-15T01:13:53.398283+00:00"
+  },
+  "canonical_data": {
+    "users": 50000,
+    "posts": 500000,
+    "likes": 2016005,
+    "sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d"
+  },
+  "total_confirmation_hold_requests": 1427658,
+  "total_scored_seconds": 900,
+  "confirmation_rps_range": [
+    1585.29,
+    1586.8233333333333
+  ],
+  "confirmations": [
+    {
+      "run_id": "20261015T023034390461Z-standard-15000vu-k6-2cpu-8g-v3",
+      "hold_seconds": 300,
+      "summary": {
+        "outcome": "pass",
+        "reason": "hold gates passed",
+        "vus": 15000,
+        "tier": "standard",
+        "mode": "capacity",
+        "runner_profile": "k6-2cpu-8g-v3",
+        "deployment_track": "vps16-linux-amd64",
+        "platform": "linux/amd64",
+        "hold_requests": 476047,
+        "hold_rps": 1586.8233333333333,
+        "latency_ms": {
+          "min": 0.339516,
+          "max": 229.951134,
+          "avg": 4.240428521370721,
+          "med": 0.908262,
+          "p(95)": 24.37728739999996,
+          "p(99)": 62.19604159999977
+        },
+        "request_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 476047
+        },
+        "schema_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 476047
+        }
+      },
+      "endpoints": {
+        "feed": {
+          "requests": 219152,
+          "rps": 730.5066666666667,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "avg": 4.630108888638962,
+            "med": 1.034032,
+            "p(95)": 26.976385199999946,
+            "p(99)": 63.82074034999998,
+            "min": 0.444703,
+            "max": 214.952831
+          }
+        },
+        "detail": {
+          "requests": 219481,
+          "rps": 731.6033333333334,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "avg": 3.776414212801973,
+            "med": 0.75184,
+            "p(95)": 20.896946,
+            "p(99)": 60.13707220000007,
+            "min": 0.339516,
+            "max": 204.824571
+          }
+        },
+        "like": {
+          "requests": 32983,
+          "rps": 109.94333333333333,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "avg": 4.710522614558991,
+            "med": 1.096715,
+            "p(95)": 26.11141439999999,
+            "p(99)": 67.39948772000004,
+            "min": 0.438152,
+            "max": 229.951134
+          }
+        },
+        "create": {
+          "requests": 4431,
+          "rps": 14.77,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "max": 120.689053,
+            "avg": 4.452114176032502,
+            "med": 1.164052,
+            "p(95)": 24.466256,
+            "p(99)": 62.10941489999986,
+            "min": 0.567243
+          }
+        }
+      },
+      "resources": {
+        "run_id": "20261015T023034390461Z-standard-15000vu-k6-2cpu-8g-v3",
+        "requests": 476047,
+        "rps": 1586.8233333333333,
+        "latency_ms": {
+          "min": 0.339516,
+          "max": 229.951134,
+          "avg": 4.240428521370721,
+          "med": 0.908262,
+          "p(95)": 24.37728739999996,
+          "p(99)": 62.19604159999977
+        },
+        "runner_cpu_peak_percent": 201.36,
+        "runner_cpu_mean_percent": 103.00219999999999,
+        "runner_memory_peak_percent": 87.54,
+        "target_cpu_peak_percent": 90.59,
+        "target_memory_peak_percent": 14.23,
+        "minimum_host_available_kib": 7177676,
+        "hold_monitor_samples": 50,
+        "sample_span_seconds": 295.6505091190338,
+        "host_steal_percent": 0.014694823100261914,
+        "host_iowait_percent": 0.21264273427437827,
+        "host_swapouts_before": 0,
+        "host_swapouts_after": 0,
+        "host_cpu_pressure_some_percent": 18.314413921134044,
+        "host_memory_pressure_some_percent": 0.0,
+        "host_memory_pressure_full_percent": 0.0,
+        "host_io_pressure_some_percent": 0.3409370080246233,
+        "host_io_pressure_full_percent": 0.22184774920713096
+      }
+    },
+    {
+      "run_id": "20261015T024045880287Z-standard-15000vu-k6-2cpu-8g-v3",
+      "hold_seconds": 300,
+      "summary": {
+        "outcome": "pass",
+        "reason": "hold gates passed",
+        "vus": 15000,
+        "tier": "standard",
+        "mode": "capacity",
+        "runner_profile": "k6-2cpu-8g-v3",
+        "deployment_track": "vps16-linux-amd64",
+        "platform": "linux/amd64",
+        "hold_requests": 475587,
+        "hold_rps": 1585.29,
+        "latency_ms": {
+          "avg": 5.856578396682059,
+          "med": 0.900077,
+          "p(95)": 31.857678299999986,
+          "p(99)": 99.09406634000001,
+          "min": 0.339485,
+          "max": 2522.260479
+        },
+        "request_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 475587
+        },
+        "schema_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 475587
+        }
+      },
+      "endpoints": {
+        "feed": {
+          "requests": 219050,
+          "rps": 730.1666666666666,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "max": 1614.711942,
+            "avg": 6.2662397083452,
+            "med": 1.0225214999999999,
+            "p(95)": 34.196659999999994,
+            "p(99)": 99.78887037000025,
+            "min": 0.441458
+          }
+        },
+        "detail": {
+          "requests": 219297,
+          "rps": 730.99,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "avg": 5.375936008769011,
+            "med": 0.747823,
+            "p(95)": 28.119307399999936,
+            "p(99)": 97.33504716000023,
+            "min": 0.339485,
+            "max": 2522.260479
+          }
+        },
+        "like": {
+          "requests": 32868,
+          "rps": 109.56,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "max": 267.252516,
+            "avg": 6.278899601557791,
+            "med": 1.0892065,
+            "p(95)": 34.696064549999996,
+            "p(99)": 103.79530248999997,
+            "min": 0.433202
+          }
+        },
+        "create": {
+          "requests": 4372,
+          "rps": 14.573333333333334,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "avg": 6.2651488588746655,
+            "med": 1.1646575,
+            "p(95)": 32.350185899999985,
+            "p(99)": 99.16633427999999,
+            "min": 0.507992,
+            "max": 263.522566
+          }
+        }
+      },
+      "resources": {
+        "run_id": "20261015T024045880287Z-standard-15000vu-k6-2cpu-8g-v3",
+        "requests": 475587,
+        "rps": 1585.29,
+        "latency_ms": {
+          "avg": 5.856578396682059,
+          "med": 0.900077,
+          "p(95)": 31.857678299999986,
+          "p(99)": 99.09406634000001,
+          "min": 0.339485,
+          "max": 2522.260479
+        },
+        "runner_cpu_peak_percent": 202.31,
+        "runner_cpu_mean_percent": 102.53299999999999,
+        "runner_memory_peak_percent": 87.03,
+        "target_cpu_peak_percent": 88.3,
+        "target_memory_peak_percent": 14.2,
+        "minimum_host_available_kib": 7222852,
+        "hold_monitor_samples": 50,
+        "sample_span_seconds": 295.67915534973145,
+        "host_steal_percent": 0.010441592342832281,
+        "host_iowait_percent": 0.21666304111376986,
+        "host_swapouts_before": 0,
+        "host_swapouts_after": 0,
+        "host_cpu_pressure_some_percent": 18.24348792399545,
+        "host_memory_pressure_some_percent": 6.76408858661134e-07,
+        "host_memory_pressure_full_percent": 1.0146132879917011e-06,
+        "host_io_pressure_some_percent": 0.3494706952804269,
+        "host_io_pressure_full_percent": 0.22479027958999603
+      }
+    },
+    {
+      "run_id": "20261015T025057973204Z-standard-15000vu-k6-2cpu-8g-v3",
+      "hold_seconds": 300,
+      "summary": {
+        "outcome": "pass",
+        "reason": "hold gates passed",
+        "vus": 15000,
+        "tier": "standard",
+        "mode": "capacity",
+        "runner_profile": "k6-2cpu-8g-v3",
+        "deployment_track": "vps16-linux-amd64",
+        "platform": "linux/amd64",
+        "hold_requests": 476024,
+        "hold_rps": 1586.7466666666667,
+        "latency_ms": {
+          "p(99)": 93.64873988000014,
+          "min": 0.343986,
+          "max": 2192.652407,
+          "avg": 6.039184899080752,
+          "med": 0.901715,
+          "p(95)": 24.94109034999999
+        },
+        "request_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 476024
+        },
+        "schema_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 476024
+        }
+      },
+      "endpoints": {
+        "feed": {
+          "requests": 219127,
+          "rps": 730.4233333333333,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "avg": 6.5264616575321455,
+            "med": 1.025181,
+            "p(95)": 27.65699109999999,
+            "p(99)": 97.02058527999954,
+            "min": 0.415258,
+            "max": 791.004971
+          }
+        },
+        "detail": {
+          "requests": 219470,
+          "rps": 731.5666666666667,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "avg": 5.518561025784893,
+            "med": 0.749436,
+            "p(95)": 21.479850549999973,
+            "p(99)": 91.23824145999995,
+            "min": 0.343986,
+            "max": 2192.652407
+          }
+        },
+        "like": {
+          "requests": 32942,
+          "rps": 109.80666666666667,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "med": 1.087318,
+            "p(95)": 25.855216049999957,
+            "p(99)": 89.02210515000003,
+            "min": 0.456988,
+            "max": 546.700302,
+            "avg": 6.219665894177702
+          }
+        },
+        "create": {
+          "requests": 4485,
+          "rps": 14.95,
+          "request_error_rate": 0,
+          "latency_ms": {
+            "avg": 6.382645831661076,
+            "med": 1.176014,
+            "p(95)": 24.858235600000036,
+            "p(99)": 87.91243571999988,
+            "min": 0.592351,
+            "max": 458.24434
+          }
+        }
+      },
+      "resources": {
+        "run_id": "20261015T025057973204Z-standard-15000vu-k6-2cpu-8g-v3",
+        "requests": 476024,
+        "rps": 1586.7466666666667,
+        "latency_ms": {
+          "p(99)": 93.64873988000014,
+          "min": 0.343986,
+          "max": 2192.652407,
+          "avg": 6.039184899080752,
+          "med": 0.901715,
+          "p(95)": 24.94109034999999
+        },
+        "runner_cpu_peak_percent": 200.07,
+        "runner_cpu_mean_percent": 98.2792,
+        "runner_memory_peak_percent": 87.11,
+        "target_cpu_peak_percent": 87.24,
+        "target_memory_peak_percent": 14.82,
+        "minimum_host_available_kib": 7170056,
+        "hold_monitor_samples": 50,
+        "sample_span_seconds": 295.7086327075958,
+        "host_steal_percent": 0.012768022063142126,
+        "host_iowait_percent": 0.20769315889377857,
+        "host_swapouts_before": 0,
+        "host_swapouts_after": 0,
+        "host_cpu_pressure_some_percent": 18.219932406665936,
+        "host_memory_pressure_some_percent": 0.0,
+        "host_memory_pressure_full_percent": 0.0,
+        "host_io_pressure_some_percent": 0.33896102079344304,
+        "host_io_pressure_full_percent": 0.2194467554289061
+      }
+    }
+  ],
+  "continuity": {
+    "changed_persistent_services": 0,
+    "original_port4000_listener_unchanged": true
+  },
+  "limitations": [
+    "No target maximum: 20,000-VU attempt invalid on generator OOM",
+    "Shared-host CPU pressure and small nonzero steal; no dedicated-machine equivalence",
+    "Generator brief quota-level CPU spikes and up to 87.54% RAM; no frozen invalidation gate triggered",
+    "Maximum latency outliers retained, including 2,522.26 ms; percentiles are not maxima",
+    "Native login throughput and power-loss durability not measured",
+    "Monthly cost/region unknown; no $12 or cost/request equivalence",
+    "Native AMD64 images reused from previous host; fresh correctness/holds, not a fresh compilation claim"
+  ]
+}
