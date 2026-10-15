@@ -1,0 +1,11 @@
+  users.tsv: 50,000 rows
+  posts.tsv: 500,000 rows
+  likes.tsv: 2,016,005 rows
+  tokens.json: 20,000 tokens (signing key not logged)
+ setval 
+--------
+ 500000
+(1 row)
+
+{"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d", "engine": "PostgreSQL 17.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit", "native_auth_accounts_before": 0, "native_auth_accounts_after": 0, "body_storage": "UTF-8 bytea; base64 native RPC transport; exact logical-row hash"}
+SUPABASE_CANONICAL_DATA_IMPORTED_AND_NATIVE_STACK_HEALTHY

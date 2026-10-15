@@ -1,0 +1,684 @@
+{
+  "app_source_sha256": "5b8384085a35397ec35b12844131997822c376a97be11ff696544b4e8123e602",
+  "verification_source_sha256": "ffd4636c3e0726a57645a270e23b45b7aefcb7ea1143c3102607e9247fce888b",
+  "runtime_inputs_sha256": "b9b9e930daf9e545bae7ad9d36f52f8d51b5d6627559ce0bcc8d7a70a4379e38",
+  "schema": {
+    "sha256": "ee1c63e7f5761985d8e1d208e8204250cab7ca2bbed26495515b61639ced2129",
+    "catalog": {
+      "columns": [
+        {
+          "data_type": "bigint",
+          "table_name": "likes",
+          "column_name": "user_id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 1
+        },
+        {
+          "data_type": "bigint",
+          "table_name": "likes",
+          "column_name": "post_id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 2
+        },
+        {
+          "data_type": "text",
+          "table_name": "likes",
+          "column_name": "created_at",
+          "is_nullable": "NO",
+          "collation_name": "C",
+          "column_default": "to_char((clock_timestamp() AT TIME ZONE 'UTC'::text), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"'::text)",
+          "ordinal_position": 3
+        },
+        {
+          "data_type": "bigint",
+          "table_name": "posts",
+          "column_name": "id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 1
+        },
+        {
+          "data_type": "bigint",
+          "table_name": "posts",
+          "column_name": "user_id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 2
+        },
+        {
+          "data_type": "bytea",
+          "table_name": "posts",
+          "column_name": "body",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 3
+        },
+        {
+          "data_type": "text",
+          "table_name": "posts",
+          "column_name": "created_at",
+          "is_nullable": "NO",
+          "collation_name": "C",
+          "column_default": "to_char((clock_timestamp() AT TIME ZONE 'UTC'::text), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"'::text)",
+          "ordinal_position": 4
+        },
+        {
+          "data_type": "bigint",
+          "table_name": "users",
+          "column_name": "id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 1
+        },
+        {
+          "data_type": "text",
+          "table_name": "users",
+          "column_name": "username",
+          "is_nullable": "NO",
+          "collation_name": "C",
+          "column_default": null,
+          "ordinal_position": 2
+        },
+        {
+          "data_type": "text",
+          "table_name": "users",
+          "column_name": "created_at",
+          "is_nullable": "NO",
+          "collation_name": "C",
+          "column_default": "to_char((clock_timestamp() AT TIME ZONE 'UTC'::text), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"'::text)",
+          "ordinal_position": 3
+        }
+      ],
+      "indexes": [
+        "CREATE UNIQUE INDEX likes_pkey ON feed_data.likes USING btree (user_id, post_id)",
+        "CREATE INDEX likes_post_id_idx ON feed_data.likes USING btree (post_id)",
+        "CREATE INDEX posts_created_at_id_idx ON feed_data.posts USING btree (created_at DESC, id DESC)",
+        "CREATE UNIQUE INDEX posts_pkey ON feed_data.posts USING btree (id)",
+        "CREATE INDEX posts_user_id_idx ON feed_data.posts USING btree (user_id)",
+        "CREATE UNIQUE INDEX users_pkey ON feed_data.users USING btree (id)",
+        "CREATE UNIQUE INDEX users_username_key ON feed_data.users USING btree (username)"
+      ],
+      "functions": [
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_writer=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.create_post(p_body_b64 text)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n DECLARE post_id bigint;\n BEGIN\n  INSERT INTO feed_data.posts(user_id,body) VALUES(feed_data.writer_id(),decode(p_body_b64,'base64')) RETURNING id INTO post_id;\n  RETURN feed_data.post_json(post_id);\n END $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_reader=X/feed_owner",
+            "anon=X/feed_owner",
+            "authenticated=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.detail(p_post_id bigint)\n RETURNS jsonb\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$ SELECT feed_data.post_json(p_post_id) $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_reader=X/feed_owner",
+            "anon=X/feed_owner",
+            "authenticated=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.feed()\n RETURNS jsonb\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n SELECT coalesce(jsonb_agg(feed_data.post_json(p.id) ORDER BY p.created_at DESC,p.id DESC),'[]'::jsonb)\n FROM (SELECT id,created_at FROM feed_data.posts ORDER BY created_at DESC,id DESC LIMIT 20) p\n $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_reader=X/feed_owner",
+            "anon=X/feed_owner",
+            "authenticated=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.health()\n RETURNS boolean\n LANGUAGE plpgsql\n STABLE SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n BEGIN PERFORM 1 FROM feed_data.users LIMIT 1; RETURN true; END $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_writer=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.like_post(p_post_id bigint)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n DECLARE changed integer; user_id bigint := feed_data.writer_id();\n BEGIN\n  IF NOT EXISTS(SELECT FROM feed_data.posts WHERE id=p_post_id) THEN RETURN NULL; END IF;\n  INSERT INTO feed_data.likes(user_id,post_id) VALUES(user_id,p_post_id) ON CONFLICT DO NOTHING RETURNING 1 INTO changed;\n  RETURN jsonb_build_object('liked',true,'post_id',p_post_id,'already_liked',changed IS NULL);\n END $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_data.codepoints(value bytea)\n RETURNS bigint\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\n SET search_path TO 'pg_catalog'\nAS $function$ SELECT count(*) FROM generate_series(0,octet_length(value)-1) n WHERE (get_byte(value,n)&192)<>128 $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_data.post_json(p_id bigint)\n RETURNS jsonb\n LANGUAGE sql\n STABLE\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n SELECT jsonb_build_object('id',p.id,'body_b64',encode(p.body,'base64'),'created_at',p.created_at,'author',u.username,\n 'like_count',(SELECT count(*) FROM feed_data.likes l WHERE l.post_id=p.id))\n FROM feed_data.posts p JOIN feed_data.users u ON u.id=p.user_id WHERE p.id=p_id\n $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_data.writer_id()\n RETURNS bigint\n LANGUAGE plpgsql\n STABLE\n SET search_path TO 'pg_catalog'\nAS $function$\n DECLARE value text := nullif(current_setting('request.jwt.claims',true),'')::jsonb->>'app_user_id';\n BEGIN\n  IF value IS NULL OR value !~ '^[1-9][0-9]*$' OR length(value)>19 THEN RAISE insufficient_privilege; END IF;\n  RETURN value::bigint;\n EXCEPTION WHEN numeric_value_out_of_range OR invalid_text_representation THEN RAISE insufficient_privilege;\n END $function$\n"
+        }
+      ],
+      "relations": [
+        {
+          "acl": [
+            "feed_owner=arwdDxtm/feed_owner"
+          ],
+          "rls": false,
+          "kind": "r",
+          "name": "likes",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "likes_pkey",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "likes_post_id_idx",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": [
+            "feed_owner=arwdDxtm/feed_owner"
+          ],
+          "rls": false,
+          "kind": "r",
+          "name": "posts",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "posts_created_at_id_idx",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": [
+            "feed_owner=rwU/feed_owner"
+          ],
+          "rls": false,
+          "kind": "S",
+          "name": "posts_id_seq",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "posts_pkey",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "posts_user_id_idx",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": [
+            "feed_owner=arwdDxtm/feed_owner"
+          ],
+          "rls": false,
+          "kind": "r",
+          "name": "users",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "users_pkey",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "users_username_key",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        }
+      ],
+      "durability": {
+        "fsync": "on",
+        "wal_level": "logical",
+        "shared_buffers": "65536",
+        "max_connections": "100",
+        "full_page_writes": "on",
+        "synchronous_commit": "on"
+      },
+      "constraints": [
+        "PRIMARY KEY (user_id, post_id)",
+        "FOREIGN KEY (post_id) REFERENCES feed_data.posts(id)",
+        "FOREIGN KEY (user_id) REFERENCES feed_data.users(id)",
+        "CHECK (((feed_data.codepoints(body) >= 1) AND (feed_data.codepoints(body) <= 500)))",
+        "PRIMARY KEY (id)",
+        "FOREIGN KEY (user_id) REFERENCES feed_data.users(id)",
+        "PRIMARY KEY (id)",
+        "UNIQUE (username)"
+      ]
+    }
+  },
+  "serving_profile": {
+    "parent": {
+      "cpu.max": "100000 100000\n",
+      "cpu.stat": "usage_usec 5975927315\nuser_usec 4941112698\nsystem_usec 1034814616\ncore_sched.force_idle_usec 0\nnr_periods 88579\nnr_throttled 31834\nthrottled_usec 2678385743\nnr_bursts 0\nburst_usec 0\n",
+      "cpu.pressure": "some avg10=0.00 avg60=0.26 avg300=5.44 total=1119573695\nfull avg10=0.00 avg60=0.16 avg300=3.47 total=779673872\n",
+      "memory.max": "4294967296\n",
+      "memory.current": "2487996416\n",
+      "memory.swap.max": "0\n",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.stat": "anon 320770048\nfile 2092335104\nkernel 74891264\nkernel_stack 1327104\npagetables 15151104\nsec_pagetables 0\npercpu 157560\nsock 0\nvmalloc 61440\nshmem 603369472\nzswap 0\nzswapped 0\nfile_mapped 602480640\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 924131328\ninactive_file 1487884288\nactive_file 1081344\nunevictable 8192\nslab_reclaimable 53490488\nslab_unreclaimable 4374048\nslab 57864536\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 0\npgsteal 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 37210842\npgmajfault 11\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 5781\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+      "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+      "io.stat": "8:0 rbytes=1630208 wbytes=28761915392 rios=140 wios=248813 dbytes=0 dios=0\n",
+      "io.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=4784228\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=3629993\n",
+      "children": [
+        "docker-33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f.scope",
+        "docker-4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306.scope",
+        "docker-62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a.scope",
+        "docker-ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f.scope",
+        "docker-cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355.scope"
+      ]
+    },
+    "targets": {
+      "db": {
+        "Id": "4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306",
+        "Image": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1876690,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T04:51:03.958548694Z",
+          "FinishedAt": "2026-10-15T04:51:03.208385157Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T07:00:52.398494082Z",
+                "End": "2026-10-15T07:00:52.435245838Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T07:00:57.436581048Z",
+                "End": "2026-10-15T07:00:57.472980473Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T07:01:02.473960872Z",
+                "End": "2026-10-15T07:01:02.511665322Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T07:01:07.512510164Z",
+                "End": "2026-10-15T07:01:07.550074382Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T07:01:12.550790119Z",
+                "End": "2026-10-15T07:01:12.589436935Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:5a4314708484bec672de2c09653a5c01fb1c84a998564ac231b0325e2238ed5b",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306.scope\n"
+      },
+      "auth": {
+        "Id": "33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f",
+        "Image": "sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2009049,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:48:10.255143558Z",
+          "FinishedAt": "2026-10-15T06:46:49.849932867Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T07:00:34.168452912Z",
+                "End": "2026-10-15T07:00:34.20207465Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T07:00:44.202965583Z",
+                "End": "2026-10-15T07:00:44.236563867Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T07:00:54.237205727Z",
+                "End": "2026-10-15T07:00:54.273167031Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T07:01:04.274289788Z",
+                "End": "2026-10-15T07:01:04.306889389Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T07:01:14.307697473Z",
+                "End": "2026-10-15T07:01:14.343519252Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:7e813221b93fbf54b515036438550e483bfaf057b9db52fe9bc1ce91c47e817e",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f.scope\n"
+      },
+      "rest": {
+        "Id": "cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355",
+        "Image": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2009048,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:48:10.258389022Z",
+          "FinishedAt": "2026-10-15T06:46:49.695983925Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T07:00:25.806387264Z",
+                "End": "2026-10-15T07:00:25.84949217Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T07:00:35.85027345Z",
+                "End": "2026-10-15T07:00:35.89335951Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T07:00:45.894242976Z",
+                "End": "2026-10-15T07:00:45.93656811Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T07:00:55.937937448Z",
+                "End": "2026-10-15T07:00:55.980930193Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T07:01:05.982031542Z",
+                "End": "2026-10-15T07:01:06.025142377Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:aa7e96af2d01219a09bc00c75de28171b1f9fda17ea455a931e4fb6d317089e0",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355.scope\n"
+      },
+      "functions": {
+        "Id": "62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a",
+        "Image": "sha256:edd22bef4477b900d5c300e287ce9b18bff9b81a0291bee14ee0b7c7b71a2899",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2009040,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:48:10.256994598Z",
+          "FinishedAt": "2026-10-15T06:46:49.97598567Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T07:00:34.688450932Z",
+                "End": "2026-10-15T07:00:34.730290326Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T07:00:44.731279569Z",
+                "End": "2026-10-15T07:00:44.764393987Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T07:00:54.764847419Z",
+                "End": "2026-10-15T07:00:54.801121991Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T07:01:04.80254807Z",
+                "End": "2026-10-15T07:01:04.836634728Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T07:01:14.837348747Z",
+                "End": "2026-10-15T07:01:14.870884663Z",
+                "ExitCode": 0,
+                "Output": ""
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:b331c6422f4f4bebd6052357da5f3c87610128c8cb530390ca024eb68cf4bf2e",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a.scope\n"
+      },
+      "gateway": {
+        "Id": "ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f",
+        "Image": "sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2009323,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:48:20.92302335Z",
+          "FinishedAt": "2026-10-15T06:46:49.687015967Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T07:00:34.943926082Z",
+                "End": "2026-10-15T07:00:34.97750039Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T07:00:44.978506495Z",
+                "End": "2026-10-15T07:00:45.012541037Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T07:00:55.012968669Z",
+                "End": "2026-10-15T07:00:55.046251652Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T07:01:05.047442287Z",
+                "End": "2026-10-15T07:01:05.079956578Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T07:01:15.080566527Z",
+                "End": "2026-10-15T07:01:15.116270159Z",
+                "ExitCode": 0,
+                "Output": ""
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:be87c8b52663c1164a5bdf3c5419017a269cb3d8c74be1ec93638a71f1ffbd4b",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f.scope\n"
+      }
+    }
+  },
+  "images": {
+    "db": {
+      "Image": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:5a4314708484bec672de2c09653a5c01fb1c84a998564ac231b0325e2238ed5b"
+    },
+    "auth": {
+      "Image": "sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232",
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:7e813221b93fbf54b515036438550e483bfaf057b9db52fe9bc1ce91c47e817e"
+    },
+    "rest": {
+      "Image": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:aa7e96af2d01219a09bc00c75de28171b1f9fda17ea455a931e4fb6d317089e0"
+    },
+    "functions": {
+      "Image": "sha256:edd22bef4477b900d5c300e287ce9b18bff9b81a0291bee14ee0b7c7b71a2899",
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:b331c6422f4f4bebd6052357da5f3c87610128c8cb530390ca024eb68cf4bf2e"
+    },
+    "gateway": {
+      "Image": "sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4",
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:be87c8b52663c1164a5bdf3c5419017a269cb3d8c74be1ec93638a71f1ffbd4b"
+    }
+  },
+  "host_identity_sha256": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43"
+}

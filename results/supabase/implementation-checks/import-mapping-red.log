@@ -1,0 +1,26 @@
+test_import_and_export_are_exact_utf8_including_nul (__main__.StorageMapping.test_import_and_export_are_exact_utf8_including_nul) ... FAIL
+test_nonbody_columns_and_input_objects_are_unchanged (__main__.StorageMapping.test_nonbody_columns_and_input_objects_are_unchanged) ... ok
+
+======================================================================
+FAIL: test_import_and_export_are_exact_utf8_including_nul (__main__.StorageMapping.test_import_and_export_are_exact_utf8_including_nul)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_import.py", line 9, in test_import_and_export_are_exact_utf8_including_nul
+    self.assertEqual(postgres_row('posts',row),['1','2','\\x'+hexbody,row[3]])
+AssertionError: Lists differ: ['1', '2', 'café\x00😀', '2025-01-01T00:00:00.000Z'] != ['1', '2', '\\x636166c3a900f09f9880', '2025-01-01T00:00:00.000Z']
+
+First differing element 2:
+'café\x00😀'
+'\\x636166c3a900f09f9880'
+
+- ['1', '2', 'café\x00😀', '2025-01-01T00:00:00.000Z']
+?             ^^^^    ^
+
++ ['1', '2', '\\x636166c3a900f09f9880', '2025-01-01T00:00:00.000Z']
+?             ^  ++++++++++  ^^^^^^^^
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)

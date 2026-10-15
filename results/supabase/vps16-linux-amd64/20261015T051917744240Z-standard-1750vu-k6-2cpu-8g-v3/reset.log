@@ -1,0 +1,42 @@
+ Container baas-supabase-vps16-rest-1 Stopping 
+ Container baas-supabase-vps16-gateway-1 Stopping 
+ Container baas-supabase-vps16-gateway-1 Stopped 
+ Container baas-supabase-vps16-auth-1 Stopping 
+ Container baas-supabase-vps16-functions-1 Stopping 
+ Container baas-supabase-vps16-rest-1 Stopped 
+ Container baas-supabase-vps16-auth-1 Stopped 
+ Container baas-supabase-vps16-functions-1 Stopped 
+ setval 
+--------
+ 500000
+(1 row)
+
+{"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d", "engine": "PostgreSQL 17.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit", "native_auth_accounts_before": 0, "native_auth_accounts_after": 0, "body_storage": "UTF-8 bytea; base64 native RPC transport; exact logical-row hash"}
+time="2026-10-15T05:20:38Z" level=warning msg="volume \"baas-supabase-vps16_pgdata\" carries the compose label \"pgdata\" but does not match the compose file (using \"baas-supabase-vps16_pgdata2\"); it is left untouched — remove it manually if it is no longer needed"
+ Container baas-supabase-vps16-db-1 Running 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-auth-1 Starting 
+ Container baas-supabase-vps16-rest-1 Starting 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-functions-1 Starting 
+ Container baas-supabase-vps16-auth-1 Started 
+ Container baas-supabase-vps16-rest-1 Started 
+ Container baas-supabase-vps16-functions-1 Started 
+ Container baas-supabase-vps16-auth-1 Waiting 
+ Container baas-supabase-vps16-auth-1 Healthy 
+ Container baas-supabase-vps16-gateway-1 Starting 
+ Container baas-supabase-vps16-gateway-1 Started 
+ Container baas-supabase-vps16-rest-1 Waiting 
+ Container baas-supabase-vps16-functions-1 Waiting 
+ Container baas-supabase-vps16-gateway-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-auth-1 Waiting 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-functions-1 Healthy 
+ Container baas-supabase-vps16-auth-1 Healthy 
+ Container baas-supabase-vps16-rest-1 Healthy 
+ Container baas-supabase-vps16-gateway-1 Healthy 

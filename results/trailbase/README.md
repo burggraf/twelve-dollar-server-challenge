@@ -52,4 +52,4 @@ The suite covers 42 inherited checks, six additional black-box regressions, nati
 
 See [TrailBase's README](../../services/trailbase/README.md), [the frozen benchmark contract](../../contracts/BENCHMARK.md), and [the master plan](../../MASTER_PLAN.md) for reproduction and progression gates.
 
-The owner authorized repository commit/push on 2026-10-15; that publication is being executed. No release or unrelated public upload is authorized. Supabase is next by explicit owner priority; PocketBase remains untouched.
+The owner authorized repository commit/push on 2026-10-15; remote `main` publication was verified at commit `3b1fa99a4ecf241b40d322aef029879061f8b25e`. No release or unrelated public upload is authorized. Supabase is next by explicit owner priority; PocketBase remains untouched.

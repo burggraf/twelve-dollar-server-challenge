@@ -1,0 +1,230 @@
+test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) ... 
+  test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='app') ... FAIL
+  test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='verification') ... FAIL
+  test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='runtime') ... FAIL
+  test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='schema') ... FAIL
+  test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='images') ... FAIL
+  test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='host') ... FAIL
+  test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='tokens') ... FAIL
+test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) ... FAIL
+test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) ... 
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='db', field='Running') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='db', field='OOMKilled') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='db', field='StartedAt') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='auth', field='Running') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='auth', field='OOMKilled') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='auth', field='StartedAt') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='rest', field='Running') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='rest', field='OOMKilled') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='rest', field='StartedAt') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='functions', field='Running') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='functions', field='OOMKilled') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='functions', field='StartedAt') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='gateway', field='Running') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='gateway', field='OOMKilled') ... FAIL
+  test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='gateway', field='StartedAt') ... FAIL
+test_unchanged_stack_has_no_lifecycle_failure (__main__.Evidence.test_unchanged_stack_has_no_lifecycle_failure) ... ok
+
+======================================================================
+FAIL: test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='app')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 19, in test_correctness_requires_every_frozen_input_and_exact_raw_log_hash
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_correctness(att,changed,'log')
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='verification')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 19, in test_correctness_requires_every_frozen_input_and_exact_raw_log_hash
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_correctness(att,changed,'log')
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='runtime')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 19, in test_correctness_requires_every_frozen_input_and_exact_raw_log_hash
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_correctness(att,changed,'log')
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='schema')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 19, in test_correctness_requires_every_frozen_input_and_exact_raw_log_hash
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_correctness(att,changed,'log')
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='images')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 19, in test_correctness_requires_every_frozen_input_and_exact_raw_log_hash
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_correctness(att,changed,'log')
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='host')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 19, in test_correctness_requires_every_frozen_input_and_exact_raw_log_hash
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_correctness(att,changed,'log')
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) (key='tokens')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 19, in test_correctness_requires_every_frozen_input_and_exact_raw_log_hash
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_correctness(att,changed,'log')
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 20, in test_correctness_requires_every_frozen_input_and_exact_raw_log_hash
+    with self.assertRaises(RuntimeError):s.validate_correctness(att,current,'rewritten log')
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='db', field='Running')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='db', field='OOMKilled')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='db', field='StartedAt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='auth', field='Running')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='auth', field='OOMKilled')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='auth', field='StartedAt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='rest', field='Running')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='rest', field='OOMKilled')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='rest', field='StartedAt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='functions', field='Running')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='functions', field='OOMKilled')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='functions', field='StartedAt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='gateway', field='Running')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='gateway', field='OOMKilled')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) (role='gateway', field='StartedAt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_evidence.py", line 13, in test_every_required_component_restart_exit_or_oom_fails
+    with self.subTest(role=role,field=field):self.assertIsNotNone(s.target_issue(before,after))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+FAILED (failures=23)

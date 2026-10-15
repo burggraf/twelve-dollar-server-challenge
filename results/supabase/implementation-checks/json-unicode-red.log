@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: JSON rejects invalid UTF-8, unpaired surrogates and non-finite numbers without lossy replacement
+not ok 1 - JSON rejects invalid UTF-8, unpaired surrogates and non-finite numbers without lossy replacement
+  ---
+  duration_ms: 1.901382
+  type: 'test'
+  location: '/work/services/supabase/functions/feed/contract.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///work/services/supabase/functions/feed/contract.test.mjs:14:143)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: positive IDs preserve exact signed-64-bit identity and canonical decimal form
+ok 2 - positive IDs preserve exact signed-64-bit identity and canonical decimal form
+  ---
+  duration_ms: 0.711975
+  type: 'test'
+  ...
+# Subtest: body uses ECMAScript trim and a 500 Unicode-code-point limit
+ok 3 - body uses ECMAScript trim and a 500 Unicode-code-point limit
+  ---
+  duration_ms: 0.320912
+  type: 'test'
+  ...
+# Subtest: every write verifies signature, algorithm, numeric expiry/nbf and strict signed payload
+ok 4 - every write verifies signature, algorithm, numeric expiry/nbf and strict signed payload
+  ---
+  duration_ms: 14.651181
+  type: 'test'
+  ...
+# Subtest: native bridge binds only verified subject, never caller role or arbitrary username metadata
+ok 5 - native bridge binds only verified subject, never caller role or arbitrary username metadata
+  ---
+  duration_ms: 0.952484
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 4
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 75.715942

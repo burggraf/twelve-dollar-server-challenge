@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-15. **Outcome:** maximum discovery **blocked by the load generator**, with a verified **confirmed lower bound of 15,000 concurrent VUs** under the frozen workload/SLOs. **Not a maximum-capacity score. Owner authorized publication and progression to Supabase on 2026-10-15.**
 
-Machine-readable result: [confirmed-lower-bound.json](confirmed-lower-bound.json). The owner authorized repository commit/push; publication of these artifacts is being executed. No release or unrelated upload is authorized.
+Machine-readable result: [confirmed-lower-bound.json](confirmed-lower-bound.json). The owner authorized repository commit/push; source, report and evidence were published to remote `main` at commit `3b1fa99a4ecf241b40d322aef029879061f8b25e`. No release or unrelated upload is authorized.
 
 ## Result: three additional independent confirmations
 

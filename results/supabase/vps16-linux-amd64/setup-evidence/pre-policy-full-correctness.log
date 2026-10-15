@@ -1,0 +1,324 @@
+ Container baas-supabase-vps16-rest-1 Stopping 
+ Container baas-supabase-vps16-gateway-1 Stopping 
+ Container baas-supabase-vps16-rest-1 Stopped 
+ Container baas-supabase-vps16-gateway-1 Stopped 
+ Container baas-supabase-vps16-functions-1 Stopping 
+ Container baas-supabase-vps16-auth-1 Stopping 
+ Container baas-supabase-vps16-auth-1 Stopped 
+ Container baas-supabase-vps16-functions-1 Stopped 
+ setval 
+--------
+ 500000
+(1 row)
+
+{"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d", "engine": "PostgreSQL 17.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit", "native_auth_accounts_before": 0, "native_auth_accounts_after": 0, "body_storage": "UTF-8 bytea; base64 native RPC transport; exact logical-row hash"}
+time="2026-10-15T04:40:26Z" level=warning msg="volume \"baas-supabase-vps16_pgdata\" carries the compose label \"pgdata\" but does not match the compose file (using \"baas-supabase-vps16_pgdata2\"); it is left untouched — remove it manually if it is no longer needed"
+ Container baas-supabase-vps16-db-1 Running 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-auth-1 Starting 
+ Container baas-supabase-vps16-functions-1 Starting 
+ Container baas-supabase-vps16-rest-1 Starting 
+ Container baas-supabase-vps16-rest-1 Started 
+ Container baas-supabase-vps16-functions-1 Started 
+ Container baas-supabase-vps16-auth-1 Started 
+ Container baas-supabase-vps16-auth-1 Waiting 
+ Container baas-supabase-vps16-auth-1 Healthy 
+ Container baas-supabase-vps16-gateway-1 Starting 
+ Container baas-supabase-vps16-gateway-1 Started 
+ Container baas-supabase-vps16-rest-1 Waiting 
+ Container baas-supabase-vps16-functions-1 Waiting 
+ Container baas-supabase-vps16-gateway-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-auth-1 Waiting 
+ Container baas-supabase-vps16-functions-1 Healthy 
+ Container baas-supabase-vps16-auth-1 Healthy 
+ Container baas-supabase-vps16-rest-1 Healthy 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-gateway-1 Healthy 
+ Container baas-supabase-vps16-correctness Creating 
+ Container baas-supabase-vps16-correctness Created 
+v22.20.0
+Python 3.11.2
+OpenSSL 3.0.17 1 Jul 2025 (Library: OpenSSL 3.0.17 1 Jul 2025)
+Testing http://gateway:8000
+-- golden reads (fresh database)
+  ok   GET /feed == golden -> 200
+  ok   GET /feed content-type (application/json)
+  ok   GET /posts/1 == golden -> 200
+  ok   GET /posts/250000 == golden -> 200
+  ok   GET /posts/500000 == golden -> 200
+  ok   GET /posts/:id content-type (application/json)
+-- health, 404s, id validation
+  ok   GET /health -> 200 {"status":"ok","db":"ok","uptime_s":22}
+  ok   GET /nope -> 404
+  ok   GET /posts/0 -> 400
+  ok   GET /posts/-1 -> 400
+  ok   GET /posts/abc -> 400
+  ok   GET /posts/1.5 -> 400
+  ok   GET /posts/999999999 -> 404
+-- auth
+  ok   POST /posts, no token -> 401
+  ok   POST /posts, Basic auth -> 401
+  ok   POST /posts, garbage token -> 401
+  ok   POST /posts, bad signature -> 401
+  ok   POST /posts, alg=none -> 401
+  ok   POST /posts, expired token -> 401
+  ok   POST /posts, sub not an integer -> 401
+  ok   POST /posts, no username -> 401
+  ok   POST /posts/abc/like, no token (auth before id) -> 401
+-- create validation
+  ok   empty body -> 400
+  ok   whitespace body -> 400
+  ok   numeric body -> 400
+  ok   missing body -> 400
+  ok   malformed JSON -> 400
+  ok   501-char body -> 400
+-- create, like, read back
+  ok   special characters round-trip (trimmed) -> 201
+  ok   create 500-char post -> 201
+  ok   POST /posts content-type (application/json)
+  ok   created_at format 2026-10-15T04:40:49.779Z
+  ok   created_at is now (UTC, 0s)
+  ok   like (first) -> 201
+  ok   like (repeat) -> 200
+  ok   like missing post -> 404
+  ok   like bad id (with token) -> 400
+  ok   read back, like_count 1 -> 200
+  ok   like on a seeded post is counted at once (12)
+  ok   feed has 20 posts
+  ok   new post is at the top of the feed
+  ok   feed entry matches the post
+passed=42 failed=0
+test_concurrent_duplicate_likes_commit_once (__main__.FeedContract.test_concurrent_duplicate_likes_commit_once) ... ok
+test_concurrent_post_ids_and_immediate_reads (__main__.FeedContract.test_concurrent_post_ids_and_immediate_reads) ... ok
+test_identity_is_bound_to_signed_subject (__main__.FeedContract.test_identity_is_bound_to_signed_subject) ... ok
+test_storage_health (__main__.FeedContract.test_storage_health) ... ok
+test_strict_jwt_payload_and_expiry (__main__.FeedContract.test_strict_jwt_payload_and_expiry) ... ok
+test_unicode_limits_and_ecmascript_trim (__main__.FeedContract.test_unicode_limits_and_ecmascript_trim) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.770s
+
+OK
+test_anon_cannot_write_rpc_or_exposed_tables (__main__.NativeSupabase.test_anon_cannot_write_rpc_or_exposed_tables) ... ok
+test_compat_signer_cannot_forge_native_writer_identity (__main__.NativeSupabase.test_compat_signer_cannot_forge_native_writer_identity) ... ok
+test_native_feed_is_real_supported_rpc (__main__.NativeSupabase.test_native_feed_is_real_supported_rpc) ... ok
+test_native_gateway_api_key_layer_is_enforced (__main__.NativeSupabase.test_native_gateway_api_key_layer_is_enforced) ... ok
+test_nul_and_unicode_roundtrip_without_database_text_loss (__main__.NativeSupabase.test_nul_and_unicode_roundtrip_without_database_text_loss) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.026s
+
+OK
+test_generator_does_not_log_signing_key (__main__.SeedSafety.test_generator_does_not_log_signing_key) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 6.540s
+
+OK
+TAP version 13
+# Subtest: JSON rejects invalid UTF-8, unpaired surrogates and non-finite numbers without lossy replacement
+ok 1 - JSON rejects invalid UTF-8, unpaired surrogates and non-finite numbers without lossy replacement
+  ---
+  duration_ms: 1.92614
+  type: 'test'
+  ...
+# Subtest: positive IDs preserve exact signed-64-bit identity and canonical decimal form
+ok 2 - positive IDs preserve exact signed-64-bit identity and canonical decimal form
+  ---
+  duration_ms: 5.703658
+  type: 'test'
+  ...
+# Subtest: body uses ECMAScript trim and a 500 Unicode-code-point limit
+ok 3 - body uses ECMAScript trim and a 500 Unicode-code-point limit
+  ---
+  duration_ms: 0.346128
+  type: 'test'
+  ...
+# Subtest: every write verifies signature, algorithm, numeric expiry/nbf and strict signed payload
+ok 4 - every write verifies signature, algorithm, numeric expiry/nbf and strict signed payload
+  ---
+  duration_ms: 15.594442
+  type: 'test'
+  ...
+# Subtest: native bridge binds only verified subject, never caller role or arbitrary username metadata
+ok 5 - native bridge binds only verified subject, never caller role or arbitrary username metadata
+  ---
+  duration_ms: 1.100212
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 82.467036
+TAP version 13
+# Subtest: phase boundaries exclude warmup, ramp and drain from the hold
+ok 1 - phase boundaries exclude warmup, ramp and drain from the hold
+  ---
+  duration_ms: 0.868286
+  type: 'test'
+  ...
+# Subtest: post validation rejects malformed successful responses
+ok 2 - post validation rejects malformed successful responses
+  ---
+  duration_ms: 0.310343
+  type: 'test'
+  ...
+# Subtest: feed validates size, ordering, uniqueness and status
+ok 3 - feed validates size, ordering, uniqueness and status
+  ---
+  duration_ms: 0.433633
+  type: 'test'
+  ...
+# Subtest: writes validate idempotency flags, identity and actual created content
+ok 4 - writes validate idempotency flags, identity and actual created content
+  ---
+  duration_ms: 0.301824
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 72.075093
+test_direct_controller_exports_inferred_platform_and_namespace_to_compose (__main__.HostPortability.test_direct_controller_exports_inferred_platform_and_namespace_to_compose) ... ok
+test_foreign_architecture_load_image_is_invalid (__main__.HostPortability.test_foreign_architecture_load_image_is_invalid) ... ok
+test_foreign_platforms_and_unrelated_project_names_are_rejected (__main__.HostPortability.test_foreign_platforms_and_unrelated_project_names_are_rejected) ... ok
+test_linux_samples_preserve_raw_proc_evidence_without_mac_commands (__main__.HostPortability.test_linux_samples_preserve_raw_proc_evidence_without_mac_commands) ... ok
+test_linux_swapouts_are_checked_without_weakening_mac_checks (__main__.HostPortability.test_linux_swapouts_are_checked_without_weakening_mac_checks) ... ok
+test_native_platforms_and_result_tracks_are_separate (__main__.HostPortability.test_native_platforms_and_result_tracks_are_separate) ... ok
+test_new_host_track_cannot_pool_with_original_vps (__main__.HostPortability.test_new_host_track_cannot_pool_with_original_vps) ... ok
+test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect (__main__.HostPortability.test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect) ... ok
+test_accepts_complete_passing_hold (__main__.Scoring.test_accepts_complete_passing_hold) ... ok
+test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host (__main__.Scoring.test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (__main__.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (__main__.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (__main__.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_mismatched_actual_runner_budget_cannot_claim_the_new_profile (__main__.Scoring.test_mismatched_actual_runner_budget_cannot_claim_the_new_profile) ... ok
+test_missing_clock_still_invalidates_non_oom_attempt (__main__.Scoring.test_missing_clock_still_invalidates_non_oom_attempt) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (__main__.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_oom_remains_primary_reason_when_k6_loses_summary_and_clock (__main__.Scoring.test_oom_remains_primary_reason_when_k6_loses_summary_and_clock) ... ok
+test_owner_approved_eight_gib_runner_has_distinct_verified_limits (__main__.Scoring.test_owner_approved_eight_gib_runner_has_distinct_verified_limits) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (__main__.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (__main__.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_runner_profile_is_versioned_and_matches_the_approved_budget (__main__.Scoring.test_runner_profile_is_versioned_and_matches_the_approved_budget) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (__main__.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+test_standard_tier_is_one_cpu_four_gib_with_memory_reserve (__main__.Scoring.test_standard_tier_is_one_cpu_four_gib_with_memory_reserve) ... ok
+test_vm_headroom_accepts_small_but_rejects_large_on_current_vm (__main__.Scoring.test_vm_headroom_accepts_small_but_rejects_large_on_current_vm) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.005s
+
+OK
+test_k6_cannot_read_signing_keys_or_private_service_state (__main__.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... ok
+test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated (__main__.ContainerIsolation.test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated) ... ok
+test_vps_platform_and_resources_are_isolated_from_existing_projects (__main__.ContainerIsolation.test_vps_platform_and_resources_are_isolated_from_existing_projects) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.234s
+
+OK
+test_campaign_uses_injected_backend_and_private_state_path (__main__.SupabaseHarness.test_campaign_uses_injected_backend_and_private_state_path) ... ok
+test_native_supabase_project_has_distinct_vps16_track (__main__.SupabaseHarness.test_native_supabase_project_has_distinct_vps16_track) ... ok
+test_snapshot_includes_selected_backend_not_trailbase (__main__.SupabaseHarness.test_snapshot_includes_selected_backend_not_trailbase) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+OK
+test_official_webhooks_bootstrap_precedes_roles_password_setup (__main__.SupabaseProfile.test_official_webhooks_bootstrap_precedes_roles_password_setup) ... ok
+test_real_resolved_stack_and_runner_are_isolated (__main__.SupabaseProfile.test_real_resolved_stack_and_runner_are_isolated) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.082s
+
+OK
+test_import_and_export_are_exact_utf8_including_nul (__main__.StorageMapping.test_import_and_export_are_exact_utf8_including_nul) ... ok
+test_nonbody_columns_and_input_objects_are_unchanged (__main__.StorageMapping.test_nonbody_columns_and_input_objects_are_unchanged) ... ok
+test_operator_uses_official_privileged_bootstrap_role_not_runtime_postgres (__main__.StorageMapping.test_operator_uses_official_privileged_bootstrap_role_not_runtime_postgres) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) ... ok
+test_missing_or_per_container_only_budget_cannot_pass (__main__.AggregateBudget.test_missing_or_per_container_only_budget_cannot_pass) ... ok
+test_one_parent_enforces_entire_five_component_stack (__main__.AggregateBudget.test_one_parent_enforces_entire_five_component_stack) ... ok
+test_stopped_or_missing_required_service_is_not_a_smaller_supabase_stack (__main__.AggregateBudget.test_stopped_or_missing_required_service_is_not_a_smaller_supabase_stack) ... ok
+test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) ... ok
+test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) ... ok
+test_unchanged_stack_has_no_lifecycle_failure (__main__.Evidence.test_unchanged_stack_has_no_lifecycle_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+ Container baas-supabase-vps16-persist-prepare Creating 
+ Container baas-supabase-vps16-persist-prepare Created 
+Acknowledged committed post and like recorded; no tokens retained.
+ Container baas-supabase-vps16-db-1 Stopping 
+ Container baas-supabase-vps16-db-1 Stopped 
+ Container baas-supabase-vps16-storage-failure Creating 
+ Container baas-supabase-vps16-storage-failure Created 
+Stopped native storage produces degraded health and sanitized failed writes, not fake success.
+time="2026-10-15T04:41:00Z" level=warning msg="volume \"baas-supabase-vps16_pgdata\" carries the compose label \"pgdata\" but does not match the compose file (using \"baas-supabase-vps16_pgdata2\"); it is left untouched — remove it manually if it is no longer needed"
+ Container baas-supabase-vps16-db-1 Starting 
+ Container baas-supabase-vps16-db-1 Started 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-gateway-1 Restarting 
+ Container baas-supabase-vps16-rest-1 Restarting 
+ Container baas-supabase-vps16-functions-1 Restarting 
+ Container baas-supabase-vps16-auth-1 Restarting 
+ Container baas-supabase-vps16-auth-1 Started 
+ Container baas-supabase-vps16-rest-1 Started 
+ Container baas-supabase-vps16-functions-1 Started 
+ Container baas-supabase-vps16-gateway-1 Started 
+time="2026-10-15T04:41:17Z" level=warning msg="volume \"baas-supabase-vps16_pgdata\" carries the compose label \"pgdata\" but does not match the compose file (using \"baas-supabase-vps16_pgdata2\"); it is left untouched — remove it manually if it is no longer needed"
+ Container baas-supabase-vps16-auth-1 Running 
+ Container baas-supabase-vps16-rest-1 Running 
+ Container baas-supabase-vps16-functions-1 Running 
+ Container baas-supabase-vps16-gateway-1 Running 
+ Container baas-supabase-vps16-db-1 Running 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-auth-1 Waiting 
+ Container baas-supabase-vps16-auth-1 Healthy 
+ Container baas-supabase-vps16-functions-1 Waiting 
+ Container baas-supabase-vps16-gateway-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-auth-1 Waiting 
+ Container baas-supabase-vps16-rest-1 Waiting 
+ Container baas-supabase-vps16-auth-1 Healthy 
+ Container baas-supabase-vps16-gateway-1 Healthy 
+ Container baas-supabase-vps16-db-1 Healthy 
+ Container baas-supabase-vps16-functions-1 Healthy 
+ Container baas-supabase-vps16-rest-1 Healthy 
+ Container baas-supabase-vps16-persist-verify Creating 
+ Container baas-supabase-vps16-persist-verify Created 
+Acknowledged post and exactly-once like survived actual database/application process restart.
+FULL_SUPABASE_CORRECTNESS_GATE_PASSED

@@ -1,0 +1,8 @@
+test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) ... ok
+test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) ... ok
+test_source_inputs_and_small_benchmark_evidence_remain_visible (test_gitignore.RepositoryIgnores.test_source_inputs_and_small_benchmark_evidence_remain_visible) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.040s
+
+OK

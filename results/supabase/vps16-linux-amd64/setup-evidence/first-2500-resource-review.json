@@ -1,0 +1,15 @@
+{
+  "run": "20261015T045724392273Z-standard-2500vu-k6-2cpu-8g-v3",
+  "fixed_scoring_replay": [
+    "fail",
+    "hold latency/error/schema gate failed"
+  ],
+  "resource_verdict": null,
+  "hold_samples": 60,
+  "hold_span_seconds": 297.7762565612793,
+  "runner_peak_cpu_percent": 99.72,
+  "runner_peak_memory_percent": 14.03,
+  "aggregate_serving_peak_memory_bytes": 2873520128,
+  "host_swapouts_before": 0,
+  "host_swapouts_after": 0
+}

@@ -1,0 +1,35 @@
+test_campaign_uses_injected_backend_and_private_state_path (__main__.SupabaseHarness.test_campaign_uses_injected_backend_and_private_state_path) ... FAIL
+test_native_supabase_project_has_distinct_vps16_track (__main__.SupabaseHarness.test_native_supabase_project_has_distinct_vps16_track) ... FAIL
+test_snapshot_includes_selected_backend_not_trailbase (__main__.SupabaseHarness.test_snapshot_includes_selected_backend_not_trailbase) ... FAIL
+
+======================================================================
+FAIL: test_campaign_uses_injected_backend_and_private_state_path (__main__.SupabaseHarness.test_campaign_uses_injected_backend_and_private_state_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_harness.py", line 31, in test_campaign_uses_injected_backend_and_private_state_path
+    callback.assert_called_once_with(2500,'standard');wrong.assert_not_called()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 955, in assert_called_once_with
+    raise AssertionError(msg)
+AssertionError: Expected 'mock' to be called once. Called 0 times.
+
+======================================================================
+FAIL: test_native_supabase_project_has_distinct_vps16_track (__main__.SupabaseHarness.test_native_supabase_project_has_distinct_vps16_track)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_harness.py", line 12, in test_native_supabase_project_has_distinct_vps16_track
+    self.assertIsNotNone(value,'Native Supabase namespace must be supported')
+AssertionError: unexpectedly None : Native Supabase namespace must be supported
+
+======================================================================
+FAIL: test_snapshot_includes_selected_backend_not_trailbase (__main__.SupabaseHarness.test_snapshot_includes_selected_backend_not_trailbase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_harness.py", line 22, in test_snapshot_includes_selected_backend_not_trailbase
+    self.assertIn('services/supabase/marker',names)
+AssertionError: 'services/supabase/marker' not found in ['.dockerignore', '.gitignore', 'LICENSE', 'MASTER_PLAN.md', 'README.md', 'SPEC.md', 'schema.sql', 'services/trailbase/marker']
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+FAILED (failures=3)

@@ -1,0 +1,21 @@
+test_import_and_export_are_exact_utf8_including_nul (__main__.StorageMapping.test_import_and_export_are_exact_utf8_including_nul) ... ok
+test_nonbody_columns_and_input_objects_are_unchanged (__main__.StorageMapping.test_nonbody_columns_and_input_objects_are_unchanged) ... ok
+test_operator_uses_official_privileged_bootstrap_role_not_runtime_postgres (__main__.StorageMapping.test_operator_uses_official_privileged_bootstrap_role_not_runtime_postgres) ... FAIL
+
+======================================================================
+FAIL: test_operator_uses_official_privileged_bootstrap_role_not_runtime_postgres (__main__.StorageMapping.test_operator_uses_official_privileged_bootstrap_role_not_runtime_postgres)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_import.py", line 8, in test_operator_uses_official_privileged_bootstrap_role_not_runtime_postgres
+    args=psql_args();self.assertEqual(args[args.index('-U')+1],'supabase_admin')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'postgres' != 'supabase_admin'
+- postgres
++ supabase_admin
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=1)
+supabase_admin|t

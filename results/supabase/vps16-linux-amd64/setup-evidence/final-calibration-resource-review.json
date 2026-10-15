@@ -1,0 +1,16 @@
+{
+  "run": "20261015T045317043850Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+  "scoring_and_runner_resource_replay": "pass",
+  "full_original_checksums_verified": true,
+  "frozen_inputs_still_current": true,
+  "all_five_native_targets_no_restart_or_oom": true,
+  "hold_monitor_samples": 4,
+  "hold_sample_span_seconds": 15.120044231414795,
+  "runner_peak_cpu_percent_one_core": 11.19,
+  "runner_peak_memory_percent_eight_gib": 4.2,
+  "aggregate_serving_peak_memory_bytes_including_cache": 2025955328,
+  "aggregate_serving_mean_cpu_cores_between_hold_samples": 0.3802916123785681,
+  "host_swapouts_before": 0,
+  "host_swapouts_after": 0,
+  "outcome_scope": "unscored short calibration, not capacity"
+}

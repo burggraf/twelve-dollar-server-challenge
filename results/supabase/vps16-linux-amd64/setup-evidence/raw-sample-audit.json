@@ -1,0 +1,545 @@
+{
+  "attempts": [
+    {
+      "run": "20261015T045724392273Z-standard-2500vu-k6-2cpu-8g-v3",
+      "hold_requests": 69397,
+      "raw_quantiles_reproduced": {
+        "med": 1326.818501,
+        "p(95)": 3560.6553743999953,
+        "p(99)": 5462.9708429599905,
+        "min": 1.884811,
+        "max": 10001.960711
+      },
+      "request_errors_by_endpoint": {
+        "detail": 2041,
+        "feed": 2155,
+        "like": 313,
+        "create": 51
+      },
+      "http_status_counts_by_endpoint": {
+        "feed": {
+          "200": 31039,
+          "500": 1981,
+          "503": 120,
+          "0": 54
+        },
+        "detail": {
+          "200": 28948,
+          "500": 1873,
+          "503": 120,
+          "0": 48
+        },
+        "like": {
+          "201": 4289,
+          "500": 287,
+          "503": 17,
+          "0": 9
+        },
+        "create": {
+          "201": 561,
+          "500": 49,
+          "0": 1,
+          "503": 1
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T050821481749Z-standard-1250vu-k6-2cpu-8g-v3",
+      "hold_requests": 39679,
+      "raw_quantiles_reproduced": {
+        "med": 4.227432,
+        "p(95)": 6.0675305999999996,
+        "p(99)": 31.68613560000044,
+        "min": 2.673208,
+        "max": 432.914106
+      },
+      "request_errors_by_endpoint": {
+        "like": 0,
+        "detail": 0,
+        "feed": 0,
+        "create": 0
+      },
+      "http_status_counts_by_endpoint": {
+        "like": {
+          "201": 2796,
+          "200": 1
+        },
+        "detail": {
+          "200": 18275
+        },
+        "feed": {
+          "200": 18227
+        },
+        "create": {
+          "201": 380
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T051917744240Z-standard-1750vu-k6-2cpu-8g-v3",
+      "hold_requests": 55556,
+      "raw_quantiles_reproduced": {
+        "med": 4.436249,
+        "p(95)": 30.199700999999997,
+        "p(99)": 217.0571585499993,
+        "min": 2.690192,
+        "max": 893.012252
+      },
+      "request_errors_by_endpoint": {
+        "detail": 11,
+        "feed": 10,
+        "create": 0,
+        "like": 3
+      },
+      "http_status_counts_by_endpoint": {
+        "detail": {
+          "200": 25601,
+          "503": 5,
+          "500": 6
+        },
+        "feed": {
+          "200": 25588,
+          "503": 6,
+          "500": 4
+        },
+        "create": {
+          "201": 540
+        },
+        "like": {
+          "201": 3803,
+          "503": 3
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T053014119004Z-standard-2000vu-k6-2cpu-8g-v3",
+      "hold_requests": 63428,
+      "raw_quantiles_reproduced": {
+        "med": 4.683631999999999,
+        "p(95)": 70.09323589999975,
+        "p(99)": 323.738085109998,
+        "min": 2.751335,
+        "max": 969.454351
+      },
+      "request_errors_by_endpoint": {
+        "feed": 3,
+        "detail": 2,
+        "like": 1,
+        "create": 0
+      },
+      "http_status_counts_by_endpoint": {
+        "feed": {
+          "200": 29194,
+          "503": 2,
+          "500": 1
+        },
+        "detail": {
+          "200": 29206,
+          "500": 2
+        },
+        "like": {
+          "201": 4447,
+          "503": 1
+        },
+        "create": {
+          "201": 575
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T054110358168Z-standard-2250vu-k6-2cpu-8g-v3",
+      "hold_requests": 70845,
+      "raw_quantiles_reproduced": {
+        "med": 18.796902,
+        "p(95)": 473.4053104000003,
+        "p(99)": 863.79292692,
+        "min": 2.674262,
+        "max": 3090.976724
+      },
+      "request_errors_by_endpoint": {
+        "detail": 5,
+        "feed": 9,
+        "like": 1,
+        "create": 0
+      },
+      "http_status_counts_by_endpoint": {
+        "detail": {
+          "200": 32667,
+          "503": 1,
+          "500": 4
+        },
+        "feed": {
+          "200": 32576,
+          "500": 7,
+          "503": 2
+        },
+        "like": {
+          "201": 4969,
+          "500": 1
+        },
+        "create": {
+          "201": 618
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T055206724973Z-standard-2250vu-k6-2cpu-8g-v3",
+      "hold_requests": 70548,
+      "raw_quantiles_reproduced": {
+        "med": 26.79244,
+        "p(95)": 684.0565889499997,
+        "p(99)": 1205.16140379,
+        "min": 2.789298,
+        "max": 3729.959462
+      },
+      "request_errors_by_endpoint": {
+        "detail": 12,
+        "feed": 9,
+        "like": 2,
+        "create": 0
+      },
+      "http_status_counts_by_endpoint": {
+        "detail": {
+          "200": 32480,
+          "503": 9,
+          "500": 3
+        },
+        "feed": {
+          "200": 32521,
+          "500": 5,
+          "503": 4
+        },
+        "like": {
+          "201": 4842,
+          "500": 2
+        },
+        "create": {
+          "201": 682
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T060303490334Z-standard-2250vu-k6-2cpu-8g-v3",
+      "hold_requests": 70453,
+      "raw_quantiles_reproduced": {
+        "med": 28.199616,
+        "p(95)": 721.6973677999998,
+        "p(99)": 1469.6167101999945,
+        "min": 2.765471,
+        "max": 5782.821792
+      },
+      "request_errors_by_endpoint": {
+        "detail": 20,
+        "feed": 30,
+        "like": 4,
+        "create": 0
+      },
+      "http_status_counts_by_endpoint": {
+        "detail": {
+          "200": 32419,
+          "500": 16,
+          "503": 4
+        },
+        "feed": {
+          "200": 32416,
+          "500": 25,
+          "503": 5
+        },
+        "like": {
+          "201": 4908,
+          "503": 2,
+          "500": 2
+        },
+        "create": {
+          "201": 656
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T061400018671Z-standard-2250vu-k6-2cpu-8g-v3",
+      "hold_requests": 70504,
+      "raw_quantiles_reproduced": {
+        "med": 31.591025,
+        "p(95)": 744.5644386999995,
+        "p(99)": 1503.4388443100013,
+        "min": 2.68963,
+        "max": 6264.69384
+      },
+      "request_errors_by_endpoint": {
+        "detail": 8,
+        "feed": 6,
+        "like": 0,
+        "create": 0
+      },
+      "http_status_counts_by_endpoint": {
+        "detail": {
+          "200": 32441,
+          "503": 7,
+          "500": 1
+        },
+        "feed": {
+          "200": 32458,
+          "503": 6
+        },
+        "like": {
+          "201": 4912
+        },
+        "create": {
+          "201": 679
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T062456087846Z-standard-2000vu-k6-2cpu-8g-v3",
+      "hold_requests": 63258,
+      "raw_quantiles_reproduced": {
+        "med": 4.7012564999999995,
+        "p(95)": 125.38544809999976,
+        "p(99)": 415.2833341200002,
+        "min": 2.680584,
+        "max": 1910.443222
+      },
+      "request_errors_by_endpoint": {
+        "detail": 1,
+        "feed": 1,
+        "like": 0,
+        "create": 0
+      },
+      "http_status_counts_by_endpoint": {
+        "detail": {
+          "200": 29193,
+          "500": 1
+        },
+        "feed": {
+          "200": 29167,
+          "500": 1
+        },
+        "like": {
+          "201": 4351
+        },
+        "create": {
+          "201": 545
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T063552558051Z-standard-2000vu-k6-2cpu-8g-v3",
+      "hold_requests": 63401,
+      "raw_quantiles_reproduced": {
+        "med": 4.846012,
+        "p(95)": 163.528888,
+        "p(99)": 473.411203,
+        "min": 2.65662,
+        "max": 1396.738559
+      },
+      "request_errors_by_endpoint": {
+        "detail": 0,
+        "feed": 2,
+        "like": 0,
+        "create": 0
+      },
+      "http_status_counts_by_endpoint": {
+        "detail": {
+          "200": 29208
+        },
+        "feed": {
+          "200": 29161,
+          "500": 2
+        },
+        "like": {
+          "201": 4439
+        },
+        "create": {
+          "201": 591
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    },
+    {
+      "run": "20261015T064648677622Z-standard-2000vu-k6-2cpu-8g-v3",
+      "hold_requests": 63506,
+      "raw_quantiles_reproduced": {
+        "med": 4.7612175,
+        "p(95)": 128.9273995,
+        "p(99)": 411.2284222499996,
+        "min": 2.672128,
+        "max": 1407.404371
+      },
+      "request_errors_by_endpoint": {
+        "feed": 1,
+        "detail": 0,
+        "like": 2,
+        "create": 0
+      },
+      "http_status_counts_by_endpoint": {
+        "feed": {
+          "200": 29225,
+          "500": 1
+        },
+        "detail": {
+          "200": 29204
+        },
+        "like": {
+          "201": 4396,
+          "503": 2
+        },
+        "create": {
+          "201": 678
+        }
+      },
+      "resource_record_keys": [
+        "time",
+        "target_stack",
+        "linux_vmstat",
+        "linux_stat",
+        "linux_meminfo",
+        "linux_diskstats",
+        "linux_loadavg",
+        "linux_uptime",
+        "linux_pressure_cpu",
+        "linux_pressure_memory",
+        "linux_pressure_io"
+      ],
+      "raw_stream_complete": true
+    }
+  ]
+}

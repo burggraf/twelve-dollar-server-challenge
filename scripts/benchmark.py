@@ -30,9 +30,9 @@ def deployment_settings(system, machine, environ):
     if environ.get('BENCHMARK_PLATFORM', native) != native:
         raise ValueError('Primary benchmark requires native images, not emulation')
     project = environ.get('BENCHMARK_PROJECT', 'baas-trailbase')
-    if len(project) > 63 or not re.fullmatch(r'baas-trailbase(?:-[a-z0-9]+)*', project):
+    if len(project) > 63 or not re.fullmatch(r'baas-(?:trailbase|supabase)(?:-[a-z0-9]+)*', project):
         raise ValueError('Project must use the isolated baas-trailbase benchmark namespace')
-    prefix = 'local-orbstack-' if system == 'Darwin' else ('vps16-linux-' if project == 'baas-trailbase-vps16' else 'vps-linux-')
+    prefix = 'local-orbstack-' if system == 'Darwin' else ('vps16-linux-' if project in ('baas-trailbase-vps16', 'baas-supabase-vps16') else 'vps-linux-')
     return {'project': project, 'platform': native, 'track': prefix + arch}
 
 
@@ -160,9 +160,11 @@ def inspect(name):
     }
 
 
-def snapshot(destination):
+def snapshot(destination, service='trailbase'):
+    if service not in ('trailbase', 'supabase'):
+        raise ValueError('Unsupported benchmark service snapshot')
     paths = [ROOT / name for name in ['README.md', 'MASTER_PLAN.md', 'LICENSE', 'SPEC.md', 'schema.sql', '.gitignore', '.dockerignore']]
-    for name in ['services/trailbase', 'runner', 'scripts', 'bench', 'test', 'contracts', '.github/workflows', 'seed']:
+    for name in [f'services/{service}', 'runner', 'scripts', 'bench', 'test', 'contracts', '.github/workflows', 'seed']:
         if (ROOT / name).exists():
             paths.extend(p for p in (ROOT / name).rglob('*') if p.is_file()
                          and not any(part in ['target', '__pycache__', 'tsv'] for part in p.parts)
@@ -397,19 +399,21 @@ Publication is local repository artifacts only. No push, release, upload, or ser
     return outcome, str(destination.relative_to(ROOT))
 
 
-def campaign(args, tier):
-    RESULTS.mkdir(parents=True, exist_ok=True)
+def campaign(args, tier, attempt_runner=None, results=None, campaign_file=None):
+    attempt_runner = attempt if attempt_runner is None else attempt_runner
+    results = RESULTS if results is None else results
+    campaign_file = ROOT / '.state/trailbase/campaign.json' if campaign_file is None else campaign_file
+    results.mkdir(parents=True, exist_ok=True)
     history = []
     def run(vus):
         if len(history) >= args.max_attempts:
             raise RuntimeError('Campaign attempt budget reached; no final score')
-        outcome, path = attempt(vus, tier)
+        outcome, path = attempt_runner(vus, tier)
         history.append({'vus': vus, 'outcome': outcome, 'path': path})
         save('in_progress')
         if outcome == 'invalid':
             raise RuntimeError('Invalid measurements: campaign paused, not treated as target capacity failure')
         return outcome == 'pass'
-    campaign_file = ROOT / '.state/trailbase/campaign.json'
     def save(status, **extra):
         campaign_file.write_text(json.dumps({'tier': tier, 'runner_profile': RUNNER_PROFILE, 'deployment_track': TRACK,
                                              'status': status, 'attempts': history, **extra}, indent=2) + '\n')
@@ -439,7 +443,7 @@ def campaign(args, tier):
         raise
     finally:
         if campaign_file.exists():
-            destination = RESULTS / (datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ') + f'-{tier}-campaign.json')
+            destination = results / (datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ') + f'-{tier}-campaign.json')
             shutil.copyfile(campaign_file, destination)
 
 

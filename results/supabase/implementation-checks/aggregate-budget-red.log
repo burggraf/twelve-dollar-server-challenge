@@ -1,0 +1,144 @@
+test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) ... 
+  test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='platform') ... FAIL
+  test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='image_manifest_digest') ... FAIL
+  test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='compose_project') ... FAIL
+  test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='cgroup_parent') ... FAIL
+  test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='process_cgroup') ... FAIL
+test_missing_or_per_container_only_budget_cannot_pass (__main__.AggregateBudget.test_missing_or_per_container_only_budget_cannot_pass) ... 
+  test_missing_or_per_container_only_budget_cannot_pass (__main__.AggregateBudget.test_missing_or_per_container_only_budget_cannot_pass) (key='cpu.max') ... FAIL
+  test_missing_or_per_container_only_budget_cannot_pass (__main__.AggregateBudget.test_missing_or_per_container_only_budget_cannot_pass) (key='memory.max') ... FAIL
+  test_missing_or_per_container_only_budget_cannot_pass (__main__.AggregateBudget.test_missing_or_per_container_only_budget_cannot_pass) (key='memory.swap.max') ... FAIL
+test_one_parent_enforces_entire_five_component_stack (__main__.AggregateBudget.test_one_parent_enforces_entire_five_component_stack) ... FAIL
+test_stopped_or_missing_required_service_is_not_a_smaller_supabase_stack (__main__.AggregateBudget.test_stopped_or_missing_required_service_is_not_a_smaller_supabase_stack) ... FAIL
+test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) ... 
+  test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='cpu.max') ... FAIL
+  test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='cpu.max') ... FAIL
+  test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='memory.max') ... FAIL
+  test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='memory.swap.max') ... FAIL
+  test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='children') ... FAIL
+
+======================================================================
+FAIL: test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='platform')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 26, in test_all_components_must_be_native_owned_and_in_exact_parent
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='image_manifest_digest')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 26, in test_all_components_must_be_native_owned_and_in_exact_parent
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='compose_project')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 26, in test_all_components_must_be_native_owned_and_in_exact_parent
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='cgroup_parent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 26, in test_all_components_must_be_native_owned_and_in_exact_parent
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) (key='process_cgroup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 26, in test_all_components_must_be_native_owned_and_in_exact_parent
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_missing_or_per_container_only_budget_cannot_pass (__main__.AggregateBudget.test_missing_or_per_container_only_budget_cannot_pass) (key='cpu.max')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 18, in test_missing_or_per_container_only_budget_cannot_pass
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_missing_or_per_container_only_budget_cannot_pass (__main__.AggregateBudget.test_missing_or_per_container_only_budget_cannot_pass) (key='memory.max')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 18, in test_missing_or_per_container_only_budget_cannot_pass
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_missing_or_per_container_only_budget_cannot_pass (__main__.AggregateBudget.test_missing_or_per_container_only_budget_cannot_pass) (key='memory.swap.max')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 18, in test_missing_or_per_container_only_budget_cannot_pass
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_one_parent_enforces_entire_five_component_stack (__main__.AggregateBudget.test_one_parent_enforces_entire_five_component_stack)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 14, in test_one_parent_enforces_entire_five_component_stack
+    def test_one_parent_enforces_entire_five_component_stack(self):self.assertTrue(s.validate_stack(self.fixture()))
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None is not true
+
+======================================================================
+FAIL: test_stopped_or_missing_required_service_is_not_a_smaller_supabase_stack (__main__.AggregateBudget.test_stopped_or_missing_required_service_is_not_a_smaller_supabase_stack)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 29, in test_stopped_or_missing_required_service_is_not_a_smaller_supabase_stack
+    with self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='cpu.max')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 22, in test_wrong_quota_memory_swap_or_extra_component_fails
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='cpu.max')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 22, in test_wrong_quota_memory_swap_or_extra_component_fails
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='memory.max')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 22, in test_wrong_quota_memory_swap_or_extra_component_fails
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='memory.swap.max')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 22, in test_wrong_quota_memory_swap_or_extra_component_fails
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) (key='children')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_budget.py", line 22, in test_wrong_quota_memory_swap_or_extra_component_fails
+    with self.subTest(key=key),self.assertRaises(RuntimeError):s.validate_stack(p)
+AssertionError: RuntimeError not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (failures=15)

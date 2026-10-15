@@ -1,0 +1,7 @@
+{
+  "persistent_services_compared": 26,
+  "changed_persistent_services": [],
+  "original_port4000_listener_and_start_identities_unchanged": true,
+  "root_login_manager_changed": true,
+  "root_login_manager_scope": "SSH-session manager only"
+}

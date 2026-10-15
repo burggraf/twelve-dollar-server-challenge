@@ -1,0 +1,168 @@
+{
+  "service": "Supabase",
+  "outcome": "scored",
+  "confirmed_vus": 2000,
+  "interpretation": "Highest candidate confirmed by three independent passing holds in the fixed 250-VU-resolution protocol; not an exact mathematical maximum.2250 passed one probe but failed all3 independent confirmations.",
+  "confirmation_hold_seconds_each": 300,
+  "confirmation_requests": 190165,
+  "confirmation_request_errors": 7,
+  "confirmation_schema_errors": 0,
+  "quantiles": "Reported per hold, never averaged or pooled",
+  "serving_budget": {
+    "cpu": 1,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "components": [
+      "PostgreSQL",
+      "Auth",
+      "PostgREST",
+      "Edge Runtime",
+      "Envoy"
+    ],
+    "enforcement": "single actual kernel parent cgroup"
+  },
+  "runner_profile": "k6-2cpu-8g-v3",
+  "runner_budget": {
+    "cpu": 2,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0
+  },
+  "host": "azabab.com",
+  "platform": "linux/amd64",
+  "auth_scope": "Compatibility application users/JWTs; not native signup/login/session throughput",
+  "source_base_commit": "3b1fa99a4ecf241b40d322aef029879061f8b25e",
+  "frozen_inputs": {
+    "app": "5b8384085a35397ec35b12844131997822c376a97be11ff696544b4e8123e602",
+    "verification": "ffd4636c3e0726a57645a270e23b45b7aefcb7ea1143c3102607e9247fce888b",
+    "runtime": "b9b9e930daf9e545bae7ad9d36f52f8d51b5d6627559ce0bcc8d7a70a4379e38",
+    "schema": "ee1c63e7f5761985d8e1d208e8204250cab7ca2bbed26495515b61639ced2129",
+    "images": {
+      "db": {
+        "Image": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:5a4314708484bec672de2c09653a5c01fb1c84a998564ac231b0325e2238ed5b"
+      },
+      "auth": {
+        "Image": "sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:7e813221b93fbf54b515036438550e483bfaf057b9db52fe9bc1ce91c47e817e"
+      },
+      "rest": {
+        "Image": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:aa7e96af2d01219a09bc00c75de28171b1f9fda17ea455a931e4fb6d317089e0"
+      },
+      "functions": {
+        "Image": "sha256:edd22bef4477b900d5c300e287ce9b18bff9b81a0291bee14ee0b7c7b71a2899",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:b331c6422f4f4bebd6052357da5f3c87610128c8cb530390ca024eb68cf4bf2e"
+      },
+      "gateway": {
+        "Image": "sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:be87c8b52663c1164a5bdf3c5419017a269cb3d8c74be1ec93638a71f1ffbd4b"
+      }
+    },
+    "host": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+    "tokens": "a74fcbb98b5c7a0b7bae89c91f4779fee19203bd733d7e2d059f66929ef441e4",
+    "tools_image": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2 linux/amd64"
+  },
+  "confirmations": [
+    {
+      "run": "20261015T062456087846Z-standard-2000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "vus": 2000,
+      "tier": "standard",
+      "mode": "capacity",
+      "runner_profile": "k6-2cpu-8g-v3",
+      "deployment_track": "vps16-linux-amd64",
+      "platform": "linux/amd64",
+      "hold_requests": 63258,
+      "hold_rps": 210.86,
+      "latency_ms": {
+        "p(95)": 125.38544809999976,
+        "p(99)": 415.2833341200002,
+        "min": 2.680584,
+        "max": 1910.443222,
+        "avg": 25.494975127525365,
+        "med": 4.7012564999999995
+      },
+      "request_errors": {
+        "rate": 3.1616554427898445e-05,
+        "passes": 2,
+        "fails": 63256
+      },
+      "schema_errors": {
+        "passes": 0,
+        "fails": 63258,
+        "rate": 0
+      }
+    },
+    {
+      "run": "20261015T063552558051Z-standard-2000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "vus": 2000,
+      "tier": "standard",
+      "mode": "capacity",
+      "runner_profile": "k6-2cpu-8g-v3",
+      "deployment_track": "vps16-linux-amd64",
+      "platform": "linux/amd64",
+      "hold_requests": 63401,
+      "hold_rps": 211.33666666666667,
+      "latency_ms": {
+        "avg": 29.965588120723613,
+        "med": 4.846012,
+        "p(95)": 163.528888,
+        "p(99)": 473.411203,
+        "min": 2.65662,
+        "max": 1396.738559
+      },
+      "request_errors": {
+        "rate": 3.15452437658712e-05,
+        "passes": 2,
+        "fails": 63399
+      },
+      "schema_errors": {
+        "passes": 0,
+        "fails": 63401,
+        "rate": 0
+      }
+    },
+    {
+      "run": "20261015T064648677622Z-standard-2000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "vus": 2000,
+      "tier": "standard",
+      "mode": "capacity",
+      "runner_profile": "k6-2cpu-8g-v3",
+      "deployment_track": "vps16-linux-amd64",
+      "platform": "linux/amd64",
+      "hold_requests": 63506,
+      "hold_rps": 211.68666666666667,
+      "latency_ms": {
+        "avg": 25.747071097187714,
+        "med": 4.7612175,
+        "p(95)": 128.9273995,
+        "p(99)": 411.2284222499996,
+        "min": 2.672128,
+        "max": 1407.404371
+      },
+      "request_errors": {
+        "passes": 3,
+        "fails": 63503,
+        "rate": 4.7239630901017226e-05
+      },
+      "schema_errors": {
+        "passes": 0,
+        "fails": 63506,
+        "rate": 0
+      }
+    }
+  ],
+  "publication": "Owner-authorized repository publication; no releases or external artifact uploads",
+  "raw_artifacts": "Original samples/source overlays retained locally and on designated VPS; excluded from current Git tree; no external download location established",
+  "cost": "Price/region unknown; no $12/month equivalence or cost/request claim"
+}

@@ -1,0 +1,1113 @@
+{
+  "campaign": {
+    "tier": "standard",
+    "runner_profile": "k6-2cpu-8g-v3",
+    "deployment_track": "vps16-linux-amd64",
+    "status": "confirmed_pending_human_review",
+    "attempts": [
+      {
+        "vus": 2500,
+        "outcome": "fail",
+        "path": "results/supabase/vps16-linux-amd64/20261015T045724392273Z-standard-2500vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 1250,
+        "outcome": "pass",
+        "path": "results/supabase/vps16-linux-amd64/20261015T050821481749Z-standard-1250vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 1750,
+        "outcome": "pass",
+        "path": "results/supabase/vps16-linux-amd64/20261015T051917744240Z-standard-1750vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 2000,
+        "outcome": "pass",
+        "path": "results/supabase/vps16-linux-amd64/20261015T053014119004Z-standard-2000vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 2250,
+        "outcome": "pass",
+        "path": "results/supabase/vps16-linux-amd64/20261015T054110358168Z-standard-2250vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 2250,
+        "outcome": "fail",
+        "path": "results/supabase/vps16-linux-amd64/20261015T055206724973Z-standard-2250vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 2250,
+        "outcome": "fail",
+        "path": "results/supabase/vps16-linux-amd64/20261015T060303490334Z-standard-2250vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 2250,
+        "outcome": "fail",
+        "path": "results/supabase/vps16-linux-amd64/20261015T061400018671Z-standard-2250vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 2000,
+        "outcome": "pass",
+        "path": "results/supabase/vps16-linux-amd64/20261015T062456087846Z-standard-2000vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 2000,
+        "outcome": "pass",
+        "path": "results/supabase/vps16-linux-amd64/20261015T063552558051Z-standard-2000vu-k6-2cpu-8g-v3"
+      },
+      {
+        "vus": 2000,
+        "outcome": "pass",
+        "path": "results/supabase/vps16-linux-amd64/20261015T064648677622Z-standard-2000vu-k6-2cpu-8g-v3"
+      }
+    ],
+    "candidate_vus": 2000
+  },
+  "attempts": [
+    {
+      "run": "20261015T045724392273Z-standard-2500vu-k6-2cpu-8g-v3",
+      "vus": 2500,
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "fixed_measurement_replay": [
+        "fail",
+        "hold latency/error/schema gate failed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.7762565612793,
+      "runner_peak_cpu_percent_one_core": 99.72,
+      "runner_peak_memory_percent_eight_gib": 14.03,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2873520128,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "avg": 1526.6549205220629,
+            "med": 1326.5892925,
+            "p(95)": 3551.50443375,
+            "p(99)": 5467.7010075299995,
+            "min": 2.671345,
+            "max": 10001.960711
+          },
+          "http_reqs": {
+            "count": 33194,
+            "rate": 60.35377325519283
+          },
+          "request_errors": {
+            "rate": 0.06492137133216846,
+            "passes": 2155,
+            "fails": 31039
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "p(95)": 3575.4171105999994,
+            "p(99)": 5439.053973519997,
+            "min": 1.884811,
+            "max": 10001.416386,
+            "avg": 1517.6891538142138,
+            "med": 1326.085681
+          },
+          "http_reqs": {
+            "count": 30989,
+            "rate": 56.34461286392633
+          },
+          "request_errors": {
+            "rate": 0.0658620800929362,
+            "passes": 2041,
+            "fails": 28948
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "p(99)": 5533.9636991,
+            "min": 3.311965,
+            "max": 10000.526261,
+            "avg": 1531.1442197664105,
+            "med": 1333.6457985,
+            "p(95)": 3565.821941299999
+          },
+          "http_reqs": {
+            "count": 4602,
+            "rate": 8.367417741772531
+          },
+          "request_errors": {
+            "rate": 0.06801390699695785,
+            "passes": 313,
+            "fails": 4289
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "p(95)": 3220.913702099997,
+            "p(99)": 5084.937810959996,
+            "min": 5.060551,
+            "max": 10000.078804,
+            "avg": 1446.9750525375812,
+            "med": 1323.2347605
+          },
+          "http_reqs": {
+            "count": 612,
+            "rate": 1.112746557576008
+          },
+          "request_errors": {
+            "fails": 561,
+            "rate": 0.08333333333333333,
+            "passes": 51
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T050821481749Z-standard-1250vu-k6-2cpu-8g-v3",
+      "vus": 1250,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "fixed_measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.52934741973877,
+      "runner_peak_cpu_percent_one_core": 13.08,
+      "runner_peak_memory_percent_eight_gib": 7.35,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2605944832,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "p(99)": 34.91564064000075,
+            "min": 3.510337,
+            "max": 432.914106,
+            "avg": 6.081105877160253,
+            "med": 4.56596,
+            "p(95)": 6.3380548
+          },
+          "http_reqs": {
+            "count": 18227,
+            "rate": 33.141374920373714
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 18227
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "med": 3.620688,
+            "p(95)": 5.320002399999998,
+            "p(99)": 29.162877639999824,
+            "min": 2.673208,
+            "max": 421.660672,
+            "avg": 5.063583753761938
+          },
+          "http_reqs": {
+            "count": 18275,
+            "rate": 33.22865126843856
+          },
+          "request_errors": {
+            "passes": 0,
+            "fails": 18275,
+            "rate": 0
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "avg": 6.173962584912413,
+            "med": 4.452062,
+            "p(95)": 6.465056799999999,
+            "p(99)": 45.92244131999993,
+            "min": 3.439915,
+            "max": 258.584483
+          },
+          "http_reqs": {
+            "count": 2797,
+            "rate": 5.0856655320285995
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 2797
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "avg": 5.828135821052628,
+            "med": 5.114948500000001,
+            "p(95)": 7.0316306,
+            "p(99)": 11.736673199999975,
+            "min": 4.111725,
+            "max": 158.960959
+          },
+          "http_reqs": {
+            "count": 380,
+            "rate": 0.69093775551336
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 380
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T051917744240Z-standard-1750vu-k6-2cpu-8g-v3",
+      "vus": 1750,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "fixed_measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.7022979259491,
+      "runner_peak_cpu_percent_one_core": 44.53,
+      "runner_peak_memory_percent_eight_gib": 10.07,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2646323200,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "p(95)": 31.32508979999994,
+            "p(99)": 218.88491437999932,
+            "min": 3.612359,
+            "max": 843.759598,
+            "avg": 12.279757175834103,
+            "med": 4.7680565
+          },
+          "http_reqs": {
+            "count": 25598,
+            "rate": 46.54307658415842
+          },
+          "request_errors": {
+            "rate": 0.00039065551996249706,
+            "passes": 10,
+            "fails": 25588
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "min": 2.690192,
+            "max": 893.012252,
+            "avg": 10.850097482508179,
+            "med": 3.803348,
+            "p(95)": 29.454936199999928,
+            "p(99)": 211.68017681999982
+          },
+          "http_reqs": {
+            "count": 25612,
+            "rate": 46.568531817855515
+          },
+          "request_errors": {
+            "rate": 0.0004294861783538966,
+            "passes": 11,
+            "fails": 25601
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "avg": 12.59016569101418,
+            "med": 4.703234,
+            "p(95)": 29.65404025,
+            "p(99)": 237.45249189999942,
+            "min": 3.520047,
+            "max": 591.137779
+          },
+          "http_reqs": {
+            "count": 3806,
+            "rate": 6.9201871036529
+          },
+          "request_errors": {
+            "fails": 3803,
+            "rate": 0.0007882291119285339,
+            "passes": 3
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "med": 5.360977,
+            "p(95)": 28.41644939999995,
+            "p(99)": 79.35278805000038,
+            "min": 4.194051,
+            "max": 554.332944,
+            "avg": 11.133145105555558
+          },
+          "http_reqs": {
+            "count": 540,
+            "rate": 0.9818447283164914
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 540
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T053014119004Z-standard-2000vu-k6-2cpu-8g-v3",
+      "vus": 2000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "fixed_measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.7048411369324,
+      "runner_peak_cpu_percent_one_core": 88.12,
+      "runner_peak_memory_percent_eight_gib": 11.41,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2662977536,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "max": 966.449111,
+            "avg": 20.595025029660686,
+            "med": 4.991143,
+            "p(95)": 73.55952239999966,
+            "p(99)": 319.45333260000234,
+            "min": 3.554601
+          },
+          "http_reqs": {
+            "rate": 53.09252291105235,
+            "count": 29197
+          },
+          "request_errors": {
+            "rate": 0.00010275028256327705,
+            "passes": 3,
+            "fails": 29194
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "p(99)": 319.47927495000005,
+            "min": 2.751335,
+            "max": 944.143222,
+            "avg": 18.66895809213234,
+            "med": 3.9944155,
+            "p(95)": 65.52265639999992
+          },
+          "http_reqs": {
+            "count": 29208,
+            "rate": 53.11252557406641
+          },
+          "request_errors": {
+            "rate": 6.847439057792385e-05,
+            "passes": 2,
+            "fails": 29206
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "p(95)": 76.36500604999998,
+            "p(99)": 366.068883829998,
+            "min": 3.428554,
+            "max": 969.454351,
+            "avg": 21.472743015512634,
+            "med": 4.895894999999999
+          },
+          "http_reqs": {
+            "count": 4448,
+            "rate": 8.088349553322631
+          },
+          "request_errors": {
+            "rate": 0.0002248201438848921,
+            "passes": 1,
+            "fails": 4447
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "p(95)": 80.62936869999967,
+            "p(99)": 445.08617933999994,
+            "min": 4.145999,
+            "max": 636.97466,
+            "avg": 23.773724906086954,
+            "med": 5.634748
+          },
+          "http_reqs": {
+            "count": 575,
+            "rate": 1.0455937484623454
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 575
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T054110358168Z-standard-2250vu-k6-2cpu-8g-v3",
+      "vus": 2250,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "fixed_measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.7383041381836,
+      "runner_peak_cpu_percent_one_core": 105.71,
+      "runner_peak_memory_percent_eight_gib": 12.73,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2706038784,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "avg": 97.89573535194118,
+            "med": 20.479705,
+            "p(95)": 482.313817,
+            "p(99)": 858.56278288,
+            "min": 3.544151,
+            "max": 2946.248785
+          },
+          "http_reqs": {
+            "count": 32585,
+            "rate": 59.2451887535488
+          },
+          "request_errors": {
+            "rate": 0.00027620070584624825,
+            "passes": 9,
+            "fails": 32576
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "p(95)": 464.8734986,
+            "p(99)": 862.1936314200001,
+            "min": 2.674262,
+            "max": 3090.976724,
+            "avg": 91.6197877902793,
+            "med": 16.9617745
+          },
+          "http_reqs": {
+            "count": 32672,
+            "rate": 59.403369862082144
+          },
+          "request_errors": {
+            "rate": 0.0001530362389813908,
+            "passes": 5,
+            "fails": 32667
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "p(95)": 463.51781595000045,
+            "p(99)": 918.4342441300025,
+            "min": 3.543491,
+            "max": 2396.23509,
+            "avg": 95.14513236498975,
+            "med": 18.717602
+          },
+          "http_reqs": {
+            "count": 4970,
+            "rate": 9.036323096674469
+          },
+          "request_errors": {
+            "rate": 0.00020120724346076458,
+            "passes": 1,
+            "fails": 4969
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "avg": 100.16538083818772,
+            "med": 19.952305,
+            "p(95)": 453.18221219999947,
+            "p(99)": 791.9665497800007,
+            "min": 4.037395,
+            "max": 1456.793321
+          },
+          "http_reqs": {
+            "count": 618,
+            "rate": 1.1236313226850747
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 618
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T055206724973Z-standard-2250vu-k6-2cpu-8g-v3",
+      "vus": 2250,
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "fixed_measurement_replay": [
+        "fail",
+        "hold latency/error/schema gate failed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.7427020072937,
+      "runner_peak_cpu_percent_one_core": 52.36,
+      "runner_peak_memory_percent_eight_gib": 12.7,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2661163008,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "max": 3293.329162,
+            "avg": 142.6811889887182,
+            "med": 28.3993915,
+            "p(95)": 685.75889935,
+            "p(99)": 1212.7844876299994,
+            "min": 3.609503
+          },
+          "http_reqs": {
+            "count": 32530,
+            "rate": 59.145120355415195
+          },
+          "request_errors": {
+            "rate": 0.00027666769136181987,
+            "passes": 9,
+            "fails": 32521
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "avg": 137.37200779361103,
+            "med": 24.854243,
+            "p(95)": 679.9631579499998,
+            "p(99)": 1211.32638584,
+            "min": 2.789298,
+            "max": 3631.950072
+          },
+          "http_reqs": {
+            "count": 32492,
+            "rate": 59.07602983670921
+          },
+          "request_errors": {
+            "fails": 32480,
+            "rate": 0.000369321679182568,
+            "passes": 12
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "avg": 140.46417596779565,
+            "med": 28.557423,
+            "p(95)": 687.4172924999999,
+            "p(99)": 1116.907899879999,
+            "min": 3.409911,
+            "max": 3729.959462
+          },
+          "http_reqs": {
+            "count": 4844,
+            "rate": 8.807222963468528
+          },
+          "request_errors": {
+            "rate": 0.00041288191577208916,
+            "passes": 2,
+            "fails": 4842
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "p(95)": 709.5449206499998,
+            "p(99)": 1186.80287236999,
+            "min": 4.395028,
+            "max": 2026.477835,
+            "avg": 142.54916145307922,
+            "med": 27.467056
+          },
+          "http_reqs": {
+            "count": 682,
+            "rate": 1.2399929936179883
+          },
+          "request_errors": {
+            "passes": 0,
+            "fails": 682,
+            "rate": 0
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T060303490334Z-standard-2250vu-k6-2cpu-8g-v3",
+      "vus": 2250,
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "fixed_measurement_replay": [
+        "fail",
+        "hold latency/error/schema gate failed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.6566231250763,
+      "runner_peak_cpu_percent_one_core": 104.98,
+      "runner_peak_memory_percent_eight_gib": 12.75,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2664349696,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "med": 30.292689,
+            "p(95)": 734.90625075,
+            "p(99)": 1492.3353928499978,
+            "min": 3.66053,
+            "max": 4998.124196,
+            "avg": 158.67963143620142
+          },
+          "http_reqs": {
+            "count": 32446,
+            "rate": 58.99388135404623
+          },
+          "request_errors": {
+            "rate": 0.0009246132034765456,
+            "passes": 30,
+            "fails": 32416
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "p(99)": 1471.4061422599991,
+            "min": 2.765471,
+            "max": 5782.821792,
+            "avg": 150.6254464756616,
+            "med": 26.17438,
+            "p(95)": 713.1374573999996
+          },
+          "http_reqs": {
+            "count": 32439,
+            "rate": 58.981153832333895
+          },
+          "request_errors": {
+            "rate": 0.0006165418169487345,
+            "passes": 20,
+            "fails": 32419
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "min": 3.556284,
+            "max": 2983.776388,
+            "avg": 147.8062542544788,
+            "med": 29.0544535,
+            "p(95)": 693.21963175,
+            "p(99)": 1289.3736032900022
+          },
+          "http_reqs": {
+            "count": 4912,
+            "rate": 8.931083807282102
+          },
+          "request_errors": {
+            "rate": 0.0008143322475570033,
+            "passes": 4,
+            "fails": 4908
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "avg": 164.78099733536573,
+            "med": 27.750785,
+            "p(95)": 786.29326625,
+            "p(99)": 1453.2524079500145,
+            "min": 4.358137,
+            "max": 2495.409309
+          },
+          "http_reqs": {
+            "count": 656,
+            "rate": 1.1927506061842545
+          },
+          "request_errors": {
+            "passes": 0,
+            "fails": 656,
+            "rate": 0
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T061400018671Z-standard-2250vu-k6-2cpu-8g-v3",
+      "vus": 2250,
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "fixed_measurement_replay": [
+        "fail",
+        "hold latency/error/schema gate failed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.74423599243164,
+      "runner_peak_cpu_percent_one_core": 106.13,
+      "runner_peak_memory_percent_eight_gib": 12.73,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2661093376,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "p(99)": 1510.2380809399992,
+            "min": 3.598093,
+            "max": 4234.09668,
+            "avg": 163.05750784259538,
+            "med": 33.5607685,
+            "p(95)": 744.6464748999999
+          },
+          "http_reqs": {
+            "count": 32464,
+            "rate": 59.02517156998193
+          },
+          "request_errors": {
+            "rate": 0.00018482010842779694,
+            "passes": 6,
+            "fails": 32458
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "med": 29.916703,
+            "p(95)": 746.1856666,
+            "p(99)": 1512.0432420400011,
+            "min": 2.68963,
+            "max": 6264.69384,
+            "avg": 157.4802836167527
+          },
+          "http_reqs": {
+            "count": 32449,
+            "rate": 58.99789897345809
+          },
+          "request_errors": {
+            "rate": 0.0002465407254460846,
+            "passes": 8,
+            "fails": 32441
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "avg": 157.0230625608719,
+            "med": 31.073797,
+            "p(95)": 744.7382336499999,
+            "p(99)": 1470.3249027500008,
+            "min": 3.583746,
+            "max": 4803.462745
+          },
+          "http_reqs": {
+            "count": 4912,
+            "rate": 8.930866275004657
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 4912
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "max": 2800.817675,
+            "avg": 142.4030505287187,
+            "med": 34.002299,
+            "p(95)": 653.8199523000001,
+            "p(99)": 1165.5484894400001,
+            "min": 4.221121
+          },
+          "http_reqs": {
+            "count": 679,
+            "rate": 1.2345395359788605
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 679
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T062456087846Z-standard-2000vu-k6-2cpu-8g-v3",
+      "vus": 2000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "fixed_measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.66098284721375,
+      "runner_peak_cpu_percent_one_core": 98.28,
+      "runner_peak_memory_percent_eight_gib": 11.38,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2585956352,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "max": 1910.443222,
+            "avg": 26.670512419912264,
+            "med": 5.0012235,
+            "p(95)": 133.93581509999976,
+            "p(99)": 420.26786709999857,
+            "min": 3.545705
+          },
+          "http_reqs": {
+            "count": 29168,
+            "rate": 53.03249294123267
+          },
+          "request_errors": {
+            "rate": 3.428414701042238e-05,
+            "passes": 1,
+            "fails": 29167
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "p(99)": 402.9715491499999,
+            "min": 2.680584,
+            "max": 1798.439613,
+            "avg": 24.04498443478102,
+            "med": 4.024271499999999,
+            "p(95)": 115.38039589999983
+          },
+          "http_reqs": {
+            "count": 29194,
+            "rate": 53.07976545962515
+          },
+          "request_errors": {
+            "fails": 29193,
+            "rate": 3.4253613756251286e-05,
+            "passes": 1
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "avg": 27.380860627901676,
+            "med": 4.91402,
+            "p(95)": 135.9806815,
+            "p(99)": 458.801547,
+            "min": 3.545896,
+            "max": 1202.932177
+          },
+          "http_reqs": {
+            "rate": 7.910874135604201,
+            "count": 4351
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 4351
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "avg": 25.1967526091743,
+            "med": 5.743744,
+            "p(95)": 113.94024139999996,
+            "p(99)": 381.9138266799985,
+            "min": 4.17227,
+            "max": 829.014102
+          },
+          "http_reqs": {
+            "count": 545,
+            "rate": 0.9909047124578924
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 545
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T063552558051Z-standard-2000vu-k6-2cpu-8g-v3",
+      "vus": 2000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "fixed_measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.69038581848145,
+      "runner_peak_cpu_percent_one_core": 42.9,
+      "runner_peak_memory_percent_eight_gib": 11.34,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2588229632,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "avg": 30.596301703974287,
+            "med": 5.165872,
+            "p(95)": 163.73841819999987,
+            "p(99)": 465.6353532000005,
+            "min": 3.662754,
+            "max": 1246.346129
+          },
+          "http_reqs": {
+            "count": 29163,
+            "rate": 53.02346322265128
+          },
+          "request_errors": {
+            "rate": 6.858005006343655e-05,
+            "passes": 2,
+            "fails": 29161
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "p(99)": 475.4338607,
+            "min": 2.65662,
+            "max": 1396.738559,
+            "avg": 28.91332749808267,
+            "med": 4.1505335,
+            "p(95)": 161.27619489999978
+          },
+          "http_reqs": {
+            "count": 29208,
+            "rate": 53.10528113730407
+          },
+          "request_errors": {
+            "fails": 29208,
+            "rate": 0,
+            "passes": 0
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "avg": 31.80658414552823,
+            "med": 5.082625,
+            "p(95)": 179.4252811999994,
+            "p(99)": 496.7570688199993,
+            "min": 3.600589,
+            "max": 1185.846856
+          },
+          "http_reqs": {
+            "count": 4439,
+            "rate": 8.070882736527416
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 4439
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "avg": 37.019305013536375,
+            "med": 5.764213,
+            "p(95)": 212.238991,
+            "p(99)": 565.5085342000006,
+            "min": 4.351575,
+            "max": 1307.591453
+          },
+          "http_reqs": {
+            "count": 591,
+            "rate": 1.0745419457733054
+          },
+          "request_errors": {
+            "passes": 0,
+            "fails": 591,
+            "rate": 0
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T064648677622Z-standard-2000vu-k6-2cpu-8g-v3",
+      "vus": 2000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "fixed_measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 297.6697611808777,
+      "runner_peak_cpu_percent_one_core": 95.45,
+      "runner_peak_memory_percent_eight_gib": 11.44,
+      "aggregate_serving_peak_memory_bytes_including_cache": 2579709952,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "endpoint_latency_values": {
+        "feed": {
+          "http_req_duration": {
+            "p(95)": 126.6684535,
+            "p(99)": 412.59047275,
+            "min": 3.626977,
+            "max": 1375.244192,
+            "avg": 26.172741329672306,
+            "med": 5.054953
+          },
+          "http_reqs": {
+            "count": 29226,
+            "rate": 53.14091874912327
+          },
+          "request_errors": {
+            "rate": 3.4216108944090876e-05,
+            "passes": 1,
+            "fails": 29225
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "max": 1407.404371,
+            "avg": 24.959427354129645,
+            "med": 4.067197,
+            "p(95)": 127.88363784999993,
+            "p(99)": 408.03898495000004,
+            "min": 2.672128
+          },
+          "http_reqs": {
+            "count": 29204,
+            "rate": 53.10091668888647
+          },
+          "request_errors": {
+            "fails": 29204,
+            "rate": 0,
+            "passes": 0
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "avg": 28.732817558663,
+            "med": 5.0620115000000006,
+            "p(95)": 151.7694975499997,
+            "p(99)": 458.9610813699992,
+            "min": 3.558017,
+            "max": 900.853416
+          },
+          "http_reqs": {
+            "count": 4398,
+            "rate": 7.996775496429349
+          },
+          "request_errors": {
+            "rate": 0.00045475216007276033,
+            "passes": 2,
+            "fails": 4396
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "p(99)": 312.26575655,
+            "min": 4.132755,
+            "max": 718.426707,
+            "avg": 21.957095758112093,
+            "med": 5.536490499999999,
+            "p(95)": 82.88264289999987
+          },
+          "http_reqs": {
+            "count": 678,
+            "rate": 1.2327907654795585
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 678
+          }
+        }
+      }
+    }
+  ]
+}

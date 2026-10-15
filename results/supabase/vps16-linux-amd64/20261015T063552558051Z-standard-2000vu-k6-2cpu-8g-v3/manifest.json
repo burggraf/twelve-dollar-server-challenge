@@ -1,0 +1,1151 @@
+{
+  "service": "supabase",
+  "upstream_commit": "7767e1ab6ef0914ba77d5835a4255fff8de90966",
+  "versions": {
+    "upstream_commit": "7767e1ab6ef0914ba77d5835a4255fff8de90966",
+    "images": {
+      "db": {
+        "tag": "supabase/postgres:17.6.1.136",
+        "digest": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+        "amd64_manifest": "sha256:5a4314708484bec672de2c09653a5c01fb1c84a998564ac231b0325e2238ed5b",
+        "pinned": "supabase/postgres:17.6.1.136@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00"
+      },
+      "auth": {
+        "tag": "supabase/gotrue:v2.196.0",
+        "digest": "sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232",
+        "amd64_manifest": "sha256:7e813221b93fbf54b515036438550e483bfaf057b9db52fe9bc1ce91c47e817e",
+        "pinned": "supabase/gotrue:v2.196.0@sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232"
+      },
+      "rest": {
+        "tag": "postgrest/postgrest:v14.17",
+        "digest": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+        "amd64_manifest": "sha256:aa7e96af2d01219a09bc00c75de28171b1f9fda17ea455a931e4fb6d317089e0",
+        "pinned": "postgrest/postgrest:v14.17@sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c"
+      },
+      "functions": {
+        "tag": "supabase/edge-runtime:v1.76.2",
+        "digest": "sha256:edd22bef4477b900d5c300e287ce9b18bff9b81a0291bee14ee0b7c7b71a2899",
+        "amd64_manifest": "sha256:b331c6422f4f4bebd6052357da5f3c87610128c8cb530390ca024eb68cf4bf2e",
+        "pinned": "supabase/edge-runtime:v1.76.2@sha256:edd22bef4477b900d5c300e287ce9b18bff9b81a0291bee14ee0b7c7b71a2899"
+      },
+      "gateway": {
+        "tag": "envoyproxy/envoy:v1.39.1",
+        "digest": "sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4",
+        "amd64_manifest": "sha256:be87c8b52663c1164a5bdf3c5419017a269cb3d8c74be1ec93638a71f1ffbd4b",
+        "pinned": "envoyproxy/envoy:v1.39.1@sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4"
+      }
+    }
+  },
+  "tier": "standard",
+  "vus": 2000,
+  "mode": "capacity",
+  "deployment_track": "vps16-linux-amd64",
+  "platform": "linux/amd64",
+  "compose_project": "baas-supabase-vps16",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "runner_limits": {
+    "NanoCpus": 2000000000,
+    "Memory": 8589934592,
+    "MemorySwap": 8589934592
+  },
+  "aggregate_limits": {
+    "cpus": 1,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0
+  },
+  "inputs": {
+    "app": "5b8384085a35397ec35b12844131997822c376a97be11ff696544b4e8123e602",
+    "verification": "ffd4636c3e0726a57645a270e23b45b7aefcb7ea1143c3102607e9247fce888b",
+    "runtime": "b9b9e930daf9e545bae7ad9d36f52f8d51b5d6627559ce0bcc8d7a70a4379e38",
+    "schema": "ee1c63e7f5761985d8e1d208e8204250cab7ca2bbed26495515b61639ced2129",
+    "images": {
+      "db": {
+        "Image": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:5a4314708484bec672de2c09653a5c01fb1c84a998564ac231b0325e2238ed5b"
+      },
+      "auth": {
+        "Image": "sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:7e813221b93fbf54b515036438550e483bfaf057b9db52fe9bc1ce91c47e817e"
+      },
+      "rest": {
+        "Image": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:aa7e96af2d01219a09bc00c75de28171b1f9fda17ea455a931e4fb6d317089e0"
+      },
+      "functions": {
+        "Image": "sha256:edd22bef4477b900d5c300e287ce9b18bff9b81a0291bee14ee0b7c7b71a2899",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:b331c6422f4f4bebd6052357da5f3c87610128c8cb530390ca024eb68cf4bf2e"
+      },
+      "gateway": {
+        "Image": "sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:be87c8b52663c1164a5bdf3c5419017a269cb3d8c74be1ec93638a71f1ffbd4b"
+      }
+    },
+    "host": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+    "tokens": "a74fcbb98b5c7a0b7bae89c91f4779fee19203bd733d7e2d059f66929ef441e4",
+    "tools_image": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2 linux/amd64"
+  },
+  "target_before": {
+    "parent": {
+      "cpu.max": "100000 100000\n",
+      "cpu.stat": "usage_usec 5059939142\nuser_usec 4209447191\nsystem_usec 850491950\ncore_sched.force_idle_usec 0\nnr_periods 75873\nnr_throttled 27226\nthrottled_usec 2417385116\nnr_bursts 0\nburst_usec 0\n",
+      "cpu.pressure": "some avg10=0.25 avg60=2.33 avg300=9.19 total=997120165\nfull avg10=0.16 avg60=1.61 avg300=5.99 total=699069243\n",
+      "memory.max": "4294967296\n",
+      "memory.current": "2215096320\n",
+      "memory.swap.max": "0\n",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.stat": "anon 72671232\nfile 2076925952\nkernel 62857216\nkernel_stack 1015808\npagetables 6029312\nsec_pagetables 0\npercpu 170616\nsock 2641920\nvmalloc 61440\nshmem 603365376\nzswap 0\nzswapped 0\nfile_mapped 602476544\nfile_dirty 360448\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 676028416\ninactive_file 1472479232\nactive_file 1081344\nunevictable 8192\nslab_reclaimable 52689832\nslab_unreclaimable 2644712\nslab 55334544\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 0\npgsteal 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 31730078\npgmajfault 11\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 5269\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+      "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+      "io.stat": "8:0 rbytes=1617920 wbytes=26636427264 rios=137 wios=211778 dbytes=0 dios=0\n",
+      "io.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=3989207\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=2979916\n",
+      "children": [
+        "docker-33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f.scope",
+        "docker-4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306.scope",
+        "docker-62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a.scope",
+        "docker-ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f.scope",
+        "docker-cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355.scope"
+      ]
+    },
+    "targets": {
+      "db": {
+        "Id": "4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306",
+        "Image": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1876690,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T04:51:03.958548694Z",
+          "FinishedAt": "2026-10-15T04:51:03.208385157Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:37:11.304042072Z",
+                "End": "2026-10-15T06:37:11.363608535Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T06:37:16.364673657Z",
+                "End": "2026-10-15T06:37:16.400172665Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T06:37:21.401615871Z",
+                "End": "2026-10-15T06:37:21.439981682Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T06:37:26.441309655Z",
+                "End": "2026-10-15T06:37:26.485303222Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T06:37:31.486531045Z",
+                "End": "2026-10-15T06:37:31.521722547Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:5a4314708484bec672de2c09653a5c01fb1c84a998564ac231b0325e2238ed5b",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306.scope\n"
+      },
+      "auth": {
+        "Id": "33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f",
+        "Image": "sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1996997,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:37:13.716439257Z",
+          "FinishedAt": "2026-10-15T06:35:53.737228973Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:35:30.767991891Z",
+                "End": "2026-10-15T06:35:30.803625582Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T06:35:40.804416329Z",
+                "End": "2026-10-15T06:35:40.83802247Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T06:35:50.838581324Z",
+                "End": "2026-10-15T06:35:50.871195155Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T06:37:23.833822073Z",
+                "End": "2026-10-15T06:37:23.870983708Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T06:37:33.872310628Z",
+                "End": "2026-10-15T06:37:33.905001323Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:7e813221b93fbf54b515036438550e483bfaf057b9db52fe9bc1ce91c47e817e",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f.scope\n"
+      },
+      "rest": {
+        "Id": "cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355",
+        "Image": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1997006,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:37:13.717376964Z",
+          "FinishedAt": "2026-10-15T06:35:53.571795696Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:35:31.862134108Z",
+                "End": "2026-10-15T06:35:31.905308853Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T06:35:41.90662968Z",
+                "End": "2026-10-15T06:35:41.950260759Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T06:35:51.951092511Z",
+                "End": "2026-10-15T06:35:51.998270126Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T06:37:23.844938156Z",
+                "End": "2026-10-15T06:37:23.897978318Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T06:37:33.898303911Z",
+                "End": "2026-10-15T06:37:33.940965752Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:aa7e96af2d01219a09bc00c75de28171b1f9fda17ea455a931e4fb6d317089e0",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355.scope\n"
+      },
+      "functions": {
+        "Id": "62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a",
+        "Image": "sha256:edd22bef4477b900d5c300e287ce9b18bff9b81a0291bee14ee0b7c7b71a2899",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1997005,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:37:13.716866577Z",
+          "FinishedAt": "2026-10-15T06:35:53.794369118Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:35:31.150026551Z",
+                "End": "2026-10-15T06:35:31.184443983Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:35:41.184843596Z",
+                "End": "2026-10-15T06:35:41.219569446Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:35:51.221028414Z",
+                "End": "2026-10-15T06:35:51.265761879Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:37:23.857061827Z",
+                "End": "2026-10-15T06:37:23.894775786Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:37:33.896046029Z",
+                "End": "2026-10-15T06:37:33.932927427Z",
+                "ExitCode": 0,
+                "Output": ""
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:b331c6422f4f4bebd6052357da5f3c87610128c8cb530390ca024eb68cf4bf2e",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a.scope\n"
+      },
+      "gateway": {
+        "Id": "ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f",
+        "Image": "sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1997279,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:37:24.366009672Z",
+          "FinishedAt": "2026-10-15T06:35:53.565930795Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:35:21.416240065Z",
+                "End": "2026-10-15T06:35:21.468361095Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:35:31.469755745Z",
+                "End": "2026-10-15T06:35:31.504675757Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:35:41.505535222Z",
+                "End": "2026-10-15T06:35:41.542486072Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:35:51.543899325Z",
+                "End": "2026-10-15T06:35:51.577405468Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:37:34.479386793Z",
+                "End": "2026-10-15T06:37:34.512322225Z",
+                "ExitCode": 0,
+                "Output": ""
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:be87c8b52663c1164a5bdf3c5419017a269cb3d8c74be1ec93638a71f1ffbd4b",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f.scope\n"
+      }
+    }
+  },
+  "schema_before": {
+    "sha256": "ee1c63e7f5761985d8e1d208e8204250cab7ca2bbed26495515b61639ced2129",
+    "catalog": {
+      "columns": [
+        {
+          "data_type": "bigint",
+          "table_name": "likes",
+          "column_name": "user_id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 1
+        },
+        {
+          "data_type": "bigint",
+          "table_name": "likes",
+          "column_name": "post_id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 2
+        },
+        {
+          "data_type": "text",
+          "table_name": "likes",
+          "column_name": "created_at",
+          "is_nullable": "NO",
+          "collation_name": "C",
+          "column_default": "to_char((clock_timestamp() AT TIME ZONE 'UTC'::text), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"'::text)",
+          "ordinal_position": 3
+        },
+        {
+          "data_type": "bigint",
+          "table_name": "posts",
+          "column_name": "id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 1
+        },
+        {
+          "data_type": "bigint",
+          "table_name": "posts",
+          "column_name": "user_id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 2
+        },
+        {
+          "data_type": "bytea",
+          "table_name": "posts",
+          "column_name": "body",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 3
+        },
+        {
+          "data_type": "text",
+          "table_name": "posts",
+          "column_name": "created_at",
+          "is_nullable": "NO",
+          "collation_name": "C",
+          "column_default": "to_char((clock_timestamp() AT TIME ZONE 'UTC'::text), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"'::text)",
+          "ordinal_position": 4
+        },
+        {
+          "data_type": "bigint",
+          "table_name": "users",
+          "column_name": "id",
+          "is_nullable": "NO",
+          "collation_name": null,
+          "column_default": null,
+          "ordinal_position": 1
+        },
+        {
+          "data_type": "text",
+          "table_name": "users",
+          "column_name": "username",
+          "is_nullable": "NO",
+          "collation_name": "C",
+          "column_default": null,
+          "ordinal_position": 2
+        },
+        {
+          "data_type": "text",
+          "table_name": "users",
+          "column_name": "created_at",
+          "is_nullable": "NO",
+          "collation_name": "C",
+          "column_default": "to_char((clock_timestamp() AT TIME ZONE 'UTC'::text), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"'::text)",
+          "ordinal_position": 3
+        }
+      ],
+      "indexes": [
+        "CREATE UNIQUE INDEX likes_pkey ON feed_data.likes USING btree (user_id, post_id)",
+        "CREATE INDEX likes_post_id_idx ON feed_data.likes USING btree (post_id)",
+        "CREATE INDEX posts_created_at_id_idx ON feed_data.posts USING btree (created_at DESC, id DESC)",
+        "CREATE UNIQUE INDEX posts_pkey ON feed_data.posts USING btree (id)",
+        "CREATE INDEX posts_user_id_idx ON feed_data.posts USING btree (user_id)",
+        "CREATE UNIQUE INDEX users_pkey ON feed_data.users USING btree (id)",
+        "CREATE UNIQUE INDEX users_username_key ON feed_data.users USING btree (username)"
+      ],
+      "functions": [
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_writer=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.create_post(p_body_b64 text)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n DECLARE post_id bigint;\n BEGIN\n  INSERT INTO feed_data.posts(user_id,body) VALUES(feed_data.writer_id(),decode(p_body_b64,'base64')) RETURNING id INTO post_id;\n  RETURN feed_data.post_json(post_id);\n END $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_reader=X/feed_owner",
+            "anon=X/feed_owner",
+            "authenticated=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.detail(p_post_id bigint)\n RETURNS jsonb\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$ SELECT feed_data.post_json(p_post_id) $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_reader=X/feed_owner",
+            "anon=X/feed_owner",
+            "authenticated=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.feed()\n RETURNS jsonb\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n SELECT coalesce(jsonb_agg(feed_data.post_json(p.id) ORDER BY p.created_at DESC,p.id DESC),'[]'::jsonb)\n FROM (SELECT id,created_at FROM feed_data.posts ORDER BY created_at DESC,id DESC LIMIT 20) p\n $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_reader=X/feed_owner",
+            "anon=X/feed_owner",
+            "authenticated=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.health()\n RETURNS boolean\n LANGUAGE plpgsql\n STABLE SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n BEGIN PERFORM 1 FROM feed_data.users LIMIT 1; RETURN true; END $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner",
+            "feed_writer=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_api.like_post(p_post_id bigint)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n DECLARE changed integer; user_id bigint := feed_data.writer_id();\n BEGIN\n  IF NOT EXISTS(SELECT FROM feed_data.posts WHERE id=p_post_id) THEN RETURN NULL; END IF;\n  INSERT INTO feed_data.likes(user_id,post_id) VALUES(user_id,p_post_id) ON CONFLICT DO NOTHING RETURNING 1 INTO changed;\n  RETURN jsonb_build_object('liked',true,'post_id',p_post_id,'already_liked',changed IS NULL);\n END $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_data.codepoints(value bytea)\n RETURNS bigint\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\n SET search_path TO 'pg_catalog'\nAS $function$ SELECT count(*) FROM generate_series(0,octet_length(value)-1) n WHERE (get_byte(value,n)&192)<>128 $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_data.post_json(p_id bigint)\n RETURNS jsonb\n LANGUAGE sql\n STABLE\n SET search_path TO 'pg_catalog', 'feed_data'\nAS $function$\n SELECT jsonb_build_object('id',p.id,'body_b64',encode(p.body,'base64'),'created_at',p.created_at,'author',u.username,\n 'like_count',(SELECT count(*) FROM feed_data.likes l WHERE l.post_id=p.id))\n FROM feed_data.posts p JOIN feed_data.users u ON u.id=p.user_id WHERE p.id=p_id\n $function$\n"
+        },
+        {
+          "acl": [
+            "feed_owner=X/feed_owner"
+          ],
+          "owner": "feed_owner",
+          "definition": "CREATE OR REPLACE FUNCTION feed_data.writer_id()\n RETURNS bigint\n LANGUAGE plpgsql\n STABLE\n SET search_path TO 'pg_catalog'\nAS $function$\n DECLARE value text := nullif(current_setting('request.jwt.claims',true),'')::jsonb->>'app_user_id';\n BEGIN\n  IF value IS NULL OR value !~ '^[1-9][0-9]*$' OR length(value)>19 THEN RAISE insufficient_privilege; END IF;\n  RETURN value::bigint;\n EXCEPTION WHEN numeric_value_out_of_range OR invalid_text_representation THEN RAISE insufficient_privilege;\n END $function$\n"
+        }
+      ],
+      "relations": [
+        {
+          "acl": [
+            "feed_owner=arwdDxtm/feed_owner"
+          ],
+          "rls": false,
+          "kind": "r",
+          "name": "likes",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "likes_pkey",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "likes_post_id_idx",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": [
+            "feed_owner=arwdDxtm/feed_owner"
+          ],
+          "rls": false,
+          "kind": "r",
+          "name": "posts",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "posts_created_at_id_idx",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": [
+            "feed_owner=rwU/feed_owner"
+          ],
+          "rls": false,
+          "kind": "S",
+          "name": "posts_id_seq",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "posts_pkey",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "posts_user_id_idx",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": [
+            "feed_owner=arwdDxtm/feed_owner"
+          ],
+          "rls": false,
+          "kind": "r",
+          "name": "users",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "users_pkey",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        },
+        {
+          "acl": null,
+          "rls": false,
+          "kind": "i",
+          "name": "users_username_key",
+          "owner": "feed_owner",
+          "schema": "feed_data",
+          "persistence": "p"
+        }
+      ],
+      "durability": {
+        "fsync": "on",
+        "wal_level": "logical",
+        "shared_buffers": "65536",
+        "max_connections": "100",
+        "full_page_writes": "on",
+        "synchronous_commit": "on"
+      },
+      "constraints": [
+        "PRIMARY KEY (user_id, post_id)",
+        "FOREIGN KEY (post_id) REFERENCES feed_data.posts(id)",
+        "FOREIGN KEY (user_id) REFERENCES feed_data.users(id)",
+        "CHECK (((feed_data.codepoints(body) >= 1) AND (feed_data.codepoints(body) <= 500)))",
+        "PRIMARY KEY (id)",
+        "FOREIGN KEY (user_id) REFERENCES feed_data.users(id)",
+        "PRIMARY KEY (id)",
+        "UNIQUE (username)"
+      ]
+    }
+  },
+  "started_utc": "2026-10-15T06:37:35.776926+00:00",
+  "git_commit": "3b1fa99a4ecf241b40d322aef029879061f8b25e",
+  "git_status": " M .gitignore\n M MASTER_PLAN.md\n M README.md\n M contracts/BENCHMARK.md\n M scripts/benchmark.py\n?? results/README.md\n?? results/supabase/\n?? scripts/import_postgres.py\n?? scripts/supabase.py\n?? scripts/supabase_benchmark.py\n?? scripts/supabase_profile.py\n?? services/supabase/\n?? test/baas/supabase_lifecycle.py\n?? test/baas/supabase_native.py\n?? test/baas/test_supabase_budget.py\n?? test/baas/test_supabase_config.py\n?? test/baas/test_supabase_evidence.py\n?? test/baas/test_supabase_harness.py\n?? test/baas/test_supabase_import.py\n?? test/test_gitignore.py\n",
+  "host": "Linux x86_64\n",
+  "host_memory_cpu": "MemTotal:       16377024 kB\nMemFree:         2095504 kB\nMemAvailable:   14365476 kB\nBuffers:          193328 kB\nCached:         11723096 kB\nSwapCached:            0 kB\nActive:          2663796 kB\nInactive:        9990816 kB\nActive(anon):    1328404 kB\nInactive(anon):    19900 kB\nActive(file):    1335392 kB\nInactive(file):  9970916 kB\nUnevictable:       27464 kB\nMlocked:           27464 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              1148 kB\nWriteback:             0 kB\nAnonPages:        765556 kB\nMapped:          1180316 kB\nShmem:            601356 kB\nKReclaimable:    1301384 kB\nSlab:            1472028 kB\nSReclaimable:    1301384 kB\nSUnreclaim:       170644 kB\nKernelStack:        5836 kB\nPageTables:        14548 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     8188512 kB\nCommitted_AS:    2707516 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       21152 kB\nVmallocChunk:          0 kB\nPercpu:             6176 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:    368640 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      173928 kB\nDirectMap2M:     9263104 kB\nDirectMap1G:     9437184 kB\nprocessor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 49\nmodel name\t: AMD EPYC 7452 32-Core Processor\nstepping\t: 0\nmicrocode\t: 0x830107d\ncpu MHz\t\t: 2345.590\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 4\ncore id\t\t: 0\ncpu cores\t: 4\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 16\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip rdpid overflow_recov succor\nbugs\t\t: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret\nbogomips\t: 4691.18\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 49\nmodel name\t: AMD EPYC 7452 32-Core Processor\nstepping\t: 0\nmicrocode\t: 0x830107d\ncpu MHz\t\t: 2345.590\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 4\ncore id\t\t: 1\ncpu cores\t: 4\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 16\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip rdpid overflow_recov succor\nbugs\t\t: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret\nbogomips\t: 4691.18\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 2\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 49\nmodel name\t: AMD EPYC 7452 32-Core Processor\nstepping\t: 0\nmicrocode\t: 0x830107d\ncpu MHz\t\t: 2345.590\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 4\ncore id\t\t: 2\ncpu cores\t: 4\napicid\t\t: 2\ninitial apicid\t: 2\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 16\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip rdpid overflow_recov succor\nbugs\t\t: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret\nbogomips\t: 4691.18\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 3\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 49\nmodel name\t: AMD EPYC 7452 32-Core Processor\nstepping\t: 0\nmicrocode\t: 0x830107d\ncpu MHz\t\t: 2345.590\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 4\ncore id\t\t: 3\ncpu cores\t: 4\napicid\t\t: 3\ninitial apicid\t: 3\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 16\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip rdpid overflow_recov succor\nbugs\t\t: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret\nbogomips\t: 4691.18\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\n",
+  "docker": "Client=29.8.1 Server=29.8.1\n",
+  "docker_vm": "OS=Ubuntu 24.04.5 LTS Arch=x86_64 CPUs=4 MemoryBytes=16770072576\n",
+  "vm_cpu_count": 4,
+  "vm_os_reserve_cpus": 1,
+  "vm_os_reserve_bytes": 1073741824,
+  "auth": "Synthetic app users and per-request HS256 compatibility JWT verification; scoped native JWT bridge; native Auth runs but signup/login/session throughput is NOT measured",
+  "path": "k6 -> Envoy -> native Edge Runtime user worker -> Envoy native API-key layer -> PostgREST RPC/JWT -> PostgreSQL",
+  "excluded_services": [
+    "Studio",
+    "Storage",
+    "Realtime",
+    "analytics/logging",
+    "Vector",
+    "Supavisor",
+    "imgproxy"
+  ],
+  "cost": "Existing shared VPS; price/region not supplied; no cost/request or $12-equivalence claim",
+  "limitations": [
+    "API-serving subset, not the default full Supabase platform",
+    "Shared host, storage/page caches and background workload; not dedicated-machine equivalence",
+    "Raw host pressure, steal, swap, I/O and component/parent cgroup evidence retained; provider thermals unavailable"
+  ],
+  "allocated_data_kib_before": "1411248\t/var/lib/postgresql/data",
+  "target_after": {
+    "parent": {
+      "cpu.max": "100000 100000\n",
+      "cpu.stat": "usage_usec 5477141240\nuser_usec 4536642790\nsystem_usec 940498450\ncore_sched.force_idle_usec 0\nnr_periods 81362\nnr_throttled 29331\nthrottled_usec 2551173687\nnr_bursts 0\nburst_usec 0\n",
+      "cpu.pressure": "some avg10=0.71 avg60=9.39 avg300=11.84 total=1058900832\nfull avg10=0.39 avg60=5.96 avg300=7.64 total=739654197\n",
+      "memory.max": "4294967296\n",
+      "memory.current": "2549858304\n",
+      "memory.swap.max": "0\n",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.stat": "anon 379133952\nfile 2092040192\nkernel 78221312\nkernel_stack 1949696\npagetables 16908288\nsec_pagetables 0\npercpu 157560\nsock 462848\nvmalloc 61440\nshmem 603365376\nzswap 0\nzswapped 0\nfile_mapped 602476544\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 981442560\ninactive_file 1488642048\nactive_file 1081344\nunevictable 8192\nslab_reclaimable 53600376\nslab_unreclaimable 5218624\nslab 58819000\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 0\npgsteal 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 34135818\npgmajfault 11\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 5781\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+      "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+      "io.stat": "8:0 rbytes=1617920 wbytes=27034710016 rios=137 wios=228335 dbytes=0 dios=0\n",
+      "io.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=4360211\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=3278037\n",
+      "children": [
+        "docker-33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f.scope",
+        "docker-4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306.scope",
+        "docker-62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a.scope",
+        "docker-ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f.scope",
+        "docker-cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355.scope"
+      ]
+    },
+    "targets": {
+      "db": {
+        "Id": "4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306",
+        "Image": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1876690,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T04:51:03.958548694Z",
+          "FinishedAt": "2026-10-15T04:51:03.208385157Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:46:22.974184153Z",
+                "End": "2026-10-15T06:46:23.014432589Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:28.015356563Z",
+                "End": "2026-10-15T06:46:28.055293135Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:33.055999029Z",
+                "End": "2026-10-15T06:46:33.094883499Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:38.096059832Z",
+                "End": "2026-10-15T06:46:38.143168444Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:43.143848736Z",
+                "End": "2026-10-15T06:46:43.184549329Z",
+                "ExitCode": 0,
+                "Output": "localhost:5432 - accepting connections\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:5a4314708484bec672de2c09653a5c01fb1c84a998564ac231b0325e2238ed5b",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306.scope\n"
+      },
+      "auth": {
+        "Id": "33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f",
+        "Image": "sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1996997,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:37:13.716439257Z",
+          "FinishedAt": "2026-10-15T06:35:53.737228973Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:46:06.56769949Z",
+                "End": "2026-10-15T06:46:06.602882263Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:16.603589733Z",
+                "End": "2026-10-15T06:46:16.640848738Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:26.641454652Z",
+                "End": "2026-10-15T06:46:26.67714703Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:36.677885915Z",
+                "End": "2026-10-15T06:46:36.713290263Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:46.713722366Z",
+                "End": "2026-10-15T06:46:46.745790162Z",
+                "ExitCode": 0,
+                "Output": "Connecting to localhost:9999 ([::1]:9999)\nremote file exists\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:7e813221b93fbf54b515036438550e483bfaf057b9db52fe9bc1ce91c47e817e",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f.scope\n"
+      },
+      "rest": {
+        "Id": "cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355",
+        "Image": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1997006,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:37:13.717376964Z",
+          "FinishedAt": "2026-10-15T06:35:53.571795696Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:45:58.073517076Z",
+                "End": "2026-10-15T06:45:58.188489697Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:08.190003052Z",
+                "End": "2026-10-15T06:46:08.278968254Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:18.27990846Z",
+                "End": "2026-10-15T06:46:18.327368071Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:28.32781823Z",
+                "End": "2026-10-15T06:46:28.373025049Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              },
+              {
+                "Start": "2026-10-15T06:46:38.373900429Z",
+                "End": "2026-10-15T06:46:38.419809953Z",
+                "ExitCode": 0,
+                "Output": "OK: http://localhost:3001/ready\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:aa7e96af2d01219a09bc00c75de28171b1f9fda17ea455a931e4fb6d317089e0",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355.scope\n"
+      },
+      "functions": {
+        "Id": "62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a",
+        "Image": "sha256:edd22bef4477b900d5c300e287ce9b18bff9b81a0291bee14ee0b7c7b71a2899",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1997005,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:37:13.716866577Z",
+          "FinishedAt": "2026-10-15T06:35:53.794369118Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:46:07.287033775Z",
+                "End": "2026-10-15T06:46:07.363039239Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:46:17.364371701Z",
+                "End": "2026-10-15T06:46:17.400039794Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:46:27.400467292Z",
+                "End": "2026-10-15T06:46:27.43399342Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:46:37.435373697Z",
+                "End": "2026-10-15T06:46:37.469549853Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:46:47.470348503Z",
+                "End": "2026-10-15T06:46:47.501242398Z",
+                "ExitCode": 0,
+                "Output": ""
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:b331c6422f4f4bebd6052357da5f3c87610128c8cb530390ca024eb68cf4bf2e",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a.scope\n"
+      },
+      "gateway": {
+        "Id": "ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f",
+        "Image": "sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 1997279,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-15T06:37:24.366009672Z",
+          "FinishedAt": "2026-10-15T06:35:53.565930795Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-15T06:45:57.776481246Z",
+                "End": "2026-10-15T06:45:57.871168141Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:46:07.871577699Z",
+                "End": "2026-10-15T06:46:07.973808491Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:46:17.974696148Z",
+                "End": "2026-10-15T06:46:18.067945028Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:46:28.069278594Z",
+                "End": "2026-10-15T06:46:28.104178196Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-15T06:46:38.105540899Z",
+                "End": "2026-10-15T06:46:38.146585518Z",
+                "ExitCode": 0,
+                "Output": ""
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 0,
+          "MemorySwap": 0
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:be87c8b52663c1164a5bdf3c5419017a269cb3d8c74be1ec93638a71f1ffbd4b",
+        "compose_project": "baas-supabase-vps16",
+        "cgroup_parent": "tdsbaassupabasevps16.slice",
+        "process_cgroup": "0::/tdsbaassupabasevps16.slice/docker-ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f.scope\n"
+      }
+    }
+  },
+  "load_after": {
+    "Id": "16f605712bca5390b49cbbaafbf9348e1969ce12afc6ee0e66d2eb6b4d522c4d",
+    "Image": "sha256:3ddc8b1a33a2c3d8edc6e99b6a762ae36cba08788463458f5e6a7703e14eb77d",
+    "RestartCount": 0,
+    "State": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-15T06:37:36.112734431Z",
+      "FinishedAt": "2026-10-15T06:46:47.285691314Z"
+    },
+    "limits": {
+      "NanoCpus": 2000000000,
+      "Memory": 8589934592,
+      "MemorySwap": 8589934592
+    },
+    "source_sha256": null,
+    "platform": "linux/amd64",
+    "image_manifest_digest": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656"
+  },
+  "k6_exit_code": 0,
+  "result": "pass",
+  "reason": "hold gates passed",
+  "finished_utc": "2026-10-15T06:46:48.481921+00:00",
+  "allocated_data_kib_after": "1411580\t/var/lib/postgresql/data"
+}

@@ -1,0 +1,30 @@
+{
+  "outcome": "fail",
+  "reason": "hold latency/error/schema gate failed",
+  "vus": 2500,
+  "tier": "standard",
+  "mode": "capacity",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "platform": "linux/amd64",
+  "hold_requests": 69397,
+  "hold_rps": 231.32333333333332,
+  "latency_ms": {
+    "avg": 1522.2463082103827,
+    "med": 1326.818501,
+    "p(95)": 3560.6553743999953,
+    "p(99)": 5462.9708429599905,
+    "min": 1.884811,
+    "max": 10001.960711
+  },
+  "request_errors": {
+    "fails": 64837,
+    "rate": 0.06570889231522976,
+    "passes": 4560
+  },
+  "schema_errors": {
+    "rate": 0,
+    "passes": 0,
+    "fails": 69397
+  }
+}

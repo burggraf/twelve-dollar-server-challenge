@@ -1,0 +1,34 @@
+test_correctness_requires_every_frozen_input_and_exact_raw_log_hash (__main__.Evidence.test_correctness_requires_every_frozen_input_and_exact_raw_log_hash) ... ok
+test_every_required_component_restart_exit_or_oom_fails (__main__.Evidence.test_every_required_component_restart_exit_or_oom_fails) ... ok
+test_unchanged_stack_has_no_lifecycle_failure (__main__.Evidence.test_unchanged_stack_has_no_lifecycle_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+test_all_components_must_be_native_owned_and_in_exact_parent (__main__.AggregateBudget.test_all_components_must_be_native_owned_and_in_exact_parent) ... ok
+test_missing_or_per_container_only_budget_cannot_pass (__main__.AggregateBudget.test_missing_or_per_container_only_budget_cannot_pass) ... ok
+test_one_parent_enforces_entire_five_component_stack (__main__.AggregateBudget.test_one_parent_enforces_entire_five_component_stack) ... ok
+test_stopped_or_missing_required_service_is_not_a_smaller_supabase_stack (__main__.AggregateBudget.test_stopped_or_missing_required_service_is_not_a_smaller_supabase_stack) ... ok
+test_wrong_quota_memory_swap_or_extra_component_fails (__main__.AggregateBudget.test_wrong_quota_memory_swap_or_extra_component_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+test_official_webhooks_bootstrap_precedes_roles_password_setup (__main__.SupabaseProfile.test_official_webhooks_bootstrap_precedes_roles_password_setup) ... ok
+test_real_resolved_stack_and_runner_are_isolated (__main__.SupabaseProfile.test_real_resolved_stack_and_runner_are_isolated) ... FAIL
+
+======================================================================
+FAIL: test_real_resolved_stack_and_runner_are_isolated (__main__.SupabaseProfile.test_real_resolved_stack_and_runner_are_isolated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/baas/test_supabase_config.py", line 13, in test_real_resolved_stack_and_runner_are_isolated
+    load=config['services']['k6'];self.assertEqual(float(load['cpus']),2);self.assertEqual(load['mem_limit'],8*1024**3);self.assertEqual(load['memswap_limit'],load['mem_limit'])
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '8589934592' != 8589934592
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.074s
+
+FAILED (failures=1)

@@ -1,0 +1,6 @@
+test_official_webhooks_bootstrap_precedes_roles_password_setup (__main__.SupabaseProfile.test_official_webhooks_bootstrap_precedes_roles_password_setup) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK

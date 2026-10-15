@@ -1,0 +1,7 @@
+test_import_and_export_are_exact_utf8_including_nul (__main__.StorageMapping.test_import_and_export_are_exact_utf8_including_nul) ... ok
+test_nonbody_columns_and_input_objects_are_unchanged (__main__.StorageMapping.test_nonbody_columns_and_input_objects_are_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK

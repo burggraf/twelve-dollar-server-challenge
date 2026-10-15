@@ -1,0 +1,39 @@
+{
+  "persistent_services_compared": 26,
+  "changed_persistent_services": [],
+  "original_port4000_listener_and_start_identities_unchanged": true,
+  "completed_owned_containers": [
+    {
+      "name": "/baas-supabase-vps16-db-1",
+      "id": "4784f330f147057f1fe968483743ceabfa750be5b11cd9d44b528a233506b306",
+      "status": "exited",
+      "exit_code": 0
+    },
+    {
+      "name": "/baas-supabase-vps16-auth-1",
+      "id": "33d1a3e05f66d08b9cd5f1265f59444215c510bd0c11786e3b37e830b675315f",
+      "status": "exited",
+      "exit_code": 0
+    },
+    {
+      "name": "/baas-supabase-vps16-rest-1",
+      "id": "cabb5ff42684da47b2b4d68a0c8c1dc674cf00b42fdaa7b90fa63071e12ec355",
+      "status": "exited",
+      "exit_code": 255
+    },
+    {
+      "name": "/baas-supabase-vps16-functions-1",
+      "id": "62744d1447136b33e3c543d8606d85165b7c1997cf7f592c3985c7b60f49aa7a",
+      "status": "exited",
+      "exit_code": 15
+    },
+    {
+      "name": "/baas-supabase-vps16-gateway-1",
+      "id": "ab9dc79158bbb2099a24294d46e5f7d65b2fe7b1c8000c432da4446478fa874f",
+      "status": "exited",
+      "exit_code": 0
+    }
+  ],
+  "both_original_failed_and_current_database_volumes_retained": true,
+  "runtime_keys_and_evidence_retained_privately": true
+}

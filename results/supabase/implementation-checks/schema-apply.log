@@ -1,0 +1,11 @@
+ Container baas-supabase-vps16-gateway-1 Stopping 
+ Container baas-supabase-vps16-rest-1 Stopping 
+ Container baas-supabase-vps16-gateway-1 Stopped 
+ Container baas-supabase-vps16-auth-1 Stopping 
+ Container baas-supabase-vps16-functions-1 Stopping 
+ Container baas-supabase-vps16-rest-1 Stopped 
+ Container baas-supabase-vps16-auth-1 Stopped 
+ Container baas-supabase-vps16-functions-1 Stopped 
+BEGIN
+DO
+ERROR:  must be able to SET ROLE "feed_owner"

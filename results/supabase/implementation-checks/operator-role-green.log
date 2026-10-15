@@ -1,0 +1,38 @@
+test_import_and_export_are_exact_utf8_including_nul (__main__.StorageMapping.test_import_and_export_are_exact_utf8_including_nul) ... ok
+test_nonbody_columns_and_input_objects_are_unchanged (__main__.StorageMapping.test_nonbody_columns_and_input_objects_are_unchanged) ... ok
+test_operator_uses_official_privileged_bootstrap_role_not_runtime_postgres (__main__.StorageMapping.test_operator_uses_official_privileged_bootstrap_role_not_runtime_postgres) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+BEGIN
+DO
+CREATE SCHEMA
+CREATE SCHEMA
+REVOKE
+GRANT ROLE
+SET
+ALTER DEFAULT PRIVILEGES
+CREATE FUNCTION
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+REVOKE
+REVOKE
+GRANT
+GRANT
+GRANT
+COMMIT
+NOTIFY

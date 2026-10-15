@@ -1,0 +1,6 @@
+{
+  "exact_staged_files_scanned": 274,
+  "actual_runtime_values_and_issued_compatibility_tokens_absent": true,
+  "staged_executable_verification_files_identical_to_measured_vps": 23,
+  "private_files_and_bulk_ignored_artifacts_absent": true
+}

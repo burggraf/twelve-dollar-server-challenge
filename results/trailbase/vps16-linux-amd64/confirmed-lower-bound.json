@@ -4,7 +4,7 @@
   "confirmed_lower_bound_vus": 15000,
   "maximum_passing_vus": null,
   "owner_acceptance": "Owner authorized repository publication and progression to Supabase, 2026-10-15",
-  "publication": "Authorized commit/push in progress",
+  "publication": "Published to remote main at 3b1fa99a4ecf241b40d322aef029879061f8b25e; verified 2026-10-15",
   "serving": {
     "cpus": 1,
     "memory_bytes": 4294967296,

@@ -1,0 +1,64 @@
+{
+  "tier": "standard",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "status": "confirmed_pending_human_review",
+  "attempts": [
+    {
+      "vus": 2500,
+      "outcome": "fail",
+      "path": "results/supabase/vps16-linux-amd64/20261015T045724392273Z-standard-2500vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 1250,
+      "outcome": "pass",
+      "path": "results/supabase/vps16-linux-amd64/20261015T050821481749Z-standard-1250vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 1750,
+      "outcome": "pass",
+      "path": "results/supabase/vps16-linux-amd64/20261015T051917744240Z-standard-1750vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 2000,
+      "outcome": "pass",
+      "path": "results/supabase/vps16-linux-amd64/20261015T053014119004Z-standard-2000vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 2250,
+      "outcome": "pass",
+      "path": "results/supabase/vps16-linux-amd64/20261015T054110358168Z-standard-2250vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 2250,
+      "outcome": "fail",
+      "path": "results/supabase/vps16-linux-amd64/20261015T055206724973Z-standard-2250vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 2250,
+      "outcome": "fail",
+      "path": "results/supabase/vps16-linux-amd64/20261015T060303490334Z-standard-2250vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 2250,
+      "outcome": "fail",
+      "path": "results/supabase/vps16-linux-amd64/20261015T061400018671Z-standard-2250vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 2000,
+      "outcome": "pass",
+      "path": "results/supabase/vps16-linux-amd64/20261015T062456087846Z-standard-2000vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 2000,
+      "outcome": "pass",
+      "path": "results/supabase/vps16-linux-amd64/20261015T063552558051Z-standard-2000vu-k6-2cpu-8g-v3"
+    },
+    {
+      "vus": 2000,
+      "outcome": "pass",
+      "path": "results/supabase/vps16-linux-amd64/20261015T064648677622Z-standard-2000vu-k6-2cpu-8g-v3"
+    }
+  ],
+  "candidate_vus": 2000
+}

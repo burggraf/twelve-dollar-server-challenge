@@ -1,0 +1,37 @@
+test_campaign_uses_injected_backend_and_private_state_path (__main__.SupabaseHarness.test_campaign_uses_injected_backend_and_private_state_path) ... ok
+test_native_supabase_project_has_distinct_vps16_track (__main__.SupabaseHarness.test_native_supabase_project_has_distinct_vps16_track) ... ok
+test_snapshot_includes_selected_backend_not_trailbase (__main__.SupabaseHarness.test_snapshot_includes_selected_backend_not_trailbase) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+OK
+test_direct_controller_exports_inferred_platform_and_namespace_to_compose (__main__.HostPortability.test_direct_controller_exports_inferred_platform_and_namespace_to_compose) ... ok
+test_foreign_architecture_load_image_is_invalid (__main__.HostPortability.test_foreign_architecture_load_image_is_invalid) ... ok
+test_foreign_platforms_and_unrelated_project_names_are_rejected (__main__.HostPortability.test_foreign_platforms_and_unrelated_project_names_are_rejected) ... ok
+test_linux_samples_preserve_raw_proc_evidence_without_mac_commands (__main__.HostPortability.test_linux_samples_preserve_raw_proc_evidence_without_mac_commands) ... ok
+test_linux_swapouts_are_checked_without_weakening_mac_checks (__main__.HostPortability.test_linux_swapouts_are_checked_without_weakening_mac_checks) ... ok
+test_native_platforms_and_result_tracks_are_separate (__main__.HostPortability.test_native_platforms_and_result_tracks_are_separate) ... ok
+test_new_host_track_cannot_pool_with_original_vps (__main__.HostPortability.test_new_host_track_cannot_pool_with_original_vps) ... ok
+test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect (__main__.HostPortability.test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect) ... ok
+test_accepts_complete_passing_hold (__main__.Scoring.test_accepts_complete_passing_hold) ... ok
+test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host (__main__.Scoring.test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (__main__.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (__main__.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (__main__.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_mismatched_actual_runner_budget_cannot_claim_the_new_profile (__main__.Scoring.test_mismatched_actual_runner_budget_cannot_claim_the_new_profile) ... ok
+test_missing_clock_still_invalidates_non_oom_attempt (__main__.Scoring.test_missing_clock_still_invalidates_non_oom_attempt) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (__main__.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_oom_remains_primary_reason_when_k6_loses_summary_and_clock (__main__.Scoring.test_oom_remains_primary_reason_when_k6_loses_summary_and_clock) ... ok
+test_owner_approved_eight_gib_runner_has_distinct_verified_limits (__main__.Scoring.test_owner_approved_eight_gib_runner_has_distinct_verified_limits) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (__main__.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (__main__.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_runner_profile_is_versioned_and_matches_the_approved_budget (__main__.Scoring.test_runner_profile_is_versioned_and_matches_the_approved_budget) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (__main__.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+test_standard_tier_is_one_cpu_four_gib_with_memory_reserve (__main__.Scoring.test_standard_tier_is_one_cpu_four_gib_with_memory_reserve) ... ok
+test_vm_headroom_accepts_small_but_rejects_large_on_current_vm (__main__.Scoring.test_vm_headroom_accepts_small_but_rejects_large_on_current_vm) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.005s
+
+OK

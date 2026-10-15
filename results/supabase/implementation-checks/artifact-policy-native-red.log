@@ -1,0 +1,151 @@
+test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) ... 
+  test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/run', name='samples.json') ... FAIL
+  test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/run', name='samples.json.gz') ... FAIL
+  test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/run', name='source.tar.gz') ... FAIL
+  test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/vps16-linux-amd64/run', name='samples.json') ... FAIL
+  test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/vps16-linux-amd64/run', name='samples.json.gz') ... FAIL
+  test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/vps16-linux-amd64/run', name='source.tar.gz') ... FAIL
+  test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/supabase/track/run', name='samples.json') ... FAIL
+  test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/supabase/track/run', name='samples.json.gz') ... FAIL
+  test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/supabase/track/run', name='source.tar.gz') ... FAIL
+test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) ... 
+  test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) (path='services/example/node_modules/module/index.js') ... FAIL
+  test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) (path='services/example/.venv/bin/python') ... FAIL
+  test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) (path='test/standalone.pyc') ... FAIL
+  test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) (path='.pytest_cache/README.md') ... FAIL
+test_source_inputs_and_small_benchmark_evidence_remain_visible (test_gitignore.RepositoryIgnores.test_source_inputs_and_small_benchmark_evidence_remain_visible) ... ok
+
+======================================================================
+FAIL: test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/run', name='samples.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 28, in test_bulk_run_artifacts_are_ignored_across_services_and_tracks
+    self.assert_ignored(f'{directory}/{name}', True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : results/trailbase/run/samples.json
+
+======================================================================
+FAIL: test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/run', name='samples.json.gz')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 28, in test_bulk_run_artifacts_are_ignored_across_services_and_tracks
+    self.assert_ignored(f'{directory}/{name}', True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : results/trailbase/run/samples.json.gz
+
+======================================================================
+FAIL: test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/run', name='source.tar.gz')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 28, in test_bulk_run_artifacts_are_ignored_across_services_and_tracks
+    self.assert_ignored(f'{directory}/{name}', True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : results/trailbase/run/source.tar.gz
+
+======================================================================
+FAIL: test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/vps16-linux-amd64/run', name='samples.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 28, in test_bulk_run_artifacts_are_ignored_across_services_and_tracks
+    self.assert_ignored(f'{directory}/{name}', True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : results/trailbase/vps16-linux-amd64/run/samples.json
+
+======================================================================
+FAIL: test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/vps16-linux-amd64/run', name='samples.json.gz')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 28, in test_bulk_run_artifacts_are_ignored_across_services_and_tracks
+    self.assert_ignored(f'{directory}/{name}', True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : results/trailbase/vps16-linux-amd64/run/samples.json.gz
+
+======================================================================
+FAIL: test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/trailbase/vps16-linux-amd64/run', name='source.tar.gz')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 28, in test_bulk_run_artifacts_are_ignored_across_services_and_tracks
+    self.assert_ignored(f'{directory}/{name}', True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : results/trailbase/vps16-linux-amd64/run/source.tar.gz
+
+======================================================================
+FAIL: test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/supabase/track/run', name='samples.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 28, in test_bulk_run_artifacts_are_ignored_across_services_and_tracks
+    self.assert_ignored(f'{directory}/{name}', True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : results/supabase/track/run/samples.json
+
+======================================================================
+FAIL: test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/supabase/track/run', name='samples.json.gz')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 28, in test_bulk_run_artifacts_are_ignored_across_services_and_tracks
+    self.assert_ignored(f'{directory}/{name}', True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : results/supabase/track/run/samples.json.gz
+
+======================================================================
+FAIL: test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) (directory='results/supabase/track/run', name='source.tar.gz')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 28, in test_bulk_run_artifacts_are_ignored_across_services_and_tracks
+    self.assert_ignored(f'{directory}/{name}', True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : results/supabase/track/run/source.tar.gz
+
+======================================================================
+FAIL: test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) (path='services/example/node_modules/module/index.js')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 40, in test_runtime_dependencies_and_caches_are_ignored
+    self.assert_ignored(path, True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : services/example/node_modules/module/index.js
+
+======================================================================
+FAIL: test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) (path='services/example/.venv/bin/python')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 40, in test_runtime_dependencies_and_caches_are_ignored
+    self.assert_ignored(path, True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : services/example/.venv/bin/python
+
+======================================================================
+FAIL: test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) (path='test/standalone.pyc')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 40, in test_runtime_dependencies_and_caches_are_ignored
+    self.assert_ignored(path, True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : test/standalone.pyc
+
+======================================================================
+FAIL: test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) (path='.pytest_cache/README.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 40, in test_runtime_dependencies_and_caches_are_ignored
+    self.assert_ignored(path, True)
+  File "/opt/twelve-dollar-baas-supabase-16g/src/test/test_gitignore.py", line 20, in assert_ignored
+    self.assertEqual(result.returncode == 0, expected, path)
+AssertionError: False != True : .pytest_cache/README.md
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.040s
+
+FAILED (failures=13)

@@ -1,0 +1,38 @@
+ Container baas-supabase-vps16-native-red Creating 
+ Container baas-supabase-vps16-native-red Created 
+test_anon_cannot_write_rpc_or_exposed_tables (__main__.NativeSupabase.test_anon_cannot_write_rpc_or_exposed_tables) ... FAIL
+test_compat_signer_cannot_forge_native_writer_identity (__main__.NativeSupabase.test_compat_signer_cannot_forge_native_writer_identity) ... ok
+test_native_feed_is_real_supported_rpc (__main__.NativeSupabase.test_native_feed_is_real_supported_rpc) ... FAIL
+test_nul_and_unicode_roundtrip_without_database_text_loss (__main__.NativeSupabase.test_nul_and_unicode_roundtrip_without_database_text_loss) ... FAIL
+
+======================================================================
+FAIL: test_anon_cannot_write_rpc_or_exposed_tables (__main__.NativeSupabase.test_anon_cannot_write_rpc_or_exposed_tables)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/supabase_native.py", line 26, in test_anon_cannot_write_rpc_or_exposed_tables
+    self.assertIn(status,[401,403,404],endpoint)
+AssertionError: 503 not found in [401, 403, 404] : rpc/create_post
+
+======================================================================
+FAIL: test_native_feed_is_real_supported_rpc (__main__.NativeSupabase.test_native_feed_is_real_supported_rpc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/supabase_native.py", line 21, in test_native_feed_is_real_supported_rpc
+    self.assertEqual(status,200,value);self.assertEqual(len(value),20)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 503 != 200 : {'code': 'PGRST002', 'details': None, 'hint': None, 'message': 'Could not query the database for the schema cache. Retrying.'}
+
+======================================================================
+FAIL: test_nul_and_unicode_roundtrip_without_database_text_loss (__main__.NativeSupabase.test_nul_and_unicode_roundtrip_without_database_text_loss)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/supabase_native.py", line 35, in test_nul_and_unicode_roundtrip_without_database_text_loss
+    self.assertEqual(status,201,value);post=value['post'];self.assertEqual(post['body'],text)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 501 != 201 : {'error': 'not implemented'}
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.050s
+
+FAILED (failures=3)
+

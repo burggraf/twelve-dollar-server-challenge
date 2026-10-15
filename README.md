@@ -14,6 +14,8 @@ Earlier OrbStack and 8-GiB VPS attempts, including 1-CPU/2-GiB serving results, 
 
 **TrailBase completed three independent 15,000-VU confirmation holds**, at 1,585.29–1,586.82 requests/s with zero request/schema errors. This is a **confirmed lower bound, not a maximum**: the 20,000-VU attempt hit the generator's 8-GiB limit. Read the [verified report](results/trailbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md), including tail outliers, resource review, compatibility-auth scope and all raw evidence. The owner authorized committing/pushing this outcome and moving directly to Supabase. Each subsequent service needs a reproducible report before progression. Raw metric streams and generated source archives are retained outside Git; see [artifact storage and historical verification](results/README.md).
 
+**Supabase confirmed 2,000 VUs in three independent five-minute holds**, at **210.86–211.69 requests/s**, with 7 request errors across 190,165 requests and zero malformed successful responses. All three 2,250-VU confirmations failed, despite one passing probe; the result is the highest confirmed candidate at 250-VU resolution, not an exact mathematical maximum. The entire PostgreSQL/Auth/PostgREST/Edge Runtime/Envoy API-serving subset shared one actual **1-CPU / 4-GiB** parent cgroup. Native signup/login throughput is not measured. Read the [complete report](results/supabase/vps16-linux-amd64/CONFIRMED_CAPACITY.md), [endpoint results](results/supabase/vps16-linux-amd64/endpoint-confirmations.md), and [profile/reproduction guide](services/supabase/README.md). All 11 scored attempts, failed confirmations and raw outliers are retained. Original existing services/listener stayed unchanged; completed owned targets are stopped with volumes/evidence retained.
+
 After isolated setup and verified native images per the host guide:
 
 ```bash
@@ -25,7 +27,17 @@ bash services/trailbase/run.sh bench --smoke --vus 5000 # unscored pipeline cali
 bash services/trailbase/run.sh bench --campaign --max-vus 20000 --max-attempts 12
 ```
 
-See [TrailBase setup and architecture](services/trailbase/README.md) for requirements, resource limits, auth scope, safe lifecycle operations, result locations, and caveats. Supabase is the next active implementation; PocketBase remains queued. The same compatibility-auth scope, host and aggregate resource budgets apply unless explicitly amended.
+See [TrailBase setup and architecture](services/trailbase/README.md) for requirements, resource limits, auth scope, safe lifecycle operations, result locations, and caveats. Supabase's measured implementation/report is complete. PocketBase and later services remain deferred; no later application has been started or authorized by this publication. The same compatibility-auth scope, host and aggregate resource budgets apply unless explicitly amended.
+
+Supabase lifecycle (designated native host and owned profile prerequisites required):
+
+```bash
+bash services/supabase/run.sh build
+bash services/supabase/run.sh up
+bash services/supabase/run.sh test
+bash services/supabase/run.sh bench --vus 1000 --smoke
+bash services/supabase/run.sh search --max-vus 20000 --max-attempts 12
+```
 
 ---
 

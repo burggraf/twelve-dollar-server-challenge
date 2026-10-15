@@ -1,0 +1,42 @@
+Running as unit: tds-supabase-bootstrap-20261015.service
+ Volume baas-supabase-vps16_pgdata Creating 
+ Volume baas-supabase-vps16_pgdata Creating 
+ Network baas-supabase-vps16_default Creating 
+ Network baas-supabase-vps16_default Creating 
+ Volume baas-supabase-vps16_denocache Creating 
+ Volume baas-supabase-vps16_pgconfig Creating 
+ Volume baas-supabase-vps16_denocache Creating 
+ Volume baas-supabase-vps16_pgconfig Creating 
+ Volume baas-supabase-vps16_denocache Created 
+ Volume baas-supabase-vps16_denocache Created 
+ Volume baas-supabase-vps16_pgconfig Created 
+ Volume baas-supabase-vps16_pgconfig Created 
+ Volume baas-supabase-vps16_pgdata Created 
+ Volume baas-supabase-vps16_pgdata Created 
+ Network baas-supabase-vps16_default Created 
+ Network baas-supabase-vps16_default Created 
+ Container baas-supabase-vps16-db-1 Creating 
+ Container baas-supabase-vps16-db-1 Created 
+ Container baas-supabase-vps16-rest-1 Creating 
+ Container baas-supabase-vps16-auth-1 Creating 
+ Container baas-supabase-vps16-functions-1 Creating 
+ Container baas-supabase-vps16-rest-1 Created 
+ Container baas-supabase-vps16-functions-1 Created 
+ Container baas-supabase-vps16-auth-1 Created 
+ Container baas-supabase-vps16-gateway-1 Creating 
+ Container baas-supabase-vps16-gateway-1 Created 
+ Container baas-supabase-vps16-db-1 Starting 
+ Container baas-supabase-vps16-db-1 Started 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Waiting 
+ Container baas-supabase-vps16-db-1 Error dependency db failed to start
+ Container baas-supabase-vps16-db-1 Error dependency db failed to start
+ Container baas-supabase-vps16-db-1 Error dependency db failed to start
+dependency failed to start: container baas-supabase-vps16-db-1 exited (3)
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 1.997s
+CPU time consumed: 258ms
+Memory peak: 3.2M
+Memory swap peak: 0B
