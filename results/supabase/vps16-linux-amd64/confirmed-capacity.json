@@ -2,7 +2,7 @@
   "service": "Supabase",
   "outcome": "scored",
   "confirmed_vus": 2000,
-  "interpretation": "Highest candidate confirmed by three independent passing holds in the fixed 250-VU-resolution protocol; not an exact mathematical maximum.2250 passed one probe but failed all3 independent confirmations.",
+  "interpretation": "Highest candidate confirmed by three independent passing holds in the fixed 250-VU-resolution protocol; not an exact mathematical maximum. 2,250 passed one probe but failed all 3 independent confirmations.",
   "confirmation_hold_seconds_each": 300,
   "confirmation_requests": 190165,
   "confirmation_request_errors": 7,
@@ -162,7 +162,7 @@
       }
     }
   ],
-  "publication": "Owner-authorized repository publication; no releases or external artifact uploads",
+  "publication": "Source/report/readable evidence published to remote main and verified at 4c06a8d2f9af4cca4bb0eca90da2a09b5df1bf3a; no releases or external artifact uploads",
   "raw_artifacts": "Original samples/source overlays retained locally and on designated VPS; excluded from current Git tree; no external download location established",
   "cost": "Price/region unknown; no $12/month equivalence or cost/request claim"
 }
