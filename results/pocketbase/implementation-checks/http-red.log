@@ -1,0 +1,21 @@
+=== RUN   TestNativeHTTPHealthAndExactErrorContract
+    http_test.go:70: native feed health route missing or failed: status=404 body={"data":{},"message":"The requested resource wasn't found.","status":404}
+--- FAIL: TestNativeHTTPHealthAndExactErrorContract (0.05s)
+=== RUN   TestNativeHTTPStrictSignedClaims
+    http_test.go:120: invalid signed subject accepted/misclassified: <nil> status404 {"data":{},"message":"The requested resource wasn't found.","status":404}
+--- FAIL: TestNativeHTTPStrictSignedClaims (0.04s)
+=== RUN   TestNativeHTTPCommittedJourneyAndNumericOrder
+    journey_test.go:49: native feed route missing/failed: 404 {"data":{},"message":"The requested resource wasn't found.","status":404}
+--- FAIL: TestNativeHTTPCommittedJourneyAndNumericOrder (0.05s)
+=== RUN   TestNativeHTTPConcurrentAtomicIDsAndLikes
+    journey_test.go:127: concurrent like failed: 404 {"data":{},"message":"The requested resource wasn't found.","status":404}
+--- FAIL: TestNativeHTTPConcurrentAtomicIDsAndLikes (0.05s)
+=== RUN   TestNativeApplicationCollectionsAndWriteBoundary
+--- PASS: TestNativeApplicationCollectionsAndWriteBoundary (0.04s)
+=== RUN   TestNativeNumericIdentityAndLosslessTextRoundtrip
+--- PASS: TestNativeNumericIdentityAndLosslessTextRoundtrip (0.04s)
+=== RUN   TestNativeRelationValidationAndUniqueLikes
+--- PASS: TestNativeRelationValidationAndUniqueLikes (0.05s)
+FAIL
+FAIL	twelve-dollar-server-challenge/pocketbase-feed	0.330s
+FAIL

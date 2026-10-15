@@ -1,0 +1,9 @@
+{
+  "native_machine": "x86_64",
+  "cpu_count": 4,
+  "memory_total_bytes": 16770072576,
+  "memory_available_bytes": 15407927296,
+  "host_swap_enabled": false,
+  "docker": "29.8.1",
+  "kernel": "6.8.0-142-generic"
+}

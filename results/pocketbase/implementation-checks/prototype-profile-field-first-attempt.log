@@ -1,0 +1,24 @@
+Running as unit: tds-pocketbase-prototype-up-20261015.service
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+KeyError: 'HostConfig'
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 114, in apport_excepthook
+    report["ExecutableTimestamp"] = str(int(os.stat(binary).st_mtime))
+                                            ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/twelve-dollar-baas-pocketbase-16g/src/-'
+
+Original exception was:
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+KeyError: 'HostConfig'
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 528ms
+CPU time consumed: 357ms
+Memory peak: 3.1M
+Memory swap peak: 0B

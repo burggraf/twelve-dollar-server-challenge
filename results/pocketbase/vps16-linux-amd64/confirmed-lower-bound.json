@@ -1,0 +1,1180 @@
+{
+  "service": "PocketBase",
+  "status": "confirmed_lower_bound",
+  "confirmed_lower_bound_vus": 10000,
+  "maximum_established": false,
+  "exact_250_vu_boundary_established": false,
+  "observed_valid_failing_probe_vus": 11250,
+  "resolution_disclosure": "Three independent 10,000-VU confirmations passed; 11,250 and 12,500 had valid probe SLO failures. Intervening 250-VU steps remain unresolved: not an exact maximum or hard stochastic upper bound. Search reserved confirmation budget; 11 of 12 full attempt slots used.",
+  "tested_software": {
+    "product": "v0.40.5",
+    "go": "1.27.2",
+    "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+    "sqlite_engine": "3.53.4",
+    "sqlite_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+    "native_build": {
+      "native_platform": "linux/amd64",
+      "app_source_sha256": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+      "image_id": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+      "executable_sha256": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+      "builder": "golang:1.27.2-bookworm@sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+      "runtime": "debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+      "builder_budget": {
+        "cpus": 2,
+        "memory_bytes": 8589934592,
+        "swap_bytes": 0
+      },
+      "build_flags": [
+        "CGO_ENABLED=0",
+        "-trimpath",
+        "-buildvcs=false",
+        "-ldflags=-s -w"
+      ],
+      "versions": {
+        "service": "PocketBase",
+        "version": "v0.40.5",
+        "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+        "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+        "go_module": "github.com/pocketbase/pocketbase",
+        "go_version": "1.27.2",
+        "sqlite_engine_version": "3.53.4",
+        "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+        "native_platform": "linux/amd64",
+        "builder": {
+          "tag": "golang:1.27.2-bookworm",
+          "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+          "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+        },
+        "runtime": {
+          "tag": "debian:bookworm-slim",
+          "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+          "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+        },
+        "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+        "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+        "serving_budget": {
+          "cpus": 1,
+          "memory_bytes": 4294967296,
+          "swap_bytes": 0
+        },
+        "runner_profile": "k6-2cpu-8g-v3"
+      }
+    }
+  },
+  "serving_budget": {
+    "cpus": 1,
+    "memory_gib": 4,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "allocation_type": "Quota-limited shared-host slice; entire serving stack"
+  },
+  "runner_budget": {
+    "software": "k6",
+    "version": "1.3.0",
+    "cpus": 2,
+    "memory_gib": 8,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "profile": "k6-2cpu-8g-v3"
+  },
+  "frozen_inputs": {
+    "app": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+    "verification": "300bf1e09d624032c1c9d88c4862b688f18cd6294e8c906fc4d1f97341c84359",
+    "runtime": "830e10858906a952042d167da3c8d6847695bb861b213f8c38cb7c66774beb25",
+    "schema": "4c2fd006546e9691cd189f2a971d3c23b62a88da53ce371fa14cd1136d20d859",
+    "images": {
+      "pocketbase": {
+        "Image": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:bc371b827b558174e9d5f833cac457241574d6c3fe653b6a4453ca229c67e91f"
+      }
+    },
+    "host": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+    "tokens": "37c3f99e54809dcbc741053cf462a4b1f16e4d42f89fb12a9b9374e0cc2878b2",
+    "executable": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+    "tools_image": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2 linux/amd64"
+  },
+  "confirmation_hold_seconds_each": 300,
+  "confirmation_hold_seconds_total": 900,
+  "total_confirmation_requests": 949739,
+  "total_confirmation_request_errors": 0,
+  "total_confirmation_request_error_rate": 0.0,
+  "confirmation_quantiles_pooled": false,
+  "confirmations": [
+    {
+      "run": "20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3",
+      "summary": {
+        "outcome": "pass",
+        "reason": "hold gates passed",
+        "vus": 10000,
+        "tier": "standard",
+        "mode": "capacity",
+        "runner_profile": "k6-2cpu-8g-v3",
+        "deployment_track": "vps16-linux-amd64",
+        "platform": "linux/amd64",
+        "hold_requests": 316575,
+        "hold_rps": 1055.25,
+        "latency_ms": {
+          "med": 18.580996,
+          "p(95)": 74.44694169999997,
+          "p(99)": 293.39945952000005,
+          "min": 0.233187,
+          "max": 4668.787094,
+          "avg": 29.96772910164944
+        },
+        "request_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 316575
+        },
+        "schema_errors": {
+          "passes": 0,
+          "fails": 316575,
+          "rate": 0
+        },
+        "tested_software": {
+          "product": "v0.40.5",
+          "go": "1.27.2",
+          "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+          "sqlite_engine": "3.53.4",
+          "sqlite_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+          "native_build": {
+            "native_platform": "linux/amd64",
+            "app_source_sha256": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+            "image_id": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+            "executable_sha256": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+            "builder": "golang:1.27.2-bookworm@sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+            "runtime": "debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+            "builder_budget": {
+              "cpus": 2,
+              "memory_bytes": 8589934592,
+              "swap_bytes": 0
+            },
+            "build_flags": [
+              "CGO_ENABLED=0",
+              "-trimpath",
+              "-buildvcs=false",
+              "-ldflags=-s -w"
+            ],
+            "versions": {
+              "service": "PocketBase",
+              "version": "v0.40.5",
+              "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+              "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+              "go_module": "github.com/pocketbase/pocketbase",
+              "go_version": "1.27.2",
+              "sqlite_engine_version": "3.53.4",
+              "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+              "native_platform": "linux/amd64",
+              "builder": {
+                "tag": "golang:1.27.2-bookworm",
+                "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+                "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+              },
+              "runtime": {
+                "tag": "debian:bookworm-slim",
+                "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+                "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+              },
+              "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+              "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+              "serving_budget": {
+                "cpus": 1,
+                "memory_bytes": 4294967296,
+                "swap_bytes": 0
+              },
+              "runner_profile": "k6-2cpu-8g-v3"
+            }
+          }
+        },
+        "serving_budget": {
+          "cpus": 1,
+          "memory_gib": 4,
+          "memory_bytes": 4294967296,
+          "swap_bytes": 0,
+          "allocation_type": "Quota-limited shared-host slice; entire serving stack"
+        },
+        "runner_budget": {
+          "software": "k6",
+          "version": "1.3.0",
+          "cpus": 2,
+          "memory_gib": 8,
+          "memory_bytes": 8589934592,
+          "swap_bytes": 0,
+          "profile": "k6-2cpu-8g-v3"
+        }
+      },
+      "resource_review": {
+        "run": "20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3",
+        "outcome": "pass",
+        "reason": "hold gates passed",
+        "eligible_for_target_capacity_scoring": true,
+        "measurement_replay": [
+          "pass",
+          "hold gates passed"
+        ],
+        "all_original_checksums_verified": true,
+        "archive_app_and_verification_hashes_reproduced": true,
+        "raw_quantiles_reproduced": {
+          "min": 0.233187,
+          "max": 4668.787094,
+          "med": 18.580996,
+          "p(95)": 74.44694169999997,
+          "p(99)": 293.39945952000005
+        },
+        "requests_by_endpoint": {
+          "feed": 145847,
+          "detail": 146010,
+          "like": 21718,
+          "create": 3000
+        },
+        "errors_by_endpoint": {
+          "feed": 0,
+          "detail": 0,
+          "like": 0,
+          "create": 0
+        },
+        "schema_errors": 0,
+        "statuses_by_endpoint": {
+          "feed": {
+            "200": 145847
+          },
+          "detail": {
+            "200": 146010
+          },
+          "like": {
+            "201": 21718
+          },
+          "create": {
+            "201": 3000
+          }
+        },
+        "hold_monitor_samples": 59,
+        "hold_monitor_span_seconds": 290.82297372817993,
+        "runner_peak_cpu_percent_one_core": 192.41,
+        "runner_peak_memory_percent_8gib": 54.83,
+        "parent_peak_memory_bytes_including_cache": 1748107264,
+        "host_swapouts_before": 0,
+        "host_swapouts_after": 0
+      },
+      "host_review": {
+        "run": "20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3",
+        "outcome": "pass",
+        "eligible_for_target_capacity_scoring": true,
+        "hold_samples": 59,
+        "span_seconds": 290.82297372817993,
+        "host_mean_steal_percent": 0.013723421592088447,
+        "host_mean_iowait_percent": 0.3001998473269348,
+        "host_min_MemAvailable_bytes": 10041188352,
+        "host_peak_cpu_pressure_some_avg10": 13.62,
+        "host_peak_memory_pressure_some_avg10": 0.0,
+        "host_peak_io_pressure_some_avg10": 0.0,
+        "aggregate_serving_mean_cpu_cores": 0.8940066208215344,
+        "aggregate_serving_throttled_period_percent": 3.7684138403562866,
+        "aggregate_serving_peak_charged_memory_bytes_including_accounted_cache": 1748107264
+      },
+      "endpoint_metrics": {
+        "feed": {
+          "http_req_duration": {
+            "p(95)": 51.55114969999997,
+            "p(99)": 77.59604938000001,
+            "min": 0.347,
+            "max": 155.099234,
+            "avg": 20.500102631559155,
+            "med": 17.734525
+          },
+          "http_reqs": {
+            "rate": 265.1766885833957,
+            "count": 145847
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 145847
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "p(95)": 51.212446849999985,
+            "p(99)": 77.72683866000003,
+            "min": 0.233187,
+            "max": 150.338238,
+            "avg": 20.3567031288129,
+            "med": 17.60897
+          },
+          "http_reqs": {
+            "count": 146010,
+            "rate": 265.47305258292323
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 146010
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "max": 4668.787094,
+            "avg": 134.74611855138576,
+            "med": 63.753147999999996,
+            "p(95)": 514.1413446999991,
+            "p(99)": 1024.5176079799865,
+            "min": 0.666378
+          },
+          "http_reqs": {
+            "count": 21718,
+            "rate": 39.487321114964224
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 21718
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "med": 135.22549650000002,
+            "p(95)": 583.2220864999993,
+            "p(99)": 1077.8063532599992,
+            "min": 47.336008,
+            "max": 3120.196169,
+            "avg": 199.48564843766658
+          },
+          "http_reqs": {
+            "count": 3000,
+            "rate": 5.454552138543727
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 3000
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3",
+      "summary": {
+        "outcome": "pass",
+        "reason": "hold gates passed",
+        "vus": 10000,
+        "tier": "standard",
+        "mode": "capacity",
+        "runner_profile": "k6-2cpu-8g-v3",
+        "deployment_track": "vps16-linux-amd64",
+        "platform": "linux/amd64",
+        "hold_requests": 316546,
+        "hold_rps": 1055.1533333333334,
+        "latency_ms": {
+          "max": 3162.334651,
+          "avg": 25.975751639976885,
+          "med": 16.2718505,
+          "p(95)": 67.58857599999999,
+          "p(99)": 239.86267204999965,
+          "min": 0.242875
+        },
+        "request_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 316546
+        },
+        "schema_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 316546
+        },
+        "tested_software": {
+          "product": "v0.40.5",
+          "go": "1.27.2",
+          "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+          "sqlite_engine": "3.53.4",
+          "sqlite_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+          "native_build": {
+            "native_platform": "linux/amd64",
+            "app_source_sha256": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+            "image_id": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+            "executable_sha256": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+            "builder": "golang:1.27.2-bookworm@sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+            "runtime": "debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+            "builder_budget": {
+              "cpus": 2,
+              "memory_bytes": 8589934592,
+              "swap_bytes": 0
+            },
+            "build_flags": [
+              "CGO_ENABLED=0",
+              "-trimpath",
+              "-buildvcs=false",
+              "-ldflags=-s -w"
+            ],
+            "versions": {
+              "service": "PocketBase",
+              "version": "v0.40.5",
+              "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+              "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+              "go_module": "github.com/pocketbase/pocketbase",
+              "go_version": "1.27.2",
+              "sqlite_engine_version": "3.53.4",
+              "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+              "native_platform": "linux/amd64",
+              "builder": {
+                "tag": "golang:1.27.2-bookworm",
+                "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+                "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+              },
+              "runtime": {
+                "tag": "debian:bookworm-slim",
+                "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+                "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+              },
+              "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+              "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+              "serving_budget": {
+                "cpus": 1,
+                "memory_bytes": 4294967296,
+                "swap_bytes": 0
+              },
+              "runner_profile": "k6-2cpu-8g-v3"
+            }
+          }
+        },
+        "serving_budget": {
+          "cpus": 1,
+          "memory_gib": 4,
+          "memory_bytes": 4294967296,
+          "swap_bytes": 0,
+          "allocation_type": "Quota-limited shared-host slice; entire serving stack"
+        },
+        "runner_budget": {
+          "software": "k6",
+          "version": "1.3.0",
+          "cpus": 2,
+          "memory_gib": 8,
+          "memory_bytes": 8589934592,
+          "swap_bytes": 0,
+          "profile": "k6-2cpu-8g-v3"
+        }
+      },
+      "resource_review": {
+        "run": "20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3",
+        "outcome": "pass",
+        "reason": "hold gates passed",
+        "eligible_for_target_capacity_scoring": true,
+        "measurement_replay": [
+          "pass",
+          "hold gates passed"
+        ],
+        "all_original_checksums_verified": true,
+        "archive_app_and_verification_hashes_reproduced": true,
+        "raw_quantiles_reproduced": {
+          "min": 0.242875,
+          "max": 3162.334651,
+          "med": 16.2718505,
+          "p(95)": 67.58857599999999,
+          "p(99)": 239.86267204999965
+        },
+        "requests_by_endpoint": {
+          "feed": 145868,
+          "detail": 146003,
+          "like": 21810,
+          "create": 2865
+        },
+        "errors_by_endpoint": {
+          "feed": 0,
+          "detail": 0,
+          "like": 0,
+          "create": 0
+        },
+        "schema_errors": 0,
+        "statuses_by_endpoint": {
+          "feed": {
+            "200": 145868
+          },
+          "detail": {
+            "200": 146003
+          },
+          "like": {
+            "201": 21810
+          },
+          "create": {
+            "201": 2865
+          }
+        },
+        "hold_monitor_samples": 60,
+        "hold_monitor_span_seconds": 296.8636565208435,
+        "runner_peak_cpu_percent_one_core": 205.69,
+        "runner_peak_memory_percent_8gib": 55.11,
+        "parent_peak_memory_bytes_including_cache": 1898233856,
+        "host_swapouts_before": 0,
+        "host_swapouts_after": 0
+      },
+      "host_review": {
+        "run": "20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3",
+        "outcome": "pass",
+        "eligible_for_target_capacity_scoring": true,
+        "hold_samples": 60,
+        "span_seconds": 296.8636565208435,
+        "host_mean_steal_percent": 0.013532600881310633,
+        "host_mean_iowait_percent": 0.296871431833752,
+        "host_min_MemAvailable_bytes": 10006577152,
+        "host_peak_cpu_pressure_some_avg10": 14.52,
+        "host_peak_memory_pressure_some_avg10": 0.0,
+        "host_peak_io_pressure_some_avg10": 0.0,
+        "aggregate_serving_mean_cpu_cores": 0.8627014098036561,
+        "aggregate_serving_throttled_period_percent": 4.346361185983827,
+        "aggregate_serving_peak_charged_memory_bytes_including_accounted_cache": 1898233856
+      },
+      "endpoint_metrics": {
+        "feed": {
+          "http_req_duration": {
+            "avg": 18.368482037294076,
+            "med": 15.537752000000001,
+            "p(95)": 49.15556434999999,
+            "p(99)": 74.30631700999992,
+            "min": 0.353923,
+            "max": 177.911303
+          },
+          "http_reqs": {
+            "count": 145868,
+            "rate": 265.2102746457097
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 145868
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "med": 15.585291,
+            "p(95)": 49.097511699999984,
+            "p(99)": 74.97753684000007,
+            "min": 0.242875,
+            "max": 177.606452,
+            "avg": 18.34340274121761
+          },
+          "http_reqs": {
+            "count": 146003,
+            "rate": 265.4557252385551
+          },
+          "request_errors": {
+            "passes": 0,
+            "fails": 146003,
+            "rate": 0
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "avg": 108.25675573576439,
+            "med": 50.216541,
+            "p(95)": 414.8093654999997,
+            "p(99)": 900.55361008,
+            "min": 0.682439,
+            "max": 2930.350407
+          },
+          "http_reqs": {
+            "count": 21810,
+            "rate": 39.653906888576856
+          },
+          "request_errors": {
+            "fails": 21810,
+            "rate": 0,
+            "passes": 0
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "med": 121.650889,
+            "p(95)": 484.1038971999995,
+            "p(99)": 863.0951732000021,
+            "min": 48.853187,
+            "max": 3162.334651,
+            "avg": 175.87255420209408
+          },
+          "http_reqs": {
+            "count": 2865,
+            "rate": 5.209007025940976
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 2865
+          }
+        }
+      }
+    },
+    {
+      "run": "20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3",
+      "summary": {
+        "outcome": "pass",
+        "reason": "hold gates passed",
+        "vus": 10000,
+        "tier": "standard",
+        "mode": "capacity",
+        "runner_profile": "k6-2cpu-8g-v3",
+        "deployment_track": "vps16-linux-amd64",
+        "platform": "linux/amd64",
+        "hold_requests": 316618,
+        "hold_rps": 1055.3933333333334,
+        "latency_ms": {
+          "avg": 27.095127505160512,
+          "med": 16.585021,
+          "p(95)": 66.47163984999985,
+          "p(99)": 278.3945439600006,
+          "min": 0.220555,
+          "max": 2791.668979
+        },
+        "request_errors": {
+          "rate": 0,
+          "passes": 0,
+          "fails": 316618
+        },
+        "schema_errors": {
+          "fails": 316618,
+          "rate": 0,
+          "passes": 0
+        },
+        "tested_software": {
+          "product": "v0.40.5",
+          "go": "1.27.2",
+          "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+          "sqlite_engine": "3.53.4",
+          "sqlite_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+          "native_build": {
+            "native_platform": "linux/amd64",
+            "app_source_sha256": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+            "image_id": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+            "executable_sha256": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+            "builder": "golang:1.27.2-bookworm@sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+            "runtime": "debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+            "builder_budget": {
+              "cpus": 2,
+              "memory_bytes": 8589934592,
+              "swap_bytes": 0
+            },
+            "build_flags": [
+              "CGO_ENABLED=0",
+              "-trimpath",
+              "-buildvcs=false",
+              "-ldflags=-s -w"
+            ],
+            "versions": {
+              "service": "PocketBase",
+              "version": "v0.40.5",
+              "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+              "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+              "go_module": "github.com/pocketbase/pocketbase",
+              "go_version": "1.27.2",
+              "sqlite_engine_version": "3.53.4",
+              "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+              "native_platform": "linux/amd64",
+              "builder": {
+                "tag": "golang:1.27.2-bookworm",
+                "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+                "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+              },
+              "runtime": {
+                "tag": "debian:bookworm-slim",
+                "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+                "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+              },
+              "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+              "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+              "serving_budget": {
+                "cpus": 1,
+                "memory_bytes": 4294967296,
+                "swap_bytes": 0
+              },
+              "runner_profile": "k6-2cpu-8g-v3"
+            }
+          }
+        },
+        "serving_budget": {
+          "cpus": 1,
+          "memory_gib": 4,
+          "memory_bytes": 4294967296,
+          "swap_bytes": 0,
+          "allocation_type": "Quota-limited shared-host slice; entire serving stack"
+        },
+        "runner_budget": {
+          "software": "k6",
+          "version": "1.3.0",
+          "cpus": 2,
+          "memory_gib": 8,
+          "memory_bytes": 8589934592,
+          "swap_bytes": 0,
+          "profile": "k6-2cpu-8g-v3"
+        }
+      },
+      "resource_review": {
+        "run": "20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3",
+        "outcome": "pass",
+        "reason": "hold gates passed",
+        "eligible_for_target_capacity_scoring": true,
+        "measurement_replay": [
+          "pass",
+          "hold gates passed"
+        ],
+        "all_original_checksums_verified": true,
+        "archive_app_and_verification_hashes_reproduced": true,
+        "raw_quantiles_reproduced": {
+          "min": 0.220555,
+          "max": 2791.668979,
+          "med": 16.585021,
+          "p(95)": 66.47163984999985,
+          "p(99)": 278.3945439600006
+        },
+        "requests_by_endpoint": {
+          "detail": 145987,
+          "feed": 145844,
+          "like": 21878,
+          "create": 2909
+        },
+        "errors_by_endpoint": {
+          "detail": 0,
+          "feed": 0,
+          "like": 0,
+          "create": 0
+        },
+        "schema_errors": 0,
+        "statuses_by_endpoint": {
+          "detail": {
+            "200": 145987
+          },
+          "feed": {
+            "200": 145844
+          },
+          "like": {
+            "201": 21878
+          },
+          "create": {
+            "201": 2909
+          }
+        },
+        "hold_monitor_samples": 60,
+        "hold_monitor_span_seconds": 295.8713719844818,
+        "runner_peak_cpu_percent_one_core": 201.78,
+        "runner_peak_memory_percent_8gib": 54.79,
+        "parent_peak_memory_bytes_including_cache": 2048163840,
+        "host_swapouts_before": 0,
+        "host_swapouts_after": 0
+      },
+      "host_review": {
+        "run": "20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3",
+        "outcome": "pass",
+        "eligible_for_target_capacity_scoring": true,
+        "hold_samples": 60,
+        "span_seconds": 295.8713719844818,
+        "host_mean_steal_percent": 0.015293248030994315,
+        "host_mean_iowait_percent": 0.3041657108386647,
+        "host_min_MemAvailable_bytes": 10018840576,
+        "host_peak_cpu_pressure_some_avg10": 14.84,
+        "host_peak_memory_pressure_some_avg10": 0.0,
+        "host_peak_io_pressure_some_avg10": 0.0,
+        "aggregate_serving_mean_cpu_cores": 0.8681034608967555,
+        "aggregate_serving_throttled_period_percent": 4.258195336262251,
+        "aggregate_serving_peak_charged_memory_bytes_including_accounted_cache": 2048163840
+      },
+      "endpoint_metrics": {
+        "feed": {
+          "http_req_duration": {
+            "p(95)": 48.087458500000004,
+            "p(99)": 70.67136637000026,
+            "min": 0.357128,
+            "max": 135.125811,
+            "avg": 18.4080805711308,
+            "med": 15.859736
+          },
+          "http_reqs": {
+            "count": 145844,
+            "rate": 265.1688692711861
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 145844
+          }
+        },
+        "detail": {
+          "http_req_duration": {
+            "avg": 18.353898770760708,
+            "med": 15.805526,
+            "p(95)": 48.199171299999996,
+            "p(99)": 71.13863459999975,
+            "min": 0.220555,
+            "max": 152.541379
+          },
+          "http_reqs": {
+            "count": 145987,
+            "rate": 265.4288672711434
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 145987
+          }
+        },
+        "like": {
+          "http_req_duration": {
+            "p(99)": 992.07700254,
+            "min": 0.657691,
+            "max": 2791.668979,
+            "avg": 121.03543748912111,
+            "med": 52.8759285,
+            "p(95)": 483.6015500999998
+          },
+          "http_reqs": {
+            "count": 21878,
+            "rate": 39.77787582564253
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 21878
+          }
+        },
+        "create": {
+          "http_req_duration": {
+            "avg": 194.79307541388752,
+            "med": 126.810465,
+            "p(95)": 575.2257507999999,
+            "p(99)": 1048.4022799600004,
+            "min": 48.161102,
+            "max": 2727.740788
+          },
+          "http_reqs": {
+            "count": 2909,
+            "rate": 5.28905022290859
+          },
+          "request_errors": {
+            "rate": 0,
+            "passes": 0,
+            "fails": 2909
+          }
+        }
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "run": "20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "mode": "smoke",
+      "vus": 1000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "hold_requests": 2198,
+      "hold_rps": 109.9,
+      "latency_ms": {
+        "avg": 1.4071463744313004,
+        "med": 0.473081,
+        "p(95)": 3.081323700000001,
+        "p(99)": 43.85432507,
+        "min": 0.276668,
+        "max": 83.337079
+      },
+      "request_errors": {
+        "passes": 0,
+        "fails": 2198,
+        "rate": 0
+      },
+      "schema_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 2198
+      }
+    },
+    {
+      "run": "20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 2500,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "hold_requests": 79304,
+      "hold_rps": 264.3466666666667,
+      "latency_ms": {
+        "med": 0.47487,
+        "p(95)": 13.119207949999923,
+        "p(99)": 45.28261443000001,
+        "min": 0.235953,
+        "max": 108.57681,
+        "avg": 2.4154399467365977
+      },
+      "request_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 79304
+      },
+      "schema_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 79304
+      }
+    },
+    {
+      "run": "20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 2500,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "hold_requests": 79377,
+      "hold_rps": 264.59,
+      "latency_ms": {
+        "max": 163.738534,
+        "avg": 2.379628697280079,
+        "med": 0.47418,
+        "p(95)": 12.851750599999995,
+        "p(99)": 44.939284720000146,
+        "min": 0.241853
+      },
+      "request_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 79377
+      },
+      "schema_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 79377
+      }
+    },
+    {
+      "run": "20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 5000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "hold_requests": 158597,
+      "hold_rps": 528.6566666666666,
+      "latency_ms": {
+        "max": 205.873223,
+        "avg": 4.976985978707075,
+        "med": 0.626335,
+        "p(95)": 21.647994999999998,
+        "p(99)": 49.69875964000002,
+        "min": 0.228869
+      },
+      "request_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 158597
+      },
+      "schema_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 158597
+      }
+    },
+    {
+      "run": "20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 10000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "hold_requests": 316759,
+      "hold_rps": 1055.8633333333332,
+      "latency_ms": {
+        "max": 3185.40162,
+        "avg": 29.057816403502134,
+        "med": 17.632873,
+        "p(95)": 72.98706879999979,
+        "p(99)": 300.165841099999,
+        "min": 0.227066
+      },
+      "request_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 316759
+      },
+      "schema_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 316759
+      }
+    },
+    {
+      "run": "20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 20000,
+      "outcome": "invalid",
+      "reason": "load generator OOM (not target capacity)",
+      "hold_requests": 0,
+      "hold_rps": 0.0,
+      "latency_ms": {},
+      "request_errors": {},
+      "schema_errors": {}
+    },
+    {
+      "run": "20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 15000,
+      "outcome": "invalid",
+      "reason": "load generator used >=90% of its memory budget",
+      "hold_requests": 439269,
+      "hold_rps": 1464.23,
+      "latency_ms": {
+        "avg": 791.586317068363,
+        "med": 45.74724,
+        "p(95)": 10000.139825,
+        "p(99)": 10005.47173016,
+        "min": 0.376064,
+        "max": 11612.856511
+      },
+      "request_errors": {
+        "rate": 0.06812681978468774,
+        "passes": 29926,
+        "fails": 409343
+      },
+      "schema_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 439269
+      }
+    },
+    {
+      "run": "20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 12500,
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "hold_requests": 373612,
+      "hold_rps": 1245.3733333333332,
+      "latency_ms": {
+        "p(99)": 10000.81716782,
+        "min": 0.393377,
+        "max": 10204.633818,
+        "avg": 607.2679827710891,
+        "med": 34.236934000000005,
+        "p(95)": 6891.789442900001
+      },
+      "request_errors": {
+        "rate": 0.043033949659004526,
+        "passes": 16078,
+        "fails": 357534
+      },
+      "schema_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 373612
+      }
+    },
+    {
+      "run": "20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 11250,
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "hold_requests": 347942,
+      "hold_rps": 1159.8066666666666,
+      "latency_ms": {
+        "max": 10059.687078,
+        "avg": 274.50977620669295,
+        "med": 30.4078715,
+        "p(95)": 876.6719375500007,
+        "p(99)": 9276.471088730046,
+        "min": 0.263113
+      },
+      "request_errors": {
+        "passes": 3167,
+        "fails": 344775,
+        "rate": 0.009102091727931666
+      },
+      "schema_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 347942
+      }
+    },
+    {
+      "run": "20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 10000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "hold_requests": 316575,
+      "hold_rps": 1055.25,
+      "latency_ms": {
+        "med": 18.580996,
+        "p(95)": 74.44694169999997,
+        "p(99)": 293.39945952000005,
+        "min": 0.233187,
+        "max": 4668.787094,
+        "avg": 29.96772910164944
+      },
+      "request_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 316575
+      },
+      "schema_errors": {
+        "passes": 0,
+        "fails": 316575,
+        "rate": 0
+      }
+    },
+    {
+      "run": "20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 10000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "hold_requests": 316546,
+      "hold_rps": 1055.1533333333334,
+      "latency_ms": {
+        "max": 3162.334651,
+        "avg": 25.975751639976885,
+        "med": 16.2718505,
+        "p(95)": 67.58857599999999,
+        "p(99)": 239.86267204999965,
+        "min": 0.242875
+      },
+      "request_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 316546
+      },
+      "schema_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 316546
+      }
+    },
+    {
+      "run": "20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3",
+      "mode": "capacity",
+      "vus": 10000,
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "hold_requests": 316618,
+      "hold_rps": 1055.3933333333334,
+      "latency_ms": {
+        "avg": 27.095127505160512,
+        "med": 16.585021,
+        "p(95)": 66.47163984999985,
+        "p(99)": 278.3945439600006,
+        "min": 0.220555,
+        "max": 2791.668979
+      },
+      "request_errors": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 316618
+      },
+      "schema_errors": {
+        "fails": 316618,
+        "rate": 0,
+        "passes": 0
+      }
+    }
+  ],
+  "full_attempt_slots_used": 11,
+  "full_attempt_budget": 12,
+  "canonical_counts": {
+    "users": 50000,
+    "posts": 500000,
+    "likes": 2016005
+  },
+  "canonical_content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d",
+  "auth_scope": "Synthetic base-collection application users and preissued compatibility HS256 JWTs; 0 regular native Auth users and 1 private installer superuser. Not native signup/login/session throughput.",
+  "durability": "Native SQLite WAL / synchronous=NORMAL; normal process restart proof, not provider power-loss durability.",
+  "artifact_availability": "Original raw gzip/source archives retained locally and on azabab.com; bulk files excluded from Git under existing policy. No external public download locator or CI/release execution claimed."
+}

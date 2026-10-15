@@ -1,0 +1,988 @@
+{
+  "exact_staged_files_scanned": 245,
+  "archive_sha256": "1c7324b2df37ebe3520194fb05ac7f47272fdeecdc46f6d07ff0d09a7236b2b6",
+  "actual_runtime_key_token_signatures_native_password_tokenkey_scan_passed": true,
+  "no_private_state_or_bulk_run_artifacts": true,
+  "files": [
+    {
+      "path": "MASTER_PLAN.md",
+      "sha256": "337fdddf0a6d163ab80e156a882f86ce90607b4489fb173ed50a17428cc87312"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f103e47846bb34a7e1f0654d3f6258564c8d5ebeb600e853dacac9b9bc996edc"
+    },
+    {
+      "path": "results/pocketbase/README.md",
+      "sha256": "e3f167b2ae1e12b040300b17b0ea6ea68528e207122cc84a1e7a7bec17a0fba5"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/canonical-api-green.log",
+      "sha256": "447adb62432b8e30f941b72176d00d7ce544ae2b454dc23842d2a03ee397b8b1"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/canonical-api-red.log",
+      "sha256": "09b0fa8bc4e5ec1fa2a09d19292031012ce8d95d682ae41444747766a5f554ea"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/canonical-import-green.log",
+      "sha256": "74488289e8234501cbe739a7aaf3938fcecc8502a7691e891b4c0bc278ee9b68"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/canonical-seed.log",
+      "sha256": "35c9f8ada9bc49e52ea7d28d1905d5b281ce2abb68f0fdd2b5e03a9a1b3faf72"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/config-first-attempt.log",
+      "sha256": "b2aa09e70494c194c831541a37be4800e567d9a0b298d63c6f9dbc6ca53ce11f"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/config-green.log",
+      "sha256": "50e6eb3ad2de28b15f0248b9f9ad5a3105a9509b9f04ff91f3c611faa4963c94"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/config-red.log",
+      "sha256": "1e803292dcb90d5dcdd635e9c81ba52c2354e7c6b1729c1c8c61b490493c4f75"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/http-errors-red.log",
+      "sha256": "b8cf3bb938bd1f8431deb188b58335258ff1c025a08826b63c1fb1003ff4b4f9"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/http-green.log",
+      "sha256": "72935301d786bcf7de2124eff7dd604ef97c41223797f882fe6c5a39f772802a"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/http-journey-red.log",
+      "sha256": "37f8347c7896ddb761b86fc9e0d2f1cc35236f09420085d3b2e5156472f72415"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/http-red.log",
+      "sha256": "37f8347c7896ddb761b86fc9e0d2f1cc35236f09420085d3b2e5156472f72415"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/native-build-initial.log",
+      "sha256": "0c8e974293205aaa8e307bb5b565095a9d8364881a94da3eb148e43447ae03b2"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/native-build-verified.log",
+      "sha256": "b1ae1230f8765272fc4e534fc7bbaa50bd493027f3e4404e41474b033a9e145e"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/native-engine-version-green.log",
+      "sha256": "d2b272bbe448dc2394851bc622ea058d0e8a951758a61fae4328d7c519c37ed1"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/native-permissions-and-real-restart.log",
+      "sha256": "2c08bf878b2ddd54576f46617a905f89a62270398feef753b46fa86db1e7dc73"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/prototype-profile-field-first-attempt.log",
+      "sha256": "7cd16927239d22ec9833485e03fd35747db0d723e01971b4007f29ca879d5b0a"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/shared-harness-green.log",
+      "sha256": "57fdc3ae055a6b829b61e309e4bed3715d0444b8981e4b9aab19229eaf47d8ec"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/shared-harness-red.log",
+      "sha256": "42c4ea10b104726894c0bc472a50a3db1888e0d5493a72db8f5d08f56190ba15"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/snapshot-red.log",
+      "sha256": "b2c889f177af458d650a78e2a95d83774bc83c9ef4de5aa193d5de332d2ff874"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/startup-storage-green.log",
+      "sha256": "68e5666ce4b34ec4dbfc87aa5e4e17ec609070cf8e7e17c81f31f708a5d3e989"
+    },
+    {
+      "path": "results/pocketbase/implementation-checks/startup-storage-probe.log",
+      "sha256": "f2019b73e751c828f21af936b0fbeb54ee620cbe1e2392ff97a1493088beb731"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/SHA256SUMS",
+      "sha256": "ea048ff986c916cc7cf7f0aa43d204a574c03cd9ad8d5284c5c95b9f27154d98"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/k6-summary.json",
+      "sha256": "31af9f99c914500769a31b11fc301706acb5516617742d58a71068a340cb96d3"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/k6.log",
+      "sha256": "a1c81138d2f862ba354a97f721e80ed8cccbd663d082fe341476797e60500393"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/manifest.json",
+      "sha256": "f05509e88212a6e761b8b38ee45f8dc5f6447164558ba808a9b4c6655a4731a6"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/report.md",
+      "sha256": "0b13fbca220081effd551afcee16cc8237f70c575744fc447acd96600f2c5256"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/resources.jsonl",
+      "sha256": "d22a4d07fda70cb2ff98d50f97f0641c4bb0b23df9d3240aa6bc60454faa81bc"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/summary.json",
+      "sha256": "d13354acf4dbd8cc5423cfe4c195f2d6bf84a4ae6ef76394ceffbd970ee28bf2"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T141534167176Z-standard-1000vu-k6-2cpu-8g-v3-smoke/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "0ee872eba4d397c9df65ee6f35a0da4fbfe432dc2c47ca09a14170cc66633b5e"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "7de0e468ce27c8e3c12f2575901cde462174d3ddd075cb19f47051f331e48c3b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "661e6a8f62d408e2631b2dc7552ff1ada7ca51ecacbb20282ec7bb320f893142"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "ab566813e558fcaa4cb31f45826da517c4c0b38f4a98468a04be38d1dbbfe3a3"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "b448078865961c9d53ad6c740961d9bc8aefc574ba69e222cffd857560c070f2"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "f3b8cfc92b2edb7e6564eb33959ee41704fb5dac94dcf46a28e242ff2e5710bf"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "8050c3a2c27a407aeb5a4487b61520eb157fda7c395449058b6580e12d3b541c"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "4aec840ac82ea442a2dc8f0ba9e829475fc9d80931271daaf0c4fb60709d36ec"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "a0c13221c0fb970d8ac0b7c1b870e35d4c7f4158738255e3ceeceaa0f8e7b888"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "661e6a8f62d408e2631b2dc7552ff1ada7ca51ecacbb20282ec7bb320f893142"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "23e5809809a57a41f0896dc3e4f147a9169053c2bec1d2fa3823264912c553f9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "f0e2650a8e745861fe9af9b5dd23f21b033232ddde4ef0a9f601d2705d303168"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "617bb2478fba22e89786e1f513c98920a90ab2810fb8622bc88333b4037510fe"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "363cc5f93bf98b4dfff975d1d6b0ac1f9891dcb12cfbc87c41e0c2e876359211"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T152505251855Z-standard-2500vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "15ab064ee80204bfeee05f1edc2685004730aaef62dc7fdbf57ccb2dc6f8b280"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "bb2d59eb05bcea6178b88963e14d01319e0ba226d0c56d0eef60a26f0764e538"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "661e6a8f62d408e2631b2dc7552ff1ada7ca51ecacbb20282ec7bb320f893142"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "07d04a4e55f2cba834c0a71378fd6093943c2966ac9a9421ea245509b7ef75c4"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "b025c49c39e7c0555c7a4412b7f4cb0bbcd3673ae99eb14063e9a49a8ac03ce1"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "4a7627f1cf1331d2dd670ef56fc7e89945a5bb8ec2456797e7552ec023051689"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "5bd16656f20f839b100ff8f300252b760f82a2eaf679d6230df325ea1eb47cec"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T153502288012Z-standard-5000vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "623b10663fd8c6fc3db049066170bf80a21628cc0ffc5af335064474ec757fe6"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "021e22e2872a8fa80c3d3d778d55f1d2a43a65b39ea65a7a3c20108c45bfcba6"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "661e6a8f62d408e2631b2dc7552ff1ada7ca51ecacbb20282ec7bb320f893142"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "ce1b85364ca31d537c3a621e5dd4df54dd894dda42d2d747664043794b9935bb"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "b3b0ffcd4349ed2ed4fdebf3d7fb7f2da245e66c96492a6ab65886e462d47ea3"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "b266774e8efb5f9784f6b0fa27b61189beb0ffc18a12fcb54d749162c56a9552"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "c067932d25afd36abdfb20c86979876b9676f92784a91b123d18ee80f7d5b868"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T154500193682Z-standard-10000vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "5abba18ff5bb3710cf5a2e17e58b77cafea775b934a3e895d2be7c2127f14958"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "6417398450dfb4deabaf6518e0b8a99fa97e983c4b138abb0107d128c57d6b35"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "6b811da71701d6ee4aad25d8828b9e6048b580370cdcf1e77b63cf932aee0419"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "2639421b91388b3295acb2fa9e8a474bda7eb9ff66936b874c2112027238bd64"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "e90f5f3143ab0b13a86d0be33185ceea878a34987a63352d17f83d4051bf57e3"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "dac87333179308a353467881e55c8576b956dc2a6181243b512c2af90cc3f40d"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T155504060165Z-standard-20000vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "a93c74e43a68349f99869186f0d2be11409726c4c153349cd9b7d66580d0c8ba"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "0f797d465ae87fae3725f5733faf673ad8e94b8ff1adc2b6daf4d590c124bc96"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "78fe70113bf88ab7c7700c6e95f54ca226f31d3965d1084f9cfbdded92363d29"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "ac91d3ec80f20bc6ff432ee384a00971a2d55748780db05b0eb5f5ecafa0f9a5"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "45f114f39e7f565767732386501ea570ffcc204509505e76dcb9ecfbd670c710"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "7c4a0535f435567a446ec287d18638b2ba4412419d5657e44efc5487ac16e106"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "e2ac73399515cad7b6fd351c020f985a1b90c2ccd6a661b4e2e0a269c074d6ef"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "87d6fa2ee996e02d093161e7ff5111354eb962e57ad8f49b7b1de2642715c525"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "544bdd83741b26f65d3ee079ac2eb0c1a3450fdd56b2b28eef8ba9352a48809a"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "95e2179b3190dc32bd49493b2f534d3b4bef79e495a54c1390c18d5ff13be8ee"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "ddc6f6f0803cc91b38956439c3ee574a75952565f25d01691b19931ffdf94c50"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "07cbdb4317556e2574fb431e0a75976fdfb74e0595431c23fd5965a3e3a2b5eb"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "cd4b54ace0f5d3f8a7e7454ea5810859c8125100be27a1a985187a4ac2a3d332"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "4a36774b423280115579a3e212aaab406ed210ff8883f3ccf2a5145958de907f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "4c516893de6a928057a4e6b0bb5e255040e08fba60f24ee96b26498db528f30e"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "ab8da8747599bb19d37e0a930a1ca6b60456f90ef7caadf3f7feb2f50ad1b0c2"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "53d900fc68128b183c1a450a8100c2c5054d5d43f1740810a302dc43466761d2"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "ba7492d88a0d226939ac57bfd532eeb7ac89836a02f3ab2bd5f80ec6c5bcea22"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "60e2e37f17e5fc2d276ab455f3ac8f685f6ac83988e4332fe4dfe82366575786"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "8686c2f541e85cda3ae90b40d62c5a29391b82a0a64ecaf2508f060b5b3758bf"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "4d604a83029123c9c5e94c2e13893d3681572d39f43bdbab647b104a3ecdd3eb"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "ff3a83ae1d8a18a261b0d92705260bfbe970771bfcce1165f105d93482299fe2"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "a36bfc43d7dc2ab3920dafd9ca3cbb9d723ad204bd5ad92a3f73d5ae871e6e89"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "661e6a8f62d408e2631b2dc7552ff1ada7ca51ecacbb20282ec7bb320f893142"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "a6ff9499371ccfc24e7ea35c97e5b3ef64424148022c8337c27d6e13f5037a80"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "f336c9002b01eaf0f7696e01ea460152767df02fb8287a80de9298e4f916312c"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "e69ecf501d7681d515f3b26f4eca4831386450e4726c5da87d6c5231d8ceda6b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "1e417abe812945021efd3f415cc7b12307b222fe204aade957549739ec82ef33"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T164056211098Z-standard-10000vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "186cf4c5db493e98ffe2cff5a6a49772153ea5746ef82254326a8482f130340f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "ba7cf8656254091486148fd79b755c1e2ce8f58f0e20a45a8244f9d0c0c5d516"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "661e6a8f62d408e2631b2dc7552ff1ada7ca51ecacbb20282ec7bb320f893142"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "3845e10c59d864da7cfc166ba29de899328f62fa5b3a98c12c616a2c42342bbe"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "85468af0f951e4c910f54e1182a7acd99e9c6a9c0aecece9865050a28d1d0067"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "1968e492250ac11a70f56193a576a9d36d8237706b8d98cab6a4f8429fdc0b1e"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "9b261d8a3f1c1c85fbe404bba4f03393d176520c190237a24ff3ab8d43b0d448"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T165058113497Z-standard-10000vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "sha256": "8e4d18d79e0c00aa492870f7d77dd702907c4427f6e3d46103731153bfa48bab"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/k6-summary.json",
+      "sha256": "49c9800b52982c9285bde01235c2a120299cd6189c6b37f8c795effd6a8193f9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/k6.log",
+      "sha256": "661e6a8f62d408e2631b2dc7552ff1ada7ca51ecacbb20282ec7bb320f893142"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/manifest.json",
+      "sha256": "247eb2edffe0938dd6d1f85f1f76fe119e115b6958f6b83b8a97ee6f70b56175"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/report.md",
+      "sha256": "aa73be95af8714c7edfba0b9c52a98876ed48dccccd2bc87540c15a2c8f892c6"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/reset.log",
+      "sha256": "8499cd5a0ee91710c758c5c3dd0cb8ba6f5cd6e2bb17252b9fd4e0daef438290"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/resources.jsonl",
+      "sha256": "efe12a5dd2cc41dc3d3443ece995d466bd2f14208404f9e19c1a0bc51e8a38fc"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/summary.json",
+      "sha256": "7c88d26f0f740be24587905e3c4673d804c63f8384ef432e40ad767d8f073d46"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T170059086766Z-standard-10000vu-k6-2cpu-8g-v3/working-tree.patch",
+      "sha256": "b5fbb2f90ed7dc7b0f15e464501a3a9598ec908c0e7395f8c852a653f9e1751f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md",
+      "sha256": "53f2b4d3abbdfb93bb2ea999d59669e8a954af96ad0c70a0c5ce3bfe6e9b6bc4"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/PAUSED.md",
+      "sha256": "e186a5c8175131955723ab68f90c64df821c7080a3e9f348a4495b766f1957ce"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/README.md",
+      "sha256": "a3091fc65160b2da50f88d321326268b5c371637a8d461e88fa07db551fad855"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/REPORT_SHA256SUMS",
+      "sha256": "43d592ae854f1a6a25efd8b898a37e52fb8d459213539727fcee8144a31ed85e"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/confirmed-lower-bound.json",
+      "sha256": "f44ffb74d5f94306deb11591e699086bd1b211f296f521ece70b83af7ae361ce"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/endpoint-confirmations.md",
+      "sha256": "19e1ea5b65f9e5dedc5bd54d8c4be0546fe9aa1ce0ab4e416b97be7eae697e69"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/audit-host.py",
+      "sha256": "703affe24f9ed7f73c4517ad4ae6596d89e2fe1b777b3313cbcb37931bac2c53"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/campaign-generator-limited-20261015T1600Z.json",
+      "sha256": "9d89cb78de59edc09f1f291b0970e31f596fe66d5d4c26f3a633b743fc30ddfb"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/campaign-paused-before-resume-20261015T1521Z.json",
+      "sha256": "0ba135ad9b27d9ea914f18cd14aeddae3c7662d89b9d2751fc9e92c335ce6e32"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/capacity-campaign-resumed-20261015T1521Z.log",
+      "sha256": "9af6bbd3f5ab61c8eec75310aa18a55f22eeabf861d03d438c3ca89186cd73ff"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/capacity-campaign-resumed-remote.sh",
+      "sha256": "08186be3be579717fdf8ccd54dc460e4edb46aa95a02bd5100cbec107def5050"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/capacity-campaign.log",
+      "sha256": "2caaaeac04df130d6d35d4bc9b70343795bf3edc562d16297257f34e3222c866"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/confirm-10000-remote.py",
+      "sha256": "61bccae1678112542fa38211c36403883843457e7d639e89722a166277005093"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/confirmation10000-driver.log",
+      "sha256": "22e5dd0e3247a6f4a32b30d45d22fdd0734029417952aa5e283ee9b94553359e"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/confirmation10000-phase.json",
+      "sha256": "96ed04467eea6b87984389f36f950449990e2078edd8b7e795c2936ced0c0b8f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/final-deployment-attestation.json",
+      "sha256": "cdd62b14894d1a8fb7897daaa5270881c3b7e6f8b6a04c83389abee6f0ae0134"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/final-native-input-and-privacy-review.json",
+      "sha256": "0053827518b11f6de4e0f77f8161c8595f310c9f7079395d177a4dcc14b64ecc"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/final-native-review.py",
+      "sha256": "4dfa7a3c6be1fcd8434f3442019c7ff5d243c2abb7eaa37932505b93c38940c0"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/first-full-correctness-failed.log",
+      "sha256": "810bbaf0da0ea3bf23e9d3c860d42176a5195549160e8fcc5d5183910cff061b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/formal-build-manifest.json",
+      "sha256": "23b8fd422c40639f8341ce0afdf0d210f5707adbfc5380b605502073b0fb76cd"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/formal-deployment-attestation.json",
+      "sha256": "2e95f3182366627366a10d9077dd8536195376ff3f790e37abc43b81292de45f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/full-canonical-dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/full-correctness-manifest.json",
+      "sha256": "ee17c99d21a5bcaace2a150c399447f63c39b2cbeb36d8470b58f5eb3f0e1ab9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/full-correctness.log",
+      "sha256": "9057c08bd3a826c51d5aa818865f5c9d040158ba1cdfb07dce7f4fb81fda5e9b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/full-native-build-manifest.json",
+      "sha256": "b10a91714e73c73b92859c9d66334718046e6c5962eec2f2c899e3a10ec218e1"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/full-privacy-and-input-review.json",
+      "sha256": "853298abb88a45c6227fec8cfac7304a7437f4c328fdd3385bae0b6c42aed982"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/generator-limit-review.json",
+      "sha256": "4c672ad689c4032efa9c548ee192c08e127fa00e00721ce628b286a9a2436921"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/host-parent-review.json",
+      "sha256": "33dc95a78c559f0b65ce2de019e6e8c97f0808b073f4fc6b4b47182c5c56eb14"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/initial-native-serving-profile.json",
+      "sha256": "1f6e27ade72e398e2d36f340821217801a38a912f465689f328793f623232339"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/native-build-verified.json",
+      "sha256": "0dd5d24e2b457110751c2df12b52bd73a7b74f641f1eb1875d7add59f35e3304"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/owner-paused-original-campaign.json",
+      "sha256": "0ba135ad9b27d9ea914f18cd14aeddae3c7662d89b9d2751fc9e92c335ce6e32"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/owner-requested-pause.json",
+      "sha256": "7b375a65cb039f504eda59126a794edb21b05d114b32ec9e83cacbdc59dc9524"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/post-calibration-continuity-review.json",
+      "sha256": "5185d9d085fb002098583f55b039fadd7c7baefa86872fa53dbf7ec46095ecdc"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/post-calibration-service-continuity.json",
+      "sha256": "74dbdd97220196382cb5f1305c511954fc265735379761e4d3614672f2235863"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/post-completion-service-continuity.json",
+      "sha256": "51c706c59bd3ca3a72b9b0c1bd6262047e018f1b504ce1868724c12dfbd79d74"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/post-confirmation-service-continuity.json",
+      "sha256": "51c706c59bd3ca3a72b9b0c1bd6262047e018f1b504ce1868724c12dfbd79d74"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/post-owner-pause-service-continuity.json",
+      "sha256": "36edf3f7b97f065314f24647aba61205b0af58c3158e43844014fadfbe4c0083"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/post-prototype-service-continuity.json",
+      "sha256": "5f11739af4a045d8cb7b66c3f3f6c7bad5dc2ad7afb221c59d3eba56cdc30cc9"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/pre-resume-retained-attempt-review.json",
+      "sha256": "bfb4448082f8973370b2221f0fe1e223499ee8d98af445ffa91fd3c4e2aa1d8e"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/pre-resume-service-continuity.json",
+      "sha256": "e633d2f5f5c06091125cd10aef042999b95b5f3eca56cea6ae037e1a4754c3b4"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/probe11250-resource-review.json",
+      "sha256": "8ede30882f469a31aa0c700adf96b3e5879409d54883e0198db5234f48d9035c"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/probe11250.log",
+      "sha256": "283bfb57681f83e5ab79d02d9c54abeff4ea4e6a72227f4256effdccc9cccaf8"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/probe12500-resource-review.json",
+      "sha256": "81f2a45c5aa52399b0c4ceee865c9f2648c23327986fd8a01dedcc1b684cedb1"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/probe12500.log",
+      "sha256": "45446754ea6617984b33e4c13221b789090af6f6d10361e37639c110df674e0c"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/probe15000-resource-review.json",
+      "sha256": "a317fb4c12f0894ec4646e41d55ce9f042ba60b9db505761e0326bd53ae0cc2f"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/probe15000.log",
+      "sha256": "dbe643ecf37be2cf9f218bd2329f0aeec2f5c680238d02f924b0cd91678dd8a0"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/prototype-canonical-dataset.json",
+      "sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/resume-frozen-input-verification.json",
+      "sha256": "969c1489a0f61dcfe77ed415d4f7f1b29ae5e7c5c46c594f2565348cf5e32c8d"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/resume-host-profile.json",
+      "sha256": "e57731a1b4902ad66b922f601e7d2a2d8002c65b13cf8a041cc4a7999e30165b"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/resume-preflight.sh",
+      "sha256": "714c022a96367faad8b76f41c48909d4dbe1731194b741ef83542f129889afbd"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/retained-attempt-review.json",
+      "sha256": "a877142c11f3399a42b0e6afa645e1ed90158e6b7212809e357ecc3ee8d6268a"
+    },
+    {
+      "path": "results/pocketbase/vps16-linux-amd64/setup-evidence/review-retained.py",
+      "sha256": "476833e46abf15985857b4281048ff8f6004b1b6c5379b9dee4d9bc5651701ce"
+    },
+    {
+      "path": "scripts/benchmark.py",
+      "sha256": "88f0f53893da85f3b6d289dc82bde560ebf35644d9143ac47f95279467e9f00d"
+    },
+    {
+      "path": "scripts/import_pocketbase.py",
+      "sha256": "877b6d623ce96d59142cf58ae015358d2ff680e0084ed0a107440f00cab3b0b0"
+    },
+    {
+      "path": "scripts/pocketbase.py",
+      "sha256": "12141f315f428134515946af322d292d78149395fa6c0ed0cfb5c973737e505a"
+    },
+    {
+      "path": "scripts/pocketbase_benchmark.py",
+      "sha256": "4e25063ffffef27b4ae17a28e338e5e20af0e8b95d2b7b5a566aabe067f89685"
+    },
+    {
+      "path": "scripts/pocketbase_profile.py",
+      "sha256": "bafcd55dd0fcbc10139f19097f2ea05f37627f93a65f7b55230e25451c4c73d6"
+    },
+    {
+      "path": "services/pocketbase/Dockerfile",
+      "sha256": "303d3e9007f1c488d07270c3ffb0c9fb77bc6ad3b52e8ec501416233d252359e"
+    },
+    {
+      "path": "services/pocketbase/README.md",
+      "sha256": "319c51301c103a9bfc4e49f6cdcfb9b4f94b9ddb33fc4f0ede8fc2985f43a858"
+    },
+    {
+      "path": "services/pocketbase/app/contract.go",
+      "sha256": "e183a711dbf51c089ed68e3506a9f3bbf9afd4198d864a96cf5783f291136a61"
+    },
+    {
+      "path": "services/pocketbase/app/http_test.go",
+      "sha256": "eccc0dd27072c403df035cfb2ec941655ffe559cb12e9c541fd07257e051e566"
+    },
+    {
+      "path": "services/pocketbase/app/journey_test.go",
+      "sha256": "a4b2186cdd2c2af832cbf1ff1038f0509a397638ba9b2b8d9ad0c5d4a510eb72"
+    },
+    {
+      "path": "services/pocketbase/app/main.go",
+      "sha256": "2a023165b4efb324a34c8c34ebff73b56c0bef785abaa547a7ee0bd20ebcfea8"
+    },
+    {
+      "path": "services/pocketbase/app/pragma_test.go",
+      "sha256": "df73454e0d2203be96e5fc973eb7f9ecdca5fe2f36a69d87c60f5960da374259"
+    },
+    {
+      "path": "services/pocketbase/app/routes.go",
+      "sha256": "b5d63d26679ae8ba1bc6854de7ec2566c0b4f7e78ebbf0ecb7c74ef2213e6487"
+    },
+    {
+      "path": "services/pocketbase/app/schema_test.go",
+      "sha256": "259ac7796e327e60579f59035d84ea92be9cc0e6e251b0112a72546aa2f54dba"
+    },
+    {
+      "path": "services/pocketbase/app/storage_test.go",
+      "sha256": "2c2095d84a0cdfdef5f66e79384b9859205bf7ab7cdf8d19fe2b317922f82c85"
+    },
+    {
+      "path": "services/pocketbase/compose.yaml",
+      "sha256": "dccb445c29946218e59671705c90131f8e4f8b7b8d5dd33803efd81aa9587f35"
+    },
+    {
+      "path": "services/pocketbase/run.sh",
+      "sha256": "d60ec7775ef93dc49b857d8221cc0cd85a637f3777ec7ec0ad501dead0654cb0"
+    },
+    {
+      "path": "services/pocketbase/versions.json",
+      "sha256": "5f3851a76c054774d37522be6f6ebfecfbc29eb675169cf2622f4d02f420e10f"
+    },
+    {
+      "path": "test/baas/pocketbase_lifecycle.py",
+      "sha256": "02b2af7e771a099772919a9ed3f0becbbc2b0f7272e3b94a276933dcfa17227b"
+    },
+    {
+      "path": "test/baas/pocketbase_native.py",
+      "sha256": "14b54c3f4a7d7b571555f63864e6cd50017a0d62558ea068ee05714ddcf7d430"
+    },
+    {
+      "path": "test/baas/test_pocketbase_budget.py",
+      "sha256": "8fe352f407086ea8bac96a5ba6c01679f4b8d1c784ea0e175f0b2a91852ccdf6"
+    },
+    {
+      "path": "test/baas/test_pocketbase_config.py",
+      "sha256": "79b09ef7358c7ae906c2cdd91995ffcfcae619ab0f9fe330af91cf68bd5ced42"
+    },
+    {
+      "path": "test/baas/test_pocketbase_controller.py",
+      "sha256": "664888544506e0386d7807fc6913c4fcbbd8163b2cdae9e4b890f21d28459798"
+    },
+    {
+      "path": "test/baas/test_pocketbase_evidence.py",
+      "sha256": "9f273358e7852cbacced0ee0e64527bb689592fecaac10c1ba0bc499d36750ac"
+    },
+    {
+      "path": "test/baas/test_pocketbase_harness.py",
+      "sha256": "f93974cfab8b84b6b929cadac2262008e8c8e5f5cdfd262d2d8c9b0dc895e95e"
+    },
+    {
+      "path": "test/baas/test_pocketbase_import.py",
+      "sha256": "c0ac897d577354f2f7deaf63e0c589a586bc0532d4f9139e61a1320b422f57bd"
+    }
+  ]
+}

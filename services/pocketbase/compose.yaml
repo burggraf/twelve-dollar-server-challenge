@@ -1,0 +1,62 @@
+name: baas-pocketbase-vps16
+services:
+  pocketbase:
+    image: baas-pocketbase-vps16-feed:0.1.0
+    platform: linux/amd64
+    cgroup_parent: tdsbaaspocketbasevps16.slice
+    cpus: 1
+    mem_limit: 4294967296
+    memswap_limit: 4294967296
+    user: "1000:1000"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    env_file: ../../.state/pocketbase/runtime.env
+    environment:
+      GOMAXPROCS: "1"
+      GOMEMLIMIT: 3GiB
+    command: [serve, --http=0.0.0.0:4000]
+    ports:
+      - "127.0.0.1:14000:4000"
+    volumes:
+      - data:/data
+    tmpfs:
+      - /tmp:uid=1000,gid=1000,mode=0700,size=67108864
+    ulimits:
+      nofile: {soft: 65535, hard: 65535}
+    stop_grace_period: 30s
+  tools:
+    image: baas-trailbase-vps16-tools:0.1.0
+    platform: linux/amd64
+    profiles: [tools]
+    cpus: 2
+    mem_limit: 2g
+    memswap_limit: 2g
+    environment:
+      BASE_URL: http://pocketbase:4000
+    volumes:
+      - ../../scripts:/work/scripts:ro
+      - ../../test:/work/test:ro
+      - ../../bench:/work/bench:ro
+      - ../../seed/generate.mjs:/work/seed/generate.mjs:ro
+      - ../../.state:/state
+      - data:/depot
+  k6:
+    image: grafana/k6:1.3.0@sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656
+    platform: linux/amd64
+    profiles: [load]
+    cpus: 2
+    mem_limit: 8589934592
+    memswap_limit: 8589934592
+    user: "0:0"
+    working_dir: /work/bench
+    environment:
+      BASE_URL: http://pocketbase:4000
+    volumes:
+      - ../../bench:/work/bench:ro
+      - ../../.state/seed/tokens.json:/tokens.json:ro
+      - ../../.state/pocketbase/runs:/runs
+    ulimits:
+      nofile: {soft: 65535, hard: 65535}
+volumes:
+  data:

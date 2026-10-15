@@ -1,0 +1,17 @@
+{
+  "run": "20261015T161651511282Z-standard-12500vu-k6-2cpu-8g-v3",
+  "verdict_reproduced": [
+    "fail",
+    "hold latency/error/schema gate failed"
+  ],
+  "runner_hold_peak_memory_percent_8gib": 69.45,
+  "hold_samples": 59,
+  "runner_validity_gates_passed": true,
+  "target_process_unchanged_and_recovered_ready": true,
+  "target_parent_oom_delta": 0,
+  "current_frozen_inputs_match": true,
+  "original_checksums_verified": true,
+  "interpretation": "Valid target SLO failure, not runner invalidity; valid probe bracket10000pass to12500fail, not an exact maximum",
+  "full_attempt_slots_consumed": 7,
+  "remaining_total_budget": 5
+}

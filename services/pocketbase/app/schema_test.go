@@ -11,14 +11,11 @@ import (
 // No standalone SQLite driver, fake App, or replacement collection metadata.
 func nativeTestApp(t *testing.T) *pocketbase.PocketBase {
 	t.Helper()
-	app := pocketbase.NewWithConfig(pocketbase.Config{DefaultDataDir: t.TempDir()})
+	app := newFeedApp(t.TempDir())
 	if err := app.Bootstrap(); err != nil {
 		t.Fatal(err)
 	}
 	t.Cleanup(func() { _ = app.ClearBootstrap() })
-	if err := app.RunAppMigrations(); err != nil {
-		t.Fatal(err)
-	}
 	return app
 }
 

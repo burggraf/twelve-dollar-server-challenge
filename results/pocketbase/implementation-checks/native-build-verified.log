@@ -1,0 +1,134 @@
+go version go1.27.2 linux/amd64
+x86_64
+=== RUN   TestNativeHTTPHealthAndExactErrorContract
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/unknown{"error":"not_found"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/abc{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/0{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775808{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775807{"error":"post_not_found"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"missing_bearer_token"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"missing_bearer_token"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"invalid_or_expired_token"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#01
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#02
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#01
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#02
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#03
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_must_be_at_most_500_characters"}
+--- PASS: TestNativeHTTPHealthAndExactErrorContract (0.05s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/unknown{"error":"not_found"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/abc{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/0{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775808{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775807{"error":"post_not_found"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"missing_bearer_token"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"missing_bearer_token"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"invalid_or_expired_token"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#01 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#02 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#01 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#02 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#03 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_must_be_at_most_500_characters"} (0.00s)
+=== RUN   TestNativeHTTPStrictSignedClaims
+--- PASS: TestNativeHTTPStrictSignedClaims (0.04s)
+=== RUN   TestNativeHTTPCommittedJourneyAndNumericOrder
+--- PASS: TestNativeHTTPCommittedJourneyAndNumericOrder (0.05s)
+=== RUN   TestNativeHTTPConcurrentAtomicIDsAndLikes
+--- PASS: TestNativeHTTPConcurrentAtomicIDsAndLikes (0.07s)
+=== RUN   TestNativeApplicationCollectionsAndWriteBoundary
+--- PASS: TestNativeApplicationCollectionsAndWriteBoundary (0.04s)
+=== RUN   TestNativeNumericIdentityAndLosslessTextRoundtrip
+--- PASS: TestNativeNumericIdentityAndLosslessTextRoundtrip (0.04s)
+=== RUN   TestNativeRelationValidationAndUniqueLikes
+--- PASS: TestNativeRelationValidationAndUniqueLikes (0.04s)
+=== RUN   TestNativeStartupAppliesRegisteredApplicationMigrations
+--- PASS: TestNativeStartupAppliesRegisteredApplicationMigrations (0.04s)
+=== RUN   TestNativeStorageFailureAndTransactionalRollback
+--- PASS: TestNativeStorageFailureAndTransactionalRollback (0.04s)
+PASS
+ok  	twelve-dollar-server-challenge/pocketbase-feed	0.436s
+0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8  /out/feed
+/out/feed: go1.27.2
+	path	twelve-dollar-server-challenge/pocketbase-feed
+	mod	twelve-dollar-server-challenge/pocketbase-feed	(devel)	
+	dep	github.com/asaskevich/govalidator	v0.0.0-20230301143203-a9d515a09cc2	h1:DklsrG3dyBCFEj5IhUbnKptjxatkF07cF2ak3yi77so=
+	dep	github.com/disintegration/imaging	v1.6.2	h1:w1LecBlG2Lnp8B3jk5zSuNqd7b4DXhcjwek1ei82L+c=
+	dep	github.com/domodwyer/mailyak/v3	v3.6.2	h1:x3tGMsyFhTCaxp6ycgR0FE/bu5QiNp+hetUuCOBXMn8=
+	dep	github.com/dustin/go-humanize	v1.1.0	h1:dbKTrvD0klcbBV/h4AWJdMuZogJACoMlvWIWZ5b2xWg=
+	dep	github.com/fatih/color	v1.19.0	h1:Zp3PiM21/9Ld6FzSKyL5c/BULoe/ONr9KlbYVOfG8+w=
+	dep	github.com/fsnotify/fsnotify	v1.10.1	h1:b0/UzAf9yR5rhf3RPm9gf3ehBPpf0oZKIjtpKrx59Ho=
+	dep	github.com/gabriel-vasile/mimetype	v1.4.15	h1:05iP/CYtZ/w455R/KZM6rZ5ieAdh99UPtd+d3YzLmaI=
+	dep	github.com/ganigeorgiev/fexpr	v0.6.0	h1:Fza3O/QMBKEudUvxV862qe6GjxM60GJjjKytdp+VQus=
+	dep	github.com/golang-jwt/jwt/v5	v5.3.1	h1:kYf81DTWFe7t+1VvL7eS+jKFVWaUnK9cB1qbwn63YCY=
+	dep	github.com/google/uuid	v1.6.0	h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
+	dep	github.com/mattn/go-colorable	v0.1.16	h1:+2YjeAe7xP1OQbZW1jERPWWCDLlNqFNCvjiqGiAt84A=
+	dep	github.com/mattn/go-isatty	v0.0.24	h1:tGZZoVgT/KiqK1c8ocVLeDS8BSWMRd47J3Lbz7vsReI=
+	dep	github.com/pocketbase/dbx	v1.12.0	h1:/oLErM+A0b4xI0PWTGPqSDVjzix48PqI/bng2l0PzoA=
+	dep	github.com/pocketbase/ozzo-validation/v4	v4.3.0	h1:uKBDVma7bZqgR2a6AwE+k9hkuDFfiZMpBHQdZ1z3iQs=
+	dep	github.com/pocketbase/pocketbase	v0.40.5	h1:D1EKhU96dVII80Rt6lHuCOEBTt2xTVlZG3r2gXYM6VE=
+	dep	github.com/remyoudompheng/bigfft	v0.0.0-20230129092748-24d4a6f8daec	h1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE=
+	dep	github.com/spf13/cast	v1.10.0	h1:h2x0u2shc1QuLHfxi+cTJvs30+ZAHOGRic8uyGTDWxY=
+	dep	github.com/spf13/cobra	v1.10.2	h1:DMTTonx5m65Ic0GOoRY2c16WCbHxOOw6xxezuLaBpcU=
+	dep	github.com/spf13/pflag	v1.0.10	h1:4EBh2KAYBwaONj6b2Ye1GiHfwjqyROoF4RwYO+vPwFk=
+	dep	golang.org/x/crypto	v0.57.0	h1:3ZVCjf8Ggz7zneR/EHRVx68Ctf+2pmIMP2UFhh9cC6M=
+	dep	golang.org/x/image	v0.46.0	h1:b1+oYj0Jbp6K5MDT4i4/eZpYlk3V8SJhhDKh6LBHAyQ=
+	dep	golang.org/x/net	v0.59.0	h1:5zfYln+w5XCxwrnMMJPufRgNoXEaGxl0wo5GqPXyues=
+	dep	golang.org/x/oauth2	v0.37.0	h1:JUlcxA8oAtauLfiH8FX2/FkAWHAdi0QtGCGc+hofE98=
+	dep	golang.org/x/sync	v0.23.0	h1:KameEIfc1IkluZyXWLn39Wd4tURc6GbCiISGiZm2bQk=
+	dep	golang.org/x/sys	v0.48.0	h1:bbX/i/6MgT9BVLM9RT1thmxL04yeTAhbEz4SyadbXoo=
+	dep	golang.org/x/text	v0.42.0	h1:JbOZXgfeCPU9gacVtYliJqOhD+zhrEqK4LfdpmlUZqI=
+	dep	modernc.org/libc	v1.77.1	h1:Ct8j47QtiZ1Enj2DtFXQtUqrPCAjdCmPjtCuvrYQ0Hs=
+	dep	modernc.org/mathutil	v1.7.1	h1:GCZVGXdaN8gTqB1Mf/usp1Y/hSqgI2vAGGP4jZMCxOU=
+	dep	modernc.org/memory	v1.12.1	h1:nFMiWrpStgZczNl6XI9GnIk/rWhYIyHGUaR04pGbp9g=
+	dep	modernc.org/sqlite	v1.60.1	h1:/blz53O951KWFOso4QQvEs/Fq6cDBKLtMVrYNSeJVKw=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	-trimpath=true
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 727B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/3] FROM docker.io/library/debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 25.20MB 0.1s done
+#5 DONE 0.1s
+
+#6 [2/3] RUN mkdir /data && chown 1000:1000 /data
+#6 CACHED
+
+#7 [3/3] COPY --chmod=0555 feed /usr/local/bin/feed
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 exporting manifest sha256:663d9a5ac29d39af0f3c66fb1b6ba775666ab90e3b47cefb80d94d95570d9290 done
+#8 exporting config sha256:5a0261283c29844de52c143d9aca203f36800d9afd5c421efc277cc17ff2e243 done
+#8 exporting attestation manifest sha256:1f239ceab5985c569f3230247eeb799428ff8c540ad335eb19dc2da1b1494771 done
+#8 exporting manifest list sha256:2b87f852b4c6b658189f1fa5e06c946503a6d82cfd541c880caf7e8fb9e2f371 done
+#8 naming to docker.io/library/baas-pocketbase-vps16-feed:0.1.0 done
+#8 unpacking to docker.io/library/baas-pocketbase-vps16-feed:0.1.0 done
+#8 DONE 0.0s
+POCKETBASE_NATIVE_IMAGE_BUILD_PASSED

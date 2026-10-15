@@ -5,6 +5,8 @@
   "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
   "go_module": "github.com/pocketbase/pocketbase",
   "go_version": "1.27.2",
+  "sqlite_engine_version": "3.53.4",
+  "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
   "native_platform": "linux/amd64",
   "builder": {
     "tag": "golang:1.27.2-bookworm",

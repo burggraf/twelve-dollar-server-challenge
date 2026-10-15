@@ -1,0 +1,20 @@
+{
+  "run": "20261015T162851328457Z-standard-11250vu-k6-2cpu-8g-v3",
+  "verdict_reproduced": [
+    "fail",
+    "hold latency/error/schema gate failed"
+  ],
+  "runner_validity_gates_passed": true,
+  "runner_hold_peak_memory_percent_8gib": 62.22,
+  "hold_samples": 59,
+  "target_process_unchanged_and_ready": true,
+  "frozen_correctness_inputs_still_match": true,
+  "original_checksums_verified": true,
+  "valid_probe_bracket": {
+    "passing_vus": 10000,
+    "failing_vus": 11250
+  },
+  "attempt_slots_consumed": 8,
+  "remaining_total_budget": 4,
+  "next": "Three independent10000VUconfirmationholds; no250VUboundaryormaximumclaim"
+}

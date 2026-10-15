@@ -1,0 +1,68 @@
+ Container baas-pocketbase-vps16-canonical-green Creating 
+ Container baas-pocketbase-vps16-canonical-green Created 
+Testing http://pocketbase:4000
+-- golden reads (fresh database)
+  ok   GET /feed == golden -> 200
+  ok   GET /feed content-type (application/json)
+  ok   GET /posts/1 == golden -> 200
+  ok   GET /posts/250000 == golden -> 200
+  ok   GET /posts/500000 == golden -> 200
+  ok   GET /posts/:id content-type (application/json)
+-- health, 404s, id validation
+  ok   GET /health -> 200 {"status":"ok","db":"ok","uptime_s":0}
+  ok   GET /nope -> 404
+  ok   GET /posts/0 -> 400
+  ok   GET /posts/-1 -> 400
+  ok   GET /posts/abc -> 400
+  ok   GET /posts/1.5 -> 400
+  ok   GET /posts/999999999 -> 404
+-- auth
+  ok   POST /posts, no token -> 401
+  ok   POST /posts, Basic auth -> 401
+  ok   POST /posts, garbage token -> 401
+  ok   POST /posts, bad signature -> 401
+  ok   POST /posts, alg=none -> 401
+  ok   POST /posts, expired token -> 401
+  ok   POST /posts, sub not an integer -> 401
+  ok   POST /posts, no username -> 401
+  ok   POST /posts/abc/like, no token (auth before id) -> 401
+-- create validation
+  ok   empty body -> 400
+  ok   whitespace body -> 400
+  ok   numeric body -> 400
+  ok   missing body -> 400
+  ok   malformed JSON -> 400
+  ok   501-char body -> 400
+-- create, like, read back
+  ok   special characters round-trip (trimmed) -> 201
+  ok   create 500-char post -> 201
+  ok   POST /posts content-type (application/json)
+  ok   created_at format 2026-10-15T13:30:10.016Z
+  ok   created_at is now (UTC, 0s)
+  ok   like (first) -> 201
+  ok   like (repeat) -> 200
+  ok   like missing post -> 404
+  ok   like bad id (with token) -> 400
+  ok   read back, like_count 1 -> 200
+  ok   like on a seeded post is counted at once (12)
+  ok   feed has 20 posts
+  ok   new post is at the top of the feed
+  ok   feed entry matches the post
+passed=42 failed=0
+test_concurrent_duplicate_likes_commit_once (__main__.FeedContract.test_concurrent_duplicate_likes_commit_once) ... ok
+test_concurrent_post_ids_and_immediate_reads (__main__.FeedContract.test_concurrent_post_ids_and_immediate_reads) ... ok
+test_identity_is_bound_to_signed_subject (__main__.FeedContract.test_identity_is_bound_to_signed_subject) ... ok
+test_storage_health (__main__.FeedContract.test_storage_health) ... ok
+test_strict_jwt_payload_and_expiry (__main__.FeedContract.test_strict_jwt_payload_and_expiry) ... ok
+test_unicode_limits_and_ecmascript_trim (__main__.FeedContract.test_unicode_limits_and_ecmascript_trim) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.624s
+
+OK
+test_generator_does_not_log_signing_key (__main__.SeedSafety.test_generator_does_not_log_signing_key) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 4.671s
+
+OK

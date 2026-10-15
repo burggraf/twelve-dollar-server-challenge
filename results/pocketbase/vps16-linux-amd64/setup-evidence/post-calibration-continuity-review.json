@@ -1,0 +1,6 @@
+{
+  "persistent_services_unchanged": 26,
+  "original_port4000_pid_start_ticks_executable_unchanged": true,
+  "excluded_session_scoped_unit": "user@0.service",
+  "scope": "Read-only identities; no broad process arguments/config/environments collected"
+}

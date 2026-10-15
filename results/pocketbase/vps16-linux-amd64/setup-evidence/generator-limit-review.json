@@ -1,0 +1,12 @@
+{
+  "runner_exit_code": 137,
+  "runner_oom_killed": true,
+  "target_process_unchanged_and_running": true,
+  "target_parent_oom_kill_delta": 0,
+  "current_native_readiness_and_frozen_inputs_match": true,
+  "owned_runner_removed": true,
+  "original_attempt_checksums_verified": true,
+  "interpretation": "Generator-limited invalid measurement; no target-capacity upper bound or maximum inferred",
+  "scored_attempts_so_far_including_original_paused_probe": 5,
+  "remaining_total_attempt_budget": 7
+}

@@ -1,0 +1,14 @@
+{
+  "tier": "standard",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "status": "paused",
+  "attempts": [
+    {
+      "vus": 2500,
+      "outcome": "pass",
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3"
+    }
+  ],
+  "reason": ""
+}

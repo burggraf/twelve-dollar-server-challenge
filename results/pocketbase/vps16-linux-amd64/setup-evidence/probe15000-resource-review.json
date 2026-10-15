@@ -1,0 +1,17 @@
+{
+  "run": "20261015T160505445050Z-standard-15000vu-k6-2cpu-8g-v3",
+  "verdict_reproduced": [
+    "invalid",
+    "load generator used >=90% of its memory budget"
+  ],
+  "runner_hold_peak_memory_percent_8gib": 90.14,
+  "runner_oom_killed": false,
+  "hold_samples": 60,
+  "target_healthy_and_unchanged": true,
+  "target_parent_oom_delta": 0,
+  "frozen_correctness_inputs_still_match": true,
+  "all_original_checksums_verified": true,
+  "interpretation": "Diagnostic latency/error values retained, but invalid measurement cannot establish target failure/capacity upper bound",
+  "scored_attempts_so_far": 6,
+  "remaining_total_budget": 6
+}

@@ -1,0 +1,50 @@
+=== RUN   TestNativeHTTPHealthAndExactErrorContract
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/unknown{"error":"not_found"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/abc{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/0{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775808{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775807{"error":"post_not_found"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"missing_bearer_token"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"missing_bearer_token"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"invalid_or_expired_token"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#01
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#02
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#01
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#02
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#03
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_must_be_at_most_500_characters"}
+--- PASS: TestNativeHTTPHealthAndExactErrorContract (0.05s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/unknown{"error":"not_found"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/abc{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/0{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775808{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775807{"error":"post_not_found"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"missing_bearer_token"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"missing_bearer_token"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"invalid_or_expired_token"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#01 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#02 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#01 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#02 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#03 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_must_be_at_most_500_characters"} (0.00s)
+=== RUN   TestNativeHTTPStrictSignedClaims
+--- PASS: TestNativeHTTPStrictSignedClaims (0.05s)
+=== RUN   TestNativeHTTPCommittedJourneyAndNumericOrder
+--- PASS: TestNativeHTTPCommittedJourneyAndNumericOrder (0.05s)
+=== RUN   TestNativeHTTPConcurrentAtomicIDsAndLikes
+--- PASS: TestNativeHTTPConcurrentAtomicIDsAndLikes (0.08s)
+=== RUN   TestNativeApplicationCollectionsAndWriteBoundary
+--- PASS: TestNativeApplicationCollectionsAndWriteBoundary (0.04s)
+=== RUN   TestNativeNumericIdentityAndLosslessTextRoundtrip
+--- PASS: TestNativeNumericIdentityAndLosslessTextRoundtrip (0.04s)
+=== RUN   TestNativeRelationValidationAndUniqueLikes
+--- PASS: TestNativeRelationValidationAndUniqueLikes (0.04s)
+PASS
+ok  	twelve-dollar-server-challenge/pocketbase-feed	0.367s

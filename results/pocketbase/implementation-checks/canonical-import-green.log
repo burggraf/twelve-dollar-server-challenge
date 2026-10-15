@@ -1,0 +1,16 @@
+ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+ Container baas-pocketbase-vps16-native-import Creating 
+ Container baas-pocketbase-vps16-native-import Created 
+NATIVE_EMPTY_SCHEMA_PRIVATE_FIXTURE_RETAINED
+test_lossless_native_mapping_and_platform_preservation (__main__.NativeImport.test_lossless_native_mapping_and_platform_preservation) ... ok
+test_missing_native_relation_rolls_back_entire_application_import (__main__.NativeImport.test_missing_native_relation_rolls_back_entire_application_import) ... ok
+test_wrong_canonical_hash_rolls_back_without_touching_native_auth (__main__.NativeImport.test_wrong_canonical_hash_rolls_back_without_touching_native_auth) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.015s
+
+OK
+{"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d", "platform_rows_before_sha256": "d5258946c5086312d63c1f256c3dd7dcc26024253b6b0b6b8e45950464aab047", "platform_rows_after_sha256": "d5258946c5086312d63c1f256c3dd7dcc26024253b6b0b6b8e45950464aab047", "next_post_id": 500001, "native_auth_accounts": {"users": 0, "_superusers": 1}, "storage_mapping": "Native base collections; decimal Text user/post IDs; extra deterministic imported like record IDs; logical compound likes key; persistent transactional post sequence", "scope": "Offline application-only import; native platform/Auth metadata retained; native relation validation is not a physical SQLite FK declaration"}
+ Container baas-pocketbase-vps16-pocketbase-1 Starting 
+ Container baas-pocketbase-vps16-pocketbase-1 Started 

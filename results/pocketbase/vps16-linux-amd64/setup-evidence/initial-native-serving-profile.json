@@ -1,0 +1,48 @@
+{
+  "target": {
+    "Id": "d1b6dd7c306a23d0b87422c4152937a47f1c0cfc8552a5ac1cc6c03d4e1df1cf",
+    "Image": "sha256:2b87f852b4c6b658189f1fa5e06c946503a6d82cfd541c880caf7e8fb9e2f371",
+    "RestartCount": 0,
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 2058236,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-15T13:21:20.758065778Z",
+      "FinishedAt": "0001-01-01T00:00:00Z"
+    },
+    "limits": {
+      "NanoCpus": 1000000000,
+      "Memory": 4294967296,
+      "MemorySwap": 4294967296
+    },
+    "source_sha256": null,
+    "platform": "linux/amd64",
+    "image_manifest_digest": "sha256:663d9a5ac29d39af0f3c66fb1b6ba775666ab90e3b47cefb80d94d95570d9290"
+  },
+  "actual_process_cgroup": "0::/tdsbaaspocketbasevps16.slice/docker-d1b6dd7c306a23d0b87422c4152937a47f1c0cfc8552a5ac1cc6c03d4e1df1cf.scope\n",
+  "parent": {
+    "cpu.max": "100000 100000\n",
+    "cpu.stat": "usage_usec 140790\nuser_usec 128634\nsystem_usec 12156\ncore_sched.force_idle_usec 0\nnr_periods 10\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+    "memory.max": "4294967296\n",
+    "memory.current": "9945088\n",
+    "memory.swap.max": "0\n",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n"
+  },
+  "observed_health": {
+    "status": "ok",
+    "db": "ok",
+    "uptime_s": 68
+  },
+  "serving_budget": {
+    "cpus": 1,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0
+  },
+  "scope": "Initial native startup/budget feasibility only; canonical import and full correctness pending"
+}

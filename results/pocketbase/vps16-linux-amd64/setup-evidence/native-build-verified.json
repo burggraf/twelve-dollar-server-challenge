@@ -1,0 +1,19 @@
+{
+  "native_platform": "linux/amd64",
+  "app_source_sha256": "4e1c4b9801b97c139c52fa7ae50d05107ba96c550c011b41927a51408a22a04c",
+  "image_id": "sha256:2b87f852b4c6b658189f1fa5e06c946503a6d82cfd541c880caf7e8fb9e2f371",
+  "executable_sha256": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+  "builder": "golang:1.27.2-bookworm@sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+  "runtime": "debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+  "builder_budget": {
+    "cpus": 2,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0
+  },
+  "build_flags": [
+    "CGO_ENABLED=0",
+    "-trimpath",
+    "-buildvcs=false",
+    "-ldflags=-s -w"
+  ]
+}

@@ -1,0 +1,14 @@
+test_native_deployment_budget_and_isolation (__main__.PocketBaseDeployment.test_native_deployment_budget_and_isolation) ... FAIL
+
+======================================================================
+FAIL: test_native_deployment_budget_and_isolation (__main__.PocketBaseDeployment.test_native_deployment_budget_and_isolation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/src/test/baas/test_pocketbase_config.py", line 13, in test_native_deployment_budget_and_isolation
+    self.assertTrue(path.is_file(), 'Native PocketBase deployment profile is missing')
+AssertionError: False is not true : Native PocketBase deployment profile is missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

@@ -1,0 +1,24 @@
+ Container baas-pocketbase-vps16-native-permissions Creating 
+ Container baas-pocketbase-vps16-native-permissions Created 
+test_direct_native_application_writes_are_locked (__main__.NativePocketBase.test_direct_native_application_writes_are_locked) ... ok
+test_native_and_common_unicode_nul_storage_are_lossless (__main__.NativePocketBase.test_native_and_common_unicode_nul_storage_are_lossless) ... ok
+test_native_record_storage_and_request_time_count_match_common_api (__main__.NativePocketBase.test_native_record_storage_and_request_time_count_match_common_api) ... ok
+test_native_sequence_metadata_is_not_publicly_readable (__main__.NativePocketBase.test_native_sequence_metadata_is_not_publicly_readable) ... ok
+test_signed_subject_not_arbitrary_role_or_user_claim_controls_native_owner (__main__.NativePocketBase.test_signed_subject_not_arbitrary_role_or_user_claim_controls_native_owner) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.123s
+
+OK
+ Container baas-pocketbase-vps16-persist-prepare Creating 
+ Container baas-pocketbase-vps16-persist-prepare Created 
+ACKNOWLEDGED_NATIVE_POST_AND_EXACTLY_ONCE_LIKE_PREPARED
+ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+ Container baas-pocketbase-vps16-transport-stopped Creating 
+ Container baas-pocketbase-vps16-transport-stopped Created 
+STOPPED_OWNED_EMBEDDED_SERVER_TRANSPORT_UNAVAILABLE
+ Container baas-pocketbase-vps16-persist-verify Creating 
+ Container baas-pocketbase-vps16-persist-verify Created 
+REAL_NATIVE_PROCESS_RESTART_PRESERVES_ACKNOWLEDGED_POST_LIKE_AND_ID_SEQUENCE
+NATIVE_PERMISSIONS_AND_REAL_PROCESS_RESTART_GATE_PASSED

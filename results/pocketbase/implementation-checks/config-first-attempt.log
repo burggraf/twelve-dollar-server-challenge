@@ -1,0 +1,16 @@
+test_native_deployment_budget_and_isolation (__main__.PocketBaseDeployment.test_native_deployment_budget_and_isolation) ... FAIL
+
+======================================================================
+FAIL: test_native_deployment_budget_and_isolation (__main__.PocketBaseDeployment.test_native_deployment_budget_and_isolation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/src/test/baas/test_pocketbase_config.py", line 18, in test_native_deployment_budget_and_isolation
+    self.assertEqual(set(services), {'pocketbase', 'tools', 'k6'})
+AssertionError: Items in the second set but not the first:
+'k6'
+'tools'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.072s
+
+FAILED (failures=1)

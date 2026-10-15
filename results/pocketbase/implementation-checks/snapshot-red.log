@@ -1,0 +1,25 @@
+test_generalization_does_not_allow_unrelated_namespace_or_emulation (__main__.NativePocketBaseHarness.test_generalization_does_not_allow_unrelated_namespace_or_emulation) ... ok
+test_owned_native_namespace_selects_existing_vps16_track (__main__.NativePocketBaseHarness.test_owned_native_namespace_selects_existing_vps16_track) ... ok
+test_source_snapshot_includes_pocketbase_and_excludes_private_runtime (__main__.NativePocketBaseHarness.test_source_snapshot_includes_pocketbase_and_excludes_private_runtime) ... FAIL
+
+======================================================================
+FAIL: test_source_snapshot_includes_pocketbase_and_excludes_private_runtime (__main__.NativePocketBaseHarness.test_source_snapshot_includes_pocketbase_and_excludes_private_runtime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/src/test/baas/test_pocketbase_harness.py", line 38, in test_source_snapshot_includes_pocketbase_and_excludes_private_runtime
+    b.snapshot(output, service='pocketbase')
+  File "/opt/twelve-dollar-baas-pocketbase-16g/src/scripts/benchmark.py", line 165, in snapshot
+    raise ValueError('Unsupported benchmark service snapshot')
+ValueError: Unsupported benchmark service snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/src/test/baas/test_pocketbase_harness.py", line 40, in test_source_snapshot_includes_pocketbase_and_excludes_private_runtime
+    self.fail('Native PocketBase source snapshot is unsupported: ' + str(error))
+AssertionError: Native PocketBase source snapshot is unsupported: Unsupported benchmark service snapshot
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (failures=1)

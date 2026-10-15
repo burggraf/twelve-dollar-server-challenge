@@ -1,0 +1,9 @@
+{
+  "current_full_correctness_inputs_still_match": true,
+  "three_passing_independent_confirmations": true,
+  "full_attempt_slots_used": 11,
+  "total_budget": 12,
+  "actual_runtime_key_issued_signatures_and_native_password_tokenkey_scan_passed": true,
+  "noncompressed_candidate_files_scanned": 303,
+  "raw_archives": "Source archive member safety/hash checks and raw stream metric validation independently performed by retained-attempt-review; no private fixture/key/token mounts in load runner."
+}

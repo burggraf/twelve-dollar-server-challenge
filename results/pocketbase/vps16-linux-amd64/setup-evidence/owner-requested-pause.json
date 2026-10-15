@@ -1,0 +1,16 @@
+{
+  "owned_containers_stopped": true,
+  "volumes_and_evidence_retained": true,
+  "reason": "Owner requested pause before local shutdown",
+  "completed_attempt_boundary": true,
+  "campaign_status": "paused",
+  "completed_attempts": [
+    {
+      "vus": 2500,
+      "outcome": "pass",
+      "path": "results/pocketbase/vps16-linux-amd64/20261015T142603330350Z-standard-2500vu-k6-2cpu-8g-v3"
+    }
+  ],
+  "paused_utc": "2026-10-15T14:36:01Z",
+  "resume": "Review retained original runs and current frozen inputs before new separately identified bounded search; do not silently overwrite campaign history or infer a confirmed maximum."
+}
