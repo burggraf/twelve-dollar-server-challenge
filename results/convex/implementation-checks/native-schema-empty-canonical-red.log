@@ -1,0 +1,126 @@
+Running as unit: tds-convex-schema-empty-red-20261015.service
+ Container baas-convex-vps16-tools-run-b334ec60e795 Creating 
+ Container baas-convex-vps16-tools-run-b334ec60e795 Created 
+▌ Developing against deployment:
+▌ └─ http://backend:3210
+- Preparing Convex functions...
+
+Temporary directory '/tmp' and project directory '/work/services/convex/app/convex/_generated' are on different filesystems.
+  If you're running into errors with other tools watching the project directory, override the temporary directory location with the CONVEX_TMPDIR environment variable.
+  Be sure to pick a temporary directory that's on the same filesystem as your project.
+✔ Added table indexes:
+  [+] feed_sequences.by_name   name, _creationTime
+  [+] likes.by_post_user   post_id, user_id, _creationTime
+  [+] likes.by_user_post   user_id, post_id, _creationTime
+  [+] posts.by_created_at_id   created_at, id, _creationTime
+  [+] posts.by_public_id   id, _creationTime
+  [+] posts.by_user_id   user_id, _creationTime
+  [+] users.by_public_id   id, _creationTime
+  [+] users.by_username   username, _creationTime
+✔ 18:07:42 Convex functions ready! (327.04ms)
+npm notice
+npm notice New major version of npm available! 10.9.3 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+test_01_native_database_probe (__main__.NativeFeasibility.test_01_native_database_probe) ... ok
+test_02_native_probe_is_not_a_public_query (__main__.NativeFeasibility.test_02_native_probe_is_not_a_public_query) ... ok
+test_03_identical_queries_reexecute_without_result_cache (__main__.NativeFeasibility.test_03_identical_queries_reexecute_without_result_cache) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.061s
+
+OK
+Usage: convex import [options] <path>
+
+Import data from a file to your Convex deployment.
+
+• From a snapshot: `npx convex import snapshot.zip`
+• For a single table: `npx convex import --table tableName file.json`
+
+By default, this imports into your dev deployment.
+
+See the data import guide
+(https://docs.convex.dev/database/import-export/import) for details and use
+cases.
+
+Arguments:
+  path                       Path to the input file
+
+Options:
+  --table <table>            Destination table name. Required if format is csv,
+                             jsonLines, or jsonArray. Not supported if format is
+                             zip.
+  --replace                  Replace all existing data in any of the imported
+                             tables
+  --append                   Append imported data to any existing tables
+  --replace-all              Replace all existing data in the deployment with
+                             the imported tables,
+                             deleting tables that don't appear in the import
+                             file or the schema,
+                             and clearing tables that appear in the schema but
+                             not in the import file
+  -y, --yes                  Skip confirmation prompt when import leads to
+                             deleting existing documents
+  --format <format>          Input file format. This flag is only required if
+                             the filename is missing an extension.
+                             - CSV files must have a header, and each row's
+                             entries are interpreted either as a (floating
+                             point) number or a string.
+                             - JSON files must be an array of JSON objects.
+                             - JSONLines files must have a JSON object per line.
+                             - ZIP files must have one directory per table,
+                             containing <table>/documents.jsonl. Snapshot
+                             exports from the Convex dashboard have this format.
+                             (choices: "csv", "jsonLines", "jsonArray", "zip")
+  --component <path>         Path to the component (e.g. "workflow" or
+                             "workflow/workpool")
+  --prod                     Import data into this project's default production
+                             deployment.
+  --deployment <deployment>  Import data into a specific deployment. Accepts:
+                             • a deployment name (e.g. joyful-capybara-123)
+                             • a deployment reference (e.g. dev/james, staging)
+                             • `dev` (for your personal dev deployment)
+                             • `prod` (for your project’s default production
+                             deployment)
+                             • `local` (for your local dev deployment).
+                             You can also select deployments in other projects
+                             with `project-slug:reference` or
+                             `team-slug:project-slug:reference`.
+  -h, --help                 display help for command
+test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata) ... FAIL
+test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count) ... FAIL
+test_03_native_read_functions_are_private (__main__.FullNativeDataset.test_03_native_read_functions_are_private) ... ok
+
+======================================================================
+FAIL: test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_dataset.py", line 73, in test_01_full_native_canonical_rows_hash_relations_and_metadata
+    self.assertEqual(count, COUNTS[table])
+AssertionError: 0 != 50000
+
+======================================================================
+FAIL: test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_dataset.py", line 94, in test_02_native_normalized_feed_detail_and_largest_seed_count
+    self.assertEqual(actual, expected)
+AssertionError: Lists differ: [] != [{'id': '500000', 'body': 'TIL So keepaliv[5284 chars]: 0}]
+
+Second list contains 20 additional elements.
+First extra element 0:
+{'id': '500000', 'body': 'TIL So keepalive the an watching lucky measuring usually everywhere droplet waiting... Nowhere building test those here keepalive network someone and of load? Server big learning ubuntu deploy careful coffee.', 'created_at': '2025-12-31T23:59:19.409Z', 'author': 'swift_ember_22228', 'like_count': 5}
+
+Diff is 6226 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.582s
+
+FAILED (failures=2)
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 5.303s
+CPU time consumed: 117ms
+Memory peak: 7.5M
+Memory swap peak: 0B

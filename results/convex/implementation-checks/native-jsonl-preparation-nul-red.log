@@ -1,0 +1,44 @@
+ Container baas-convex-vps16-tools-run-aab30834d78a Creating 
+ Container baas-convex-vps16-tools-run-aab30834d78a Created 
+test_hash_mismatch_and_existing_destination_never_replace_data (__main__.JsonLinesImport.test_hash_mismatch_and_existing_destination_never_replace_data) ... FAIL
+test_lossless_wide_ids_text_native_files_and_hash (__main__.JsonLinesImport.test_lossless_wide_ids_text_native_files_and_hash) ... FAIL
+test_missing_relationship_and_duplicate_like_fail_without_output (__main__.JsonLinesImport.test_missing_relationship_and_duplicate_like_fail_without_output) ... FAIL
+test_noncanonical_and_out_of_range_ids_fail_without_output (__main__.JsonLinesImport.test_noncanonical_and_out_of_range_ids_fail_without_output) ... FAIL
+
+======================================================================
+FAIL: test_hash_mismatch_and_existing_destination_never_replace_data (__main__.JsonLinesImport.test_hash_mismatch_and_existing_destination_never_replace_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_import.py", line 29, in setUp
+    self.assertTrue(path.is_file(), 'Supported Convex JSONLines preparation is not implemented')
+AssertionError: False is not true : Supported Convex JSONLines preparation is not implemented
+
+======================================================================
+FAIL: test_lossless_wide_ids_text_native_files_and_hash (__main__.JsonLinesImport.test_lossless_wide_ids_text_native_files_and_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_import.py", line 29, in setUp
+    self.assertTrue(path.is_file(), 'Supported Convex JSONLines preparation is not implemented')
+AssertionError: False is not true : Supported Convex JSONLines preparation is not implemented
+
+======================================================================
+FAIL: test_missing_relationship_and_duplicate_like_fail_without_output (__main__.JsonLinesImport.test_missing_relationship_and_duplicate_like_fail_without_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_import.py", line 29, in setUp
+    self.assertTrue(path.is_file(), 'Supported Convex JSONLines preparation is not implemented')
+AssertionError: False is not true : Supported Convex JSONLines preparation is not implemented
+
+======================================================================
+FAIL: test_noncanonical_and_out_of_range_ids_fail_without_output (__main__.JsonLinesImport.test_noncanonical_and_out_of_range_ids_fail_without_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_import.py", line 29, in setUp
+    self.assertTrue(path.is_file(), 'Supported Convex JSONLines preparation is not implemented')
+AssertionError: False is not true : Supported Convex JSONLines preparation is not implemented
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+FAILED (failures=4)
+

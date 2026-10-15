@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "path": "setup-evidence/native-canonical-import-and-queries.log",
+      "exists": true,
+      "bytes": 19271,
+      "sha256": "acd4bbd805a07b7f9d9ad691c73eb301b1e450d5ac93c945867739d5473e0cc2"
+    },
+    {
+      "path": "setup-evidence/native-import-before.json",
+      "exists": true,
+      "bytes": 8307,
+      "sha256": "7bdffd38fbac00bdecbea52ff61727661e2df842e9e0aa38aec9021a4365c8b2"
+    },
+    {
+      "path": "setup-evidence/native-import-after.json",
+      "exists": true,
+      "bytes": 8424,
+      "sha256": "693242978dbdf656c1cf352cd351198918631ce264f29e3a44a91cf4ad1703a3"
+    },
+    {
+      "path": "native-canonical-import-driver.log",
+      "exists": true,
+      "bytes": 298,
+      "sha256": "d34e82b00756076fc7b603c30fa1678276bd1746f5d0b553e3f6d97cfd429ab0"
+    },
+    {
+      "path": "setup-evidence/native-canonical-dataset.json",
+      "exists": false
+    }
+  ],
+  "current_target": {
+    "Running": true,
+    "OOMKilled": false,
+    "Pid": 2112234,
+    "StartedAt": "2026-10-15T17:49:03.858647653Z",
+    "FinishedAt": "0001-01-01T00:00:00Z",
+    "ExitCode": 0
+  },
+  "actual_value_privacy_scan": "Passed selected files against actual native admin key and instance secret"
+}

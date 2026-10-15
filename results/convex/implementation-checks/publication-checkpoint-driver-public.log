@@ -1,0 +1,7 @@
+Running as unit: tds-convex-partial-publication-verify-20261015.service; invocation ID: 465f96987152426cb4097ac0e05f06e4
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 2min 39.443s
+CPU time consumed: 1.488s
+Memory peak: 31.4M
+Memory swap peak: 0B

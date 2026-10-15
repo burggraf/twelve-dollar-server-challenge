@@ -1,0 +1,7 @@
+Running as unit: tds-convex-postgres-http-read-green-20261015.service; invocation ID: dfb54f5d0fec40fb99232d05de781a96
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 2min 45.833s
+CPU time consumed: 1.143s
+Memory peak: 31.1M
+Memory swap peak: 0B

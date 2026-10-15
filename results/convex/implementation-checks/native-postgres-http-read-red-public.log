@@ -1,0 +1,179 @@
+ Container baas-convexpg-vps16-http-read-red-tools Creating 
+ Container baas-convexpg-vps16-http-read-red-tools Created 
+test_01_feed_exact_native_projection_and_key_order (__main__.NativeHttpReads.test_01_feed_exact_native_projection_and_key_order) ... FAIL
+test_02_detail_leading_zero_identity_and_largest_seed_count (__main__.NativeHttpReads.test_02_detail_leading_zero_identity_and_largest_seed_count) ... 
+  test_02_detail_leading_zero_identity_and_largest_seed_count (__main__.NativeHttpReads.test_02_detail_leading_zero_identity_and_largest_seed_count) (identity='405018') ... FAIL
+  test_02_detail_leading_zero_identity_and_largest_seed_count (__main__.NativeHttpReads.test_02_detail_leading_zero_identity_and_largest_seed_count) (identity='0000000000000405018') ... FAIL
+test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) ... 
+  test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='0') ... FAIL
+  test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='-1') ... FAIL
+  test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='abc') ... FAIL
+  test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='1.5') ... FAIL
+  test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='9223372036854775808') ... FAIL
+test_04_absent_positive_signed64_ids_are_not_invalid (__main__.NativeHttpReads.test_04_absent_positive_signed64_ids_are_not_invalid) ... 
+  test_04_absent_positive_signed64_ids_are_not_invalid (__main__.NativeHttpReads.test_04_absent_positive_signed64_ids_are_not_invalid) (identity='500001') ... FAIL
+  test_04_absent_positive_signed64_ids_are_not_invalid (__main__.NativeHttpReads.test_04_absent_positive_signed64_ids_are_not_invalid) (identity='9007199254740993') ... FAIL
+  test_04_absent_positive_signed64_ids_are_not_invalid (__main__.NativeHttpReads.test_04_absent_positive_signed64_ids_are_not_invalid) (identity='9223372036854775807') ... FAIL
+test_05_unknown_paths_have_exact_json_error (__main__.NativeHttpReads.test_05_unknown_paths_have_exact_json_error) ... 
+  test_05_unknown_paths_have_exact_json_error (__main__.NativeHttpReads.test_05_unknown_paths_have_exact_json_error) (path='/does-not-exist') ... FAIL
+  test_05_unknown_paths_have_exact_json_error (__main__.NativeHttpReads.test_05_unknown_paths_have_exact_json_error) (path='/posts/1/extra') ... FAIL
+test_06_each_http_feed_reexecutes_its_native_query (__main__.NativeHttpReads.test_06_each_http_feed_reexecutes_its_native_query) ... FAIL
+
+======================================================================
+FAIL: test_01_feed_exact_native_projection_and_key_order (__main__.NativeHttpReads.test_01_feed_exact_native_projection_and_key_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 65, in test_01_feed_exact_native_projection_and_key_order
+    value = self.get('/feed', 200)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 26, in get
+    self.assertEqual(response.status, status, 'Wrong compatibility HTTP status: ' + path)
+AssertionError: 404 != 200 : Wrong compatibility HTTP status: /feed
+
+======================================================================
+FAIL: test_02_detail_leading_zero_identity_and_largest_seed_count (__main__.NativeHttpReads.test_02_detail_leading_zero_identity_and_largest_seed_count) (identity='405018')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 77, in test_02_detail_leading_zero_identity_and_largest_seed_count
+    value = self.get('/posts/' + text, 200)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 26, in get
+    self.assertEqual(response.status, status, 'Wrong compatibility HTTP status: ' + path)
+AssertionError: 404 != 200 : Wrong compatibility HTTP status: /posts/405018
+
+======================================================================
+FAIL: test_02_detail_leading_zero_identity_and_largest_seed_count (__main__.NativeHttpReads.test_02_detail_leading_zero_identity_and_largest_seed_count) (identity='0000000000000405018')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 77, in test_02_detail_leading_zero_identity_and_largest_seed_count
+    value = self.get('/posts/' + text, 200)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 26, in get
+    self.assertEqual(response.status, status, 'Wrong compatibility HTTP status: ' + path)
+AssertionError: 404 != 200 : Wrong compatibility HTTP status: /posts/0000000000000405018
+
+======================================================================
+FAIL: test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 86, in test_03_invalid_ids_fail_without_unsafe_numeric_coercion
+    self.assertEqual(self.get('/posts/' + text, 400), {'error': 'invalid post id'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 26, in get
+    self.assertEqual(response.status, status, 'Wrong compatibility HTTP status: ' + path)
+AssertionError: 404 != 400 : Wrong compatibility HTTP status: /posts/0
+
+======================================================================
+FAIL: test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 86, in test_03_invalid_ids_fail_without_unsafe_numeric_coercion
+    self.assertEqual(self.get('/posts/' + text, 400), {'error': 'invalid post id'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 26, in get
+    self.assertEqual(response.status, status, 'Wrong compatibility HTTP status: ' + path)
+AssertionError: 404 != 400 : Wrong compatibility HTTP status: /posts/-1
+
+======================================================================
+FAIL: test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='abc')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 86, in test_03_invalid_ids_fail_without_unsafe_numeric_coercion
+    self.assertEqual(self.get('/posts/' + text, 400), {'error': 'invalid post id'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 26, in get
+    self.assertEqual(response.status, status, 'Wrong compatibility HTTP status: ' + path)
+AssertionError: 404 != 400 : Wrong compatibility HTTP status: /posts/abc
+
+======================================================================
+FAIL: test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='1.5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 86, in test_03_invalid_ids_fail_without_unsafe_numeric_coercion
+    self.assertEqual(self.get('/posts/' + text, 400), {'error': 'invalid post id'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 26, in get
+    self.assertEqual(response.status, status, 'Wrong compatibility HTTP status: ' + path)
+AssertionError: 404 != 400 : Wrong compatibility HTTP status: /posts/1.5
+
+======================================================================
+FAIL: test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) (identity='9223372036854775808')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 86, in test_03_invalid_ids_fail_without_unsafe_numeric_coercion
+    self.assertEqual(self.get('/posts/' + text, 400), {'error': 'invalid post id'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 26, in get
+    self.assertEqual(response.status, status, 'Wrong compatibility HTTP status: ' + path)
+AssertionError: 404 != 400 : Wrong compatibility HTTP status: /posts/9223372036854775808
+
+======================================================================
+FAIL: test_04_absent_positive_signed64_ids_are_not_invalid (__main__.NativeHttpReads.test_04_absent_positive_signed64_ids_are_not_invalid) (identity='500001')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 91, in test_04_absent_positive_signed64_ids_are_not_invalid
+    self.assertEqual(self.get('/posts/' + text, 404), {'error': 'post not found'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 27, in get
+    self.assertTrue(response.headers.get('Content-Type', '').lower().startswith('application/json'), 'Compatibility HTTP response is not JSON')
+AssertionError: False is not true : Compatibility HTTP response is not JSON
+
+======================================================================
+FAIL: test_04_absent_positive_signed64_ids_are_not_invalid (__main__.NativeHttpReads.test_04_absent_positive_signed64_ids_are_not_invalid) (identity='9007199254740993')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 91, in test_04_absent_positive_signed64_ids_are_not_invalid
+    self.assertEqual(self.get('/posts/' + text, 404), {'error': 'post not found'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 27, in get
+    self.assertTrue(response.headers.get('Content-Type', '').lower().startswith('application/json'), 'Compatibility HTTP response is not JSON')
+AssertionError: False is not true : Compatibility HTTP response is not JSON
+
+======================================================================
+FAIL: test_04_absent_positive_signed64_ids_are_not_invalid (__main__.NativeHttpReads.test_04_absent_positive_signed64_ids_are_not_invalid) (identity='9223372036854775807')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 91, in test_04_absent_positive_signed64_ids_are_not_invalid
+    self.assertEqual(self.get('/posts/' + text, 404), {'error': 'post not found'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 27, in get
+    self.assertTrue(response.headers.get('Content-Type', '').lower().startswith('application/json'), 'Compatibility HTTP response is not JSON')
+AssertionError: False is not true : Compatibility HTTP response is not JSON
+
+======================================================================
+FAIL: test_05_unknown_paths_have_exact_json_error (__main__.NativeHttpReads.test_05_unknown_paths_have_exact_json_error) (path='/does-not-exist')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 96, in test_05_unknown_paths_have_exact_json_error
+    self.assertEqual(self.get(path, 404), {'error': 'not found'})
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 27, in get
+    self.assertTrue(response.headers.get('Content-Type', '').lower().startswith('application/json'), 'Compatibility HTTP response is not JSON')
+AssertionError: False is not true : Compatibility HTTP response is not JSON
+
+======================================================================
+FAIL: test_05_unknown_paths_have_exact_json_error (__main__.NativeHttpReads.test_05_unknown_paths_have_exact_json_error) (path='/posts/1/extra')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 96, in test_05_unknown_paths_have_exact_json_error
+    self.assertEqual(self.get(path, 404), {'error': 'not found'})
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_reads.py", line 27, in get
+    self.assertTrue(response.headers.get('Content-Type', '').lower().startswith('application/json'), 'Compatibility HTTP response is not JSON')
+AssertionError: False is not true : Compatibility HTTP response is not JSON
+
+======================================================================
+FAIL: test_06_each_http_feed_reexecutes_its_native_query (__main__.NativeHttpReads.test_06_each_http_feed_reexecutes_its_native_query)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_reads.py", line 101, in test_06_each_http_feed_reexecutes_its_native_query
+    self.get('/feed', 200)
+  File "/work/test/baas/convex_http_reads.py", line 26, in get
+    self.assertEqual(response.status, status, 'Wrong compatibility HTTP status: ' + path)
+AssertionError: 404 != 200 : Wrong compatibility HTTP status: /feed
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.052s
+
+FAILED (failures=14)
+

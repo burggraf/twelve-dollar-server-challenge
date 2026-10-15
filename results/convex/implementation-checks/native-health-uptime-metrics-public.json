@@ -1,0 +1,5 @@
+{
+  "scope": "Selected native uptime/start-time metrics only; no process environment or credentials",
+  "observed_unix_seconds": 1792094828.728927,
+  "metrics": {}
+}

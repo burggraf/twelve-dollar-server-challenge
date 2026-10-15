@@ -1,0 +1,157 @@
+{
+  "scope": "Read-only full native PostgreSQL canonical import/read outcome retention, not complete compatibility correctness or a capacity score",
+  "private_inputs_sha256": {
+    "cli.env": "f228b8716c5deee2e9e01f07a1e2efa0f664a8dca7da831ca006ecfe0634d50b",
+    "backend.env": "cfa8011196ce90ea27d9232441c082442280f96230830f055135216e16ae22c5",
+    "postgres.env": "4b94741dc1bd9def607058a3bedb23b087a921dc223424fa7a48e863b4d3ecc3"
+  },
+  "actual_private_candidates_checked": 4,
+  "targets": [
+    {
+      "role": "backend",
+      "id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T19:03:26.325882195Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      }
+    },
+    {
+      "role": "postgres",
+      "id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T19:03:20.716573172Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "original_private_file": "setup-evidence/native-postgres-full-canonical-original.log",
+      "original_bytes": 19556,
+      "original_sha256": "5a4ddfe20119a24670c96c4e8aec35147e94c2fbb18cc5ef2e27d4ee69d50829",
+      "public_derivative": "native-postgres-full-canonical-public.log",
+      "derivative_bytes": 19556,
+      "derivative_sha256": "5a4ddfe20119a24670c96c4e8aec35147e94c2fbb18cc5ef2e27d4ee69d50829",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "native-postgres-full-canonical-driver.log",
+      "original_bytes": 300,
+      "original_sha256": "485a95b23537cee84a9c2b08ed250c5cc5dfada96344fd6edfa6c5d7fe69bb2d",
+      "public_derivative": "native-postgres-full-canonical-driver-public.log",
+      "derivative_bytes": 300,
+      "derivative_sha256": "485a95b23537cee84a9c2b08ed250c5cc5dfada96344fd6edfa6c5d7fe69bb2d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-postgres-canonical-before.json",
+      "original_bytes": 13061,
+      "original_sha256": "dcdd309d1eb56a0addaed373adf2def5965628fa7a29921fd06eb89e35ca8eb0",
+      "public_derivative": "native-postgres-canonical-before-public.json",
+      "derivative_bytes": 13061,
+      "derivative_sha256": "dcdd309d1eb56a0addaed373adf2def5965628fa7a29921fd06eb89e35ca8eb0",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-postgres-canonical-before-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "11e0d6f9fa82bc610cb47cf4d5daed4c09125030610b3a1a8b1ff9b4373eea1a",
+      "public_derivative": "native-postgres-canonical-before-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "11e0d6f9fa82bc610cb47cf4d5daed4c09125030610b3a1a8b1ff9b4373eea1a",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-postgres-canonical-after.json",
+      "original_bytes": 13188,
+      "original_sha256": "03ab9162002b40228a5bb66de41d46ec80b0aebfc44a5174ca14c861cf28f512",
+      "public_derivative": "native-postgres-canonical-after-public.json",
+      "derivative_bytes": 13188,
+      "derivative_sha256": "03ab9162002b40228a5bb66de41d46ec80b0aebfc44a5174ca14c861cf28f512",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-postgres-canonical-after-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "11e0d6f9fa82bc610cb47cf4d5daed4c09125030610b3a1a8b1ff9b4373eea1a",
+      "public_derivative": "native-postgres-canonical-after-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "11e0d6f9fa82bc610cb47cf4d5daed4c09125030610b3a1a8b1ff9b4373eea1a",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-postgres-canonical-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "native-postgres-canonical-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-postgres-full-canonical-backend-original.log",
+      "original_bytes": 1092505,
+      "original_sha256": "e37ff533e27dd84fd3778464688889c992ff8d5ce8e8aa3e84daa3c235cd9adf",
+      "public_derivative": "native-postgres-full-canonical-backend-public.log",
+      "derivative_bytes": 1080381,
+      "derivative_sha256": "986d3926cefef93d647bf8818eeb3a1aa4445b22e3574613ebbe37c57a0d5e95",
+      "query_string_redactions_by_pattern": [
+        0,
+        66,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-postgres-full-canonical-postgres-original.log",
+      "original_bytes": 49722,
+      "original_sha256": "5e8535e99ace861455956f5fe19294899064c62c8ae3485b8f992820fd8a8806",
+      "public_derivative": "native-postgres-full-canonical-postgres-public.log",
+      "derivative_bytes": 49722,
+      "derivative_sha256": "5e8535e99ace861455956f5fe19294899064c62c8ae3485b8f992820fd8a8806",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "native_profile_exists": true
+}

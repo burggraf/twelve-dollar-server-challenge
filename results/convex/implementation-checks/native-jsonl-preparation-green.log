@@ -1,0 +1,11 @@
+ Container baas-convex-vps16-tools-run-35b1f81caafb Creating 
+ Container baas-convex-vps16-tools-run-35b1f81caafb Created 
+test_hash_mismatch_and_existing_destination_never_replace_data (__main__.JsonLinesImport.test_hash_mismatch_and_existing_destination_never_replace_data) ... ok
+test_lossless_wide_ids_text_native_files_and_hash (__main__.JsonLinesImport.test_lossless_wide_ids_text_native_files_and_hash) ... ok
+test_missing_relationship_and_duplicate_like_fail_without_output (__main__.JsonLinesImport.test_missing_relationship_and_duplicate_like_fail_without_output) ... ok
+test_noncanonical_and_out_of_range_ids_fail_without_output (__main__.JsonLinesImport.test_noncanonical_and_out_of_range_ids_fail_without_output) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.016s
+
+OK

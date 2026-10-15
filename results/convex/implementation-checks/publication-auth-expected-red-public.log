@@ -1,0 +1,106 @@
+ Container baas-convexpg-vps16-publication-auth-red-tools Creating 
+ Container baas-convexpg-vps16-publication-auth-red-tools Created 
+test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) ... 
+  test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts') ... FAIL
+  test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts/1/like') ... FAIL
+  test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts/not-an-id/like') ... FAIL
+test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) ... 
+  test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts') ... FAIL
+  test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts/1/like') ... FAIL
+  test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts/not-an-id/like') ... FAIL
+
+======================================================================
+FAIL: test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 17, in test_malformed_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}, auth='not-a-jwt'),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts/1/like')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 17, in test_malformed_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}, auth='not-a-jwt'),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts/not-an-id/like')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 17, in test_malformed_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}, auth='not-a-jwt'),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 11, in test_missing_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'missing bearer token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'missing bearer token'})
+
+======================================================================
+FAIL: test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts/1/like')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 11, in test_missing_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'missing bearer token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'missing bearer token'})
+
+======================================================================
+FAIL: test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts/not-an-id/like')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 11, in test_missing_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'missing bearer token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'missing bearer token'})
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.027s
+
+FAILED (failures=6)
+

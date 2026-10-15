@@ -1,0 +1,54 @@
+name: baas-convex-vps16
+services:
+  backend:
+    image: ghcr.io/get-convex/convex-backend:a3538c6d212948f20726868e41d155d2534cd130@sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4
+    platform: linux/amd64
+    cgroup_parent: tdsbaasconvexvps16.slice
+    cpus: 1
+    mem_limit: 4294967296
+    memswap_limit: 4294967296
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment:
+      CONVEX_CLOUD_ORIGIN: http://backend:3210
+      CONVEX_SITE_ORIGIN: http://backend:3211
+      INSTANCE_NAME: baas-convex-vps16
+      DISABLE_BEACON: "1"
+      DISABLE_METRICS_ENDPOINT: "false"
+      REDACT_LOGS_TO_CLIENT: "1"
+      UDF_CACHE_MAX_SIZE: "0"
+      RUNTIME_WORKER_THREADS: "1"
+    ports:
+      - "127.0.0.1:14000:3211"
+      - "127.0.0.1:13210:3210"
+    volumes:
+      - data:/convex/data
+    tmpfs:
+      - /tmp:mode=1777,size=536870912
+    ulimits:
+      nofile: {soft: 65535, hard: 65535}
+    stop_signal: SIGINT
+    stop_grace_period: 30s
+    healthcheck:
+      test: [CMD, curl, --fail, --silent, http://127.0.0.1:3210/version]
+      interval: 5s
+      timeout: 3s
+      start_period: 10s
+      retries: 12
+  tools:
+    image: baas-trailbase-vps16-tools:0.1.0
+    platform: linux/amd64
+    profiles: [tools]
+    cpus: 2
+    mem_limit: 4294967296
+    memswap_limit: 4294967296
+    working_dir: /work/services/convex/app
+    env_file: ../../.state/convex/cli.env
+    volumes:
+      - ../../services/convex/app:/work/services/convex/app
+      - ../../test:/work/test:ro
+      - ../../scripts:/work/scripts:ro
+      - ../../.state/convex:/state/convex
+volumes:
+  data:

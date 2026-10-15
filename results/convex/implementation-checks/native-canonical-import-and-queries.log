@@ -1,0 +1,787 @@
+ Container baas-convex-vps16-native-import Creating 
+ Container baas-convex-vps16-native-import Created 
+BEGIN_NATIVE_TABLE_IMPORT users 2026-10-15T18:13:41Z
+- Importing /state/convex/import-jsonl/users.jsonl (4.8 MiB)
+
+- Importing /state/convex/import-jsonl/users.jsonl (4.8 MiB)
+
+Import change summary:
+table | create | delete |
+-------------------------
+users | 50,000 | 0 of 0 |
+Once the import has started, it will run in the background.
+Interrupting `npx convex import` will not cancel it.
+- Importing
+
+- Importing
+
+- Importing "users"
+
+- Importing "users" (8,000 documents)
+
+- Importing "users" (16,001 documents)
+
+- Importing "users" (24,002 documents)
+
+- Importing "users" (32,003 documents)
+
+- Importing "users" (40,004 documents)
+
+- Importing "users" (48,005 documents)
+
+✔ Imported "users" (50,000 documents)
+- Imported "users" (50,000 documents)
+
+✔ Added 50000 documents to table "users".
+npm notice
+npm notice New major version of npm available! 10.9.3 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+END_NATIVE_TABLE_IMPORT users 2026-10-15T18:13:52Z
+BEGIN_NATIVE_TABLE_IMPORT posts 2026-10-15T18:13:52Z
+- Importing /state/convex/import-jsonl/posts.jsonl (114.4 MiB)
+
+- Importing /state/convex/import-jsonl/posts.jsonl (114.4 MiB)
+
+Import change summary:
+table | create  | delete |
+--------------------------
+posts | 500,000 | 0 of 0 |
+Once the import has started, it will run in the background.
+Interrupting `npx convex import` will not cancel it.
+- Importing
+
+- Importing
+
+- Importing "posts"
+
+- Importing "posts" (8,000 documents)
+
+- Importing "posts" (16,001 documents)
+
+- Importing "posts" (24,002 documents)
+
+- Importing "posts" (32,003 documents)
+
+- Importing "posts" (40,004 documents)
+
+- Importing "posts" (48,005 documents)
+
+- Importing "posts" (56,006 documents)
+
+- Importing "posts" (64,007 documents)
+
+- Importing "posts" (72,008 documents)
+
+- Importing "posts" (80,009 documents)
+
+- Importing "posts" (88,010 documents)
+
+- Importing "posts" (96,011 documents)
+
+- Importing "posts" (104,012 documents)
+
+- Importing "posts" (112,013 documents)
+
+- Importing "posts" (120,014 documents)
+
+- Importing "posts" (128,015 documents)
+
+- Importing "posts" (136,016 documents)
+
+- Importing "posts" (144,017 documents)
+
+- Importing "posts" (152,018 documents)
+
+- Importing "posts" (160,019 documents)
+
+- Importing "posts" (168,020 documents)
+
+- Importing "posts" (176,021 documents)
+
+- Importing "posts" (184,022 documents)
+
+- Importing "posts" (192,023 documents)
+
+- Importing "posts" (200,024 documents)
+
+- Importing "posts" (208,025 documents)
+
+- Importing "posts" (216,026 documents)
+
+- Importing "posts" (224,027 documents)
+
+- Importing "posts" (232,028 documents)
+
+- Importing "posts" (240,029 documents)
+
+- Importing "posts" (248,030 documents)
+
+- Importing "posts" (256,031 documents)
+
+- Importing "posts" (264,032 documents)
+
+- Importing "posts" (272,033 documents)
+
+- Importing "posts" (280,034 documents)
+
+- Importing "posts" (288,035 documents)
+
+- Importing "posts" (296,036 documents)
+
+- Importing "posts" (304,037 documents)
+
+- Importing "posts" (312,038 documents)
+
+- Importing "posts" (320,039 documents)
+
+- Importing "posts" (328,040 documents)
+
+- Importing "posts" (336,041 documents)
+
+- Importing "posts" (344,042 documents)
+
+- Importing "posts" (352,043 documents)
+
+- Importing "posts" (360,044 documents)
+
+- Importing "posts" (368,045 documents)
+
+- Importing "posts" (376,046 documents)
+
+- Importing "posts" (384,047 documents)
+
+- Importing "posts" (392,048 documents)
+
+- Importing "posts" (400,049 documents)
+
+- Importing "posts" (408,050 documents)
+
+- Importing "posts" (416,051 documents)
+
+- Importing "posts" (424,052 documents)
+
+- Importing "posts" (432,053 documents)
+
+- Importing "posts" (440,054 documents)
+
+- Importing "posts" (448,055 documents)
+
+- Importing "posts" (456,056 documents)
+
+- Importing "posts" (464,057 documents)
+
+- Importing "posts" (472,058 documents)
+
+- Importing "posts" (480,059 documents)
+
+- Importing "posts" (488,060 documents)
+
+- Importing "posts" (496,061 documents)
+
+✔ Imported "posts" (500,000 documents)
+- Imported "posts" (500,000 documents)
+
+✔ Added 500000 documents to table "posts".
+END_NATIVE_TABLE_IMPORT posts 2026-10-15T18:15:33Z
+BEGIN_NATIVE_TABLE_IMPORT likes 2026-10-15T18:15:33Z
+- Importing /state/convex/import-jsonl/likes.jsonl (203.8 MiB)
+
+- Importing /state/convex/import-jsonl/likes.jsonl (203.8 MiB)
+
+Import change summary:
+table | create    | delete |
+----------------------------
+likes | 2,016,005 | 0 of 0 |
+Once the import has started, it will run in the background.
+Interrupting `npx convex import` will not cancel it.
+- Importing
+
+- Importing
+
+- Importing "likes"
+
+- Importing "likes" (8,000 documents)
+
+- Importing "likes" (16,001 documents)
+
+- Importing "likes" (24,002 documents)
+
+- Importing "likes" (32,003 documents)
+
+- Importing "likes" (40,004 documents)
+
+- Importing "likes" (48,005 documents)
+
+- Importing "likes" (56,006 documents)
+
+- Importing "likes" (64,007 documents)
+
+- Importing "likes" (72,008 documents)
+
+- Importing "likes" (80,009 documents)
+
+- Importing "likes" (88,010 documents)
+
+- Importing "likes" (96,011 documents)
+
+- Importing "likes" (104,012 documents)
+
+- Importing "likes" (112,013 documents)
+
+- Importing "likes" (120,014 documents)
+
+- Importing "likes" (128,015 documents)
+
+- Importing "likes" (136,016 documents)
+
+- Importing "likes" (144,017 documents)
+
+- Importing "likes" (152,018 documents)
+
+- Importing "likes" (160,019 documents)
+
+- Importing "likes" (168,020 documents)
+
+- Importing "likes" (176,021 documents)
+
+- Importing "likes" (184,022 documents)
+
+- Importing "likes" (192,023 documents)
+
+- Importing "likes" (200,024 documents)
+
+- Importing "likes" (208,025 documents)
+
+- Importing "likes" (216,026 documents)
+
+- Importing "likes" (224,027 documents)
+
+- Importing "likes" (232,028 documents)
+
+- Importing "likes" (240,029 documents)
+
+- Importing "likes" (248,030 documents)
+
+- Importing "likes" (256,031 documents)
+
+- Importing "likes" (264,032 documents)
+
+- Importing "likes" (272,033 documents)
+
+- Importing "likes" (280,034 documents)
+
+- Importing "likes" (288,035 documents)
+
+- Importing "likes" (296,036 documents)
+
+- Importing "likes" (304,037 documents)
+
+- Importing "likes" (312,038 documents)
+
+- Importing "likes" (320,039 documents)
+
+- Importing "likes" (328,040 documents)
+
+- Importing "likes" (336,041 documents)
+
+- Importing "likes" (344,042 documents)
+
+- Importing "likes" (352,043 documents)
+
+- Importing "likes" (360,044 documents)
+
+- Importing "likes" (368,045 documents)
+
+- Importing "likes" (376,046 documents)
+
+- Importing "likes" (384,047 documents)
+
+- Importing "likes" (392,048 documents)
+
+- Importing "likes" (400,049 documents)
+
+- Importing "likes" (408,050 documents)
+
+- Importing "likes" (416,051 documents)
+
+- Importing "likes" (424,052 documents)
+
+- Importing "likes" (432,053 documents)
+
+- Importing "likes" (440,054 documents)
+
+- Importing "likes" (448,055 documents)
+
+- Importing "likes" (456,056 documents)
+
+- Importing "likes" (464,057 documents)
+
+- Importing "likes" (472,058 documents)
+
+- Importing "likes" (480,059 documents)
+
+- Importing "likes" (488,060 documents)
+
+- Importing "likes" (496,061 documents)
+
+- Importing "likes" (504,062 documents)
+
+- Importing "likes" (512,063 documents)
+
+- Importing "likes" (520,064 documents)
+
+- Importing "likes" (528,065 documents)
+
+- Importing "likes" (536,066 documents)
+
+- Importing "likes" (544,067 documents)
+
+- Importing "likes" (552,068 documents)
+
+- Importing "likes" (560,069 documents)
+
+- Importing "likes" (568,070 documents)
+
+- Importing "likes" (576,071 documents)
+
+- Importing "likes" (584,072 documents)
+
+- Importing "likes" (592,073 documents)
+
+- Importing "likes" (600,074 documents)
+
+- Importing "likes" (608,075 documents)
+
+- Importing "likes" (616,076 documents)
+
+- Importing "likes" (624,077 documents)
+
+- Importing "likes" (632,078 documents)
+
+- Importing "likes" (640,079 documents)
+
+- Importing "likes" (648,080 documents)
+
+- Importing "likes" (656,081 documents)
+
+- Importing "likes" (664,082 documents)
+
+- Importing "likes" (672,083 documents)
+
+- Importing "likes" (680,084 documents)
+
+- Importing "likes" (688,085 documents)
+
+- Importing "likes" (696,086 documents)
+
+- Importing "likes" (704,087 documents)
+
+- Importing "likes" (712,088 documents)
+
+- Importing "likes" (720,089 documents)
+
+- Importing "likes" (728,090 documents)
+
+- Importing "likes" (736,091 documents)
+
+- Importing "likes" (744,092 documents)
+
+- Importing "likes" (752,093 documents)
+
+- Importing "likes" (760,094 documents)
+
+- Importing "likes" (768,095 documents)
+
+- Importing "likes" (776,096 documents)
+
+- Importing "likes" (784,097 documents)
+
+- Importing "likes" (792,098 documents)
+
+- Importing "likes" (800,099 documents)
+
+- Importing "likes" (808,100 documents)
+
+- Importing "likes" (816,101 documents)
+
+- Importing "likes" (824,102 documents)
+
+- Importing "likes" (832,103 documents)
+
+- Importing "likes" (840,104 documents)
+
+- Importing "likes" (848,105 documents)
+
+- Importing "likes" (856,106 documents)
+
+- Importing "likes" (864,107 documents)
+
+- Importing "likes" (872,108 documents)
+
+- Importing "likes" (880,109 documents)
+
+- Importing "likes" (888,110 documents)
+
+- Importing "likes" (896,111 documents)
+
+- Importing "likes" (904,112 documents)
+
+- Importing "likes" (912,113 documents)
+
+- Importing "likes" (920,114 documents)
+
+- Importing "likes" (928,115 documents)
+
+- Importing "likes" (936,116 documents)
+
+- Importing "likes" (944,117 documents)
+
+- Importing "likes" (952,118 documents)
+
+- Importing "likes" (960,119 documents)
+
+- Importing "likes" (968,120 documents)
+
+- Importing "likes" (976,121 documents)
+
+- Importing "likes" (984,122 documents)
+
+- Importing "likes" (992,123 documents)
+
+- Importing "likes" (1,000,124 documents)
+
+- Importing "likes" (1,008,125 documents)
+
+- Importing "likes" (1,016,126 documents)
+
+- Importing "likes" (1,024,127 documents)
+
+- Importing "likes" (1,032,128 documents)
+
+- Importing "likes" (1,040,129 documents)
+
+- Importing "likes" (1,048,130 documents)
+
+- Importing "likes" (1,056,131 documents)
+
+- Importing "likes" (1,064,132 documents)
+
+- Importing "likes" (1,072,133 documents)
+
+- Importing "likes" (1,080,134 documents)
+
+- Importing "likes" (1,088,135 documents)
+
+- Importing "likes" (1,096,136 documents)
+
+- Importing "likes" (1,104,137 documents)
+
+- Importing "likes" (1,112,138 documents)
+
+- Importing "likes" (1,120,139 documents)
+
+- Importing "likes" (1,128,140 documents)
+
+- Importing "likes" (1,136,141 documents)
+
+- Importing "likes" (1,144,142 documents)
+
+- Importing "likes" (1,152,143 documents)
+
+- Importing "likes" (1,160,144 documents)
+
+- Importing "likes" (1,168,145 documents)
+
+- Importing "likes" (1,176,146 documents)
+
+- Importing "likes" (1,184,147 documents)
+
+- Importing "likes" (1,192,148 documents)
+
+- Importing "likes" (1,200,149 documents)
+
+- Importing "likes" (1,208,150 documents)
+
+- Importing "likes" (1,216,151 documents)
+
+- Importing "likes" (1,224,152 documents)
+
+- Importing "likes" (1,232,153 documents)
+
+- Importing "likes" (1,240,154 documents)
+
+- Importing "likes" (1,248,155 documents)
+
+- Importing "likes" (1,256,156 documents)
+
+- Importing "likes" (1,264,157 documents)
+
+- Importing "likes" (1,272,158 documents)
+
+- Importing "likes" (1,280,159 documents)
+
+- Importing "likes" (1,288,160 documents)
+
+- Importing "likes" (1,296,161 documents)
+
+- Importing "likes" (1,304,162 documents)
+
+- Importing "likes" (1,312,163 documents)
+
+- Importing "likes" (1,320,164 documents)
+
+- Importing "likes" (1,328,165 documents)
+
+- Importing "likes" (1,336,166 documents)
+
+- Importing "likes" (1,344,167 documents)
+
+- Importing "likes" (1,352,168 documents)
+
+- Importing "likes" (1,360,169 documents)
+
+- Importing "likes" (1,368,170 documents)
+
+- Importing "likes" (1,376,171 documents)
+
+- Importing "likes" (1,384,172 documents)
+
+- Importing "likes" (1,392,173 documents)
+
+- Importing "likes" (1,400,174 documents)
+
+- Importing "likes" (1,408,175 documents)
+
+- Importing "likes" (1,416,176 documents)
+
+- Importing "likes" (1,424,177 documents)
+
+- Importing "likes" (1,432,178 documents)
+
+- Importing "likes" (1,440,179 documents)
+
+- Importing "likes" (1,448,180 documents)
+
+- Importing "likes" (1,456,181 documents)
+
+- Importing "likes" (1,464,182 documents)
+
+- Importing "likes" (1,472,183 documents)
+
+- Importing "likes" (1,480,184 documents)
+
+- Importing "likes" (1,488,185 documents)
+
+- Importing "likes" (1,496,186 documents)
+
+- Importing "likes" (1,504,187 documents)
+
+- Importing "likes" (1,512,188 documents)
+
+- Importing "likes" (1,520,189 documents)
+
+- Importing "likes" (1,528,190 documents)
+
+- Importing "likes" (1,536,191 documents)
+
+- Importing "likes" (1,544,192 documents)
+
+- Importing "likes" (1,552,193 documents)
+
+- Importing "likes" (1,560,194 documents)
+
+- Importing "likes" (1,568,195 documents)
+
+- Importing "likes" (1,576,196 documents)
+
+- Importing "likes" (1,584,197 documents)
+
+- Importing "likes" (1,592,198 documents)
+
+- Importing "likes" (1,600,199 documents)
+
+- Importing "likes" (1,608,200 documents)
+
+- Importing "likes" (1,616,201 documents)
+
+- Importing "likes" (1,624,202 documents)
+
+- Importing "likes" (1,632,203 documents)
+
+- Importing "likes" (1,640,204 documents)
+
+- Importing "likes" (1,648,205 documents)
+
+- Importing "likes" (1,656,206 documents)
+
+- Importing "likes" (1,664,207 documents)
+
+- Importing "likes" (1,672,208 documents)
+
+- Importing "likes" (1,680,209 documents)
+
+- Importing "likes" (1,688,210 documents)
+
+- Importing "likes" (1,696,211 documents)
+
+- Importing "likes" (1,704,212 documents)
+
+- Importing "likes" (1,712,213 documents)
+
+- Importing "likes" (1,720,214 documents)
+
+- Importing "likes" (1,728,215 documents)
+
+- Importing "likes" (1,736,216 documents)
+
+- Importing "likes" (1,744,217 documents)
+
+- Importing "likes" (1,752,218 documents)
+
+- Importing "likes" (1,760,219 documents)
+
+- Importing "likes" (1,768,220 documents)
+
+- Importing "likes" (1,776,221 documents)
+
+- Importing "likes" (1,784,222 documents)
+
+- Importing "likes" (1,792,223 documents)
+
+- Importing "likes" (1,800,224 documents)
+
+- Importing "likes" (1,808,225 documents)
+
+- Importing "likes" (1,816,226 documents)
+
+- Importing "likes" (1,824,227 documents)
+
+- Importing "likes" (1,832,228 documents)
+
+- Importing "likes" (1,840,229 documents)
+
+- Importing "likes" (1,848,230 documents)
+
+- Importing "likes" (1,856,231 documents)
+
+- Importing "likes" (1,864,232 documents)
+
+- Importing "likes" (1,872,233 documents)
+
+- Importing "likes" (1,880,234 documents)
+
+- Importing "likes" (1,888,235 documents)
+
+- Importing "likes" (1,896,236 documents)
+
+- Importing "likes" (1,904,237 documents)
+
+- Importing "likes" (1,912,238 documents)
+
+- Importing "likes" (1,920,239 documents)
+
+- Importing "likes" (1,928,240 documents)
+
+- Importing "likes" (1,936,241 documents)
+
+- Importing "likes" (1,944,242 documents)
+
+- Importing "likes" (1,952,243 documents)
+
+- Importing "likes" (1,960,244 documents)
+
+- Importing "likes" (1,968,245 documents)
+
+- Importing "likes" (1,976,246 documents)
+
+- Importing "likes" (1,984,247 documents)
+
+- Importing "likes" (1,992,248 documents)
+
+- Importing "likes" (2,000,249 documents)
+
+- Importing "likes" (2,008,250 documents)
+
+✔ Imported "likes" (2,016,005 documents)
+- Imported "likes" (2,016,005 documents)
+
+✔ Added 2016005 documents to table "likes".
+END_NATIVE_TABLE_IMPORT likes 2026-10-15T18:22:11Z
+BEGIN_NATIVE_TABLE_IMPORT feed_sequences 2026-10-15T18:22:11Z
+- Importing /state/convex/import-jsonl/feed_sequences.jsonl (49 bytes)
+
+- Importing /state/convex/import-jsonl/feed_sequences.jsonl (49 bytes)
+
+Import change summary:
+table          | create | delete |
+----------------------------------
+feed_sequences | 1      | 0 of 0 |
+Once the import has started, it will run in the background.
+Interrupting `npx convex import` will not cancel it.
+- Importing
+
+- Importing
+
+- Importing "feed_sequences"
+
+✔ Imported "feed_sequences" (1 documents)
+- Imported "feed_sequences" (1 documents)
+
+✔ Added 1 documents to table "feed_sequences".
+END_NATIVE_TABLE_IMPORT feed_sequences 2026-10-15T18:22:12Z
+test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata) ... ERROR
+test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count) ... Native feed/detail exact normalized counts verified; largest seeded post: 405018 likes: 583.0
+ok
+test_03_native_read_functions_are_private (__main__.FullNativeDataset.test_03_native_read_functions_are_private) ... ok
+
+======================================================================
+ERROR: test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_dataset.py", line 39, in test_01_full_native_canonical_rows_hash_relations_and_metadata
+    result = self.call('native:canonicalPage', {'table': table, 'cursor': cursor})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_dataset.py", line 20, in call
+    status, response = query(path, args)
+                       ^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_feasibility.py", line 19, in query
+    with urlopen(request, timeout=30) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 1377, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 1352, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/http/client.py", line 1374, in getresponse
+    response.begin()
+  File "/usr/lib/python3.11/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+----------------------------------------------------------------------
+Ran 3 tests in 64.935s
+
+FAILED (errors=1)
+

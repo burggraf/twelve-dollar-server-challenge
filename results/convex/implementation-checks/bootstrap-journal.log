@@ -1,0 +1,256 @@
+Starting tds-convex-native-bootstrap-20261015.service - /bin/bash /opt/twelve-dollar-baas-convex-16g/bootstrap-native.sh...
+Started tds-convex-native-bootstrap-20261015.service - /bin/bash /opt/twelve-dollar-baas-convex-16g/bootstrap-native.sh.
+Read-only service snapshot saved; service count: 28 ; existing listener PID count: 1
+CONVEX_EXISTING_SERVICES_AND_LISTENER_UNCHANGED
+ Image ghcr.io/get-convex/convex-backend:a3538c6d212948f20726868e41d155d2534cd130@sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4 Pulling
+ 05c7059c2870 Pulling fs layer 0B
+ 8a4b6e3e9898 Pulling fs layer 0B
+ 8db21cff2828 Pulling fs layer 0B
+ 5926a9bb097b Pulling fs layer 0B
+ a60ef8ec184e Pulling fs layer 0B
+ 98670913a106 Pulling fs layer 0B
+ 8353a9849aa8 Pulling fs layer 0B
+ 5dbe9c76f8bc Pulling fs layer 0B
+ ba931421239a Pulling fs layer 0B
+ c452dd06f11a Pulling fs layer 0B
+ 98a810f0b39c Pulling fs layer 0B
+ cd7df2181c45 Pulling fs layer 0B
+ 9e27b097bbcb Pulling fs layer 0B
+ 5926a9bb097b Download complete 0B
+ 8db21cff2828 Download complete 0B
+ 8a4b6e3e9898 Download complete 0B
+ 9e27b097bbcb Download complete 0B
+ a60ef8ec184e Downloading 2.097MB
+ a60ef8ec184e Downloading 3.146MB
+ 8353a9849aa8 Downloading 1.049MB
+ 98670913a106 Downloading 1.049MB
+ a60ef8ec184e Downloading 4.194MB
+ 8353a9849aa8 Downloading 3.146MB
+ 98670913a106 Downloading 1.049MB
+ a60ef8ec184e Downloading 5.243MB
+ 8353a9849aa8 Downloading 4.194MB
+ 98670913a106 Downloading 2.097MB
+ a60ef8ec184e Downloading 6.291MB
+ 8353a9849aa8 Downloading 6.291MB
+ 98670913a106 Downloading 3.146MB
+ a60ef8ec184e Downloading 6.291MB
+ 8353a9849aa8 Downloading 7.34MB
+ 98670913a106 Downloading 4.194MB
+ a60ef8ec184e Downloading 7.34MB
+ 8353a9849aa8 Downloading 9.437MB
+ 98670913a106 Downloading 4.194MB
+ a60ef8ec184e Downloading 8.389MB
+ 8353a9849aa8 Downloading 10.49MB
+ 98670913a106 Downloading 5.243MB
+ a60ef8ec184e Downloading 9.437MB
+ 8353a9849aa8 Downloading 12.58MB
+ 98670913a106 Downloading 6.291MB
+ a60ef8ec184e Downloading 10.49MB
+ 8353a9849aa8 Downloading 13.63MB
+ 98670913a106 Downloading 6.291MB
+ a60ef8ec184e Downloading 10.49MB
+ 8353a9849aa8 Downloading 15.73MB
+ 98670913a106 Downloading 7.34MB
+ a60ef8ec184e Downloading 11.53MB
+ 8353a9849aa8 Downloading 16.78MB
+ 98670913a106 Downloading 8.389MB
+ a60ef8ec184e Downloading 12.58MB
+ 8353a9849aa8 Downloading 18.87MB
+ 98670913a106 Downloading 9.437MB
+ a60ef8ec184e Downloading 13.63MB
+ 8353a9849aa8 Downloading 20.97MB
+ 98670913a106 Downloading 9.437MB
+ a60ef8ec184e Downloading 14.68MB
+ 8353a9849aa8 Downloading 22.02MB
+ 98670913a106 Downloading 10.49MB
+ a60ef8ec184e Downloading 14.68MB
+ 8353a9849aa8 Downloading 24.12MB
+ 98670913a106 Downloading 11.53MB
+ a60ef8ec184e Downloading 15.73MB
+ 8353a9849aa8 Downloading 25.17MB
+ 98670913a106 Downloading 11.53MB
+ 98670913a106 Downloading 12.58MB
+ a60ef8ec184e Downloading 16.78MB
+ 8353a9849aa8 Downloading 27.26MB
+ a60ef8ec184e Downloading 17.83MB
+ 8353a9849aa8 Downloading 28.31MB
+ 98670913a106 Downloading 13.63MB
+ a60ef8ec184e Downloading 18.87MB
+ 8353a9849aa8 Downloading 30.41MB
+ 98670913a106 Downloading 14.68MB
+ a60ef8ec184e Downloading 18.87MB
+ 8353a9849aa8 Downloading 31.46MB
+ 98670913a106 Downloading 14.68MB
+ a60ef8ec184e Downloading 19.92MB
+ 8353a9849aa8 Downloading 33.55MB
+ 98670913a106 Downloading 15.73MB
+ a60ef8ec184e Downloading 20.97MB
+ 8353a9849aa8 Downloading 34.6MB
+ 98670913a106 Downloading 16.78MB
+ a60ef8ec184e Downloading 22.02MB
+ 8353a9849aa8 Downloading 36.7MB
+ 98670913a106 Downloading 17.83MB
+ a60ef8ec184e Downloading 22.02MB
+ 8353a9849aa8 Downloading 37.75MB
+ 98670913a106 Downloading 17.83MB
+ a60ef8ec184e Downloading 23.07MB
+ 8353a9849aa8 Downloading 39.85MB
+ 98670913a106 Downloading 18.87MB
+ 98670913a106 Downloading 19.92MB
+ a60ef8ec184e Downloading 24.12MB
+ 8353a9849aa8 Downloading 41.94MB
+ a60ef8ec184e Downloading 25.17MB
+ 8353a9849aa8 Downloading 42.99MB
+ 98670913a106 Downloading 19.92MB
+ a60ef8ec184e Downloading 26.21MB
+ 8353a9849aa8 Downloading 45.14MB
+ 98670913a106 Downloading 20.97MB
+ 98670913a106 Downloading 23.07MB
+ a60ef8ec184e Downloading 27.26MB
+ 8353a9849aa8 Download complete 0B
+ a60ef8ec184e Downloading 29.76MB
+ 98670913a106 Downloading 24.12MB
+ 98670913a106 Downloading 26.21MB
+ 05c7059c2870 Downloading 1.049MB
+ a60ef8ec184e Download complete 0B
+ a60ef8ec184e Extracting 1B
+ 98670913a106 Downloading 27.26MB
+ 05c7059c2870 Downloading 3.146MB
+ a60ef8ec184e Extracting 1B
+ 98670913a106 Downloading 28.31MB
+ 05c7059c2870 Downloading 5.243MB
+ a60ef8ec184e Extracting 1B
+ 98670913a106 Downloading 29.36MB
+ 05c7059c2870 Downloading 7.34MB
+ 98a810f0b39c Download complete 0B
+ a60ef8ec184e Extracting 1B
+ 05c7059c2870 Downloading 9.437MB
+ 98670913a106 Downloading 30.41MB
+ a60ef8ec184e Extracting 1B
+ 98670913a106 Downloading 31.46MB
+ 05c7059c2870 Downloading 11.53MB
+ a60ef8ec184e Pull complete 0B
+ 05c7059c2870 Downloading 13.63MB
+ 98670913a106 Downloading 32.51MB
+ c452dd06f11a Download complete 0B
+ 98670913a106 Downloading 33.55MB
+ 05c7059c2870 Downloading 15.73MB
+ 98670913a106 Downloading 34.6MB
+ 05c7059c2870 Downloading 17.83MB
+ 05c7059c2870 Downloading 19.92MB
+ 98670913a106 Downloading 35.65MB
+ 98670913a106 Downloading 36.7MB
+ cd7df2181c45 Download complete 0B
+ 05c7059c2870 Downloading 22.02MB
+ cd7df2181c45 Pull complete 0B
+ 98670913a106 Downloading 37.75MB
+ 05c7059c2870 Downloading 24.12MB
+ 98670913a106 Downloading 38.8MB
+ 05c7059c2870 Downloading 26.21MB
+ 98670913a106 Downloading 39.85MB
+ 05c7059c2870 Downloading 28.31MB
+ 05c7059c2870 Downloading 30.41MB
+ 98670913a106 Downloading 40.89MB
+ 98670913a106 Downloading 41.94MB
+ 05c7059c2870 Downloading 32.51MB
+ 05c7059c2870 Downloading 33.55MB
+ ba931421239a Download complete 0B
+ 98670913a106 Downloading 42.99MB
+ 98670913a106 Downloading 44.04MB
+ 05c7059c2870 Downloading 36.7MB
+ 98670913a106 Downloading 45.09MB
+ 05c7059c2870 Downloading 38.8MB
+ 98670913a106 Downloading 46.14MB
+ 05c7059c2870 Downloading 40.89MB
+ 98670913a106 Downloading 48.23MB
+ 05c7059c2870 Downloading 41.94MB
+ 5dbe9c76f8bc Download complete 0B
+ 98670913a106 Downloading 49.28MB
+ 05c7059c2870 Downloading 44.04MB
+ 98670913a106 Downloading 50.33MB
+ 05c7059c2870 Downloading 46.14MB
+ 98670913a106 Downloading 51.38MB
+ 05c7059c2870 Downloading 48.23MB
+ 98670913a106 Downloading 52.43MB
+ 05c7059c2870 Downloading 50.33MB
+ 98670913a106 Downloading 53.48MB
+ 05c7059c2870 Downloading 52.43MB
+ 05c7059c2870 Downloading 54.53MB
+ 98670913a106 Downloading 54.53MB
+ 98670913a106 Downloading 56.62MB
+ 05c7059c2870 Downloading 56.62MB
+ 98670913a106 Downloading 57.67MB
+ 05c7059c2870 Downloading 58.72MB
+ 98670913a106 Download complete 0B
+ 05c7059c2870 Downloading 61.87MB
+ 05c7059c2870 Downloading 65.01MB
+ 05c7059c2870 Downloading 68.16MB
+ 05c7059c2870 Downloading 71.3MB
+ 05c7059c2870 Download complete 0B
+ 05c7059c2870 Extracting 1B
+ 05c7059c2870 Extracting 1B
+ 05c7059c2870 Extracting 1B
+ 05c7059c2870 Extracting 1B
+ 05c7059c2870 Extracting 1B
+ 05c7059c2870 Extracting 1B
+ 05c7059c2870 Extracting 1B
+ 05c7059c2870 Extracting 1B
+ 05c7059c2870 Extracting 1B
+ 05c7059c2870 Pull complete 0B
+ 8353a9849aa8 Extracting 1B
+ 8353a9849aa8 Extracting 1B
+ 8353a9849aa8 Extracting 1B
+ 8353a9849aa8 Extracting 1B
+ 8353a9849aa8 Extracting 1B
+ 8a4b6e3e9898 Extracting 1B
+ 8353a9849aa8 Pull complete 0B
+ 5dbe9c76f8bc Pull complete 0B
+ 8a4b6e3e9898 Extracting 1B
+ 8a4b6e3e9898 Extracting 1B
+ 5926a9bb097b Pull complete 0B
+ 8db21cff2828 Pull complete 0B
+ 8a4b6e3e9898 Pull complete 0B
+ 98670913a106 Extracting 1B
+ 98670913a106 Extracting 1B
+ 98670913a106 Extracting 1B
+ 98670913a106 Extracting 1B
+ 98670913a106 Extracting 1B
+ 98670913a106 Extracting 1B
+ 98670913a106 Extracting 1B
+ 9e27b097bbcb Pull complete 0B
+ 98a810f0b39c Pull complete 0B
+ c452dd06f11a Pull complete 0B
+ ba931421239a Pull complete 0B
+ 98670913a106 Pull complete 0B
+ Image ghcr.io/get-convex/convex-backend:a3538c6d212948f20726868e41d155d2534cd130@sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4 Pulled
+ Network baas-convex-vps16_default Creating
+ Volume baas-convex-vps16_data Creating
+ Network baas-convex-vps16_default Creating
+ Volume baas-convex-vps16_data Creating
+ Volume baas-convex-vps16_data Created
+ Volume baas-convex-vps16_data Created
+ Network baas-convex-vps16_default Created
+ Network baas-convex-vps16_default Created
+ Container baas-convex-vps16-backend-1 Creating
+ Container baas-convex-vps16-backend-1 Created
+ Container baas-convex-vps16-backend-1 Starting
+ Container baas-convex-vps16-backend-1 Started
+ Container baas-convex-vps16-backend-1 Waiting
+ Container baas-convex-vps16-backend-1 Healthy
+Admin key:
+CONVEX_NATIVE_IMAGE_AND_KERNEL_SERVING_LIMITS_PASSED
+ Container baas-convex-vps16-tools-run-020d05c5a8ee Creating
+ Container baas-convex-vps16-tools-run-020d05c5a8ee Created
+v22.20.0
+10.9.3
+added 5 packages in 7s
+npm notice
+npm notice New major version of npm available! 10.9.3 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+1.46.0
+Native storage/query test expected-red exit: 1
+CONVEX_NATIVE_BOOTSTRAP_AND_EXPECTED_RED_CAPTURED
+tds-convex-native-bootstrap-20261015.service: Deactivated successfully.
+tds-convex-native-bootstrap-20261015.service: Consumed 1.070s CPU time, 584.0K memory peak, 0B memory swap peak.

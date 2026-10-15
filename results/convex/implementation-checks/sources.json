@@ -1,0 +1,131 @@
+{
+  "commit": "a3538c6d212948f20726868e41d155d2534cd130",
+  "files": [
+    {
+      "path": ".github/workflows/release_self_hosted_images.yml",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/.github/workflows/release_self_hosted_images.yml",
+      "bytes": 2070,
+      "sha256": "d709967f6223aebc71f1acaf1b60b9ae6fc8d94072c78bfd4caadc282c6639be"
+    },
+    {
+      "path": "crates/application/src/application_function_runner/mod.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/application/src/application_function_runner/mod.rs",
+      "bytes": 86464,
+      "sha256": "a4836f58e363f86f4d3582be2bd07112939587ca2686dd4e2865b6c3a715cedf"
+    },
+    {
+      "path": "crates/application/src/cache/metrics.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/application/src/cache/metrics.rs",
+      "bytes": 6642,
+      "sha256": "fe98e4774d237f5a7bf5a28fed551f8e76a667e1e97ada9ff0dd9e3548d5e55d"
+    },
+    {
+      "path": "crates/application/src/cache/mod.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/application/src/cache/mod.rs",
+      "bytes": 41167,
+      "sha256": "0d5ab6515ff11f2343bc793bf5145b0ad534ca789cd49ea4d197bb3cc573d40d"
+    },
+    {
+      "path": "crates/application/src/lib.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/application/src/lib.rs",
+      "bytes": 135414,
+      "sha256": "f2429b81c7d8975bb6494a427a5327b922e2035266f7d98367135ca9dc7e387c"
+    },
+    {
+      "path": "crates/common/src/knobs.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/common/src/knobs.rs",
+      "bytes": 104659,
+      "sha256": "236951185b5f651840a4b9c4dd823e7c75a39b139ee846e374964b6b6b0af762"
+    },
+    {
+      "path": "crates/local_backend/src/args_structs.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/local_backend/src/args_structs.rs",
+      "bytes": 796,
+      "sha256": "e9004dce421cc7dd75ee772da7dd779332784662f7969fec10893cfc3e68a80e"
+    },
+    {
+      "path": "crates/local_backend/src/config.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/local_backend/src/config.rs",
+      "bytes": 8955,
+      "sha256": "5b1ea984e15b18f3607cce15d4d3dcd1e5d2ee80a56e5797bcf5b614cc9b5f5a"
+    },
+    {
+      "path": "crates/local_backend/src/lib.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/local_backend/src/lib.rs",
+      "bytes": 9356,
+      "sha256": "5d17780d7b6d5b4601f8dde7a8474a01ec0547b3ff420e5cda794433ff7c8614"
+    },
+    {
+      "path": "crates/local_backend/src/main.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/local_backend/src/main.rs",
+      "bytes": 7978,
+      "sha256": "544b26f44ff55ffff4a9ba91393337b42b99deb561508baaf4ad1da7880a51b4"
+    },
+    {
+      "path": "crates/sqlite/src/lib.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/sqlite/src/lib.rs",
+      "bytes": 24431,
+      "sha256": "2ea79da83ae21034b7b3f2e972a0b4c9f9ee1bcc2f7137389760a0c64fa71407"
+    },
+    {
+      "path": "npm-packages/convex/package.json",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/npm-packages/convex/package.json",
+      "bytes": 11106,
+      "sha256": "cace175f3413a6be31ad59dad85b38ddbc1b6765b40832b5d4493d94f1bdab09"
+    },
+    {
+      "path": "release.json",
+      "url": "https://api.github.com/repos/get-convex/convex-backend/releases/tags/precompiled-2026-10-06-a3538c6",
+      "bytes": 14078,
+      "sha256": "b7c97b73092c888fb26a82e196cacec83e5683e86a185e8fba6dec03f2122360"
+    },
+    {
+      "path": "sdk-package.json",
+      "url": "https://registry.npmjs.org/convex/1.46.0",
+      "bytes": 8950,
+      "sha256": "f00281e92f5ee71c466e685d09c6afdc081a366533a1df89a89d24650c22ba32"
+    },
+    {
+      "path": "self-hosted/README.md",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/README.md",
+      "bytes": 5850,
+      "sha256": "ff49fc8138814497c212a7d56ee98fcbbba774558eabcec633368e6bcf4eaed0"
+    },
+    {
+      "path": "self-hosted/advanced/knobs.md",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/advanced/knobs.md",
+      "bytes": 855,
+      "sha256": "7e80e8470cc3a8f0c8681e36d5786f787c32a6e01246e5046b09c9eec6560f10"
+    },
+    {
+      "path": "self-hosted/docker/docker-compose.yml",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/docker/docker-compose.yml",
+      "bytes": 2480,
+      "sha256": "483d2bb9a32b70036c29f0fc59c55acf1a1421147c45add2080fd2142cb98cfc"
+    },
+    {
+      "path": "self-hosted/docker-build/Dockerfile.backend",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/docker-build/Dockerfile.backend",
+      "bytes": 6620,
+      "sha256": "70cb214dfb295eb6ea53db25997fa85d9d6d74ae23aab1aed93df800f61e83ee"
+    },
+    {
+      "path": "self-hosted/docker-build/generate_admin_key.sh",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/docker-build/generate_admin_key.sh",
+      "bytes": 142,
+      "sha256": "961d3357e60c917a4e1a6dff7e0af3cd7d94f7b0e998b05ff28fdd1c22bff46e"
+    },
+    {
+      "path": "self-hosted/docker-build/read_credentials.sh",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/docker-build/read_credentials.sh",
+      "bytes": 1028,
+      "sha256": "27c6e916f2eaf2916d8f78db74113698bdbda33fe0670530efb186092ee89e92"
+    },
+    {
+      "path": "self-hosted/docker-build/run_backend.sh",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/docker-build/run_backend.sh",
+      "bytes": 2691,
+      "sha256": "6ba784b5dc31641b938fba4c336d08c542a09ce6f7921e980846a5f9f440ef3a"
+    }
+  ]
+}

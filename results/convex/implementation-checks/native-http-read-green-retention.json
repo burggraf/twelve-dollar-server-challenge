@@ -1,0 +1,131 @@
+{
+  "scope": "Read-only first HTTP read integration and current canonical regression outcome, not complete compatibility correctness or a capacity score",
+  "private_inputs_sha256": {
+    "cli.env": "f228b8716c5deee2e9e01f07a1e2efa0f664a8dca7da831ca006ecfe0634d50b",
+    "backend.env": "cfa8011196ce90ea27d9232441c082442280f96230830f055135216e16ae22c5",
+    "postgres.env": "4b94741dc1bd9def607058a3bedb23b087a921dc223424fa7a48e863b4d3ecc3"
+  },
+  "actual_private_candidates_checked": 4,
+  "targets": [
+    {
+      "role": "backend",
+      "id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T19:03:26.325882195Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      }
+    },
+    {
+      "role": "postgres",
+      "id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T19:03:20.716573172Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "original_private_file": "setup-evidence/native-http-read-green-original.log",
+      "original_bytes": 5016,
+      "original_sha256": "a7ad333da292a5bee935bcbdaa3232d39a92ad235ad4a3c8c93c52ab88003e78",
+      "public_derivative": "native-http-read-green-public.log",
+      "derivative_bytes": 5016,
+      "derivative_sha256": "a7ad333da292a5bee935bcbdaa3232d39a92ad235ad4a3c8c93c52ab88003e78",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "native-http-read-green-driver.log",
+      "original_bytes": 298,
+      "original_sha256": "3cf348308a1167e5ab728abd49e497c14183e704f1c778a7de522037d752e2f4",
+      "public_derivative": "native-http-read-green-driver-public.log",
+      "derivative_bytes": 298,
+      "derivative_sha256": "3cf348308a1167e5ab728abd49e497c14183e704f1c778a7de522037d752e2f4",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-http-read-before.json",
+      "original_bytes": 13558,
+      "original_sha256": "66a1adeef93aa4fd6f5a4114b177b3c2d97a3128481ccbeaab18a6c6ad9461bb",
+      "public_derivative": "native-http-read-before-public.json",
+      "derivative_bytes": 13558,
+      "derivative_sha256": "66a1adeef93aa4fd6f5a4114b177b3c2d97a3128481ccbeaab18a6c6ad9461bb",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-http-read-before-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "172910e6df9b2bd12a0b8804d1fd139b3507faf446d9dbabbb3f3158a90f3e6d",
+      "public_derivative": "native-http-read-before-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "172910e6df9b2bd12a0b8804d1fd139b3507faf446d9dbabbb3f3158a90f3e6d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-http-read-after.json",
+      "original_bytes": 13557,
+      "original_sha256": "9083bc958af76053c25f300aefac307fadd5a14f8959fbe45fa40d5b2436d3ca",
+      "public_derivative": "native-http-read-after-public.json",
+      "derivative_bytes": 13557,
+      "derivative_sha256": "9083bc958af76053c25f300aefac307fadd5a14f8959fbe45fa40d5b2436d3ca",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-http-read-after-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "172910e6df9b2bd12a0b8804d1fd139b3507faf446d9dbabbb3f3158a90f3e6d",
+      "public_derivative": "native-http-read-after-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "172910e6df9b2bd12a0b8804d1fd139b3507faf446d9dbabbb3f3158a90f3e6d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/native-http-read-canonical-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "native-http-read-canonical-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "native_profile_exists": true
+}

@@ -1,0 +1,130 @@
+{
+  "status": "native-sqlite-feasibility-attempt-failed",
+  "feasibility_passed": false,
+  "full_correctness_passed": false,
+  "performance_score": null,
+  "software": {
+    "product": "Convex self-hosted",
+    "release": "precompiled-2026-10-06-a3538c6",
+    "upstream_commit": "a3538c6d212948f20726868e41d155d2534cd130",
+    "sdk_cli_version": "1.46.0",
+    "native_amd64_image": "ghcr.io/get-convex/convex-backend:a3538c6d212948f20726868e41d155d2534cd130@sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+    "bundled_node": "22.22.2",
+    "native_version_endpoint_literal": "unknown",
+    "storage": "official default SQLite persistence",
+    "runtime_sqlite_engine_version": null
+  },
+  "host": {
+    "approved_ssh_alias": "azabab.com",
+    "observed_hostname": "claudius.azabab.com",
+    "shared_host": true,
+    "dedicated_vps": false,
+    "monthly_price": null,
+    "region": null
+  },
+  "serving": {
+    "aggregate_vcpu_quota": 1,
+    "aggregate_memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "parent_slice": "tdsbaasconvexvps16.slice",
+    "required_processes": "official backend plus bundled executors",
+    "query_result_cache_bytes": 0,
+    "runtime_worker_threads": 1,
+    "native_transaction_read_execution_limits_raised": false
+  },
+  "load_runner": {
+    "executed": false,
+    "version": "1.3.0",
+    "profile": "k6-2cpu-8g-v3",
+    "vcpu_quota": 2,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0
+  },
+  "untimed_tools": {
+    "vcpu_quota": 2,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "is_load_runner": false
+  },
+  "canonical_input": {
+    "counts": {
+      "users": 50000,
+      "posts": 500000,
+      "likes": 2016005
+    },
+    "logical_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d",
+    "cli_import_completion_recorded": true,
+    "independent_full_stored_row_hash_passed": false,
+    "native_success_manifest_exists": false
+  },
+  "initial_dataset_suite": {
+    "tests": 3,
+    "errors": 1,
+    "passing": 2,
+    "elapsed_seconds": 64.935,
+    "failed_check": "full paginated stored-row hash/relations/metadata verification",
+    "failure": "TimeoutError: timed out",
+    "client_deadline_seconds": 30,
+    "native_feed_detail_and_max_583_like_assertions_passed": true,
+    "private_read_function_assertions_passed": true,
+    "target_oom_observed_in_initial_after_profile": false
+  },
+  "followup": {
+    "operation": "bounded unchanged native read-only pagination",
+    "diagnostic_exit_zero_is_not_a_query_test_pass": true,
+    "users_successful_pages": 3,
+    "posts_successful_pages": 3,
+    "page_rows_requested": 1000,
+    "likes_first_page_client_timeout_seconds": 30.030058085918427,
+    "later_target_oom": true,
+    "target": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": true,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 137,
+      "StartedAt": "2026-10-15T17:49:03.858647653Z",
+      "FinishedAt": "2026-10-15T18:30:39.96804828Z"
+    },
+    "memory_events": "low 0\nhigh 0\nmax 36300\noom 1\noom_kill 1\noom_group_kill 0\n",
+    "raw_parent_memory_peak_bytes": 4294971392,
+    "host_swap_outs_before": 0,
+    "host_swap_outs_after": 0
+  },
+  "preservation": {
+    "stopped_sqlite_container_retained": true,
+    "sqlite_volume_retained": true,
+    "private_credential_hashes_unchanged": true,
+    "reimport_reseed_restart_or_limit_increase_performed": false,
+    "original_logs_retained_privately": true,
+    "backend_public_logs_are_explicit_redacted_derivatives": true
+  },
+  "continuity": {
+    "changed_or_missing": {
+      "fwupd.service": {
+        "before": {
+          "MainPID": "2111771",
+          "NRestarts": "0",
+          "Id": "fwupd.service",
+          "ActiveState": "active",
+          "SubState": "running",
+          "ActiveEnterTimestampMonotonic": "1918832309882"
+        },
+        "after": null
+      }
+    },
+    "additional": [],
+    "original_port4000_listener_unchanged": true,
+    "normal_root_session_excluded": "user@0.service"
+  },
+  "next_decision": {
+    "owner_selection_pending_at_checkpoint": true,
+    "recommendation": "Try official local PostgreSQL persistence with both servers sharing unchanged aggregate serving budget; use fresh owned storage and rerun feasibility/correctness",
+    "postgres_deployed": false,
+    "nhost_authorized": false
+  },
+  "report": "SQLITE_FEASIBILITY_BLOCKER.md"
+}

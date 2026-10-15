@@ -1,0 +1,33 @@
+ Container baas-convex-vps16-tools-run-a02a40211bfb Creating 
+ Container baas-convex-vps16-tools-run-a02a40211bfb Created 
+test_01_native_database_probe (__main__.NativeFeasibility.test_01_native_database_probe) ... FAIL
+test_02_native_probe_is_not_a_public_query (__main__.NativeFeasibility.test_02_native_probe_is_not_a_public_query) ... ok
+test_03_identical_queries_reexecute_without_result_cache (__main__.NativeFeasibility.test_03_identical_queries_reexecute_without_result_cache) ... FAIL
+
+======================================================================
+FAIL: test_01_native_database_probe (__main__.NativeFeasibility.test_01_native_database_probe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_feasibility.py", line 38, in test_01_native_database_probe
+    self.assertEqual(result.get('status'), 'success', 'native:storageProbe missing or failed')
+AssertionError: 'error' != 'success'
+- error
++ success
+ : native:storageProbe missing or failed
+
+======================================================================
+FAIL: test_03_identical_queries_reexecute_without_result_cache (__main__.NativeFeasibility.test_03_identical_queries_reexecute_without_result_cache)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_feasibility.py", line 50, in test_03_identical_queries_reexecute_without_result_cache
+    self.assertEqual(result.get('status'), 'success', 'Native storage query failed')
+AssertionError: 'error' != 'success'
+- error
++ success
+ : Native storage query failed
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.017s
+
+FAILED (failures=2)
+

@@ -1,0 +1,110 @@
+{
+  "backend": {
+    "Id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+    "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 2132883,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-15T19:03:26.325882195Z",
+      "FinishedAt": "0001-01-01T00:00:00Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-15T20:47:32.8157948Z",
+            "End": "2026-10-15T20:47:32.849858927Z",
+            "ExitCode": 0,
+            "Output": "unknown"
+          },
+          {
+            "Start": "2026-10-15T20:47:37.850487765Z",
+            "End": "2026-10-15T20:47:37.884364391Z",
+            "ExitCode": 0,
+            "Output": "unknown"
+          },
+          {
+            "Start": "2026-10-15T20:47:42.885119143Z",
+            "End": "2026-10-15T20:47:42.918345982Z",
+            "ExitCode": 0,
+            "Output": "unknown"
+          },
+          {
+            "Start": "2026-10-15T20:47:47.918793437Z",
+            "End": "2026-10-15T20:47:47.954128516Z",
+            "ExitCode": 0,
+            "Output": "unknown"
+          },
+          {
+            "Start": "2026-10-15T20:47:52.955345042Z",
+            "End": "2026-10-15T20:47:53.002290254Z",
+            "ExitCode": 0,
+            "Output": "unknown"
+          }
+        ]
+      }
+    },
+    "RestartCount": 0
+  },
+  "postgres": {
+    "Id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+    "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+    "State": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-15T19:03:20.716573172Z",
+      "FinishedAt": "2026-10-15T20:47:56.764451452Z",
+      "Health": {
+        "Status": "unhealthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-15T20:47:32.696333219Z",
+            "End": "2026-10-15T20:47:32.757044001Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          },
+          {
+            "Start": "2026-10-15T20:47:37.758327686Z",
+            "End": "2026-10-15T20:47:37.822166401Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          },
+          {
+            "Start": "2026-10-15T20:47:42.822639497Z",
+            "End": "2026-10-15T20:47:42.882567261Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          },
+          {
+            "Start": "2026-10-15T20:47:47.884033886Z",
+            "End": "2026-10-15T20:47:47.946189977Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          },
+          {
+            "Start": "2026-10-15T20:47:52.947123303Z",
+            "End": "2026-10-15T20:47:53.008415914Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          }
+        ]
+      }
+    },
+    "RestartCount": 0
+  }
+}

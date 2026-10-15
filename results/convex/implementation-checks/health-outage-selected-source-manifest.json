@@ -1,0 +1,99 @@
+{
+  "scope": "Exact selected executed input sources, NOT complete SDK/generated/runtime freeze or a capacity reproduction bundle",
+  "checkpoint": "native-dependency-after.json",
+  "actual_private_candidates_checked": 4,
+  "files": {
+    "services/convex/compose.yaml": {
+      "sha256": "72b37d767cae220c6e540a34a6cbdaa44d2215a474d626b259f31e55a884042d",
+      "bytes": 1629
+    },
+    "services/convex/compose.postgres.yaml": {
+      "sha256": "958d6a0d0435b505662e85defbaad00573326dba835c92a350c63947b80a3504",
+      "bytes": 1470
+    },
+    "services/convex/versions.json": {
+      "sha256": "2690b74d00489fa31ec5baf84a1de0bcb59c1af791a2ac4df9371b6bfa34b1e3",
+      "bytes": 1035
+    },
+    "services/convex/postgres-versions.json": {
+      "sha256": "0a6cdbd7c771c4b42c7bf0491f10642e8e18b87fbaabaa9abc6faa1c80a5330f",
+      "bytes": 905
+    },
+    "services/convex/app/package.json": {
+      "sha256": "e9eb4a65b48bf08b8c86aea22bc09b813afea6ae2f32ff3a39ea2db2944adb73",
+      "bytes": 158
+    },
+    "services/convex/app/package-lock.json": {
+      "sha256": "bd70e8a2b049d0c358818f872b2e5624f391d78ecfeb1751d5c1704398c771cf",
+      "bytes": 16130
+    },
+    "services/convex/app/convex.json": {
+      "sha256": "1bb7e2dec7148da5d684477c6074ecc66e48505ab67ea0074086b998ec39eda7",
+      "bytes": 29
+    },
+    "services/convex/app/convex/native.js": {
+      "sha256": "f4071a360d8f11ca4433787f1729f968bc576eebd3b80fb693e4372f36250f5f",
+      "bytes": 2399
+    },
+    "services/convex/app/convex/schema.js": {
+      "sha256": "cf09505403ec59cafebf6fd6225eabcd2e6200ffb9f903167c0e90c7596933f1",
+      "bytes": 1196
+    },
+    "scripts/convex_profile.py": {
+      "sha256": "7ae2f55108fb68ca5244a7a4c47b6506186f783e8538d206c970c8302037ddc4",
+      "bytes": 3373
+    },
+    "scripts/import_convex.py": {
+      "sha256": "cc7a6dd8bbd817289ea52b7eef4d011928be609529a543def2f64be53185e140",
+      "bytes": 6090
+    },
+    "scripts/import_sqlite.py": {
+      "sha256": "253dbc8a13c7a01e52bacd927e13c55d3408ab5bef81e998503ad1af1e96a1b2",
+      "bytes": 2690
+    },
+    "test/baas/test_convex_postgres_config.py": {
+      "sha256": "407d3e00ad274192d46528bab8f9167f4f21bbae719e17770c14b93f32c3d3f8",
+      "bytes": 3750
+    },
+    "test/baas/test_convex_budget.py": {
+      "sha256": "2d60ebf756ccabf16726b3b95651680e2b7b8e0fd2fb1a2df91dcaf892ed43d9",
+      "bytes": 4800
+    },
+    "test/baas/test_convex_import.py": {
+      "sha256": "3c2fb0458c90c96862b0b0de4c701a539cf99171868f4008a54d086c8b232ecb",
+      "bytes": 4809
+    },
+    "test/baas/convex_feasibility.py": {
+      "sha256": "72d7c7f79a24bb7acd481e889424c401da31387bba51446f48813d7bb18cf1a1",
+      "bytes": 2888
+    },
+    "test/baas/convex_dataset.py": {
+      "sha256": "4f6f0b71a76dcbc412a58ff60db98276069060206bf3fae8bd1ab7e3f7645cab",
+      "bytes": 5957
+    },
+    "services/convex/app/convex/http.js": {
+      "sha256": "e5f89c6e0624c565e3a306f17ac3589e88ba1ab33dff37cf3135418509aa8d00",
+      "bytes": 2666
+    },
+    "test/baas/convex_http_reads.py": {
+      "sha256": "b47f0001772a21eca270ee70f11ddb2b2e84500927f69d59583e792703068589",
+      "bytes": 4909
+    },
+    "services/convex/app/convex/clock.js": {
+      "sha256": "64dfd1457a57a984c1b61aaec46eb242aa8e4c764bdb9f77a393156ea924e658",
+      "bytes": 1534
+    },
+    "test/baas/convex_health_native.py": {
+      "sha256": "dfceae440e38499ae7a74aee4de68b7162e4b1f6cf2714c228e8bc46d37496bc",
+      "bytes": 2262
+    },
+    "test/baas/test_api.py": {
+      "sha256": "5c8d17f86026f8620dd166f42fde42b6608de445f1fb852ad41dee64b4f3a021",
+      "bytes": 6477
+    },
+    "test/baas/convex_dependency_failure.py": {
+      "sha256": "1180fa0458c85234de81e359bb7de21131ca46068ec361e2c7685da89e0127c0",
+      "bytes": 1572
+    }
+  }
+}

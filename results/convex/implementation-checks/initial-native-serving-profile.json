@@ -1,0 +1,27 @@
+{
+  "image_id": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+  "upstream_commit": "a3538c6d212948f20726868e41d155d2534cd130",
+  "platform": "linux/amd64",
+  "actual_backend_version": "unknown",
+  "bundled_node_version": "v22.22.2",
+  "serving_cgroups": {
+    "parent": {
+      "cpu.max": "100000 100000",
+      "memory.max": "4294967296",
+      "memory.swap.max": "0",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "memory.current": "14012416"
+    },
+    "container": {
+      "cpu.max": "100000 100000",
+      "memory.max": "4294967296",
+      "memory.swap.max": "0",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "memory.current": "14000128"
+    }
+  },
+  "query_result_cache_max_bytes": 0,
+  "runtime_worker_threads": 1,
+  "pid": 2112234,
+  "started_at": "2026-10-15T17:49:03.858647653Z"
+}

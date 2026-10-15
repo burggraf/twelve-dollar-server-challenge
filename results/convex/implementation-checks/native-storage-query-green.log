@@ -1,0 +1,31 @@
+Running as unit: tds-convex-native-query-green-20261015.service
+ Container baas-convex-vps16-tools-run-1a1b387d77d6 Creating 
+ Container baas-convex-vps16-tools-run-1a1b387d77d6 Created 
+Saved CONVEX_URL and CONVEX_SITE_URL to .env.local
+▌ Developing against deployment:
+▌ └─ http://backend:3210
+- Preparing Convex functions...
+
+Temporary directory '/tmp' and project directory '/work/services/convex/app/convex/_generated' are on different filesystems.
+  If you're running into errors with other tools watching the project directory, override the temporary directory location with the CONVEX_TMPDIR environment variable.
+  Be sure to pick a temporary directory that's on the same filesystem as your project.
+✔ 17:51:22 Convex functions ready! (305.84ms)
+npm notice
+npm notice New major version of npm available! 10.9.3 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+test_01_native_database_probe (__main__.NativeFeasibility.test_01_native_database_probe) ... ok
+test_02_native_probe_is_not_a_public_query (__main__.NativeFeasibility.test_02_native_probe_is_not_a_public_query) ... ok
+test_03_identical_queries_reexecute_without_result_cache (__main__.NativeFeasibility.test_03_identical_queries_reexecute_without_result_cache) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.054s
+
+OK
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 1.792s
+CPU time consumed: 114ms
+Memory peak: 7.5M
+Memory swap peak: 0B

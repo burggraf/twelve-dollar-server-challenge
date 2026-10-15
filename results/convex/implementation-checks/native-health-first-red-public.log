@@ -1,0 +1,17 @@
+ Container baas-convexpg-vps16-health-red-tools Creating 
+ Container baas-convexpg-vps16-health-red-tools Created 
+test_storage_health (__main__.FeedContract.test_storage_health) ... FAIL
+
+======================================================================
+FAIL: test_storage_health (__main__.FeedContract.test_storage_health)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_api.py", line 55, in test_storage_health
+    self.assertEqual(status, 200)
+AssertionError: 404 != 200
+
+----------------------------------------------------------------------
+Ran 1 test in 0.014s
+
+FAILED (failures=1)
+

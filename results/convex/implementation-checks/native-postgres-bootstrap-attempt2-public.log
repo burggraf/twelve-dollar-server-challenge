@@ -1,0 +1,237 @@
+test_fresh_owned_volumes_and_uncached_native_queries (__main__.ConvexPostgresConfig.test_fresh_owned_volumes_and_uncached_native_queries) ... ok
+test_native_image_pins_and_three_plus_one_gib_children (__main__.ConvexPostgresConfig.test_native_image_pins_and_three_plus_one_gib_children) ... ok
+test_no_database_host_port_or_new_privileges (__main__.ConvexPostgresConfig.test_no_database_host_port_or_new_privileges) ... ok
+test_only_two_required_servers_and_separate_profiled_tools (__main__.ConvexPostgresConfig.test_only_two_required_servers_and_separate_profiled_tools) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.074s
+
+OK
+Read-only service snapshot saved; service count: 27 ; existing listener PID count: 1
+POSTGRES_CANDIDATE_PRIVATE_INPUTS_CREATED_WITHOUT_REUSING_SQLITE_CREDENTIALS
+ Image ghcr.io/get-convex/convex-backend:a3538c6d212948f20726868e41d155d2534cd130@sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4 Pulling 
+ Image postgres:17.11-bookworm@sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df Pulling 
+ Image ghcr.io/get-convex/convex-backend:a3538c6d212948f20726868e41d155d2534cd130@sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4 Pulled 
+ e7e8da52359d Pulling fs layer 0B
+ 017b31e4ff27 Pulling fs layer 0B
+ 146d06bcb573 Pulling fs layer 0B
+ 7f82c3d75427 Pulling fs layer 0B
+ d01ea4064291 Pulling fs layer 0B
+ 6d0eb3c6cdb9 Pulling fs layer 0B
+ b1cc6947b8a6 Pulling fs layer 0B
+ e96ba86f00e5 Pulling fs layer 0B
+ a219b7b9b5d4 Pulling fs layer 0B
+ d254c075f128 Pulling fs layer 0B
+ 584b3a82e541 Pulling fs layer 0B
+ fb616fac62de Pulling fs layer 0B
+ a74c50568115 Pulling fs layer 0B
+ e7e8da52359d Downloading 3.146MB
+ e7e8da52359d Downloading 5.243MB
+ 017b31e4ff27 Downloading 1.049MB
+ e7e8da52359d Downloading 6.291MB
+ 017b31e4ff27 Downloading 3.146MB
+ 146d06bcb573 Download complete 0B
+ e7e8da52359d Download complete 0B
+ 017b31e4ff27 Download complete 0B
+ 7f82c3d75427 Download complete 0B
+ d01ea4064291 Downloading 1.049MB
+ 6d0eb3c6cdb9 Download complete 0B
+ a219b7b9b5d4 Download complete 0B
+ a74c50568115 Download complete 0B
+ 017b31e4ff27 Pull complete 0B
+ a74c50568115 Pull complete 0B
+ d01ea4064291 Download complete 0B
+ b1cc6947b8a6 Download complete 0B
+ e96ba86f00e5 Downloading 3.146MB
+ 146d06bcb573 Pull complete 0B
+ e7e8da52359d Extracting 1B
+ 584b3a82e541 Download complete 0B
+ d254c075f128 Download complete 0B
+ e96ba86f00e5 Downloading 6.291MB
+ e7e8da52359d Pull complete 0B
+ d01ea4064291 Extracting 1B
+ e96ba86f00e5 Downloading 9.437MB
+ fb616fac62de Download complete 0B
+ 6d0eb3c6cdb9 Pull complete 0B
+ d01ea4064291 Pull complete 0B
+ b1cc6947b8a6 Pull complete 0B
+ e96ba86f00e5 Downloading 12.58MB
+ e96ba86f00e5 Downloading 15.73MB
+ e96ba86f00e5 Downloading 18.87MB
+ e96ba86f00e5 Downloading 22.02MB
+ e96ba86f00e5 Downloading 25.17MB
+ e96ba86f00e5 Downloading 28.31MB
+ e96ba86f00e5 Downloading 31.46MB
+ e96ba86f00e5 Downloading 34.6MB
+ e96ba86f00e5 Downloading 37.75MB
+ e96ba86f00e5 Downloading 41.94MB
+ e96ba86f00e5 Downloading 45.09MB
+ e96ba86f00e5 Downloading 48.23MB
+ e96ba86f00e5 Downloading 51.38MB
+ e96ba86f00e5 Downloading 54.53MB
+ e96ba86f00e5 Downloading 57.67MB
+ e96ba86f00e5 Downloading 60.82MB
+ e96ba86f00e5 Downloading 63.96MB
+ e96ba86f00e5 Downloading 67.11MB
+ e96ba86f00e5 Downloading 70.25MB
+ e96ba86f00e5 Downloading 73.4MB
+ e96ba86f00e5 Downloading 76.55MB
+ e96ba86f00e5 Downloading 79.69MB
+ e96ba86f00e5 Downloading 82.84MB
+ e96ba86f00e5 Downloading 85.98MB
+ e96ba86f00e5 Downloading 89.13MB
+ e96ba86f00e5 Downloading 92.27MB
+ e96ba86f00e5 Downloading 95.42MB
+ e96ba86f00e5 Downloading 99.16MB
+ e96ba86f00e5 Downloading 102.8MB
+ e96ba86f00e5 Downloading 105.9MB
+ e96ba86f00e5 Downloading 109.1MB
+ e96ba86f00e5 Downloading 112.2MB
+ e96ba86f00e5 Downloading 115.2MB
+ e96ba86f00e5 Download complete 0B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 1B
+ e96ba86f00e5 Extracting 2B
+ e96ba86f00e5 Extracting 2B
+ e96ba86f00e5 Extracting 2B
+ e96ba86f00e5 Extracting 2B
+ e96ba86f00e5 Extracting 2B
+ e96ba86f00e5 Extracting 2B
+ a219b7b9b5d4 Pull complete 0B
+ 584b3a82e541 Pull complete 0B
+ d254c075f128 Extracting 1B
+ e96ba86f00e5 Pull complete 0B
+ 7f82c3d75427 Pull complete 0B
+ d254c075f128 Pull complete 0B
+ fb616fac62de Pull complete 0B
+ Image postgres:17.11-bookworm@sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df Pulled 
+ Network baas-convexpg-vps16_default Creating 
+ Network baas-convexpg-vps16_default Creating 
+ Volume baas-convexpg-vps16_pgdata Creating 
+ Volume baas-convexpg-vps16_pgdata Creating 
+ Volume baas-convexpg-vps16_data Creating 
+ Volume baas-convexpg-vps16_data Creating 
+ Volume baas-convexpg-vps16_pgdata Created 
+ Volume baas-convexpg-vps16_pgdata Created 
+ Volume baas-convexpg-vps16_data Created 
+ Volume baas-convexpg-vps16_data Created 
+ Network baas-convexpg-vps16_default Created 
+ Network baas-convexpg-vps16_default Created 
+ Container baas-convexpg-vps16-postgres-1 Creating 
+ Container baas-convexpg-vps16-postgres-1 Created 
+ Container baas-convexpg-vps16-backend-1 Creating 
+ Container baas-convexpg-vps16-backend-1 Created 
+ Container baas-convexpg-vps16-postgres-1 Starting 
+ Container baas-convexpg-vps16-postgres-1 Started 
+ Container baas-convexpg-vps16-postgres-1 Waiting 
+ Container baas-convexpg-vps16-postgres-1 Healthy 
+ Container baas-convexpg-vps16-backend-1 Starting 
+ Container baas-convexpg-vps16-backend-1 Started 
+ Container baas-convexpg-vps16-backend-1 Waiting 
+ Container baas-convexpg-vps16-postgres-1 Waiting 
+ Container baas-convexpg-vps16-postgres-1 Healthy 
+ Container baas-convexpg-vps16-backend-1 Healthy 
+CONVEX_POSTGRES_ACTUAL_TWO_SERVER_IMAGE_KERNEL_VERSION_AND_DURABILITY_SETTINGS_VERIFIED
+ Container baas-convexpg-vps16-bootstrap-tools Creating 
+ Container baas-convexpg-vps16-bootstrap-tools Created 
+
+added 5 packages in 1s
+npm notice
+npm notice New major version of npm available! 10.9.3 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+1.46.0
+Saved CONVEX_URL and CONVEX_SITE_URL to .env.local
+▌ Developing against deployment:
+▌ └─ http://backend:3210
+- Preparing Convex functions...
+
+Temporary directory '/tmp' and project directory '/work/services/convex/app/convex/_generated' are on different filesystems.
+  If you're running into errors with other tools watching the project directory, override the temporary directory location with the CONVEX_TMPDIR environment variable.
+  Be sure to pick a temporary directory that's on the same filesystem as your project.
+✔ Added table indexes:
+  [+] feed_sequences.by_name   name, _creationTime
+  [+] likes.by_post_user   post_id, user_id, _creationTime
+  [+] likes.by_user_post   user_id, post_id, _creationTime
+  [+] posts.by_created_at_id   created_at, id, _creationTime
+  [+] posts.by_public_id   id, _creationTime
+  [+] posts.by_user_id   user_id, _creationTime
+  [+] users.by_public_id   id, _creationTime
+  [+] users.by_username   username, _creationTime
+✔ 19:03:36 Convex functions ready! (379ms)
+test_01_native_database_probe (__main__.NativeFeasibility.test_01_native_database_probe) ... ok
+test_02_native_probe_is_not_a_public_query (__main__.NativeFeasibility.test_02_native_probe_is_not_a_public_query) ... ok
+test_03_identical_queries_reexecute_without_result_cache (__main__.NativeFeasibility.test_03_identical_queries_reexecute_without_result_cache) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.067s
+
+OK
+test_hash_mismatch_and_existing_destination_never_replace_data (__main__.JsonLinesImport.test_hash_mismatch_and_existing_destination_never_replace_data) ... ERROR
+test_lossless_wide_ids_text_native_files_and_hash (__main__.JsonLinesImport.test_lossless_wide_ids_text_native_files_and_hash) ... ERROR
+test_missing_relationship_and_duplicate_like_fail_without_output (__main__.JsonLinesImport.test_missing_relationship_and_duplicate_like_fail_without_output) ... ERROR
+test_noncanonical_and_out_of_range_ids_fail_without_output (__main__.JsonLinesImport.test_noncanonical_and_out_of_range_ids_fail_without_output) ... ERROR
+
+======================================================================
+ERROR: test_hash_mismatch_and_existing_destination_never_replace_data (__main__.JsonLinesImport.test_hash_mismatch_and_existing_destination_never_replace_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_import.py", line 32, in setUp
+    spec.loader.exec_module(self.module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/work/scripts/import_convex.py", line 16, in <module>
+    from import_sqlite import EXPECTED_COUNTS, EXPECTED_HASH
+ModuleNotFoundError: No module named 'import_sqlite'
+
+======================================================================
+ERROR: test_lossless_wide_ids_text_native_files_and_hash (__main__.JsonLinesImport.test_lossless_wide_ids_text_native_files_and_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_import.py", line 32, in setUp
+    spec.loader.exec_module(self.module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/work/scripts/import_convex.py", line 16, in <module>
+    from import_sqlite import EXPECTED_COUNTS, EXPECTED_HASH
+ModuleNotFoundError: No module named 'import_sqlite'
+
+======================================================================
+ERROR: test_missing_relationship_and_duplicate_like_fail_without_output (__main__.JsonLinesImport.test_missing_relationship_and_duplicate_like_fail_without_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_import.py", line 32, in setUp
+    spec.loader.exec_module(self.module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/work/scripts/import_convex.py", line 16, in <module>
+    from import_sqlite import EXPECTED_COUNTS, EXPECTED_HASH
+ModuleNotFoundError: No module named 'import_sqlite'
+
+======================================================================
+ERROR: test_noncanonical_and_out_of_range_ids_fail_without_output (__main__.JsonLinesImport.test_noncanonical_and_out_of_range_ids_fail_without_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_import.py", line 32, in setUp
+    spec.loader.exec_module(self.module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/work/scripts/import_convex.py", line 16, in <module>
+    from import_sqlite import EXPECTED_COUNTS, EXPECTED_HASH
+ModuleNotFoundError: No module named 'import_sqlite'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.008s
+
+FAILED (errors=4)
+

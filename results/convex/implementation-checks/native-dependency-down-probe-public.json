@@ -1,0 +1,9 @@
+{
+  "status": 503,
+  "body": {
+    "status": "degraded",
+    "db": "unreachable",
+    "error": "storage unavailable"
+  },
+  "elapsed_seconds": 0.013467333046719432
+}

@@ -1,0 +1,76 @@
+{
+  "scope": "Read-only second complete empty-verification outcome; no native mutation or retry performed by this retainer",
+  "private_inputs_sha256": {
+    "cli.env": "f228b8716c5deee2e9e01f07a1e2efa0f664a8dca7da831ca006ecfe0634d50b",
+    "backend.env": "cfa8011196ce90ea27d9232441c082442280f96230830f055135216e16ae22c5",
+    "postgres.env": "4b94741dc1bd9def607058a3bedb23b087a921dc223424fa7a48e863b4d3ecc3"
+  },
+  "actual_private_candidates_checked": 4,
+  "targets": [
+    {
+      "role": "backend",
+      "id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T19:03:26.325882195Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      }
+    },
+    {
+      "role": "postgres",
+      "id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T19:03:20.716573172Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "original_private_file": "setup-evidence/native-postgres-empty-verification2-original.log",
+      "original_bytes": 2998,
+      "original_sha256": "bfebaf0f7affe853b6b55a02224db60ee18490869c76e5d31d699acb90d94e0d",
+      "public_derivative": "native-postgres-empty-verification2-public.log",
+      "derivative_bytes": 2998,
+      "derivative_sha256": "bfebaf0f7affe853b6b55a02224db60ee18490869c76e5d31d699acb90d94e0d",
+      "query_string_redactions": 0
+    },
+    {
+      "original_private_file": "native-postgres-empty-verification2-driver.log",
+      "original_bytes": 295,
+      "original_sha256": "b3ba24c9eedc1f21569e69efd49586e9c1868d61ab2fe040ddf8f92129a6700f",
+      "public_derivative": "native-postgres-empty-verification2-driver-public.log",
+      "derivative_bytes": 295,
+      "derivative_sha256": "b3ba24c9eedc1f21569e69efd49586e9c1868d61ab2fe040ddf8f92129a6700f",
+      "query_string_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/initial-native-postgres-serving-profile.json",
+      "original_bytes": 10482,
+      "original_sha256": "da9ac28a6ff4ba336ffb5bf35848bb0e455538bae1ed88f0ea16afb4804ef69f",
+      "public_derivative": "initial-native-postgres-serving-profile-public.json",
+      "derivative_bytes": 10482,
+      "derivative_sha256": "da9ac28a6ff4ba336ffb5bf35848bb0e455538bae1ed88f0ea16afb4804ef69f",
+      "query_string_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-postgres-empty-setup-verification.json",
+      "original_bytes": 12664,
+      "original_sha256": "58352bf79f0c64030bf719ce6d738ae54abfac4c481795d28f4d4dc86b085bbd",
+      "public_derivative": "native-postgres-empty-setup-verification-public.json",
+      "derivative_bytes": 12664,
+      "derivative_sha256": "58352bf79f0c64030bf719ce6d738ae54abfac4c481795d28f4d4dc86b085bbd",
+      "query_string_redactions": 0
+    }
+  ],
+  "native_profile_exists": true
+}

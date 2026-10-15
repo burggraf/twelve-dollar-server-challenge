@@ -1,0 +1,29 @@
+{
+  "upstream_commit": "a3538c6d212948f20726868e41d155d2534cd130",
+  "sources": [
+    {
+      "path": "crates/postgres/src/lib.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/postgres/src/lib.rs",
+      "sha256": "efe403c38a53b9464f560b81d05f2d82fd577c5e848e5db6134893723ed842f0",
+      "bytes": 73517
+    },
+    {
+      "path": "crates/postgres/src/sql.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/postgres/src/sql.rs",
+      "sha256": "0bc37ccd7c2ef8e77a90c42e022068f4d403e88d02296746cccd71d5358cad84",
+      "bytes": 36124
+    },
+    {
+      "path": "crates/postgres/src/connection.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/postgres/src/connection.rs",
+      "sha256": "9f683ec611a08bfac85bdc41aab996384d35adb7d18ac27778de2a29626b3b79",
+      "bytes": 19669
+    },
+    {
+      "path": "crates/postgres/src/metrics.rs",
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/postgres/src/metrics.rs",
+      "sha256": "1695d028791b2b5f6d652197969d98f6fe8d28fdd8edfdfd84ac4b5db3df0a46",
+      "bytes": 11012
+    }
+  ]
+}

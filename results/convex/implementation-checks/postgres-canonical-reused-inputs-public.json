@@ -1,0 +1,21 @@
+{
+  "scope": "Byte-identical canonical inputs reused; not independent native stored-row proof",
+  "source_owned_workspace": "/opt/twelve-dollar-baas-convex-16g",
+  "counts": {
+    "users": 50000,
+    "posts": 500000,
+    "likes": 2016005
+  },
+  "logical_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d",
+  "files_sha256": {
+    "seed/users.tsv": "304767a5b65fd97d7a5a0abbdef4a063cfab99ff08bd045126de3ba53c139bb8",
+    "seed/posts.tsv": "693d608b9021baab866b2866fb2d950262fbd90e6fcef70aef10f5281d5c1293",
+    "seed/likes.tsv": "627c2d0aa7860a3a6e7788f700adc953e05fac967a5d9b5b21dcad06bd412b37",
+    "import-jsonl/feed_sequences.jsonl": "e7e89be9bb113ab5b51f8cb6ecbb63597a4f4c767e87439b36afec2a435a0095",
+    "import-jsonl/likes.jsonl": "d8c9bcd2171527351976e55d8c17e52c3d1d9bac0ff5c17fc293d43ff48cf9c4",
+    "import-jsonl/posts.jsonl": "cd4cebead9579e7e5437f74c2ce8ee20099e6391a3d1a1d8bdd7a395c1b232be",
+    "import-jsonl/users.jsonl": "b6fcb727207e897adff7507a34864ccd0baf36a70a46afacf7b7bba9014063af"
+  },
+  "native_credentials_env_or_database_copied": false,
+  "native_import_performed": false
+}

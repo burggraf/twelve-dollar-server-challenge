@@ -1,0 +1,21 @@
+ Container baas-convexpg-vps16-clock-red-tools Creating 
+ Container baas-convexpg-vps16-clock-red-tools Created 
+test_backend_uptime_matches_actual_container_process_start (__main__.NativeHealthClock.test_backend_uptime_matches_actual_container_process_start) ... FAIL
+test_clock_action_is_not_public (__main__.NativeHealthClock.test_clock_action_is_not_public) ... ok
+
+======================================================================
+FAIL: test_backend_uptime_matches_actual_container_process_start (__main__.NativeHealthClock.test_backend_uptime_matches_actual_container_process_start)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_health_native.py", line 36, in test_backend_uptime_matches_actual_container_process_start
+    self.assertEqual(value.get('status'), 'success', 'Native backend clock action missing or failed')
+AssertionError: 'error' != 'success'
+- error
++ success
+ : Native backend clock action missing or failed
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.005s
+
+FAILED (failures=1)
+

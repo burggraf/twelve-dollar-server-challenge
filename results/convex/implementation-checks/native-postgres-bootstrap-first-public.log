@@ -1,0 +1,17 @@
+test_fresh_owned_volumes_and_uncached_native_queries (__main__.ConvexPostgresConfig.test_fresh_owned_volumes_and_uncached_native_queries) ... ok
+test_native_image_pins_and_three_plus_one_gib_children (__main__.ConvexPostgresConfig.test_native_image_pins_and_three_plus_one_gib_children) ... FAIL
+test_no_database_host_port_or_new_privileges (__main__.ConvexPostgresConfig.test_no_database_host_port_or_new_privileges) ... ok
+test_only_two_required_servers_and_separate_profiled_tools (__main__.ConvexPostgresConfig.test_only_two_required_servers_and_separate_profiled_tools) ... ok
+
+======================================================================
+FAIL: test_native_image_pins_and_three_plus_one_gib_children (__main__.ConvexPostgresConfig.test_native_image_pins_and_three_plus_one_gib_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_postgres_config.py", line 37, in test_native_image_pins_and_three_plus_one_gib_children
+    self.assertEqual(item['mem_limit'], memory)
+AssertionError: '3221225472' != 3221225472
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.081s
+
+FAILED (failures=1)

@@ -1,0 +1,7 @@
+Running as unit: tds-convex-postgres-canonical-import-20261015.service; invocation ID: 3e8b586a0c7746ecaf199b758ed541d1
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 18min 14.570s
+CPU time consumed: 1.355s
+Memory peak: 31.4M
+Memory swap peak: 0B

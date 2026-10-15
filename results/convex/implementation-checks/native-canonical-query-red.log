@@ -1,0 +1,39 @@
+ Container baas-convex-vps16-tools-run-761b78113bbb Creating 
+ Container baas-convex-vps16-tools-run-761b78113bbb Created 
+test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata) ... FAIL
+test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count) ... FAIL
+test_03_native_read_functions_are_private (__main__.FullNativeDataset.test_03_native_read_functions_are_private) ... ok
+
+======================================================================
+FAIL: test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_dataset.py", line 39, in test_01_full_native_canonical_rows_hash_relations_and_metadata
+    result = self.call('native:canonicalPage', {'table': table, 'cursor': cursor})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_dataset.py", line 22, in call
+    self.assertEqual(response.get('status'), 'success', 'Native function missing or failed: ' + path)
+AssertionError: 'error' != 'success'
+- error
++ success
+ : Native function missing or failed: native:canonicalPage
+
+======================================================================
+FAIL: test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_dataset.py", line 83, in test_02_native_normalized_feed_detail_and_largest_seed_count
+    actual = self.call('native:feed')
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_dataset.py", line 22, in call
+    self.assertEqual(response.get('status'), 'success', 'Native function missing or failed: ' + path)
+AssertionError: 'error' != 'success'
+- error
++ success
+ : Native function missing or failed: native:feed
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+FAILED (failures=2)
+

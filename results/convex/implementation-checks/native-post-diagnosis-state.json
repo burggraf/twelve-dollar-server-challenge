@@ -1,0 +1,58 @@
+{
+  "recorded_at": "2026-10-15T18:40:53.202550+00:00",
+  "target": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": true,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 137,
+    "StartedAt": "2026-10-15T17:49:03.858647653Z",
+    "FinishedAt": "2026-10-15T18:30:39.96804828Z"
+  },
+  "image_id": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+  "restart_count": 0,
+  "volume_retained": true,
+  "volume_name": "baas-convex-vps16_data",
+  "kernel_original_private_file": "native-page-diagnosis-kernel-original.log",
+  "kernel_original_sha256": "21c3d555930b12085a9df39a564d4a142e2db41a44ef5db8f27870307bcea265",
+  "kernel_entries_selected_by_owned_cgroup_or_original_target_pid": [
+    {
+      "realtime_timestamp_us": "1792089039648482",
+      "message": "Memory cgroup stats for /tdsbaasconvexvps16.slice:"
+    },
+    {
+      "realtime_timestamp_us": "1792089039649180",
+      "message": "[2112234]     0 2112234  5762620  1062281  1042281    20000         0  9760768        0             0 convex-local-ba"
+    },
+    {
+      "realtime_timestamp_us": "1792089039649207",
+      "message": "oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=docker-316090292b314798e6eb29d5d526c38add6f1b577af6a4419a684257e2a34b5b.scope,mems_allowed=0,oom_memcg=/tdsbaasconvexvps16.slice,task_memcg=/tdsbaasconvexvps16.slice/docker-316090292b314798e6eb29d5d526c38add6f1b577af6a4419a684257e2a34b5b.scope,task=convex-local-ba,pid=2112234,uid=0"
+    },
+    {
+      "realtime_timestamp_us": "1792089039649223",
+      "message": "Memory cgroup out of memory: Killed process 2112234 (convex-local-ba) total-vm:23050480kB, anon-rss:4169124kB, file-rss:80000kB, shmem-rss:0kB, UID:0 pgtables:9532kB oom_score_adj:0"
+    }
+  ],
+  "service_snapshot_sha256": "d10ab0502517499571f28e31b296e535d5f04ef70c5c801491ca25e28c360820",
+  "service_continuity": {
+    "changed_or_missing": {
+      "fwupd.service": {
+        "before": {
+          "MainPID": "2111771",
+          "NRestarts": "0",
+          "Id": "fwupd.service",
+          "ActiveState": "active",
+          "SubState": "running",
+          "ActiveEnterTimestampMonotonic": "1918832309882"
+        },
+        "after": null
+      }
+    },
+    "additional": [],
+    "original_port4000_listener_unchanged": true,
+    "normal_root_session_excluded": "user@0.service"
+  }
+}

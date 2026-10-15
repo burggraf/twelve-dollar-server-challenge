@@ -1,0 +1,10 @@
+{
+  "scope": "Exact proposed git index publication bytes checked against actual private values from BOTH preserved SQLite and current PostgreSQL attempts; not a public download/CI claim",
+  "files": 189,
+  "bytes": 2629034,
+  "actual_private_candidates_checked": 6,
+  "manifest_sha256": "1b2d2a1183f56b30de3148405c0ee1cb6a067c6867391544a16fd0f965bb6554",
+  "private_match_paths": [],
+  "forbidden_private_file_paths": [],
+  "unredacted_http_log_query_paths": []
+}

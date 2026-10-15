@@ -1,0 +1,27 @@
+{
+  "scope": "Read-only first setup outcome; no retry performed",
+  "private_inputs_sha256": {},
+  "actual_private_candidates_checked": 0,
+  "targets": [],
+  "artifacts": [
+    {
+      "original_private_file": "setup-evidence/native-postgres-bootstrap-original.log",
+      "original_bytes": 1273,
+      "original_sha256": "a717dad897091cbbabc9e22422423c9f12cf1f77b874c1f835486663442323ef",
+      "public_derivative": "native-postgres-bootstrap-first-public.log",
+      "derivative_bytes": 1273,
+      "derivative_sha256": "a717dad897091cbbabc9e22422423c9f12cf1f77b874c1f835486663442323ef",
+      "query_string_redactions": 0
+    },
+    {
+      "original_private_file": "native-postgres-bootstrap-driver.log",
+      "original_bytes": 293,
+      "original_sha256": "fd84f224536b660e1d887b1c87036c26d9158a10c1c6088d693022bb267240ae",
+      "public_derivative": "native-postgres-bootstrap-driver-first-public.log",
+      "derivative_bytes": 293,
+      "derivative_sha256": "fd84f224536b660e1d887b1c87036c26d9158a10c1c6088d693022bb267240ae",
+      "query_string_redactions": 0
+    }
+  ],
+  "native_profile_exists": false
+}

@@ -1,0 +1,99 @@
+{
+  "checkpoint": "Empty PostgreSQL-backed native setup before canonical import",
+  "scope": "Not full native feasibility, compatibility correctness or capacity",
+  "full_feasibility_passed": false,
+  "full_correctness_passed": false,
+  "performance_score": null,
+  "software": {
+    "convex_release": "precompiled-2026-10-06-a3538c6",
+    "upstream_commit": "a3538c6d212948f20726868e41d155d2534cd130",
+    "sdk_cli": "1.46.0",
+    "backend_native_amd64_manifest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+    "bundled_node": "v22.22.2",
+    "native_version_endpoint": "unknown",
+    "postgres": "PostgreSQL 17.11 (Debian 17.11-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+    "postgres_native_amd64_manifest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df"
+  },
+  "host": {
+    "approved_alias": "azabab.com",
+    "actual_hostname": "claudius.azabab.com",
+    "shared_host": true,
+    "dedicated_vps": false,
+    "monthly_price": null,
+    "region": null
+  },
+  "serving": {
+    "aggregate_vcpu_quota": 1,
+    "aggregate_memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "child_memory_bytes": {
+      "backend": 3221225472,
+      "postgres": 1073741824
+    },
+    "kernel_verified": true,
+    "native_required_servers": 2,
+    "query_result_cache_bytes": 0,
+    "runtime_worker_threads": 1,
+    "native_transaction_read_execution_limits_raised": false
+  },
+  "runner": {
+    "executed": false,
+    "k6_version": "1.3.0",
+    "profile": "k6-2cpu-8g-v3",
+    "vcpu_quota": 2,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0
+  },
+  "untimed_tools": {
+    "vcpu_quota": 2,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "is_load_runner": false
+  },
+  "bounded_untimed_controller": {
+    "vcpu_quota": 2,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0
+  },
+  "tests": {
+    "config": 4,
+    "native_empty_api_private_cache": 3,
+    "jsonlines_preparation": 4,
+    "aggregate_budget": 5,
+    "total_passing": 16,
+    "native_wide_id_unicode_nul_roundtrip_proven": false
+  },
+  "postgres_settings": {
+    "version": "PostgreSQL 17.11 (Debian 17.11-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+    "server_version_num": "170011",
+    "fsync": "on",
+    "synchronous_commit": "on",
+    "full_page_writes": "on",
+    "data_checksums": "off"
+  },
+  "native_postgres_uid": "999",
+  "empty_parent_memory_peak_bytes": 140464128,
+  "empty_peak_is_not_full_data_footprint": true,
+  "service_continuity": {
+    "existing_persistent_service_identities_unchanged": true,
+    "original_port4000_unchanged": true,
+    "normal_root_session_excluded": true,
+    "additional_services": []
+  },
+  "source_hashes_verified_local_vps": 17,
+  "private_inputs_unchanged": true,
+  "serving_restarts": {
+    "backend": 0,
+    "postgres": 0
+  },
+  "canonical_inputs": {
+    "copied_only_3_tsv_4_jsonl": true,
+    "source_hashes_verified": true,
+    "independent_full_native_stored_hash_verified_at_checkpoint": false
+  },
+  "failed_sqlite_attempt_retained_separately": true,
+  "native_signup_login_session_throughput_measured": false,
+  "provider_power_loss_durability_measured": false,
+  "report": "POSTGRES_EMPTY_SETUP.md",
+  "runtime_profile": "native-postgres-empty-setup-verification-public.json"
+}

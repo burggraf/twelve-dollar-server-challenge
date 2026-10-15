@@ -1,0 +1,9 @@
+{
+  "scope": "Installed SDK1.46.0 read-only env set --help syntax; no actual env read/list/set performed",
+  "exit_code": 0,
+  "original_bytes": 2842,
+  "original_sha256": "3383913a1f1fca44578e4836ec9addb59748ea43cbcb5a0f60365ed1e69bc8b8",
+  "derivative_bytes": 2842,
+  "derivative_sha256": "3383913a1f1fca44578e4836ec9addb59748ea43cbcb5a0f60365ed1e69bc8b8",
+  "actual_private_candidates_checked": 4
+}

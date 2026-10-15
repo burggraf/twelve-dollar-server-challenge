@@ -1,0 +1,13 @@
+{
+  "commit": "a3538c6d212948f20726868e41d155d2534cd130",
+  "files": {
+    "self-hosted/advanced/postgres_or_mysql.md": {
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/advanced/postgres_or_mysql.md",
+      "sha256": "f1b8f35dc1c3d57476174e9aa59e0d92690f67f96b39be0ad6ef2d11790f6e73"
+    },
+    "crates/sqlite/src/lib.rs": {
+      "url": "https://raw.githubusercontent.com/get-convex/convex-backend/a3538c6d212948f20726868e41d155d2534cd130/crates/sqlite/src/lib.rs",
+      "sha256": "2ea79da83ae21034b7b3f2e972a0b4c9f9ee1bcc2f7137389760a0c64fa71407"
+    }
+  }
+}

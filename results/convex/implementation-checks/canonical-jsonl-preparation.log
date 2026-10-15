@@ -1,0 +1,28 @@
+Running as unit: tds-convex-canonical-prepare-20261015.service
+Only three canonical TSVs copied byte-for-byte; no prior runtime env/key/token/DB copied.
+ Container baas-convex-vps16-tools-run-0e680c9278f1 Creating 
+ Container baas-convex-vps16-tools-run-0e680c9278f1 Created 
+{
+  "counts": {
+    "users": 50000,
+    "posts": 500000,
+    "likes": 2016005
+  },
+  "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d",
+  "max_likes_per_post": 583,
+  "public_id_mapping": "Positive signed64 decimal text, zero-padded to 19 digits",
+  "next_post_id": 500001,
+  "files": {
+    "feed_sequences.jsonl": "e7e89be9bb113ab5b51f8cb6ecbb63597a4f4c767e87439b36afec2a435a0095",
+    "likes.jsonl": "d8c9bcd2171527351976e55d8c17e52c3d1d9bac0ff5c17fc293d43ff48cf9c4",
+    "posts.jsonl": "cd4cebead9579e7e5437f74c2ce8ee20099e6391a3d1a1d8bdd7a395c1b232be",
+    "users.jsonl": "b6fcb727207e897adff7507a34864ccd0baf36a70a46afacf7b7bba9014063af"
+  }
+}
+CONVEX_CANONICAL_JSONL_PREPARATION_PASSED_NOT_YET_IMPORTED
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 26.755s
+CPU time consumed: 482ms
+Memory peak: 3.6M
+Memory swap peak: 0B

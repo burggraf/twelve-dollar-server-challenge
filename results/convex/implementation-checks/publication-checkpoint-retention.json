@@ -1,0 +1,144 @@
+{
+  "scope": "Fresh read-only partial checkpoint publication verification and expected auth reds; no deployment/import/restart, not full compatibility or capacity",
+  "private_inputs_sha256": {
+    "cli.env": "f228b8716c5deee2e9e01f07a1e2efa0f664a8dca7da831ca006ecfe0634d50b",
+    "backend.env": "cfa8011196ce90ea27d9232441c082442280f96230830f055135216e16ae22c5",
+    "postgres.env": "4b94741dc1bd9def607058a3bedb23b087a921dc223424fa7a48e863b4d3ecc3"
+  },
+  "actual_private_candidates_checked": 4,
+  "targets": [
+    {
+      "role": "backend",
+      "id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T19:03:26.325882195Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      }
+    },
+    {
+      "role": "postgres",
+      "id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T20:47:57.462350749Z",
+        "FinishedAt": "2026-10-15T20:47:56.764451452Z"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "original_private_file": "setup-evidence/publication-checkpoint-original.log",
+      "original_bytes": 5664,
+      "original_sha256": "0d5557a753382495f02735dfc5160185de718953339f8002b379ca84915cb66a",
+      "public_derivative": "publication-checkpoint-public.log",
+      "derivative_bytes": 5664,
+      "derivative_sha256": "0d5557a753382495f02735dfc5160185de718953339f8002b379ca84915cb66a",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "publication-checkpoint-driver.log",
+      "original_bytes": 300,
+      "original_sha256": "8bd37899c5c6848250c144438af230b21523aa5ebff6fa7a1b5a75fae330dbf8",
+      "public_derivative": "publication-checkpoint-driver-public.log",
+      "derivative_bytes": 300,
+      "derivative_sha256": "8bd37899c5c6848250c144438af230b21523aa5ebff6fa7a1b5a75fae330dbf8",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/publication-auth-expected-red-original.log",
+      "original_bytes": 6697,
+      "original_sha256": "b5c57669b51ee71fc5a6952f01b94d8f6157ac05094ab8bd1298748bf131913d",
+      "public_derivative": "publication-auth-expected-red-public.log",
+      "derivative_bytes": 6697,
+      "derivative_sha256": "b5c57669b51ee71fc5a6952f01b94d8f6157ac05094ab8bd1298748bf131913d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/publication-checkpoint-native-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "publication-checkpoint-native-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/publication-checkpoint-before.json",
+      "original_bytes": 14112,
+      "original_sha256": "4f780cd79ca588f89af5501a8f09c62755799b6d4336fedde639567e1e19329f",
+      "public_derivative": "publication-checkpoint-before-public.json",
+      "derivative_bytes": 14112,
+      "derivative_sha256": "4f780cd79ca588f89af5501a8f09c62755799b6d4336fedde639567e1e19329f",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/publication-checkpoint-before-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "88f302e06e420b8a90f6ebe6e16fcb1cbea1de36e5c16a2d997abc2abf3c5e74",
+      "public_derivative": "publication-checkpoint-before-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "88f302e06e420b8a90f6ebe6e16fcb1cbea1de36e5c16a2d997abc2abf3c5e74",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/publication-checkpoint-after.json",
+      "original_bytes": 14111,
+      "original_sha256": "018a9d29b24062dce3a8938fe98a89531af558144df2e2cba771828ab21bf06c",
+      "public_derivative": "publication-checkpoint-after-public.json",
+      "derivative_bytes": 14111,
+      "derivative_sha256": "018a9d29b24062dce3a8938fe98a89531af558144df2e2cba771828ab21bf06c",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original_private_file": "setup-evidence/publication-checkpoint-after-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "88f302e06e420b8a90f6ebe6e16fcb1cbea1de36e5c16a2d997abc2abf3c5e74",
+      "public_derivative": "publication-checkpoint-after-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "88f302e06e420b8a90f6ebe6e16fcb1cbea1de36e5c16a2d997abc2abf3c5e74",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "native_profile_exists": true
+}

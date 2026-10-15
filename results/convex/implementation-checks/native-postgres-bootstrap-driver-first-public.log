@@ -1,0 +1,7 @@
+Running as unit: tds-convex-postgres-native-bootstrap-20261015.service; invocation ID: a7043006611e44b48f58521373cf46f2
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 194ms
+CPU time consumed: 207ms
+Memory peak: 31.9M
+Memory swap peak: 0B

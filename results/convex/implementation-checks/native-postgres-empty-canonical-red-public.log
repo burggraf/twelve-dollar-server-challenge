@@ -1,0 +1,33 @@
+ Container baas-convexpg-vps16-canonical-red-tools Creating 
+ Container baas-convexpg-vps16-canonical-red-tools Created 
+test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata) ... FAIL
+test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count) ... FAIL
+test_03_native_read_functions_are_private (__main__.FullNativeDataset.test_03_native_read_functions_are_private) ... ok
+
+======================================================================
+FAIL: test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_dataset.py", line 73, in test_01_full_native_canonical_rows_hash_relations_and_metadata
+    self.assertEqual(count, COUNTS[table])
+AssertionError: 0 != 50000
+
+======================================================================
+FAIL: test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_dataset.py", line 94, in test_02_native_normalized_feed_detail_and_largest_seed_count
+    self.assertEqual(actual, expected)
+AssertionError: Lists differ: [] != [{'id': '500000', 'body': 'TIL So keepaliv[5284 chars]: 0}]
+
+Second list contains 20 additional elements.
+First extra element 0:
+{'id': '500000', 'body': 'TIL So keepalive the an watching lucky measuring usually everywhere droplet waiting... Nowhere building test those here keepalive network someone and of load? Server big learning ubuntu deploy careful coffee.', 'created_at': '2025-12-31T23:59:19.409Z', 'author': 'swift_ember_22228', 'like_count': 5}
+
+Diff is 6226 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.475s
+
+FAILED (failures=2)
+

@@ -1,0 +1,114 @@
+test_fresh_owned_volumes_and_uncached_native_queries (__main__.ConvexPostgresConfig.test_fresh_owned_volumes_and_uncached_native_queries) ... ok
+test_native_image_pins_and_three_plus_one_gib_children (__main__.ConvexPostgresConfig.test_native_image_pins_and_three_plus_one_gib_children) ... ok
+test_no_database_host_port_or_new_privileges (__main__.ConvexPostgresConfig.test_no_database_host_port_or_new_privileges) ... ok
+test_only_two_required_servers_and_separate_profiled_tools (__main__.ConvexPostgresConfig.test_only_two_required_servers_and_separate_profiled_tools) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.079s
+
+OK
+ Container baas-convexpg-vps16-setup-verification-tools Creating 
+ Container baas-convexpg-vps16-setup-verification-tools Created 
+test_01_native_database_probe (__main__.NativeFeasibility.test_01_native_database_probe) ... ok
+test_02_native_probe_is_not_a_public_query (__main__.NativeFeasibility.test_02_native_probe_is_not_a_public_query) ... ok
+test_03_identical_queries_reexecute_without_result_cache (__main__.NativeFeasibility.test_03_identical_queries_reexecute_without_result_cache) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.070s
+
+OK
+test_hash_mismatch_and_existing_destination_never_replace_data (__main__.JsonLinesImport.test_hash_mismatch_and_existing_destination_never_replace_data) ... ok
+test_lossless_wide_ids_text_native_files_and_hash (__main__.JsonLinesImport.test_lossless_wide_ids_text_native_files_and_hash) ... ok
+test_missing_relationship_and_duplicate_like_fail_without_output (__main__.JsonLinesImport.test_missing_relationship_and_duplicate_like_fail_without_output) ... ok
+test_noncanonical_and_out_of_range_ids_fail_without_output (__main__.JsonLinesImport.test_noncanonical_and_out_of_range_ids_fail_without_output) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.016s
+
+OK
+test_both_native_processes_share_exact_aggregate_budget (__main__.ConvexPostgresBudget.test_both_native_processes_share_exact_aggregate_budget) ... ERROR
+test_child_limits_and_native_health_fail_closed (__main__.ConvexPostgresBudget.test_child_limits_and_native_health_fail_closed) ... ERROR
+test_each_required_server_is_mandatory (__main__.ConvexPostgresBudget.test_each_required_server_is_mandatory) ... ERROR
+test_image_architecture_ownership_and_actual_membership_are_required (__main__.ConvexPostgresBudget.test_image_architecture_ownership_and_actual_membership_are_required) ... ERROR
+test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap (__main__.ConvexPostgresBudget.test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap) ... ERROR
+
+======================================================================
+ERROR: test_both_native_processes_share_exact_aggregate_budget (__main__.ConvexPostgresBudget.test_both_native_processes_share_exact_aggregate_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_budget.py", line 20, in setUp
+    pins = json.loads((ROOT / 'services/convex/versions.json').read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1059, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1045, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/work/services/convex/versions.json'
+
+======================================================================
+ERROR: test_child_limits_and_native_health_fail_closed (__main__.ConvexPostgresBudget.test_child_limits_and_native_health_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_budget.py", line 20, in setUp
+    pins = json.loads((ROOT / 'services/convex/versions.json').read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1059, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1045, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/work/services/convex/versions.json'
+
+======================================================================
+ERROR: test_each_required_server_is_mandatory (__main__.ConvexPostgresBudget.test_each_required_server_is_mandatory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_budget.py", line 20, in setUp
+    pins = json.loads((ROOT / 'services/convex/versions.json').read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1059, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1045, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/work/services/convex/versions.json'
+
+======================================================================
+ERROR: test_image_architecture_ownership_and_actual_membership_are_required (__main__.ConvexPostgresBudget.test_image_architecture_ownership_and_actual_membership_are_required)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_budget.py", line 20, in setUp
+    pins = json.loads((ROOT / 'services/convex/versions.json').read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1059, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1045, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/work/services/convex/versions.json'
+
+======================================================================
+ERROR: test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap (__main__.ConvexPostgresBudget.test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/test_convex_budget.py", line 20, in setUp
+    pins = json.loads((ROOT / 'services/convex/versions.json').read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1059, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1045, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/work/services/convex/versions.json'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+FAILED (errors=5)
+

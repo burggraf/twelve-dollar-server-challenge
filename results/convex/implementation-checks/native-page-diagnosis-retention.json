@@ -1,0 +1,77 @@
+{
+  "recorded_at": "2026-10-15T18:38:20.976502+00:00",
+  "scope": "Read-only diagnosis, not a passing feasibility/correctness gate",
+  "target": {
+    "image_id": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+    "pid": 0,
+    "started_at": "2026-10-15T17:49:03.858647653Z",
+    "running": false,
+    "oom_killed": true,
+    "restart_count": 0
+  },
+  "parent_cgroup": {
+    "cpu.max": "100000 100000\n",
+    "cpu.stat": "usage_usec 474919548\nuser_usec 326637086\nsystem_usec 148282462\ncore_sched.force_idle_usec 0\nnr_periods 7555\nnr_throttled 567\nthrottled_usec 10070663\nnr_bursts 0\nburst_usec 0\n",
+    "memory.max": "4294967296\n",
+    "memory.swap.max": "0\n",
+    "memory.current": "9199616\n",
+    "memory.peak": "4294971392\n",
+    "memory.events": "low 0\nhigh 0\nmax 36300\noom 1\noom_kill 1\noom_group_kill 0\n",
+    "memory.stat": "anon 0\nfile 4096\nkernel 9195520\nkernel_stack 0\npagetables 0\nsec_pagetables 0\npercpu 12096\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 0\ninactive_file 0\nactive_file 4096\nunevictable 0\nslab_reclaimable 9177000\nslab_unreclaimable 4680\nslab 9181680\nworkingset_refault_anon 0\nworkingset_refault_file 1968229\nworkingset_activate_anon 0\nworkingset_activate_file 1095872\nworkingset_restore_anon 0\nworkingset_restore_file 45235\nworkingset_nodereclaim 0\npgscan 3144519\npgsteal 3143166\npgscan_kswapd 0\npgscan_direct 3144519\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 3143166\npgsteal_khugepaged 0\npgfault 2471711\npgmajfault 2\npgrefill 1794627\npgactivate 99\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+    "io.stat": "8:0 rbytes=8062038016 wbytes=59092025344 rios=1333214 wios=6240853 dbytes=0 dios=0\n"
+  },
+  "host_vmstat": "nr_free_pages 1437659\nnr_zone_inactive_anon 95583\nnr_zone_active_anon 55694\nnr_zone_inactive_file 1721763\nnr_zone_active_file 416537\nnr_zone_unevictable 6864\nnr_zone_write_pending 645\nnr_mlock 6864\nnr_bounce 0\nnr_zspages 0\nnr_free_cma 0\nnr_unaccepted 0\nnuma_hit 500975274\nnuma_miss 0\nnuma_foreign 0\nnuma_interleave 37\nnuma_local 500820350\nnuma_other 0\nnr_inactive_anon 95583\nnr_active_anon 55694\nnr_inactive_file 1721763\nnr_active_file 416537\nnr_unevictable 6864\nnr_slab_reclaimable 297955\nnr_slab_unreclaimable 41284\nnr_isolated_anon 0\nnr_isolated_file 0\nworkingset_nodes 115613\nworkingset_refault_anon 0\nworkingset_refault_file 2047097\nworkingset_activate_anon 0\nworkingset_activate_file 1100998\nworkingset_restore_anon 0\nworkingset_restore_file 47609\nworkingset_nodereclaim 224128\nnr_anon_pages 153085\nnr_mapped 97824\nnr_file_pages 2143429\nnr_dirty 645\nnr_writeback 0\nnr_writeback_temp 0\nnr_shmem 2939\nnr_shmem_hugepages 0\nnr_shmem_pmdmapped 0\nnr_file_hugepages 0\nnr_file_pmdmapped 0\nnr_anon_transparent_hugepages 180\nnr_vmscan_write 0\nnr_vmscan_immediate_reclaim 0\nnr_dirtied 81634885\nnr_written 79523901\nnr_throttled_written 0\nnr_kernel_misc_reclaimable 0\nnr_foll_pin_acquired 1002\nnr_foll_pin_released 1002\nnr_kernel_stack 3888\nnr_page_table_pages 1930\nnr_sec_page_table_pages 0\nnr_swapcached 0\npgpromote_success 0\npgpromote_candidate 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\nnr_dirty_threshold 706592\nnr_dirty_background_threshold 352864\npgpgin 43093326\npgpgout 325069303\npswpin 0\npswpout 0\npgalloc_dma 512\npgalloc_dma32 47321707\npgalloc_normal 476662612\npgalloc_movable 0\npgalloc_device 0\nallocstall_dma 0\nallocstall_dma32 0\nallocstall_normal 2\nallocstall_movable 201\nallocstall_device 0\npgskip_dma 0\npgskip_dma32 0\npgskip_normal 1\npgskip_movable 0\npgskip_device 0\npgfree 528933453\npgactivate 928\npgdeactivate 0\npglazyfree 5781\npgfault 686275373\npgmajfault 16843\npglazyfreed 0\npgrefill 2122640\npgreuse 117223870\npgsteal_kswapd 10418493\npgsteal_direct 183999\npgsteal_khugepaged 0\npgscan_kswapd 10433850\npgscan_direct 184001\npgscan_khugepaged 0\npgscan_direct_throttle 0\npgscan_anon 0\npgscan_file 13765890\npgsteal_anon 0\npgsteal_file 13749178\nzone_reclaim_failed 0\npginodesteal 1\nslabs_scanned 2138509\nkswapd_inodesteal 198512\nkswapd_low_wmark_hit_quickly 46\nkswapd_high_wmark_hit_quickly 83\npageoutrun 490\npgrotated 172213\ndrop_pagecache 0\ndrop_slab 0\noom_kill 3\nnuma_pte_updates 0\nnuma_huge_pte_updates 0\nnuma_hint_faults 0\nnuma_hint_faults_local 0\nnuma_pages_migrated 0\npgmigrate_success 3353233\npgmigrate_fail 15381\nthp_migration_success 0\nthp_migration_fail 0\nthp_migration_split 0\ncompact_migrate_scanned 17328141\ncompact_free_scanned 144213205\ncompact_isolated 6788850\ncompact_stall 734\ncompact_fail 452\ncompact_success 282\ncompact_daemon_wake 148\ncompact_daemon_migrate_scanned 16969409\ncompact_daemon_free_scanned 143679721\nhtlb_buddy_alloc_success 0\nhtlb_buddy_alloc_fail 0\nunevictable_pgs_culled 28069\nunevictable_pgs_scanned 0\nunevictable_pgs_rescued 6079\nunevictable_pgs_mlocked 12943\nunevictable_pgs_munlocked 18\nunevictable_pgs_cleared 0\nunevictable_pgs_stranded 6061\nthp_fault_alloc 2930\nthp_fault_fallback 115\nthp_fault_fallback_charge 0\nthp_collapse_alloc 880\nthp_collapse_alloc_failed 0\nthp_file_alloc 0\nthp_file_fallback 0\nthp_file_fallback_charge 0\nthp_file_mapped 0\nthp_split_page 0\nthp_split_page_failed 0\nthp_deferred_split_page 2622\nthp_split_pmd 2622\nthp_scan_exceed_none_pte 116\nthp_scan_exceed_swap_pte 0\nthp_scan_exceed_share_pte 0\nthp_split_pud 0\nthp_zero_page_alloc 1\nthp_zero_page_alloc_failed 0\nthp_swpout 0\nthp_swpout_fallback 0\nballoon_inflate 0\nballoon_deflate 0\nballoon_migrate 0\nswap_ra 0\nswap_ra_hit 0\nksm_swpin_copy 0\ncow_ksm 0\nzswpin 0\nzswpout 0\nzswpwb 0\ndirect_map_level2_splits 73\ndirect_map_level3_splits 5\nnr_unstable 0\n",
+  "host_meminfo": "MemTotal:       16377024 kB\nMemFree:         5750636 kB\nMemAvailable:   15157936 kB\nBuffers:          202424 kB\nCached:          8371292 kB\nSwapCached:            0 kB\nActive:          1888924 kB\nInactive:        7269384 kB\nActive(anon):     222776 kB\nInactive(anon):   382332 kB\nActive(file):    1666148 kB\nInactive(file):  6887052 kB\nUnevictable:       27456 kB\nMlocked:           27456 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              2580 kB\nWriteback:             0 kB\nAnonPages:        612340 kB\nMapped:           391296 kB\nShmem:             11756 kB\nKReclaimable:    1191820 kB\nSlab:            1356956 kB\nSReclaimable:    1191820 kB\nSUnreclaim:       165136 kB\nKernelStack:        3888 kB\nPageTables:         7720 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     8188512 kB\nCommitted_AS:    1258044 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       19056 kB\nVmallocChunk:          0 kB\nPercpu:             5200 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:    368640 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      173928 kB\nDirectMap2M:     9263104 kB\nDirectMap1G:     9437184 kB\n",
+  "private_inputs_sha256": {
+    "cli.env": "ffc2a0c6f6aaead6066d3cd1f03bf0ab181d235311002754365157a0fca691e2",
+    "instance_secret": "4488058cc1218375ffd9edc22207b90043f6084fb6392acd2b495bbd366e061a",
+    "instance_name": "ed79affdb774d8645fa63922b1cce1ccff00867e7256da0b033c0509b413237e"
+  },
+  "privacy": {
+    "actual_private_candidate_count": 4,
+    "scope": "Actual native admin and instance-secret values/components; all HTTP access-log query strings removed regardless of credential scan",
+    "prior_derivative_caveat": "Earlier credential-only native-backend-first-import-sanitized.log retained privately; superseded for publication because URL query parameters also require redaction."
+  },
+  "artifacts": [
+    {
+      "original_private_vps_file": "setup-evidence/native-page-diagnosis.log",
+      "published_derivative": "native-page-diagnosis-public.log",
+      "original_bytes": 2718,
+      "original_sha256": "e739d376d1e81ad855d47b8692abcaa153a407b403930a737cb7c79c83b061ba",
+      "derivative_bytes": 2742,
+      "derivative_sha256": "a562772acf7f1848268971300302cecd5f56d83eacbe0d9c116509c7f72568ad",
+      "credential_replacements": 2,
+      "http_query_string_redactions": 0
+    },
+    {
+      "original_private_vps_file": "native-page-diagnosis-driver.log",
+      "published_derivative": "native-page-diagnosis-driver-public.log",
+      "original_bytes": 281,
+      "original_sha256": "07342ca63074ccfbdb96b21441f0f2b5b5869b736f7c6b5bca297a59c5ad55ea",
+      "derivative_bytes": 281,
+      "derivative_sha256": "07342ca63074ccfbdb96b21441f0f2b5b5869b736f7c6b5bca297a59c5ad55ea",
+      "credential_replacements": 0,
+      "http_query_string_redactions": 0
+    },
+    {
+      "original_private_vps_file": "native-backend-page-diagnosis-original.log",
+      "published_derivative": "native-backend-page-diagnosis-public.log",
+      "original_bytes": 326693,
+      "original_sha256": "f158408ac86b1f8a305b53545bbaedd5446cfcf57c1cf725488c8b42f394b599",
+      "derivative_bytes": 317101,
+      "derivative_sha256": "e330b4a2861d2d877a66f0648b59eb5dd4e8c76be1a540fb1deabf1fdfd3339a",
+      "credential_replacements": 211,
+      "http_query_string_redactions": 66
+    },
+    {
+      "original_private_vps_file": "native-backend-first-import-original.log",
+      "published_derivative": "native-backend-first-import-public-v2.log",
+      "original_bytes": 326265,
+      "original_sha256": "9b9c9afa3fabd5c216969a3dc829fdc5d41401d01e842c048c4dcd3ce9f810b3",
+      "derivative_bytes": 316661,
+      "derivative_sha256": "09d99001da4abd29e8f0f2a856730c0299c5359e7d504da28f52da6abbe41b6b",
+      "credential_replacements": 210,
+      "http_query_string_redactions": 66
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+test_both_native_processes_share_exact_aggregate_budget (__main__.ConvexPostgresBudget.test_both_native_processes_share_exact_aggregate_budget) ... ok
+test_child_limits_and_native_health_fail_closed (__main__.ConvexPostgresBudget.test_child_limits_and_native_health_fail_closed) ... ok
+test_each_required_server_is_mandatory (__main__.ConvexPostgresBudget.test_each_required_server_is_mandatory) ... ok
+test_image_architecture_ownership_and_actual_membership_are_required (__main__.ConvexPostgresBudget.test_image_architecture_ownership_and_actual_membership_are_required) ... ok
+test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap (__main__.ConvexPostgresBudget.test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK

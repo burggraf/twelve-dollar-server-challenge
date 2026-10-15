@@ -1,0 +1,14 @@
+{
+  "users.tsv": {
+    "sha256": "304767a5b65fd97d7a5a0abbdef4a063cfab99ff08bd045126de3ba53c139bb8",
+    "bytes": 2482690
+  },
+  "posts.tsv": {
+    "sha256": "693d608b9021baab866b2866fb2d950262fbd90e6fcef70aef10f5281d5c1293",
+    "bytes": 83493309
+  },
+  "likes.tsv": {
+    "sha256": "627c2d0aa7860a3a6e7788f700adc953e05fac967a5d9b5b21dcad06bd412b37",
+    "bytes": 75709498
+  }
+}
