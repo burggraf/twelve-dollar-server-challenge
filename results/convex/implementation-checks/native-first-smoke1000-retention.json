@@ -1,0 +1,230 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-smoke1000-actual-driver-original.log",
+      "original_bytes": 1967,
+      "original_sha256": "1a3a0e317ff96eb29fef18065a07194ac323aa3c40397e62f3d4714f0185b898",
+      "public_derivative": "native-smoke1000-actual-driver-original-public.log",
+      "derivative_bytes": 1967,
+      "derivative_sha256": "1a3a0e317ff96eb29fef18065a07194ac323aa3c40397e62f3d4714f0185b898",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-SHA256SUMS",
+      "original_bytes": 1221,
+      "original_sha256": "9b5019645a73897873f287a28733c964e40eaf3e868f203f2a64555726c91ee3",
+      "public_derivative": "native-first-smoke1000-SHA256SUMS-public",
+      "derivative_bytes": 1221,
+      "derivative_sha256": "9b5019645a73897873f287a28733c964e40eaf3e868f203f2a64555726c91ee3",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-correctness-manifest.json",
+      "original_bytes": 28030,
+      "original_sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831",
+      "public_derivative": "native-first-smoke1000-correctness-manifest-public.json",
+      "derivative_bytes": 28030,
+      "derivative_sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-correctness.log",
+      "original_bytes": 22452,
+      "original_sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9",
+      "public_derivative": "native-first-smoke1000-correctness-public.log",
+      "derivative_bytes": 22452,
+      "derivative_sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "native-first-smoke1000-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-k6-summary.json",
+      "original_bytes": 10309,
+      "original_sha256": "753be9237664dca22600c697c705d9777feab7129337f7d5de976b8b213deb0a",
+      "public_derivative": "native-first-smoke1000-k6-summary-public.json",
+      "derivative_bytes": 10309,
+      "derivative_sha256": "753be9237664dca22600c697c705d9777feab7129337f7d5de976b8b213deb0a",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-k6.log",
+      "original_bytes": 170208,
+      "original_sha256": "e3766c730b515ee5443efcb3c975e6f48b07c8a3f9b9f993dd490740d88162c2",
+      "public_derivative": "native-first-smoke1000-k6-public.log",
+      "derivative_bytes": 170208,
+      "derivative_sha256": "e3766c730b515ee5443efcb3c975e6f48b07c8a3f9b9f993dd490740d88162c2",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-manifest-before.json",
+      "original_bytes": 39999,
+      "original_sha256": "962ab40e1deadee86c61550b03276ae6c8501979633086369947216e57da242f",
+      "public_derivative": "native-first-smoke1000-manifest-before-public.json",
+      "derivative_bytes": 40175,
+      "derivative_sha256": "625a250779e6ba42cb4dc54cf69e51717dc1334081d0e4ea17f387910019a386",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        8
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-manifest.json",
+      "original_bytes": 51724,
+      "original_sha256": "a7e40de6731638eae90c17e313d739394260a40e527d6b766e137db1106711db",
+      "public_derivative": "native-first-smoke1000-manifest-public.json",
+      "derivative_bytes": 51900,
+      "derivative_sha256": "d977856752d20d83bcc6b6191b24be52c38f016ca16fb8a2c0fb6477872e687d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        8
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-report.md",
+      "original_bytes": 2094,
+      "original_sha256": "7618944a2e2b6b66afe3e3e2e31c7df4446982c007eed90aaa0e97f85aa7fa6d",
+      "public_derivative": "native-first-smoke1000-report-public.md",
+      "derivative_bytes": 2094,
+      "derivative_sha256": "7618944a2e2b6b66afe3e3e2e31c7df4446982c007eed90aaa0e97f85aa7fa6d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-reset.log",
+      "original_bytes": 1177,
+      "original_sha256": "a3d60cc5f9c1881a6cb6d1ecd49b07aedf873d557d839380b9b0520aad5ac3fd",
+      "public_derivative": "native-first-smoke1000-reset-public.log",
+      "derivative_bytes": 1177,
+      "derivative_sha256": "a3d60cc5f9c1881a6cb6d1ecd49b07aedf873d557d839380b9b0520aad5ac3fd",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-resources.jsonl",
+      "original_bytes": 105458,
+      "original_sha256": "d2be9ff8a0d843251a37cb162d78b5bf672bb6832c28f1b4066d413a048cb862",
+      "public_derivative": "native-first-smoke1000-resources-public.jsonl",
+      "derivative_bytes": 105458,
+      "derivative_sha256": "d2be9ff8a0d843251a37cb162d78b5bf672bb6832c28f1b4066d413a048cb862",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-runtime-freeze.json",
+      "original_bytes": 26283,
+      "original_sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305",
+      "public_derivative": "native-first-smoke1000-runtime-freeze-public.json",
+      "derivative_bytes": 26283,
+      "derivative_sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-summary.json",
+      "original_bytes": 2111,
+      "original_sha256": "359bbb4f42a7f9a6d1aec7b751af32a5a6159f5da8983cfb92f1171df4edb299",
+      "public_derivative": "native-first-smoke1000-summary-public.json",
+      "derivative_bytes": 2111,
+      "derivative_sha256": "359bbb4f42a7f9a6d1aec7b751af32a5a6159f5da8983cfb92f1171df4edb299",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-working-tree.patch",
+      "original_bytes": 60644,
+      "original_sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9",
+      "public_derivative": "native-first-smoke1000-working-tree-public.patch",
+      "derivative_bytes": 60644,
+      "derivative_sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-current-native-state.json",
+      "original_bytes": 14671,
+      "original_sha256": "61cc7a8e2ca3cb31fdf29f6e2ae5dc5ecdb7c389117ecfd725b053f5832ed613",
+      "public_derivative": "native-first-smoke1000-current-native-state-public.json",
+      "derivative_bytes": 14671,
+      "derivative_sha256": "61cc7a8e2ca3cb31fdf29f6e2ae5dc5ecdb7c389117ecfd725b053f5832ed613",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

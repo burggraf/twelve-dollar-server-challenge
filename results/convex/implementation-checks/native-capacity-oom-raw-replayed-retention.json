@@ -1,0 +1,62 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-capacity-oom-raw-replay-driver-original.log",
+      "original_bytes": 121,
+      "original_sha256": "09bd3a8a5583c1b15878b5769b8cd350936b7d780cc7310c634b860aaa1ce469",
+      "public_derivative": "native-capacity-oom-raw-replay-driver-original-public.log",
+      "derivative_bytes": 121,
+      "derivative_sha256": "09bd3a8a5583c1b15878b5769b8cd350936b7d780cc7310c634b860aaa1ce469",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-oom-dmarie-manager-state.txt",
+      "original_bytes": 286,
+      "original_sha256": "003be690846930799d64190bc959f74096b353280b81728f5dbecf68d7b20352",
+      "public_derivative": "native-capacity-oom-dmarie-manager-state-public.txt",
+      "derivative_bytes": 286,
+      "derivative_sha256": "003be690846930799d64190bc959f74096b353280b81728f5dbecf68d7b20352",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-oom-dmarie-manager-original.log",
+      "original_bytes": 340817,
+      "original_sha256": "0bafbad9d717e5ed952fc8920b1f0280e4ee836ad614bb70eac1b8b8b858bbd4",
+      "public_derivative": "native-capacity-oom-dmarie-manager-original-public.log",
+      "derivative_bytes": 340817,
+      "derivative_sha256": "0bafbad9d717e5ed952fc8920b1f0280e4ee836ad614bb70eac1b8b8b858bbd4",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-oom-raw-review.json",
+      "original_bytes": 2022,
+      "original_sha256": "c1554a3e8611324f1363a3d193d5523ff99c6dc06a552195ff7f140f2933ad25",
+      "public_derivative": "native-standard-first-oom-raw-review-public.json",
+      "derivative_bytes": 2022,
+      "derivative_sha256": "c1554a3e8611324f1363a3d193d5523ff99c6dc06a552195ff7f140f2933ad25",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

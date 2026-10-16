@@ -1,0 +1,68 @@
+{
+  "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+  "mode": "smoke",
+  "outcome": "fail",
+  "reason": "hold latency/error/schema gate failed",
+  "all_original_checksums_verified": true,
+  "raw_rows": 32355,
+  "raw_counts_and_quantiles_reproduced": true,
+  "raw_quantiles_ms": {
+    "min": 5447.900648,
+    "max": 10002.139757,
+    "med": 10000.310958999999,
+    "p(95)": 10000.9493206,
+    "p(99)": 10001.165257800001
+  },
+  "requests_by_endpoint": {
+    "feed": 1186,
+    "detail": 292,
+    "like": 10,
+    "create": 4
+  },
+  "errors_by_endpoint": {
+    "feed": 1037,
+    "detail": 125,
+    "like": 9,
+    "create": 4
+  },
+  "statuses_by_endpoint": {
+    "feed": {
+      "0": 1037,
+      "200": 149
+    },
+    "detail": {
+      "0": 125,
+      "200": 167
+    },
+    "like": {
+      "201": 1,
+      "0": 9
+    },
+    "create": {
+      "0": 4
+    }
+  },
+  "schema_errors": 0,
+  "original_source_archive_files_compared_to_current_frozen_vps_bytes": 100,
+  "complete_frozen_inputs_match_correctness": true,
+  "measurement_replay": [
+    "fail",
+    "hold latency/error/schema gate failed"
+  ],
+  "runtime_issue": null,
+  "actual_runner_kernel_sample_count": 8,
+  "hold_monitor_samples": 4,
+  "hold_monitor_span_seconds": 15.110641241073608,
+  "runner_peak_cpu_percent_one_core": 8.75,
+  "runner_peak_memory_percent_8gib": 3.83,
+  "parent_max_observed_current_bytes": 4112297984,
+  "parent_lifetime_peak_after": 4117848064,
+  "host_swapouts_before": 0,
+  "host_swapouts_after": 0,
+  "clean_shutdown": {
+    "result": "FAILED",
+    "backend_exit": 139,
+    "capacity_exception": "Explicit owner permission after separate acknowledged crash-recovery proof; no lifecycle or power-loss certification"
+  },
+  "not_capacity_bound": true
+}

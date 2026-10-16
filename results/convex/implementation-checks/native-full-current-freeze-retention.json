@@ -1,0 +1,76 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-full-current-freeze-original.log",
+      "original_bytes": 995,
+      "original_sha256": "e9469e558e47a7f3536c1872f7829cc924987a9894c54ff432af841b5a8bd6d7",
+      "public_derivative": "native-full-current-freeze-original-public.log",
+      "derivative_bytes": 995,
+      "derivative_sha256": "e9469e558e47a7f3536c1872f7829cc924987a9894c54ff432af841b5a8bd6d7",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-full-current-freeze.json",
+      "original_bytes": 26283,
+      "original_sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305",
+      "public_derivative": "native-full-current-freeze-public.json",
+      "derivative_bytes": 26283,
+      "derivative_sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-fixture-generation-original.log",
+      "original_bytes": 278,
+      "original_sha256": "64df84a1b26873ebada1069c7d3e3ef3e2dc1bf839d34ce1d9a3ff6be07e8d33",
+      "public_derivative": "native-fixture-generation-original-public.log",
+      "derivative_bytes": 278,
+      "derivative_sha256": "64df84a1b26873ebada1069c7d3e3ef3e2dc1bf839d34ce1d9a3ff6be07e8d33",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-current-published-git-baseline.json",
+      "original_bytes": 553201,
+      "original_sha256": "0628eae8c413c5cd1d86bcbc7367bc04e313b6fe4c572dead885770c82951aed",
+      "public_derivative": "native-current-published-git-baseline-public.json",
+      "derivative_bytes": 553201,
+      "derivative_sha256": "0628eae8c413c5cd1d86bcbc7367bc04e313b6fe4c572dead885770c82951aed",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-published-git-base-original.log",
+      "original_bytes": 375,
+      "original_sha256": "e6aafaa8b121f010e1ac678061a680cd780cb762b8a9830cb8593f04d57275b3",
+      "public_derivative": "native-published-git-base-original-public.log",
+      "derivative_bytes": 375,
+      "derivative_sha256": "e6aafaa8b121f010e1ac678061a680cd780cb762b8a9830cb8593f04d57275b3",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

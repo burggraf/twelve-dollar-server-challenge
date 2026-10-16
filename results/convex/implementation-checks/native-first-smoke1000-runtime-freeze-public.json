@@ -1,0 +1,749 @@
+{
+  "scope": "Complete current source/harness plus original installed SDK/dependencies/esbuild binary/generated inputs archived privately before final frozen tests/measurement; backend/PG images and Node compiler/executor immutable; source+dependency archive not a public-download claim",
+  "published_base": "ae4ab27bec789009a1d6221eef44ec5f45a8497b",
+  "source_files": 1555,
+  "dependency_entries": 2412,
+  "generated_entries": 5,
+  "full_runtime_sha256": "1f7bb3f120584759bf1343bed93f8cc20d8e69bf17773b1418b9f729a8be00e3",
+  "tools_image": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2 linux/amd64",
+  "tools_node": "22.20.0",
+  "backend_node": "22.22.2",
+  "cli_sdk": "1.46.0",
+  "archives": {
+    "complete-current-source.tar.gz": {
+      "bytes": 5357338,
+      "sha256": "b28b129c1edbced4719400556dd608ce3693288ac97cee1397ae9d1527bdb825"
+    },
+    "complete-installed-sdk-generated.tar.gz": {
+      "bytes": 14129382,
+      "sha256": "accb718323e580a699d194a845797580680f8fea04c1b3fdcaac85c4a6bdc9ef"
+    },
+    "complete-current-inventory.json": {
+      "bytes": 906555,
+      "sha256": "527a10878a375ea884303f2ea4a1c632b4e489a5f4c7995dd8b6cd99eb08e061"
+    }
+  },
+  "tokens": {
+    "count": 20000,
+    "sha256": "ceefc4ce2eb03a09ae099c5a83bb02467bcc01f05cab57124ca9f36c7aeba95e",
+    "canonical_tsvs_equal": true,
+    "native_first_middle_last_genuine_tampered_positive_again": true,
+    "key_unchanged": true,
+    "native_signup_login_throughput": false
+  },
+  "catalog": {
+    "sha256": "eb70efefe5da11bb0a57bc16a5464802a664388ea2c42204919b2a5ed1c5abe8",
+    "catalog": {
+      "active_schema": {
+        "tables": [
+          {
+            "tableName": "feed_sequences",
+            "indexes": [
+              {
+                "indexDescriptor": "by_name",
+                "fields": [
+                  "name",
+                  "_creationTime"
+                ]
+              }
+            ],
+            "stagedDbIndexes": [],
+            "searchIndexes": [],
+            "stagedSearchIndexes": [],
+            "vectorIndexes": [],
+            "stagedVectorIndexes": [],
+            "documentType": {
+              "type": "object",
+              "value": {
+                "last_id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "name": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                }
+              }
+            },
+            "stagedDocumentType": null
+          },
+          {
+            "tableName": "likes",
+            "indexes": [
+              {
+                "indexDescriptor": "by_post_user",
+                "fields": [
+                  "post_id",
+                  "user_id",
+                  "_creationTime"
+                ]
+              },
+              {
+                "indexDescriptor": "by_user_post",
+                "fields": [
+                  "user_id",
+                  "post_id",
+                  "_creationTime"
+                ]
+              }
+            ],
+            "stagedDbIndexes": [],
+            "searchIndexes": [],
+            "stagedSearchIndexes": [],
+            "vectorIndexes": [],
+            "stagedVectorIndexes": [],
+            "documentType": {
+              "type": "object",
+              "value": {
+                "created_at": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "post_id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "user_id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                }
+              }
+            },
+            "stagedDocumentType": null
+          },
+          {
+            "tableName": "posts",
+            "indexes": [
+              {
+                "indexDescriptor": "by_created_at_id",
+                "fields": [
+                  "created_at",
+                  "id",
+                  "_creationTime"
+                ]
+              },
+              {
+                "indexDescriptor": "by_public_id",
+                "fields": [
+                  "id",
+                  "_creationTime"
+                ]
+              },
+              {
+                "indexDescriptor": "by_user_id",
+                "fields": [
+                  "user_id",
+                  "_creationTime"
+                ]
+              }
+            ],
+            "stagedDbIndexes": [],
+            "searchIndexes": [],
+            "stagedSearchIndexes": [],
+            "vectorIndexes": [],
+            "stagedVectorIndexes": [],
+            "documentType": {
+              "type": "object",
+              "value": {
+                "body": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "created_at": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "user_id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                }
+              }
+            },
+            "stagedDocumentType": null
+          },
+          {
+            "tableName": "users",
+            "indexes": [
+              {
+                "indexDescriptor": "by_public_id",
+                "fields": [
+                  "id",
+                  "_creationTime"
+                ]
+              },
+              {
+                "indexDescriptor": "by_username",
+                "fields": [
+                  "username",
+                  "_creationTime"
+                ]
+              }
+            ],
+            "stagedDbIndexes": [],
+            "searchIndexes": [],
+            "stagedSearchIndexes": [],
+            "vectorIndexes": [],
+            "stagedVectorIndexes": [],
+            "documentType": {
+              "type": "object",
+              "value": {
+                "created_at": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "username": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                }
+              }
+            },
+            "stagedDocumentType": null
+          }
+        ],
+        "schemaValidation": true
+      },
+      "function_spec": [
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Query",
+          "identifier": "native.js:storageProbe",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "cursor": {
+                "fieldType": {
+                  "type": "union",
+                  "value": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "optional": false
+              },
+              "table": {
+                "fieldType": {
+                  "type": "union",
+                  "value": [
+                    {
+                      "type": "literal",
+                      "value": "users"
+                    },
+                    {
+                      "type": "literal",
+                      "value": "posts"
+                    },
+                    {
+                      "type": "literal",
+                      "value": "likes"
+                    }
+                  ]
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Query",
+          "identifier": "native.js:canonicalPage",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Query",
+          "identifier": "native.js:feed",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "body": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              },
+              "userId": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "native.js:createPost",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "postId": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              },
+              "userId": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "native.js:likePost",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "id": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Query",
+          "identifier": "native.js:detail",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "functionType": "HttpAction",
+          "method": "GET",
+          "path": "/*"
+        },
+        {
+          "functionType": "HttpAction",
+          "method": "POST",
+          "path": "/*"
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Action",
+          "identifier": "clock.js:backendUptime",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Query",
+          "identifier": "fixtures.js:writeProbeState",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "marker": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "fixtures.js:installStoredEdges",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "marker": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              },
+              "previous": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              },
+              "target": {
+                "fieldType": {
+                  "type": "union",
+                  "value": [
+                    {
+                      "type": "literal",
+                      "value": "9223372036854775806"
+                    },
+                    {
+                      "type": "literal",
+                      "value": "0009007199254740992"
+                    }
+                  ]
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "fixtures.js:prepareAllocationBoundary",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "marker": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "fixtures.js:resetStoredEdges",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "marker": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "fixtures.js:resetWriteProbe",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "cursor": {
+                "fieldType": {
+                  "type": "union",
+                  "value": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "maintenance.js:resetLikesPage",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Mutation",
+          "identifier": "maintenance.js:resetPostsBatch",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Mutation",
+          "identifier": "maintenance.js:resetAllocation",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        }
+      ]
+    },
+    "scope": "Actual supported native CLI/MCP catalog queries; not physical SQL FK/UNIQUE declarations"
+  },
+  "serving_profile": {
+    "targets": {
+      "backend": {
+        "Id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+        "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2313635,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-16T00:02:20.333088398Z",
+          "FinishedAt": "2026-10-15T23:47:48.287476294Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-16T01:19:54.558114116Z",
+                "End": "2026-10-16T01:19:54.594123787Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T01:19:59.595487931Z",
+                "End": "2026-10-16T01:19:59.631416039Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T01:20:04.632609116Z",
+                "End": "2026-10-16T01:20:04.670155226Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T01:20:09.671013822Z",
+                "End": "2026-10-16T01:20:09.70765695Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T01:20:14.708450247Z",
+                "End": "2026-10-16T01:20:14.743530676Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 1000000000,
+          "Memory": 3221225472,
+          "MemorySwap": 3221225472
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "compose_project": "baas-convexpg-vps16",
+        "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+        "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope\n",
+        "kernel": {
+          "cpu.max": "100000 100000\n",
+          "cpu.stat": "usage_usec 138886716\nuser_usec 127418618\nsystem_usec 11468097\ncore_sched.force_idle_usec 0\nnr_periods 4515\nnr_throttled 13\nthrottled_usec 116034\nnr_bursts 0\nburst_usec 0\n",
+          "memory.max": "3221225472\n",
+          "memory.current": "87298048\n",
+          "memory.peak": "116744192\n",
+          "memory.swap.max": "0\n",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+          "memory.stat": "anon 75509760\nfile 7815168\nkernel 3973120\nkernel_stack 393216\npagetables 2138112\nsec_pagetables 0\npercpu 2232\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 75509760\ninactive_file 7815168\nactive_file 0\nunevictable 0\nslab_reclaimable 838440\nslab_unreclaimable 551048\nslab 1389488\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 0\npgsteal 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 1897235\npgmajfault 0\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+          "io.stat": "8:0 rbytes=0 wbytes=7806976 rios=0 wios=34 dbytes=0 dios=0\n"
+        }
+      },
+      "postgres": {
+        "Id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+        "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2313499,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-16T00:02:14.076467149Z",
+          "FinishedAt": "2026-10-16T00:02:13.874816796Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-16T01:19:52.403897683Z",
+                "End": "2026-10-16T01:19:52.47032934Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T01:19:57.47137805Z",
+                "End": "2026-10-16T01:19:57.536714412Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T01:20:02.537536517Z",
+                "End": "2026-10-16T01:20:02.600300448Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T01:20:07.601587623Z",
+                "End": "2026-10-16T01:20:07.664250185Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T01:20:12.665220721Z",
+                "End": "2026-10-16T01:20:12.72590803Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 1000000000,
+          "Memory": 1073741824,
+          "MemorySwap": 1073741824
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "compose_project": "baas-convexpg-vps16",
+        "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+        "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope\n",
+        "kernel": {
+          "cpu.max": "100000 100000\n",
+          "cpu.stat": "usage_usec 76316414\nuser_usec 53213827\nsystem_usec 23102586\ncore_sched.force_idle_usec 0\nnr_periods 4293\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+          "memory.max": "1073741824\n",
+          "memory.current": "1039060992\n",
+          "memory.peak": "1073741824\n",
+          "memory.swap.max": "0\n",
+          "memory.events": "low 0\nhigh 0\nmax 6859\noom 0\noom_kill 0\noom_group_kill 0\n",
+          "memory.stat": "anon 9961472\nfile 1025433600\nkernel 3665920\nkernel_stack 147456\npagetables 1712128\nsec_pagetables 0\npercpu 2904\nsock 0\nvmalloc 12288\nshmem 146755584\nzswap 0\nzswapped 0\nfile_mapped 21499904\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 156717056\ninactive_file 878452736\nactive_file 225280\nunevictable 0\nslab_reclaimable 639600\nslab_unreclaimable 1063160\nslab 1702760\nworkingset_refault_anon 0\nworkingset_refault_file 411\nworkingset_activate_anon 0\nworkingset_activate_file 411\nworkingset_restore_anon 0\nworkingset_restore_file 52\nworkingset_nodereclaim 0\npgscan 438976\npgsteal 438976\npgscan_kswapd 0\npgscan_direct 438976\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 438976\npgsteal_khugepaged 0\npgfault 3734857\npgmajfault 0\npgrefill 63\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+          "io.stat": "8:0 rbytes=2674999296 wbytes=1617920 rios=265217 wios=146 dbytes=0 dios=0\n"
+        }
+      }
+    },
+    "parent": {
+      "cpu.max": "100000 100000\n",
+      "cpu.stat": "usage_usec 2850387701\nuser_usec 2316207808\nsystem_usec 534179892\ncore_sched.force_idle_usec 0\nnr_periods 53342\nnr_throttled 8958\nthrottled_usec 187082725\nnr_bursts 0\nburst_usec 0\n",
+      "cpu.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=72397949\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=62439336\n",
+      "memory.max": "4294967296\n",
+      "memory.current": "3233198080\n",
+      "memory.peak": "3479109632\n",
+      "memory.swap.max": "0\n",
+      "memory.events": "low 0\nhigh 0\nmax 588984\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.stat": "anon 85471232\nfile 3089063936\nkernel 58662912\nkernel_stack 540672\npagetables 3850240\nsec_pagetables 0\npercpu 65616\nsock 0\nvmalloc 24576\nshmem 146755584\nzswap 0\nzswapped 0\nfile_mapped 21499904\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 232226816\ninactive_file 2155253760\nactive_file 787054592\nunevictable 0\nslab_reclaimable 52436680\nslab_unreclaimable 1614208\nslab 54050888\nworkingset_refault_anon 0\nworkingset_refault_file 20778769\nworkingset_activate_anon 0\nworkingset_activate_file 17601360\nworkingset_restore_anon 0\nworkingset_restore_file 397407\nworkingset_nodereclaim 0\npgscan 36691777\npgsteal 36691118\npgscan_kswapd 0\npgscan_direct 36691777\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 36691118\npgsteal_khugepaged 0\npgfault 29487679\npgmajfault 2\npgrefill 4779506\npgactivate 11\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+      "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=15832881\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=15717695\n",
+      "io.stat": "8:0 rbytes=87783202816 wbytes=159460831232 rios=8135721 wios=9834216 dbytes=0 dios=0\n",
+      "io.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=158427589\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=158238956\n",
+      "children": [
+        "docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope",
+        "docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope"
+      ]
+    },
+    "observed_health": {
+      "status": "ok",
+      "db": "ok",
+      "uptime_s": 4674
+    }
+  },
+  "clean_shutdown": {
+    "result": "FAILED",
+    "backend_exit": 139,
+    "capacity_owner_exception": true
+  }
+}

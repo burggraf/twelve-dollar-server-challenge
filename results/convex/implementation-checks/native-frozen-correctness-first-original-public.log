@@ -1,0 +1,309 @@
+ Container baas-convexpg-vps16-final-frozen-tools Creating 
+ Container baas-convexpg-vps16-final-frozen-tools Created 
+test_private_reset_primitives_exist_and_preserve_clean_canonical_state (__main__.NativeMaintenance.test_private_reset_primitives_exist_and_preserve_clean_canonical_state) ... ok
+test_reset_primitives_are_not_public (__main__.NativeMaintenance.test_reset_primitives_are_not_public) ... ok
+test_reset_refuses_owned_edge_fixtures_outside_benchmark_range_and_time (__main__.NativeMaintenance.test_reset_refuses_owned_edge_fixtures_outside_benchmark_range_and_time) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.221s
+
+OK
+Testing http://backend:3211
+-- golden reads (fresh database)
+  ok   GET /feed == golden -> 200
+  ok   GET /feed content-type (application/json)
+  ok   GET /posts/1 == golden -> 200
+  ok   GET /posts/250000 == golden -> 200
+  ok   GET /posts/500000 == golden -> 200
+  ok   GET /posts/:id content-type (application/json)
+-- health, 404s, id validation
+  ok   GET /health -> 200 {"status":"ok","db":"ok","uptime_s":4845}
+  ok   GET /nope -> 404
+  ok   GET /posts/0 -> 400
+  ok   GET /posts/-1 -> 400
+  ok   GET /posts/abc -> 400
+  ok   GET /posts/1.5 -> 400
+  ok   GET /posts/999999999 -> 404
+-- auth
+  ok   POST /posts, no token -> 401
+  ok   POST /posts, Basic auth -> 401
+  ok   POST /posts, garbage token -> 401
+  ok   POST /posts, bad signature -> 401
+  ok   POST /posts, alg=none -> 401
+  ok   POST /posts, expired token -> 401
+  ok   POST /posts, sub not an integer -> 401
+  ok   POST /posts, no username -> 401
+  ok   POST /posts/abc/like, no token (auth before id) -> 401
+-- create validation
+  ok   empty body -> 400
+  ok   whitespace body -> 400
+  ok   numeric body -> 400
+  ok   missing body -> 400
+  ok   malformed JSON -> 400
+  ok   501-char body -> 400
+-- create, like, read back
+  ok   special characters round-trip (trimmed) -> 201
+  ok   create 500-char post -> 201
+  ok   POST /posts content-type (application/json)
+  ok   created_at format 2026-10-16T01:23:06.513Z
+  ok   created_at is now (UTC, 0s)
+  ok   like (first) -> 201
+  ok   like (repeat) -> 200
+  ok   like missing post -> 404
+  ok   like bad id (with token) -> 400
+  ok   read back, like_count 1 -> 200
+  ok   like on a seeded post is counted at once (12)
+  ok   feed has 20 posts
+  ok   new post is at the top of the feed
+  ok   feed entry matches the post
+passed=42 failed=0
+test_concurrent_duplicate_likes_commit_once (__main__.FeedContract.test_concurrent_duplicate_likes_commit_once) ... ok
+test_concurrent_post_ids_and_immediate_reads (__main__.FeedContract.test_concurrent_post_ids_and_immediate_reads) ... ok
+test_identity_is_bound_to_signed_subject (__main__.FeedContract.test_identity_is_bound_to_signed_subject) ... ok
+test_storage_health (__main__.FeedContract.test_storage_health) ... ok
+test_strict_jwt_payload_and_expiry (__main__.FeedContract.test_strict_jwt_payload_and_expiry) ... ok
+test_unicode_limits_and_ecmascript_trim (__main__.FeedContract.test_unicode_limits_and_ecmascript_trim) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.256s
+
+OK
+{"like_pages": 2017, "likes_deleted": 5, "posts_deleted": 37, "sequence_last_id": "0000000000000500000"}
+test_01_private_empty_probe_reset_and_current_sequence (__main__.NativeHttpWrites.test_01_private_empty_probe_reset_and_current_sequence) ... ok
+test_02_create_unicode_nul_and_signed_author_then_native_read (__main__.NativeHttpWrites.test_02_create_unicode_nul_and_signed_author_then_native_read) ... ok
+test_03_concurrent_duplicate_like_is_exactly_once (__main__.NativeHttpWrites.test_03_concurrent_duplicate_like_is_exactly_once) ... ok
+test_04_concurrent_post_allocation_is_unique_and_contiguous (__main__.NativeHttpWrites.test_04_concurrent_post_allocation_is_unique_and_contiguous) ... ok
+test_05_missing_user_rolls_back_without_consuming_post_id (__main__.NativeHttpWrites.test_05_missing_user_rolls_back_without_consuming_post_id) ... ok
+test_06_trim_500_codepoints_and_id_auth_precedence (__main__.NativeHttpWrites.test_06_trim_500_codepoints_and_id_auth_precedence) ... ok
+test_07_private_mutations_and_cleanup_are_not_anonymous (__main__.NativeHttpWrites.test_07_private_mutations_and_cleanup_are_not_anonymous) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.084s
+
+OK
+test_01_internal_probe_state_is_private_with_positive_control (__main__.NativeFixtureGuards.test_01_internal_probe_state_is_private_with_positive_control) ... ok
+test_02_invalid_namespaces_cannot_reset_even_empty_state (__main__.NativeFixtureGuards.test_02_invalid_namespaces_cannot_reset_even_empty_state) ... ok
+test_03_valid_but_wrong_namespace_refuses_other_owned_rows (__main__.NativeFixtureGuards.test_03_valid_but_wrong_namespace_refuses_other_owned_rows) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.138s
+
+OK
+test_01_native_stored_fixture_installation (__main__.NativeStoredEdges.test_01_native_stored_fixture_installation) ... ok
+test_02_wide_stored_detail_unicode_nul_and_native_identity_like (__main__.NativeStoredEdges.test_02_wide_stored_detail_unicode_nul_and_native_identity_like) ... ok
+test_03_feed_crosses_24_newer_orphan_join_holes (__main__.NativeStoredEdges.test_03_feed_crosses_24_newer_orphan_join_holes) ... ok
+test_04_maximum_allocation_then_exhaustion_does_not_round_or_advance (__main__.NativeStoredEdges.test_04_maximum_allocation_then_exhaustion_does_not_round_or_advance) ... ok
+test_05_real_collision_after_sequence_patch_rolls_back (__main__.NativeStoredEdges.test_05_real_collision_after_sequence_patch_rolls_back) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.369s
+
+OK
+test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) ... ok
+test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) ... ok
+test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) ... ok
+test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) ... ok
+test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) ... ok
+test_valid_signature_reaches_body_validation_but_tampering_does_not (__main__.NativeHttpAuthGate.test_valid_signature_reaches_body_validation_but_tampering_does_not) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.210s
+
+OK
+test_malformed_json_uses_original_contract_message (__main__.NativeErrorContract.test_malformed_json_uses_original_contract_message) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+OK
+test_backend_uptime_matches_actual_container_process_start (__main__.NativeHealthClock.test_backend_uptime_matches_actual_container_process_start) ... ok
+test_clock_action_is_not_public (__main__.NativeHealthClock.test_clock_action_is_not_public) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.014s
+
+OK
+test_01_feed_exact_native_projection_and_key_order (__main__.NativeHttpReads.test_01_feed_exact_native_projection_and_key_order) ... ok
+test_02_detail_leading_zero_identity_and_largest_seed_count (__main__.NativeHttpReads.test_02_detail_leading_zero_identity_and_largest_seed_count) ... ok
+test_03_invalid_ids_fail_without_unsafe_numeric_coercion (__main__.NativeHttpReads.test_03_invalid_ids_fail_without_unsafe_numeric_coercion) ... ok
+test_04_absent_positive_signed64_ids_are_not_invalid (__main__.NativeHttpReads.test_04_absent_positive_signed64_ids_are_not_invalid) ... ok
+test_05_unknown_paths_have_exact_json_error (__main__.NativeHttpReads.test_05_unknown_paths_have_exact_json_error) ... ok
+test_06_each_http_feed_reexecutes_its_native_query (__main__.NativeHttpReads.test_06_each_http_feed_reexecutes_its_native_query) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.491s
+
+OK
+test_02_native_probe_is_not_a_public_query (__main__.NativeFeasibility.test_02_native_probe_is_not_a_public_query) ... ok
+test_03_identical_queries_reexecute_without_result_cache (__main__.NativeFeasibility.test_03_identical_queries_reexecute_without_result_cache) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.082s
+
+OK
+test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata) ... Actual native canonical counts/full logical hash verified: {"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d", "scope": "Actual native paginated API rows; native metadata present; logical IDs/relationships/order/unique likes verified"}
+ok
+test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count) ... Native feed/detail exact normalized counts verified; largest seeded post: 405018 likes: 583.0
+ok
+test_03_native_read_functions_are_private (__main__.FullNativeDataset.test_03_native_read_functions_are_private) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 152.610s
+
+OK
+test_hash_mismatch_and_existing_destination_never_replace_data (__main__.JsonLinesImport.test_hash_mismatch_and_existing_destination_never_replace_data) ... ok
+test_lossless_wide_ids_text_native_files_and_hash (__main__.JsonLinesImport.test_lossless_wide_ids_text_native_files_and_hash) ... ok
+test_missing_relationship_and_duplicate_like_fail_without_output (__main__.JsonLinesImport.test_missing_relationship_and_duplicate_like_fail_without_output) ... ok
+test_noncanonical_and_out_of_range_ids_fail_without_output (__main__.JsonLinesImport.test_noncanonical_and_out_of_range_ids_fail_without_output) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.016s
+
+OK
+test_generator_does_not_log_signing_key (__main__.SeedSafety.test_generator_does_not_log_signing_key) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 4.630s
+
+OK
+TAP version 13
+# Subtest: phase boundaries exclude warmup, ramp and drain from the hold
+ok 1 - phase boundaries exclude warmup, ramp and drain from the hold
+  ---
+  duration_ms: 0.814748
+  type: 'test'
+  ...
+# Subtest: post validation rejects malformed successful responses
+ok 2 - post validation rejects malformed successful responses
+  ---
+  duration_ms: 0.26209
+  type: 'test'
+  ...
+# Subtest: feed validates size, ordering, uniqueness and status
+ok 3 - feed validates size, ordering, uniqueness and status
+  ---
+  duration_ms: 0.4644
+  type: 'test'
+  ...
+# Subtest: writes validate idempotency flags, identity and actual created content
+ok 4 - writes validate idempotency flags, identity and actual created content
+  ---
+  duration_ms: 0.288571
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 59.598667
+test_owned_postgres_namespace_uses_existing_cohort (__main__.NativeConvexHarness.test_owned_postgres_namespace_uses_existing_cohort) ... ok
+test_source_overlay_includes_native_code_but_not_private_or_dependency_tree (__main__.NativeConvexHarness.test_source_overlay_includes_native_code_but_not_private_or_dependency_tree) ... ok
+test_unrelated_namespace_and_emulation_refused (__main__.NativeConvexHarness.test_unrelated_namespace_and_emulation_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+OK
+test_aggregate_oom_without_pid1_exit_still_stops_campaign (__main__.FrozenConvexEvidence.test_aggregate_oom_without_pid1_exit_still_stops_campaign) ... ok
+test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused (__main__.FrozenConvexEvidence.test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused) ... ok
+test_every_changed_input_and_log_refused (__main__.FrozenConvexEvidence.test_every_changed_input_and_log_refused) ... ok
+test_matching_full_frozen_correctness_accepted (__main__.FrozenConvexEvidence.test_matching_full_frozen_correctness_accepted) ... ok
+test_versions_exact_slices_and_failed_shutdown_are_prominent (__main__.FrozenConvexEvidence.test_versions_exact_slices_and_failed_shutdown_are_prominent) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+test_every_dependency_generated_file_and_added_file_changes_digest (__main__.FullConvexFreeze.test_every_dependency_generated_file_and_added_file_changes_digest) ... ok
+test_missing_required_dependency_or_generated_tree_is_refused (__main__.FullConvexFreeze.test_missing_required_dependency_or_generated_tree_is_refused) ... ok
+test_symlinks_are_preserved_in_inventory_and_escape_refused (__main__.FullConvexFreeze.test_symlinks_are_preserved_in_inventory_and_escape_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK
+test_optional_native_runner_and_tools_do_not_expand_serving_budget (__main__.ConvexLoadConfig.test_optional_native_runner_and_tools_do_not_expand_serving_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.082s
+
+OK
+test_both_native_processes_share_exact_aggregate_budget (__main__.ConvexPostgresBudget.test_both_native_processes_share_exact_aggregate_budget) ... ok
+test_child_limits_and_native_health_fail_closed (__main__.ConvexPostgresBudget.test_child_limits_and_native_health_fail_closed) ... ok
+test_each_required_server_is_mandatory (__main__.ConvexPostgresBudget.test_each_required_server_is_mandatory) ... ok
+test_image_architecture_ownership_and_actual_membership_are_required (__main__.ConvexPostgresBudget.test_image_architecture_ownership_and_actual_membership_are_required) ... ok
+test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap (__main__.ConvexPostgresBudget.test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK
+test_fresh_owned_volumes_and_uncached_native_queries (__main__.ConvexPostgresConfig.test_fresh_owned_volumes_and_uncached_native_queries) ... ok
+test_native_image_pins_and_three_plus_one_gib_children (__main__.ConvexPostgresConfig.test_native_image_pins_and_three_plus_one_gib_children) ... ok
+test_no_database_host_port_or_new_privileges (__main__.ConvexPostgresConfig.test_no_database_host_port_or_new_privileges) ... ok
+test_only_two_required_servers_and_separate_profiled_tools (__main__.ConvexPostgresConfig.test_only_two_required_servers_and_separate_profiled_tools) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.080s
+
+OK
+test_cursor_cycle_fails_without_post_or_allocation_reset (__main__.NativeResetController.test_cursor_cycle_fails_without_post_or_allocation_reset) ... ok
+test_invalid_batch_shapes_and_counts_fail_closed (__main__.NativeResetController.test_invalid_batch_shapes_and_counts_fail_closed) ... ok
+test_native_admin_headers_cannot_follow_redirects_to_another_origin (__main__.NativeResetController.test_native_admin_headers_cannot_follow_redirects_to_another_origin) ... ok
+test_nonempty_post_batch_failure_does_not_reset_allocation (__main__.NativeResetController.test_nonempty_post_batch_failure_does_not_reset_allocation) ... ok
+test_private_environment_and_url_credentials_never_enter_error_messages (__main__.NativeResetController.test_private_environment_and_url_credentials_never_enter_error_messages) ... ok
+test_reset_order_counts_cursor_and_persistent_allocation (__main__.NativeResetController.test_reset_order_counts_cursor_and_persistent_allocation) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.016s
+
+OK
+test_direct_controller_exports_inferred_platform_and_namespace_to_compose (__main__.HostPortability.test_direct_controller_exports_inferred_platform_and_namespace_to_compose) ... ok
+test_foreign_architecture_load_image_is_invalid (__main__.HostPortability.test_foreign_architecture_load_image_is_invalid) ... ok
+test_foreign_platforms_and_unrelated_project_names_are_rejected (__main__.HostPortability.test_foreign_platforms_and_unrelated_project_names_are_rejected) ... ok
+test_linux_samples_preserve_raw_proc_evidence_without_mac_commands (__main__.HostPortability.test_linux_samples_preserve_raw_proc_evidence_without_mac_commands) ... ok
+test_linux_swapouts_are_checked_without_weakening_mac_checks (__main__.HostPortability.test_linux_swapouts_are_checked_without_weakening_mac_checks) ... ok
+test_native_platforms_and_result_tracks_are_separate (__main__.HostPortability.test_native_platforms_and_result_tracks_are_separate) ... ok
+test_new_host_track_cannot_pool_with_original_vps (__main__.HostPortability.test_new_host_track_cannot_pool_with_original_vps) ... ok
+test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect (__main__.HostPortability.test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect) ... ok
+test_accepts_complete_passing_hold (__main__.Scoring.test_accepts_complete_passing_hold) ... ok
+test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host (__main__.Scoring.test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (__main__.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (__main__.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (__main__.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_mismatched_actual_runner_budget_cannot_claim_the_new_profile (__main__.Scoring.test_mismatched_actual_runner_budget_cannot_claim_the_new_profile) ... ok
+test_missing_clock_still_invalidates_non_oom_attempt (__main__.Scoring.test_missing_clock_still_invalidates_non_oom_attempt) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (__main__.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_oom_remains_primary_reason_when_k6_loses_summary_and_clock (__main__.Scoring.test_oom_remains_primary_reason_when_k6_loses_summary_and_clock) ... ok
+test_owner_approved_eight_gib_runner_has_distinct_verified_limits (__main__.Scoring.test_owner_approved_eight_gib_runner_has_distinct_verified_limits) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (__main__.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (__main__.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_runner_profile_is_versioned_and_matches_the_approved_budget (__main__.Scoring.test_runner_profile_is_versioned_and_matches_the_approved_budget) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (__main__.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+test_standard_tier_is_one_cpu_four_gib_with_memory_reserve (__main__.Scoring.test_standard_tier_is_one_cpu_four_gib_with_memory_reserve) ... ok
+test_vm_headroom_accepts_small_but_rejects_large_on_current_vm (__main__.Scoring.test_vm_headroom_accepts_small_but_rejects_large_on_current_vm) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.004s
+
+OK
+test_k6_cannot_read_signing_keys_or_private_service_state (__main__.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... FAIL
+test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated (__main__.ContainerIsolation.test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated) ... ok
+test_vps_platform_and_resources_are_isolated_from_existing_projects (__main__.ContainerIsolation.test_vps_platform_and_resources_are_isolated_from_existing_projects) ... ok
+
+======================================================================
+FAIL: test_k6_cannot_read_signing_keys_or_private_service_state (__main__.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_isolation.py", line 26, in test_k6_cannot_read_signing_keys_or_private_service_state
+    self.assertEqual(int(load['mem_limit']), benchmark.RUNNER_LIMITS['Memory'])
+AssertionError: 4294967296 != 8589934592
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.233s
+
+FAILED (failures=1)

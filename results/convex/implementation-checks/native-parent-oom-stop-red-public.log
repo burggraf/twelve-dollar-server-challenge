@@ -1,0 +1,14 @@
+test_aggregate_oom_without_pid1_exit_still_stops_campaign (__main__.FrozenConvexEvidence.test_aggregate_oom_without_pid1_exit_still_stops_campaign) ... FAIL
+
+======================================================================
+FAIL: test_aggregate_oom_without_pid1_exit_still_stops_campaign (__main__.FrozenConvexEvidence.test_aggregate_oom_without_pid1_exit_still_stops_campaign)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_evidence.py", line 35, in test_aggregate_oom_without_pid1_exit_still_stops_campaign
+    self.assertTrue(callable(getattr(benchmark, 'runtime_issue', None)), 'Aggregate OOM must stop, not continue searching/recovering')
+AssertionError: False is not true : Aggregate OOM must stop, not continue searching/recovering
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

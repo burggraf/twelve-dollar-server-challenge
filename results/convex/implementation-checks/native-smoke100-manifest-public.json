@@ -1,0 +1,1074 @@
+{
+  "service": "convex",
+  "versions": {
+    "service": "convex",
+    "release": "precompiled-2026-10-06-a3538c6",
+    "upstream_commit": "a3538c6d212948f20726868e41d155d2534cd130",
+    "release_url": "https://github.com/get-convex/convex-backend/releases/tag/precompiled-2026-10-06-a3538c6",
+    "backend": {
+      "tag": "ghcr.io/get-convex/convex-backend:a3538c6d212948f20726868e41d155d2534cd130",
+      "amd64_manifest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "bundled_node_version": "22.22.2",
+      "actual_version_endpoint_response": "unknown"
+    },
+    "sdk_cli": {
+      "package": "convex",
+      "version": "1.46.0",
+      "integrity": "sha512-dhBwDQTZDOhi5SUGAX17EWNehCdNq6/UFrSL0eLZuGfMkdsQbCVWVRZCzbZ5CF+/pgvoGxtApbEoTSipqL4JTw=="
+    },
+    "storage": "Official self-hosted backend's local SQLite persistence; actual engine/pragmas not yet verified",
+    "serving_budget": {
+      "cpus": 1,
+      "memory_bytes": 4294967296,
+      "swap_bytes": 0
+    },
+    "runner": {
+      "version": "1.3.0",
+      "profile": "k6-2cpu-8g-v3",
+      "cpus": 2,
+      "memory_bytes": 8589934592,
+      "swap_bytes": 0
+    }
+  },
+  "postgres_versions": {
+    "product": "Official PostgreSQL persistence for the native Convex backend",
+    "version": "17.11",
+    "tag": "postgres:17.11-bookworm",
+    "amd64_manifest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+    "docker_library_source_commit": "2603e26e245e558218728ee14e0a42dcb020dc7f",
+    "docker_library_source": "https://github.com/docker-library/postgres/tree/2603e26e245e558218728ee14e0a42dcb020dc7f/17/bookworm",
+    "upstream_convex_storage_guide": "https://github.com/get-convex/convex-backend/blob/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/advanced/postgres_or_mysql.md",
+    "serving_project": "baas-convexpg-vps16",
+    "serving_parent": "tdsbaasconvexpgvps16.slice",
+    "serving_budget": {
+      "cpus": 1,
+      "memory_bytes": 4294967296,
+      "swap_bytes": 0
+    },
+    "child_memory_bytes": {
+      "backend": 3221225472,
+      "postgres": 1073741824
+    },
+    "runtime_postgres_version_verified": false
+  },
+  "tier": "standard",
+  "vus": 100,
+  "mode": "smoke",
+  "deployment_track": "vps16-linux-amd64",
+  "platform": "linux/amd64",
+  "compose_project": "baas-convexpg-vps16",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "runner_limits": {
+    "NanoCpus": 2000000000,
+    "Memory": 8589934592,
+    "MemorySwap": 8589934592
+  },
+  "inputs": {
+    "app": "70b03b23518d0a33df7735eb957c1aea4dd5afb3d927695fa4b3a1af69aef6ed",
+    "verification": "3528c4bb29a79b545cc61ebead2f3a6f220f994cd82c1b33a616c46e0b8d08b8",
+    "runtime": "437febd3cc0de18f13a86cc1290668bee707c8d915642a1ae4eab9f94459e686",
+    "schema": "eb70efefe5da11bb0a57bc16a5464802a664388ea2c42204919b2a5ed1c5abe8",
+    "images": {
+      "backend": {
+        "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4"
+      },
+      "postgres": {
+        "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df"
+      }
+    },
+    "host": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+    "tokens": "ceefc4ce2eb03a09ae099c5a83bb02467bcc01f05cab57124ca9f36c7aeba95e",
+    "full_runtime": "1f7bb3f120584759bf1343bed93f8cc20d8e69bf17773b1418b9f729a8be00e3",
+    "tools_image": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2 linux/amd64"
+  },
+  "target_before": {
+    "targets": {
+      "backend": {
+        "Id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+        "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2313635,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-16T00:02:20.333088398Z",
+          "FinishedAt": "2026-10-15T23:47:48.287476294Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-16T02:00:45.837770127Z",
+                "End": "2026-10-16T02:00:45.914235519Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T02:00:50.914865556Z",
+                "End": "2026-10-16T02:00:50.994634769Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T02:00:55.99632527Z",
+                "End": "2026-10-16T02:00:56.036529591Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T02:01:01.037851589Z",
+                "End": "2026-10-16T02:01:01.094012621Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T02:01:06.095238505Z",
+                "End": "2026-10-16T02:01:06.130961649Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 1000000000,
+          "Memory": 3221225472,
+          "MemorySwap": 3221225472
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "compose_project": "baas-convexpg-vps16",
+        "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+        "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope\n",
+        "kernel": {
+          "cpu.max": "100000 100000\n",
+          "cpu.stat": "usage_usec 881424884\nuser_usec 842724511\nsystem_usec 38700373\ncore_sched.force_idle_usec 0\nnr_periods 15589\nnr_throttled 116\nthrottled_usec 1183834\nnr_bursts 0\nburst_usec 0\n",
+          "memory.max": "3221225472\n",
+          "memory.current": "360349696\n",
+          "memory.peak": "979816448\n",
+          "memory.swap.max": "0\n",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+          "memory.stat": "anon 342392832\nfile 7290880\nkernel 10665984\nkernel_stack 1425408\npagetables 6754304\nsec_pagetables 0\npercpu 2232\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 342392832\ninactive_file 7286784\nactive_file 4096\nunevictable 0\nslab_reclaimable 837624\nslab_unreclaimable 1598752\nslab 2436376\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 128\npgsteal 128\npgscan_kswapd 128\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 128\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 3688890\npgmajfault 0\npgrefill 1\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+          "io.stat": "8:0 rbytes=0 wbytes=7806976 rios=0 wios=34 dbytes=0 dios=0\n"
+        }
+      },
+      "postgres": {
+        "Id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+        "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2313499,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-16T00:02:14.076467149Z",
+          "FinishedAt": "2026-10-16T00:02:13.874816796Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-16T02:00:45.809428506Z",
+                "End": "2026-10-16T02:00:45.915230523Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T02:00:50.915947473Z",
+                "End": "2026-10-16T02:00:51.024637171Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T02:00:56.025931641Z",
+                "End": "2026-10-16T02:00:56.127399946Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T02:01:01.128405191Z",
+                "End": "2026-10-16T02:01:01.22211086Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T02:01:06.223665751Z",
+                "End": "2026-10-16T02:01:06.284180442Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 1000000000,
+          "Memory": 1073741824,
+          "MemorySwap": 1073741824
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "compose_project": "baas-convexpg-vps16",
+        "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+        "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope\n",
+        "kernel": {
+          "cpu.max": "100000 100000\n",
+          "cpu.stat": "usage_usec 296917500\nuser_usec 206628879\nsystem_usec 90288620\ncore_sched.force_idle_usec 0\nnr_periods 15268\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+          "memory.max": "1073741824\n",
+          "memory.current": "1069514752\n",
+          "memory.peak": "1073954816\n",
+          "memory.swap.max": "0\n",
+          "memory.events": "low 0\nhigh 0\nmax 70678\noom 0\noom_kill 0\noom_group_kill 0\n",
+          "memory.stat": "anon 34652160\nfile 1025675264\nkernel 9187328\nkernel_stack 360448\npagetables 5316608\nsec_pagetables 0\npercpu 4152\nsock 0\nvmalloc 12288\nshmem 146767872\nzswap 0\nzswapped 0\nfile_mapped 145793024\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 181420032\ninactive_file 876429312\nactive_file 2478080\nunevictable 0\nslab_reclaimable 810040\nslab_unreclaimable 2490120\nslab 3300160\nworkingset_refault_anon 0\nworkingset_refault_file 4061317\nworkingset_activate_anon 0\nworkingset_activate_file 4061317\nworkingset_restore_anon 0\nworkingset_restore_file 507\nworkingset_nodereclaim 0\npgscan 4515008\npgsteal 4515004\npgscan_kswapd 0\npgscan_direct 4515008\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 4515004\npgsteal_khugepaged 0\npgfault 6339737\npgmajfault 0\npgrefill 685\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+          "io.stat": "8:0 rbytes=19347128320 wbytes=59359232 rios=1911879 wios=4596 dbytes=0 dios=0\n"
+        }
+      }
+    },
+    "parent": {
+      "cpu.max": "100000 100000\n",
+      "cpu.stat": "usage_usec 3813526955\nuser_usec 3185644533\nsystem_usec 627882422\ncore_sched.force_idle_usec 0\nnr_periods 65208\nnr_throttled 14467\nthrottled_usec 331887358\nnr_bursts 0\nburst_usec 0\n",
+      "cpu.pressure": "some avg10=1.32 avg60=1.29 avg300=1.43 total=123438318\nfull avg10=0.90 avg60=0.97 avg300=1.18 total=104425857\n",
+      "memory.max": "4294967296\n",
+      "memory.current": "3500716032\n",
+      "memory.peak": "4121296896\n",
+      "memory.swap.max": "0\n",
+      "memory.events": "low 0\nhigh 0\nmax 652803\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.stat": "anon 377044992\nfile 3053268992\nkernel 70402048\nkernel_stack 1785856\npagetables 12070912\nsec_pagetables 0\npercpu 66864\nsock 0\nvmalloc 24576\nshmem 146767872\nzswap 0\nzswapped 0\nfile_mapped 145793024\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 523812864\ninactive_file 2075979776\nactive_file 830521344\nunevictable 0\nslab_reclaimable 52127232\nslab_unreclaimable 4088872\nslab 56216104\nworkingset_refault_anon 0\nworkingset_refault_file 24839675\nworkingset_activate_anon 0\nworkingset_activate_file 21662266\nworkingset_restore_anon 0\nworkingset_restore_file 397862\nworkingset_nodereclaim 0\npgscan 40776541\npgsteal 40775878\npgscan_kswapd 8732\npgscan_direct 40767809\npgscan_khugepaged 0\npgsteal_kswapd 8732\npgsteal_direct 40767146\npgsteal_khugepaged 0\npgfault 33884214\npgmajfault 2\npgrefill 5081270\npgactivate 11\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+      "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=16804872\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=16615506\n",
+      "io.stat": "8:0 rbytes=104455331840 wbytes=159524061184 rios=9782383 wios=9838978 dbytes=0 dios=0\n",
+      "io.pressure": "some avg10=0.27 avg60=1.50 avg300=1.31 total=186329416\nfull avg10=0.27 avg60=1.50 avg300=1.31 total=186099158\n",
+      "children": [
+        "docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope",
+        "docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope"
+      ]
+    },
+    "observed_health": {
+      "status": "ok",
+      "db": "ok",
+      "uptime_s": 7127
+    }
+  },
+  "schema_before": {
+    "sha256": "eb70efefe5da11bb0a57bc16a5464802a664388ea2c42204919b2a5ed1c5abe8",
+    "catalog": {
+      "active_schema": {
+        "tables": [
+          {
+            "tableName": "feed_sequences",
+            "indexes": [
+              {
+                "indexDescriptor": "by_name",
+                "fields": [
+                  "name",
+                  "_creationTime"
+                ]
+              }
+            ],
+            "stagedDbIndexes": [],
+            "searchIndexes": [],
+            "stagedSearchIndexes": [],
+            "vectorIndexes": [],
+            "stagedVectorIndexes": [],
+            "documentType": {
+              "type": "object",
+              "value": {
+                "last_id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "name": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                }
+              }
+            },
+            "stagedDocumentType": null
+          },
+          {
+            "tableName": "likes",
+            "indexes": [
+              {
+                "indexDescriptor": "by_post_user",
+                "fields": [
+                  "post_id",
+                  "user_id",
+                  "_creationTime"
+                ]
+              },
+              {
+                "indexDescriptor": "by_user_post",
+                "fields": [
+                  "user_id",
+                  "post_id",
+                  "_creationTime"
+                ]
+              }
+            ],
+            "stagedDbIndexes": [],
+            "searchIndexes": [],
+            "stagedSearchIndexes": [],
+            "vectorIndexes": [],
+            "stagedVectorIndexes": [],
+            "documentType": {
+              "type": "object",
+              "value": {
+                "created_at": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "post_id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "user_id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                }
+              }
+            },
+            "stagedDocumentType": null
+          },
+          {
+            "tableName": "posts",
+            "indexes": [
+              {
+                "indexDescriptor": "by_created_at_id",
+                "fields": [
+                  "created_at",
+                  "id",
+                  "_creationTime"
+                ]
+              },
+              {
+                "indexDescriptor": "by_public_id",
+                "fields": [
+                  "id",
+                  "_creationTime"
+                ]
+              },
+              {
+                "indexDescriptor": "by_user_id",
+                "fields": [
+                  "user_id",
+                  "_creationTime"
+                ]
+              }
+            ],
+            "stagedDbIndexes": [],
+            "searchIndexes": [],
+            "stagedSearchIndexes": [],
+            "vectorIndexes": [],
+            "stagedVectorIndexes": [],
+            "documentType": {
+              "type": "object",
+              "value": {
+                "body": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "created_at": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "user_id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                }
+              }
+            },
+            "stagedDocumentType": null
+          },
+          {
+            "tableName": "users",
+            "indexes": [
+              {
+                "indexDescriptor": "by_public_id",
+                "fields": [
+                  "id",
+                  "_creationTime"
+                ]
+              },
+              {
+                "indexDescriptor": "by_username",
+                "fields": [
+                  "username",
+                  "_creationTime"
+                ]
+              }
+            ],
+            "stagedDbIndexes": [],
+            "searchIndexes": [],
+            "stagedSearchIndexes": [],
+            "vectorIndexes": [],
+            "stagedVectorIndexes": [],
+            "documentType": {
+              "type": "object",
+              "value": {
+                "created_at": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "id": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                },
+                "username": {
+                  "fieldType": {
+                    "type": "string"
+                  },
+                  "optional": false
+                }
+              }
+            },
+            "stagedDocumentType": null
+          }
+        ],
+        "schemaValidation": true
+      },
+      "function_spec": [
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Query",
+          "identifier": "native.js:storageProbe",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "cursor": {
+                "fieldType": {
+                  "type": "union",
+                  "value": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "optional": false
+              },
+              "table": {
+                "fieldType": {
+                  "type": "union",
+                  "value": [
+                    {
+                      "type": "literal",
+                      "value": "users"
+                    },
+                    {
+                      "type": "literal",
+                      "value": "posts"
+                    },
+                    {
+                      "type": "literal",
+                      "value": "likes"
+                    }
+                  ]
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Query",
+          "identifier": "native.js:canonicalPage",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Query",
+          "identifier": "native.js:feed",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "body": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              },
+              "userId": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "native.js:createPost",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "postId": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              },
+              "userId": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "native.js:likePost",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "id": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Query",
+          "identifier": "native.js:detail",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "functionType": "HttpAction",
+          "method": "GET",
+          "path": "/*"
+        },
+        {
+          "functionType": "HttpAction",
+          "method": "POST",
+          "path": "/*"
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Action",
+          "identifier": "clock.js:backendUptime",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Query",
+          "identifier": "fixtures.js:writeProbeState",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "marker": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "fixtures.js:installStoredEdges",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "marker": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              },
+              "previous": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              },
+              "target": {
+                "fieldType": {
+                  "type": "union",
+                  "value": [
+                    {
+                      "type": "literal",
+                      "value": "9223372036854775806"
+                    },
+                    {
+                      "type": "literal",
+                      "value": "0009007199254740992"
+                    }
+                  ]
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "fixtures.js:prepareAllocationBoundary",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "marker": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "fixtures.js:resetStoredEdges",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "marker": {
+                "fieldType": {
+                  "type": "string"
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "fixtures.js:resetWriteProbe",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {
+              "cursor": {
+                "fieldType": {
+                  "type": "union",
+                  "value": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "optional": false
+              }
+            }
+          },
+          "functionType": "Mutation",
+          "identifier": "maintenance.js:resetLikesPage",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Mutation",
+          "identifier": "maintenance.js:resetPostsBatch",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        },
+        {
+          "args": {
+            "type": "object",
+            "value": {}
+          },
+          "functionType": "Mutation",
+          "identifier": "maintenance.js:resetAllocation",
+          "returns": null,
+          "visibility": {
+            "kind": "internal"
+          }
+        }
+      ]
+    },
+    "scope": "Actual supported native CLI/MCP catalog queries; not physical SQL FK/UNIQUE declarations"
+  },
+  "started_utc": "2026-10-16T02:01:08.533344+00:00",
+  "git_commit": "ae4ab27bec789009a1d6221eef44ec5f45a8497b",
+  "git_status": " M MASTER_PLAN.md\n M README.md\n M results/convex/README.md\n M scripts/benchmark.py\n M scripts/convex_profile.py\n M services/convex/README.md\n?<redacted-query-string> results/convex/vps16-linux-amd64/\n?<redacted-query-string> scripts/convex_benchmark.py\n?<redacted-query-string> services/convex/app/convex/_generated/\n?<redacted-query-string> services/convex/compose.benchmark.yaml\n?<redacted-query-string> test/baas/test_convex_evidence.py\n?<redacted-query-string> test/baas/test_convex_freeze.py\n?<redacted-query-string> test/baas/test_convex_harness.py\n?<redacted-query-string> test/baas/test_convex_load_config.py\n",
+  "serving_budget": {
+    "cpus": 1,
+    "memory_gib": 4,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "backend_bytes": 3221225472,
+    "postgres_bytes": 1073741824,
+    "allocation_type": "Quota-limited shared-host slice; entire serving stack"
+  },
+  "runner_budget": {
+    "software": "k6",
+    "version": "1.3.0",
+    "cpus": 2,
+    "memory_gib": 8,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "profile": "k6-2cpu-8g-v3"
+  },
+  "tested_software": {
+    "convex": "precompiled-2026-10-06-a3538c6",
+    "sdk_cli": "1.46.0",
+    "bundled_node": "22.22.2",
+    "tools_node": "22.20.0",
+    "postgres": "17.11-bookworm",
+    "backend_version_endpoint": "unknown",
+    "images": {
+      "backend": {
+        "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4"
+      },
+      "postgres": {
+        "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df"
+      }
+    }
+  },
+  "clean_shutdown": {
+    "result": "FAILED",
+    "backend_exit": 139,
+    "capacity_exception": "Explicit owner permission after separate acknowledged crash-recovery proof; no lifecycle or power-loss certification"
+  },
+  "path": "k6 -> native HTTP actions -> private native queries/mutations -> official PostgreSQL persistence; bundled executor included",
+  "auth": "Fresh per-request synthetic HS256 compatibility verification; not native signup/login/session throughput",
+  "cost": "Shared VPS; price/region unknown; not dedicated/measured $12/month equivalence",
+  "limitations": [
+    "Native decimalText signed64/schema/logical relations, not baseline SQLite physical storage/FK/UNIQUE",
+    "Native defaults unchanged; no response/query-result/precomputed count/JWT verification caches",
+    "Ordinary native DB/index/module/page caches enabled",
+    "Clean SIGINT backend shutdown FAILED139; acknowledged recovery not provider power-loss proof",
+    "Shared host/storage/background workload; provider thermals unavailable"
+  ],
+  "host_before": {
+    "linux_vmstat": "nr_free_pages 270020\nnr_zone_inactive_anon 95579\nnr_zone_active_anon 194799\nnr_zone_inactive_file 2335657\nnr_zone_active_file 794897\nnr_zone_unevictable 6864\nnr_zone_write_pending 12\nnr_mlock 6864\nnr_bounce 0\nnr_zspages 0\nnr_free_cma 0\nnr_unaccepted 0\nnuma_hit 594063222\nnuma_miss 0\nnuma_foreign 0\nnuma_interleave 37\nnuma_local 593908298\nnuma_other 0\nnr_inactive_anon 95579\nnr_active_anon 194799\nnr_inactive_file 2335657\nnr_active_file 794897\nnr_unevictable 6864\nnr_slab_reclaimable 323817\nnr_slab_unreclaimable 44535\nnr_isolated_anon 0\nnr_isolated_file 0\nworkingset_nodes 127238\nworkingset_refault_anon 0\nworkingset_refault_file 26902346\nworkingset_activate_anon 0\nworkingset_activate_file 22778803\nworkingset_restore_anon 0\nworkingset_restore_file 445544\nworkingset_nodereclaim 224128\nnr_anon_pages 256210\nnr_mapped 170811\nnr_file_pages 3171567\nnr_dirty 12\nnr_writeback 0\nnr_writeback_temp 0\nnr_shmem 38823\nnr_shmem_hugepages 0\nnr_shmem_pmdmapped 0\nnr_file_hugepages 0\nnr_file_pmdmapped 0\nnr_anon_transparent_hugepages 180\nnr_vmscan_write 0\nnr_vmscan_immediate_reclaim 8\nnr_dirtied 121367666\nnr_written 119182500\nnr_throttled_written 0\nnr_kernel_misc_reclaimable 0\nnr_foll_pin_acquired 1010\nnr_foll_pin_released 1010\nnr_kernel_stack 6268\nnr_page_table_pages 5014\nnr_sec_page_table_pages 0\nnr_swapcached 0\npgpromote_success 0\npgpromote_candidate 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\nnr_dirty_threshold 671524\nnr_dirty_background_threshold 335352\npgpgin 145384486\npgpgout 484006191\npswpin 0\npswpout 0\npgalloc_dma 512\npgalloc_dma32 51850671\npgalloc_normal 573207729\npgalloc_movable 0\npgalloc_device 0\nallocstall_dma 0\nallocstall_dma32 0\nallocstall_normal 2\nallocstall_movable 201\nallocstall_device 0\npgskip_dma 0\npgskip_dma32 0\npgskip_normal 1\npgskip_movable 0\npgskip_device 0\npgfree 628959259\npgactivate 939\npgdeactivate 0\npglazyfree 5781\npgfault 748897875\npgmajfault 18602\npglazyfreed 0\npgrefill 2858167\npgreuse 119907696\npgsteal_kswapd 10598257\npgsteal_direct 183999\npgsteal_khugepaged 0\npgscan_kswapd 10613614\npgscan_direct 184001\npgscan_khugepaged 0\npgscan_direct_throttle 0\npgscan_anon 0\npgscan_file 54713463\npgsteal_anon 0\npgsteal_file 54696088\nzone_reclaim_failed 0\npginodesteal 1\nslabs_scanned 2147733\nkswapd_inodesteal 198939\nkswapd_low_wmark_hit_quickly 46\nkswapd_high_wmark_hit_quickly 83\npageoutrun 497\npgrotated 3594661\ndrop_pagecache 0\ndrop_slab 0\noom_kill 3\nnuma_pte_updates 0\nnuma_huge_pte_updates 0\nnuma_hint_faults 0\nnuma_hint_faults_local 0\nnuma_pages_migrated 0\npgmigrate_success 3480372\npgmigrate_fail 15832\nthp_migration_success 0\nthp_migration_fail 0\nthp_migration_split 0\ncompact_migrate_scanned 17948790\ncompact_free_scanned 153209634\ncompact_isolated 7045220\ncompact_stall 734\ncompact_fail 452\ncompact_success 282\ncompact_daemon_wake 149\ncompact_daemon_migrate_scanned 17590058\ncompact_daemon_free_scanned 152676150\nhtlb_buddy_alloc_success 0\nhtlb_buddy_alloc_fail 0\nunevictable_pgs_culled 28069\nunevictable_pgs_scanned 0\nunevictable_pgs_rescued 6079\nunevictable_pgs_mlocked 12943\nunevictable_pgs_munlocked 18\nunevictable_pgs_cleared 0\nunevictable_pgs_stranded 6061\nthp_fault_alloc 2930\nthp_fault_fallback 115\nthp_fault_fallback_charge 0\nthp_collapse_alloc 886\nthp_collapse_alloc_failed 0\nthp_file_alloc 0\nthp_file_fallback 0\nthp_file_fallback_charge 0\nthp_file_mapped 0\nthp_split_page 0\nthp_split_page_failed 0\nthp_deferred_split_page 2628\nthp_split_pmd 2628\nthp_scan_exceed_none_pte 116\nthp_scan_exceed_swap_pte 0\nthp_scan_exceed_share_pte 0\nthp_split_pud 0\nthp_zero_page_alloc 1\nthp_zero_page_alloc_failed 0\nthp_swpout 0\nthp_swpout_fallback 0\nballoon_inflate 0\nballoon_deflate 0\nballoon_migrate 0\nswap_ra 0\nswap_ra_hit 0\nksm_swpin_copy 0\ncow_ksm 0\nzswpin 0\nzswpout 0\nzswpwb 0\ndirect_map_level2_splits 73\ndirect_map_level3_splits 5\nnr_unstable 0\n",
+    "linux_stat": "cpu  2527860 14000 990270 774963050 170972 0 181260 2712 0 0\ncpu0 630933 3874 251900 193741717 36064 0 68352 654 0 0\ncpu1 622710 3358 248423 193758598 35802 0 46476 642 0 0\ncpu2 665484 2719 249675 193715105 57285 0 27643 637 0 0\ncpu3 608731 4048 240271 193747628 41819 0 38787 777 0 0\nintr 654644093 0 9 0 0 0 0 3 0 0 0 0 0 15 0 1903053 1903160 0 0 0 0 0 0 0 0 0 0 0 26630701 0 7830061 3038851 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\nctxt 762991217\nbtime 1790167590\nprocesses 2388623\nprocs_running 1\nprocs_blocked 0\nsoftirq 344260561 1 61905615 1248 53966566 23130875 0 289959 123356485 5447 81604365\n",
+    "linux_meminfo": "MemTotal:       16377024 kB\nMemFree:         1080080 kB\nMemAvailable:   14559844 kB\nBuffers:          217196 kB\nCached:         12469072 kB\nSwapCached:            0 kB\nActive:          3958784 kB\nInactive:        9724944 kB\nActive(anon):     779196 kB\nInactive(anon):   382316 kB\nActive(file):    3179588 kB\nInactive(file):  9342628 kB\nUnevictable:       27456 kB\nMlocked:           27456 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:                48 kB\nWriteback:             0 kB\nAnonPages:       1024840 kB\nMapped:           683244 kB\nShmem:            155292 kB\nKReclaimable:    1295268 kB\nSlab:            1473408 kB\nSReclaimable:    1295268 kB\nSUnreclaim:       178140 kB\nKernelStack:        6268 kB\nPageTables:        20056 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     8188512 kB\nCommitted_AS:    2607284 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       21488 kB\nVmallocChunk:          0 kB\nPercpu:             7520 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:    368640 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      173928 kB\nDirectMap2M:     9263104 kB\nDirectMap1G:     9437184 kB\n",
+    "linux_diskstats": "   7       0 loop0 11 0 28 0 0 0 0 0 0 1 0 0 0 0 0 0 0\n   7       1 loop1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n   7       2 loop2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n   7       3 loop3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n   7       4 loop4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n   7       5 loop5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n   7       6 loop6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n   7       7 loop7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n   8       0 sda 12182810 87367 290768128 1058067 35403604 2901203 968012382 11898362 0 1413999 13012618 756298 3 3817609028 29629 381543 26559\n   8       1 sda1 12151422 85988 290380430 1055765 35403306 2901031 967732266 11898077 0 2651480 12983469 756241 0 3815209688 29626 0 0\n   8      14 sda14 29377 0 235222 2087 0 0 0 0 0 1999 2087 0 0 0 0 0 0\n   8      15 sda15 265 1328 21352 30 2 0 2 0 0 31 31 6 3 603492 0 0 0\n 259       0 sda16 259 51 18055 40 296 172 280114 284 0 81 326 51 0 1795848 1 0 0\n  11       0 sr0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n  11       1 sr1 107 0 816 40 0 0 0 0 0 42 40 0 0 0 0 0 0\n",
+    "linux_loadavg": "1.34 0.91 0.73 1/383 2388656\n",
+    "linux_uptime": "1948477.84 7749630.50\n",
+    "linux_pressure_cpu": "some avg10=2.01 avg60=1.90 avg300=1.79 total=2735888851\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+    "linux_pressure_memory": "some avg10=0.00 avg60=0.00 avg300=0.00 total=22253054\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=21680584\n",
+    "linux_pressure_io": "some avg10=0.11 avg60=1.49 avg300=1.33 total=885119732\nfull avg10=0.11 avg60=1.48 avg300=1.32 total=681516651\n"
+  },
+  "target_after": {
+    "targets": {
+      "backend": {
+        "Id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+        "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2313635,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-16T00:02:20.333088398Z",
+          "FinishedAt": "2026-10-15T23:47:48.287476294Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-16T02:01:26.245729711Z",
+                "End": "2026-10-16T02:01:26.279784177Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T02:01:31.280907742Z",
+                "End": "2026-10-16T02:01:31.315988011Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T02:01:36.317005774Z",
+                "End": "2026-10-16T02:01:36.353240416Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T02:01:41.3540896Z",
+                "End": "2026-10-16T02:01:41.389253977Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              },
+              {
+                "Start": "2026-10-16T02:01:46.390345941Z",
+                "End": "2026-10-16T02:01:46.424429261Z",
+                "ExitCode": 0,
+                "Output": "unknown"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 1000000000,
+          "Memory": 3221225472,
+          "MemorySwap": 3221225472
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "compose_project": "baas-convexpg-vps16",
+        "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+        "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope\n",
+        "kernel": {
+          "cpu.max": "100000 100000\n",
+          "cpu.stat": "usage_usec 887686661\nuser_usec 848375068\nsystem_usec 39311592\ncore_sched.force_idle_usec 0\nnr_periods 15906\nnr_throttled 118\nthrottled_usec 1226116\nnr_bursts 0\nburst_usec 0\n",
+          "memory.max": "3221225472\n",
+          "memory.current": "455634944\n",
+          "memory.peak": "979816448\n",
+          "memory.swap.max": "0\n",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+          "memory.stat": "anon 434741248\nfile 7290880\nkernel 13602816\nkernel_stack 1425408\npagetables 9379840\nsec_pagetables 0\npercpu 2232\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 434741248\ninactive_file 7286784\nactive_file 4096\nunevictable 0\nslab_reclaimable 854264\nslab_unreclaimable 1894528\nslab 2748792\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 128\npgsteal 128\npgscan_kswapd 128\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 128\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 3731744\npgmajfault 0\npgrefill 1\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+          "io.stat": "8:0 rbytes=0 wbytes=7806976 rios=0 wios=34 dbytes=0 dios=0\n"
+        }
+      },
+      "postgres": {
+        "Id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+        "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2313499,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-16T00:02:14.076467149Z",
+          "FinishedAt": "2026-10-16T00:02:13.874816796Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-16T02:01:26.569737636Z",
+                "End": "2026-10-16T02:01:26.630570563Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T02:01:31.631633126Z",
+                "End": "2026-10-16T02:01:31.696389465Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T02:01:36.697300729Z",
+                "End": "2026-10-16T02:01:36.763282546Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T02:01:41.764050368Z",
+                "End": "2026-10-16T02:01:41.82557384Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-16T02:01:46.826494685Z",
+                "End": "2026-10-16T02:01:46.887760214Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              }
+            ]
+          }
+        },
+        "limits": {
+          "NanoCpus": 1000000000,
+          "Memory": 1073741824,
+          "MemorySwap": 1073741824
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "compose_project": "baas-convexpg-vps16",
+        "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+        "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope\n",
+        "kernel": {
+          "cpu.max": "100000 100000\n",
+          "cpu.stat": "usage_usec 300483141\nuser_usec 209509872\nsystem_usec 90973268\ncore_sched.force_idle_usec 0\nnr_periods 15578\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+          "memory.max": "1073741824\n",
+          "memory.current": "1069117440\n",
+          "memory.peak": "1073954816\n",
+          "memory.swap.max": "0\n",
+          "memory.events": "low 0\nhigh 0\nmax 70882\noom 0\noom_kill 0\noom_group_kill 0\n",
+          "memory.stat": "anon 72491008\nfile 979578880\nkernel 17047552\nkernel_stack 622592\npagetables 10964992\nsec_pagetables 0\npercpu 5688\nsock 0\nvmalloc 12288\nshmem 146767872\nzswap 0\nzswapped 0\nfile_mapped 145793024\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 219258880\ninactive_file 830332928\nactive_file 2478080\nunevictable 0\nslab_reclaimable 886824\nslab_unreclaimable 4229680\nslab 5116504\nworkingset_refault_anon 0\nworkingset_refault_file 4061545\nworkingset_activate_anon 0\nworkingset_activate_file 4061545\nworkingset_restore_anon 0\nworkingset_restore_file 513\nworkingset_nodereclaim 0\npgscan 4527616\npgsteal 4527612\npgscan_kswapd 0\npgscan_direct 4527616\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 4527612\npgsteal_khugepaged 0\npgfault 6419524\npgmajfault 0\npgrefill 685\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+          "io.stat": "8:0 rbytes=19350847488 wbytes=61571072 rios=1912292 wios=4698 dbytes=0 dios=0\n"
+        }
+      }
+    },
+    "parent": {
+      "cpu.max": "100000 100000\n",
+      "cpu.stat": "usage_usec 3823354405\nuser_usec 3194187128\nsystem_usec 629167276\ncore_sched.force_idle_usec 0\nnr_periods 65535\nnr_throttled 14487\nthrottled_usec 333121038\nnr_bursts 0\nburst_usec 0\n",
+      "cpu.pressure": "some avg10=0.44 avg60=1.37 avg300=1.47 total=124342871\nfull avg10=0.08 avg60=0.73 avg300=1.10 total=104788117\n",
+      "memory.max": "4294967296\n",
+      "memory.current": "3595603968\n",
+      "memory.peak": "4121296896\n",
+      "memory.swap.max": "0\n",
+      "memory.events": "low 0\nhigh 0\nmax 653007\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.stat": "anon 507232256\nfile 3007172608\nkernel 81199104\nkernel_stack 2048000\npagetables 20344832\nsec_pagetables 0\npercpu 68400\nsock 0\nvmalloc 24576\nshmem 146767872\nzswap 0\nzswapped 0\nfile_mapped 145793024\nfile_dirty 4096\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 654000128\ninactive_file 2029883392\nactive_file 830521344\nunevictable 0\nslab_reclaimable 52220656\nslab_unreclaimable 6124208\nslab 58344864\nworkingset_refault_anon 0\nworkingset_refault_file 24839903\nworkingset_activate_anon 0\nworkingset_activate_file 21662494\nworkingset_restore_anon 0\nworkingset_restore_file 397868\nworkingset_nodereclaim 0\npgscan 40789149\npgsteal 40788486\npgscan_kswapd 8732\npgscan_direct 40780417\npgscan_khugepaged 0\npgsteal_kswapd 8732\npgsteal_direct 40779754\npgsteal_khugepaged 0\npgfault 34006855\npgmajfault 2\npgrefill 5081270\npgactivate 11\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+      "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=16808895\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=16618747\n",
+      "io.stat": "8:0 rbytes=104459051008 wbytes=159526273024 rios=9782796 wios=9839080 dbytes=0 dios=0\n",
+      "io.pressure": "some avg10=0.00 avg60=0.71 avg300=1.12 total=186353961\nfull avg10=0.00 avg60=0.71 avg300=1.12 total=186123676\n",
+      "children": [
+        "docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope",
+        "docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope"
+      ]
+    },
+    "observed_health": {
+      "status": "ok",
+      "db": "ok",
+      "uptime_s": 7170
+    }
+  },
+  "load_after": {
+    "Id": "12d3a8f2c78ab847e8009141d2b16669b5fd8c6e4dd50591d1f0de290c043be7",
+    "Image": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656",
+    "RestartCount": 0,
+    "State": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-16T02:01:08.694271304Z",
+      "FinishedAt": "2026-10-16T02:01:49.166018251Z"
+    },
+    "limits": {
+      "NanoCpus": 2000000000,
+      "Memory": 8589934592,
+      "MemorySwap": 8589934592
+    },
+    "source_sha256": null,
+    "platform": "linux/amd64",
+    "image_manifest_digest": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656"
+  },
+  "k6_exit_code": 0,
+  "result": "pass",
+  "reason": "hold gates passed",
+  "finished_utc": "2026-10-16T02:01:51.987551+00:00"
+}

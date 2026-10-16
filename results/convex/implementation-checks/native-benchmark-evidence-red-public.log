@@ -1,0 +1,41 @@
+test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused (__main__.FrozenConvexEvidence.test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused) ... FAIL
+test_every_changed_input_and_log_refused (__main__.FrozenConvexEvidence.test_every_changed_input_and_log_refused) ... FAIL
+test_matching_full_frozen_correctness_accepted (__main__.FrozenConvexEvidence.test_matching_full_frozen_correctness_accepted) ... FAIL
+test_versions_exact_slices_and_failed_shutdown_are_prominent (__main__.FrozenConvexEvidence.test_versions_exact_slices_and_failed_shutdown_are_prominent) ... FAIL
+
+======================================================================
+FAIL: test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused (__main__.FrozenConvexEvidence.test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_evidence.py", line 16, in setUp
+    self.assertIsNotNone(benchmark, 'Convex benchmark/frozen evidence adapter missing')
+AssertionError: unexpectedly None : Convex benchmark/frozen evidence adapter missing
+
+======================================================================
+FAIL: test_every_changed_input_and_log_refused (__main__.FrozenConvexEvidence.test_every_changed_input_and_log_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_evidence.py", line 16, in setUp
+    self.assertIsNotNone(benchmark, 'Convex benchmark/frozen evidence adapter missing')
+AssertionError: unexpectedly None : Convex benchmark/frozen evidence adapter missing
+
+======================================================================
+FAIL: test_matching_full_frozen_correctness_accepted (__main__.FrozenConvexEvidence.test_matching_full_frozen_correctness_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_evidence.py", line 16, in setUp
+    self.assertIsNotNone(benchmark, 'Convex benchmark/frozen evidence adapter missing')
+AssertionError: unexpectedly None : Convex benchmark/frozen evidence adapter missing
+
+======================================================================
+FAIL: test_versions_exact_slices_and_failed_shutdown_are_prominent (__main__.FrozenConvexEvidence.test_versions_exact_slices_and_failed_shutdown_are_prominent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_evidence.py", line 16, in setUp
+    self.assertIsNotNone(benchmark, 'Convex benchmark/frozen evidence adapter missing')
+AssertionError: unexpectedly None : Convex benchmark/frozen evidence adapter missing
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=4)

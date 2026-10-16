@@ -1,0 +1,146 @@
+{
+  "status": "owner_accepted_blocked_unscored",
+  "service": "convex",
+  "tested_software": {
+    "convex": "precompiled-2026-10-06-a3538c6",
+    "sdk_cli": "1.46.0",
+    "bundled_node": "22.22.2",
+    "tools_node": "22.20.0",
+    "postgres": "17.11-bookworm",
+    "backend_version_endpoint": "unknown",
+    "images": {
+      "backend": {
+        "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4"
+      },
+      "postgres": {
+        "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df"
+      }
+    }
+  },
+  "serving_budget": {
+    "cpus": 1,
+    "memory_gib": 4,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "backend_bytes": 3221225472,
+    "postgres_bytes": 1073741824,
+    "allocation_type": "Quota-limited shared-host slice; entire serving stack"
+  },
+  "runner_budget": {
+    "software": "k6",
+    "version": "1.3.0",
+    "cpus": 2,
+    "memory_gib": 8,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "profile": "k6-2cpu-8g-v3"
+  },
+  "runner_native_manifest": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656",
+  "host": {
+    "fqdn": "claudius.azabab.com",
+    "allocation_type": "Shared-host quota slices, not dedicated/measured $12/month VPS",
+    "price_region": "unknown"
+  },
+  "confirmed_vus": null,
+  "confirmed_rps": null,
+  "confirmed_lower_bound_vus": null,
+  "maximum_vus": null,
+  "capacity_confirmations_completed": 0,
+  "full_attempts_consumed": 1,
+  "full_attempt_budget": 12,
+  "new_failure": {
+    "run": "20261016T020607016365Z-standard-2500vu-k6-2cpu-8g-v3",
+    "vus": 2500,
+    "serving_backend_exit": 137,
+    "oom_killed": true,
+    "finished_at": "2026-10-16T02:17:16.296405591Z",
+    "kernel_constraint": "CONSTRAINT_MEMCG; backend child3GiB cgroup",
+    "victim_pid": 2313635,
+    "parent_oom_before": 0,
+    "parent_oom_after": 3,
+    "parent_oom_kill_before": 0,
+    "parent_oom_kill_after": 1,
+    "parent_memory_peak_raw_bytes": 4295045120,
+    "no_revival": true,
+    "no_claim_all_lower_loads_or_all_allocations_fail": true
+  },
+  "diagnostic_hold_only": {
+    "not_capacity_score": true,
+    "requests": 50812,
+    "all_request_rps": 169.37333333333333,
+    "successful_http_responses": 0,
+    "request_errors": 50812,
+    "endpoint": "feed",
+    "status": "0",
+    "schema_errors": 0,
+    "schema_zero_is_vacuous_no_successful_hold_responses": true,
+    "latency_ms": {
+      "min": 0,
+      "max": 10051.829707,
+      "med": 10000.1612255,
+      "p(95)": 10000.948015799999,
+      "p(99)": 10001.55330185
+    },
+    "raw_rows_replayed": 1116907
+  },
+  "runner_validity": {
+    "measurement_replay": [
+      "fail",
+      "hold latency/error/schema gate failed"
+    ],
+    "hold_monitor_samples": 59,
+    "hold_monitor_span_seconds": 290.98219990730286,
+    "runner_peak_cpu_percent_one_core": 93.53,
+    "runner_peak_memory_percent_8gib": 13.81,
+    "host_swapouts_before": 0,
+    "host_swapouts_after": 0
+  },
+  "source_and_raw": {
+    "original_bundle_checksums_verified": true,
+    "all_raw_counts_quantiles_statuses_replayed": true,
+    "source_snapshot_files_equal": 100,
+    "complete_frozen_inputs_matched": true,
+    "full_runtime_sha256": "1f7bb3f120584759bf1343bed93f8cc20d8e69bf17773b1418b9f729a8be00e3",
+    "source_files": 1555,
+    "dependency_compiler_entries": 2412,
+    "generated_files": 5,
+    "complete_archives": "Private retained; not public download/fresh deployment proof"
+  },
+  "clean_shutdown": {
+    "result": "FAILED",
+    "original_backend_exit": 139,
+    "earlier_acknowledged_recovery_does_not_override": true
+  },
+  "host_continuity": {
+    "persistent_service_guard": "FAILED",
+    "unrelated_service": "dmarie.service",
+    "preexisting_activating_auto_restart_with_226_NAMESPACE": "Manager-only raw journal preserved; no service mutation; impact unmeasured",
+    "port4000_listener_process_identity_unchanged": true,
+    "do_not_claim_all_services_unchanged": true
+  },
+  "postgres_connection_exhaustion_observed": true,
+  "post_oom_native_canonical_or_persistence_certification": false,
+  "cleanup": {
+    "only_owned_postgres_stopped": true,
+    "postgres_exit": 0,
+    "postgres_finished_at": "2026-10-16T02:31:02.851100815Z",
+    "backend_oom137_preserved": true,
+    "private_runtime_sha_unchanged": true,
+    "all_volumes_inputs_preserved": true,
+    "no_app_reset_reseed_or_recovery": true
+  },
+  "auth_scope": "Fresh per-request synthetic HS256 compatibility, not native signup/login/session throughput",
+  "native_path": "k6 -> native HTTP actions -> private native queries/mutations -> official PostgreSQL persistence; bundled executor included",
+  "forbidden_caches": "No response/query-result/precomputed count/JWT caches; ordinary native DB/index/module/page caches enabled",
+  "native_limits_unchanged": true,
+  "canonical_hash_before_measurement": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d",
+  "owner_authorization": {
+    "decision_id": "3674c27d-3fe8-4cf6-adec-60668e69f3df",
+    "action": "Publish blocked/unscored; cleanly stop only owned PG after evidence; retain all volumes/inputs; then Nhost feasibility after verified publication"
+  },
+  "publication_audit": "Exact staged-tree privacy/checksum and remote-publication evidence is separate; this diagnostic artifact alone is not upload proof"
+}

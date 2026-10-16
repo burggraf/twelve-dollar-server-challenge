@@ -1,0 +1,90 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-executed-collect-native-capacity-oom-postmortem.py",
+      "original_bytes": 4110,
+      "original_sha256": "3fc6b2ffe6fb5b6cca65939aa077131e263d1b2e4a9fb5f49f507d7616d12cd4",
+      "public_derivative": "native-executed-collect-native-capacity-oom-postmortem-public.py",
+      "derivative_bytes": 4110,
+      "derivative_sha256": "3fc6b2ffe6fb5b6cca65939aa077131e263d1b2e4a9fb5f49f507d7616d12cd4",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-executed-review-native-oom-run.py",
+      "original_bytes": 6968,
+      "original_sha256": "f1ed04a4ca20e48ee64a90daae726d53e8ff72c7c9938efe5bb8380527174cf8",
+      "public_derivative": "native-executed-review-native-oom-run-public.py",
+      "derivative_bytes": 6968,
+      "derivative_sha256": "f1ed04a4ca20e48ee64a90daae726d53e8ff72c7c9938efe5bb8380527174cf8",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-executed-stop-only-owned-postgres-after-blocked-acceptance.py",
+      "original_bytes": 3522,
+      "original_sha256": "9a218c0ac1d985ce82603fb1e2363f05da9cee2afd519ec1ba5c88f39795b20b",
+      "public_derivative": "native-executed-stop-only-owned-postgres-after-blocked-acceptance-public.py",
+      "derivative_bytes": 3522,
+      "derivative_sha256": "9a218c0ac1d985ce82603fb1e2363f05da9cee2afd519ec1ba5c88f39795b20b",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-executed-cleanup-benchmark-controller.py",
+      "original_bytes": 973,
+      "original_sha256": "6432cddfa77b1b7346487b865873b0fb017dda927975baa8e0fb111c213d075d",
+      "public_derivative": "native-executed-cleanup-benchmark-controller-public.py",
+      "derivative_bytes": 973,
+      "derivative_sha256": "6432cddfa77b1b7346487b865873b0fb017dda927975baa8e0fb111c213d075d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-executed-review-native-run.py",
+      "original_bytes": 6182,
+      "original_sha256": "ed2644bf5f9207896756e682341a0d87fca4531e0ed8c16d8d3ffb40800bc0f8",
+      "public_derivative": "native-executed-review-native-run-public.py",
+      "derivative_bytes": 6182,
+      "derivative_sha256": "ed2644bf5f9207896756e682341a0d87fca4531e0ed8c16d8d3ffb40800bc0f8",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-executed-runner-reserve-preflight.py",
+      "original_bytes": 2975,
+      "original_sha256": "7f774d2e14a47a208c9e0de112c8056aee21fa5ff1d6d55753ab248166a287a7",
+      "public_derivative": "native-executed-runner-reserve-preflight-public.py",
+      "derivative_bytes": 2975,
+      "derivative_sha256": "7f774d2e14a47a208c9e0de112c8056aee21fa5ff1d6d55753ab248166a287a7",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

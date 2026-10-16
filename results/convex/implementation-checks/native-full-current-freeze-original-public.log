@@ -1,0 +1,11 @@
+test_aggregate_oom_without_pid1_exit_still_stops_campaign (__main__.FrozenConvexEvidence.test_aggregate_oom_without_pid1_exit_still_stops_campaign) ... ok
+test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused (__main__.FrozenConvexEvidence.test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused) ... ok
+test_every_changed_input_and_log_refused (__main__.FrozenConvexEvidence.test_every_changed_input_and_log_refused) ... ok
+test_matching_full_frozen_correctness_accepted (__main__.FrozenConvexEvidence.test_matching_full_frozen_correctness_accepted) ... ok
+test_versions_exact_slices_and_failed_shutdown_are_prominent (__main__.FrozenConvexEvidence.test_versions_exact_slices_and_failed_shutdown_are_prominent) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+EXCLUSIVE_ORIGINAL_GENERATOR20000_JWT_NATIVE_POSITIVE_CONTROLS_AND_COMPLETE_SOURCE_SDK_GENERATED_FREEZE_PASSED_NO_DATABASE_RESEED_NO_K6 1555 2412

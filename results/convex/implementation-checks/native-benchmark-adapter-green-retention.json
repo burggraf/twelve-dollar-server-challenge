@@ -1,0 +1,34 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-benchmark-adapter-green-original.log",
+      "original_bytes": 10226,
+      "original_sha256": "2447443501ddd9114851b1155205dfacf26f48905a80a5c72954df8dc9be1e3a",
+      "public_derivative": "native-benchmark-adapter-green-original-public.log",
+      "derivative_bytes": 10226,
+      "derivative_sha256": "2447443501ddd9114851b1155205dfacf26f48905a80a5c72954df8dc9be1e3a",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-benchmark-adapter-green-state.json",
+      "original_bytes": 559728,
+      "original_sha256": "08eed257a2c33614cdb7732ed4f7c6af3043b76c2eb3831cb03ab58f0a96beac",
+      "public_derivative": "native-benchmark-adapter-green-state-public.json",
+      "derivative_bytes": 559728,
+      "derivative_sha256": "08eed257a2c33614cdb7732ed4f7c6af3043b76c2eb3831cb03ab58f0a96beac",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

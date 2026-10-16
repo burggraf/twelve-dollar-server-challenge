@@ -1,0 +1,76 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-benchmark-harness-red.log",
+      "original_bytes": 3120,
+      "original_sha256": "ad805a091c6d23e2c76ab2ca4e2e2bd7e59514967deaff15f501b8b6b18fda01",
+      "public_derivative": "native-benchmark-harness-red-public.log",
+      "derivative_bytes": 3120,
+      "derivative_sha256": "ad805a091c6d23e2c76ab2ca4e2e2bd7e59514967deaff15f501b8b6b18fda01",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-benchmark-evidence-red.log",
+      "original_bytes": 3127,
+      "original_sha256": "3cc6d211884d002a5eb4b136b4e3b0968ea865334fc98ddae925326968ee5720",
+      "public_derivative": "native-benchmark-evidence-red-public.log",
+      "derivative_bytes": 3127,
+      "derivative_sha256": "3cc6d211884d002a5eb4b136b4e3b0968ea865334fc98ddae925326968ee5720",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-full-freeze-red.log",
+      "original_bytes": 2697,
+      "original_sha256": "f5bda3158031face0288324c883d3c520aee855ba30d4e043eb04a55197e8188",
+      "public_derivative": "native-full-freeze-red-public.log",
+      "derivative_bytes": 2697,
+      "derivative_sha256": "f5bda3158031face0288324c883d3c520aee855ba30d4e043eb04a55197e8188",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-load-config-red.log",
+      "original_bytes": 972,
+      "original_sha256": "7203d0f49a2b909fa9cc431cde4b7931e7435a07e6000f5dde2416df0ad5c3ce",
+      "public_derivative": "native-load-config-red-public.log",
+      "derivative_bytes": 972,
+      "derivative_sha256": "7203d0f49a2b909fa9cc431cde4b7931e7435a07e6000f5dde2416df0ad5c3ce",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-parent-oom-stop-red.log",
+      "original_bytes": 988,
+      "original_sha256": "49708db20aae07e315075d0026b06cf74618cd9456acf8da65131f36d99a4fe2",
+      "public_derivative": "native-parent-oom-stop-red-public.log",
+      "derivative_bytes": 988,
+      "derivative_sha256": "49708db20aae07e315075d0026b06cf74618cd9456acf8da65131f36d99a4fe2",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

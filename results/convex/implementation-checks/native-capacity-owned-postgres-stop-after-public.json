@@ -1,0 +1,168 @@
+{
+  "targets": {
+    "backend": {
+      "Id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "RestartCount": 0,
+      "State": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": true,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 137,
+        "Error": "",
+        "StartedAt": "2026-10-16T00:02:20.333088398Z",
+        "FinishedAt": "2026-10-16T02:17:16.296405591Z",
+        "Health": {
+          "Status": "unhealthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-16T02:16:53.909934339Z",
+              "End": "2026-10-16T02:16:54.132011936Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T02:16:59.132664968Z",
+              "End": "2026-10-16T02:16:59.306969425Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T02:17:04.307925436Z",
+              "End": "2026-10-16T02:17:04.514701196Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T02:17:09.515599621Z",
+              "End": "2026-10-16T02:17:09.710394989Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T02:17:14.711383663Z",
+              "End": "2026-10-16T02:17:14.996303711Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            }
+          ]
+        }
+      },
+      "limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 3221225472,
+        "MemorySwap": 3221225472
+      },
+      "source_sha256": null,
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "compose_project": "baas-convexpg-vps16",
+      "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+      "process_cgroup": "",
+      "kernel": {}
+    },
+    "postgres": {
+      "Id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "RestartCount": 0,
+      "State": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-16T00:02:14.076467149Z",
+        "FinishedAt": "2026-10-16T02:31:02.851100815Z",
+        "Health": {
+          "Status": "unhealthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-16T02:30:38.33200315Z",
+              "End": "2026-10-16T02:30:38.39268847Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T02:30:43.393261155Z",
+              "End": "2026-10-16T02:30:43.454412259Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T02:30:48.455655447Z",
+              "End": "2026-10-16T02:30:48.517791638Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T02:30:53.518943954Z",
+              "End": "2026-10-16T02:30:53.581112625Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T02:30:58.581841758Z",
+              "End": "2026-10-16T02:30:58.641832799Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            }
+          ]
+        }
+      },
+      "limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 1073741824,
+        "MemorySwap": 1073741824
+      },
+      "source_sha256": null,
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "compose_project": "baas-convexpg-vps16",
+      "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+      "process_cgroup": "",
+      "kernel": {}
+    }
+  },
+  "parent": {
+    "cpu.max": "100000 100000\n",
+    "cpu.stat": "usage_usec 4483972059\nuser_usec 3769537021\nsystem_usec 714435038\ncore_sched.force_idle_usec 0\nnr_periods 73072\nnr_throttled 19992\nthrottled_usec 1239235964\nnr_bursts 0\nburst_usec 0\n",
+    "cpu.pressure": "some avg10=0.00 avg60=0.00 avg300=3.16 total=431415074\nfull avg10=0.00 avg60=0.00 avg300=2.41 total=340369894\n",
+    "memory.max": "4294967296\n",
+    "memory.current": "346034176\n",
+    "memory.peak": "4295045120\n",
+    "memory.swap.max": "0\n",
+    "memory.events": "low 0\nhigh 0\nmax 671309\noom 3\noom_kill 1\noom_group_kill 0\n",
+    "memory.stat": "anon 0\nfile 334491648\nkernel 11542528\nkernel_stack 0\npagetables 0\nsec_pagetables 0\npercpu 48384\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 8192\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 0\ninactive_file 170565632\nactive_file 163926016\nunevictable 0\nslab_reclaimable 11447448\nslab_unreclaimable 33576\nslab 11481024\nworkingset_refault_anon 0\nworkingset_refault_file 25841619\nworkingset_activate_anon 0\nworkingset_activate_file 22664210\nworkingset_restore_anon 0\nworkingset_restore_file 398124\nworkingset_nodereclaim 18673\npgscan 42410818\npgsteal 42410155\npgscan_kswapd 9628\npgscan_direct 42401190\npgscan_khugepaged 0\npgsteal_kswapd 9628\npgsteal_direct 42400527\npgsteal_khugepaged 0\npgfault 39751267\npgmajfault 3\npgrefill 5510118\npgactivate 11\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+    "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=18555590\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=18043703\n",
+    "io.stat": "8:0 rbytes=108566880256 wbytes=159542906880 rios=10188525 wios=9840473 dbytes=0 dios=0\n",
+    "io.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=193393407\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=193128402\n",
+    "children": []
+  },
+  "private_runtime_sha256_unchanged": true,
+  "volumes_preserved": [
+    {
+      "Name": "baas-convexpg-vps16_data",
+      "Driver": "local",
+      "CreatedAt": "2026-10-15T19:03:20Z"
+    },
+    {
+      "Name": "baas-convexpg-vps16_pgdata",
+      "Driver": "local",
+      "CreatedAt": "2026-10-15T19:03:20Z"
+    }
+  ],
+  "backend_not_revived_oom137_preserved": true,
+  "only_postgres_stopped_actual_process_exit0": true,
+  "native_data_not_reseeded_or_reset_or_verified_after_oom": true,
+  "original_clean_backend_shutdown139_still_failed": true
+}

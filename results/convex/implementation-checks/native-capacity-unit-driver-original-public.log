@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/capacity-controller.py", line 41, in <module>
+    common.campaign(SimpleNamespace(max_vus=20000,max_attempts=12),'standard',attempt_runner=attempt,results=bench.RESULTS,campaign_file=state/'campaign.json')
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/scripts/benchmark.py", line 422, in campaign
+    while run(high):
+          ^^^^^^^^^
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/scripts/benchmark.py", line 411, in run
+    outcome, path = attempt_runner(vus, tier)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-convexpg-16g/capacity-controller.py", line 28, in attempt
+    result,path=bench.attempt(vus,tier)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/scripts/convex_benchmark.py", line 203, in attempt
+    if issue: raise RuntimeError('Serving runtime failure preserved; no new attempt/revival: ' + issue)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Serving runtime failure preserved; no new attempt/revival: serving process OOM/exit/restart/unhealthy: backend
+ONLY_EXACT_OWNED_RUNNER_RESET_TOOLS_CLEANED_NEVER_SERVING_RESTART_OR_REVIVAL

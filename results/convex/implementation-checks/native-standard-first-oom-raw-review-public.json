@@ -1,0 +1,70 @@
+{
+  "run": "20261016T020607016365Z-standard-2500vu-k6-2cpu-8g-v3",
+  "mode": "capacity",
+  "outcome": "fail",
+  "reason": "serving process OOM/exit/restart/unhealthy: backend",
+  "all_original_checksums_verified": true,
+  "raw_rows": 1116907,
+  "raw_counts_and_quantiles_reproduced": true,
+  "raw_quantiles_ms": {
+    "min": 0,
+    "max": 10051.829707,
+    "med": 10000.1612255,
+    "p(95)": 10000.948015799999,
+    "p(99)": 10001.55330185
+  },
+  "requests_by_endpoint": {
+    "feed": 50812
+  },
+  "errors_by_endpoint": {
+    "feed": 50812
+  },
+  "statuses_by_endpoint": {
+    "feed": {
+      "0": 50812
+    }
+  },
+  "schema_errors": 0,
+  "original_source_archive_files_compared_to_current_frozen_vps_bytes": 100,
+  "complete_frozen_inputs_match_correctness": true,
+  "measurement_replay": [
+    "fail",
+    "hold latency/error/schema gate failed"
+  ],
+  "runtime_issue": "serving process OOM/exit/restart/unhealthy: backend",
+  "new_serving_backend_oom_exit137": true,
+  "parent_events_before": {
+    "low": "0",
+    "high": "0",
+    "max": "668481",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0"
+  },
+  "parent_events_after": {
+    "low": "0",
+    "high": "0",
+    "max": "671309",
+    "oom": "3",
+    "oom_kill": "1",
+    "oom_group_kill": "0"
+  },
+  "physical_full_attempts_consumed": 1,
+  "campaign_history_empty_does_not_erase_attempt": true,
+  "not_capacity_confirmation": true,
+  "actual_runner_kernel_sample_count": 109,
+  "hold_monitor_samples": 59,
+  "hold_monitor_span_seconds": 290.98219990730286,
+  "runner_peak_cpu_percent_one_core": 93.53,
+  "runner_peak_memory_percent_8gib": 13.81,
+  "parent_max_observed_current_bytes": 4294729728,
+  "parent_lifetime_peak_after": 4295045120,
+  "host_swapouts_before": 0,
+  "host_swapouts_after": 0,
+  "clean_shutdown": {
+    "result": "FAILED",
+    "backend_exit": 139,
+    "capacity_exception": "Explicit owner permission after separate acknowledged crash-recovery proof; no lifecycle or power-loss certification"
+  },
+  "not_capacity_bound": false
+}

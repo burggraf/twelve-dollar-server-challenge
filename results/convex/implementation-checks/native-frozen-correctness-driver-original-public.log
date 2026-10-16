@@ -1,0 +1,7 @@
+Read-only service snapshot saved; service count: 27 ; existing listener PID count: 1
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/full-frozen-correctness.py", line 61, in <module>
+    subprocess.run(['python3',str(root/'test/baas'/name) if name!='test_gitignore.py' else str(root/'test/test_gitignore.py')],cwd=root,stdout=output,stderr=subprocess.STDOUT,check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', '/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_isolation.py']' returned non-zero exit status 1.

@@ -1,0 +1,4 @@
+usage: convex_benchmark.py [-h] [--smoke] [--vus VUS] [--campaign]
+                           [--max-vus MAX_VUS] [--max-attempts MAX_ATTEMPTS]
+convex_benchmark.py: error: unrecognized arguments: --vus1000
+ONLY_EXACT_OWNED_RUNNER_RESET_TOOLS_CLEANED_NEVER_SERVING_RESTART_OR_REVIVAL

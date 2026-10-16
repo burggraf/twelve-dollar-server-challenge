@@ -1,0 +1,20 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-smoke1000-driver-original.log",
+      "original_bytes": 283,
+      "original_sha256": "315ae25d6751dc7c4763930c116b26867d98cb0f27fbc6ddfed6ed7daa03412b",
+      "public_derivative": "native-smoke1000-driver-original-public.log",
+      "derivative_bytes": 283,
+      "derivative_sha256": "315ae25d6751dc7c4763930c116b26867d98cb0f27fbc6ddfed6ed7daa03412b",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

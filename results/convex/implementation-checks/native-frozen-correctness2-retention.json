@@ -1,0 +1,174 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-frozen-correctness2-original.log",
+      "original_bytes": 22452,
+      "original_sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9",
+      "public_derivative": "native-frozen-correctness2-original-public.log",
+      "derivative_bytes": 22452,
+      "derivative_sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness2-driver-original.log",
+      "original_bytes": 903,
+      "original_sha256": "8bab105e97484b9bdb24eb0adc7635cb2f4a26cc20ebd97a05dcb0bed446df12",
+      "public_derivative": "native-frozen-correctness2-driver-original-public.log",
+      "derivative_bytes": 903,
+      "derivative_sha256": "8bab105e97484b9bdb24eb0adc7635cb2f4a26cc20ebd97a05dcb0bed446df12",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness2-before.json",
+      "original_bytes": 25692,
+      "original_sha256": "5d7aa1f0c1fd09f2838ee2ab2b20ac55ae8b24359cbe8d7731c4a4e8c5f075e6",
+      "public_derivative": "native-frozen-correctness2-before-public.json",
+      "derivative_bytes": 25692,
+      "derivative_sha256": "5d7aa1f0c1fd09f2838ee2ab2b20ac55ae8b24359cbe8d7731c4a4e8c5f075e6",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness2-after.json",
+      "original_bytes": 25698,
+      "original_sha256": "68dd84d1b6f45f7a78237b9120ab200df493a7826315f7e4c76aab2770a568d0",
+      "public_derivative": "native-frozen-correctness2-after-public.json",
+      "derivative_bytes": 25698,
+      "derivative_sha256": "68dd84d1b6f45f7a78237b9120ab200df493a7826315f7e4c76aab2770a568d0",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness2-before-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "1018607f6b83270652b57fc54bfd738ee326fc70caf45857497f2399af5d120b",
+      "public_derivative": "native-frozen-correctness2-before-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "1018607f6b83270652b57fc54bfd738ee326fc70caf45857497f2399af5d120b",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness2-after-services.json",
+      "original_bytes": 6715,
+      "original_sha256": "b2ce005dbba3a0e3fc25caa4b2682b49fa7cf13c8543b4089e11a44612285e89",
+      "public_derivative": "native-frozen-correctness2-after-services-public.json",
+      "derivative_bytes": 6715,
+      "derivative_sha256": "b2ce005dbba3a0e3fc25caa4b2682b49fa7cf13c8543b4089e11a44612285e89",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness2-final-state.json",
+      "original_bytes": 14277,
+      "original_sha256": "165059242a7033b9cb90afca6ef42bb9fbeefc3f843c07405ad78f7411431c93",
+      "public_derivative": "native-frozen-correctness2-final-state-public.json",
+      "derivative_bytes": 14277,
+      "derivative_sha256": "165059242a7033b9cb90afca6ef42bb9fbeefc3f843c07405ad78f7411431c93",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness2-manifest.json",
+      "original_bytes": 28030,
+      "original_sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831",
+      "public_derivative": "native-frozen-correctness2-manifest-public.json",
+      "derivative_bytes": 28030,
+      "derivative_sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness2-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "native-frozen-correctness2-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness-first-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "native-frozen-correctness-first-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness-first-controller.py",
+      "original_bytes": 7762,
+      "original_sha256": "32a1529f1ffee151b4f5623ddd6423c177fd79a232ae1321cd7f5b39402173b1",
+      "public_derivative": "native-frozen-correctness-first-controller-public.py",
+      "derivative_bytes": 7762,
+      "derivative_sha256": "32a1529f1ffee151b4f5623ddd6423c177fd79a232ae1321cd7f5b39402173b1",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness2-controller.py",
+      "original_bytes": 8323,
+      "original_sha256": "063c8f4a3959c151c58cec4abf32cc312cb38122c408aee017d93124c285a4ae",
+      "public_derivative": "native-frozen-correctness2-controller-public.py",
+      "derivative_bytes": 8323,
+      "derivative_sha256": "063c8f4a3959c151c58cec4abf32cc312cb38122c408aee017d93124c285a4ae",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

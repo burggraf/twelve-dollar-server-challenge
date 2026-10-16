@@ -30,9 +30,9 @@ def deployment_settings(system, machine, environ):
     if environ.get('BENCHMARK_PLATFORM', native) != native:
         raise ValueError('Primary benchmark requires native images, not emulation')
     project = environ.get('BENCHMARK_PROJECT', 'baas-trailbase')
-    if len(project) > 63 or not re.fullmatch(r'baas-(?:trailbase|supabase|pocketbase)(?:-[a-z0-9]+)*', project):
+    if len(project) > 63 or not re.fullmatch(r'baas-(?:trailbase|supabase|pocketbase|convexpg)(?:-[a-z0-9]+)*', project):
         raise ValueError('Project must use the isolated baas-trailbase benchmark namespace')
-    prefix = 'local-orbstack-' if system == 'Darwin' else ('vps16-linux-' if project in ('baas-trailbase-vps16', 'baas-supabase-vps16', 'baas-pocketbase-vps16') else 'vps-linux-')
+    prefix = 'local-orbstack-' if system == 'Darwin' else ('vps16-linux-' if project in ('baas-trailbase-vps16', 'baas-supabase-vps16', 'baas-pocketbase-vps16', 'baas-convexpg-vps16') else 'vps-linux-')
     return {'project': project, 'platform': native, 'track': prefix + arch}
 
 
@@ -161,13 +161,13 @@ def inspect(name):
 
 
 def snapshot(destination, service='trailbase'):
-    if service not in ('trailbase', 'supabase', 'pocketbase'):
+    if service not in ('trailbase', 'supabase', 'pocketbase', 'convex'):
         raise ValueError('Unsupported benchmark service snapshot')
     paths = [ROOT / name for name in ['README.md', 'MASTER_PLAN.md', 'LICENSE', 'SPEC.md', 'schema.sql', '.gitignore', '.dockerignore']]
     for name in [f'services/{service}', 'runner', 'scripts', 'bench', 'test', 'contracts', '.github/workflows', 'seed']:
         if (ROOT / name).exists():
             paths.extend(p for p in (ROOT / name).rglob('*') if p.is_file()
-                         and not any(part in ['target', '__pycache__', 'tsv'] for part in p.parts)
+                         and not any(part in ['target', '__pycache__', 'tsv', 'node_modules', '.git'] for part in p.parts)
                          and p.name not in ['tokens.json'] and not p.name.startswith('feed.db')
                          and (not p.name.startswith('.env') or p.name == '.env.example'))
     with tarfile.open(destination / 'source.tar.gz', 'w:gz') as archive:

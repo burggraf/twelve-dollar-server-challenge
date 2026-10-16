@@ -1,0 +1,153 @@
+2026-10-16T02:09:15.588014+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:cc:1a:a3:84:af:4b:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+2026-10-16T02:09:36.906906+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:44:4c:a8:6f:20:ab:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+2026-10-16T02:09:56.161097+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.59 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=49009 PROTO=TCP SPT=47909 DPT=40817 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:10:08.467913+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(vethfa11ad7) entered disabled state
+2026-10-16T02:10:08.467986+00:00 claudius.azabab.com kernel: vethb9d7725: renamed from eth0
+2026-10-16T02:10:08.492897+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(vethfa11ad7) entered disabled state
+2026-10-16T02:10:08.494896+00:00 claudius.azabab.com kernel: vethfa11ad7 (unregistering): left allmulticast mode
+2026-10-16T02:10:08.494928+00:00 claudius.azabab.com kernel: vethfa11ad7 (unregistering): left promiscuous mode
+2026-10-16T02:10:08.494941+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(vethfa11ad7) entered disabled state
+2026-10-16T02:10:09.744057+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth8a1a17d) entered blocking state
+2026-10-16T02:10:09.744131+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth8a1a17d) entered disabled state
+2026-10-16T02:10:09.744148+00:00 claudius.azabab.com kernel: veth8a1a17d: entered allmulticast mode
+2026-10-16T02:10:09.744160+00:00 claudius.azabab.com kernel: veth8a1a17d: entered promiscuous mode
+2026-10-16T02:10:09.763966+00:00 claudius.azabab.com kernel: eth0: renamed from vethfecf65d
+2026-10-16T02:10:09.768951+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth8a1a17d) entered blocking state
+2026-10-16T02:10:09.768985+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth8a1a17d) entered forwarding state
+2026-10-16T02:10:16.474125+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.38 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=53 ID=53275 PROTO=TCP SPT=39664 DPT=5633 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:10:37.784547+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.44 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=50 ID=60603 PROTO=TCP SPT=40968 DPT=42350 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:10:57.222196+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=102.88.21.136 DST=38.49.214.235 LEN=40 TOS=0x08 PREC=0x20 TTL=239 ID=17249 PROTO=TCP SPT=53649 DPT=10269 WINDOW=1024 RES=0x00 SYN URGP=0 
+2026-10-16T02:11:15.953905+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.71 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=41623 PROTO=TCP SPT=32954 DPT=23382 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:11:36.282929+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=195.182.16.23 DST=38.49.214.235 LEN=40 TOS=0x08 PREC=0x60 TTL=245 ID=54321 PROTO=TCP SPT=46395 DPT=8080 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:11:55.547859+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:44:4c:a8:a7:3a:e3:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+2026-10-16T02:12:16.165108+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.68 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=49012 PROTO=TCP SPT=60542 DPT=36926 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:12:35.987956+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.25 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=2426 PROTO=TCP SPT=37624 DPT=8082 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:12:55.878627+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.52 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=47065 PROTO=TCP SPT=45129 DPT=33991 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:13:15.595923+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:44:4c:a8:dd:82:91:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+2026-10-16T02:13:37.305946+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.42 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=32780 PROTO=TCP SPT=43869 DPT=21089 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:13:55.807913+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.59 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=17703 PROTO=TCP SPT=59826 DPT=45736 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:14:15.579543+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.25 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=60348 PROTO=TCP SPT=52991 DPT=53397 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:14:35.502187+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.58 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=13558 PROTO=TCP SPT=52940 DPT=51468 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:14:56.721905+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.10 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=50 ID=60562 PROTO=TCP SPT=33446 DPT=50075 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:15:15.867370+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:00:1c:73:8e:dd:4b:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+2026-10-16T02:15:36.408931+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.38 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=53 ID=3460 PROTO=TCP SPT=37454 DPT=4829 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:15:55.564916+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:28:99:3a:4c:e6:67:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+2026-10-16T02:16:15.428919+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.63 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=9213 PROTO=TCP SPT=55825 DPT=59313 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:16:36.906960+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.58 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=41559 PROTO=TCP SPT=45072 DPT=49066 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:16:56.148908+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.26 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=57959 PROTO=TCP SPT=59340 DPT=23955 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:17:15.906132+00:00 claudius.azabab.com kernel: isolate invoked oom-killer: gfp_mask=0xcc0(GFP_KERNEL), order=0, oom_score_adj=0
+2026-10-16T02:17:15.906226+00:00 claudius.azabab.com kernel: CPU: 1 PID: 2379608 Comm: isolate Not tainted 6.8.0-142-generic #142-Ubuntu
+2026-10-16T02:17:15.906243+00:00 claudius.azabab.com kernel: Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS rel-1.17.0-0-gb52ca86e094d-prebuilt.qemu.org 04/01/2014
+2026-10-16T02:17:15.906255+00:00 claudius.azabab.com kernel: Call Trace:
+2026-10-16T02:17:15.906279+00:00 claudius.azabab.com kernel:  <TASK>
+2026-10-16T02:17:15.906290+00:00 claudius.azabab.com kernel:  dump_stack_lvl+0x76/0xa0
+2026-10-16T02:17:15.906302+00:00 claudius.azabab.com kernel:  dump_stack+0x10/0x20
+2026-10-16T02:17:15.906316+00:00 claudius.azabab.com kernel:  dump_header+0x49/0x210
+2026-10-16T02:17:15.906330+00:00 claudius.azabab.com kernel:  oom_kill_process+0x118/0x280
+2026-10-16T02:17:15.906341+00:00 claudius.azabab.com kernel:  out_of_memory+0x103/0x350
+2026-10-16T02:17:15.906354+00:00 claudius.azabab.com kernel:  mem_cgroup_out_of_memory+0x145/0x170
+2026-10-16T02:17:15.906371+00:00 claudius.azabab.com kernel:  try_charge_memcg+0x6d6/0x7d0
+2026-10-16T02:17:15.906383+00:00 claudius.azabab.com kernel:  ? vma_alloc_folio+0x7a/0xd0
+2026-10-16T02:17:15.906394+00:00 claudius.azabab.com kernel:  __mem_cgroup_charge+0x45/0xc0
+2026-10-16T02:17:15.906408+00:00 claudius.azabab.com kernel:  do_anonymous_page+0xb2/0x430
+2026-10-16T02:17:15.906421+00:00 claudius.azabab.com kernel:  handle_pte_fault+0x1cb/0x1d0
+2026-10-16T02:17:15.906432+00:00 claudius.azabab.com kernel:  __handle_mm_fault+0x654/0x790
+2026-10-16T02:17:15.906442+00:00 claudius.azabab.com kernel:  handle_mm_fault+0x18a/0x380
+2026-10-16T02:17:15.906455+00:00 claudius.azabab.com kernel:  do_user_addr_fault+0x169/0x670
+2026-10-16T02:17:15.906466+00:00 claudius.azabab.com kernel:  exc_page_fault+0x83/0x1b0
+2026-10-16T02:17:15.906477+00:00 claudius.azabab.com kernel:  asm_exc_page_fault+0x27/0x30
+2026-10-16T02:17:15.906488+00:00 claudius.azabab.com kernel: RIP: 0033:0x7c027a7017de
+2026-10-16T02:17:15.906498+00:00 claudius.azabab.com kernel: Code: c0 c5 fe 7f 47 e0 c5 f8 77 c3 66 90 48 3b 15 49 aa 07 00 77 77 c5 fe 7f 07 c5 fe 7f 47 20 48 01 d7 48 81 fa 80 00 00 00 76 d2 <c5> fe 7f 40 40 c5 fe 7f 40 60 48 83 c7 80 48 81 fa 00 01 00 00 76
+2026-10-16T02:17:15.906906+00:00 claudius.azabab.com kernel: RSP: 002b:00007c022cff66e8 EFLAGS: 00010206
+2026-10-16T02:17:15.906935+00:00 claudius.azabab.com kernel: RAX: 000008ad053dffa8 RBX: 00007c022cff7c90 RCX: 000001a066241599
+2026-10-16T02:17:15.906947+00:00 claudius.azabab.com kernel: RDX: 00000000000000f8 RSI: 0000000000000000 RDI: 000008ad053e00a0
+2026-10-16T02:17:15.906956+00:00 claudius.azabab.com kernel: RBP: 00007c022cff6760 R08: 000001a066240000 R09: 000008ad053dffa1
+2026-10-16T02:17:15.906971+00:00 claudius.azabab.com kernel: R10: 00000000000000f0 R11: 0000000000000001 R12: 0000000000000020
+2026-10-16T02:17:15.906982+00:00 claudius.azabab.com kernel: R13: 000008ad053dffa1 R14: 000008ad053dffa0 R15: 0000000000000100
+2026-10-16T02:17:15.906990+00:00 claudius.azabab.com kernel:  </TASK>
+2026-10-16T02:17:15.907002+00:00 claudius.azabab.com kernel: memory: usage 3145728kB, limit 3145728kB, failcnt 934
+2026-10-16T02:17:15.907013+00:00 claudius.azabab.com kernel: swap: usage 0kB, limit 0kB, failcnt 0
+2026-10-16T02:17:15.907024+00:00 claudius.azabab.com kernel: Memory cgroup stats for /tdsbaasconvexpgvps16.slice/docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope:
+2026-10-16T02:17:15.907036+00:00 claudius.azabab.com kernel: anon 3136221184
+2026-10-16T02:17:15.907046+00:00 claudius.azabab.com kernel: file 0
+2026-10-16T02:17:15.907059+00:00 claudius.azabab.com kernel: kernel 84754432
+2026-10-16T02:17:15.907072+00:00 claudius.azabab.com kernel: kernel_stack 3686400
+2026-10-16T02:17:15.907084+00:00 claudius.azabab.com kernel: pagetables 69550080
+2026-10-16T02:17:15.907097+00:00 claudius.azabab.com kernel: sec_pagetables 0
+2026-10-16T02:17:15.907110+00:00 claudius.azabab.com kernel: percpu 2232
+2026-10-16T02:17:15.907119+00:00 claudius.azabab.com kernel: sock 249856
+2026-10-16T02:17:15.907132+00:00 claudius.azabab.com kernel: vmalloc 12288
+2026-10-16T02:17:15.907144+00:00 claudius.azabab.com kernel: shmem 0
+2026-10-16T02:17:15.907155+00:00 claudius.azabab.com kernel: zswap 0
+2026-10-16T02:17:15.907166+00:00 claudius.azabab.com kernel: zswapped 0
+2026-10-16T02:17:15.907174+00:00 claudius.azabab.com kernel: file_mapped 0
+2026-10-16T02:17:15.907184+00:00 claudius.azabab.com kernel: file_dirty 0
+2026-10-16T02:17:15.907197+00:00 claudius.azabab.com kernel: file_writeback 0
+2026-10-16T02:17:15.907210+00:00 claudius.azabab.com kernel: swapcached 0
+2026-10-16T02:17:15.907222+00:00 claudius.azabab.com kernel: anon_thp 0
+2026-10-16T02:17:15.907233+00:00 claudius.azabab.com kernel: file_thp 0
+2026-10-16T02:17:15.907246+00:00 claudius.azabab.com kernel: shmem_thp 0
+2026-10-16T02:17:15.907258+00:00 claudius.azabab.com kernel: inactive_anon 3136106496
+2026-10-16T02:17:15.907270+00:00 claudius.azabab.com kernel: active_anon 114688
+2026-10-16T02:17:15.907281+00:00 claudius.azabab.com kernel: inactive_file 0
+2026-10-16T02:17:15.907290+00:00 claudius.azabab.com kernel: active_file 0
+2026-10-16T02:17:15.907304+00:00 claudius.azabab.com kernel: unevictable 0
+2026-10-16T02:17:15.907313+00:00 claudius.azabab.com kernel: slab_reclaimable 2452464
+2026-10-16T02:17:15.907322+00:00 claudius.azabab.com kernel: slab_unreclaimable 9012128
+2026-10-16T02:17:15.907333+00:00 claudius.azabab.com kernel: slab 11464592
+2026-10-16T02:17:15.907344+00:00 claudius.azabab.com kernel: workingset_refault_anon 0
+2026-10-16T02:17:15.907355+00:00 claudius.azabab.com kernel: workingset_refault_file 0
+2026-10-16T02:17:15.907366+00:00 claudius.azabab.com kernel: workingset_activate_anon 0
+2026-10-16T02:17:15.907375+00:00 claudius.azabab.com kernel: workingset_activate_file 0
+2026-10-16T02:17:15.907386+00:00 claudius.azabab.com kernel: workingset_restore_anon 0
+2026-10-16T02:17:15.907395+00:00 claudius.azabab.com kernel: workingset_restore_file 0
+2026-10-16T02:17:15.907408+00:00 claudius.azabab.com kernel: workingset_nodereclaim 0
+2026-10-16T02:17:15.907418+00:00 claudius.azabab.com kernel: pgscan 1930
+2026-10-16T02:17:15.907429+00:00 claudius.azabab.com kernel: pgsteal 1930
+2026-10-16T02:17:15.907440+00:00 claudius.azabab.com kernel: pgscan_kswapd 320
+2026-10-16T02:17:15.907452+00:00 claudius.azabab.com kernel: pgscan_direct 1610
+2026-10-16T02:17:15.907461+00:00 claudius.azabab.com kernel: pgscan_khugepaged 0
+2026-10-16T02:17:15.907470+00:00 claudius.azabab.com kernel: pgsteal_kswapd 320
+2026-10-16T02:17:15.907483+00:00 claudius.azabab.com kernel: pgsteal_direct 1610
+2026-10-16T02:17:15.907494+00:00 claudius.azabab.com kernel: pgsteal_khugepaged 0
+2026-10-16T02:17:15.907505+00:00 claudius.azabab.com kernel: pgfault 5144631
+2026-10-16T02:17:15.907514+00:00 claudius.azabab.com kernel: pgmajfault 1
+2026-10-16T02:17:15.907525+00:00 claudius.azabab.com kernel: pgrefill 1
+2026-10-16T02:17:15.907534+00:00 claudius.azabab.com kernel: pgactivate 0
+2026-10-16T02:17:15.907547+00:00 claudius.azabab.com kernel: pgdeactivate 0
+2026-10-16T02:17:15.907558+00:00 claudius.azabab.com kernel: pglazyfree 0
+2026-10-16T02:17:15.907571+00:00 claudius.azabab.com kernel: pglazyfreed 0
+2026-10-16T02:17:15.907584+00:00 claudius.azabab.com kernel: zswpin 0
+2026-10-16T02:17:15.907594+00:00 claudius.azabab.com kernel: zswpout 0
+2026-10-16T02:17:15.907606+00:00 claudius.azabab.com kernel: zswpwb 0
+2026-10-16T02:17:15.907617+00:00 claudius.azabab.com kernel: thp_fault_alloc 0
+2026-10-16T02:17:15.907630+00:00 claudius.azabab.com kernel: thp_collapse_alloc 0
+2026-10-16T02:17:15.907639+00:00 claudius.azabab.com kernel: thp_swpout 0
+2026-10-16T02:17:15.907646+00:00 claudius.azabab.com kernel: thp_swpout_fallback 0
+2026-10-16T02:17:15.907654+00:00 claudius.azabab.com kernel: Tasks state (memory values in pages):
+2026-10-16T02:17:15.907663+00:00 claudius.azabab.com kernel: [  pid  ]   uid  tgid total_vm      rss rss_anon rss_file rss_shmem pgtables_bytes swapents oom_score_adj name
+2026-10-16T02:17:15.907675+00:00 claudius.azabab.com kernel: [2313635]     0 2313635 22200995   780898   758690    22208         0 68616192        0             0 convex-local-ba
+2026-10-16T02:17:15.907731+00:00 claudius.azabab.com kernel: [2313887]     0 2313887   265117    19883     6859    13024         0   933888        0             0 node
+2026-10-16T02:17:15.907745+00:00 claudius.azabab.com kernel: oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope,mems_allowed=0,oom_memcg=/tdsbaasconvexpgvps16.slice/docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope,task_memcg=/tdsbaasconvexpgvps16.slice/docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope,task=convex-local-ba,pid=2313635,uid=0
+2026-10-16T02:17:15.907760+00:00 claudius.azabab.com kernel: Memory cgroup out of memory: Killed process 2313635 (convex-local-ba) total-vm:88803980kB, anon-rss:3034760kB, file-rss:88832kB, shmem-rss:0kB, UID:0 pgtables:67008kB oom_score_adj:0
+2026-10-16T02:17:16.004901+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.44 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=52782 PROTO=TCP SPT=48906 DPT=7681 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:17:16.420700+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 2(veth9bb584c) entered disabled state
+2026-10-16T02:17:16.420726+00:00 claudius.azabab.com kernel: vethe96089d: renamed from eth0
+2026-10-16T02:17:16.454891+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 2(veth9bb584c) entered disabled state
+2026-10-16T02:17:16.457181+00:00 claudius.azabab.com kernel: veth9bb584c (unregistering): left allmulticast mode
+2026-10-16T02:17:16.457208+00:00 claudius.azabab.com kernel: veth9bb584c (unregistering): left promiscuous mode
+2026-10-16T02:17:16.457239+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 2(veth9bb584c) entered disabled state
+2026-10-16T02:17:35.581163+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:28:99:3a:9c:f6:cf:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+2026-10-16T02:17:56.452742+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.25 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=15055 PROTO=TCP SPT=41013 DPT=51849 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:18:16.872422+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.38 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=51 ID=14165 PROTO=TCP SPT=37199 DPT=40521 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:18:35.939917+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=94.154.43.131 DST=38.49.214.235 LEN=60 TOS=0x00 PREC=0x00 TTL=239 ID=22486 DF PROTO=TCP SPT=40002 DPT=3740 WINDOW=64240 RES=0x00 SYN URGP=0 
+2026-10-16T02:18:56.215693+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.10 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=50 ID=16787 PROTO=TCP SPT=57136 DPT=51507 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:19:15.778490+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.42 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=62761 PROTO=TCP SPT=60077 DPT=5845 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:19:21.174896+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth8a1a17d) entered disabled state
+2026-10-16T02:19:21.175888+00:00 claudius.azabab.com kernel: vethfecf65d: renamed from eth0
+2026-10-16T02:19:21.201901+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth8a1a17d) entered disabled state
+2026-10-16T02:19:21.204955+00:00 claudius.azabab.com kernel: veth8a1a17d (unregistering): left allmulticast mode
+2026-10-16T02:19:21.204985+00:00 claudius.azabab.com kernel: veth8a1a17d (unregistering): left promiscuous mode
+2026-10-16T02:19:21.205010+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth8a1a17d) entered disabled state
+2026-10-16T02:19:35.662298+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.63 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=53370 PROTO=TCP SPT=60404 DPT=5510 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-16T02:19:55.710912+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.56 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=15444 PROTO=TCP SPT=36127 DPT=31979 WINDOW=65535 RES=0x00 SYN URGP=0 

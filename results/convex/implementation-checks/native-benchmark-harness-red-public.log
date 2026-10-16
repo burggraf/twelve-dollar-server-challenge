@@ -1,0 +1,38 @@
+test_owned_postgres_namespace_uses_existing_cohort (__main__.NativeConvexHarness.test_owned_postgres_namespace_uses_existing_cohort) ... ERROR
+test_source_overlay_includes_native_code_but_not_private_or_dependency_tree (__main__.NativeConvexHarness.test_source_overlay_includes_native_code_but_not_private_or_dependency_tree) ... FAIL
+test_unrelated_namespace_and_emulation_refused (__main__.NativeConvexHarness.test_unrelated_namespace_and_emulation_refused) ... ok
+
+======================================================================
+ERROR: test_owned_postgres_namespace_uses_existing_cohort (__main__.NativeConvexHarness.test_owned_postgres_namespace_uses_existing_cohort)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_harness.py", line 15, in test_owned_postgres_namespace_uses_existing_cohort
+    self.assertEqual(b.deployment_settings('Linux', 'x86_64', {'BENCHMARK_PROJECT': 'baas-convexpg-vps16', 'BENCHMARK_PLATFORM': 'linux/amd64'}), {'project': 'baas-convexpg-vps16', 'platform': 'linux/amd64', 'track': 'vps16-linux-amd64'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/scripts/benchmark.py", line 34, in deployment_settings
+    raise ValueError('Project must use the isolated baas-trailbase benchmark namespace')
+ValueError: Project must use the isolated baas-trailbase benchmark namespace
+
+======================================================================
+FAIL: test_source_overlay_includes_native_code_but_not_private_or_dependency_tree (__main__.NativeConvexHarness.test_source_overlay_includes_native_code_but_not_private_or_dependency_tree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_harness.py", line 23, in test_source_overlay_includes_native_code_but_not_private_or_dependency_tree
+    try: b.snapshot(out, service='convex')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/scripts/benchmark.py", line 165, in snapshot
+    raise ValueError('Unsupported benchmark service snapshot')
+ValueError: Unsupported benchmark service snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_harness.py", line 24, in test_source_overlay_includes_native_code_but_not_private_or_dependency_tree
+    except ValueError as error: self.fail('Native Convex source overlay unsupported: ' + str(error))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Native Convex source overlay unsupported: Unsupported benchmark service snapshot
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+FAILED (failures=1, errors=1)

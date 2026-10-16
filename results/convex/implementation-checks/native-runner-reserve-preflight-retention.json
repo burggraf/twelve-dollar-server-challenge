@@ -1,0 +1,48 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-runner-reserve-preflight-driver-original.log",
+      "original_bytes": 108,
+      "original_sha256": "692c559277be3032098b0c94edb8a14c9a6d0b12754983fc76de6f4f8f38383b",
+      "public_derivative": "native-runner-reserve-preflight-driver-original-public.log",
+      "derivative_bytes": 108,
+      "derivative_sha256": "692c559277be3032098b0c94edb8a14c9a6d0b12754983fc76de6f4f8f38383b",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-runner-reserve-preflight.json",
+      "original_bytes": 21254,
+      "original_sha256": "3698fc74294684b4415d8fdb516fced14b90fd56b2b6b261f05bd20d97bd2c8e",
+      "public_derivative": "native-runner-reserve-preflight-public.json",
+      "derivative_bytes": 21254,
+      "derivative_sha256": "3698fc74294684b4415d8fdb516fced14b90fd56b2b6b261f05bd20d97bd2c8e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-runner-version-original.log",
+      "original_bytes": 176,
+      "original_sha256": "4acf69c1c04cc51d5de61ff5060439b716aa7e627a53e642f037e2406c886ffc",
+      "public_derivative": "native-runner-version-original-public.log",
+      "derivative_bytes": 176,
+      "derivative_sha256": "4acf69c1c04cc51d5de61ff5060439b716aa7e627a53e642f037e2406c886ffc",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

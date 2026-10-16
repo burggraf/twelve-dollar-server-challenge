@@ -1,0 +1,6 @@
+Read-only service snapshot saved; service count: 27 ; existing listener PID count: 1
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/collect-native-capacity-oom-postmortem.py", line 23, in <module>
+    assert all(archives.values()) and source_same and runtime_same and private_same and services_same and listener_same
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

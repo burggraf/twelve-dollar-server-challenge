@@ -1,0 +1,11 @@
+MainPID=0
+Result=exit-code
+NRestarts=371635
+ExecMainStartTimestamp=Fri 2026-10-16 02:29:05 UTC
+ExecMainExitTimestamp=Fri 2026-10-16 02:29:05 UTC
+ExecMainCode=1
+ExecMainStatus=226
+Id=dmarie.service
+ActiveState=activating
+SubState=auto-restart
+ActiveEnterTimestampMonotonic=1950154745179

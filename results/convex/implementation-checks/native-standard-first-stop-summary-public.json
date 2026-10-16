@@ -1,0 +1,73 @@
+{
+  "outcome": "fail",
+  "reason": "serving process OOM/exit/restart/unhealthy: backend",
+  "vus": 2500,
+  "tier": "standard",
+  "mode": "capacity",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "platform": "linux/amd64",
+  "hold_requests": 50812,
+  "hold_rps": 169.37333333333333,
+  "latency_ms": {
+    "avg": 6895.225445036786,
+    "med": 10000.1612255,
+    "p(95)": 10000.948015799999,
+    "p(99)": 10001.55330185,
+    "min": 0,
+    "max": 10051.829707
+  },
+  "request_errors": {
+    "passes": 50812,
+    "fails": 0,
+    "rate": 1
+  },
+  "schema_errors": {
+    "rate": 0,
+    "passes": 0,
+    "fails": 50812
+  },
+  "tested_software": {
+    "convex": "precompiled-2026-10-06-a3538c6",
+    "sdk_cli": "1.46.0",
+    "bundled_node": "22.22.2",
+    "tools_node": "22.20.0",
+    "postgres": "17.11-bookworm",
+    "backend_version_endpoint": "unknown",
+    "images": {
+      "backend": {
+        "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4"
+      },
+      "postgres": {
+        "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df"
+      }
+    }
+  },
+  "serving_budget": {
+    "cpus": 1,
+    "memory_gib": 4,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "backend_bytes": 3221225472,
+    "postgres_bytes": 1073741824,
+    "allocation_type": "Quota-limited shared-host slice; entire serving stack"
+  },
+  "runner_budget": {
+    "software": "k6",
+    "version": "1.3.0",
+    "cpus": 2,
+    "memory_gib": 8,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "profile": "k6-2cpu-8g-v3"
+  },
+  "clean_shutdown": {
+    "result": "FAILED",
+    "backend_exit": 139,
+    "capacity_exception": "Explicit owner permission after separate acknowledged crash-recovery proof; no lifecycle or power-loss certification"
+  }
+}

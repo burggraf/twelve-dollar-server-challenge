@@ -1,0 +1,25 @@
+# Optional untimed tools / separate approved runner. Never alters either server.
+# Combine with compose.yaml and compose.postgres.yaml in the owned PG workspace.
+services:
+  tools:
+    environment:
+      BASE_URL: http://backend:3211
+    volumes:
+      - ../../:/work:ro
+  k6:
+    image: grafana/k6:1.3.0@sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656
+    platform: linux/amd64
+    profiles: [load]
+    cpus: 2
+    mem_limit: 8589934592
+    memswap_limit: 8589934592
+    user: "0:0"
+    working_dir: /work/bench
+    environment:
+      BASE_URL: http://backend:3211
+    volumes:
+      - ../../bench:/work/bench:ro
+      - ../../.state/convex/benchmark-tokens.json:/tokens.json:ro
+      - ../../.state/convex/runs:/runs
+    ulimits:
+      nofile: {soft: 65535, hard: 65535}

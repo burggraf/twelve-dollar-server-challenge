@@ -1,0 +1,8 @@
+{
+  "tier": "standard",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "status": "paused",
+  "attempts": [],
+  "reason": "Serving runtime failure preserved; no new attempt/revival: serving process OOM/exit/restart/unhealthy: backend"
+}

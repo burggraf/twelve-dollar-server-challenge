@@ -1,0 +1,275 @@
+{
+  "targets": {
+    "backend": {
+      "Id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 2313635,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-16T00:02:20.333088398Z",
+        "FinishedAt": "2026-10-15T23:47:48.287476294Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-16T01:48:55.283563896Z",
+              "End": "2026-10-16T01:48:55.317817612Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T01:49:00.319072246Z",
+              "End": "2026-10-16T01:49:00.352558565Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T01:49:05.353854324Z",
+              "End": "2026-10-16T01:49:05.388790719Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T01:49:10.389364645Z",
+              "End": "2026-10-16T01:49:10.425274845Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T01:49:15.426218844Z",
+              "End": "2026-10-16T01:49:15.461953344Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            }
+          ]
+        }
+      },
+      "limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 3221225472,
+        "MemorySwap": 3221225472
+      },
+      "source_sha256": null,
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "compose_project": "baas-convexpg-vps16",
+      "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+      "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope\n",
+      "kernel": {
+        "cpu.max": "100000 100000\n",
+        "cpu.stat": "usage_usec 703539531\nuser_usec 671103483\nsystem_usec 32436047\ncore_sched.force_idle_usec 0\nnr_periods 12890\nnr_throttled 100\nthrottled_usec 1083444\nnr_bursts 0\nburst_usec 0\n",
+        "memory.max": "3221225472\n",
+        "memory.current": "971472896\n",
+        "memory.peak": "979816448\n",
+        "memory.swap.max": "0\n",
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "memory.stat": "anon 934674432\nfile 7290880\nkernel 29507584\nkernel_stack 1245184\npagetables 24920064\nsec_pagetables 0\npercpu 2232\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 934674432\ninactive_file 7286784\nactive_file 4096\nunevictable 0\nslab_reclaimable 820984\nslab_unreclaimable 2469096\nslab 3290080\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 128\npgsteal 128\npgscan_kswapd 128\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 128\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 3267046\npgmajfault 0\npgrefill 1\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+        "io.stat": "8:0 rbytes=0 wbytes=7806976 rios=0 wios=34 dbytes=0 dios=0\n"
+      }
+    },
+    "postgres": {
+      "Id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 2313499,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-16T00:02:14.076467149Z",
+        "FinishedAt": "2026-10-16T00:02:13.874816796Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-16T01:48:55.816724823Z",
+              "End": "2026-10-16T01:48:55.876708133Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T01:49:00.877550799Z",
+              "End": "2026-10-16T01:49:00.935782139Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T01:49:05.936299564Z",
+              "End": "2026-10-16T01:49:05.996419862Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T01:49:10.997415651Z",
+              "End": "2026-10-16T01:49:11.05561993Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T01:49:16.056784283Z",
+              "End": "2026-10-16T01:49:16.115759445Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            }
+          ]
+        }
+      },
+      "limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 1073741824,
+        "MemorySwap": 1073741824
+      },
+      "source_sha256": null,
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "compose_project": "baas-convexpg-vps16",
+      "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+      "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope\n",
+      "kernel": {
+        "cpu.max": "100000 100000\n",
+        "cpu.stat": "usage_usec 245470301\nuser_usec 171213288\nsystem_usec 74257012\ncore_sched.force_idle_usec 0\nnr_periods 12624\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "memory.max": "1073741824\n",
+        "memory.current": "814632960\n",
+        "memory.peak": "1073954816\n",
+        "memory.swap.max": "0\n",
+        "memory.events": "low 0\nhigh 0\nmax 55852\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "memory.stat": "anon 4628480\nfile 806682624\nkernel 3321856\nkernel_stack 98304\npagetables 1478656\nsec_pagetables 0\npercpu 2616\nsock 0\nvmalloc 12288\nshmem 146767872\nzswap 0\nzswapped 0\nfile_mapped 112852992\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 151396352\ninactive_file 657469440\nactive_file 2445312\nunevictable 0\nslab_reclaimable 923576\nslab_unreclaimable 741200\nslab 1664776\nworkingset_refault_anon 0\nworkingset_refault_file 3062375\nworkingset_activate_anon 0\nworkingset_activate_file 3062375\nworkingset_restore_anon 0\nworkingset_restore_file 477\nworkingset_nodereclaim 0\npgscan 3566592\npgsteal 3566588\npgscan_kswapd 0\npgscan_direct 3566592\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 3566588\npgsteal_khugepaged 0\npgfault 5722374\npgmajfault 0\npgrefill 645\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+        "io.stat": "8:0 rbytes=15246061568 wbytes=53039104 rios=1506818 wios=4146 dbytes=0 dios=0\n"
+      }
+    }
+  },
+  "parent": {
+    "cpu.max": "100000 100000\n",
+    "cpu.stat": "usage_usec 3584194403\nuser_usec 2978526422\nsystem_usec 605667981\ncore_sched.force_idle_usec 0\nnr_periods 62259\nnr_throttled 13245\nthrottled_usec 315288713\nnr_bursts 0\nburst_usec 0\n",
+    "cpu.pressure": "some avg10=0.00 avg60=2.18 avg300=5.00 total=117259841\nfull avg10=0.00 avg60=1.64 avg300=3.81 total=98989750\n",
+    "memory.max": "4294967296\n",
+    "memory.current": "3856949248\n",
+    "memory.peak": "4121296896\n",
+    "memory.swap.max": "0\n",
+    "memory.events": "low 0\nhigh 0\nmax 637977\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "memory.stat": "anon 939302912\nfile 2834276352\nkernel 83369984\nkernel_stack 1343488\npagetables 26398720\nsec_pagetables 0\npercpu 65328\nsock 0\nvmalloc 24576\nshmem 146767872\nzswap 0\nzswapped 0\nfile_mapped 112852992\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 1086070784\ninactive_file 1857019904\nactive_file 830488576\nunevictable 0\nslab_reclaimable 52216288\nslab_unreclaimable 3210296\nslab 55426584\nworkingset_refault_anon 0\nworkingset_refault_file 23840733\nworkingset_activate_anon 0\nworkingset_activate_file 20663324\nworkingset_restore_anon 0\nworkingset_restore_file 397832\nworkingset_nodereclaim 0\npgscan 39828125\npgsteal 39827462\npgscan_kswapd 8732\npgscan_direct 39819393\npgscan_khugepaged 0\npgsteal_kswapd 8732\npgsteal_direct 39818730\npgsteal_khugepaged 0\npgfault 32845007\npgmajfault 2\npgrefill 5081230\npgactivate 11\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+    "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=16584920\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=16395872\n",
+    "io.stat": "8:0 rbytes=100354265088 wbytes=159517601792 rios=9377322 wios=9838511 dbytes=0 dios=0\n",
+    "io.pressure": "some avg10=0.00 avg60=0.05 avg300=0.71 total=179306220\nfull avg10=0.00 avg60=0.05 avg300=0.71 total=179079687\n",
+    "children": [
+      "docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope",
+      "docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope"
+    ]
+  },
+  "original_run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+  "copied_files": [
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "SHA256SUMS",
+      "retained_original": "native-first-smoke1000-SHA256SUMS",
+      "bytes": 1221,
+      "sha256": "9b5019645a73897873f287a28733c964e40eaf3e868f203f2a64555726c91ee3"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "correctness-manifest.json",
+      "retained_original": "native-first-smoke1000-correctness-manifest.json",
+      "bytes": 28030,
+      "sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "correctness.log",
+      "retained_original": "native-first-smoke1000-correctness.log",
+      "bytes": 22452,
+      "sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "dataset.json",
+      "retained_original": "native-first-smoke1000-dataset.json",
+      "bytes": 299,
+      "sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "k6-summary.json",
+      "retained_original": "native-first-smoke1000-k6-summary.json",
+      "bytes": 10309,
+      "sha256": "753be9237664dca22600c697c705d9777feab7129337f7d5de976b8b213deb0a"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "k6.log",
+      "retained_original": "native-first-smoke1000-k6.log",
+      "bytes": 170208,
+      "sha256": "e3766c730b515ee5443efcb3c975e6f48b07c8a3f9b9f993dd490740d88162c2"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "manifest-before.json",
+      "retained_original": "native-first-smoke1000-manifest-before.json",
+      "bytes": 39999,
+      "sha256": "962ab40e1deadee86c61550b03276ae6c8501979633086369947216e57da242f"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "manifest.json",
+      "retained_original": "native-first-smoke1000-manifest.json",
+      "bytes": 51724,
+      "sha256": "a7e40de6731638eae90c17e313d739394260a40e527d6b766e137db1106711db"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "report.md",
+      "retained_original": "native-first-smoke1000-report.md",
+      "bytes": 2094,
+      "sha256": "7618944a2e2b6b66afe3e3e2e31c7df4446982c007eed90aaa0e97f85aa7fa6d"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "reset.log",
+      "retained_original": "native-first-smoke1000-reset.log",
+      "bytes": 1177,
+      "sha256": "a3d60cc5f9c1881a6cb6d1ecd49b07aedf873d557d839380b9b0520aad5ac3fd"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "resources.jsonl",
+      "retained_original": "native-first-smoke1000-resources.jsonl",
+      "bytes": 105458,
+      "sha256": "d2be9ff8a0d843251a37cb162d78b5bf672bb6832c28f1b4066d413a048cb862"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "runtime-freeze.json",
+      "retained_original": "native-first-smoke1000-runtime-freeze.json",
+      "bytes": 26283,
+      "sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "summary.json",
+      "retained_original": "native-first-smoke1000-summary.json",
+      "bytes": 2111,
+      "sha256": "359bbb4f42a7f9a6d1aec7b751af32a5a6159f5da8983cfb92f1171df4edb299"
+    },
+    {
+      "run": "20261016T014201034037Z-standard-1000vu-k6-2cpu-8g-v3-smoke",
+      "original_run_file": "working-tree.patch",
+      "retained_original": "native-first-smoke1000-working-tree.patch",
+      "bytes": 60644,
+      "sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+ Container baas-convexpg-vps16-reset-tools Creating 
+ Container baas-convexpg-vps16-reset-tools Created 
+{"like_pages": 2017, "likes_deleted": 0, "posts_deleted": 0, "sequence_last_id": "0000000000000500000"}
+test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata) ... Actual native canonical counts/full logical hash verified: {"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d", "scope": "Actual native paginated API rows; native metadata present; logical IDs/relationships/order/unique likes verified"}
+ok
+test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count) ... Native feed/detail exact normalized counts verified; largest seeded post: 405018 likes: 583.0
+ok
+test_03_native_read_functions_are_private (__main__.FullNativeDataset.test_03_native_read_functions_are_private) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 151.576s
+
+OK

@@ -1,0 +1,366 @@
+diff --git a/MASTER_PLAN.md b/MASTER_PLAN.md
+index c36362e..f08bd34 100644
+--- a/MASTER_PLAN.md
++++ b/MASTER_PLAN.md
+@@ -150,7 +150,7 @@ Each service has **seven delivery gates**: (1) feasibility/version/profile, (2)
+ | 1 | TrailBase | Published verified 15,000-VU lower bound; progression authorized | 7/7 | [Final report](results/trailbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md); remote commit `3b1fa99`, no target maximum |
+ | 2 | Supabase | Published verified 2,000-VU confirmed capacity | 7/7 | [Final report](results/supabase/vps16-linux-amd64/CONFIRMED_CAPACITY.md); published remote `4c06a8d`; all 11 attempts reviewed; 2,250 failed all three confirmations; no exact mathematical maximum |
+ | 3 | PocketBase | Published verified 10,000-VU lower bound | 7/7 | [Final report](results/pocketbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md); three confirmations, 949,739 requests / 900 seconds, zero errors. 11,250/12,500 valid failures; 15,000/20,000 runner-invalid. No exact maximum or 250-VU boundary. Owned target stopped; source/raw/privacy/continuity review complete |
+-| 4 | Convex | Native application/original contract/reset passed; clean-shutdown FAILED; approved crash recovery passed; capacity decision pending | 2/7 | SQLite failed/OOM configuration remains preserved. Official PostgreSQL17.11 variant shares1CPU/4GiB/noSwap (backend3GiB+PG1GiB). Native auth/read/write/concurrency/stored signed64/UnicodeNUL/orphan/collision gates passed; unchanged original42, fullshared6 and57 additional checks passed; native reset37posts5likes/allocation and full canonical hash restored. RequestedSIGINT then actual backend139/Tokio shutdown panic/kernel fault: clean gate remainsFAILED. Owner explicitly approved ONLY same-image recovery/persistence;41 recovery checks passed, acknowledged500001/count1/sequence survived, nextcreate500002, exact-owned cleanup/full canonical hash restored. Both actualPIDs/starts changed, samecontainers/images/private/platform/budgets, noOOM/swapincrease. Parent lifetimepeak3,479,109,632bytes; substantial raw pressure retained. FinalSDK/generated/runtime/harness freeze/currentfullgates/headroom incomplete; no load run, capacity requires separate decision |
++| 4 | Convex | SQLite attempt failed; owner-approved PostgreSQL native feasibility underway | 0/7 | SQLite CLI imports completed, but stored-row hash timed out and later paging was followed by a serving OOM kill; stopped target/volume/evidence retained. Fresh PostgreSQL 17.11 pair has verified native images, shared parent/child kernel budgets, enabled fsync/synchronous commit/full-page writes, and all 16 empty setup tests passed after retained failures. Supported PostgreSQL native import and independent full stored-row/hash/feed/detail/cache/private checks passed (14 tests), with unchanged shared budget/process/source/private-input/service identities and no OOM/swap increase. HTTP reads20, positive storage-health/backend-clock23 and actual hot PG-stop/503/recovery24 checks subsequently passed, including another independent full canonical hash. Only owned PG restarted; backend and original services/listener preserved. Latest parent peak3,323,609,088bytes; substantial raw memory pressure retained, no serving OOM/swap increase. Wide-ID/NUL/native auth/writes/acknowledged-write lifecycle/full reproduction/correctness and capacity remain pending |
+ | 5 | Nhost | Queued after Convex | 0/7 | Validate reproducible self-hosted profile |
+ | 6 | Directus | Queued after Nhost | 0/7 | Validate transaction-safe like API/extension |
+ | 7 | Appwrite | Queued after Directus | 0/7 | Validate stack footprint and atomic API support |
+@@ -188,9 +188,9 @@ Each service has **seven delivery gates**: (1) feasibility/version/profile, (2)
+ 
+ ### 4 — Convex
+ 
+-- [x] **Feasibility:** pinned official backend/SDK1.46.0 and PostgreSQL17.11 native persistence within unchanged aggregate1CPU/4GiB/noSwap; full canonical import/native stored-row hash/required queries passed under original native defaults. [Failed SQLite configuration](results/convex/implementation-checks/SQLITE_FEASIBILITY_BLOCKER.md) remains separate/preserved; no resource/timeout/cache workaround.
+-- [x] **Application:** supported native HTTP actions/private queries/mutations, lossless signed64 IDs, actual like counts, per-request strict syntheticHS256, transactional allocation/duplicate-like invariants, storedUnicodeNUL/wide/max/exhaustion/collision/orphan-feed proof. No timed underlying-storage driver or precomputed like counters.
+-- [ ] **Correctness:** original unchanged42/fullshared6/additional57 passed and exactnative reset/fullhash restored. **CleanSIGINT shutdown failed139** after a real native teardown panic/fault. Separately owner-approved same-image recovery passed41, actual acknowledged data/sequence survived and canonical hash restored; this does NOT turn clean-shutdown green. Full frozen current/runtime/harness gates and eligibility decision remain.
++- [ ] **Feasibility:** pin the self-hosted backend/CLI/SDK and storage configuration. Prove full seed import and required queries fit documented transaction, read, execution, and import limits before building the complete app. Initial default-SQLite attempt failed: imports completed, full stored-row verification timed out, then bounded read-only paging was followed by an actual serving OOM kill. [Original failure/diagnosis evidence](results/convex/implementation-checks/SQLITE_FEASIBILITY_BLOCKER.md) retained; no restart/reseed/resource enlargement. The owner approved official local PostgreSQL persistence within the unchanged aggregate budget. A fresh owned candidate and pinned PostgreSQL 17.11 image are being prepared; this is not an accepted fit.
++- [ ] **Application:** define documents/indexes with stable public IDs; implement native queries/mutations behind HTTP actions or a thin adapter using the supported client. Verify JWT on writes; enforce duplicate-like invariants transactionally. No direct access to backend storage.
++- [ ] **Correctness:** pass shared/native tests for ID allocation, ordering, transaction retries, duplicate likes, identity, counts, and persistence. If normalized count queries exceed limits, document the blocker; do not silently substitute counters into the baseline.
+ - [ ] **Deployment:** automate backend setup, function deployment, batch import, canonical reset, readiness, and resource capture.
+ - [ ] **Benchmarks:** apply the common protocol, documenting native query caching and transaction retry behavior.
+ - [ ] **Report:** retain function/runtime/storage choices and evidence under `results/convex/<run-id>/`.
+@@ -238,9 +238,9 @@ Each service has **seven delivery gates**: (1) feasibility/version/profile, (2)
+ 
+ ## 6. Next execution checkpoint
+ 
+-**Convex: acknowledged crash recovery completed; obtain the separate capacity/blocked-outcome decision.** The owner authorized ONLY exact-owned same-image recovery after the observed backendSIGINT139, and its41 checks/full canonical restoration passed. The clean-shutdown gate remainsFAILED. No k6/smoke/capacity attempt is authorized by that recovery approval; final currentSDK/generated/runtime/harness freeze and reserve gates remain before any later approved campaign. PocketBase's native v0.40.5 / Go 1.27.2 / SQLite 3.53.4 implementation, full frozen-input correctness gate, three independent 10,000-VU confirmations, original source/raw/data/image/resource/privacy/continuity audits and [lower-bound report](results/pocketbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md) are complete. Source/report/evidence publication is independently verified at remote `8dcfd5a279be7c40e1ef6fe7c8c69916108e5c5c`. The completed owned PocketBase target is stopped; volumes/evidence retained. No exact maximum or 250-VU boundary is claimed.
++**Continue Convex native feasibility**, as explicitly authorized by the owner after PocketBase completion. PocketBase's native v0.40.5 / Go 1.27.2 / SQLite 3.53.4 implementation, full frozen-input correctness gate, three independent 10,000-VU confirmations, original source/raw/data/image/resource/privacy/continuity audits and [lower-bound report](results/pocketbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md) are complete. Source/report/evidence publication is independently verified at remote `8dcfd5a279be7c40e1ef6fe7c8c69916108e5c5c`. The completed owned PocketBase target is stopped; volumes/evidence retained. No exact maximum or 250-VU boundary is claimed.
+ 
+-**Historical feasibility-phase narrative (its pending lists are superseded by the current table/checklist/results above):** Convex's official `precompiled-2026-10-06-a3538c6` / SDK1.46.0 native AMD64 image was pinned. An isolated owned deployment has verified actual parent/container budgets and matching upstream image revision; three native storage/private-function/query-cache tests passed after retained missing-function reds. `UDF_CACHE_MAX_SIZE=0` was verified with repeated-query execution metrics, no result-cache hits/waits and zero retained bytes. The official image's `/version` endpoint returns `unknown`; the exact release/source/image pin is disclosed rather than replacing that response with an invented version. **The initial SQLite feasibility attempt failed:** supported imports completed and normalized feed/detail assertions passed, but full independent stored-row verification timed out; a later bounded read-only paging diagnostic was followed by an actual serving-backend OOM kill. The pinned SQLite adapter ignores its scan size hint and eagerly materializes an index range before returning a stream. The stopped container, volume, credentials and original evidence are retained, without a restart/reseed/limit change. See the [failure diagnosis](results/convex/implementation-checks/SQLITE_FEASIBILITY_BLOCKER.md). The owner subsequently approved a separate official PostgreSQL-backed attempt inside the same total budget. PostgreSQL 17.11 is pinned, a fresh owned workspace passed host/namespace/headroom checks, and the aggregate validator passed five tests after observed missing-validator reds. The two-server setup now has verified actual native image/kernel/version/durability settings and 16 passing empty setup tests, with unchanged process/source/private-input/service/listener identities. Canonical native stored-row/hash/feed/detail/private/cache checks have now passed within the unchanged aggregate budget; [checkpoint](results/convex/implementation-checks/POSTGRES_CANONICAL_READ_FEASIBILITY.md) preserves the 14-test full-data outcome and PostgreSQL child pressure. Native HTTP reads subsequently passed20 checks, positive storage-health/backend-clock23, and [actual hot-path PG-stop/503/recovery24](results/convex/implementation-checks/ACTUAL_POSTGRES_OUTAGE_AND_RECOVERY.md), including fresh independent full stored canonical hash after PG process restart. Backend PID/start stayed unchanged, original services/listener and private/platform/source identities were preserved; configured budget unchanged, parent lifetime peak3,323,609,088bytes and raw memory pressure retained without OOM/swap increase. Complete compatibility, actual native wide-ID/NUL round trips, auth/writes/acknowledged-write lifecycle, full frozen reproduction/current correctness and capacity remain pending. Selected source snapshots are not a complete SDK/generated/runtime freeze. See [current native profile](results/convex/implementation-checks/initial-native-serving-profile.json) and [service status](services/convex/README.md). Use **azabab.com**, the same **1-vCPU/4-GiB/no-swap entire-serving slice**, separate **2-vCPU/8-GiB/no-swap k6 1.3.0 runner**, canonical data/workload/SLOs/confirmation rules, and prominent exact-version/allocation disclosure. A feasibility blocker is not permission to silently substitute counters, unsupported storage access, caches or different constraints. Nhost and later services remain queued and are not authorized by this progression request.
++Convex's official `precompiled-2026-10-06-a3538c6` / SDK 1.46.0 native AMD64 image is pinned. An isolated owned deployment has verified actual parent/container budgets and matching upstream image revision; three native storage/private-function/query-cache tests passed after retained missing-function reds. `UDF_CACHE_MAX_SIZE=0` was verified with repeated-query execution metrics, no result-cache hits/waits and zero retained bytes. The official image's `/version` endpoint returns `unknown`; the exact release/source/image pin is disclosed rather than replacing that response with an invented version. **The initial SQLite feasibility attempt failed:** supported imports completed and normalized feed/detail assertions passed, but full independent stored-row verification timed out; a later bounded read-only paging diagnostic was followed by an actual serving-backend OOM kill. The pinned SQLite adapter ignores its scan size hint and eagerly materializes an index range before returning a stream. The stopped container, volume, credentials and original evidence are retained, without a restart/reseed/limit change. See the [failure diagnosis](results/convex/implementation-checks/SQLITE_FEASIBILITY_BLOCKER.md). The owner subsequently approved a separate official PostgreSQL-backed attempt inside the same total budget. PostgreSQL 17.11 is pinned, a fresh owned workspace passed host/namespace/headroom checks, and the aggregate validator passed five tests after observed missing-validator reds. The two-server setup now has verified actual native image/kernel/version/durability settings and 16 passing empty setup tests, with unchanged process/source/private-input/service/listener identities. Canonical native stored-row/hash/feed/detail/private/cache checks have now passed within the unchanged aggregate budget; [checkpoint](results/convex/implementation-checks/POSTGRES_CANONICAL_READ_FEASIBILITY.md) preserves the 14-test full-data outcome and PostgreSQL child pressure. Native HTTP reads subsequently passed20 checks, positive storage-health/backend-clock23, and [actual hot-path PG-stop/503/recovery24](results/convex/implementation-checks/ACTUAL_POSTGRES_OUTAGE_AND_RECOVERY.md), including fresh independent full stored canonical hash after PG process restart. Backend PID/start stayed unchanged, original services/listener and private/platform/source identities were preserved; configured budget unchanged, parent lifetime peak3,323,609,088bytes and raw memory pressure retained without OOM/swap increase. Complete compatibility, actual native wide-ID/NUL round trips, auth/writes/acknowledged-write lifecycle, full frozen reproduction/current correctness and capacity remain pending. Selected source snapshots are not a complete SDK/generated/runtime freeze. See [current native profile](results/convex/implementation-checks/initial-native-serving-profile.json) and [service status](services/convex/README.md). Use **azabab.com**, the same **1-vCPU/4-GiB/no-swap entire-serving slice**, separate **2-vCPU/8-GiB/no-swap k6 1.3.0 runner**, canonical data/workload/SLOs/confirmation rules, and prominent exact-version/allocation disclosure. A feasibility blocker is not permission to silently substitute counters, unsupported storage access, caches or different constraints. Nhost and later services remain queued and are not authorized by this progression request.
+ 
+ TrailBase's 15,000-VU confirmed lower bound (`3b1fa99`) and Supabase's 2,000-VU confirmed candidate (`4c06a8d`) remain separate published outcomes; their owned stacks are stopped and volumes retained. Preserve all historical cohorts, original raw/checksum evidence, unrelated services and original port4000 listener; only loopback14000 is benchmark ingress. Invalid generator/host measurements are not target failures. No global host changes, fabricated maximum or silent protocol tuning.
+ 
+diff --git a/README.md b/README.md
+index a88823a..6fe08e5 100644
+--- a/README.md
++++ b/README.md
+@@ -27,7 +27,7 @@ bash services/trailbase/run.sh bench --smoke --vus 5000 # unscored pipeline cali
+ bash services/trailbase/run.sh bench --campaign --max-vus 20000 --max-attempts 12
+ ```
+ 
+-See [TrailBase setup and architecture](services/trailbase/README.md) for requirements, resource limits, auth scope, safe lifecycle operations, result locations, and caveats. Supabase's measured implementation/report is complete. **PocketBase v0.40.5 / Go 1.27.2 / SQLite 3.53.4** now has a verified [10,000-VU confirmed lower-bound report](results/pocketbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md): three independent holds, 949,739 requests / 900 seconds, zero request/schema errors. Original source/raw/resource/privacy/continuity review is complete; owned containers stopped, volumes/evidence retained. This is not an exact maximum or 250-VU-resolved boundary. Source/report/evidence are pushed and remote publication verified at **`8dcfd5a`**. The owner authorized **Convex next**. Its [current results](results/convex/README.md) are an **incomplete feasibility/correctness checkpoint, not a capacity score**: default SQLite failed; the approved PostgreSQL variant passed full canonical/native reads, authentication/writes, stored signed64/Unicode/NUL/orphan-feed/transaction edges, the **original42/fullshared6/additional57 checks**, and exact application-only reset. A planned SIGINT shutdown then produced a real backend139; **the clean-shutdown gate remains failed**. Explicitly owner-authorized same-image recovery passed41 checks, including actual acknowledged post/like/allocation survival and full canonical restoration. Capacity requires a separate owner decision plus remaining frozen runtime/harness/headroom gates; **no Convex load measurement exists**. Later services remain queued until Convex is completed or an explicit blocked/stopping outcome is accepted. The same compatibility-auth scope, host and aggregate resource budgets apply unless explicitly amended.
++See [TrailBase setup and architecture](services/trailbase/README.md) for requirements, resource limits, auth scope, safe lifecycle operations, result locations, and caveats. Supabase's measured implementation/report is complete. **PocketBase v0.40.5 / Go 1.27.2 / SQLite 3.53.4** now has a verified [10,000-VU confirmed lower-bound report](results/pocketbase/vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md): three independent holds, 949,739 requests / 900 seconds, zero request/schema errors. Original source/raw/resource/privacy/continuity review is complete; owned containers stopped, volumes/evidence retained. This is not an exact maximum or 250-VU-resolved boundary. Source/report/evidence are pushed and remote publication verified at **`8dcfd5a`**. The owner authorized **Convex next**. Its [current results](results/convex/README.md) are an **incomplete feasibility/correctness checkpoint, not a capacity score**: default SQLite failed, while the approved PostgreSQL variant passed full native canonical reads, HTTP reads and a 24-check actual database-outage/recovery stage. Authentication/writes/full correctness and all load measurements remain pending. Later services remain queued until Convex is complete. The same compatibility-auth scope, host and aggregate resource budgets apply unless explicitly amended.
+ 
+ Supabase lifecycle (designated native host and owned profile prerequisites required):
+ 
+diff --git a/results/convex/README.md b/results/convex/README.md
+index 98f3333..edcbe71 100644
+--- a/results/convex/README.md
++++ b/results/convex/README.md
+@@ -1,6 +1,6 @@
+ # Tested software and VPS slice
+ 
+-**Status: original contract/shared suite and native reset passed; clean-shutdown gate failed with backend139. Owner-authorized same-image acknowledged-write recovery passed41 checks. No Convex capacity score; capacity requires a separate owner decision.**
++**Status: incomplete feasibility/correctness checkpoint. No Convex capacity score.**
+ 
+ - **Convex:** official self-hosted `precompiled-2026-10-06-a3538c6`, upstream `a3538c6d212948f20726868e41d155d2534cd130`, SDK/CLI **1.46.0**, bundled Node **22.22.2**. Native `/version` reports `unknown`. AMD64 image: `sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4`.
+ - **Approved persistence variant:** PostgreSQL **17.11 (Debian17.11-1.pgdg12+2)**; AMD64 image `sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df`.
+@@ -19,12 +19,7 @@
+ | Positive storage health and backend uptime | 23 checks passed; actual backend-process uptime, not guessed module/worker age. | [Health and clock](implementation-checks/POSITIVE_STORAGE_HEALTH_AND_BACKEND_CLOCK.md) |
+ | Actual PostgreSQL outage/recovery | Warmed health path, stopped only owned PostgreSQL, observed sanitized HTTP503, recovered the same container and reverified the full canonical hash. 1 outage check + 23 recovery checks passed. | [24-check recovery result](implementation-checks/ACTUAL_POSTGRES_OUTAGE_AND_RECOVERY.md) |
+ | Fresh read-only publication verification | 27 checks passed, including another full stored-data hash, unchanged runtime/source/private/service identities. Auth reds separately reconfirmed. | [Publication verification](implementation-checks/PARTIAL_CHECKPOINT_PUBLICATION.md) |
+-| Strict synthetic HS256 authentication/input | Expanded actual tests first produced27 missing-route failures. Corrected original-spec JSON error text after a separately reproduced regression; fresh35selected checks and full canonical hash passed. Includes genuine-signature/tampering/positive-again control, not reject-only tests. | [Native auth/input](implementation-checks/STRICT_NATIVE_AUTH_AND_INPUT.md) |
+-| Native transactional HTTP writes | Seven actual write tests plus35current regressions passed:32concurrent unique contiguous creates,32same-user likes exactly once, native Unicode/NUL storage, signed creation author semantics and guarded canonical restoration. This selected42 is **not the inherited42-test suite**. | [Native writes](implementation-checks/NATIVE_TRANSACTIONAL_HTTP_WRITES.md) |
+-| Stored signed64 boundaries and orphan feed | All five stored-edge cases plus45 other selected checks passed: actual9007199254740993 identity/like, exact9223372036854775807 allocation/exhaustion, real post-patch collision rollback and exact20-post feed across24 newer missing-author rows. Preserved actual repeated-pagination platform error, then supported single-iterator fix. | [Native stored edges](implementation-checks/NATIVE_STORED_SIGNED64_AND_ORPHAN_FEED.md) |
+-| Original contract/shared suite/application-only reset | **Original unchanged42 checks passed**, full shared6 and57 additional checks passed. Native reset removed the suites'37 posts/five likes, restored allocation and independently reverified every canonical row/hash. | [Original contract and reset](implementation-checks/ORIGINAL_CONTRACT_AND_NATIVE_APPLICATION_RESET.md) |
+-| Planned clean-stack persistence attempt | Before phase acknowledged a real post/like/allocation. Requested backendSIGINT then actual backend139, Tokio shutdown panic and kernel isolate fault; nonOOM recovery guard refused automatic revival. PostgreSQL stop/after assertions were not reached. **Clean gate failed**, not silently accepted as a pass. | [Actual shutdown failure](implementation-checks/NATIVE_SIGINT_SHUTDOWN_CRASH.md) |
+-| Explicitly approved same-image crash recovery | **41 checks passed:** acknowledged500001/exact one like survived backend139 and PostgreSQL clean restart; next real create500002 proved persistent allocation. Exact-owned cleanup/full canonical hash restored; actual bothPIDs/starts changed, same containers/images/private/platform inputs, noOOM/swap increase. **Does not repair the clean-shutdown failure or itself authorize capacity.** | [Acknowledged crash recovery](implementation-checks/OWNER_APPROVED_ACKNOWLEDGED_CRASH_RECOVERY.md) |
++| Authentication | Initial missing/malformed-bearer tests produced six meaningful failures across two tests. These are expected reds before implementation, **not passing auth tests**. | [Auth red](implementation-checks/native-http-auth-gate-first-red-public.log) |
+ 
+ The passing stage counts overlap: **do not add them as distinct coverage totals**. The canonical logical SHA-256 is `738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d`.
+ 
+@@ -37,11 +32,11 @@ The passing stage counts overlap: **do not add them as distinct coverage totals*
+ | Scored p95 / p99 | **Not measured** |
+ | Capacity comparison/ranking | **Not available** |
+ 
+-Correctness/import durations and individual health observations are not scored request-latency measurements. The latest completed original-contract/reset gate recorded parent lifetime peak **3,479,109,632 bytes**, post-run current **3,466,428,416 bytes**, under the unchanged4-GiB parent. Substantial raw pressure and earlier PostgreSQL child peak overshoot remain retained. No serving OOM or host swap-out increase occurred in that gate. The later backend139 is a real shutdown crash, **not OOM and not a passing clean restart**. These observations do not guarantee load fit.
++Correctness/import durations and individual health observations are not scored request-latency measurements. The fresh publication-verification parent memory peak was **3,329,617,920 bytes**, with post-run current **3,317,202,944 bytes**, under the unchanged 4-GiB configured parent. Substantial raw memory-pressure counters and earlier PostgreSQL child peak overshoot are retained. No serving OOM or host swap-out increase was observed in the accepted PostgreSQL stages. This does not guarantee full write/load fit.
+ 
+ ## Why Convex is not finished
+ 
+-Stored-wide/signed64/collision/orphan-feed, general native application-only reset, original42 and full shared6 now have passing evidence. **The planned clean-shutdown gate failed** after the backend logged successful application shutdown, then panicked/segfaulted during teardown. The owner-authorized exact-owned same-image recovery completed: actual acknowledged post/like/allocation survived,41 checks passed and full canonical data was restored. **The original clean-shutdown failure remains failed.** A separate capacity/blocked-outcome decision is pending. Full current SDK/compiler/generated/runtime freeze, final frozen correctness/harness checks and actual runner headroom also remain before any authorized capacity search/confirmations/audit. No BaaS advancement or capacity score is implied by these partial correctness results.
++Still required: strict authentication/JSON validation; native transactional post allocation and exactly-once likes; concurrency/rollback; actual stored wide signed64/Unicode/NUL round trips; reset and acknowledged compatibility-write restart persistence; full frozen SDK/generated/runtime reproduction and inherited/current correctness; then runner headroom, load search, independent confirmations and final audit.
+ 
+ Native HTTP actions/private functions access storage through supported Convex APIs; no timed application-side PostgreSQL driver or precomputed like counters. Ordinary database/index/module caches stay enabled; query-result caching is disabled and reexecution checked. Synthetic HS256 compatibility is not native signup/login/session throughput. Logical relation checks are not physical SQL FK enforcement; a clean restart is not provider power-loss proof.
+ 
+diff --git a/scripts/benchmark.py b/scripts/benchmark.py
+index 2efde2c..1070737 100644
+--- a/scripts/benchmark.py
++++ b/scripts/benchmark.py
+@@ -30,9 +30,9 @@ def deployment_settings(system, machine, environ):
+     if environ.get('BENCHMARK_PLATFORM', native) != native:
+         raise ValueError('Primary benchmark requires native images, not emulation')
+     project = environ.get('BENCHMARK_PROJECT', 'baas-trailbase')
+-    if len(project) > 63 or not re.fullmatch(r'baas-(?:trailbase|supabase|pocketbase)(?:-[a-z0-9]+)*', project):
++    if len(project) > 63 or not re.fullmatch(r'baas-(?:trailbase|supabase|pocketbase|convexpg)(?:-[a-z0-9]+)*', project):
+         raise ValueError('Project must use the isolated baas-trailbase benchmark namespace')
+-    prefix = 'local-orbstack-' if system == 'Darwin' else ('vps16-linux-' if project in ('baas-trailbase-vps16', 'baas-supabase-vps16', 'baas-pocketbase-vps16') else 'vps-linux-')
++    prefix = 'local-orbstack-' if system == 'Darwin' else ('vps16-linux-' if project in ('baas-trailbase-vps16', 'baas-supabase-vps16', 'baas-pocketbase-vps16', 'baas-convexpg-vps16') else 'vps-linux-')
+     return {'project': project, 'platform': native, 'track': prefix + arch}
+ 
+ 
+@@ -161,13 +161,13 @@ def inspect(name):
+ 
+ 
+ def snapshot(destination, service='trailbase'):
+-    if service not in ('trailbase', 'supabase', 'pocketbase'):
++    if service not in ('trailbase', 'supabase', 'pocketbase', 'convex'):
+         raise ValueError('Unsupported benchmark service snapshot')
+     paths = [ROOT / name for name in ['README.md', 'MASTER_PLAN.md', 'LICENSE', 'SPEC.md', 'schema.sql', '.gitignore', '.dockerignore']]
+     for name in [f'services/{service}', 'runner', 'scripts', 'bench', 'test', 'contracts', '.github/workflows', 'seed']:
+         if (ROOT / name).exists():
+             paths.extend(p for p in (ROOT / name).rglob('*') if p.is_file()
+-                         and not any(part in ['target', '__pycache__', 'tsv'] for part in p.parts)
++                         and not any(part in ['target', '__pycache__', 'tsv', 'node_modules', '.git'] for part in p.parts)
+                          and p.name not in ['tokens.json'] and not p.name.startswith('feed.db')
+                          and (not p.name.startswith('.env') or p.name == '.env.example'))
+     with tarfile.open(destination / 'source.tar.gz', 'w:gz') as archive:
+diff --git a/scripts/convex_profile.py b/scripts/convex_profile.py
+index be768a0..32c80a4 100644
+--- a/scripts/convex_profile.py
++++ b/scripts/convex_profile.py
+@@ -1,13 +1,23 @@
+ #!/usr/bin/env python3
+ """Fail-closed aggregate attestation for the native PostgreSQL-backed candidate."""
++import hashlib
+ import json
++import os
+ from pathlib import Path
+ import re
++import socket
++import subprocess
++import urllib.error
++import urllib.request
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ PROJECT = 'baas-convexpg-vps16'
+ SLICE = 'tdsbaasconvexpgvps16.slice'
+ MEMORY = {'backend': 3221225472, 'postgres': 1073741824}
++STATE = ROOT / '.state/convex'
++SERVICES = ('backend', 'postgres')
++PINS = json.loads((ROOT / 'services/convex/versions.json').read_text())
++POSTGRES = json.loads((ROOT / 'services/convex/postgres-versions.json').read_text())
+ 
+ 
+ def validate_stack(value):
+@@ -52,3 +62,153 @@ def validate_stack(value):
+     except (KeyError, TypeError, ValueError, AttributeError) as error:
+         raise RuntimeError('Malformed or incomplete native serving attestation') from error
+     return True
++
++
++def capture(argv):
++    return subprocess.check_output(argv, text=True)
++
++
++def require_native():
++    if os.uname().sysname != 'Linux' or os.uname().machine != 'x86_64' or socket.getfqdn() != 'claudius.azabab.com':
++        raise RuntimeError('Use the designated native AMD64 VPS only')
++    if json.loads((ROOT.parent / '.benchmark-owned').read_text())['project'] != PROJECT:
++        raise RuntimeError('Owned Convex workspace required')
++
++
++def tree_inventory(directory):
++    directory = directory.resolve()
++    rows = []
++    for path in sorted(directory.rglob('*')):
++        if path.is_symlink():
++            if not path.resolve().is_relative_to(directory):
++                raise RuntimeError('Frozen dependency symlink escapes its root')
++            rows.append({'path': str(path.relative_to(directory)), 'link': os.readlink(path)})
++        elif path.is_file():
++            with path.open('rb') as stream: digest = hashlib.file_digest(stream, 'sha256').hexdigest()
++            rows.append({'path': str(path.relative_to(directory)), 'bytes': path.stat().st_size, 'sha256': digest, 'mode': path.stat().st_mode & 0o777})
++    return rows
++
++
++def digest(value):
++    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
++
++
++def files_hash(files):
++    result = hashlib.sha256()
++    for path in sorted(set(files)):
++        result.update(str(path.relative_to(ROOT)).encode() + b'\0' + path.read_bytes() + b'\0')
++    return result.hexdigest()
++
++
++def full_runtime_state():
++    app = ROOT / 'services/convex/app'
++    required = ['node_modules/convex/package.json', 'convex/_generated/server.js', 'convex/_generated/api.js']
++    if not all((app / name).is_file() for name in required):
++        raise RuntimeError('Complete installed SDK/generated runtime is required')
++    if json.loads((app / required[0]).read_text())['version'] != '1.46.0':
++        raise RuntimeError('Installed SDK differs from pinned 1.46.0')
++    # Each complete tree, including native esbuild/compiler binary and symlinks.
++    value = {name: tree_inventory(app / name) for name in ['node_modules', 'convex/_generated']}
++    value['tools_image'] = capture(['docker', 'image', 'inspect', 'baas-trailbase-vps16-tools:0.1.0', '--format', '{{.Id}} {{.Os}}/{{.Architecture}}']).strip()
++    return {'sha256': digest(value), 'inventory': value}
++
++
++def app_hash():
++    directory = ROOT / 'services/convex'
++    return files_hash(p for p in directory.rglob('*') if p.is_file() and 'node_modules' not in p.parts and not p.name.startswith('.env') and p.suffix in ['.js', '.ts', '.json', '.yaml'])
++
++
++def verification_hash():
++    files = [ROOT / 'SPEC.md', ROOT / 'schema.sql', ROOT / 'runner/Dockerfile']
++    for name in ['scripts', 'bench', 'test', 'seed', 'contracts']:
++        files.extend(p for p in (ROOT / name).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
++    return files_hash(files)
++
++
++def runtime_values():
++    value = dict(line.split('=', 1) for line in (STATE / 'compat-jwt.env').read_text().splitlines())
++    if set(value) != {'JWT_SECRET'} or not re.fullmatch(r'[0-9a-f]{64}', value['JWT_SECRET']):
++        raise RuntimeError('Unchanged private compatibility key required')
++    return value
++
++
++def runtime_hash():
++    # Private values/configuration are hashed in memory, never serialized to artifacts.
++    files = [STATE / name for name in ['cli.env', 'backend.env', 'postgres.env', 'compat-jwt.env']]
++    local = ROOT / 'services/convex/app/.env.local'
++    if local.exists(): files.append(local)
++    config = {}
++    for role in SERVICES:
++        item = json.loads(capture(['docker', 'inspect', PROJECT + '-' + role + '-1']))[0]
++        config[role] = {key: item['Config'].get(key) for key in ['Env', 'Entrypoint', 'Cmd', 'User', 'WorkingDir']}
++        config[role]['host'] = {key: item['HostConfig'].get(key) for key in ['ReadonlyRootfs', 'CapDrop', 'SecurityOpt', 'CgroupParent', 'NanoCpus', 'Memory', 'MemorySwap']}
++        config[role]['mounts'] = item['Mounts']
++    return digest({'files': files_hash(files), 'native_config': config})
++
++
++def parent_sample():
++    group = Path('/sys/fs/cgroup') / SLICE
++    names = ['cpu.max', 'cpu.stat', 'cpu.pressure', 'memory.max', 'memory.current', 'memory.peak', 'memory.swap.max', 'memory.events', 'memory.stat', 'memory.pressure', 'io.stat', 'io.pressure']
++    return {name: (group / name).read_text() for name in names} | {'children': sorted(p.name for p in group.iterdir() if p.is_dir())}
++
++
++def targets():
++    # Import lazily: existing budget tests do not require a deployment environment.
++    import benchmark as b
++    result = {}
++    for role in SERVICES:
++        name = PROJECT + '-' + role + '-1'
++        item = json.loads(capture(['docker', 'inspect', name]))[0]
++        env = dict(entry.split('=', 1) for entry in item['Config']['Env'])
++        if role == 'backend':
++            if env.get('UDF_CACHE_MAX_SIZE') != '0' or env.get('RUNTIME_WORKER_THREADS') != '1':
++                raise RuntimeError('Serving cache/thread configuration differs')
++            for key in ['TRANSACTION_MAX_READ_SIZE_ROWS', 'TRANSACTION_MAX_READ_SIZE_BYTES', 'TRANSACTION_MAX_READ_SET_INTERVALS', 'TRANSACTION_MAX_NUM_USER_WRITES', 'TRANSACTION_MAX_USER_WRITE_SIZE_BYTES', 'DATABASE_UDF_USER_TIMEOUT_SECONDS', 'DATABASE_UDF_SYSTEM_TIMEOUT_SECONDS']:
++                if key in env: raise RuntimeError('Native serving defaults overridden')
++        pid = item['State']['Pid']; process = Path('/proc', str(pid), 'cgroup')
++        cgroup = process.read_text() if pid and process.exists() else ''
++        group = Path('/sys/fs/cgroup' + cgroup.strip().split('::')[1]) if cgroup else None
++        result[role] = b.inspect(name) | {'compose_project': item['Config']['Labels'].get('com.docker.compose.project'), 'cgroup_parent': item['HostConfig']['CgroupParent'], 'process_cgroup': cgroup, 'kernel': {key: (group / key).read_text() for key in ['cpu.max', 'cpu.stat', 'memory.max', 'memory.current', 'memory.peak', 'memory.swap.max', 'memory.events', 'memory.stat', 'io.stat']} if group else {}}
++    return result
++
++
++def profile():
++    require_native()
++    value = {'targets': targets(), 'parent': parent_sample()}
++    validate_stack(value)
++    with urllib.request.urlopen('http://127.0.0.1:14000/health', timeout=15) as response:
++        health = json.load(response)
++    if health.get('status') != 'ok' or health.get('db') != 'ok':
++        raise RuntimeError('Native storage health is not ready')
++    value['observed_health'] = health
++    return value
++
++
++def admin_query(path):
++    if path not in ['_system/frontend/getSchemas', '_system/cli/modules:apiSpec']:
++        raise ValueError('Unsupported native deployment catalog')
++    from convex import _NoRedirect
++    values = dict(line.split('=', 1) for line in (STATE / 'cli.env').read_text().splitlines())
++    request = urllib.request.Request('http://127.0.0.1:13210/api/query', data=json.dumps({'path': path, 'args': {}, 'format': 'json'}).encode(), headers={'Content-Type': 'application/json', 'Authorization': 'Convex ' + values['CONVEX_SELF_HOSTED_ADMIN_KEY']})
++    try:
++        with urllib.request.build_opener(urllib.request.ProxyHandler({}), _NoRedirect()).open(request, timeout=30) as response: value = json.load(response)
++        if value.get('status') != 'success': raise ValueError()
++        return value['value']
++    except (urllib.error.URLError, ValueError, KeyError):
++        raise RuntimeError('Native deployment catalog unavailable; preserve state') from None
++
++
++def schema_state():
++    schema = admin_query('_system/frontend/getSchemas')
++    if not schema.get('active') or schema.get('inProgress'):
++        raise RuntimeError('Stable active native schema required')
++    active = json.loads(schema['active'])
++    if {table['tableName'] for table in active['tables']} != {'users', 'posts', 'likes', 'feed_sequences'}:
++        raise RuntimeError('Native application schema set differs')
++    value = {'active_schema': active, 'function_spec': admin_query('_system/cli/modules:apiSpec')}
++    return {'sha256': digest(value), 'catalog': value, 'scope': 'Actual supported native CLI/MCP catalog queries; not physical SQL FK/UNIQUE declarations'}
++
++
++def deployment_attestation():
++    serving = profile()
++    return {'app_source_sha256': app_hash(), 'verification_source_sha256': verification_hash(), 'runtime_inputs_sha256': runtime_hash(), 'full_runtime': full_runtime_state()['sha256'], 'schema': schema_state(), 'serving_profile': serving, 'images': {role: {key: target[key] for key in ['Image', 'platform', 'image_manifest_digest']} for role, target in serving['targets'].items()}, 'host_identity_sha256': hashlib.sha256(Path('/etc/machine-id').read_bytes()).hexdigest()}
+diff --git a/services/convex/README.md b/services/convex/README.md
+index 96ed738..e648f1e 100644
+--- a/services/convex/README.md
++++ b/services/convex/README.md
+@@ -1,28 +1,18 @@
+-# Convex — native compatibility passed; lifecycle gate/recovery incomplete
++# Convex — native self-hosted feasibility in progress
+ 
+ ## Tested software and VPS slice
+ 
+ **Candidate release:** official self-hosted `precompiled-2026-10-06-a3538c6`, upstream [`a3538c6d212948f20726868e41d155d2534cd130`](https://github.com/get-convex/convex-backend/tree/a3538c6d212948f20726868e41d155d2534cd130), with matching **Convex SDK/CLI 1.46.0**. The official native Linux AMD64 image is pinned by selected manifest in [`versions.json`](versions.json) and [`compose.yaml`](compose.yaml). This is the self-hosted backend, not the hosted Convex cloud or a replacement SQLite server. The actual image revision was checked against that full upstream commit; its bundled Node is **22.22.2**, while untimed tools use Node **22.20.0**. The native `/version` endpoint reports **`unknown`**; this is retained honestly, not overwritten with a fabricated semantic version.
+ 
+-**Required entire-serving allocation:** **1 vCPU quota / 4 GiB (4,294,967,296 bytes) / zero swap**, including every required process. The original SQLite attempt used `tdsbaasconvexvps16.slice` ([initial profile](../../results/convex/implementation-checks/initial-native-serving-profile.json)). The approved PostgreSQL variant uses the separate **`tdsbaasconvexpgvps16.slice`**, with backend **3 GiB (3,221,225,472 bytes)** and PostgreSQL **1 GiB (1,073,741,824 bytes)** children sharing that **single one-core/4-GiB parent**, not independent serving budgets ([actual runtime profile](../../results/convex/implementation-checks/native-postgres-empty-setup-verification-public.json)). PostgreSQL is native **17.11 (Debian17.11-1.pgdg12+2)**, AMD64 manifest **`sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df`**. **Canonical data, original42/shared6 compatibility, native writes/concurrency/stored signed64 edges and application-only reset have passed. The clean-shutdown lifecycle gate failed with backend139; owner-authorized same-image recovery/persistence passed41 checks. No capacity testing is authorized by that recovery decision.** The separate load generator, when reached, remains **k6 1.3.0 / 2 vCPUs / 8 GiB (8,589,934,592 bytes) / zero swap**, profile `k6-2cpu-8g-v3`. No Convex load test has run.
++**Required entire-serving allocation:** **1 vCPU quota / 4 GiB (4,294,967,296 bytes) / zero swap**, including every required process. The original SQLite attempt used `tdsbaasconvexvps16.slice` ([initial profile](../../results/convex/implementation-checks/initial-native-serving-profile.json)). The approved PostgreSQL variant uses the separate **`tdsbaasconvexpgvps16.slice`**, with backend **3 GiB (3,221,225,472 bytes)** and PostgreSQL **1 GiB (1,073,741,824 bytes)** children sharing that **single one-core/4-GiB parent**, not independent serving budgets ([actual runtime profile](../../results/convex/implementation-checks/native-postgres-empty-setup-verification-public.json)). PostgreSQL is native **17.11 (Debian17.11-1.pgdg12+2)**, AMD64 manifest **`sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df`**. **Canonical native import/read fit now passed**, but complete compatibility/write/lifecycle fit remains unproven. The separate load generator, when reached, remains **k6 1.3.0 / 2 vCPUs / 8 GiB (8,589,934,592 bytes) / zero swap**, profile `k6-2cpu-8g-v3`. No Convex load test has run.
+ 
+ Use only the approved native AMD64 **azabab.com** host. These are quota-limited slices on an existing **shared host**, not a dedicated VPS or measured $12/month offering. Existing workloads, the original port4000 listener, stopped earlier benchmark volumes and all historical evidence must remain intact. Region and monthly price are unknown.
+ 
+-## Latest status and scope
+-
+-The supported application now uses native HTTP actions → private native queries/mutations, strict per-request synthetic HS256 validation, actual request-time like counts and persistent native transaction allocation. Actual stored IDs beyond JavaScript's safe integer range, exact signed64 maximum/exhaustion, post-patch collision rollback, Unicode/NUL,32concurrent creates/likes and the24-orphan feed case passed. The feed uses one indexed native async iterator: repeated pagination within a single UDF was rejected by the real platform, and its observed error/fix is preserved in [stored-edge evidence](../../results/convex/implementation-checks/NATIVE_STORED_SIGNED64_AND_ORPHAN_FEED.md).
+-
+-The **unchanged original42 checks**, **entire shared6 suite**, **57 additional checks**, exact native reset of their37 posts/five likes/allocation, and independent full canonical hash passed. [`maintenance.js`](app/convex/maintenance.js)/[`scripts/convex.py`](../../scripts/convex.py) provide untimed private application-only delta reset with bounded native pages/batches and ownership/range/time guards; no underlying SQL driver, native-system/credential/Auth reset or blanket reseed. See [original contract/reset evidence](../../results/convex/implementation-checks/ORIGINAL_CONTRACT_AND_NATIVE_APPLICATION_RESET.md).
+-
+-A later planned clean-stack restart test first acknowledged a real post/like/allocation, then the backend logged successful application shutdown after configuredSIGINT but suffered an isolate Tokio teardown panic/kernel fault and **exit139, notOOM**. The guard correctly refused automatic revival; PostgreSQL was not yet stopped. The failed clean-shutdown gate remains failed. The owner subsequently authorized only exact-owned same-image recovery and acknowledged-write persistence checks, **with capacity decided separately afterward**. The approved recovery then passed41 checks: actual acknowledged post/one like survived, next real creation continued500002, exact-owned cleanup/full canonical hash restored and both new native PIDs/starts were attested under unchanged images/budgets. See [complete failure evidence](../../results/convex/implementation-checks/NATIVE_SIGINT_SHUTDOWN_CRASH.md), [separate acknowledged crash recovery](../../results/convex/implementation-checks/OWNER_APPROVED_ACKNOWLEDGED_CRASH_RECOVERY.md) and the mutable [results index](../../results/convex/README.md). Do not substitute crash recovery for a passing clean lifecycle or claim power-loss durability.
+-
+-Complete current SDK/compiler/generated/runtime freeze, final frozen harness/correctness, actual runner headroom and any separately authorized capacity campaign remain incomplete. **No Convex VUs/RPS/p95/p99 or completion score exists.** Historical stage narratives below are scoped to their time; their old pending lists do not override this latest status.
+-
+-## Earlier staged feasibility history
++## Status and scope
+ 
+ **The initial SQLite-backed feasibility attempt failed; no full application, accepted correctness result or performance score is claimed.** Supported CLI imports completed, but independent full stored-row verification timed out. A subsequent bounded read-only paging diagnostic was followed by an actual **serving-backend OOM kill** within the unchanged 4-GiB slice. The stopped container, native volume, private credentials and original evidence are retained; no restart/reseed/limit increase was performed. See the [failure diagnosis](../../results/convex/implementation-checks/SQLITE_FEASIBILITY_BLOCKER.md) and [structured checkpoint](../../results/convex/implementation-checks/sqlite-feasibility-blocker.json). The owner has now approved a separate attempt using the same pinned release's official PostgreSQL persistence, with both servers sharing the unchanged aggregate budget and fresh owned storage. The fresh PostgreSQL-backed serving pair has now started: actual native images, one shared 1-vCPU/4-GiB/zero-swap parent, 3-GiB backend plus 1-GiB PostgreSQL children, PostgreSQL 17.11 and enabled `fsync`/`synchronous_commit`/`full_page_writes` were verified. All **16 dependency-complete empty setup tests** now passed (config4/native3/converter4/budget5), with actual resource/source/private-input/process/service/listener continuity verified after preserving and diagnosing setup failures. See the [empty setup checkpoint](../../results/convex/implementation-checks/POSTGRES_EMPTY_SETUP.md). Canonical inputs were reused byte-for-byte without copying credentials/native databases, and fresh native full-data tests failed meaningfully on empty users/feed before import. The supported PostgreSQL-backed native import and independent full stored-row/hash/feed/detail/private/cache verification have now passed: [canonical read checkpoint](../../results/convex/implementation-checks/POSTGRES_CANONICAL_READ_FEASIBILITY.md). All 50,000/500,000/2,016,005 native rows reproduced the canonical logical hash; 14 tests passed, without a serving OOM/restart or swap-out increase. Peak parent memory2,613,133,312bytes; substantial PostgreSQL child limit/reclaim pressure is disclosed, not hidden. Native HTTP reads subsequently passed20 checks; positive storage-health/backend-clock regression passed23; an actual hot-path PostgreSQL-stop/503/recovery plus current full-canonical regression passed24. The latter kept the backend alive and restarted only owned PostgreSQL, with the full canonical hash unchanged. Its parent lifetime peak increased to3,323,609,088bytes; no serving OOM or swap-out increase was observed, and native memory-pressure counters remain retained. These are partial correctness stages, not a capacity score. Wide-ID/NUL round trips, strict auth/writes/acknowledged-write lifecycle/full reproduction and correctness remain pending. The SQLite failure report records the earlier pre-approval checkpoint and will remain distinct from this new variant. PocketBase was published before this work began. Nhost and later services are not authorized by this progression.
+ 
+-The initial feasibility requirements were (now evidenced by the linked current stages, without a completed lifecycle/capacity claim):
++Before implementing the complete compatibility application, prove:
+ 
+ - Supported native import of all **50,000 users / 500,000 posts / 2,016,005 likes**, preserving canonical logical hash `738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d`, platform metadata, IDs, relationships, timestamps and text.
+ - Normalized request-time feed/detail counts through native indexed queries, within this release's default **32,000 document / 16-MiB read / 4,096 index-range** transaction limits. No precomputed counters, underlying-storage timed driver or raised limits to conceal a blocker.
+@@ -42,7 +32,7 @@ k6 -> Convex HTTP action (site port3211)
+       or local PostgreSQL 17.11 (approved fresh variant)
+ ```
+ 
+-Private native storage, canonical pagination and normalized feed/detail read probes plus declarative schema/indexes are implemented for feasibility. Missing-function and empty-dataset reds are retained. After the complete PostgreSQL canonical read proof, six actual HTTP read tests produced 14 missing-route/status/content-type assertion failures. Minimal GET feed/detail/error HTTP actions then passed all six native HTTP read tests, with a fresh complete native canonical hash/query/private/cache/resource regression (**20 tests total**; [log](../../results/convex/implementation-checks/native-http-read-green-public.log)). All 19 selected current source hashes matched VPS/local bytes and process/private/platform/service identities were unchanged. This proves read integration, not native wide-ID/NUL round trips or complete compatibility. Positive storage-health and real backend-clock integration then passed23 checks ([checkpoint](../../results/convex/implementation-checks/POSITIVE_STORAGE_HEALTH_AND_BACKEND_CLOCK.md)). An actual owned-PostgreSQL stop, after warming the exact native health path, returned sanitized503; preplanned recovery then passed23 current regressions, including another complete stored canonical hash ([24-check outage/recovery checkpoint](../../results/convex/implementation-checks/ACTUAL_POSTGRES_OUTAGE_AND_RECOVERY.md)). Backend PID/start stayed unchanged, PostgreSQL restarted with the same container/image/data/private inputs, and original services/port4000 were preserved. Later native authentication/writes/reset stages are linked above; the subsequently failed shutdown and bounded owner-authorized recovery remain separate from this older read/outage checkpoint.
++Private native storage, canonical pagination and normalized feed/detail read probes plus declarative schema/indexes are implemented for feasibility. Missing-function and empty-dataset reds are retained. After the complete PostgreSQL canonical read proof, six actual HTTP read tests produced 14 missing-route/status/content-type assertion failures. Minimal GET feed/detail/error HTTP actions then passed all six native HTTP read tests, with a fresh complete native canonical hash/query/private/cache/resource regression (**20 tests total**; [log](../../results/convex/implementation-checks/native-http-read-green-public.log)). All 19 selected current source hashes matched VPS/local bytes and process/private/platform/service identities were unchanged. This proves read integration, not native wide-ID/NUL round trips or complete compatibility. Positive storage-health and real backend-clock integration then passed23 checks ([checkpoint](../../results/convex/implementation-checks/POSITIVE_STORAGE_HEALTH_AND_BACKEND_CLOCK.md)). An actual owned-PostgreSQL stop, after warming the exact native health path, returned sanitized503; preplanned recovery then passed23 current regressions, including another complete stored canonical hash ([24-check outage/recovery checkpoint](../../results/convex/implementation-checks/ACTUAL_POSTGRES_OUTAGE_AND_RECOVERY.md)). Backend PID/start stayed unchanged, PostgreSQL restarted with the same container/image/data/private inputs, and original services/port4000 were preserved. Authentication, writes and acknowledged compatibility-write restart/reset remain pending.
+ 
+ No application-side driver for the underlying SQL storage belongs in the timed path; the approved PostgreSQL connection is managed inside the official Convex backend. HTTP actions and V8/native database execution live in the official backend container. The official dashboard and a frontend app are not needed to serve this headless API; they are excluded, not falsely described as part of a full default dashboard deployment. The upstream backend's bundled Node executor remains inside the serving cgroup. The accepted partial health phase uses a private supported Node action for the backend's actual Linux PID1 uptime (`/proc/1/stat`, `/proc/uptime`, stock `getconf CLK_TCK`), rather than inventing a module/worker clock or adding another server. It reads no argv/environment/secrets or underlying application database. Its PID1 name/start time were checked against the actual backend container; anonymous callers cannot invoke the action, and all executor processes remain charged to the unchanged backend3-GiB/shared4-GiB parent. The separate actual dependency-failure/recovery proof does not establish acknowledged compatibility-write or provider power-loss durability.
+ 
+@@ -54,7 +44,7 @@ The pinned [self-hosted tuning guide](https://github.com/get-convex/convex-backe
+ 
+ ## Data mapping under investigation
+ 
+-Convex assigns extra native `_id`/`_creationTime` metadata. Public identities must remain canonical integers at the compatibility surface. [`scripts/import_convex.py`](../../scripts/import_convex.py) prepares supported JSONLines with fixed-width, 19-digit decimal public-ID text: positive signed64 numeric order then equals lexical index order without unsafe JavaScript-number conversion. Four VPS-side preparation tests passed after retained reds, covering exact wide IDs/Unicode/NUL, logical hash, invalid identities, duplicate/missing relations and nonreplacement on failure ([green](../../results/convex/implementation-checks/native-jsonl-preparation-green.log)). **This is preparation evidence only, not native storage/import proof.** Full preparation subsequently reproduced the original **50,000 / 500,000 / 2,016,005** counts and canonical logical hash, with a maximum **583** seeded likes on one post ([input manifest](../../results/convex/implementation-checks/canonical-jsonl-preparation.json)). In the original **SQLite-backed attempt**, the first supported native imports subsequently completed for all four tables. Native normalized feed/detail assertions (including the largest seeded 583-like count) and private-function checks passed, but the full independent stored-row hash errored at the unchanged 30-second client deadline. Later read-only pagination was followed by a confirmed serving OOM kill. That **SQLite variant remains unaccepted**; CLI completion and partial assertions did not substitute for its missing full hash. The separate approved PostgreSQL variant subsequently reproduced the full actual native stored-row hash and passed its native normalized read tests. Subsequent **actual native stored** wide-ID/Unicode/NUL and signed64 boundary/transaction tests passed, as did the original42/fullshared6; their separate current evidence is linked above. Earlier preparation-only results are not themselves promoted to storage proof. Native relation/uniqueness invariants use supported transactions, not physical SQL foreign keys or unique indexes.
++Convex assigns extra native `_id`/`_creationTime` metadata. Public identities must remain canonical integers at the compatibility surface. [`scripts/import_convex.py`](../../scripts/import_convex.py) prepares supported JSONLines with fixed-width, 19-digit decimal public-ID text: positive signed64 numeric order then equals lexical index order without unsafe JavaScript-number conversion. Four VPS-side preparation tests passed after retained reds, covering exact wide IDs/Unicode/NUL, logical hash, invalid identities, duplicate/missing relations and nonreplacement on failure ([green](../../results/convex/implementation-checks/native-jsonl-preparation-green.log)). **This is preparation evidence only, not native storage/import proof.** Full preparation subsequently reproduced the original **50,000 / 500,000 / 2,016,005** counts and canonical logical hash, with a maximum **583** seeded likes on one post ([input manifest](../../results/convex/implementation-checks/canonical-jsonl-preparation.json)). In the original **SQLite-backed attempt**, the first supported native imports subsequently completed for all four tables. Native normalized feed/detail assertions (including the largest seeded 583-like count) and private-function checks passed, but the full independent stored-row hash errored at the unchanged 30-second client deadline. Later read-only pagination was followed by a confirmed serving OOM kill. That **SQLite variant remains unaccepted**; CLI completion and partial assertions did not substitute for its missing full hash. The separate approved PostgreSQL variant subsequently reproduced the full actual native stored-row hash and passed its native normalized read tests. Native wide-ID/Unicode/NUL round trips and the complete compatibility correctness gate remain pending; the earlier preparation-only tests are not promoted to native round-trip proof. Native relation and uniqueness invariants would be enforced in supported transactions, not described as physical SQL foreign keys or unique indexes.
+ 
+ Do not fabricate native backup ZIP metadata to work around import typing: official docs distinguish plain JSON/JSONLines from native backup ZIPs with `generated_schema.jsonl`. Data/reset/durability choices remain to be verified. A normal restart cannot establish provider power-loss durability.
+ 
+@@ -62,4 +52,4 @@ Do not fabricate native backup ZIP metadata to work around import typing: offici
+ 
+ [`test/baas/convex_feasibility.py`](../../test/baas/convex_feasibility.py) exercises the real native HTTP query API and query-cache metrics; it is not an in-memory Convex mock. Run it only on the designated VPS with a private native admin key injected into the untimed tools container. The key must never enter k6, a committed file, command arguments or published output. Native schema/query red-green evidence and full-data feasibility evidence will be retained before any gate is checked off.
+ 
+-The application-only reset controller and native lifecycle test exist, but the clean-shutdown gate failed and owner-approved crash recovery passed its separate41-check bounded phase. A complete frozen benchmark wrapper/score is still absent. Do not interpret Compose, the reset CLI or passing functional stages as a reproduction recipe for a completed capacity result.
++There is no completed lifecycle wrapper or benchmark command yet. Do not interpret this initial Compose/configuration as a reproduction recipe for a completed score.

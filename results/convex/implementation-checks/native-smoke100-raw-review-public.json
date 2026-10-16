@@ -1,0 +1,65 @@
+{
+  "run": "20261016T015709588263Z-standard-100vu-k6-2cpu-8g-v3-smoke",
+  "mode": "smoke",
+  "outcome": "pass",
+  "reason": "hold gates passed",
+  "all_original_checksums_verified": true,
+  "raw_rows": 4941,
+  "raw_counts_and_quantiles_reproduced": true,
+  "raw_quantiles_ms": {
+    "min": 6.464103,
+    "max": 111.549268,
+    "med": 13.1452135,
+    "p(95)": 34.76025679999987,
+    "p(99)": 97.40511321000004
+  },
+  "requests_by_endpoint": {
+    "feed": 91,
+    "detail": 108,
+    "like": 20,
+    "create": 1
+  },
+  "errors_by_endpoint": {
+    "feed": 0,
+    "detail": 0,
+    "like": 0,
+    "create": 0
+  },
+  "statuses_by_endpoint": {
+    "feed": {
+      "200": 91
+    },
+    "detail": {
+      "200": 108
+    },
+    "like": {
+      "201": 20
+    },
+    "create": {
+      "201": 1
+    }
+  },
+  "schema_errors": 0,
+  "original_source_archive_files_compared_to_current_frozen_vps_bytes": 100,
+  "complete_frozen_inputs_match_correctness": true,
+  "measurement_replay": [
+    "pass",
+    "hold gates passed"
+  ],
+  "runtime_issue": null,
+  "actual_runner_kernel_sample_count": 8,
+  "hold_monitor_samples": 4,
+  "hold_monitor_span_seconds": 15.094961881637573,
+  "runner_peak_cpu_percent_one_core": 6.19,
+  "runner_peak_memory_percent_8gib": 0.83,
+  "parent_max_observed_current_bytes": 3596775424,
+  "parent_lifetime_peak_after": 4121296896,
+  "host_swapouts_before": 0,
+  "host_swapouts_after": 0,
+  "clean_shutdown": {
+    "result": "FAILED",
+    "backend_exit": 139,
+    "capacity_exception": "Explicit owner permission after separate acknowledged crash-recovery proof; no lifecycle or power-loss certification"
+  },
+  "not_capacity_bound": true
+}

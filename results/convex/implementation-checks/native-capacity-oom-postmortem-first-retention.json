@@ -1,0 +1,90 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-capacity-oom-postmortem-driver-original.log",
+      "original_bytes": 485,
+      "original_sha256": "f9b4c3df92595120394ab88c8a69c6fce7738e332d6d7ded80e518a5a2b464c4",
+      "public_derivative": "native-capacity-oom-postmortem-driver-original-public.log",
+      "derivative_bytes": 485,
+      "derivative_sha256": "f9b4c3df92595120394ab88c8a69c6fce7738e332d6d7ded80e518a5a2b464c4",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-oom-backend-original.log",
+      "original_bytes": 11002276,
+      "original_sha256": "690313633f80f097e1fe8bf9e9a355cedaa941593617862a6221365faaa6ca70",
+      "public_derivative": "native-capacity-oom-backend-original-public.log",
+      "derivative_bytes": 11002276,
+      "derivative_sha256": "690313633f80f097e1fe8bf9e9a355cedaa941593617862a6221365faaa6ca70",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-oom-kernel-original.log",
+      "original_bytes": 20659,
+      "original_sha256": "0e503912d3e7c21c5a11bf62d4fdbf5f2d3598aaa6679d88808acda347c3a009",
+      "public_derivative": "native-capacity-oom-kernel-original-public.log",
+      "derivative_bytes": 20659,
+      "derivative_sha256": "0e503912d3e7c21c5a11bf62d4fdbf5f2d3598aaa6679d88808acda347c3a009",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-oom-docker-events-original.jsonl",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_derivative": "native-capacity-oom-docker-events-original-public.jsonl",
+      "derivative_bytes": 0,
+      "derivative_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-oom-after-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "d525b670801e816da3652c6b2c4f6852a72f7b9fe6f1ba8a4c2cc1c157502d68",
+      "public_derivative": "native-capacity-oom-after-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "d525b670801e816da3652c6b2c4f6852a72f7b9fe6f1ba8a4c2cc1c157502d68",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-oom-read-only-postmortem.json",
+      "original_bytes": 18714,
+      "original_sha256": "de39654684816eade0f3a75234647283ecb59f87446bca4c7ca3b3b95ea92fc2",
+      "public_derivative": "native-capacity-oom-read-only-postmortem-public.json",
+      "derivative_bytes": 18714,
+      "derivative_sha256": "de39654684816eade0f3a75234647283ecb59f87446bca4c7ca3b3b95ea92fc2",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

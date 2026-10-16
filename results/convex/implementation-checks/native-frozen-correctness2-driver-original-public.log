@@ -1,0 +1,11 @@
+test_k6_cannot_read_signing_keys_or_private_service_state (__main__.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... ok
+test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated (__main__.ContainerIsolation.test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated) ... ok
+test_vps_platform_and_resources_are_isolated_from_existing_projects (__main__.ContainerIsolation.test_vps_platform_and_resources_are_isolated_from_existing_projects) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.215s
+
+OK
+Read-only service snapshot saved; service count: 27 ; existing listener PID count: 1
+Read-only service snapshot saved; service count: 28 ; existing listener PID count: 1
+FULL_CURRENT_FROZEN_ORIGINAL42_SHARED6_NATIVE_SECURITY_RUNTIME_HARNESS_GATE_PASSED_ORIGINAL_CLEANSIGINT139_STILL_FAILED_NO_K6_YET

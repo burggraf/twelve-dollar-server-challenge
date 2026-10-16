@@ -1,0 +1,272 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-smoke100-driver-original.log",
+      "original_bytes": 1914,
+      "original_sha256": "2b12798f66380aab62542d3652f572a3fb367e51c3bd160ce469cd29cd561059",
+      "public_derivative": "native-smoke100-driver-original-public.log",
+      "derivative_bytes": 1914,
+      "derivative_sha256": "2b12798f66380aab62542d3652f572a3fb367e51c3bd160ce469cd29cd561059",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-two-calibrations-raw-review-driver-original.log",
+      "original_bytes": 230,
+      "original_sha256": "9850ee511c13a686fece1a92af48921c9ccd0facd72906273c8cdd4defa5a21d",
+      "public_derivative": "native-two-calibrations-raw-review-driver-original-public.log",
+      "derivative_bytes": 230,
+      "derivative_sha256": "9850ee511c13a686fece1a92af48921c9ccd0facd72906273c8cdd4defa5a21d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-first-smoke1000-raw-review.json",
+      "original_bytes": 1752,
+      "original_sha256": "54d2fa5e71974936ddc9bfadceac224272372acac8e814c646bf1cbf54e3890a",
+      "public_derivative": "native-first-smoke1000-raw-review-public.json",
+      "derivative_bytes": 1752,
+      "derivative_sha256": "54d2fa5e71974936ddc9bfadceac224272372acac8e814c646bf1cbf54e3890a",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-raw-review.json",
+      "original_bytes": 1648,
+      "original_sha256": "30b2fd79edf693ff9cd7249e171ab3b215283367080e3328a039d9563b745fe7",
+      "public_derivative": "native-smoke100-raw-review-public.json",
+      "derivative_bytes": 1648,
+      "derivative_sha256": "30b2fd79edf693ff9cd7249e171ab3b215283367080e3328a039d9563b745fe7",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-SHA256SUMS",
+      "original_bytes": 1221,
+      "original_sha256": "7ab8cca9d235c33f7a61742a03b352a93e91e3bd9e963abeebda4df731a5d779",
+      "public_derivative": "native-smoke100-SHA256SUMS-public",
+      "derivative_bytes": 1221,
+      "derivative_sha256": "7ab8cca9d235c33f7a61742a03b352a93e91e3bd9e963abeebda4df731a5d779",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-correctness-manifest.json",
+      "original_bytes": 28030,
+      "original_sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831",
+      "public_derivative": "native-smoke100-correctness-manifest-public.json",
+      "derivative_bytes": 28030,
+      "derivative_sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-correctness.log",
+      "original_bytes": 22452,
+      "original_sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9",
+      "public_derivative": "native-smoke100-correctness-public.log",
+      "derivative_bytes": 22452,
+      "derivative_sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "native-smoke100-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-k6-summary.json",
+      "original_bytes": 10034,
+      "original_sha256": "6b1c3e5cdbba2cde493e2604fe06bc2331c439bbae89830fdc23bec0e1b0157b",
+      "public_derivative": "native-smoke100-k6-summary-public.json",
+      "derivative_bytes": 10034,
+      "derivative_sha256": "6b1c3e5cdbba2cde493e2604fe06bc2331c439bbae89830fdc23bec0e1b0157b",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-k6.log",
+      "original_bytes": 91,
+      "original_sha256": "819d2906c65cbd0086bdb92689c4da83bfa97c03fce8958506be60d919904a8e",
+      "public_derivative": "native-smoke100-k6-public.log",
+      "derivative_bytes": 91,
+      "derivative_sha256": "819d2906c65cbd0086bdb92689c4da83bfa97c03fce8958506be60d919904a8e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-manifest-before.json",
+      "original_bytes": 40020,
+      "original_sha256": "5db3f6a22bfd41af35d42f12e9abcb58e3272f67adca8d55b593a3fdfd6731b5",
+      "public_derivative": "native-smoke100-manifest-before-public.json",
+      "derivative_bytes": 40196,
+      "derivative_sha256": "dcefea91bb603f875a9044544b41044da50b30ad386c880ca4a868b6743e7de3",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        8
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-manifest.json",
+      "original_bytes": 51713,
+      "original_sha256": "d86f0247c3b23b264311e1ede9fe6190e8c35c230925921e41aaa78174f78700",
+      "public_derivative": "native-smoke100-manifest-public.json",
+      "derivative_bytes": 51889,
+      "derivative_sha256": "b46be8b07dd1464c339ddc835321d1c5cda8dd6d7a4630c064ccaad70f8c255d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        8
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-report.md",
+      "original_bytes": 2048,
+      "original_sha256": "b2152a3e55a4fda621a63d87a8e3a7e9fdf13fe62b876588e39278b7d496b523",
+      "public_derivative": "native-smoke100-report-public.md",
+      "derivative_bytes": 2048,
+      "derivative_sha256": "b2152a3e55a4fda621a63d87a8e3a7e9fdf13fe62b876588e39278b7d496b523",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-reset.log",
+      "original_bytes": 1178,
+      "original_sha256": "4a4ef7a08229d760eec3b9a5904d3d150d214ef67ae48282ee94b5dd0f54fd7b",
+      "public_derivative": "native-smoke100-reset-public.log",
+      "derivative_bytes": 1178,
+      "derivative_sha256": "4a4ef7a08229d760eec3b9a5904d3d150d214ef67ae48282ee94b5dd0f54fd7b",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-resources.jsonl",
+      "original_bytes": 105380,
+      "original_sha256": "8b6316f37ac5a2dbadeba2e48d13de0ca3bd4e1c044344d730a6124207716707",
+      "public_derivative": "native-smoke100-resources-public.jsonl",
+      "derivative_bytes": 105380,
+      "derivative_sha256": "8b6316f37ac5a2dbadeba2e48d13de0ca3bd4e1c044344d730a6124207716707",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-runtime-freeze.json",
+      "original_bytes": 26283,
+      "original_sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305",
+      "public_derivative": "native-smoke100-runtime-freeze-public.json",
+      "derivative_bytes": 26283,
+      "derivative_sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-summary.json",
+      "original_bytes": 2059,
+      "original_sha256": "aaab65aceca6febf9d22c7c62bcf92ce95cb55593f64a6369b21067991cc2346",
+      "public_derivative": "native-smoke100-summary-public.json",
+      "derivative_bytes": 2059,
+      "derivative_sha256": "aaab65aceca6febf9d22c7c62bcf92ce95cb55593f64a6369b21067991cc2346",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-working-tree.patch",
+      "original_bytes": 60644,
+      "original_sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9",
+      "public_derivative": "native-smoke100-working-tree-public.patch",
+      "derivative_bytes": 60644,
+      "derivative_sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-smoke100-current-native-state.json",
+      "original_bytes": 14553,
+      "original_sha256": "b358cd734384f7a8aac2cc1613e4a92be312b6bda16973ae63fcee919e3eedef",
+      "public_derivative": "native-smoke100-current-native-state-public.json",
+      "derivative_bytes": 14553,
+      "derivative_sha256": "b358cd734384f7a8aac2cc1613e4a92be312b6bda16973ae63fcee919e3eedef",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

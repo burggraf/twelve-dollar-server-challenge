@@ -1,0 +1,272 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-capacity-unit-driver-original.log",
+      "original_bytes": 1282,
+      "original_sha256": "de156f7b46018815ab1a43636d14dd705fb2e97f638e82b4530bc9d1a49e0a47",
+      "public_derivative": "native-capacity-unit-driver-original-public.log",
+      "derivative_bytes": 1282,
+      "derivative_sha256": "de156f7b46018815ab1a43636d14dd705fb2e97f638e82b4530bc9d1a49e0a47",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-controller-original.log",
+      "original_bytes": 1885,
+      "original_sha256": "09f25af8dc220b61a096843fbfdd20b9f013da59f793b1545f1488c93f1fb4d3",
+      "public_derivative": "native-capacity-controller-original-public.log",
+      "derivative_bytes": 1885,
+      "derivative_sha256": "09f25af8dc220b61a096843fbfdd20b9f013da59f793b1545f1488c93f1fb4d3",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-controller-frozen-source.py",
+      "original_bytes": 3187,
+      "original_sha256": "cc9f6eaa7e92347d5c79262bdcb47405a4052993c92fa88136a6d9c49223ec03",
+      "public_derivative": "native-capacity-controller-frozen-source-public.py",
+      "derivative_bytes": 3187,
+      "derivative_sha256": "cc9f6eaa7e92347d5c79262bdcb47405a4052993c92fa88136a6d9c49223ec03",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-first-stop-campaign.json",
+      "original_bytes": 271,
+      "original_sha256": "1552ebe25bf4b65ae4c385145bc66199ac448e513f13e993b765f3eefbfc2f6a",
+      "public_derivative": "native-capacity-first-stop-campaign-public.json",
+      "derivative_bytes": 271,
+      "derivative_sha256": "1552ebe25bf4b65ae4c385145bc66199ac448e513f13e993b765f3eefbfc2f6a",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-SHA256SUMS",
+      "original_bytes": 1221,
+      "original_sha256": "5fe5fda51e7f29cb913d7e2e0af0cc5d6b9d4d5df8e0ad199ae8d6adbc038c9c",
+      "public_derivative": "native-standard-first-stop-SHA256SUMS-public",
+      "derivative_bytes": 1221,
+      "derivative_sha256": "5fe5fda51e7f29cb913d7e2e0af0cc5d6b9d4d5df8e0ad199ae8d6adbc038c9c",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-correctness-manifest.json",
+      "original_bytes": 28030,
+      "original_sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831",
+      "public_derivative": "native-standard-first-stop-correctness-manifest-public.json",
+      "derivative_bytes": 28030,
+      "derivative_sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-correctness.log",
+      "original_bytes": 22452,
+      "original_sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9",
+      "public_derivative": "native-standard-first-stop-correctness-public.log",
+      "derivative_bytes": 22452,
+      "derivative_sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "native-standard-first-stop-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-k6-summary.json",
+      "original_bytes": 9929,
+      "original_sha256": "8d3a8dd7bb297d3962917fe98dc5b3d6c7a23d7367fd41c669ac56a146be5ce7",
+      "public_derivative": "native-standard-first-stop-k6-summary-public.json",
+      "derivative_bytes": 9929,
+      "derivative_sha256": "8d3a8dd7bb297d3962917fe98dc5b3d6c7a23d7367fd41c669ac56a146be5ce7",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-k6.log",
+      "original_bytes": 8352023,
+      "original_sha256": "adb70b8b342839a5033318a5385c6e224449dd476056ae304dca95deb7a98f44",
+      "public_derivative": "native-standard-first-stop-k6-public.log",
+      "derivative_bytes": 8352023,
+      "derivative_sha256": "adb70b8b342839a5033318a5385c6e224449dd476056ae304dca95deb7a98f44",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-manifest-before.json",
+      "original_bytes": 40026,
+      "original_sha256": "4b90657eefa039b9b1bd4388d47a47d688bd6a5cdfab2e736963519fe93bfa52",
+      "public_derivative": "native-standard-first-stop-manifest-before-public.json",
+      "derivative_bytes": 40202,
+      "derivative_sha256": "43c268ae39769760aa2b492efbe790726602409950b46fd02564c8b2a757270c",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        8
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-manifest.json",
+      "original_bytes": 49865,
+      "original_sha256": "dc8d1221f2043efd7e9965035f2119eb5e0835e670c24233c4f365ee204489da",
+      "public_derivative": "native-standard-first-stop-manifest-public.json",
+      "derivative_bytes": 50041,
+      "derivative_sha256": "42688699b3d58eae6cadabe152579fc51876dc7d939b355bd74f6ee26b40a4d5",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        8
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-report.md",
+      "original_bytes": 2126,
+      "original_sha256": "fa5b90ed829d2cd13e0a4512b014428b00018894f33220ff23ed01cab76ab894",
+      "public_derivative": "native-standard-first-stop-report-public.md",
+      "derivative_bytes": 2126,
+      "derivative_sha256": "fa5b90ed829d2cd13e0a4512b014428b00018894f33220ff23ed01cab76ab894",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-reset.log",
+      "original_bytes": 1178,
+      "original_sha256": "5d787649122936db01a21e5711581427f51d7c1a899b9f6533e94aded61dfbfd",
+      "public_derivative": "native-standard-first-stop-reset-public.log",
+      "derivative_bytes": 1178,
+      "derivative_sha256": "5d787649122936db01a21e5711581427f51d7c1a899b9f6533e94aded61dfbfd",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-resources.jsonl",
+      "original_bytes": 1299274,
+      "original_sha256": "48bc8b530df933fb2878603f8072855fae4bc627915f4f3c0f4a33a7fb1a7fb4",
+      "public_derivative": "native-standard-first-stop-resources-public.jsonl",
+      "derivative_bytes": 1299274,
+      "derivative_sha256": "48bc8b530df933fb2878603f8072855fae4bc627915f4f3c0f4a33a7fb1a7fb4",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-runtime-freeze.json",
+      "original_bytes": 26283,
+      "original_sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305",
+      "public_derivative": "native-standard-first-stop-runtime-freeze-public.json",
+      "derivative_bytes": 26283,
+      "derivative_sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-summary.json",
+      "original_bytes": 2112,
+      "original_sha256": "c6c2da32b9c585d3a9de184f3b36ebaf2f5a2e3654eb953f31c22f16463217a7",
+      "public_derivative": "native-standard-first-stop-summary-public.json",
+      "derivative_bytes": 2112,
+      "derivative_sha256": "c6c2da32b9c585d3a9de184f3b36ebaf2f5a2e3654eb953f31c22f16463217a7",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-standard-first-stop-working-tree.patch",
+      "original_bytes": 60644,
+      "original_sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9",
+      "public_derivative": "native-standard-first-stop-working-tree-public.patch",
+      "derivative_bytes": 60644,
+      "derivative_sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-capacity-first-stop-current-state.json",
+      "original_bytes": 11608,
+      "original_sha256": "1fe80c056627b8823548fa998f867e71b344b90cc01519dd7669999511e834bf",
+      "public_derivative": "native-capacity-first-stop-current-state-public.json",
+      "derivative_bytes": 11608,
+      "derivative_sha256": "1fe80c056627b8823548fa998f867e71b344b90cc01519dd7669999511e834bf",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "native-frozen-correctness-first-original.log",
+      "original_bytes": 21256,
+      "original_sha256": "f5ebb7c64e2f1bc89ee0b698b4dfa9beafc30dd7606579bdf16099c53d1e982d",
+      "public_derivative": "native-frozen-correctness-first-original-public.log",
+      "derivative_bytes": 21256,
+      "derivative_sha256": "f5ebb7c64e2f1bc89ee0b698b4dfa9beafc30dd7606579bdf16099c53d1e982d",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness-driver-original.log",
+      "original_bytes": 673,
+      "original_sha256": "d63825f5a95c99295502b8aebb5842dbfcef1331a1751a49d95527003eb6182b",
+      "public_derivative": "native-frozen-correctness-driver-original-public.log",
+      "derivative_bytes": 673,
+      "derivative_sha256": "d63825f5a95c99295502b8aebb5842dbfcef1331a1751a49d95527003eb6182b",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness-before.json",
+      "original_bytes": 25666,
+      "original_sha256": "6548136c14698d700ee98c1e4e58f3e6834273c2a15be92405b986274ad37753",
+      "public_derivative": "native-frozen-correctness-before-public.json",
+      "derivative_bytes": 25666,
+      "derivative_sha256": "6548136c14698d700ee98c1e4e58f3e6834273c2a15be92405b986274ad37753",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-frozen-correctness-final-state.json",
+      "original_bytes": 14275,
+      "original_sha256": "1b7e33d8e57847591430e4a580d4666e55e83a09df71471e9d79824e86830049",
+      "public_derivative": "native-frozen-correctness-final-state-public.json",
+      "derivative_bytes": 14275,
+      "derivative_sha256": "1b7e33d8e57847591430e4a580d4666e55e83a09df71471e9d79824e86830049",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "targets": {
+    "backend": {
+      "Id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 2313635,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-16T00:02:20.333088398Z",
+        "FinishedAt": "2026-10-15T23:47:48.287476294Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-16T01:35:27.599235707Z",
+              "End": "2026-10-16T01:35:27.642108211Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T01:35:32.643103911Z",
+              "End": "2026-10-16T01:35:32.727368093Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T01:35:37.728199481Z",
+              "End": "2026-10-16T01:35:37.806049361Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T01:35:42.806545119Z",
+              "End": "2026-10-16T01:35:42.842813406Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            },
+            {
+              "Start": "2026-10-16T01:35:47.843367872Z",
+              "End": "2026-10-16T01:35:47.876376838Z",
+              "ExitCode": 0,
+              "Output": "unknown"
+            }
+          ]
+        }
+      },
+      "limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 3221225472,
+        "MemorySwap": 3221225472
+      },
+      "source_sha256": null,
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "compose_project": "baas-convexpg-vps16",
+      "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+      "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope\n",
+      "kernel": {
+        "cpu.max": "100000 100000\n",
+        "cpu.stat": "usage_usec 502809065\nuser_usec 478998012\nsystem_usec 23811053\ncore_sched.force_idle_usec 0\nnr_periods 9754\nnr_throttled 81\nthrottled_usec 934634\nnr_bursts 0\nburst_usec 0\n",
+        "memory.max": "3221225472\n",
+        "memory.current": "258703360\n",
+        "memory.peak": "273637376\n",
+        "memory.swap.max": "0\n",
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "memory.stat": "anon 242319360\nfile 7815168\nkernel 8568832\nkernel_stack 507904\npagetables 6250496\nsec_pagetables 0\npercpu 2232\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 242319360\ninactive_file 7815168\nactive_file 0\nunevictable 0\nslab_reclaimable 851960\nslab_unreclaimable 902248\nslab 1754208\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 0\npgsteal 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 2597583\npgmajfault 0\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+        "io.stat": "8:0 rbytes=0 wbytes=7806976 rios=0 wios=34 dbytes=0 dios=0\n"
+      }
+    },
+    "postgres": {
+      "Id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 2313499,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-16T00:02:14.076467149Z",
+        "FinishedAt": "2026-10-16T00:02:13.874816796Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-16T01:35:27.4215658Z",
+              "End": "2026-10-16T01:35:27.516860416Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T01:35:32.518533415Z",
+              "End": "2026-10-16T01:35:32.614446771Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T01:35:37.615644276Z",
+              "End": "2026-10-16T01:35:37.711697963Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T01:35:42.712914974Z",
+              "End": "2026-10-16T01:35:42.777030713Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-16T01:35:47.778257668Z",
+              "End": "2026-10-16T01:35:47.841051469Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            }
+          ]
+        }
+      },
+      "limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 1073741824,
+        "MemorySwap": 1073741824
+      },
+      "source_sha256": null,
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "compose_project": "baas-convexpg-vps16",
+      "cgroup_parent": "tdsbaasconvexpgvps16.slice",
+      "process_cgroup": "0::/tdsbaasconvexpgvps16.slice/docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope\n",
+      "kernel": {
+        "cpu.max": "100000 100000\n",
+        "cpu.stat": "usage_usec 178043995\nuser_usec 122797681\nsystem_usec 55246313\ncore_sched.force_idle_usec 0\nnr_periods 9479\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "memory.max": "1073741824\n",
+        "memory.current": "1068933120\n",
+        "memory.peak": "1073774592\n",
+        "memory.swap.max": "0\n",
+        "memory.events": "low 0\nhigh 0\nmax 39310\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "memory.stat": "anon 35311616\nfile 1024466944\nkernel 9154560\nkernel_stack 360448\npagetables 5210112\nsec_pagetables 0\npercpu 4152\nsock 0\nvmalloc 12288\nshmem 146755584\nzswap 0\nzswapped 0\nfile_mapped 145780736\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 182067200\ninactive_file 875458560\nactive_file 2252800\nunevictable 0\nslab_reclaimable 894984\nslab_unreclaimable 2477856\nslab 3372840\nworkingset_refault_anon 0\nworkingset_refault_file 2064402\nworkingset_activate_anon 0\nworkingset_activate_file 2064402\nworkingset_restore_anon 0\nworkingset_restore_file 424\nworkingset_nodereclaim 0\npgscan 2514368\npgsteal 2514364\npgscan_kswapd 0\npgscan_direct 2514368\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 2514364\npgsteal_khugepaged 0\npgfault 4771954\npgmajfault 0\npgrefill 598\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+        "io.stat": "8:0 rbytes=11153653760 wbytes=45846528 rios=1104050 wios=3588 dbytes=0 dios=0\n"
+      }
+    }
+  },
+  "parent": {
+    "cpu.max": "100000 100000\n",
+    "cpu.stat": "usage_usec 3316037632\nuser_usec 2737769664\nsystem_usec 578267967\ncore_sched.force_idle_usec 0\nnr_periods 58819\nnr_throttled 11627\nthrottled_usec 229669770\nnr_bursts 0\nburst_usec 0\n",
+    "cpu.pressure": "some avg10=1.08 avg60=1.57 avg300=1.50 total=87400846\nfull avg10=0.90 avg60=1.29 avg300=1.27 total=75597517\n",
+    "memory.max": "4294967296\n",
+    "memory.current": "3434168320\n",
+    "memory.peak": "3479109632\n",
+    "memory.swap.max": "0\n",
+    "memory.events": "low 0\nhigh 0\nmax 621435\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "memory.stat": "anon 277630976\nfile 3087826944\nkernel 68710400\nkernel_stack 868352\npagetables 11460608\nsec_pagetables 0\npercpu 66864\nsock 0\nvmalloc 24576\nshmem 146755584\nzswap 0\nzswapped 0\nfile_mapped 145780736\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 424386560\ninactive_file 2151989248\nactive_file 789082112\nunevictable 0\nslab_reclaimable 52670616\nslab_unreclaimable 3380104\nslab 56050720\nworkingset_refault_anon 0\nworkingset_refault_file 22842760\nworkingset_activate_anon 0\nworkingset_activate_file 19665351\nworkingset_restore_anon 0\nworkingset_restore_file 397779\nworkingset_nodereclaim 0\npgscan 38767169\npgsteal 38766506\npgscan_kswapd 0\npgscan_direct 38767169\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 38766506\npgsteal_khugepaged 0\npgfault 31225124\npgmajfault 2\npgrefill 4780041\npgactivate 11\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+    "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=16281560\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=16149975\n",
+    "io.stat": "8:0 rbytes=96261857280 wbytes=159510294528 rios=8974554 wios=9837939 dbytes=0 dios=0\n",
+    "io.pressure": "some avg10=0.05 avg60=1.17 avg300=1.37 total=172332324\nfull avg10=0.05 avg60=1.17 avg300=1.36 total=172126676\n",
+    "children": [
+      "docker-164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177.scope",
+      "docker-f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75.scope"
+    ]
+  },
+  "host_vmstat": "nr_free_pages 109156\nnr_zone_inactive_anon 95579\nnr_zone_active_anon 170225\nnr_zone_inactive_file 2627280\nnr_zone_active_file 663425\nnr_zone_unevictable 6864\nnr_zone_write_pending 125\nnr_mlock 6864\nnr_bounce 0\nnr_zspages 0\nnr_free_cma 0\nnr_unaccepted 0\nnuma_hit 588046798\nnuma_miss 0\nnuma_foreign 0\nnuma_interleave 37\nnuma_local 587891874\nnuma_other 0\nnr_inactive_anon 95579\nnr_active_anon 170162\nnr_inactive_file 2627280\nnr_active_file 663425\nnr_unevictable 6864\nnr_slab_reclaimable 324860\nnr_slab_unreclaimable 44035\nnr_isolated_anon 0\nnr_isolated_file 0\nworkingset_nodes 125273\nworkingset_refault_anon 0\nworkingset_refault_file 24889974\nworkingset_activate_anon 0\nworkingset_activate_file 20766431\nworkingset_restore_anon 0\nworkingset_restore_file 445461\nworkingset_nodereclaim 224128\nnr_anon_pages 231586\nnr_mapped 170274\nnr_file_pages 3331715\nnr_dirty 125\nnr_writeback 0\nnr_writeback_temp 0\nnr_shmem 38820\nnr_shmem_hugepages 0\nnr_shmem_pmdmapped 0\nnr_file_hugepages 0\nnr_file_pmdmapped 0\nnr_anon_transparent_hugepages 180\nnr_vmscan_write 0\nnr_vmscan_immediate_reclaim 8\nnr_dirtied 121344150\nnr_written 119159402\nnr_throttled_written 0\nnr_kernel_misc_reclaimable 0\nnr_foll_pin_acquired 1009\nnr_foll_pin_released 1009\nnr_kernel_stack 5364\nnr_page_table_pages 4830\nnr_sec_page_table_pages 0\nnr_swapcached 0\npgpromote_success 0\npgpromote_candidate 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\nnr_dirty_threshold 671381\nnr_dirty_background_threshold 335280\npgpgin 137317270\npgpgout 483903435\npswpin 0\npswpout 0\npgalloc_dma 512\npgalloc_dma32 51671518\npgalloc_normal 566324868\npgalloc_movable 0\npgalloc_device 0\nallocstall_dma 0\nallocstall_dma32 0\nallocstall_normal 2\nallocstall_movable 201\nallocstall_device 0\npgskip_dma 0\npgskip_dma32 0\npgskip_normal 1\npgskip_movable 0\npgskip_device 0\npgfree 621677368\npgactivate 939\npgdeactivate 0\npglazyfree 5781\npgfault 744149535\npgmajfault 18585\npglazyfreed 0\npgrefill 2122640\npgreuse 119753038\npgsteal_kswapd 10418493\npgsteal_direct 183999\npgsteal_khugepaged 0\npgscan_kswapd 10433850\npgscan_direct 184001\npgscan_khugepaged 0\npgscan_direct_throttle 0\npgscan_anon 0\npgscan_file 52533059\npgsteal_anon 0\npgsteal_file 52515684\nzone_reclaim_failed 0\npginodesteal 1\nslabs_scanned 2144661\nkswapd_inodesteal 198512\nkswapd_low_wmark_hit_quickly 46\nkswapd_high_wmark_hit_quickly 83\npageoutrun 490\npgrotated 3594628\ndrop_pagecache 0\ndrop_slab 0\noom_kill 3\nnuma_pte_updates 0\nnuma_huge_pte_updates 0\nnuma_hint_faults 0\nnuma_hint_faults_local 0\nnuma_pages_migrated 0\npgmigrate_success 3395724\npgmigrate_fail 15609\nthp_migration_success 0\nthp_migration_fail 0\nthp_migration_split 0\ncompact_migrate_scanned 17631318\ncompact_free_scanned 147508833\ncompact_isolated 6874912\ncompact_stall 734\ncompact_fail 452\ncompact_success 282\ncompact_daemon_wake 148\ncompact_daemon_migrate_scanned 17272586\ncompact_daemon_free_scanned 146975349\nhtlb_buddy_alloc_success 0\nhtlb_buddy_alloc_fail 0\nunevictable_pgs_culled 28069\nunevictable_pgs_scanned 0\nunevictable_pgs_rescued 6079\nunevictable_pgs_mlocked 12943\nunevictable_pgs_munlocked 18\nunevictable_pgs_cleared 0\nunevictable_pgs_stranded 6061\nthp_fault_alloc 2930\nthp_fault_fallback 115\nthp_fault_fallback_charge 0\nthp_collapse_alloc 886\nthp_collapse_alloc_failed 0\nthp_file_alloc 0\nthp_file_fallback 0\nthp_file_fallback_charge 0\nthp_file_mapped 0\nthp_split_page 0\nthp_split_page_failed 0\nthp_deferred_split_page 2628\nthp_split_pmd 2628\nthp_scan_exceed_none_pte 116\nthp_scan_exceed_swap_pte 0\nthp_scan_exceed_share_pte 0\nthp_split_pud 0\nthp_zero_page_alloc 1\nthp_zero_page_alloc_failed 0\nthp_swpout 0\nthp_swpout_fallback 0\nballoon_inflate 0\nballoon_deflate 0\nballoon_migrate 0\nswap_ra 0\nswap_ra_hit 0\nksm_swpin_copy 0\ncow_ksm 0\nzswpin 0\nzswpout 0\nzswpwb 0\ndirect_map_level2_splits 73\ndirect_map_level3_splits 5\nnr_unstable 0\n",
+  "succeeded": true
+}

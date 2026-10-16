@@ -1,0 +1,115 @@
+test_owned_postgres_namespace_uses_existing_cohort (__main__.NativeConvexHarness.test_owned_postgres_namespace_uses_existing_cohort) ... ok
+test_source_overlay_includes_native_code_but_not_private_or_dependency_tree (__main__.NativeConvexHarness.test_source_overlay_includes_native_code_but_not_private_or_dependency_tree) ... ok
+test_unrelated_namespace_and_emulation_refused (__main__.NativeConvexHarness.test_unrelated_namespace_and_emulation_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+OK
+test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused (__main__.FrozenConvexEvidence.test_either_server_restart_exit_oom_pause_unhealthy_or_missing_refused) ... ok
+test_every_changed_input_and_log_refused (__main__.FrozenConvexEvidence.test_every_changed_input_and_log_refused) ... ok
+test_matching_full_frozen_correctness_accepted (__main__.FrozenConvexEvidence.test_matching_full_frozen_correctness_accepted) ... ok
+test_versions_exact_slices_and_failed_shutdown_are_prominent (__main__.FrozenConvexEvidence.test_versions_exact_slices_and_failed_shutdown_are_prominent) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
+test_every_dependency_generated_file_and_added_file_changes_digest (__main__.FullConvexFreeze.test_every_dependency_generated_file_and_added_file_changes_digest) ... ok
+test_missing_required_dependency_or_generated_tree_is_refused (__main__.FullConvexFreeze.test_missing_required_dependency_or_generated_tree_is_refused) ... ok
+test_symlinks_are_preserved_in_inventory_and_escape_refused (__main__.FullConvexFreeze.test_symlinks_are_preserved_in_inventory_and_escape_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+OK
+test_optional_native_runner_and_tools_do_not_expand_serving_budget (__main__.ConvexLoadConfig.test_optional_native_runner_and_tools_do_not_expand_serving_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.083s
+
+OK
+test_both_native_processes_share_exact_aggregate_budget (__main__.ConvexPostgresBudget.test_both_native_processes_share_exact_aggregate_budget) ... ok
+test_child_limits_and_native_health_fail_closed (__main__.ConvexPostgresBudget.test_child_limits_and_native_health_fail_closed) ... ok
+test_each_required_server_is_mandatory (__main__.ConvexPostgresBudget.test_each_required_server_is_mandatory) ... ok
+test_image_architecture_ownership_and_actual_membership_are_required (__main__.ConvexPostgresBudget.test_image_architecture_ownership_and_actual_membership_are_required) ... ok
+test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap (__main__.ConvexPostgresBudget.test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK
+test_fresh_owned_volumes_and_uncached_native_queries (__main__.ConvexPostgresConfig.test_fresh_owned_volumes_and_uncached_native_queries) ... ok
+test_native_image_pins_and_three_plus_one_gib_children (__main__.ConvexPostgresConfig.test_native_image_pins_and_three_plus_one_gib_children) ... ok
+test_no_database_host_port_or_new_privileges (__main__.ConvexPostgresConfig.test_no_database_host_port_or_new_privileges) ... ok
+test_only_two_required_servers_and_separate_profiled_tools (__main__.ConvexPostgresConfig.test_only_two_required_servers_and_separate_profiled_tools) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.081s
+
+OK
+test_cursor_cycle_fails_without_post_or_allocation_reset (__main__.NativeResetController.test_cursor_cycle_fails_without_post_or_allocation_reset) ... ok
+test_invalid_batch_shapes_and_counts_fail_closed (__main__.NativeResetController.test_invalid_batch_shapes_and_counts_fail_closed) ... ok
+test_native_admin_headers_cannot_follow_redirects_to_another_origin (__main__.NativeResetController.test_native_admin_headers_cannot_follow_redirects_to_another_origin) ... ok
+test_nonempty_post_batch_failure_does_not_reset_allocation (__main__.NativeResetController.test_nonempty_post_batch_failure_does_not_reset_allocation) ... ok
+test_private_environment_and_url_credentials_never_enter_error_messages (__main__.NativeResetController.test_private_environment_and_url_credentials_never_enter_error_messages) ... ok
+test_reset_order_counts_cursor_and_persistent_allocation (__main__.NativeResetController.test_reset_order_counts_cursor_and_persistent_allocation) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.016s
+
+OK
+test_direct_controller_exports_inferred_platform_and_namespace_to_compose (__main__.HostPortability.test_direct_controller_exports_inferred_platform_and_namespace_to_compose) ... ok
+test_foreign_architecture_load_image_is_invalid (__main__.HostPortability.test_foreign_architecture_load_image_is_invalid) ... ok
+test_foreign_platforms_and_unrelated_project_names_are_rejected (__main__.HostPortability.test_foreign_platforms_and_unrelated_project_names_are_rejected) ... ok
+test_linux_samples_preserve_raw_proc_evidence_without_mac_commands (__main__.HostPortability.test_linux_samples_preserve_raw_proc_evidence_without_mac_commands) ... ok
+test_linux_swapouts_are_checked_without_weakening_mac_checks (__main__.HostPortability.test_linux_swapouts_are_checked_without_weakening_mac_checks) ... ok
+test_native_platforms_and_result_tracks_are_separate (__main__.HostPortability.test_native_platforms_and_result_tracks_are_separate) ... ok
+test_new_host_track_cannot_pool_with_original_vps (__main__.HostPortability.test_new_host_track_cannot_pool_with_original_vps) ... ok
+test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect (__main__.HostPortability.test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect) ... ok
+test_accepts_complete_passing_hold (__main__.Scoring.test_accepts_complete_passing_hold) ... ok
+test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host (__main__.Scoring.test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (__main__.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (__main__.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (__main__.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_mismatched_actual_runner_budget_cannot_claim_the_new_profile (__main__.Scoring.test_mismatched_actual_runner_budget_cannot_claim_the_new_profile) ... ok
+test_missing_clock_still_invalidates_non_oom_attempt (__main__.Scoring.test_missing_clock_still_invalidates_non_oom_attempt) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (__main__.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_oom_remains_primary_reason_when_k6_loses_summary_and_clock (__main__.Scoring.test_oom_remains_primary_reason_when_k6_loses_summary_and_clock) ... ok
+test_owner_approved_eight_gib_runner_has_distinct_verified_limits (__main__.Scoring.test_owner_approved_eight_gib_runner_has_distinct_verified_limits) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (__main__.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (__main__.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_runner_profile_is_versioned_and_matches_the_approved_budget (__main__.Scoring.test_runner_profile_is_versioned_and_matches_the_approved_budget) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (__main__.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+test_standard_tier_is_one_cpu_four_gib_with_memory_reserve (__main__.Scoring.test_standard_tier_is_one_cpu_four_gib_with_memory_reserve) ... ok
+test_vm_headroom_accepts_small_but_rejects_large_on_current_vm (__main__.Scoring.test_vm_headroom_accepts_small_but_rejects_large_on_current_vm) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.006s
+
+OK
+test_k6_cannot_read_signing_keys_or_private_service_state (__main__.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... ok
+test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated (__main__.ContainerIsolation.test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated) ... ok
+test_vps_platform_and_resources_are_isolated_from_existing_projects (__main__.ContainerIsolation.test_vps_platform_and_resources_are_isolated_from_existing_projects) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.242s
+
+OK
+test_generalization_does_not_allow_unrelated_namespace_or_emulation (__main__.NativePocketBaseHarness.test_generalization_does_not_allow_unrelated_namespace_or_emulation) ... ok
+test_owned_native_namespace_selects_existing_vps16_track (__main__.NativePocketBaseHarness.test_owned_native_namespace_selects_existing_vps16_track) ... ok
+test_source_snapshot_includes_pocketbase_and_excludes_private_runtime (__main__.NativePocketBaseHarness.test_source_snapshot_includes_pocketbase_and_excludes_private_runtime) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+OK
+test_campaign_uses_injected_backend_and_private_state_path (__main__.SupabaseHarness.test_campaign_uses_injected_backend_and_private_state_path) ... ok
+test_native_supabase_project_has_distinct_vps16_track (__main__.SupabaseHarness.test_native_supabase_project_has_distinct_vps16_track) ... ok
+test_snapshot_includes_selected_backend_not_trailbase (__main__.SupabaseHarness.test_snapshot_includes_selected_backend_not_trailbase) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+OK
+NATIVE_ADAPTER_GREEN_COMPLETE_SDK_GENERATED_CATALOG_CAPTURED_SAME_RUNNING_SERVERS_NO_K6

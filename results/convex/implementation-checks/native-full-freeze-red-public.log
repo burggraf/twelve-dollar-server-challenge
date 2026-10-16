@@ -1,0 +1,32 @@
+test_every_dependency_generated_file_and_added_file_changes_digest (__main__.FullConvexFreeze.test_every_dependency_generated_file_and_added_file_changes_digest) ... FAIL
+test_missing_required_dependency_or_generated_tree_is_refused (__main__.FullConvexFreeze.test_missing_required_dependency_or_generated_tree_is_refused) ... FAIL
+test_symlinks_are_preserved_in_inventory_and_escape_refused (__main__.FullConvexFreeze.test_symlinks_are_preserved_in_inventory_and_escape_refused) ... FAIL
+
+======================================================================
+FAIL: test_every_dependency_generated_file_and_added_file_changes_digest (__main__.FullConvexFreeze.test_every_dependency_generated_file_and_added_file_changes_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_freeze.py", line 13, in test_every_dependency_generated_file_and_added_file_changes_digest
+    self.assertTrue(callable(getattr(profile, 'tree_inventory', None)), 'Full runtime/dependency inventory missing')
+AssertionError: False is not true : Full runtime/dependency inventory missing
+
+======================================================================
+FAIL: test_missing_required_dependency_or_generated_tree_is_refused (__main__.FullConvexFreeze.test_missing_required_dependency_or_generated_tree_is_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_freeze.py", line 32, in test_missing_required_dependency_or_generated_tree_is_refused
+    self.assertTrue(callable(getattr(profile, 'full_runtime_state', None)), 'Complete installed runtime/generated gate missing')
+AssertionError: False is not true : Complete installed runtime/generated gate missing
+
+======================================================================
+FAIL: test_symlinks_are_preserved_in_inventory_and_escape_refused (__main__.FullConvexFreeze.test_symlinks_are_preserved_in_inventory_and_escape_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_freeze.py", line 24, in test_symlinks_are_preserved_in_inventory_and_escape_refused
+    self.assertTrue(callable(getattr(profile, 'tree_inventory', None)), 'Full runtime/dependency inventory missing')
+AssertionError: False is not true : Full runtime/dependency inventory missing
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

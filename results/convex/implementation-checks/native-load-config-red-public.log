@@ -1,0 +1,14 @@
+test_optional_native_runner_and_tools_do_not_expand_serving_budget (__main__.ConvexLoadConfig.test_optional_native_runner_and_tools_do_not_expand_serving_budget) ... FAIL
+
+======================================================================
+FAIL: test_optional_native_runner_and_tools_do_not_expand_serving_budget (__main__.ConvexLoadConfig.test_optional_native_runner_and_tools_do_not_expand_serving_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_load_config.py", line 12, in test_optional_native_runner_and_tools_do_not_expand_serving_budget
+    self.assertTrue(overlay.is_file(), 'Optional isolated Convex runner profile missing')
+AssertionError: False is not true : Optional isolated Convex runner profile missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
