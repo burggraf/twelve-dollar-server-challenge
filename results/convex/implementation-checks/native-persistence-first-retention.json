@@ -1,0 +1,139 @@
+{
+  "scope": "First acknowledged persistence attempt FAILED; actual completed phases/restart/canonical status must be determined from complete raw logs/profiles, not assumed from wrapper; existing partial acknowledgement manifests/stopped state retained; not correctness/capacity/powerloss.",
+  "private_inputs_sha256": {
+    "cli.env": "f228b8716c5deee2e9e01f07a1e2efa0f664a8dca7da831ca006ecfe0634d50b",
+    "backend.env": "cfa8011196ce90ea27d9232441c082442280f96230830f055135216e16ae22c5",
+    "postgres.env": "4b94741dc1bd9def607058a3bedb23b087a921dc223424fa7a48e863b4d3ecc3",
+    "compat-jwt.env": "2c1b1db9d3ea3e9d6e955af985dc14eda2f4ca6d32d9cf1e8e74e28486c805de"
+  },
+  "actual_private_candidates_checked": 7,
+  "targets": [
+    {
+      "role": "backend",
+      "id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "OOMKilled": false,
+        "ExitCode": 139,
+        "StartedAt": "2026-10-15T19:03:26.325882195Z",
+        "FinishedAt": "2026-10-15T23:47:48.287476294Z"
+      }
+    },
+    {
+      "role": "postgres",
+      "id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T20:47:57.462350749Z",
+        "FinishedAt": "2026-10-15T20:47:56.764451452Z"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "original_private_file": "setup-evidence/native-persistence-original.log",
+      "original_bytes": 2553,
+      "original_sha256": "bfd1d6db7fe2f6ac8625f568430f486acb61689fa65ea6f76b5f06a7388608a3",
+      "public_derivative": "native-persistence-first-public.log",
+      "derivative_bytes": 2553,
+      "derivative_sha256": "bfd1d6db7fe2f6ac8625f568430f486acb61689fa65ea6f76b5f06a7388608a3",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-persistence-driver.log",
+      "original_bytes": 313,
+      "original_sha256": "62bbd928d348245a5da456bb701757466e5c52f29f49fdeff1ef7dd94ec60469",
+      "public_derivative": "native-persistence-first-driver-public.log",
+      "derivative_bytes": 313,
+      "derivative_sha256": "62bbd928d348245a5da456bb701757466e5c52f29f49fdeff1ef7dd94ec60469",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-persistence-before.json",
+      "original_bytes": 16260,
+      "original_sha256": "ef4c51252f63075b44e04708f2084052add7a6e667fbe6904534deaf4f5ffe4b",
+      "public_derivative": "native-persistence-first-before-public.json",
+      "derivative_bytes": 16260,
+      "derivative_sha256": "ef4c51252f63075b44e04708f2084052add7a6e667fbe6904534deaf4f5ffe4b",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-persistence-before-services.json",
+      "original_bytes": 6705,
+      "original_sha256": "80a9a698ce0d13889288dfd165465df8c28164300526e195650c843e95b1d9e9",
+      "public_derivative": "native-persistence-first-before-services-public.json",
+      "derivative_bytes": 6705,
+      "derivative_sha256": "80a9a698ce0d13889288dfd165465df8c28164300526e195650c843e95b1d9e9",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-persistence-after.json",
+      "original_bytes": 15947,
+      "original_sha256": "55e3fdff76eb59fc2045edc782be1b1ba38e7539aca51ddc13cf9e06e8dc3434",
+      "public_derivative": "native-persistence-first-after-public.json",
+      "derivative_bytes": 15947,
+      "derivative_sha256": "55e3fdff76eb59fc2045edc782be1b1ba38e7539aca51ddc13cf9e06e8dc3434",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-persistence-after-services.json",
+      "original_bytes": 6705,
+      "original_sha256": "80a9a698ce0d13889288dfd165465df8c28164300526e195650c843e95b1d9e9",
+      "public_derivative": "native-persistence-first-after-services-public.json",
+      "derivative_bytes": 6705,
+      "derivative_sha256": "80a9a698ce0d13889288dfd165465df8c28164300526e195650c843e95b1d9e9",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "src/.state/convex/acknowledged-persistence.json",
+      "original_bytes": 424,
+      "original_sha256": "b08ba74e87ac7e61cf3b2f4c8b991e80cea152fb59ea91fba9ea656a7a4a2247",
+      "public_derivative": "native-persistence-first-acknowledged-persistence-public.json",
+      "derivative_bytes": 424,
+      "derivative_sha256": "b08ba74e87ac7e61cf3b2f4c8b991e80cea152fb59ea91fba9ea656a7a4a2247",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ],
+  "native_profile_exists": true
+}

@@ -1,0 +1,55 @@
+{
+  "Id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+  "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+  "State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 139,
+    "Error": "",
+    "StartedAt": "2026-10-15T19:03:26.325882195Z",
+    "FinishedAt": "2026-10-15T23:47:48.287476294Z",
+    "Health": {
+      "Status": "unhealthy",
+      "FailingStreak": 0,
+      "Log": [
+        {
+          "Start": "2026-10-15T23:47:24.260486532Z",
+          "End": "2026-10-15T23:47:24.295938368Z",
+          "ExitCode": 0,
+          "Output": "unknown"
+        },
+        {
+          "Start": "2026-10-15T23:47:29.296537223Z",
+          "End": "2026-10-15T23:47:29.331612722Z",
+          "ExitCode": 0,
+          "Output": "unknown"
+        },
+        {
+          "Start": "2026-10-15T23:47:34.33232552Z",
+          "End": "2026-10-15T23:47:34.366372393Z",
+          "ExitCode": 0,
+          "Output": "unknown"
+        },
+        {
+          "Start": "2026-10-15T23:47:39.367058038Z",
+          "End": "2026-10-15T23:47:39.402775672Z",
+          "ExitCode": 0,
+          "Output": "unknown"
+        },
+        {
+          "Start": "2026-10-15T23:47:44.403394161Z",
+          "End": "2026-10-15T23:47:44.437671434Z",
+          "ExitCode": 0,
+          "Output": "unknown"
+        }
+      ]
+    }
+  },
+  "configured_stop_signal": "SIGINT",
+  "scope": "Unexpected139 after requestedSIGINT, backend leftstopped, no restart/readiness or acknowledged recovery proof here; no core/memory/argv/env captured"
+}

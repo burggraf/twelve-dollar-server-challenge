@@ -1,0 +1,29 @@
+2026-10-15T23:47:47.729293083Z [2m2026-10-15T23:47:47.729172Z[0m [32m INFO[0m [2mkeybroker::broker[0m[2m:[0m Admin key accepted from MemberId(0) at Some(2026-10-15T19:03:32Z) for baas-convexpg-vps16
+2026-10-15T23:47:47.740652683Z [2m2026-10-15T23:47:47.740557Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 172.22.0.4:37124 "POST /api/query HTTP/1.1" 200 "-" "Python-urllib/3.11" application/json - 11.504ms
+2026-10-15T23:47:47.769663076Z [2m2026-10-15T23:47:47.769201Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 127.0.0.1:53646 "POST /http/posts HTTP/1.1" 201 "-" "Python-urllib/3.11" application/json 169 27.206ms
+2026-10-15T23:47:47.769684606Z [2m2026-10-15T23:47:47.769505Z[0m [32m INFO[0m [2mcommon::http[0m[2m:[0m stats_middleware: matched_path is None, uri: /posts
+2026-10-15T23:47:47.769687972Z [2m2026-10-15T23:47:47.769522Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 172.22.0.4:39164 "POST /posts HTTP/1.1" 201 "-" "Python-urllib/3.11" application/json 169 27.751ms
+2026-10-15T23:47:47.785615124Z [2m2026-10-15T23:47:47.785443Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 127.0.0.1:53654 "POST /http/posts/500001/like HTTP/1.1" 201 "-" "Python-urllib/3.11" application/json 53 14.509ms
+2026-10-15T23:47:47.785815388Z [2m2026-10-15T23:47:47.785756Z[0m [32m INFO[0m [2mcommon::http[0m[2m:[0m stats_middleware: matched_path is None, uri: /posts/500001/like
+2026-10-15T23:47:47.785828282Z [2m2026-10-15T23:47:47.785776Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 172.22.0.4:39172 "POST /posts/500001/like HTTP/1.1" 201 "-" "Python-urllib/3.11" application/json 53 15.064ms
+2026-10-15T23:47:47.797370696Z [2m2026-10-15T23:47:47.797086Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 127.0.0.1:53668 "POST /http/posts/500001/like HTTP/1.1" 200 "-" "Python-urllib/3.11" application/json 52 9.263ms
+2026-10-15T23:47:47.797418296Z [2m2026-10-15T23:47:47.797274Z[0m [32m INFO[0m [2mcommon::http[0m[2m:[0m stats_middleware: matched_path is None, uri: /posts/500001/like
+2026-10-15T23:47:47.797422473Z [2m2026-10-15T23:47:47.797294Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 172.22.0.4:39178 "POST /posts/500001/like HTTP/1.1" 200 "-" "Python-urllib/3.11" application/json 52 9.686ms
+2026-10-15T23:47:47.813746528Z [2m2026-10-15T23:47:47.813451Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 127.0.0.1:53670 "GET /http/posts/500001 HTTP/1.1" 200 "-" "Python-urllib/3.11" application/json 169 14.728ms
+2026-10-15T23:47:47.813911768Z [2m2026-10-15T23:47:47.813720Z[0m [32m INFO[0m [2mcommon::http[0m[2m:[0m stats_middleware: matched_path is None, uri: /posts/500001
+2026-10-15T23:47:47.813922417Z [2m2026-10-15T23:47:47.813739Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 172.22.0.4:39188 "GET /posts/500001 HTTP/1.1" 200 "-" "Python-urllib/3.11" application/json 169 15.266ms
+2026-10-15T23:47:47.815106256Z [2m2026-10-15T23:47:47.815011Z[0m [32m INFO[0m [2mkeybroker::broker[0m[2m:[0m Admin key accepted from MemberId(0) at Some(2026-10-15T19:03:32Z) for baas-convexpg-vps16
+2026-10-15T23:47:47.821619713Z [2m2026-10-15T23:47:47.821487Z[0m [32m INFO[0m [2mconvex-cloud-http[0m[2m:[0m [] 172.22.0.4:37134 "POST /api/query HTTP/1.1" 200 "-" "Python-urllib/3.11" application/json - 6.550ms
+2026-10-15T23:47:48.108852292Z [2m2026-10-15T23:47:48.108777Z[0m [32m INFO[0m [2mconvex_local_backend[0m[2m:[0m Received Ctrl-C signal!
+2026-10-15T23:47:48.108909789Z [2m2026-10-15T23:47:48.108825Z[0m [32m INFO[0m [2mconvex_local_backend[0m[2m:[0m Shutdown initiated, draining existing requests...
+2026-10-15T23:47:48.108915150Z [2m2026-10-15T23:47:48.108852Z[0m [32m INFO[0m [2mlocal_backend::proxy[0m[2m:[0m Shut down proxy
+2026-10-15T23:47:48.109565078Z [2m2026-10-15T23:47:48.109480Z[0m [32m INFO[0m [2mconvex_local_backend[0m[2m:[0m Shutting down application...
+2026-10-15T23:47:48.109625952Z [2m2026-10-15T23:47:48.109587Z[0m [32m INFO[0m [2mapplication::table_summary_worker[0m[2m:[0m Shutting down table summary worker...
+2026-10-15T23:47:48.110367242Z [2m2026-10-15T23:47:48.110309Z[0m [32m INFO[0m [2mdatabase::database[0m[2m:[0m Database shutdown
+2026-10-15T23:47:48.110376790Z [2m2026-10-15T23:47:48.110327Z[0m [32m INFO[0m [2mapplication[0m[2m:[0m Application shut down
+2026-10-15T23:47:48.116699179Z [2m2026-10-15T23:47:48.116489Z[0m [32m INFO[0m [2mconvex_local_backend[0m[2m:[0m Server successfully shut down.
+2026-10-15T23:47:48.116734485Z [2m2026-10-15T23:47:48.116533Z[0m [32m INFO[0m [2mconvex_local_backend[0m[2m:[0m Done
+2026-10-15T23:47:48.119443011Z 
+2026-10-15T23:47:48.119462779Z thread 'isolate' (15381) panicked at /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/time/entry.rs:539:9:
+2026-10-15T23:47:48.119465173Z A Tokio 1.x context was found, but it is being shutdown.
+2026-10-15T23:47:48.119467117Z note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

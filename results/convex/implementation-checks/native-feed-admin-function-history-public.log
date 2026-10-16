@@ -1,0 +1,34 @@
+ Container baas-convexpg-vps16-native-error-log-tools Creating 
+ Container baas-convexpg-vps16-native-error-log-tools Created 
+error: unknown option '--json-logs'
+
+Usage: convex logs [options]
+
+Stream function logs from your Convex deployment.
+By default, this streams from your project's dev deployment.
+
+Options:
+  --history [n]              Show `n` most recent logs. Defaults to showing all
+                             available logs.
+  --success                  Print a log line for every successful function
+                             execution (default: false)
+  --jsonl                    Output raw log events as JSONL (default: false)
+  --prod                     Watch logs from this project's default production
+                             deployment.
+  --deployment <deployment>  Watch logs from a specific deployment. Accepts:
+                             • a deployment name (e.g. joyful-capybara-123)
+                             • a deployment reference (e.g. dev/james, staging)
+                             • `dev` (for your personal dev deployment)
+                             • `prod` (for your project’s default production
+                             deployment)
+                             • `local` (for your local dev deployment).
+                             You can also select deployments in other projects
+                             with `project-slug:reference` or
+                             `team-slug:project-slug:reference`.
+  -h, --help                 display help for command
+npm notice
+npm notice New major version of npm available! 10.9.3 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+

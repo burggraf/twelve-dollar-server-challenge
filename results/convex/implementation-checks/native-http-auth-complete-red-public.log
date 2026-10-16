@@ -1,0 +1,445 @@
+ Container baas-convexpg-vps16-auth-complete-red-tools Creating 
+ Container baas-convexpg-vps16-auth-complete-red-tools Created 
+test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) ... 
+  test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['exp']) ... FAIL
+  test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['exp']) ... FAIL
+  test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['exp']) ... FAIL
+  test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['exp']) ... FAIL
+  test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['nbf']) ... FAIL
+  test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['nbf']) ... FAIL
+test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) ... FAIL
+test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) ... 
+  test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts') ... FAIL
+  test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts/1/like') ... FAIL
+  test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts/not-an-id/like') ... FAIL
+test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) ... 
+  test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts') ... FAIL
+  test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts/1/like') ... FAIL
+  test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts/not-an-id/like') ... FAIL
+test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) ... 
+  test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=1) ... FAIL
+  test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=17) ... FAIL
+  test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=42) ... FAIL
+  test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=27) ... FAIL
+  test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=12) ... FAIL
+test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) ... 
+  test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='NoneType') ... FAIL
+  test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='list') ... FAIL
+  test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='int') ... FAIL
+  test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='str') ... FAIL
+  test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='dict') ... FAIL
+  test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='dict') ... FAIL
+  test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='dict') ... FAIL
+test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) ... FAIL
+test_valid_signature_reaches_body_validation_but_tampering_does_not (__main__.NativeHttpAuthGate.test_valid_signature_reaches_body_validation_but_tampering_does_not) ... FAIL
+
+======================================================================
+FAIL: test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['exp'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 60, in test_expiry_algorithm_nbf_and_malformed_claims
+    self.assertEqual(request('POST', '/posts', {}, auth=signed(dict(payload, **extra))), (401, {'error': 'invalid or expired token'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['exp'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 60, in test_expiry_algorithm_nbf_and_malformed_claims
+    self.assertEqual(request('POST', '/posts', {}, auth=signed(dict(payload, **extra))), (401, {'error': 'invalid or expired token'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['exp'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 60, in test_expiry_algorithm_nbf_and_malformed_claims
+    self.assertEqual(request('POST', '/posts', {}, auth=signed(dict(payload, **extra))), (401, {'error': 'invalid or expired token'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['exp'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 60, in test_expiry_algorithm_nbf_and_malformed_claims
+    self.assertEqual(request('POST', '/posts', {}, auth=signed(dict(payload, **extra))), (401, {'error': 'invalid or expired token'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['nbf'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 60, in test_expiry_algorithm_nbf_and_malformed_claims
+    self.assertEqual(request('POST', '/posts', {}, auth=signed(dict(payload, **extra))), (401, {'error': 'invalid or expired token'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims) (fields=['nbf'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 60, in test_expiry_algorithm_nbf_and_malformed_claims
+    self.assertEqual(request('POST', '/posts', {}, auth=signed(dict(payload, **extra))), (401, {'error': 'invalid or expired token'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_expiry_algorithm_nbf_and_malformed_claims (__main__.NativeHttpAuthGate.test_expiry_algorithm_nbf_and_malformed_claims)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 61, in test_expiry_algorithm_nbf_and_malformed_claims
+    self.assertEqual(request('POST', '/posts', {}, auth=signed(payload, {'alg': 'none'})), (401, {'error': 'invalid or expired token'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 44, in test_malformed_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}, auth='not-a-jwt'),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts/1/like')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 44, in test_malformed_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}, auth='not-a-jwt'),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_malformed_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_malformed_bearer_precedes_post_body_and_like_id_validation) (path='/posts/not-an-id/like')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 44, in test_malformed_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}, auth='not-a-jwt'),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'invalid or expired token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'invalid or expired token'})
+
+======================================================================
+FAIL: test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 38, in test_missing_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'missing bearer token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'missing bearer token'})
+
+======================================================================
+FAIL: test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts/1/like')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 38, in test_missing_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'missing bearer token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'missing bearer token'})
+
+======================================================================
+FAIL: test_missing_bearer_precedes_post_body_and_like_id_validation (__main__.NativeHttpAuthGate.test_missing_bearer_precedes_post_body_and_like_id_validation) (path='/posts/not-an-id/like')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 38, in test_missing_bearer_precedes_post_body_and_like_id_validation
+    self.assertEqual(request('POST', path, {'body': 'must never be stored'}),
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (401, {'error': 'missing bearer token'})
+
+First differing element 0:
+404
+401
+
+- (404, {'_non_json': 'No matching routes found'})
++ (401, {'error': 'missing bearer token'})
+
+======================================================================
+FAIL: test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 78, in test_strict_json_and_utf8_are_rejected_without_replacement
+    self.assertEqual(raw_request(raw), (400, {'error': 'invalid JSON'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'invalid JSON'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'invalid JSON'})
+
+======================================================================
+FAIL: test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 78, in test_strict_json_and_utf8_are_rejected_without_replacement
+    self.assertEqual(raw_request(raw), (400, {'error': 'invalid JSON'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'invalid JSON'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'invalid JSON'})
+
+======================================================================
+FAIL: test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=42)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 78, in test_strict_json_and_utf8_are_rejected_without_replacement
+    self.assertEqual(raw_request(raw), (400, {'error': 'invalid JSON'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'invalid JSON'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'invalid JSON'})
+
+======================================================================
+FAIL: test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=27)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 78, in test_strict_json_and_utf8_are_rejected_without_replacement
+    self.assertEqual(raw_request(raw), (400, {'error': 'invalid JSON'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'invalid JSON'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'invalid JSON'})
+
+======================================================================
+FAIL: test_strict_json_and_utf8_are_rejected_without_replacement (__main__.NativeHttpAuthGate.test_strict_json_and_utf8_are_rejected_without_replacement) (length=12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 78, in test_strict_json_and_utf8_are_rejected_without_replacement
+    self.assertEqual(raw_request(raw), (400, {'error': 'invalid JSON'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'invalid JSON'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'invalid JSON'})
+
+======================================================================
+FAIL: test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='NoneType')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 72, in test_valid_auth_then_body_types_trim_and_codepoint_limit
+    self.assertEqual(request('POST', '/posts', value, auth=token()), (400, {'error': 'body is required'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'body is required'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'body is required'})
+
+======================================================================
+FAIL: test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 72, in test_valid_auth_then_body_types_trim_and_codepoint_limit
+    self.assertEqual(request('POST', '/posts', value, auth=token()), (400, {'error': 'body is required'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'body is required'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'body is required'})
+
+======================================================================
+FAIL: test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='int')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 72, in test_valid_auth_then_body_types_trim_and_codepoint_limit
+    self.assertEqual(request('POST', '/posts', value, auth=token()), (400, {'error': 'body is required'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'body is required'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'body is required'})
+
+======================================================================
+FAIL: test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='str')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 72, in test_valid_auth_then_body_types_trim_and_codepoint_limit
+    self.assertEqual(request('POST', '/posts', value, auth=token()), (400, {'error': 'body is required'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'body is required'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'body is required'})
+
+======================================================================
+FAIL: test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 72, in test_valid_auth_then_body_types_trim_and_codepoint_limit
+    self.assertEqual(request('POST', '/posts', value, auth=token()), (400, {'error': 'body is required'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'body is required'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'body is required'})
+
+======================================================================
+FAIL: test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 72, in test_valid_auth_then_body_types_trim_and_codepoint_limit
+    self.assertEqual(request('POST', '/posts', value, auth=token()), (400, {'error': 'body is required'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'body is required'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'body is required'})
+
+======================================================================
+FAIL: test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit) (value_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 72, in test_valid_auth_then_body_types_trim_and_codepoint_limit
+    self.assertEqual(request('POST', '/posts', value, auth=token()), (400, {'error': 'body is required'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'body is required'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'body is required'})
+
+======================================================================
+FAIL: test_valid_auth_then_body_types_trim_and_codepoint_limit (__main__.NativeHttpAuthGate.test_valid_auth_then_body_types_trim_and_codepoint_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 73, in test_valid_auth_then_body_types_trim_and_codepoint_limit
+    self.assertEqual(request('POST', '/posts', {'body': '\U0001f600' * 501}, auth=token()), (400, {'error': 'body must be at most 500 characters'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'body must be at most 500 characters'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'body must be at most 500 characters'})
+
+======================================================================
+FAIL: test_valid_signature_reaches_body_validation_but_tampering_does_not (__main__.NativeHttpAuthGate.test_valid_signature_reaches_body_validation_but_tampering_does_not)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_auth.py", line 48, in test_valid_signature_reaches_body_validation_but_tampering_does_not
+    self.assertEqual(request('POST', '/posts', {}, auth=token()), (400, {'error': 'body is required'}))
+AssertionError: Tuples differ: (404, {'_non_json': 'No matching routes found'}) != (400, {'error': 'body is required'})
+
+First differing element 0:
+404
+400
+
+- (404, {'_non_json': 'No matching routes found'})
++ (400, {'error': 'body is required'})
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.097s
+
+FAILED (failures=27)
+

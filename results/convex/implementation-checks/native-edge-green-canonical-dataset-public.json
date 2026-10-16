@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "users": 50000,
+    "posts": 500000,
+    "likes": 2016005
+  },
+  "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d",
+  "scope": "Actual native paginated API rows; native metadata present; logical IDs/relationships/order/unique likes verified"
+}

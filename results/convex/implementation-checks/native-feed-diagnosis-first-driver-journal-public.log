@@ -1,0 +1,15 @@
+Starting tds-convex-feed-native-error-diagnosis-20261015.service - /usr/bin/python3 /opt/twelve-dollar-baas-convexpg-16g/diagnose-feed-native-error.py...
+Started tds-convex-feed-native-error-diagnosis-20261015.service - /usr/bin/python3 /opt/twelve-dollar-baas-convexpg-16g/diagnose-feed-native-error.py.
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/record-edge-red-phase.py", line 13, in <module>
+    assert phase in ['before','after']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/diagnose-feed-native-error.py", line 8, in <module>
+    subprocess.run(record+['diagnosis-before'],check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', '/opt/twelve-dollar-baas-convexpg-16g/record-edge-red-phase.py', 'diagnosis-before']' returned non-zero exit status 1.
+tds-convex-feed-native-error-diagnosis-20261015.service: Main process exited, code=exited, status=1/FAILURE
+tds-convex-feed-native-error-diagnosis-20261015.service: Failed with result 'exit-code'.

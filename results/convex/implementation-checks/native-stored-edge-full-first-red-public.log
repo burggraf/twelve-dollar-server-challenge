@@ -1,0 +1,40 @@
+test_01_native_stored_fixture_installation (__main__.NativeStoredEdges.test_01_native_stored_fixture_installation) ... ok
+test_02_wide_stored_detail_unicode_nul_and_native_identity_like (__main__.NativeStoredEdges.test_02_wide_stored_detail_unicode_nul_and_native_identity_like) ... ok
+test_03_feed_crosses_24_newer_orphan_join_holes (__main__.NativeStoredEdges.test_03_feed_crosses_24_newer_orphan_join_holes) ... FAIL
+test_04_maximum_allocation_then_exhaustion_does_not_round_or_advance (__main__.NativeStoredEdges.test_04_maximum_allocation_then_exhaustion_does_not_round_or_advance) ... FAIL
+test_05_real_collision_after_sequence_patch_rolls_back (__main__.NativeStoredEdges.test_05_real_collision_after_sequence_patch_rolls_back) ... FAIL
+
+======================================================================
+FAIL: test_03_feed_crosses_24_newer_orphan_join_holes (__main__.NativeStoredEdges.test_03_feed_crosses_24_newer_orphan_join_holes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_stored_edges.py", line 42, in test_03_feed_crosses_24_newer_orphan_join_holes
+    self.assertEqual(status, 200, 'Native feed must cross join holes without unsupported repeated pagination')
+AssertionError: 500 != 200 : Native feed must cross join holes without unsupported repeated pagination
+
+======================================================================
+FAIL: test_04_maximum_allocation_then_exhaustion_does_not_round_or_advance (__main__.NativeStoredEdges.test_04_maximum_allocation_then_exhaustion_does_not_round_or_advance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_stored_edges.py", line 52, in test_04_maximum_allocation_then_exhaustion_does_not_round_or_advance
+    self.assertEqual(result.get('status'), 'success')
+AssertionError: 'error' != 'success'
+- error
++ success
+
+
+======================================================================
+FAIL: test_05_real_collision_after_sequence_patch_rolls_back (__main__.NativeStoredEdges.test_05_real_collision_after_sequence_patch_rolls_back)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_stored_edges.py", line 65, in test_05_real_collision_after_sequence_patch_rolls_back
+    self.assertEqual(result.get('status'), 'success')
+AssertionError: 'error' != 'success'
+- error
++ success
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.217s
+
+FAILED (failures=3)

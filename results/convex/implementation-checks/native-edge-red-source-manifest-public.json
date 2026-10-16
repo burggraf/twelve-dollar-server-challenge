@@ -1,0 +1,125 @@
+{
+  "scope": "Exact selected first actual stored-edge/native pagination/guard gate sources, not SDK/generated/runtime freeze",
+  "files": {
+    "services/convex/compose.yaml": {
+      "bytes": 1629,
+      "sha256": "72b37d767cae220c6e540a34a6cbdaa44d2215a474d626b259f31e55a884042d"
+    },
+    "services/convex/compose.postgres.yaml": {
+      "bytes": 1470,
+      "sha256": "958d6a0d0435b505662e85defbaad00573326dba835c92a350c63947b80a3504"
+    },
+    "services/convex/versions.json": {
+      "bytes": 1035,
+      "sha256": "2690b74d00489fa31ec5baf84a1de0bcb59c1af791a2ac4df9371b6bfa34b1e3"
+    },
+    "services/convex/postgres-versions.json": {
+      "bytes": 905,
+      "sha256": "0a6cdbd7c771c4b42c7bf0491f10642e8e18b87fbaabaa9abc6faa1c80a5330f"
+    },
+    "services/convex/app/package.json": {
+      "bytes": 158,
+      "sha256": "e9eb4a65b48bf08b8c86aea22bc09b813afea6ae2f32ff3a39ea2db2944adb73"
+    },
+    "services/convex/app/package-lock.json": {
+      "bytes": 16130,
+      "sha256": "bd70e8a2b049d0c358818f872b2e5624f391d78ecfeb1751d5c1704398c771cf"
+    },
+    "services/convex/app/convex.json": {
+      "bytes": 29,
+      "sha256": "1bb7e2dec7148da5d684477c6074ecc66e48505ab67ea0074086b998ec39eda7"
+    },
+    "services/convex/app/convex/native.js": {
+      "bytes": 4817,
+      "sha256": "25b79d49a3670a9419b2b7bb04be010c71a672ba350247cf0dda3430150611a2"
+    },
+    "services/convex/app/convex/schema.js": {
+      "bytes": 1196,
+      "sha256": "cf09505403ec59cafebf6fd6225eabcd2e6200ffb9f903167c0e90c7596933f1"
+    },
+    "scripts/convex_profile.py": {
+      "bytes": 3373,
+      "sha256": "7ae2f55108fb68ca5244a7a4c47b6506186f783e8538d206c970c8302037ddc4"
+    },
+    "scripts/import_convex.py": {
+      "bytes": 6090,
+      "sha256": "cc7a6dd8bbd817289ea52b7eef4d011928be609529a543def2f64be53185e140"
+    },
+    "scripts/import_sqlite.py": {
+      "bytes": 2690,
+      "sha256": "253dbc8a13c7a01e52bacd927e13c55d3408ab5bef81e998503ad1af1e96a1b2"
+    },
+    "test/baas/test_convex_postgres_config.py": {
+      "bytes": 3750,
+      "sha256": "407d3e00ad274192d46528bab8f9167f4f21bbae719e17770c14b93f32c3d3f8"
+    },
+    "test/baas/test_convex_budget.py": {
+      "bytes": 4800,
+      "sha256": "2d60ebf756ccabf16726b3b95651680e2b7b8e0fd2fb1a2df91dcaf892ed43d9"
+    },
+    "test/baas/test_convex_import.py": {
+      "bytes": 4809,
+      "sha256": "3c2fb0458c90c96862b0b0de4c701a539cf99171868f4008a54d086c8b232ecb"
+    },
+    "test/baas/convex_feasibility.py": {
+      "bytes": 2888,
+      "sha256": "72d7c7f79a24bb7acd481e889424c401da31387bba51446f48813d7bb18cf1a1"
+    },
+    "test/baas/convex_dataset.py": {
+      "bytes": 5957,
+      "sha256": "4f6f0b71a76dcbc412a58ff60db98276069060206bf3fae8bd1ab7e3f7645cab"
+    },
+    "services/convex/app/convex/http.js": {
+      "bytes": 4468,
+      "sha256": "658bea389d9c3f5846e1bf966af897ddb7a0ac5209240a17e80e892f5e626bd1"
+    },
+    "test/baas/convex_http_reads.py": {
+      "bytes": 4909,
+      "sha256": "b47f0001772a21eca270ee70f11ddb2b2e84500927f69d59583e792703068589"
+    },
+    "services/convex/app/convex/clock.js": {
+      "bytes": 1534,
+      "sha256": "64dfd1457a57a984c1b61aaec46eb242aa8e4c764bdb9f77a393156ea924e658"
+    },
+    "test/baas/convex_health_native.py": {
+      "bytes": 2262,
+      "sha256": "dfceae440e38499ae7a74aee4de68b7162e4b1f6cf2714c228e8bc46d37496bc"
+    },
+    "test/baas/test_api.py": {
+      "bytes": 6477,
+      "sha256": "5c8d17f86026f8620dd166f42fde42b6608de445f1fb852ad41dee64b4f3a021"
+    },
+    "test/baas/convex_dependency_failure.py": {
+      "bytes": 1572,
+      "sha256": "1180fa0458c85234de81e359bb7de21131ca46068ec361e2c7685da89e0127c0"
+    },
+    "test/baas/convex_http_auth.py": {
+      "bytes": 4737,
+      "sha256": "5a1a9369c1ceed5003b59975350138cd0de2464a0d14cfd1d3cfa71babf563af"
+    },
+    "services/convex/app/convex/contract.js": {
+      "bytes": 3133,
+      "sha256": "eb646cb62752d6c9f2083e38044cf5fe48e0b29dd7d09937ffaccc0a8b80f765"
+    },
+    "test/baas/convex_error_contract.py": {
+      "bytes": 407,
+      "sha256": "fbb871e3ca43ae02087ce8a74577835830f41a430238dc2bbc7d74f50e7f8303"
+    },
+    "test/baas/convex_http_writes.py": {
+      "bytes": 7103,
+      "sha256": "0defb110698ee8f4f2a98d3dda97b52c19bddfa0024365d0d97b1712da25ec03"
+    },
+    "services/convex/app/convex/fixtures.js": {
+      "bytes": 5627,
+      "sha256": "ea1dd3138ca911af98f732f51475eae6a3c1a2ff35ce514f584412ec3aba0d16"
+    },
+    "test/baas/convex_stored_edges.py": {
+      "bytes": 4251,
+      "sha256": "741f642854977d062cbf5ebb4843b03b816007b5a76f8fcef8e55251322ae5e7"
+    },
+    "test/baas/convex_fixture_guards.py": {
+      "bytes": 3008,
+      "sha256": "12e7a9dda3c62b49f51aefd4f04fc06a89e222d7eedb9860041c71a8963204c7"
+    }
+  }
+}

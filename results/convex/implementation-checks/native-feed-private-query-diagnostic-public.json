@@ -1,0 +1,8 @@
+{
+  "scope": "Actual failing private native feed while independently installed25owned edge posts exist",
+  "http_status": 200,
+  "native_response": {
+    "status": "error",
+    "errorMessage": "[Request ID: e0b596a8d1cbdeae] Server Error"
+  }
+}

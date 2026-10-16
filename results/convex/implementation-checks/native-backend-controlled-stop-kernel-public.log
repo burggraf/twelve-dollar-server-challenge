@@ -1,0 +1,22 @@
+2026-10-15T23:47:35+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.39 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=53 ID=45783 PROTO=TCP SPT=59208 DPT=28203 WINDOW=65535 RES=0x00 SYN URGP=0 
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth9fbba0c) entered blocking state
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth9fbba0c) entered disabled state
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: veth9fbba0c: entered allmulticast mode
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: veth9fbba0c: entered promiscuous mode
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: eth0: renamed from veth74bc4c0
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth9fbba0c) entered blocking state
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth9fbba0c) entered forwarding state
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth9fbba0c) entered disabled state
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: veth74bc4c0: renamed from eth0
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth9fbba0c) entered disabled state
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: veth9fbba0c (unregistering): left allmulticast mode
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: veth9fbba0c (unregistering): left promiscuous mode
+2026-10-15T23:47:47+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 3(veth9fbba0c) entered disabled state
+2026-10-15T23:47:48+00:00 claudius.azabab.com kernel: traps: isolate[2259704] general protection fault ip:73e13f76e9a2 sp:73e10e7f5fb0 error:0
+2026-10-15T23:47:48+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 2(vethb2c12d7) entered disabled state
+2026-10-15T23:47:48+00:00 claudius.azabab.com kernel: vethe37c65d: renamed from eth0
+2026-10-15T23:47:48+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 2(vethb2c12d7) entered disabled state
+2026-10-15T23:47:48+00:00 claudius.azabab.com kernel: vethb2c12d7 (unregistering): left allmulticast mode
+2026-10-15T23:47:48+00:00 claudius.azabab.com kernel: vethb2c12d7 (unregistering): left promiscuous mode
+2026-10-15T23:47:48+00:00 claudius.azabab.com kernel: br-894af12ce8e6: port 2(vethb2c12d7) entered disabled state
+2026-10-15T23:47:55+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.20 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=26469 PROTO=TCP SPT=35492 DPT=49691 WINDOW=65535 RES=0x00 SYN URGP=0 

@@ -1,0 +1,17 @@
+test_01_native_stored_fixture_installation (__main__.NativeStoredEdges.test_01_native_stored_fixture_installation) ... FAIL
+
+======================================================================
+FAIL: test_01_native_stored_fixture_installation (__main__.NativeStoredEdges.test_01_native_stored_fixture_installation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_stored_edges.py", line 26, in test_01_native_stored_fixture_installation
+    self.assertEqual(result.get('status'), 'success', 'Private stored-edge fixture primitive missing')
+AssertionError: 'error' != 'success'
+- error
++ success
+ : Private stored-edge fixture primitive missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

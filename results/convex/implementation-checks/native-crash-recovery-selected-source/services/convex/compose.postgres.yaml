@@ -1,0 +1,46 @@
+# Explicitly combine with compose.yaml only in the fresh PostgreSQL workspace.
+# Both children share the exact one-core/four-GiB parent; never run this beside
+# the historical SQLite candidate or point it at that candidate's data volume.
+name: baas-convexpg-vps16
+services:
+  backend:
+    cgroup_parent: tdsbaasconvexpgvps16.slice
+    mem_limit: 3221225472
+    memswap_limit: 3221225472
+    env_file: ../../.state/convex/backend.env
+    environment:
+      INSTANCE_NAME: baas-convexpg-vps16
+      DO_NOT_REQUIRE_SSL: "1"
+    depends_on:
+      postgres:
+        condition: service_healthy
+  postgres:
+    image: postgres:17.11-bookworm@sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df
+    platform: linux/amd64
+    cgroup_parent: tdsbaasconvexpgvps16.slice
+    cpus: 1
+    mem_limit: 1073741824
+    memswap_limit: 1073741824
+    user: postgres
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    env_file: ../../.state/convex/postgres.env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    tmpfs:
+      - /tmp:mode=1777,size=134217728
+      - /var/run/postgresql:mode=1777,size=1048576
+    shm_size: 67108864
+    ulimits:
+      nofile: {soft: 65535, hard: 65535}
+    stop_signal: SIGINT
+    stop_grace_period: 30s
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"']
+      interval: 5s
+      timeout: 3s
+      start_period: 10s
+      retries: 12
+volumes:
+  pgdata:

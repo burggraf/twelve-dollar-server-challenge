@@ -1,0 +1,81 @@
+test_01_private_empty_probe_reset_and_current_sequence (__main__.NativeHttpWrites.test_01_private_empty_probe_reset_and_current_sequence) ... FAIL
+test_02_create_unicode_nul_and_signed_author_then_native_read (__main__.NativeHttpWrites.test_02_create_unicode_nul_and_signed_author_then_native_read) ... FAIL
+test_03_concurrent_duplicate_like_is_exactly_once (__main__.NativeHttpWrites.test_03_concurrent_duplicate_like_is_exactly_once) ... FAIL
+test_04_concurrent_post_allocation_is_unique_and_contiguous (__main__.NativeHttpWrites.test_04_concurrent_post_allocation_is_unique_and_contiguous) ... FAIL
+test_05_missing_user_rolls_back_without_consuming_post_id (__main__.NativeHttpWrites.test_05_missing_user_rolls_back_without_consuming_post_id) ... FAIL
+test_06_trim_500_codepoints_and_id_auth_precedence (__main__.NativeHttpWrites.test_06_trim_500_codepoints_and_id_auth_precedence) ... FAIL
+test_07_private_mutations_and_cleanup_are_not_anonymous (__main__.NativeHttpWrites.test_07_private_mutations_and_cleanup_are_not_anonymous) ... ok
+
+======================================================================
+FAIL: test_01_private_empty_probe_reset_and_current_sequence (__main__.NativeHttpWrites.test_01_private_empty_probe_reset_and_current_sequence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_writes.py", line 57, in test_01_private_empty_probe_reset_and_current_sequence
+    self.assertEqual(result.get('status'), 'success', 'Private bounded native cleanup primitive missing')
+AssertionError: 'error' != 'success'
+- error
++ success
+ : Private bounded native cleanup primitive missing
+
+======================================================================
+FAIL: test_02_create_unicode_nul_and_signed_author_then_native_read (__main__.NativeHttpWrites.test_02_create_unicode_nul_and_signed_author_then_native_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_writes.py", line 62, in test_02_create_unicode_nul_and_signed_author_then_native_read
+    post = self.create('café\x00😀', subject=token(username='signed-claim-name'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_writes.py", line 47, in create
+    self.assertEqual(status, 201, 'Native compatibility create did not return 201')
+AssertionError: 500 != 201 : Native compatibility create did not return 201
+
+======================================================================
+FAIL: test_03_concurrent_duplicate_like_is_exactly_once (__main__.NativeHttpWrites.test_03_concurrent_duplicate_like_is_exactly_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_writes.py", line 75, in test_03_concurrent_duplicate_like_is_exactly_once
+    post = self.create('duplicate-like')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_writes.py", line 47, in create
+    self.assertEqual(status, 201, 'Native compatibility create did not return 201')
+AssertionError: 500 != 201 : Native compatibility create did not return 201
+
+======================================================================
+FAIL: test_04_concurrent_post_allocation_is_unique_and_contiguous (__main__.NativeHttpWrites.test_04_concurrent_post_allocation_is_unique_and_contiguous)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_writes.py", line 89, in test_04_concurrent_post_allocation_is_unique_and_contiguous
+    before = int(self.probe_state()['sequence'])
+                 ^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_writes.py", line 42, in probe_state
+    self.assertEqual(result.get('status'), 'success', 'Private native allocation state primitive missing')
+AssertionError: 'error' != 'success'
+- error
++ success
+ : Private native allocation state primitive missing
+
+======================================================================
+FAIL: test_05_missing_user_rolls_back_without_consuming_post_id (__main__.NativeHttpWrites.test_05_missing_user_rolls_back_without_consuming_post_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_writes.py", line 98, in test_05_missing_user_rolls_back_without_consuming_post_id
+    before = self.probe_state()['sequence']
+             ^^^^^^^^^^^^^^^^^^
+  File "/work/test/baas/convex_http_writes.py", line 42, in probe_state
+    self.assertEqual(result.get('status'), 'success', 'Private native allocation state primitive missing')
+AssertionError: 'error' != 'success'
+- error
++ success
+ : Private native allocation state primitive missing
+
+======================================================================
+FAIL: test_06_trim_500_codepoints_and_id_auth_precedence (__main__.NativeHttpWrites.test_06_trim_500_codepoints_and_id_auth_precedence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_http_writes.py", line 106, in test_06_trim_500_codepoints_and_id_auth_precedence
+    self.assertEqual(status, 201)
+AssertionError: 500 != 201
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.025s
+
+FAILED (failures=6)

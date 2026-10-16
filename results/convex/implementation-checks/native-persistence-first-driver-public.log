@@ -1,0 +1,7 @@
+Running as unit: tds-convex-acknowledged-http-write-clean-stack-restart-20261015.service; invocation ID: e074aa0989bb4cfbafc040f7655e4b03
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 2.590s
+CPU time consumed: 1.720s
+Memory peak: 34.0M
+Memory swap peak: 0B

@@ -1,0 +1,7 @@
+Running as unit: tds-convex-native-maintenance-original42-full-shared6-20261015.service; invocation ID: b669dfb1a30745f3b0d30a5380a3a355
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 4min 41.558s
+CPU time consumed: 1.371s
+Memory peak: 36.6M
+Memory swap peak: 0B

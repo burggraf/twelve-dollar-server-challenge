@@ -1,0 +1,61 @@
+Read-only service snapshot saved; service count: 27 ; existing listener PID count: 1
+NATIVE_POSTGRES_CANONICAL_BEFORE_PROFILE_RECORDED
+ Container baas-convexpg-vps16-edge-red-tools Creating 
+ Container baas-convexpg-vps16-edge-red-tools Created 
+▌ Developing against deployment:
+▌ └─ http://backend:3210
+- Preparing Convex functions...
+
+✔ 22:41:27 Convex functions ready! (402.08ms)
+npm notice
+npm notice New major version of npm available! 10.9.3 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+test_01_internal_probe_state_is_private_with_positive_control (__main__.NativeFixtureGuards.test_01_internal_probe_state_is_private_with_positive_control) ... ok
+test_02_invalid_namespaces_cannot_reset_even_empty_state (__main__.NativeFixtureGuards.test_02_invalid_namespaces_cannot_reset_even_empty_state) ... ok
+test_03_valid_but_wrong_namespace_refuses_other_owned_rows (__main__.NativeFixtureGuards.test_03_valid_but_wrong_namespace_refuses_other_owned_rows) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.138s
+
+OK
+ACTUAL_STORED_WIDE_UNICODE_NUL_NATIVE_LIKE_POSITIVE_PASSED_MISSING_BOUNDARY_REDS_RETAINED_ORPHAN_FEED_OUTCOME_REQUIRES_REVIEW
+test_storage_health (__main__.FeedContract.test_storage_health) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.020s
+
+OK
+test_01_full_native_canonical_rows_hash_relations_and_metadata (__main__.FullNativeDataset.test_01_full_native_canonical_rows_hash_relations_and_metadata) ... Actual native canonical counts/full logical hash verified: {"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d", "scope": "Actual native paginated API rows; native metadata present; logical IDs/relationships/order/unique likes verified"}
+ok
+test_02_native_normalized_feed_detail_and_largest_seed_count (__main__.FullNativeDataset.test_02_native_normalized_feed_detail_and_largest_seed_count) ... Native feed/detail exact normalized counts verified; largest seeded post: 405018 likes: 583.0
+ok
+test_03_native_read_functions_are_private (__main__.FullNativeDataset.test_03_native_read_functions_are_private) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 152.908s
+
+OK
+test_both_native_processes_share_exact_aggregate_budget (__main__.ConvexPostgresBudget.test_both_native_processes_share_exact_aggregate_budget) ... ok
+test_child_limits_and_native_health_fail_closed (__main__.ConvexPostgresBudget.test_child_limits_and_native_health_fail_closed) ... ok
+test_each_required_server_is_mandatory (__main__.ConvexPostgresBudget.test_each_required_server_is_mandatory) ... ok
+test_image_architecture_ownership_and_actual_membership_are_required (__main__.ConvexPostgresBudget.test_image_architecture_ownership_and_actual_membership_are_required) ... ok
+test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap (__main__.ConvexPostgresBudget.test_parent_cannot_be_missing_enlarged_unlimited_or_have_swap) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK
+test_fresh_owned_volumes_and_uncached_native_queries (__main__.ConvexPostgresConfig.test_fresh_owned_volumes_and_uncached_native_queries) ... ok
+test_native_image_pins_and_three_plus_one_gib_children (__main__.ConvexPostgresConfig.test_native_image_pins_and_three_plus_one_gib_children) ... ok
+test_no_database_host_port_or_new_privileges (__main__.ConvexPostgresConfig.test_no_database_host_port_or_new_privileges) ... ok
+test_only_two_required_servers_and_separate_profiled_tools (__main__.ConvexPostgresConfig.test_only_two_required_servers_and_separate_profiled_tools) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.079s
+
+OK
+Read-only service snapshot saved; service count: 27 ; existing listener PID count: 1
+NATIVE_POSTGRES_CANONICAL_AFTER_PROFILE_RECORDED
+EDGE_SETUP_GUARDS3_HEALTH1_CANONICAL3_BUDGET5_CONFIG4_POSITIVE_AND_EXPECTED_BOUNDARY_REDS_PRESERVED_AFTER_EXACT_OWNED_CLEANUP

@@ -1,0 +1,19 @@
+test_cursor_cycle_fails_without_post_or_allocation_reset (__main__.NativeResetController.test_cursor_cycle_fails_without_post_or_allocation_reset) ... ok
+test_invalid_batch_shapes_and_counts_fail_closed (__main__.NativeResetController.test_invalid_batch_shapes_and_counts_fail_closed) ... ok
+test_native_admin_headers_cannot_follow_redirects_to_another_origin (__main__.NativeResetController.test_native_admin_headers_cannot_follow_redirects_to_another_origin) ... FAIL
+test_nonempty_post_batch_failure_does_not_reset_allocation (__main__.NativeResetController.test_nonempty_post_batch_failure_does_not_reset_allocation) ... ok
+test_private_environment_and_url_credentials_never_enter_error_messages (__main__.NativeResetController.test_private_environment_and_url_credentials_never_enter_error_messages) ... ok
+test_reset_order_counts_cursor_and_persistent_allocation (__main__.NativeResetController.test_reset_order_counts_cursor_and_persistent_allocation) ... ok
+
+======================================================================
+FAIL: test_native_admin_headers_cannot_follow_redirects_to_another_origin (__main__.NativeResetController.test_native_admin_headers_cannot_follow_redirects_to_another_origin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_controller.py", line 49, in test_native_admin_headers_cannot_follow_redirects_to_another_origin
+    self.assertTrue(hasattr(self.controller, '_NoRedirect'), 'Native administrator transport needs an explicit no-redirect policy')
+AssertionError: False is not true : Native administrator transport needs an explicit no-redirect policy
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.017s
+
+FAILED (failures=1)

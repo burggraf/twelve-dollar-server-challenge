@@ -1,0 +1,9 @@
+{
+  "name": "twelve-dollar-native-convex-feed",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "convex": "1.46.0"
+  }
+}

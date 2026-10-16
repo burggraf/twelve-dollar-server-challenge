@@ -1,0 +1,21 @@
+{
+  "acknowledged_post_after_restart": {
+    "id": 500001,
+    "body": "tds-native-write-probe:persistence-20261015:acknowledged",
+    "created_at": "2026-10-15T23:47:47.748Z",
+    "author": "golden_ember_1",
+    "like_count": 1
+  },
+  "next_post": {
+    "id": 500002,
+    "body": "tds-native-write-probe:persistence-20261015:next-after-restart",
+    "created_at": "2026-10-16T00:02:26.886Z",
+    "author": "golden_ember_1",
+    "like_count": 0
+  },
+  "allocation_after_restart": {
+    "extra_posts": 2.0,
+    "sequence": "0000000000000500002"
+  },
+  "credentials_or_tokens_recorded": false
+}

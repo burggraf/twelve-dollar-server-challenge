@@ -1,0 +1,7 @@
+Running as unit: tds-convex-native-stored-edge-first-red-20261015.service; invocation ID: 9d0a52b000fa42f9aa7897714bd489f0
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 2min 36.673s
+CPU time consumed: 1.216s
+Memory peak: 35.8M
+Memory swap peak: 0B

@@ -1,0 +1,50 @@
+{
+  "scope": "Six expanded native HTTP auth/input tests with genuine positive signature control and configured private key, all missing-route reds before implementation; no accepted writes",
+  "private_inputs_sha256": {
+    "cli.env": "f228b8716c5deee2e9e01f07a1e2efa0f664a8dca7da831ca006ecfe0634d50b",
+    "backend.env": "cfa8011196ce90ea27d9232441c082442280f96230830f055135216e16ae22c5",
+    "postgres.env": "4b94741dc1bd9def607058a3bedb23b087a921dc223424fa7a48e863b4d3ecc3",
+    "compat-jwt.env": "2c1b1db9d3ea3e9d6e955af985dc14eda2f4ca6d32d9cf1e8e74e28486c805de"
+  },
+  "actual_private_candidates_checked": 5,
+  "targets": [
+    {
+      "role": "backend",
+      "id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T19:03:26.325882195Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      }
+    },
+    {
+      "role": "postgres",
+      "id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T20:47:57.462350749Z",
+        "FinishedAt": "2026-10-15T20:47:56.764451452Z"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "original_private_file": "setup-evidence/native-http-auth-complete-red-original.log",
+      "original_bytes": 27647,
+      "original_sha256": "17b804f3ced36f42da838bbafaccfc2b2842a6af7951da7238207b0791ab8460",
+      "public_derivative": "native-http-auth-complete-red-public.log",
+      "derivative_bytes": 27647,
+      "derivative_sha256": "17b804f3ced36f42da838bbafaccfc2b2842a6af7951da7238207b0791ab8460",
+      "query_string_redactions": 0
+    }
+  ],
+  "native_profile_exists": true
+}

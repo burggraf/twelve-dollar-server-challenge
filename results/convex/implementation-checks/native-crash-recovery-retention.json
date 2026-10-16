@@ -1,0 +1,181 @@
+{
+  "scope": "OWNER AUTHORIZED ONLY exactsame-imageoriginal139recovery: actualacknowledgedpost/exactly-oncelike/persistentallocation survived backendcrashandcleanPGrestart; exact-owned2post1likecleanup andfullcanonical/currentregressions; ORIGINALclean-shutdown gateREMAINSFAILED; NOcapacityauthorization/performance/powerlossclaim;42selectedsources.",
+  "private_inputs_sha256": {
+    "cli.env": "f228b8716c5deee2e9e01f07a1e2efa0f664a8dca7da831ca006ecfe0634d50b",
+    "backend.env": "cfa8011196ce90ea27d9232441c082442280f96230830f055135216e16ae22c5",
+    "postgres.env": "4b94741dc1bd9def607058a3bedb23b087a921dc223424fa7a48e863b4d3ecc3",
+    "compat-jwt.env": "2c1b1db9d3ea3e9d6e955af985dc14eda2f4ca6d32d9cf1e8e74e28486c805de"
+  },
+  "actual_private_candidates_checked": 7,
+  "targets": [
+    {
+      "role": "backend",
+      "id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-16T00:02:20.333088398Z",
+        "FinishedAt": "2026-10-15T23:47:48.287476294Z"
+      }
+    },
+    {
+      "role": "postgres",
+      "id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-16T00:02:14.076467149Z",
+        "FinishedAt": "2026-10-16T00:02:13.874816796Z"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "original_private_file": "setup-evidence/native-crash-recovery-original.log",
+      "original_bytes": 9196,
+      "original_sha256": "9b3c9d5d2fd150972fc15a9e76d3efebf3a94d8e68f86c6fd06ed228e84e9e25",
+      "public_derivative": "native-crash-recovery-public.log",
+      "derivative_bytes": 9196,
+      "derivative_sha256": "9b3c9d5d2fd150972fc15a9e76d3efebf3a94d8e68f86c6fd06ed228e84e9e25",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-crash-recovery-driver.log",
+      "original_bytes": 316,
+      "original_sha256": "6999e4bac5565c5fd492a5146980cbd56524af2311e29344707d2cab44a9dc57",
+      "public_derivative": "native-crash-recovery-driver-public.log",
+      "derivative_bytes": 316,
+      "derivative_sha256": "6999e4bac5565c5fd492a5146980cbd56524af2311e29344707d2cab44a9dc57",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-crash-recovery-canonical-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "native-crash-recovery-canonical-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-crash-recovery-acknowledged-after.json",
+      "original_bytes": 593,
+      "original_sha256": "544448c3bed728bb4cf301193c04966f27c7fa39993a8a18989416b3f8373fa5",
+      "public_derivative": "native-crash-recovery-acknowledged-after-public.json",
+      "derivative_bytes": 593,
+      "derivative_sha256": "544448c3bed728bb4cf301193c04966f27c7fa39993a8a18989416b3f8373fa5",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-crash-recovery-postgres-clean-stop.json",
+      "original_bytes": 1815,
+      "original_sha256": "b58cc72340481a3a084c330546affb90b954a99e6a957603b457815f0854c0d4",
+      "public_derivative": "native-crash-recovery-postgres-clean-stop-public.json",
+      "derivative_bytes": 1815,
+      "derivative_sha256": "b58cc72340481a3a084c330546affb90b954a99e6a957603b457815f0854c0d4",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/complete-published-base-source.json",
+      "original_bytes": 353543,
+      "original_sha256": "dc370871f873a6eaa85fe04923dd29452215a81aad4c240fb6b5b83e8861d0d6",
+      "public_derivative": "complete-published-base-source-public.json",
+      "derivative_bytes": 353543,
+      "derivative_sha256": "dc370871f873a6eaa85fe04923dd29452215a81aad4c240fb6b5b83e8861d0d6",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-crash-recovery-before.json",
+      "original_bytes": 15932,
+      "original_sha256": "11006c07c262018e13fb15427e71dd894ce5dc7eb9d7f3bc515eac2f1bcbafb4",
+      "public_derivative": "native-crash-recovery-before-public.json",
+      "derivative_bytes": 15932,
+      "derivative_sha256": "11006c07c262018e13fb15427e71dd894ce5dc7eb9d7f3bc515eac2f1bcbafb4",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-crash-recovery-before-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "aa089e1465053b70ba6e07b6f5b84382713ed65867869671c8735e3d64f80ebd",
+      "public_derivative": "native-crash-recovery-before-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "aa089e1465053b70ba6e07b6f5b84382713ed65867869671c8735e3d64f80ebd",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-crash-recovery-after.json",
+      "original_bytes": 16236,
+      "original_sha256": "1e751acf471c4d84f12c89344d1f8c4c390b256e0dc0c9ff13049dd0ecc6ba70",
+      "public_derivative": "native-crash-recovery-after-public.json",
+      "derivative_bytes": 16236,
+      "derivative_sha256": "1e751acf471c4d84f12c89344d1f8c4c390b256e0dc0c9ff13049dd0ecc6ba70",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-crash-recovery-after-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "aa089e1465053b70ba6e07b6f5b84382713ed65867869671c8735e3d64f80ebd",
+      "public_derivative": "native-crash-recovery-after-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "aa089e1465053b70ba6e07b6f5b84382713ed65867869671c8735e3d64f80ebd",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ],
+  "native_profile_exists": true
+}

@@ -1,0 +1,50 @@
+test_cursor_cycle_fails_without_post_or_allocation_reset (__main__.NativeResetController.test_cursor_cycle_fails_without_post_or_allocation_reset) ... FAIL
+test_invalid_batch_shapes_and_counts_fail_closed (__main__.NativeResetController.test_invalid_batch_shapes_and_counts_fail_closed) ... FAIL
+test_nonempty_post_batch_failure_does_not_reset_allocation (__main__.NativeResetController.test_nonempty_post_batch_failure_does_not_reset_allocation) ... FAIL
+test_private_environment_and_url_credentials_never_enter_error_messages (__main__.NativeResetController.test_private_environment_and_url_credentials_never_enter_error_messages) ... FAIL
+test_reset_order_counts_cursor_and_persistent_allocation (__main__.NativeResetController.test_reset_order_counts_cursor_and_persistent_allocation) ... FAIL
+
+======================================================================
+FAIL: test_cursor_cycle_fails_without_post_or_allocation_reset (__main__.NativeResetController.test_cursor_cycle_fails_without_post_or_allocation_reset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_controller.py", line 14, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('convex'), 'Native reset controller missing')
+AssertionError: unexpectedly None : Native reset controller missing
+
+======================================================================
+FAIL: test_invalid_batch_shapes_and_counts_fail_closed (__main__.NativeResetController.test_invalid_batch_shapes_and_counts_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_controller.py", line 14, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('convex'), 'Native reset controller missing')
+AssertionError: unexpectedly None : Native reset controller missing
+
+======================================================================
+FAIL: test_nonempty_post_batch_failure_does_not_reset_allocation (__main__.NativeResetController.test_nonempty_post_batch_failure_does_not_reset_allocation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_controller.py", line 14, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('convex'), 'Native reset controller missing')
+AssertionError: unexpectedly None : Native reset controller missing
+
+======================================================================
+FAIL: test_private_environment_and_url_credentials_never_enter_error_messages (__main__.NativeResetController.test_private_environment_and_url_credentials_never_enter_error_messages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_controller.py", line 14, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('convex'), 'Native reset controller missing')
+AssertionError: unexpectedly None : Native reset controller missing
+
+======================================================================
+FAIL: test_reset_order_counts_cursor_and_persistent_allocation (__main__.NativeResetController.test_reset_order_counts_cursor_and_persistent_allocation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/src/test/baas/test_convex_controller.py", line 14, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('convex'), 'Native reset controller missing')
+AssertionError: unexpectedly None : Native reset controller missing
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=5)

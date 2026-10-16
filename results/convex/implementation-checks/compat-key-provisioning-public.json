@@ -1,0 +1,9 @@
+{
+  "scope": "New owned synthetic-HS256 compatibility key, configured via supported native CLI STDIN and verified privately; not native signup/login",
+  "existing_environment_names": [],
+  "private_env_file_sha256": "2c1b1db9d3ea3e9d6e955af985dc14eda2f4ca6d32d9cf1e8e74e28486c805de",
+  "private_env_file_mode": "0o600",
+  "native_value_verified_equal": true,
+  "secret_values_or_tokens_published": false,
+  "source_or_database_reseed": false
+}

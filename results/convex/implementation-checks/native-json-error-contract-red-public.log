@@ -1,0 +1,28 @@
+ Container baas-convexpg-vps16-error-contract-red-tools Creating 
+ Container baas-convexpg-vps16-error-contract-red-tools Created 
+test_malformed_json_uses_original_contract_message (__main__.NativeErrorContract.test_malformed_json_uses_original_contract_message) ... FAIL
+
+======================================================================
+FAIL: test_malformed_json_uses_original_contract_message (__main__.NativeErrorContract.test_malformed_json_uses_original_contract_message)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/test/baas/convex_error_contract.py", line 9, in test_malformed_json_uses_original_contract_message
+    self.assertEqual(raw_request(b'{'), (400, {'error': 'malformed JSON body'}))
+AssertionError: Tuples differ: (400, {'error': 'invalid JSON'}) != (400, {'error': 'malformed JSON body'})
+
+First differing element 1:
+{'error': 'invalid JSON'}
+{'error': 'malformed JSON body'}
+
+- (400, {'error': 'invalid JSON'})
+?                  ^^^  ^
+
++ (400, {'error': 'malformed JSON body'})
+?                  ^  ^^^^^      +++++
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+FAILED (failures=1)
+

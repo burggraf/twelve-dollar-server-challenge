@@ -1,0 +1,167 @@
+{
+  "scope": "Actual stored-wide-ID/nativeUnicodeNUL/like positive and original newer-orphan feed outcome plus missing boundary-function reds, exact-owned native fixture cleanup/canonical restore;30selected sources; not fullcompatibility/capacity.",
+  "private_inputs_sha256": {
+    "cli.env": "f228b8716c5deee2e9e01f07a1e2efa0f664a8dca7da831ca006ecfe0634d50b",
+    "backend.env": "cfa8011196ce90ea27d9232441c082442280f96230830f055135216e16ae22c5",
+    "postgres.env": "4b94741dc1bd9def607058a3bedb23b087a921dc223424fa7a48e863b4d3ecc3",
+    "compat-jwt.env": "2c1b1db9d3ea3e9d6e955af985dc14eda2f4ca6d32d9cf1e8e74e28486c805de"
+  },
+  "actual_private_candidates_checked": 7,
+  "targets": [
+    {
+      "role": "backend",
+      "id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T19:03:26.325882195Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      }
+    },
+    {
+      "role": "postgres",
+      "id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "OOMKilled": false,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-15T20:47:57.462350749Z",
+        "FinishedAt": "2026-10-15T20:47:56.764451452Z"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "original_private_file": "setup-evidence/native-edge-red-original.log",
+      "original_bytes": 4210,
+      "original_sha256": "7cd40f050ca1fa1507d5a80cbb15de2c93037b14170cf22af3b68990c2416174",
+      "public_derivative": "native-edge-red-public.log",
+      "derivative_bytes": 4210,
+      "derivative_sha256": "7cd40f050ca1fa1507d5a80cbb15de2c93037b14170cf22af3b68990c2416174",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "native-edge-red-driver.log",
+      "original_bytes": 302,
+      "original_sha256": "a092c5bb5b0cbd48d25a149cacd1bba01b89e69dcad522adaaf2940f2e50b439",
+      "public_derivative": "native-edge-red-driver-public.log",
+      "derivative_bytes": 302,
+      "derivative_sha256": "a092c5bb5b0cbd48d25a149cacd1bba01b89e69dcad522adaaf2940f2e50b439",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-edge-red-canonical-dataset.json",
+      "original_bytes": 299,
+      "original_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "public_derivative": "native-edge-red-canonical-dataset-public.json",
+      "derivative_bytes": 299,
+      "derivative_sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-stored-edge-full-first-red-original.log",
+      "original_bytes": 2631,
+      "original_sha256": "33a05388544584a10e7e03024c30263b523f51d606c6d6c2cdf3ababac6bccc3",
+      "public_derivative": "native-stored-edge-full-first-red-public.log",
+      "derivative_bytes": 2631,
+      "derivative_sha256": "33a05388544584a10e7e03024c30263b523f51d606c6d6c2cdf3ababac6bccc3",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-edge-paged-feed-backend-original.log",
+      "original_bytes": 965821,
+      "original_sha256": "007b9b8328d6dfbc19c6047b3bf6671ef10e57787f92b871b3a6d0afa2693279",
+      "public_derivative": "native-edge-paged-feed-backend-public.log",
+      "derivative_bytes": 965821,
+      "derivative_sha256": "007b9b8328d6dfbc19c6047b3bf6671ef10e57787f92b871b3a6d0afa2693279",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-edge-red-before.json",
+      "original_bytes": 14983,
+      "original_sha256": "68d4f9855ce393d4caff6ce74aa5da2d91ce10110d04301e43dadc2b0be69de8",
+      "public_derivative": "native-edge-red-before-public.json",
+      "derivative_bytes": 14983,
+      "derivative_sha256": "68d4f9855ce393d4caff6ce74aa5da2d91ce10110d04301e43dadc2b0be69de8",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-edge-red-before-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "bfd49a66458952f452b0990ed5ab3048e7559c8403c98cb0c59d7af4968ee4ad",
+      "public_derivative": "native-edge-red-before-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "bfd49a66458952f452b0990ed5ab3048e7559c8403c98cb0c59d7af4968ee4ad",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-edge-red-after.json",
+      "original_bytes": 14981,
+      "original_sha256": "e93edaf961360441c7332074f1fc22e2fe0871554644edc136658cfe1c549520",
+      "public_derivative": "native-edge-red-after-public.json",
+      "derivative_bytes": 14981,
+      "derivative_sha256": "e93edaf961360441c7332074f1fc22e2fe0871554644edc136658cfe1c549520",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "setup-evidence/native-edge-red-after-services.json",
+      "original_bytes": 6479,
+      "original_sha256": "bfd49a66458952f452b0990ed5ab3048e7559c8403c98cb0c59d7af4968ee4ad",
+      "public_derivative": "native-edge-red-after-services-public.json",
+      "derivative_bytes": 6479,
+      "derivative_sha256": "bfd49a66458952f452b0990ed5ab3048e7559c8403c98cb0c59d7af4968ee4ad",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ],
+  "native_profile_exists": true
+}

@@ -1,0 +1,44 @@
+# Tested software and VPS slice
+
+This is **untimed correctness/reset evidence, not capacity**. Convex `precompiled-2026-10-06-a3538c6`, upstream `a3538c6d212948f20726868e41d155d2534cd130`, native AMD64 image `sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4`, SDK/CLI **1.46.0**, bundled Node **22.22.2**; native `/version` remains literally `unknown`. Official PostgreSQL **17.11-bookworm / Debian17.11-1.pgdg12+2**, AMD64 image `sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df`. Untimed tools Node **22.20.0**.
+
+Serving shares one aggregate **1 vCPU / 4 GiB (4,294,967,296 bytes) / zero swap**, split backend/bundled executor **3 GiB (3,221,225,472 bytes)** and PostgreSQL **1 GiB (1,073,741,824 bytes)**. Child one-core ceilings do not grant two aggregate cores. Separate untimed tools/controller each: **2 vCPUs / 4 GiB (4,294,967,296 bytes) / zero swap**. Eventual separate runner: **k6 1.3.0 / 2 vCPUs / 8 GiB (8,589,934,592 bytes) / zero swap**, `k6-2cpu-8g-v3`; **no Convex k6 attempt**. All product execution was on `claudius.azabab.com`, not the Mac or historical Contabo. These are shared-host quota slices, not dedicated or measured $12/month VPSes; price/region unknown.
+
+## Complete public base and meaningful reset/controller reds
+
+A checksum-verified `git archive` of published commit `24516dcad232e056921804726d986ebc2e7b3dbe` supplied all **1,150 tracked files**. Missing workspace files were filled without overwriting any existing file; three existing, explicitly expected app/auth-test overlays were preserved. Private inputs/native storage/SDK/generated/untracked files were not removed. The first bookkeeping attempt incorrectly treated the JSON ownership marker as plain text and failed **before extraction/copy/product operations**; its journal/source remain retained. The second attempt read the actual JSON ownership field and completed. This is a complete published-base source snapshot with an explicit working overlay, **not yet a complete current SDK/compiler/generated/runtime freeze**.
+
+Before native reset implementation, the two-method native maintenance gate produced one genuine missing-primitive assertion failure; anonymous rejection alone was not counted as proof of an implemented private API. Before Python controller implementation, five regression methods failed specifically because the native reset controller was absent. Its first candidate passed those five, then a new explicit administrator-redirect-policy regression failed. The corrected transport disables redirects and environment proxies, restricts the owned native API target, avoids credentials in error output, and retains failed response bodies privately when configured. Complete original failures are preserved rather than rewritten as first-pass success.
+
+## Supported, admin-only application-delta reset
+
+`maintenance.js` exports private native mutations only; none is an application HTTP route. `scripts/convex.py` drives supported native mutation APIs, with no application-side SQL driver, native-system-table access, container recreation, import/reseed, response cache or native limit increase.
+
+- **Likes:** exactly one indexed pagination call per native mutation, at most1,000 rows. The immutable generator has posts strictly before2026-01-01 and likes adding strictly less than seven days, so every canonical like precedes **2026-01-08T00:00:00.000Z**. Only later application deltas qualify for deletion, after timestamp, canonical-user, allocation-range, referenced-post and future-time ownership guards. Canonical rows are not selected for deletion. No precomputed like counter/key cache is used.
+- **Posts:** at most100 existing-index rows per call, strictly above canonical500000, within validated allocation/range and canonical-user/time bounds. Any remaining like on a selected post causes native transaction refusal. Wide/future edge fixtures are outside this general benchmark-reset ownership scope and use their separate exact-owned fixture cleanup.
+- **Allocation:** reset to500000 only after no noncanonical posts remain. The controller restores it only after all like pages/post batches succeeded; invalid shapes/counts, repeated cursors and safety-bound exhaustion fail closed without blind retry.
+- Hard untimed safety bounds: one million allocated post deltas per attempt,5,000 like pages and10,000 post batches. These are cleanup bounds, not enlarged native serving limits or workload changes. Full canonical verification and private/platform preservation are mandatory afterward.
+
+Three actual native maintenance methods passed: genuine private clean-state controls, anonymous rejection of all three primitives, and refusal to delete/reset an installed25-post/one-user wide/future fixture. Before/after state matched and the separate exact-owned fixture cleanup validated every expected shape before removal. The controller's six unit regressions passed; these mechanics do not replace the actual dirty-data proof below.
+
+## Original unchanged42, full shared6, dirty reset and57 additional checks
+
+Ran the unchanged **`test/test.sh` against the original goldens: `passed=42 failed=0`**. This is the real inherited suite, not the earlier coincidental count of42 selected Python tests. Exact feed/detail bytes, content types, real uptime, auth/error precedence, malformed-JSON literal, UTF8/body limits, UTC-now timestamps, creation/like/count and feed ordering passed.
+
+Then ran the **entire six-method shared `FeedContract` suite**, including32 concurrent creates with immediate reads,32 concurrent same-user likes committing once, signed identity binding/tamper rejection, Unicode/ECMAScript trimming, strict claims and storage health. Both suites used genuine synthetic HS256 compatibility authentication, not reject-everything behavior.
+
+Together they created **37 posts and five likes**, including a like on a seeded post, and allocation500037. The supported native reset traversed **2,017 like pages**, removed exactly those **five likes/37 posts**, and restored500000. No blanket reseed/import/platform reset was performed.
+
+Then **57 additional target/fixture/config/controller checks** passed: maintenance3, write7, fixture guards3, stored edges5, strict native auth6, original error-literal1, native clock2, native HTTP reads6, private/cache2, full canonical3, converter4, budget5, configuration4, controller6. Counts describe this execution, with behavioral coverage overlapping earlier checkpoints, not independent confirmations of capacity.
+
+Independent actual native rows reproduced **50,000 users /500,000 posts /2,016,005 likes**, native metadata, logical relations/order/unique likes, largest seeded count583 and full logical SHA-256 **`738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d`**. Canonical suite duration **177.256s**, not an HTTP percentile. Logical native constraints are not physical SQL FK/UNIQUE declarations.
+
+## Continuity, pressure and limitations
+
+At this checkpoint both servers stayed healthy with unchanged actual PIDs/start times/container/image identities/restart counters. Private input/platform credential fingerprints, persistent service identities and original port4000 listener were preserved; no OOM or host swap-out increase. No native read/write/timeout/resource limit was raised. The longer outer900s watchdog covers two planned complete untimed scans, not a relaxed individual native/query/workload timeout.
+
+Configured parent allowance **4,294,967,296 bytes**; observed lifetime peak **3,479,109,632 bytes**, final current **3,466,428,416 bytes**. Hierarchical `memory.events.max` **557,112→582,121**; OOM counters stayed0. Raw reclaim/refault/pressure/outlier evidence remains preserved; this does not prove future load fit or pressure-free operation. Child peaks are not simultaneous totals.
+
+Complete safe logs, standalone original42 output, dirty-reset/canonical manifests, before/after profiles and **41 exact selected source files** retain original/derivative hashes, sizes and redaction provenance. Seven actual private candidates across both preserved variants, JWT-shaped values and HTTP query strings were screened before public derivative retrieval/publication. Originals remain unchanged/private on the VPS. Selected-source provenance is not a full SDK/compiler/generated/runtime freeze.
+
+**Still no Convex capacity score.** A subsequent acknowledged-write restart attempt encountered a real backend139 after requestedSIGINT and is reported separately; the successful functional/reset gate here does not make that failed lifecycle gate pass or establish persistence/power-loss durability. Final runtime freeze/harness/current full checks, actual runner reserve and capacity search remain later gates. Native signup/login/session throughput and a measured $12 deployment are not tested.

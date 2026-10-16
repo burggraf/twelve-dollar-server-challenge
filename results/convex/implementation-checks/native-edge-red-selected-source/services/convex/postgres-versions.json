@@ -1,0 +1,14 @@
+{
+  "product": "Official PostgreSQL persistence for the native Convex backend",
+  "version": "17.11",
+  "tag": "postgres:17.11-bookworm",
+  "amd64_manifest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+  "docker_library_source_commit": "2603e26e245e558218728ee14e0a42dcb020dc7f",
+  "docker_library_source": "https://github.com/docker-library/postgres/tree/2603e26e245e558218728ee14e0a42dcb020dc7f/17/bookworm",
+  "upstream_convex_storage_guide": "https://github.com/get-convex/convex-backend/blob/a3538c6d212948f20726868e41d155d2534cd130/self-hosted/advanced/postgres_or_mysql.md",
+  "serving_project": "baas-convexpg-vps16",
+  "serving_parent": "tdsbaasconvexpgvps16.slice",
+  "serving_budget": {"cpus": 1, "memory_bytes": 4294967296, "swap_bytes": 0},
+  "child_memory_bytes": {"backend": 3221225472, "postgres": 1073741824},
+  "runtime_postgres_version_verified": false
+}

@@ -3,11 +3,14 @@ import {
   httpRouter,
   makeFunctionReference,
 } from "convex/server";
+import { authenticate, HttpError, parseJSON, positiveId, validateBody } from "./contract.js";
 
 const feedQuery = makeFunctionReference("native:feed");
 const detailQuery = makeFunctionReference("native:detail");
 const storageQuery = makeFunctionReference("native:storageProbe");
 const uptimeAction = makeFunctionReference("clock:backendUptime");
+const createMutation = makeFunctionReference("native:createPost");
+const likeMutation = makeFunctionReference("native:likePost");
 const maximumId = 9223372036854775807n;
 
 function identity(text) {
@@ -69,6 +72,38 @@ const read = httpAction(async (ctx, request) => {
   }
 });
 
+const write = httpAction(async (ctx, request) => {
+  try {
+    const path = new URL(request.url).pathname;
+    const like = /^\/posts\/([^/]*)\/like$/.exec(path);
+    if (path !== "/posts" && !like) return error("not found", 404);
+    const subject = await authenticate(request.headers.get("Authorization"), process.env.JWT_SECRET);
+    const userId = subject.id.padStart(19, "0");
+    if (path === "/posts") {
+      let value;
+      try {
+        value = parseJSON(new Uint8Array(await request.arrayBuffer()));
+      } catch {
+        return error("malformed JSON body", 400);
+      }
+      const body = validateBody(value);
+      const result = await ctx.runMutation(createMutation, { userId, body });
+      if (result.error) return error(result.error, result.status);
+      // Original creation response uses the signed claim; subsequent reads
+      // independently join users.username, without modifying the stored user.
+      result.post.author = subject.username;
+      return json(`{"post":${postJson(result.post)}}`, 201);
+    }
+    const id = positiveId(like[1]);
+    const result = await ctx.runMutation(likeMutation, { userId, postId: id.padStart(19, "0") });
+    if (result.error) return error(result.error, result.status);
+    return json(`{"liked":true,"already_liked":${result.already_liked},"post_id":${id}}`, result.already_liked ? 200 : 201);
+  } catch (failure) {
+    return failure instanceof HttpError ? error(failure.message, failure.status) : error("internal server error", 500);
+  }
+});
+
 const http = httpRouter();
 http.route({ pathPrefix: "/", method: "GET", handler: read });
+http.route({ pathPrefix: "/", method: "POST", handler: write });
 export default http;

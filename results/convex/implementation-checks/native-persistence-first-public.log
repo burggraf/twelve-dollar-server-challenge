@@ -1,0 +1,36 @@
+Read-only service snapshot saved; service count: 28 ; existing listener PID count: 1
+NATIVE_POSTGRES_CANONICAL_BEFORE_PROFILE_RECORDED
+ Container baas-convexpg-vps16-persistence-before-tools Creating 
+ Container baas-convexpg-vps16-persistence-before-tools Created 
+test_real_acknowledged_post_exactly_once_like_and_sequence (__main__.NativeAcknowledgedPersistence.test_real_acknowledged_post_exactly_once_like_and_sequence) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.096s
+
+OK
+ Container baas-convexpg-vps16-backend-1 Stopping 
+ Container baas-convexpg-vps16-backend-1 Stopped 
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/restart-owned-persistence.py", line 27, in <module>
+    assert not value['State']['Running'] and value['State']['ExitCode'] in [0,130], 'Unexpected stop; capture actual state/recover only exact-owned nonOOM processes'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Unexpected stop; capture actual state/recover only exact-owned nonOOM processes
+Read-only service snapshot saved; service count: 28 ; existing listener PID count: 1
+NATIVE_POSTGRES_CANONICAL_AFTER_PROFILE_RECORDED
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/persistence-phase.py", line 7, in <module>
+    subprocess.run(['/bin/bash',str(parent/'persistence-phase.sh')],check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/bin/bash', '/opt/twelve-dollar-baas-convexpg-16g/persistence-phase.sh']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/recover-owned-persistence.py", line 22, in <module>
+    assert value['State']['ExitCode'] in [0,130], 'Unexpected exit retained; no automatic revival'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Unexpected exit retained; no automatic revival
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/cleanup-persistence-phase.py", line 16, in <module>
+    subprocess.run(['/usr/bin/python3',str(parent/'recover-owned-persistence.py')],check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '/opt/twelve-dollar-baas-convexpg-16g/recover-owned-persistence.py']' returned non-zero exit status 1.

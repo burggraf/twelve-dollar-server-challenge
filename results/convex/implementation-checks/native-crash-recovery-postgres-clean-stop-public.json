@@ -1,0 +1,54 @@
+{
+  "Id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+  "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+  "State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-15T20:47:57.462350749Z",
+    "FinishedAt": "2026-10-16T00:02:13.874816796Z",
+    "Health": {
+      "Status": "unhealthy",
+      "FailingStreak": 0,
+      "Log": [
+        {
+          "Start": "2026-10-16T00:01:49.466829382Z",
+          "End": "2026-10-16T00:01:49.525723665Z",
+          "ExitCode": 0,
+          "Output": "/var/run/postgresql:5432 - accepting connections\n"
+        },
+        {
+          "Start": "2026-10-16T00:01:54.527476146Z",
+          "End": "2026-10-16T00:01:54.586556341Z",
+          "ExitCode": 0,
+          "Output": "/var/run/postgresql:5432 - accepting connections\n"
+        },
+        {
+          "Start": "2026-10-16T00:01:59.58764101Z",
+          "End": "2026-10-16T00:01:59.647666763Z",
+          "ExitCode": 0,
+          "Output": "/var/run/postgresql:5432 - accepting connections\n"
+        },
+        {
+          "Start": "2026-10-16T00:02:04.649479471Z",
+          "End": "2026-10-16T00:02:04.70817666Z",
+          "ExitCode": 0,
+          "Output": "/var/run/postgresql:5432 - accepting connections\n"
+        },
+        {
+          "Start": "2026-10-16T00:02:09.708888158Z",
+          "End": "2026-10-16T00:02:09.770087392Z",
+          "ExitCode": 0,
+          "Output": "/var/run/postgresql:5432 - accepting connections\n"
+        }
+      ]
+    }
+  },
+  "scope": "PostgreSQL only cleanly stopped0 after the separately preserved backend139; original clean-backend gate remainsFAILED"
+}
