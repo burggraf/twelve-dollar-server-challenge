@@ -1,0 +1,307 @@
+FOLLOWUP_REUSES_SAME_IMMUTABLE_SERVING_IMAGE_AND_EXECUTABLE_NO_REBUILD; FRESH_NATIVE_GO_SUITE_2CPU_4G_ZERO_SWAP
+go version go1.27.2 linux/amd64
+x86_64
+all modules verified
+=== RUN   TestNativeHTTPHealthAndExactErrorContract
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/unknown{"error":"not_found"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/abc{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/0{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775808{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775807{"error":"post_not_found"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"missing_bearer_token"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"invalid_post_id"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"missing_bearer_token"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"invalid_or_expired_token"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#01
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#02
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#01
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#02
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#03
+=== RUN   TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_must_be_at_most_500_characters"}
+--- PASS: TestNativeHTTPHealthAndExactErrorContract (0.05s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/unknown{"error":"not_found"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/abc{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/0{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775808{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/GET/posts/9223372036854775807{"error":"post_not_found"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"missing_bearer_token"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts/abc/like{"error":"invalid_post_id"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"missing_bearer_token"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"invalid_or_expired_token"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"} (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#01 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_is_required"}#02 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#01 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#02 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"malformed_JSON_body"}#03 (0.00s)
+    --- PASS: TestNativeHTTPHealthAndExactErrorContract/POST/posts{"error":"body_must_be_at_most_500_characters"} (0.00s)
+=== RUN   TestNativeHTTPStrictSignedClaims
+--- PASS: TestNativeHTTPStrictSignedClaims (0.05s)
+=== RUN   TestNativeHTTPCommittedJourneyAndNumericOrder
+--- PASS: TestNativeHTTPCommittedJourneyAndNumericOrder (0.05s)
+=== RUN   TestNativeHTTPConcurrentAtomicIDsAndLikes
+--- PASS: TestNativeHTTPConcurrentAtomicIDsAndLikes (0.08s)
+=== RUN   TestNativeDefaultConnectionPragmas
+    pragma_test.go:18: native SQLite engine=3.53.4 source=2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc
+    pragma_test.go:33: native nonconcurrent temp_store=2
+    pragma_test.go:33: native nonconcurrent cache_size=-32000
+    pragma_test.go:33: native nonconcurrent journal_mode=wal
+    pragma_test.go:33: native nonconcurrent synchronous=1
+    pragma_test.go:33: native nonconcurrent foreign_keys=1
+    pragma_test.go:33: native nonconcurrent busy_timeout=10000
+    pragma_test.go:33: native concurrent journal_mode=wal
+    pragma_test.go:33: native concurrent synchronous=1
+    pragma_test.go:33: native concurrent foreign_keys=1
+    pragma_test.go:33: native concurrent busy_timeout=10000
+    pragma_test.go:33: native concurrent temp_store=2
+    pragma_test.go:33: native concurrent cache_size=-32000
+--- PASS: TestNativeDefaultConnectionPragmas (0.04s)
+=== RUN   TestNativeApplicationCollectionsAndWriteBoundary
+--- PASS: TestNativeApplicationCollectionsAndWriteBoundary (0.04s)
+=== RUN   TestNativeNumericIdentityAndLosslessTextRoundtrip
+--- PASS: TestNativeNumericIdentityAndLosslessTextRoundtrip (0.05s)
+=== RUN   TestNativeRelationValidationAndUniqueLikes
+--- PASS: TestNativeRelationValidationAndUniqueLikes (0.04s)
+=== RUN   TestNativeStartupAppliesRegisteredApplicationMigrations
+--- PASS: TestNativeStartupAppliesRegisteredApplicationMigrations (0.04s)
+=== RUN   TestNativeStorageFailureAndTransactionalRollback
+--- PASS: TestNativeStorageFailureAndTransactionalRollback (0.05s)
+PASS
+ok  	twelve-dollar-server-challenge/pocketbase-feed	0.499s
+ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+ Container baas-pocketbase-vps16-import Creating 
+ Container baas-pocketbase-vps16-import Created 
+{"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d", "platform_rows_before_sha256": "d5258946c5086312d63c1f256c3dd7dcc26024253b6b0b6b8e45950464aab047", "platform_rows_after_sha256": "d5258946c5086312d63c1f256c3dd7dcc26024253b6b0b6b8e45950464aab047", "next_post_id": 500001, "native_auth_accounts": {"users": 0, "_superusers": 1}, "storage_mapping": "Native base collections; decimal Text user/post IDs; extra deterministic imported like record IDs; logical compound likes key; persistent transactional post sequence", "scope": "Offline application-only import; native platform/Auth metadata retained; native relation validation is not a physical SQLite FK declaration"}
+ Container baas-pocketbase-vps16-correctness Creating 
+ Container baas-pocketbase-vps16-correctness Created 
+v22.20.0
+Python 3.11.2
+OpenSSL 3.0.17 1 Jul 2025 (Library: OpenSSL 3.0.17 1 Jul 2025)
+Testing http://pocketbase:4000
+-- golden reads (fresh database)
+  ok   GET /feed == golden -> 200
+  ok   GET /feed content-type (application/json)
+  ok   GET /posts/1 == golden -> 200
+  ok   GET /posts/250000 == golden -> 200
+  ok   GET /posts/500000 == golden -> 200
+  ok   GET /posts/:id content-type (application/json)
+-- health, 404s, id validation
+  ok   GET /health -> 200 {"status":"ok","db":"ok","uptime_s":2}
+  ok   GET /nope -> 404
+  ok   GET /posts/0 -> 400
+  ok   GET /posts/-1 -> 400
+  ok   GET /posts/abc -> 400
+  ok   GET /posts/1.5 -> 400
+  ok   GET /posts/999999999 -> 404
+-- auth
+  ok   POST /posts, no token -> 401
+  ok   POST /posts, Basic auth -> 401
+  ok   POST /posts, garbage token -> 401
+  ok   POST /posts, bad signature -> 401
+  ok   POST /posts, alg=none -> 401
+  ok   POST /posts, expired token -> 401
+  ok   POST /posts, sub not an integer -> 401
+  ok   POST /posts, no username -> 401
+  ok   POST /posts/abc/like, no token (auth before id) -> 401
+-- create validation
+  ok   empty body -> 400
+  ok   whitespace body -> 400
+  ok   numeric body -> 400
+  ok   missing body -> 400
+  ok   malformed JSON -> 400
+  ok   501-char body -> 400
+-- create, like, read back
+  ok   special characters round-trip (trimmed) -> 201
+  ok   create 500-char post -> 201
+  ok   POST /posts content-type (application/json)
+  ok   created_at format 2026-10-16T03:27:02.084Z
+  ok   created_at is now (UTC, 0s)
+  ok   like (first) -> 201
+  ok   like (repeat) -> 200
+  ok   like missing post -> 404
+  ok   like bad id (with token) -> 400
+  ok   read back, like_count 1 -> 200
+  ok   like on a seeded post is counted at once (12)
+  ok   feed has 20 posts
+  ok   new post is at the top of the feed
+  ok   feed entry matches the post
+passed=42 failed=0
+test_concurrent_duplicate_likes_commit_once (__main__.FeedContract.test_concurrent_duplicate_likes_commit_once) ... ok
+test_concurrent_post_ids_and_immediate_reads (__main__.FeedContract.test_concurrent_post_ids_and_immediate_reads) ... ok
+test_identity_is_bound_to_signed_subject (__main__.FeedContract.test_identity_is_bound_to_signed_subject) ... ok
+test_storage_health (__main__.FeedContract.test_storage_health) ... ok
+test_strict_jwt_payload_and_expiry (__main__.FeedContract.test_strict_jwt_payload_and_expiry) ... ok
+test_unicode_limits_and_ecmascript_trim (__main__.FeedContract.test_unicode_limits_and_ecmascript_trim) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.620s
+
+OK
+test_direct_native_application_writes_are_locked (__main__.NativePocketBase.test_direct_native_application_writes_are_locked) ... ok
+test_native_and_common_unicode_nul_storage_are_lossless (__main__.NativePocketBase.test_native_and_common_unicode_nul_storage_are_lossless) ... ok
+test_native_record_storage_and_request_time_count_match_common_api (__main__.NativePocketBase.test_native_record_storage_and_request_time_count_match_common_api) ... ok
+test_native_sequence_metadata_is_not_publicly_readable (__main__.NativePocketBase.test_native_sequence_metadata_is_not_publicly_readable) ... ok
+test_signed_subject_not_arbitrary_role_or_user_claim_controls_native_owner (__main__.NativePocketBase.test_signed_subject_not_arbitrary_role_or_user_claim_controls_native_owner) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.133s
+
+OK
+test_generator_does_not_log_signing_key (__main__.SeedSafety.test_generator_does_not_log_signing_key) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 4.640s
+
+OK
+test_lossless_native_mapping_and_platform_preservation (__main__.NativeImport.test_lossless_native_mapping_and_platform_preservation) ... ok
+test_missing_native_relation_rolls_back_entire_application_import (__main__.NativeImport.test_missing_native_relation_rolls_back_entire_application_import) ... ok
+test_wrong_canonical_hash_rolls_back_without_touching_native_auth (__main__.NativeImport.test_wrong_canonical_hash_rolls_back_without_touching_native_auth) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.015s
+
+OK
+TAP version 13
+# Subtest: phase boundaries exclude warmup, ramp and drain from the hold
+ok 1 - phase boundaries exclude warmup, ramp and drain from the hold
+  ---
+  duration_ms: 0.828761
+  type: 'test'
+  ...
+# Subtest: post validation rejects malformed successful responses
+ok 2 - post validation rejects malformed successful responses
+  ---
+  duration_ms: 0.260037
+  type: 'test'
+  ...
+# Subtest: feed validates size, ordering, uniqueness and status
+ok 3 - feed validates size, ordering, uniqueness and status
+  ---
+  duration_ms: 0.420075
+  type: 'test'
+  ...
+# Subtest: writes validate idempotency flags, identity and actual created content
+ok 4 - writes validate idempotency flags, identity and actual created content
+  ---
+  duration_ms: 0.282899
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 58.283279
+test_direct_controller_exports_inferred_platform_and_namespace_to_compose (__main__.HostPortability.test_direct_controller_exports_inferred_platform_and_namespace_to_compose) ... ok
+test_foreign_architecture_load_image_is_invalid (__main__.HostPortability.test_foreign_architecture_load_image_is_invalid) ... ok
+test_foreign_platforms_and_unrelated_project_names_are_rejected (__main__.HostPortability.test_foreign_platforms_and_unrelated_project_names_are_rejected) ... ok
+test_linux_samples_preserve_raw_proc_evidence_without_mac_commands (__main__.HostPortability.test_linux_samples_preserve_raw_proc_evidence_without_mac_commands) ... ok
+test_linux_swapouts_are_checked_without_weakening_mac_checks (__main__.HostPortability.test_linux_swapouts_are_checked_without_weakening_mac_checks) ... ok
+test_native_platforms_and_result_tracks_are_separate (__main__.HostPortability.test_native_platforms_and_result_tracks_are_separate) ... ok
+test_new_host_track_cannot_pool_with_original_vps (__main__.HostPortability.test_new_host_track_cannot_pool_with_original_vps) ... ok
+test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect (__main__.HostPortability.test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect) ... ok
+test_accepts_complete_passing_hold (__main__.Scoring.test_accepts_complete_passing_hold) ... ok
+test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host (__main__.Scoring.test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (__main__.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (__main__.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (__main__.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_mismatched_actual_runner_budget_cannot_claim_the_new_profile (__main__.Scoring.test_mismatched_actual_runner_budget_cannot_claim_the_new_profile) ... ok
+test_missing_clock_still_invalidates_non_oom_attempt (__main__.Scoring.test_missing_clock_still_invalidates_non_oom_attempt) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (__main__.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_oom_remains_primary_reason_when_k6_loses_summary_and_clock (__main__.Scoring.test_oom_remains_primary_reason_when_k6_loses_summary_and_clock) ... ok
+test_owner_approved_eight_gib_runner_has_distinct_verified_limits (__main__.Scoring.test_owner_approved_eight_gib_runner_has_distinct_verified_limits) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (__main__.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (__main__.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_runner_profile_is_versioned_and_matches_the_approved_budget (__main__.Scoring.test_runner_profile_is_versioned_and_matches_the_approved_budget) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (__main__.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+test_standard_tier_is_one_cpu_four_gib_with_memory_reserve (__main__.Scoring.test_standard_tier_is_one_cpu_four_gib_with_memory_reserve) ... ok
+test_vm_headroom_accepts_small_but_rejects_large_on_current_vm (__main__.Scoring.test_vm_headroom_accepts_small_but_rejects_large_on_current_vm) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.004s
+
+OK
+test_k6_cannot_read_signing_keys_or_private_service_state (__main__.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... ok
+test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated (__main__.ContainerIsolation.test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated) ... ok
+test_vps_platform_and_resources_are_isolated_from_existing_projects (__main__.ContainerIsolation.test_vps_platform_and_resources_are_isolated_from_existing_projects) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.223s
+
+OK
+test_campaign_uses_injected_backend_and_private_state_path (__main__.SupabaseHarness.test_campaign_uses_injected_backend_and_private_state_path) ... ok
+test_native_supabase_project_has_distinct_vps16_track (__main__.SupabaseHarness.test_native_supabase_project_has_distinct_vps16_track) ... ok
+test_snapshot_includes_selected_backend_not_trailbase (__main__.SupabaseHarness.test_snapshot_includes_selected_backend_not_trailbase) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+OK
+test_generalization_does_not_allow_unrelated_namespace_or_emulation (__main__.NativePocketBaseHarness.test_generalization_does_not_allow_unrelated_namespace_or_emulation) ... ok
+test_owned_native_namespace_selects_existing_vps16_track (__main__.NativePocketBaseHarness.test_owned_native_namespace_selects_existing_vps16_track) ... ok
+test_source_snapshot_includes_pocketbase_and_excludes_private_runtime (__main__.NativePocketBaseHarness.test_source_snapshot_includes_pocketbase_and_excludes_private_runtime) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+OK
+test_native_deployment_budget_and_isolation (__main__.PocketBaseDeployment.test_native_deployment_budget_and_isolation) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.071s
+
+OK
+test_budget_and_unaccounted_children_drift_fail_closed (__main__.PocketBaseBudget.test_budget_and_unaccounted_children_drift_fail_closed) ... ok
+test_real_native_slice_is_accepted (__main__.PocketBaseBudget.test_real_native_slice_is_accepted) ... ok
+test_wrong_child_limit_and_failed_native_runtime_are_rejected (__main__.PocketBaseBudget.test_wrong_child_limit_and_failed_native_runtime_are_rejected) ... ok
+test_wrong_native_image_owner_or_actual_process_membership_is_rejected (__main__.PocketBaseBudget.test_wrong_native_image_owner_or_actual_process_membership_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
+test_compose_uses_only_owned_profile_and_private_environment_path (__main__.OwnedPocketBaseLifecycle.test_compose_uses_only_owned_profile_and_private_environment_path) ... ok
+test_existing_partial_seed_cannot_be_silently_regenerated (__main__.OwnedPocketBaseLifecycle.test_existing_partial_seed_cannot_be_silently_regenerated) ... ok
+test_foreign_container_collision_is_rejected_before_changes (__main__.OwnedPocketBaseLifecycle.test_foreign_container_collision_is_rejected_before_changes) ... ok
+test_mac_or_other_unapproved_native_profile_is_rejected (__main__.OwnedPocketBaseLifecycle.test_mac_or_other_unapproved_native_profile_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK
+test_any_changed_attested_input_or_raw_log_is_rejected (__main__.FrozenPocketBaseEvidence.test_any_changed_attested_input_or_raw_log_is_rejected) ... ok
+test_every_attempt_report_prominently_names_exact_software_and_slices (__main__.FrozenPocketBaseEvidence.test_every_attempt_report_prominently_names_exact_software_and_slices) ... ok
+test_restart_oom_or_missing_component_cannot_be_accepted_as_same_target (__main__.FrozenPocketBaseEvidence.test_restart_oom_or_missing_component_cannot_be_accepted_as_same_target) ... ok
+test_unchanged_complete_correctness_evidence_is_accepted (__main__.FrozenPocketBaseEvidence.test_unchanged_complete_correctness_evidence_is_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+test_bulk_run_artifacts_are_ignored_across_services_and_tracks (test_gitignore.RepositoryIgnores.test_bulk_run_artifacts_are_ignored_across_services_and_tracks) ... ok
+test_runtime_dependencies_and_caches_are_ignored (test_gitignore.RepositoryIgnores.test_runtime_dependencies_and_caches_are_ignored) ... ok
+test_source_inputs_and_small_benchmark_evidence_remain_visible (test_gitignore.RepositoryIgnores.test_source_inputs_and_small_benchmark_evidence_remain_visible) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.039s
+
+OK
+ Container baas-pocketbase-vps16-persist-prepare Creating 
+ Container baas-pocketbase-vps16-persist-prepare Created 
+ACKNOWLEDGED_NATIVE_POST_AND_EXACTLY_ONCE_LIKE_PREPARED
+ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+ Container baas-pocketbase-vps16-stopped-transport Creating 
+ Container baas-pocketbase-vps16-stopped-transport Created 
+STOPPED_OWNED_EMBEDDED_SERVER_TRANSPORT_UNAVAILABLE
+ Container baas-pocketbase-vps16-persist-verify Creating 
+ Container baas-pocketbase-vps16-persist-verify Created 
+REAL_NATIVE_PROCESS_RESTART_PRESERVES_ACKNOWLEDGED_POST_LIKE_AND_ID_SEQUENCE
+FULL_POCKETBASE_CORRECTNESS_GATE_PASSED

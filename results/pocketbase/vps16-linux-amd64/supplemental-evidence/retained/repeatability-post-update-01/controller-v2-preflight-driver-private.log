@@ -1,0 +1,8 @@
+Running as unit: tds-pocketbase-post-update-controller-v2-preflight-20261016.service
+POST_UPDATE_COMPLETE_EXTERNAL_PRODUCT_MODULE_GENERATED_HOST_QUIET_PREFLIGHT_PASSED_NO_FULL_SLOT
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 3.476s
+CPU time consumed: 3.420s
+Memory peak: 2.8M
+Memory swap peak: 0B

@@ -1,0 +1,66 @@
+{
+  "window_start": 1792160732.5913796,
+  "window_end": 1792161367.881556,
+  "window_complete": true,
+  "persistent_service_event_counts": {
+    "fwupd.service": 2
+  },
+  "nonpersistent_oneshot_event_counts_disclosed": {
+    "fwupd-refresh.service": 1,
+    "modprobe@sd_mod.service": 1,
+    "sysstat-collect.service": 1
+  },
+  "oneshot_classification_authorization": "f81b2fc4-35f2-4a51-925b-aa303ea7b68d",
+  "unit_classification": {
+    "fwupd-refresh.service": {
+      "type": "oneshot",
+      "active_state": "inactive",
+      "sub_state": "dead",
+      "main_pid_zero": true,
+      "control_pid_zero": true,
+      "job_pending": false,
+      "no_resident_processes": true,
+      "resident_evidence": "systemd_no_assigned_control_group",
+      "classification": "transient"
+    },
+    "fwupd.service": {
+      "type": "dbus",
+      "active_state": "inactive",
+      "sub_state": "dead",
+      "main_pid_zero": true,
+      "control_pid_zero": true,
+      "job_pending": false,
+      "no_resident_processes": true,
+      "resident_evidence": "systemd_no_assigned_control_group",
+      "classification": "persistent"
+    },
+    "modprobe@sd_mod.service": {
+      "type": "oneshot",
+      "active_state": "inactive",
+      "sub_state": "dead",
+      "main_pid_zero": true,
+      "control_pid_zero": true,
+      "job_pending": false,
+      "no_resident_processes": true,
+      "resident_evidence": "systemd_no_assigned_control_group",
+      "classification": "transient"
+    },
+    "sysstat-collect.service": {
+      "type": "oneshot",
+      "active_state": "inactive",
+      "sub_state": "dead",
+      "main_pid_zero": true,
+      "control_pid_zero": true,
+      "job_pending": false,
+      "no_resident_processes": true,
+      "resident_evidence": "systemd_no_assigned_control_group",
+      "classification": "transient"
+    }
+  },
+  "private_raw": {
+    "bytes": 36468,
+    "sha256": "fc6b7fcf731f43564595431042d79e69ee5f0d1a83e2780e1453feaab0ca76fd",
+    "distribution": "PRIVATE VPS ONLY"
+  },
+  "scope": "Numeric metadata only; all raw messages stay private. Only existing SSH session exception and benchmark tds unit namespace; no persistent-service exclusions. No causality or isolation proof."
+}

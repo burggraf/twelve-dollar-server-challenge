@@ -1,0 +1,17 @@
+{
+  "interview": "f2f0a222-edaf-4a91-a568-1cdf2105bb55",
+  "approved": true,
+  "final_confirmed_lower_bound_vus": 10000,
+  "accept_lower_bound_as_final_finding": true,
+  "waive_250_vu_resolved_completion_requirement": true,
+  "exact_250_vu_boundary_established": false,
+  "maximum_established": false,
+  "supplemental_study_remains_incomplete": true,
+  "seventh_fixed_study_continuity_gate_remains_failed": true,
+  "authorize_report_and_approved_evidence_commit_and_ordinary_nonforce_push_after_all_publication_audits_pass": true,
+  "allow_actual_convex_plan_work_only_after_verified_pocketbase_publication": true,
+  "new_pocketbase_load_authorized": false,
+  "unrelated_service_changes_authorized": false,
+  "nhost_remains_paused": true,
+  "directus_authorized": false
+}

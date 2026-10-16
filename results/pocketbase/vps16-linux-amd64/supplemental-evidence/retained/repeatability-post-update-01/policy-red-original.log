@@ -1,0 +1,174 @@
+Running as unit: tds-pocketbase-repeatability-policy-red-20261016.service; invocation ID: 80c558c3290c4ef4b898cfba167a9008
+test_all_256_candidate_upper_patterns_use_all_rows_without_selecting_favorable_subset (__main__.RepeatabilityTests.test_all_256_candidate_upper_patterns_use_all_rows_without_selecting_favorable_subset) ... FAIL
+test_budget_cannot_exceed_twelve_or_be_invalid (__main__.RepeatabilityTests.test_budget_cannot_exceed_twelve_or_be_invalid) ... FAIL
+test_cumulative_budget_preserves_seven_prior_and_eighteen_physical (__main__.RepeatabilityTests.test_cumulative_budget_preserves_seven_prior_and_eighteen_physical) ... FAIL
+test_each_control_failure_stops_and_retains_that_slot (__main__.RepeatabilityTests.test_each_control_failure_stops_and_retains_that_slot) ... FAIL
+test_each_smaller_budget_stops_without_replacement_or_resuming (__main__.RepeatabilityTests.test_each_smaller_budget_stops_without_replacement_or_resuming) ... FAIL
+test_exact_schedule_and_three_additional_candidate_passes (__main__.RepeatabilityTests.test_exact_schedule_and_three_additional_candidate_passes) ... FAIL
+test_exception_at_each_slot_preserves_pending_intent_and_does_not_retry (__main__.RepeatabilityTests.test_exception_at_each_slot_preserves_pending_intent_and_does_not_retry) ... FAIL
+test_first_candidate_fail_and_three_later_passes_not_confirmed (__main__.RepeatabilityTests.test_first_candidate_fail_and_three_later_passes_not_confirmed) ... FAIL
+test_invalid_at_each_slot_preserves_all_cumulative_accounting (__main__.RepeatabilityTests.test_invalid_at_each_slot_preserves_all_cumulative_accounting) ... FAIL
+test_missing_extra_invalid_relabelled_or_duplicate_prior_rows_rejected (__main__.RepeatabilityTests.test_missing_extra_invalid_relabelled_or_duplicate_prior_rows_rejected) ... FAIL
+test_nonmonotonic_results_are_retained_without_stepdown (__main__.RepeatabilityTests.test_nonmonotonic_results_are_retained_without_stepdown) ... FAIL
+test_pending_phase_cannot_be_implicitly_resumed (__main__.RepeatabilityTests.test_pending_phase_cannot_be_implicitly_resumed) ... FAIL
+test_physical_run_ids_must_be_new_and_unique (__main__.RepeatabilityTests.test_physical_run_ids_must_be_new_and_unique) ... FAIL
+test_prior_state_and_all_recorded_snapshots_are_deep_copies (__main__.RepeatabilityTests.test_prior_state_and_all_recorded_snapshots_are_deep_copies) ... FAIL
+test_record_failure_prevents_first_side_effect (__main__.RepeatabilityTests.test_record_failure_prevents_first_side_effect) ... FAIL
+test_three_failing_upper_and_one_passing_upper_is_mixed_not_boundary (__main__.RepeatabilityTests.test_three_failing_upper_and_one_passing_upper_is_mixed_not_boundary) ... FAIL
+test_unknown_and_malformed_results_never_count_as_failure_bound (__main__.RepeatabilityTests.test_unknown_and_malformed_results_never_count_as_failure_bound) ... FAIL
+test_upper_all_pass_does_not_expand (__main__.RepeatabilityTests.test_upper_all_pass_does_not_expand) ... FAIL
+
+======================================================================
+FAIL: test_all_256_candidate_upper_patterns_use_all_rows_without_selecting_favorable_subset (__main__.RepeatabilityTests.test_all_256_candidate_upper_patterns_use_all_rows_without_selecting_favorable_subset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_budget_cannot_exceed_twelve_or_be_invalid (__main__.RepeatabilityTests.test_budget_cannot_exceed_twelve_or_be_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_cumulative_budget_preserves_seven_prior_and_eighteen_physical (__main__.RepeatabilityTests.test_cumulative_budget_preserves_seven_prior_and_eighteen_physical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_each_control_failure_stops_and_retains_that_slot (__main__.RepeatabilityTests.test_each_control_failure_stops_and_retains_that_slot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_each_smaller_budget_stops_without_replacement_or_resuming (__main__.RepeatabilityTests.test_each_smaller_budget_stops_without_replacement_or_resuming)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_exact_schedule_and_three_additional_candidate_passes (__main__.RepeatabilityTests.test_exact_schedule_and_three_additional_candidate_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_exception_at_each_slot_preserves_pending_intent_and_does_not_retry (__main__.RepeatabilityTests.test_exception_at_each_slot_preserves_pending_intent_and_does_not_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_first_candidate_fail_and_three_later_passes_not_confirmed (__main__.RepeatabilityTests.test_first_candidate_fail_and_three_later_passes_not_confirmed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_invalid_at_each_slot_preserves_all_cumulative_accounting (__main__.RepeatabilityTests.test_invalid_at_each_slot_preserves_all_cumulative_accounting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_missing_extra_invalid_relabelled_or_duplicate_prior_rows_rejected (__main__.RepeatabilityTests.test_missing_extra_invalid_relabelled_or_duplicate_prior_rows_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_nonmonotonic_results_are_retained_without_stepdown (__main__.RepeatabilityTests.test_nonmonotonic_results_are_retained_without_stepdown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_pending_phase_cannot_be_implicitly_resumed (__main__.RepeatabilityTests.test_pending_phase_cannot_be_implicitly_resumed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_physical_run_ids_must_be_new_and_unique (__main__.RepeatabilityTests.test_physical_run_ids_must_be_new_and_unique)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_prior_state_and_all_recorded_snapshots_are_deep_copies (__main__.RepeatabilityTests.test_prior_state_and_all_recorded_snapshots_are_deep_copies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_record_failure_prevents_first_side_effect (__main__.RepeatabilityTests.test_record_failure_prevents_first_side_effect)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_three_failing_upper_and_one_passing_upper_is_mixed_not_boundary (__main__.RepeatabilityTests.test_three_failing_upper_and_one_passing_upper_is_mixed_not_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_unknown_and_malformed_results_never_count_as_failure_bound (__main__.RepeatabilityTests.test_unknown_and_malformed_results_never_count_as_failure_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+======================================================================
+FAIL: test_upper_all_pass_does_not_expand (__main__.RepeatabilityTests.test_upper_all_pass_does_not_expand)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_supplemental_repeatability_policy.py", line 34, in setUp
+    self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),
+AssertionError: False is not true : Missing approved fixed-study scheduling policy
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.002s
+
+FAILED (failures=18)
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 58ms
+CPU time consumed: 56ms
+Memory peak: 332.0K
+Memory swap peak: 0B

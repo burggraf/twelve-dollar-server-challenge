@@ -1,0 +1,28 @@
+{
+  "actual_private_candidates_checked": 3,
+  "actual_issued_signatures_checked": 20000,
+  "all_http_query_strings_and_jwt_shapes_screened": true,
+  "originals_unchanged": true,
+  "artifacts": [
+    {
+      "original": "repeatability-post-update-01/preflight-01-services.json",
+      "original_sha256": "38326215047454be5121268f07dafee76e865bd5caf1db4f2dd4a2382f6fde5d",
+      "original_bytes": 6398,
+      "public_derivative": "screened-repeatability-post-update-01/preflight-01-services.json",
+      "derivative_sha256": "38326215047454be5121268f07dafee76e865bd5caf1db4f2dd4a2382f6fde5d",
+      "derivative_bytes": 6398,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "repeatability-post-update-01/preflight-01-service-events-public.json",
+      "original_sha256": "c14dd264ef6adcac6e25bc979edb87f7b7b9d965d7201e62206172d8dbb0cd6e",
+      "original_bytes": 644,
+      "public_derivative": "screened-repeatability-post-update-01/preflight-01-service-events-public.json",
+      "derivative_sha256": "c14dd264ef6adcac6e25bc979edb87f7b7b9d965d7201e62206172d8dbb0cd6e",
+      "derivative_bytes": 644,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    }
+  ]
+}

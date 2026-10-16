@@ -1,0 +1,211 @@
+{
+  "scope": "Read-only timeline of the already-known unrelated flapping dmarie.service. Original raw journal remains PRIVATE on VPS; NO application/manager message contents, argv, configuration, secrets or credentials exported. Failed endpoint continuity guards stay false. Counts do not prove performance causality or isolate unrelated work; no service stopped/restarted/modified.",
+  "tested_software": {
+    "service": "PocketBase",
+    "version": "v0.40.5",
+    "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+    "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+    "go_module": "github.com/pocketbase/pocketbase",
+    "go_version": "1.27.2",
+    "sqlite_engine_version": "3.53.4",
+    "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+    "native_platform": "linux/amd64",
+    "builder": {
+      "tag": "golang:1.27.2-bookworm",
+      "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+      "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+    },
+    "runtime": {
+      "tag": "debian:bookworm-slim",
+      "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+      "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+    },
+    "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+    "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+    "serving_budget": {
+      "cpus": 1,
+      "memory_bytes": 4294967296,
+      "swap_bytes": 0
+    },
+    "runner_profile": "k6-2cpu-8g-v3"
+  },
+  "serving_budget": {
+    "cpus": 1,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0
+  },
+  "runner_budget": {
+    "software": "k6 1.3.0",
+    "cpus": 2,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "profile": "k6-2cpu-8g-v3"
+  },
+  "private_raw_journal_provenance": {
+    "bytes": 6517258,
+    "sha256": "67562e98235ab10bdf8dc7db9feb04d5b22c571619436e5484ead789f0d29348",
+    "json_records": 5367,
+    "distribution": "PRIVATE VPS ONLY, not exported"
+  },
+  "windows": [
+    {
+      "run": "20261016T034903946160Z-standard-10000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "hold_start_epoch": 1792122803.093,
+      "hold_end_epoch": 1792123103.093,
+      "continuity": {
+        "persistent_identity_equality": true,
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "original4000_unchanged": true,
+        "scope": "Record EVERY persistent service difference; only established SSH-session user@0 excluded. False remains false, no full host-isolation claim or exclusion of inconvenient newly visible/flapping services."
+      },
+      "journal_message_counts": {
+        "scheduled_restart": 57,
+        "started": 57,
+        "other_private_message_not_exported": 56,
+        "main_process_exited": 57,
+        "failed_with_result": 57
+      },
+      "journal_entries_during_hold": 284
+    },
+    {
+      "run": "20261016T035933324654Z-standard-11250vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "hold_start_epoch": 1792123433.729,
+      "hold_end_epoch": 1792123733.729,
+      "continuity": {
+        "persistent_identity_equality": true,
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "original4000_unchanged": true,
+        "scope": "Record EVERY persistent service difference; only established SSH-session user@0 excluded. False remains false, no full host-isolation claim or exclusion of inconvenient newly visible/flapping services."
+      },
+      "journal_message_counts": {
+        "scheduled_restart": 57,
+        "started": 57,
+        "other_private_message_not_exported": 57,
+        "main_process_exited": 57,
+        "failed_with_result": 57
+      },
+      "journal_entries_during_hold": 285
+    },
+    {
+      "run": "20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3",
+      "outcome": "fail",
+      "hold_start_epoch": 1792125589.332,
+      "hold_end_epoch": 1792125889.332,
+      "continuity": {
+        "persistent_identity_equality": false,
+        "added": [
+          "dmarie.service"
+        ],
+        "removed": [],
+        "changed": [],
+        "original4000_unchanged": true,
+        "scope": "Record EVERY persistent service difference; only established SSH-session user@0 excluded. False remains false, no full host-isolation claim or exclusion of inconvenient newly visible/flapping services."
+      },
+      "journal_message_counts": {
+        "scheduled_restart": 57,
+        "started": 57,
+        "other_private_message_not_exported": 57,
+        "main_process_exited": 57,
+        "failed_with_result": 57
+      },
+      "journal_entries_during_hold": 285
+    },
+    {
+      "run": "20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3",
+      "outcome": "fail",
+      "hold_start_epoch": 1792126226.988,
+      "hold_end_epoch": 1792126526.988,
+      "continuity": {
+        "persistent_identity_equality": true,
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "original4000_unchanged": true,
+        "scope": "Record EVERY persistent service difference; only established SSH-session user@0 excluded. False remains false, no full host-isolation claim or exclusion of inconvenient newly visible/flapping services."
+      },
+      "journal_message_counts": {
+        "scheduled_restart": 57,
+        "started": 57,
+        "other_private_message_not_exported": 57,
+        "main_process_exited": 57,
+        "failed_with_result": 57
+      },
+      "journal_entries_during_hold": 285
+    },
+    {
+      "run": "20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3",
+      "outcome": "fail",
+      "hold_start_epoch": 1792126863.284,
+      "hold_end_epoch": 1792127163.284,
+      "continuity": {
+        "persistent_identity_equality": true,
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "original4000_unchanged": true,
+        "scope": "Record EVERY persistent service difference; only established SSH-session user@0 excluded. False remains false, no full host-isolation claim or exclusion of inconvenient newly visible/flapping services."
+      },
+      "journal_message_counts": {
+        "scheduled_restart": 57,
+        "started": 57,
+        "other_private_message_not_exported": 57,
+        "main_process_exited": 57,
+        "failed_with_result": 57
+      },
+      "journal_entries_during_hold": 285
+    },
+    {
+      "run": "20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "hold_start_epoch": 1792127500.476,
+      "hold_end_epoch": 1792127800.476,
+      "continuity": {
+        "persistent_identity_equality": false,
+        "added": [
+          "dmarie.service"
+        ],
+        "removed": [],
+        "changed": [],
+        "original4000_unchanged": true,
+        "scope": "Record EVERY persistent service difference; only established SSH-session user@0 excluded. False remains false, no full host-isolation claim or exclusion of inconvenient newly visible/flapping services."
+      },
+      "journal_message_counts": {
+        "scheduled_restart": 58,
+        "started": 58,
+        "other_private_message_not_exported": 57,
+        "main_process_exited": 58,
+        "failed_with_result": 58
+      },
+      "journal_entries_during_hold": 289
+    },
+    {
+      "run": "20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3",
+      "outcome": "fail",
+      "hold_start_epoch": 1792128135.274,
+      "hold_end_epoch": 1792128435.274,
+      "continuity": {
+        "persistent_identity_equality": true,
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "original4000_unchanged": true,
+        "scope": "Record EVERY persistent service difference; only established SSH-session user@0 excluded. False remains false, no full host-isolation claim or exclusion of inconvenient newly visible/flapping services."
+      },
+      "journal_message_counts": {
+        "scheduled_restart": 57,
+        "started": 57,
+        "other_private_message_not_exported": 57,
+        "main_process_exited": 57,
+        "failed_with_result": 57
+      },
+      "journal_entries_during_hold": 285
+    }
+  ],
+  "causal_attribution": "unproven; do not remove service from continuity guard or blame/exonerate it from these aggregate counts"
+}

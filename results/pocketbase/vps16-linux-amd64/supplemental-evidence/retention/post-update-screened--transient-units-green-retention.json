@@ -1,0 +1,18 @@
+{
+  "actual_private_candidates_checked": 3,
+  "actual_issued_signatures_checked": 20000,
+  "all_http_query_strings_and_jwt_shapes_screened": true,
+  "originals_unchanged": true,
+  "artifacts": [
+    {
+      "original": "repeatability-post-update-01/transient-units-green-original.log",
+      "original_sha256": "b19c445be0e11fb137e785309a5748b76f97ae85d80edba61e9229d3f1d8257b",
+      "original_bytes": 9768,
+      "public_derivative": "screened-repeatability-post-update-01/transient-units-green-original.log",
+      "derivative_sha256": "b19c445be0e11fb137e785309a5748b76f97ae85d80edba61e9229d3f1d8257b",
+      "derivative_bytes": 9768,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    }
+  ]
+}

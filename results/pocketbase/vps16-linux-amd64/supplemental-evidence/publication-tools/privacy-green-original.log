@@ -1,0 +1,16 @@
+test_actual_private_bytes_rejected (__main__.PublicationPrivacy.test_actual_private_bytes_rejected) ... ok
+test_any_jwt_shape_rejected (__main__.PublicationPrivacy.test_any_jwt_shape_rejected) ... ok
+test_exact_phase_jsonl_shape_required (__main__.PublicationPrivacy.test_exact_phase_jsonl_shape_required) ... ok
+test_http_query_in_json_rejected (__main__.PublicationPrivacy.test_http_query_in_json_rejected) ... ok
+test_known_phase_jsonl_allowed (__main__.PublicationPrivacy.test_known_phase_jsonl_allowed) ... ok
+test_normal_source_and_hash_metadata_allowed (__main__.PublicationPrivacy.test_normal_source_and_hash_metadata_allowed) ... ok
+test_private_storage_and_bulk_paths_rejected (__main__.PublicationPrivacy.test_private_storage_and_bulk_paths_rejected) ... ok
+test_redacted_query_allowed (__main__.PublicationPrivacy.test_redacted_query_allowed) ... ok
+test_relative_request_query_rejected (__main__.PublicationPrivacy.test_relative_request_query_rejected) ... ok
+test_signature_without_full_jwt_rejected (__main__.PublicationPrivacy.test_signature_without_full_jwt_rejected) ... ok
+test_unknown_jsonl_rejected (__main__.PublicationPrivacy.test_unknown_jsonl_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+OK

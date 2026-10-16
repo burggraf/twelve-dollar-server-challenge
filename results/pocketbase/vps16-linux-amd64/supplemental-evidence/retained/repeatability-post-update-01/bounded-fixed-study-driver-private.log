@@ -1,0 +1,19 @@
+Running as unit: tds-pocketbase-post-update-fixed-study-20261016.service
+POST_UPDATE_FIXED_FULL_HOLD_RETAINED 8 control_characterization 10000 pass 20261016T132243742041Z-standard-10000vu-k6-2cpu-8g-v3
+POST_UPDATE_FIXED_FULL_HOLD_RETAINED 9 candidate_characterization 11000 pass 20261016T133315240512Z-standard-11000vu-k6-2cpu-8g-v3
+POST_UPDATE_FIXED_FULL_HOLD_RETAINED 10 adjacent_characterization 11250 pass 20261016T134348817451Z-standard-11250vu-k6-2cpu-8g-v3
+POST_UPDATE_FIXED_FULL_HOLD_RETAINED 11 control_repeat 10000 pass 20261016T135423709666Z-standard-10000vu-k6-2cpu-8g-v3
+POST_UPDATE_FIXED_FULL_HOLD_RETAINED 12 adjacent_repeat 11250 pass 20261016T140455380113Z-standard-11250vu-k6-2cpu-8g-v3
+POST_UPDATE_FIXED_FULL_HOLD_RETAINED 13 candidate_confirmation 11000 pass 20261016T141530600668Z-standard-11000vu-k6-2cpu-8g-v3
+POST_UPDATE_FIXED_STUDY_TERMINAL paused_unconfirmed incomplete
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/post-update-repeatability-controller-v2.py", line 279, in <module>
+    if result['status']!='complete_pending_human_review':raise RuntimeError('Fixed study paused: '+result.get('reason','inspect retained evidence'))
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Fixed study paused: Persistent-service lifecycle events observed; keep continuity failed
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 1h 13min 31.106s
+CPU time consumed: 4min 2.821s
+Memory peak: 74.6M
+Memory swap peak: 0B

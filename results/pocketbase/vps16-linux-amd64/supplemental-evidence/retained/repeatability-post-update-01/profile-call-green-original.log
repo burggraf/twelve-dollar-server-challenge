@@ -1,0 +1,13 @@
+Running as unit: tds-pocketbase-stop-profile-call-green-20261016.service
+test_poststop_capture_binds_actual_frozen_native_profile_signature (__main__.FrozenProfileCall.test_poststop_capture_binds_actual_frozen_native_profile_signature) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+OK
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 80ms
+CPU time consumed: 79ms
+Memory peak: 3.0M
+Memory swap peak: 0B

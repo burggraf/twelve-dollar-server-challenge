@@ -1,0 +1,101 @@
+{
+  "scope": "Independent full original checksum/source/raw/resource replay of one NEW supplemental FULL hold; not a confirmation by itself",
+  "tested_software": {
+    "service": "PocketBase",
+    "version": "v0.40.5",
+    "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+    "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+    "go_module": "github.com/pocketbase/pocketbase",
+    "go_version": "1.27.2",
+    "sqlite_engine_version": "3.53.4",
+    "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+    "native_platform": "linux/amd64",
+    "builder": {
+      "tag": "golang:1.27.2-bookworm",
+      "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+      "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+    },
+    "runtime": {
+      "tag": "debian:bookworm-slim",
+      "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+      "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+    },
+    "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+    "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+    "serving_budget": {
+      "cpus": 1,
+      "memory_bytes": 4294967296,
+      "swap_bytes": 0
+    },
+    "runner_profile": "k6-2cpu-8g-v3"
+  },
+  "serving_budget": {
+    "cpus": 1,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0
+  },
+  "runner_budget": {
+    "software": "k6 1.3.0",
+    "cpus": 2,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "profile": "k6-2cpu-8g-v3"
+  },
+  "attempts": [
+    {
+      "run": "20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3",
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "fail",
+        "hold latency/error/schema gate failed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.235201,
+        "max": 10001.07769,
+        "med": 27.4594765,
+        "p(95)": 261.58182104999986,
+        "p(99)": 1831.5201392500003
+      },
+      "requests_by_endpoint": {
+        "like": 24548,
+        "feed": 162943,
+        "detail": 162979,
+        "create": 3404
+      },
+      "errors_by_endpoint": {
+        "like": 61,
+        "feed": 0,
+        "detail": 0,
+        "create": 5
+      },
+      "schema_errors": 0,
+      "statuses_by_endpoint": {
+        "like": {
+          "201": 24487,
+          "0": 61
+        },
+        "feed": {
+          "200": 162943
+        },
+        "detail": {
+          "200": 162979
+        },
+        "create": {
+          "201": 3399,
+          "0": 5
+        }
+      },
+      "hold_monitor_samples": 59,
+      "hold_monitor_span_seconds": 290.79396772384644,
+      "runner_peak_cpu_percent_one_core": 199.01,
+      "runner_peak_memory_percent_8gib": 62.01,
+      "parent_peak_memory_bytes_including_cache": 2795728896,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0
+    }
+  ]
+}

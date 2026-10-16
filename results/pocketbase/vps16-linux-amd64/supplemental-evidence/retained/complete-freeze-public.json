@@ -1,0 +1,181 @@
+{
+  "scope": "Complete ACTUAL unchanged PocketBase source/Go module/compiler/runtime/generated-input freeze before supplemental holds; all archives private pending license/privacy/distribution review, no public-download/fresh-build claim",
+  "tested_software": {
+    "service": "PocketBase",
+    "version": "v0.40.5",
+    "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+    "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+    "go_module": "github.com/pocketbase/pocketbase",
+    "go_version": "1.27.2",
+    "sqlite_engine_version": "3.53.4",
+    "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+    "native_platform": "linux/amd64",
+    "builder": {
+      "tag": "golang:1.27.2-bookworm",
+      "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+      "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+    },
+    "runtime": {
+      "tag": "debian:bookworm-slim",
+      "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+      "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+    },
+    "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+    "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+    "serving_budget": {
+      "cpus": 1,
+      "memory_bytes": 4294967296,
+      "swap_bytes": 0
+    },
+    "runner_profile": "k6-2cpu-8g-v3"
+  },
+  "serving_budget": {
+    "cpus": 1,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0
+  },
+  "runner_budget": {
+    "software": "k6 1.3.0",
+    "cpus": 2,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "profile": "k6-2cpu-8g-v3"
+  },
+  "source_entries": 107,
+  "go_module_entries": 14330,
+  "source_inventory_sha256": "a85769e70eba1848af55d87e45f10fa368fe70f4b2a26aa8c3ee6566c11d8dc2",
+  "go_module_inventory_sha256": "edbec9ea426b46d12f93a6bfe295f70c0c671cfc585f4d7a220e4322351783e8",
+  "complete_inventory_sha256": "d9ae4b36b01c5bc2cead534be3e55c8a080fcc25ed8ad11993ee893203abca22",
+  "images": {
+    "serving": {
+      "reference": "baas-pocketbase-vps16-feed:0.1.0",
+      "image_id": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+      "platform": "linux/amd64",
+      "rootfs_layers": [
+        "sha256:e58989146fcec76699871403b9897b5c014af1ccd85f5a9300a215e7975525d7",
+        "sha256:3df41629e63599e3079b0efb41e20d84b53c098abaec6078c3e13851e130fe3a",
+        "sha256:fc17b39eb484845a468b0bc127840ca8ce0cb69cfa8e6bb5dfb7717a1c57d653"
+      ]
+    },
+    "compiler": {
+      "reference": "golang:1.27.2-bookworm@sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+      "image_id": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+      "platform": "linux/amd64",
+      "rootfs_layers": [
+        "sha256:6439a9e3affca36e4cc323dd241724b62721af4a3f4aa590ced4ae11f8083a4b",
+        "sha256:7345f80a66167d9ae4a3c28d9280aabd743986ec04e5d862d67a5b8e5d886e78",
+        "sha256:1049cbfdfb0acf4035a0996bbbf3e5bfc20fcfef65c3d50f09b16c0607afbb38",
+        "sha256:eff6ec80f5e72800cc432f2bb27bf0fce61c3f5b62818fd6b6c1d609e41d09bb",
+        "sha256:f5ca01e3dca6054acc963ccf760f49bbfb378f89d46b70daed86202c20489cd7",
+        "sha256:7deb4d4c2bd7e16ddb3b07a2c8c01e0268af50827bbc385ee52a8e528e91f082",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+      ]
+    },
+    "runtime_base": {
+      "reference": "debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+      "manifest_digest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+      "platform": "linux/amd64",
+      "rootfs_layers": [
+        "sha256:e58989146fcec76699871403b9897b5c014af1ccd85f5a9300a215e7975525d7"
+      ],
+      "base_layers_verified_as_prefix_of_actual_serving_image": true,
+      "verification": "Read-only registry manifest/config metadata; separate local base-image object absent, no pull or rebuild"
+    },
+    "tools": {
+      "reference": "baas-trailbase-vps16-tools:0.1.0",
+      "image_id": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2",
+      "platform": "linux/amd64",
+      "rootfs_layers": [
+        "sha256:d6d0586ce8024205fd00d811876170571638957b5095d7e9dd1d015345c8d069",
+        "sha256:63e46bb3012ce426f0bc89c6214fa43e1e9592fa367c09550544a4a9661023ea",
+        "sha256:77451314989e09d0f2799f7afbc0fc7abaf99177576d7e78877127313bd012ca",
+        "sha256:30453b9d5bd948eb1566f42c448f6a0180686a25c53d9cc3356155ef0fafea37",
+        "sha256:801c07b087006e00948ccf293ac476cd963c3655409f47d7db14d0b4aef99546",
+        "sha256:268fef3d54de20fcc4b18f8db9e3ec06a02217c32ce30aee4048646465d7fa86",
+        "sha256:cb5442260af83e643b3c934a7a6c557d83eecdcc633da3abfff513ed3b7eb919",
+        "sha256:45d16fad16945d48fdae39b0e6400f7a00786a2634c478aec22c9038d949b038"
+      ]
+    },
+    "runner": {
+      "reference": "grafana/k6:1.3.0@sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656",
+      "image_id": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656",
+      "platform": "linux/amd64",
+      "rootfs_layers": [
+        "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35",
+        "sha256:37fdfec65693777b10e5b98cdc78f7064a55a17f341a8adf506e9d7d468bcda1",
+        "sha256:223b2777d4ac57849dfecf297800c3533e1cf0c4d7344623785e2dd5bc12e3a2",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+      ]
+    }
+  },
+  "generated_input_fingerprints_only": {
+    ".state/pocketbase/build/feed": {
+      "bytes": 25190560,
+      "sha256": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8"
+    },
+    ".state/pocketbase/runtime.env": {
+      "bytes": 76,
+      "sha256": "db97efb9dcf66b26e4bbbc4dd9e64645807372f7cfc897e5984fa6fab6ffe115"
+    },
+    ".state/pocketbase/native-schema-fixture.db": {
+      "bytes": 217088,
+      "sha256": "1559772bc3290920e9fdfc01aa30a1f7802dd4a8c69a5efe5879ff64920a678c"
+    },
+    ".state/pocketbase/build-manifest.json": {
+      "bytes": 2141,
+      "sha256": "b10a91714e73c73b92859c9d66334718046e6c5962eec2f2c899e3a10ec218e1"
+    },
+    ".state/pocketbase/correctness-manifest.json": {
+      "bytes": 17832,
+      "sha256": "00212bf94f2dcdd7ae4eddf7aa779bc57e687318bfd17c7aaafd700af20e8fa9"
+    },
+    ".state/pocketbase/correctness.log": {
+      "bytes": 21109,
+      "sha256": "ce3040d9c8351babb9e01edb6c6d72a825293d27c2118ed487ff45d766fbe79d"
+    },
+    ".state/seed/tokens.json": {
+      "bytes": 4859318,
+      "sha256": "37c3f99e54809dcbc741053cf462a4b1f16e4d42f89fb12a9b9374e0cc2878b2"
+    },
+    ".state/seed/users.tsv": {
+      "bytes": 2482690,
+      "sha256": "304767a5b65fd97d7a5a0abbdef4a063cfab99ff08bd045126de3ba53c139bb8"
+    },
+    ".state/seed/posts.tsv": {
+      "bytes": 83493309,
+      "sha256": "693d608b9021baab866b2866fb2d950262fbd90e6fcef70aef10f5281d5c1293"
+    },
+    ".state/seed/likes.tsv": {
+      "bytes": 75709498,
+      "sha256": "627c2d0aa7860a3a6e7788f700adc953e05fac967a5d9b5b21dcad06bd412b37"
+    }
+  },
+  "archives": {
+    "complete-current-source.tar.gz": {
+      "bytes": 169418,
+      "sha256": "45f62cc05b2ff9fd685b3567ab4e7374aebbe4a8dcb7754a0c54a481d4b3b966"
+    },
+    "complete-installed-go-module-inputs.tar.gz": {
+      "bytes": 150520669,
+      "sha256": "c55a89c1af5fa15c367bc5753672b5de3f67117e2abb4a6295742d7044e15a37"
+    }
+  },
+  "original_attested_inputs_unchanged": {
+    "app": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+    "verification": "300bf1e09d624032c1c9d88c4862b688f18cd6294e8c906fc4d1f97341c84359",
+    "runtime": "830e10858906a952042d167da3c8d6847695bb861b213f8c38cb7c66774beb25",
+    "schema": "4c2fd006546e9691cd189f2a971d3c23b62a88da53ce371fa14cd1136d20d859",
+    "images": {
+      "pocketbase": {
+        "Image": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:bc371b827b558174e9d5f833cac457241574d6c3fe653b6a4453ca229c67e91f"
+      }
+    },
+    "host": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+    "tokens": "37c3f99e54809dcbc741053cf462a4b1f16e4d42f89fb12a9b9374e0cc2878b2",
+    "executable": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+    "tools_image": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2 linux/amd64"
+  },
+  "external_controller_source_scope": "Outside the source root; exact controller/policy/auditor bytes separately frozen before first hold and checked every attempt. Not falsely included in these actual product/source/module archives."
+}

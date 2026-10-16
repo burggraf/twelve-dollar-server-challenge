@@ -1,0 +1,17 @@
+{
+  "window_start": 1792154929.0127258,
+  "window_end": 1792155529.0127258,
+  "window_complete": true,
+  "persistent_service_event_counts": {
+    "user-runtime-dir@0.service": 3
+  },
+  "nonpersistent_oneshot_event_counts_disclosed": {
+    "sysstat-collect.service": 1
+  },
+  "private_raw": {
+    "bytes": 39130,
+    "sha256": "041a7f4d19de3dab9fc450cbe500c442e5ed435aa5d5997a978f670b391f81cf",
+    "distribution": "PRIVATE VPS ONLY"
+  },
+  "scope": "Numeric metadata only; all raw messages stay private. Only existing SSH session exception and benchmark tds unit namespace; no persistent-service exclusions. No causality or isolation proof."
+}

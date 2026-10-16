@@ -1,0 +1,35 @@
+Running as unit: tds-pocketbase-stop-profile-call-red-20261016.service
+test_poststop_capture_binds_actual_frozen_native_profile_signature (__main__.FrozenProfileCall.test_poststop_capture_binds_actual_frozen_native_profile_signature) ... FAIL
+
+======================================================================
+FAIL: test_poststop_capture_binds_actual_frozen_native_profile_signature (__main__.FrozenProfileCall.test_poststop_capture_binds_actual_frozen_native_profile_signature)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_stop_capture_profile_call.py", line 16, in test_poststop_capture_binds_actual_frozen_native_profile_signature
+    try:inspect.signature(profile.deployment_attestation).bind(*[ast.literal_eval(a) for a in node.args],**{k.arg:ast.literal_eval(k.value) for k in node.keywords})
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/inspect.py", line 3242, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/inspect.py", line 3163, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_stop_capture_profile_call.py", line 17, in test_poststop_capture_binds_actual_frozen_native_profile_signature
+    except TypeError as error:self.fail('Post-stop capture called an unsupported actual frozen native profile signature: '+str(error))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Post-stop capture called an unsupported actual frozen native profile signature: too many positional arguments
+
+----------------------------------------------------------------------
+Ran 1 test in 0.005s
+
+FAILED (failures=1)
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 79ms
+CPU time consumed: 78ms
+Memory peak: 2.8M
+Memory swap peak: 0B

@@ -1,0 +1,157 @@
+{
+  "status": "paused_unconfirmed",
+  "historical_full_attempts": 11,
+  "prior_supplemental_attempts": 7,
+  "supplemental_limit": 19,
+  "execution_budget": 12,
+  "total_physical_full_attempts_accounted": 25,
+  "attempts": [
+    {
+      "vus": 10000,
+      "purpose": "lower_anchor",
+      "outcome": "pass",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T034903946160Z-standard-10000vu-k6-2cpu-8g-v3",
+      "reason": "hold gates passed"
+    },
+    {
+      "vus": 11250,
+      "purpose": "upper_anchor",
+      "outcome": "pass",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T035933324654Z-standard-11250vu-k6-2cpu-8g-v3",
+      "reason": "hold gates passed"
+    },
+    {
+      "vus": 12250,
+      "purpose": "upper_anchor",
+      "outcome": "fail",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3",
+      "reason": "hold latency/error/schema gate failed"
+    },
+    {
+      "vus": 11750,
+      "purpose": "boundary_probe",
+      "outcome": "fail",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3",
+      "reason": "hold latency/error/schema gate failed"
+    },
+    {
+      "vus": 11500,
+      "purpose": "boundary_probe",
+      "outcome": "fail",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3",
+      "reason": "hold latency/error/schema gate failed"
+    },
+    {
+      "vus": 11250,
+      "purpose": "candidate_confirmation",
+      "outcome": "pass",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3",
+      "reason": "hold gates passed"
+    },
+    {
+      "vus": 11250,
+      "purpose": "candidate_confirmation",
+      "outcome": "fail",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3",
+      "reason": "hold latency/error/schema gate failed"
+    },
+    {
+      "vus": 10000,
+      "purpose": "control_characterization",
+      "round": 1,
+      "outcome": "pass",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T132243742041Z-standard-10000vu-k6-2cpu-8g-v3",
+      "reason": "hold gates passed"
+    },
+    {
+      "vus": 11000,
+      "purpose": "candidate_characterization",
+      "round": 1,
+      "outcome": "pass",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T133315240512Z-standard-11000vu-k6-2cpu-8g-v3",
+      "reason": "hold gates passed"
+    },
+    {
+      "vus": 11250,
+      "purpose": "adjacent_characterization",
+      "round": 1,
+      "outcome": "pass",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T134348817451Z-standard-11250vu-k6-2cpu-8g-v3",
+      "reason": "hold gates passed"
+    },
+    {
+      "vus": 10000,
+      "purpose": "control_repeat",
+      "round": 2,
+      "outcome": "pass",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T135423709666Z-standard-10000vu-k6-2cpu-8g-v3",
+      "reason": "hold gates passed"
+    },
+    {
+      "vus": 11250,
+      "purpose": "adjacent_repeat",
+      "round": 2,
+      "outcome": "pass",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T140455380113Z-standard-11250vu-k6-2cpu-8g-v3",
+      "reason": "hold gates passed"
+    },
+    {
+      "vus": 11000,
+      "purpose": "candidate_confirmation",
+      "round": 2,
+      "outcome": "pass",
+      "run": "results/pocketbase/vps16-linux-amd64/20261016T141530600668Z-standard-11000vu-k6-2cpu-8g-v3",
+      "reason": "hold gates passed"
+    },
+    {
+      "vus": 10000,
+      "purpose": "control_repeat",
+      "round": 3,
+      "outcome": null
+    }
+  ],
+  "boundary_confirmed_by_hold_gates": false,
+  "classifications": {
+    "control": "incomplete",
+    "candidate": "incomplete",
+    "adjacent": "incomplete"
+  },
+  "study_result": "incomplete",
+  "reason": "Persistent-service lifecycle events observed; keep continuity failed",
+  "owner_authorization": "9c8b8369-0955-4a93-ad2f-a99c7b2dbcc6",
+  "time": 1792161368.1384346,
+  "original_frozen_inputs": {
+    "app": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+    "verification": "300bf1e09d624032c1c9d88c4862b688f18cd6294e8c906fc4d1f97341c84359",
+    "runtime": "830e10858906a952042d167da3c8d6847695bb861b213f8c38cb7c66774beb25",
+    "schema": "4c2fd006546e9691cd189f2a971d3c23b62a88da53ce371fa14cd1136d20d859",
+    "images": {
+      "pocketbase": {
+        "Image": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:bc371b827b558174e9d5f833cac457241574d6c3fe653b6a4453ca229c67e91f"
+      }
+    },
+    "host": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+    "tokens": "37c3f99e54809dcbc741053cf462a4b1f16e4d42f89fb12a9b9374e0cc2878b2",
+    "executable": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+    "tools_image": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2 linux/amd64"
+  },
+  "input_catalog_sha256": "043a6c0d00f897053f224ff298ac4c95d391c565fb0e27d5164af9789901c567",
+  "host_context": {
+    "boot": "77d80e459277950c488b0768305effffb0a9bf8682ca0ec55bf6aab84baa982c",
+    "kernel": "6.8.0-147-generic",
+    "docker": "02d7abb606f09937534db9515eb4e3c941a54100f4ca8ef2d0d4b4da6e58b422",
+    "memory_total": 16770064384,
+    "cpus": 4,
+    "machine": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43"
+  },
+  "accounting_scope": "11 historical+7 preserved supplemental; new pending intents conservatively consume allowance; actual full directories separately retained. Never erase partial/invalid holds or reuse prior confirmations.",
+  "historical_original_listener_equality": false,
+  "prospective_listener_baseline": {
+    "812": {
+      "start_ticks": "759",
+      "executable": "/opt/trailbase-server/bin/trail"
+    }
+  }
+}

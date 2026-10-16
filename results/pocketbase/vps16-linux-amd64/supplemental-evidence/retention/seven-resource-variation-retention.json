@@ -1,0 +1,28 @@
+{
+  "actual_private_candidates_checked": 3,
+  "actual_issued_signatures_checked": 20000,
+  "all_http_query_strings_and_jwt_shapes_screened": true,
+  "originals_unchanged": true,
+  "artifacts": [
+    {
+      "original": "seven-fresh-resource-variation-public.json",
+      "original_sha256": "ced3bb56968d4625df10fc4cbd01361048f3e90dc52a62d405cf430e151102a3",
+      "original_bytes": 21026,
+      "public_derivative": "screened-seven-fresh-resource-variation-public.json",
+      "derivative_sha256": "ced3bb56968d4625df10fc4cbd01361048f3e90dc52a62d405cf430e151102a3",
+      "derivative_bytes": 21026,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "seven-fresh-resource-variation-driver-private.log",
+      "original_sha256": "b4dd6a29ff09b0e74d903a70f0e94877437ab012289fe3b085dcdcd467ca8eb5",
+      "original_bytes": 99,
+      "public_derivative": "screened-seven-fresh-resource-variation-driver-private.log",
+      "derivative_sha256": "b4dd6a29ff09b0e74d903a70f0e94877437ab012289fe3b085dcdcd467ca8eb5",
+      "derivative_bytes": 99,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "actual_private_candidates_checked": 3,
+  "actual_issued_signatures_checked": 20000,
+  "all_http_query_strings_and_jwt_shapes_screened": true,
+  "originals_unchanged": true,
+  "artifacts": [
+    {
+      "original": "rebracket-01/bounded-controller-driver-private.log",
+      "original_sha256": "db946bc6c5228fffbc99a49208e12cd58402b12614121b7b5a3140b62ece17c1",
+      "original_bytes": 1254,
+      "public_derivative": "screened-rebracket-01/bounded-controller-driver-private.log",
+      "derivative_sha256": "db946bc6c5228fffbc99a49208e12cd58402b12614121b7b5a3140b62ece17c1",
+      "derivative_bytes": 1254,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "rebracket-01/supplemental-phase.json",
+      "original_sha256": "088d3a45d630c9569e9a0a4a4aaf86fc5ade74a7a32d3db1dca7b64670700dd0",
+      "original_bytes": 6115,
+      "public_derivative": "screened-rebracket-01/supplemental-phase.json",
+      "derivative_sha256": "088d3a45d630c9569e9a0a4a4aaf86fc5ade74a7a32d3db1dca7b64670700dd0",
+      "derivative_bytes": 6115,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "rebracket-01/supplemental-phase-journal.jsonl",
+      "original_sha256": "4a8ea2e51db611a87143b29ddafe4c8c1541b9b54673f8da7adff6aee026ef59",
+      "original_bytes": 65315,
+      "public_derivative": "screened-rebracket-01/supplemental-phase-journal.jsonl",
+      "derivative_sha256": "4a8ea2e51db611a87143b29ddafe4c8c1541b9b54673f8da7adff6aee026ef59",
+      "derivative_bytes": 65315,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    }
+  ]
+}

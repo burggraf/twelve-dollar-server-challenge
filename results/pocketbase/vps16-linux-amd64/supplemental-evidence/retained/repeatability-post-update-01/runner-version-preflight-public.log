@@ -1,0 +1,8 @@
+Running as unit: tds-pocketbase-post-update-native-runner-version-20261016.service
+k6 v1.3.0+dirty (commit/5870e99ae8-dirty, go1.25.1, linux/amd64)
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 323ms
+CPU time consumed: 31ms
+Memory peak: 7.0M
+Memory swap peak: 0B

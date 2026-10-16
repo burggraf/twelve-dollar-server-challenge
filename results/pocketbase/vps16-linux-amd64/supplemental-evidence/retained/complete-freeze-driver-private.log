@@ -1,0 +1,14 @@
+Error response from daemon: No such image: debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-complete-freeze.py", line 46, in <module>
+    images={'serving':image(s.PROJECT+'-feed:0.1.0'),'compiler':image(s.PINS['builder']['tag']+'@'+s.PINS['builder']['amd64_manifest']),'runtime_base':image(s.PINS['runtime']['tag']+'@'+s.PINS['runtime']['amd64_manifest']),'tools':image('baas-trailbase-vps16-tools:0.1.0'),'runner':image('grafana/k6:1.3.0@'+bench.K6_MANIFEST)}
+                                                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-complete-freeze.py", line 32, in image
+    item=json.loads(subprocess.check_output(['docker','image','inspect',reference],text=True))[0]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['docker', 'image', 'inspect', 'debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91']' returned non-zero exit status 1.

@@ -1,0 +1,38 @@
+{
+  "actual_private_candidates_checked": 3,
+  "actual_issued_signatures_checked": 20000,
+  "all_http_query_strings_and_jwt_shapes_screened": true,
+  "originals_unchanged": true,
+  "artifacts": [
+    {
+      "original": "repeatability-post-update-01/bounded-fixed-study-driver-private.log",
+      "original_sha256": "c97f4920eee6a2d0023d2e7f821bad582be634afeabcd06492c88abbbaa9a4a9",
+      "original_bytes": 1687,
+      "public_derivative": "screened-repeatability-post-update-01/bounded-fixed-study-driver-private.log",
+      "derivative_sha256": "c97f4920eee6a2d0023d2e7f821bad582be634afeabcd06492c88abbbaa9a4a9",
+      "derivative_bytes": 1687,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "repeatability-post-update-01/study-phase.json",
+      "original_sha256": "6423172c7f7aa04373f03a4d1fbc68f347a0dbb89f6373990c7bfa4dd773976b",
+      "original_bytes": 5892,
+      "public_derivative": "screened-repeatability-post-update-01/study-phase.json",
+      "derivative_sha256": "6423172c7f7aa04373f03a4d1fbc68f347a0dbb89f6373990c7bfa4dd773976b",
+      "derivative_bytes": 5892,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "repeatability-post-update-01/study-phase-journal.jsonl",
+      "original_sha256": "25a19a987979548d93606ed051b5bd0ef0a4b7f58c0f5f4deedc9862f93ab8c1",
+      "original_bytes": 65861,
+      "public_derivative": "screened-repeatability-post-update-01/study-phase-journal.jsonl",
+      "derivative_sha256": "25a19a987979548d93606ed051b5bd0ef0a4b7f58c0f5f4deedc9862f93ab8c1",
+      "derivative_bytes": 65861,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    }
+  ]
+}

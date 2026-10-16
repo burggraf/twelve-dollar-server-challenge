@@ -1,0 +1,408 @@
+{
+  "scope": "Read-only post-pause source/checksum/runtime/physical accounting capture; no reset/restart/new hold. Protocol contradiction is not a product runtime crash or proven cause of performance variation.",
+  "tested_software": {
+    "service": "PocketBase",
+    "version": "v0.40.5",
+    "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+    "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+    "go_module": "github.com/pocketbase/pocketbase",
+    "go_version": "1.27.2",
+    "sqlite_engine_version": "3.53.4",
+    "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+    "native_platform": "linux/amd64",
+    "builder": {
+      "tag": "golang:1.27.2-bookworm",
+      "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+      "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+    },
+    "runtime": {
+      "tag": "debian:bookworm-slim",
+      "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+      "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+    },
+    "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+    "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+    "serving_budget": {
+      "cpus": 1,
+      "memory_bytes": 4294967296,
+      "swap_bytes": 0
+    },
+    "runner_profile": "k6-2cpu-8g-v3"
+  },
+  "serving_budget": {
+    "cpus": 1,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0
+  },
+  "runner_budget": {
+    "software": "k6 1.3.0",
+    "cpus": 2,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "profile": "k6-2cpu-8g-v3"
+  },
+  "phase_status": "paused_unconfirmed",
+  "pause_reason": "candidate_confirmation contradicted required pass; stop and investigate",
+  "historical_full_attempts": 11,
+  "supplemental_physical_full_attempts": 7,
+  "total_physical_full_attempts": 18,
+  "unused_supplemental_slots": 3,
+  "new_runs": [
+    "20261016T034903946160Z-standard-10000vu-k6-2cpu-8g-v3",
+    "20261016T035933324654Z-standard-11250vu-k6-2cpu-8g-v3",
+    "20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3",
+    "20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3",
+    "20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3",
+    "20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3",
+    "20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3"
+  ],
+  "new_rebracket_runs": [
+    "20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3",
+    "20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3",
+    "20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3",
+    "20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3",
+    "20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3"
+  ],
+  "all_original_11_manifest_checksum_files_unchanged": true,
+  "all_new_original_checksums_verified": true,
+  "actual_inputs_unchanged": true,
+  "serving": {
+    "parent": {
+      "cpu.max": "100000 100000\n",
+      "cpu.stat": "usage_usec 5512109516\nuser_usec 5046538902\nsystem_usec 465570613\ncore_sched.force_idle_usec 0\nnr_periods 98387\nnr_throttled 2499\nthrottled_usec 1994127\nnr_bursts 0\nburst_usec 0\n",
+      "cpu.pressure": "some avg10=0.00 avg60=0.00 avg300=0.13 total=66409905\nfull avg10=0.00 avg60=0.00 avg300=0.12 total=60638577\n",
+      "memory.max": "4294967296\n",
+      "memory.current": "2019590144\n",
+      "memory.swap.max": "0\n",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.stat": "anon 510767104\nfile 1480495104\nkernel 28327936\nkernel_stack 131072\npagetables 1904640\nsec_pagetables 0\npercpu 183576\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 65536\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 510767104\ninactive_file 1460428800\nactive_file 20066304\nunevictable 0\nslab_reclaimable 25454400\nslab_unreclaimable 533696\nslab 25988096\nworkingset_refault_anon 0\nworkingset_refault_file 102540\nworkingset_activate_anon 0\nworkingset_activate_file 728\nworkingset_restore_anon 0\nworkingset_restore_file 107\nworkingset_nodereclaim 0\npgscan 1373167\npgsteal 1373159\npgscan_kswapd 1372527\npgscan_direct 640\npgscan_khugepaged 0\npgsteal_kswapd 1372519\npgsteal_direct 640\npgsteal_khugepaged 0\npgfault 3774881\npgmajfault 5\npgrefill 561458\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+      "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=5488\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=5415\n",
+      "io.stat": "8:0 rbytes=4599525376 wbytes=100511985664 rios=307325 wios=9398385 dbytes=0 dios=0\n",
+      "io.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=29328779\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=28650627\n",
+      "children": [
+        "docker-2a0f167dc2ffb7f0f396a00fe455d996c6aaccecfa6ae934b3f6b8173890e8b9.scope"
+      ]
+    },
+    "targets": {
+      "pocketbase": {
+        "Id": "2a0f167dc2ffb7f0f396a00fe455d996c6aaccecfa6ae934b3f6b8173890e8b9",
+        "Image": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 2443083,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-16T05:18:36.631225505Z",
+          "FinishedAt": "2026-10-16T05:17:53.977850787Z"
+        },
+        "limits": {
+          "NanoCpus": 1000000000,
+          "Memory": 4294967296,
+          "MemorySwap": 4294967296
+        },
+        "source_sha256": null,
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:bc371b827b558174e9d5f833cac457241574d6c3fe653b6a4453ca229c67e91f",
+        "compose_project": "baas-pocketbase-vps16",
+        "cgroup_parent": "tdsbaaspocketbasevps16.slice",
+        "process_cgroup": "0::/tdsbaaspocketbasevps16.slice/docker-2a0f167dc2ffb7f0f396a00fe455d996c6aaccecfa6ae934b3f6b8173890e8b9.scope\n"
+      }
+    },
+    "observed_health": {
+      "status": "ok",
+      "db": "ok",
+      "uptime_s": 765
+    }
+  },
+  "convex_still_stopped": {
+    "backend": {
+      "Id": "f6a3332784f218eae1e5afca5cd967e661ff27e551640cc378e40f3c81bdac75",
+      "Image": "sha256:818a924cf137594517cb7b7ee9246d7af02248c990162d2531857cf51dfeb7f4",
+      "RestartCount": 0,
+      "State": {
+        "Status": "exited",
+        "Running": false,
+        "OOMKilled": true,
+        "Pid": 0,
+        "ExitCode": 137,
+        "StartedAt": "2026-10-16T00:02:20.333088398Z",
+        "FinishedAt": "2026-10-16T02:17:16.296405591Z"
+      }
+    },
+    "postgres": {
+      "Id": "164ec7fdab991f75be71168cdf1ea0b981fd3141a34bd794af4035c897b72177",
+      "Image": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+      "RestartCount": 0,
+      "State": {
+        "Status": "exited",
+        "Running": false,
+        "OOMKilled": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "StartedAt": "2026-10-16T00:02:14.076467149Z",
+        "FinishedAt": "2026-10-16T02:31:02.851100815Z"
+      }
+    }
+  },
+  "copies": [
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/manifest.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/manifest.json",
+      "bytes": 31730,
+      "original_sha256": "316c6f5dd86ebfc90506a3a7a39d739838a033a0e6c461db9ebdba65b0d2e45c",
+      "copy_sha256": "316c6f5dd86ebfc90506a3a7a39d739838a033a0e6c461db9ebdba65b0d2e45c"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/summary.json",
+      "bytes": 3734,
+      "original_sha256": "c1fce180579f6906b62dcecb11b38524de873e637152921666e1699b113860ba",
+      "copy_sha256": "c1fce180579f6906b62dcecb11b38524de873e637152921666e1699b113860ba"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/k6-summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/k6-summary.json",
+      "bytes": 10273,
+      "original_sha256": "ed08f6e0891fb8c7cd3254613afcba7d4c12210a1ef19f580a1db3c958af15d6",
+      "copy_sha256": "ed08f6e0891fb8c7cd3254613afcba7d4c12210a1ef19f580a1db3c958af15d6"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/dataset.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/dataset.json",
+      "bytes": 813,
+      "original_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b",
+      "copy_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/report.md",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/report.md",
+      "bytes": 2202,
+      "original_sha256": "957652781c77d23ed515d8650cb9f1aacb62c14e66b7d18f5c6de257a7544788",
+      "copy_sha256": "957652781c77d23ed515d8650cb9f1aacb62c14e66b7d18f5c6de257a7544788"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/k6.log",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/k6.log",
+      "bytes": 1431548,
+      "original_sha256": "a4d91d4fb1e67bc65fb333ce2255bd8a19ff97664dc1b27ddf794293c8807c7f",
+      "copy_sha256": "a4d91d4fb1e67bc65fb333ce2255bd8a19ff97664dc1b27ddf794293c8807c7f"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "bytes": 1048,
+      "original_sha256": "22b8c87032c15853343611f1f64c7b44d1ce37eb0e7cbc41d22eba270f5561ca",
+      "copy_sha256": "22b8c87032c15853343611f1f64c7b44d1ce37eb0e7cbc41d22eba270f5561ca"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/manifest.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/manifest.json",
+      "bytes": 31743,
+      "original_sha256": "4ba6167311ea1ba0dfc73eb53f10acfe5175b23214134d77d824b35dd18d31cd",
+      "copy_sha256": "4ba6167311ea1ba0dfc73eb53f10acfe5175b23214134d77d824b35dd18d31cd"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/summary.json",
+      "bytes": 3739,
+      "original_sha256": "f6cb7e2777a3de1b51cc7ef03344e40fc6872467683cd639d7abba33dabea539",
+      "copy_sha256": "f6cb7e2777a3de1b51cc7ef03344e40fc6872467683cd639d7abba33dabea539"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/k6-summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/k6-summary.json",
+      "bytes": 10272,
+      "original_sha256": "d6d6a50e810d024382730d05ee658b28a741283e30eaaabb68bda7fe73aeb045",
+      "copy_sha256": "d6d6a50e810d024382730d05ee658b28a741283e30eaaabb68bda7fe73aeb045"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/dataset.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/dataset.json",
+      "bytes": 813,
+      "original_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b",
+      "copy_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/report.md",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/report.md",
+      "bytes": 2217,
+      "original_sha256": "6fac07f0ec81af525f1d15103a041aa5fe7a9d0611cb79743cfa92f16e1cf1a2",
+      "copy_sha256": "6fac07f0ec81af525f1d15103a041aa5fe7a9d0611cb79743cfa92f16e1cf1a2"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/k6.log",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/k6.log",
+      "bytes": 163588,
+      "original_sha256": "7816af14b0cf4d715f76adbaa38a8030c77c89a498cfbb2d796b0dc1792055a4",
+      "copy_sha256": "7816af14b0cf4d715f76adbaa38a8030c77c89a498cfbb2d796b0dc1792055a4"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "bytes": 1048,
+      "original_sha256": "b495b0404b7d1cb08de3201feba892b860d2e25f2c4ec1df1915707dc56ee36f",
+      "copy_sha256": "b495b0404b7d1cb08de3201feba892b860d2e25f2c4ec1df1915707dc56ee36f"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/manifest.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/manifest.json",
+      "bytes": 31748,
+      "original_sha256": "b38dfcdf05b9720346bb24d5e4fc2405ac9e50daac880e7dae35548adf44a238",
+      "copy_sha256": "b38dfcdf05b9720346bb24d5e4fc2405ac9e50daac880e7dae35548adf44a238"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/summary.json",
+      "bytes": 3729,
+      "original_sha256": "97da5e346ba8e0d6ffd90da47cfd5fcbbcfd1ded0b45b1c123211547699c97cc",
+      "copy_sha256": "97da5e346ba8e0d6ffd90da47cfd5fcbbcfd1ded0b45b1c123211547699c97cc"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/k6-summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/k6-summary.json",
+      "bytes": 10343,
+      "original_sha256": "4a314a9d46b33532da96c023a3f1fcfcb75ef75ef65de534b7d6f6fdd16ffb29",
+      "copy_sha256": "4a314a9d46b33532da96c023a3f1fcfcb75ef75ef65de534b7d6f6fdd16ffb29"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/dataset.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/dataset.json",
+      "bytes": 813,
+      "original_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b",
+      "copy_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/report.md",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/report.md",
+      "bytes": 2209,
+      "original_sha256": "15cb5065879bbc1207370b32b9feb38e5f71854fc8db21864dfa94946ae208e9",
+      "copy_sha256": "15cb5065879bbc1207370b32b9feb38e5f71854fc8db21864dfa94946ae208e9"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/k6.log",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/k6.log",
+      "bytes": 4180,
+      "original_sha256": "5a5873299485b33396a274c4037ecda3e84fd1530250f2e0454677b79ee93d80",
+      "copy_sha256": "5a5873299485b33396a274c4037ecda3e84fd1530250f2e0454677b79ee93d80"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "bytes": 1048,
+      "original_sha256": "29b86ac00c295272528b276719b25f88a0d90329a0b0992868091268daf2e145",
+      "copy_sha256": "29b86ac00c295272528b276719b25f88a0d90329a0b0992868091268daf2e145"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/manifest.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/manifest.json",
+      "bytes": 31723,
+      "original_sha256": "192ce4aaec271488e42a096927c68999653662ed739699d7442406cde83210e8",
+      "copy_sha256": "192ce4aaec271488e42a096927c68999653662ed739699d7442406cde83210e8"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/summary.json",
+      "bytes": 3697,
+      "original_sha256": "65ed8884cebab30553ccb069430a960b7eb3349d6868c3d5edaa28e6ab0c19cd",
+      "copy_sha256": "65ed8884cebab30553ccb069430a960b7eb3349d6868c3d5edaa28e6ab0c19cd"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/k6-summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/k6-summary.json",
+      "bytes": 10208,
+      "original_sha256": "4f9a80e0782b7af1eb187fc5456dc59dc79472ddbb73ecf747ffaf5f0f677833",
+      "copy_sha256": "4f9a80e0782b7af1eb187fc5456dc59dc79472ddbb73ecf747ffaf5f0f677833"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/dataset.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/dataset.json",
+      "bytes": 813,
+      "original_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b",
+      "copy_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/report.md",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/report.md",
+      "bytes": 2168,
+      "original_sha256": "f62d505fe0056ab688730eaf9313d60d351b96a4069fd7bdc93fd35ff056d128",
+      "copy_sha256": "f62d505fe0056ab688730eaf9313d60d351b96a4069fd7bdc93fd35ff056d128"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/k6.log",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/k6.log",
+      "bytes": 95,
+      "original_sha256": "661e6a8f62d408e2631b2dc7552ff1ada7ca51ecacbb20282ec7bb320f893142",
+      "copy_sha256": "661e6a8f62d408e2631b2dc7552ff1ada7ca51ecacbb20282ec7bb320f893142"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "bytes": 1048,
+      "original_sha256": "e3d14a7978f5632b2900812ceaa6749bbd5833f1b961422741a0d0621f98be92",
+      "copy_sha256": "e3d14a7978f5632b2900812ceaa6749bbd5833f1b961422741a0d0621f98be92"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/manifest.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/manifest.json",
+      "bytes": 31751,
+      "original_sha256": "dea899c6199ad96651932464c0d0d6e10e526c15db66466cf677b133f4d9f879",
+      "copy_sha256": "dea899c6199ad96651932464c0d0d6e10e526c15db66466cf677b133f4d9f879"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/summary.json",
+      "bytes": 3729,
+      "original_sha256": "6f2fbcaa42760a328c05e4cde56be9f2db3698468ccaa5df554053f00bec8c10",
+      "copy_sha256": "6f2fbcaa42760a328c05e4cde56be9f2db3698468ccaa5df554053f00bec8c10"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/k6-summary.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/k6-summary.json",
+      "bytes": 10321,
+      "original_sha256": "44195c03a4853f9583198b5bfffb9a729975097003de61db6e7add096af96dff",
+      "copy_sha256": "44195c03a4853f9583198b5bfffb9a729975097003de61db6e7add096af96dff"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/dataset.json",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/dataset.json",
+      "bytes": 813,
+      "original_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b",
+      "copy_sha256": "a5749e729cc1d594be00e2f2286a2b06289fecfe56f54c7aa36d299d4f14d06b"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/report.md",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/report.md",
+      "bytes": 2210,
+      "original_sha256": "24054394a1562cdd00cfd79ffc0819cf0728eadad9df5c1e79d2f7bb8dc4a3f9",
+      "copy_sha256": "24054394a1562cdd00cfd79ffc0819cf0728eadad9df5c1e79d2f7bb8dc4a3f9"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/k6.log",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/k6.log",
+      "bytes": 9262,
+      "original_sha256": "4d42111a904bea2c81fb64ecd874ced2dc10be61a6d43a52ff70f3d5c5b9c776",
+      "copy_sha256": "4d42111a904bea2c81fb64ecd874ced2dc10be61a6d43a52ff70f3d5c5b9c776"
+    },
+    {
+      "original": "results/pocketbase/vps16-linux-amd64/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "retained_copy": "rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/SHA256SUMS",
+      "bytes": 1048,
+      "original_sha256": "1efccf42000e7108ce4145d52454e64e1199814a9c6eda421ccae521f5d1efd4",
+      "copy_sha256": "1efccf42000e7108ce4145d52454e64e1199814a9c6eda421ccae521f5d1efd4"
+    }
+  ],
+  "persistent_service_comparison": {
+    "equal": true,
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "original4000_unchanged": true,
+    "scope": "All differences retained; only established user@0 SSH session omitted. No causal isolation claim."
+  }
+}

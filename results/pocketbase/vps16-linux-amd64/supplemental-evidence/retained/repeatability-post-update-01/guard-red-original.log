@@ -1,0 +1,112 @@
+Running as unit: tds-pocketbase-repeatability-guard-red-20261016.service
+test_added_removed_changed_persistent_units_stay_failed (__main__.GuardTests.test_added_removed_changed_persistent_units_stay_failed) ... FAIL
+test_approved_new_epoch_is_not_a_historical_equality_claim (__main__.GuardTests.test_approved_new_epoch_is_not_a_historical_equality_claim) ... FAIL
+test_before_snapshot_must_also_match_frozen_baseline (__main__.GuardTests.test_before_snapshot_must_also_match_frozen_baseline) ... FAIL
+test_disabled_inactive_dead_is_required_without_pending_job (__main__.GuardTests.test_disabled_inactive_dead_is_required_without_pending_job) ... FAIL
+test_host_context_reboot_kernel_docker_memory_or_cpu_drift_refused (__main__.GuardTests.test_host_context_reboot_kernel_docker_memory_or_cpu_drift_refused) ... FAIL
+test_incomplete_or_malformed_journal_counts_refused (__main__.GuardTests.test_incomplete_or_malformed_journal_counts_refused) ... FAIL
+test_lifecycle_classifier_restricts_output_to_numeric_watched_units (__main__.GuardTests.test_lifecycle_classifier_restricts_output_to_numeric_watched_units) ... FAIL
+test_listener_pid_ticks_or_executable_change_fail (__main__.GuardTests.test_listener_pid_ticks_or_executable_change_fail) ... FAIL
+test_only_existing_ssh_session_exception (__main__.GuardTests.test_only_existing_ssh_session_exception) ... FAIL
+test_unchanged_endpoints_cannot_hide_dmarie_or_other_restart_events (__main__.GuardTests.test_unchanged_endpoints_cannot_hide_dmarie_or_other_restart_events) ... FAIL
+
+======================================================================
+FAIL: test_added_removed_changed_persistent_units_stay_failed (__main__.GuardTests.test_added_removed_changed_persistent_units_stay_failed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+======================================================================
+FAIL: test_approved_new_epoch_is_not_a_historical_equality_claim (__main__.GuardTests.test_approved_new_epoch_is_not_a_historical_equality_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+======================================================================
+FAIL: test_before_snapshot_must_also_match_frozen_baseline (__main__.GuardTests.test_before_snapshot_must_also_match_frozen_baseline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+======================================================================
+FAIL: test_disabled_inactive_dead_is_required_without_pending_job (__main__.GuardTests.test_disabled_inactive_dead_is_required_without_pending_job)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+======================================================================
+FAIL: test_host_context_reboot_kernel_docker_memory_or_cpu_drift_refused (__main__.GuardTests.test_host_context_reboot_kernel_docker_memory_or_cpu_drift_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+======================================================================
+FAIL: test_incomplete_or_malformed_journal_counts_refused (__main__.GuardTests.test_incomplete_or_malformed_journal_counts_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+======================================================================
+FAIL: test_lifecycle_classifier_restricts_output_to_numeric_watched_units (__main__.GuardTests.test_lifecycle_classifier_restricts_output_to_numeric_watched_units)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+======================================================================
+FAIL: test_listener_pid_ticks_or_executable_change_fail (__main__.GuardTests.test_listener_pid_ticks_or_executable_change_fail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+======================================================================
+FAIL: test_only_existing_ssh_session_exception (__main__.GuardTests.test_only_existing_ssh_session_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+======================================================================
+FAIL: test_unchanged_endpoints_cannot_hide_dmarie_or_other_restart_events (__main__.GuardTests.test_unchanged_endpoints_cannot_hide_dmarie_or_other_restart_events)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_guards.py", line 19, in setUp
+    def setUp(self):self.assertTrue(g is not None and callable(getattr(g,'require_continuity',None)),'Missing prospective continuity guard implementation')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing prospective continuity guard implementation
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=10)
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 49ms
+CPU time consumed: 48ms
+Memory peak: 2.9M
+Memory swap peak: 0B

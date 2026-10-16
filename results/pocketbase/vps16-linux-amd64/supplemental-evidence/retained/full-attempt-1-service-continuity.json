@@ -1,0 +1,8 @@
+{
+  "persistent_identity_equality": true,
+  "added": [],
+  "removed": [],
+  "changed": [],
+  "original4000_unchanged": true,
+  "scope": "Record EVERY persistent service difference; only established SSH-session user@0 excluded. False remains false, no full host-isolation claim or exclusion of inconvenient newly visible/flapping services."
+}

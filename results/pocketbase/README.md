@@ -8,6 +8,8 @@
 
 ## Verified result
 
+**Final owner acceptance (2026-10-16):** retain the existing10,000-VU confirmed lower bound and close further boundary search. [Supplemental closure report](vps16-linux-amd64/SUPPLEMENTAL_STUDIES_CLOSED.md) and [structured observations](vps16-linux-amd64/supplemental-studies-closed.json) preserve all14 further holds/25 physical full attempts overall, mixed11,250 results and the incomplete seven-of-twelve post-update study stopped on fwupd continuity. No higher score or resolved250-VU boundary; the owner explicitly relaxed that completion requirement. Convex-plan work follows only audited publication and remote verification. The paragraph/bundles below describe the original completed cohort, not newly certified post-update confirmations.
+
 **10,000-VU confirmed lower bound**: three additional independent full holds, **949,739 requests / 900 scored seconds**, zero request/schema errors. Not an exact maximum or 250-VU-resolved boundary. Valid 11,250/12,500-VU probe failures and invalid 15,000-RAM/20,000-OOM generator attempts remain separate.
 
 - [Final report](vps16-linux-amd64/CONFIRMED_LOWER_BOUND.md)

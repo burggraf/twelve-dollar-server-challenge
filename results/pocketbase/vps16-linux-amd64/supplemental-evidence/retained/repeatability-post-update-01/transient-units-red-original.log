@@ -1,0 +1,217 @@
+Running as unit: tds-pocketbase-approved-transient-units-red-20261016.service
+test_completed_inactive_oneshot_is_transient_and_does_not_need_remain_active (__main__.TransientUnitTests.test_completed_inactive_oneshot_is_transient_and_does_not_need_remain_active) ... FAIL
+test_completed_oneshot_remain_active_without_residents_is_transient (__main__.TransientUnitTests.test_completed_oneshot_remain_active_without_residents_is_transient) ... FAIL
+test_inputs_immutable_and_partition_complete (__main__.TransientUnitTests.test_inputs_immutable_and_partition_complete) ... FAIL
+test_main_control_or_cgroup_residents_are_never_excluded (__main__.TransientUnitTests.test_main_control_or_cgroup_residents_are_never_excluded) ... 
+  test_main_control_or_cgroup_residents_are_never_excluded (__main__.TransientUnitTests.test_main_control_or_cgroup_residents_are_never_excluded) (changes={'MainPID': '7'}, proof=False) ... FAIL
+  test_main_control_or_cgroup_residents_are_never_excluded (__main__.TransientUnitTests.test_main_control_or_cgroup_residents_are_never_excluded) (changes={'ControlPID': '8'}, proof=False) ... FAIL
+  test_main_control_or_cgroup_residents_are_never_excluded (__main__.TransientUnitTests.test_main_control_or_cgroup_residents_are_never_excluded) (changes={}, proof=False) ... FAIL
+test_malformed_unit_properties_fail_closed (__main__.TransientUnitTests.test_malformed_unit_properties_fail_closed) ... FAIL
+test_no_named_ssh_or_dmarie_exception (__main__.TransientUnitTests.test_no_named_ssh_or_dmarie_exception) ... 
+  test_no_named_ssh_or_dmarie_exception (__main__.TransientUnitTests.test_no_named_ssh_or_dmarie_exception) (name='user-runtime-dir@0.service') ... FAIL
+  test_no_named_ssh_or_dmarie_exception (__main__.TransientUnitTests.test_no_named_ssh_or_dmarie_exception) (name='arbitrary.service') ... FAIL
+  test_no_named_ssh_or_dmarie_exception (__main__.TransientUnitTests.test_no_named_ssh_or_dmarie_exception) (name='dmarie.service') ... FAIL
+test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) ... 
+  test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) (changes={'SubState': 'running'}) ... FAIL
+  test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) (changes={'ActiveState': 'failed', 'SubState': 'failed'}) ... FAIL
+  test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) (changes={'ActiveState': 'activating', 'SubState': 'start'}) ... FAIL
+  test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) (changes={'Job': '123'}) ... FAIL
+test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) ... 
+  test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) (proof={}) ... FAIL
+  test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) (proof={'job.service': None}) ... FAIL
+  test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) (proof={'job.service': 1}) ... FAIL
+  test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) (proof={'job.service': 'true'}) ... FAIL
+
+======================================================================
+FAIL: test_completed_inactive_oneshot_is_transient_and_does_not_need_remain_active (__main__.TransientUnitTests.test_completed_inactive_oneshot_is_transient_and_does_not_need_remain_active)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 29, in test_completed_inactive_oneshot_is_transient_and_does_not_need_remain_active
+    self.assertEqual(self.classify({'job.service':unit(ActiveState='inactive',SubState='dead',RemainAfterExit='no')},{'job.service':True})['transient'],['job.service'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_completed_oneshot_remain_active_without_residents_is_transient (__main__.TransientUnitTests.test_completed_oneshot_remain_active_without_residents_is_transient)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 20, in test_completed_oneshot_remain_active_without_residents_is_transient
+    self.assertEqual(self.classify({'runtime.service':unit()},{'runtime.service':True}),{'persistent':[],'transient':['runtime.service']})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_inputs_immutable_and_partition_complete (__main__.TransientUnitTests.test_inputs_immutable_and_partition_complete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 54, in test_inputs_immutable_and_partition_complete
+    result=self.classify(units,proof)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_main_control_or_cgroup_residents_are_never_excluded (__main__.TransientUnitTests.test_main_control_or_cgroup_residents_are_never_excluded) (changes={'MainPID': '7'}, proof=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 34, in test_main_control_or_cgroup_residents_are_never_excluded
+    self.assertEqual(self.classify({'job.service':unit(**changes)},{'job.service':proof})['persistent'],['job.service'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_main_control_or_cgroup_residents_are_never_excluded (__main__.TransientUnitTests.test_main_control_or_cgroup_residents_are_never_excluded) (changes={'ControlPID': '8'}, proof=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 34, in test_main_control_or_cgroup_residents_are_never_excluded
+    self.assertEqual(self.classify({'job.service':unit(**changes)},{'job.service':proof})['persistent'],['job.service'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_main_control_or_cgroup_residents_are_never_excluded (__main__.TransientUnitTests.test_main_control_or_cgroup_residents_are_never_excluded) (changes={}, proof=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 34, in test_main_control_or_cgroup_residents_are_never_excluded
+    self.assertEqual(self.classify({'job.service':unit(**changes)},{'job.service':proof})['persistent'],['job.service'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_malformed_unit_properties_fail_closed (__main__.TransientUnitTests.test_malformed_unit_properties_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 47, in test_malformed_unit_properties_fail_closed
+    self.assertIsNotNone(subject,'Approved classifier missing')
+AssertionError: unexpectedly None : Approved classifier missing
+
+======================================================================
+FAIL: test_no_named_ssh_or_dmarie_exception (__main__.TransientUnitTests.test_no_named_ssh_or_dmarie_exception) (name='user-runtime-dir@0.service')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 25, in test_no_named_ssh_or_dmarie_exception
+    self.assertEqual(self.classify({name:unit(Type='simple')},{name:True}),{'persistent':[name],'transient':[]})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_no_named_ssh_or_dmarie_exception (__main__.TransientUnitTests.test_no_named_ssh_or_dmarie_exception) (name='arbitrary.service')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 25, in test_no_named_ssh_or_dmarie_exception
+    self.assertEqual(self.classify({name:unit(Type='simple')},{name:True}),{'persistent':[name],'transient':[]})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_no_named_ssh_or_dmarie_exception (__main__.TransientUnitTests.test_no_named_ssh_or_dmarie_exception) (name='dmarie.service')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 25, in test_no_named_ssh_or_dmarie_exception
+    self.assertEqual(self.classify({name:unit(Type='simple')},{name:True}),{'persistent':[name],'transient':[]})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) (changes={'SubState': 'running'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 44, in test_running_failed_activating_or_pending_job_remains_watched
+    with self.subTest(changes=changes):self.assertEqual(self.classify({'job.service':unit(**changes)},{'job.service':True})['persistent'],['job.service'])
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) (changes={'ActiveState': 'failed', 'SubState': 'failed'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 44, in test_running_failed_activating_or_pending_job_remains_watched
+    with self.subTest(changes=changes):self.assertEqual(self.classify({'job.service':unit(**changes)},{'job.service':True})['persistent'],['job.service'])
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) (changes={'ActiveState': 'activating', 'SubState': 'start'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 44, in test_running_failed_activating_or_pending_job_remains_watched
+    with self.subTest(changes=changes):self.assertEqual(self.classify({'job.service':unit(**changes)},{'job.service':True})['persistent'],['job.service'])
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) (changes={'Job': '123'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 44, in test_running_failed_activating_or_pending_job_remains_watched
+    with self.subTest(changes=changes):self.assertEqual(self.classify({'job.service':unit(**changes)},{'job.service':True})['persistent'],['job.service'])
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 16, in classify
+    self.assertIsNotNone(subject,'Approved no-resident-process oneshot classifier not implemented')
+AssertionError: unexpectedly None : Approved no-resident-process oneshot classifier not implemented
+
+======================================================================
+FAIL: test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) (proof={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 39, in test_unknown_or_missing_no_resident_proof_fails_closed
+    self.assertIsNotNone(subject,'Approved classifier missing')
+AssertionError: unexpectedly None : Approved classifier missing
+
+======================================================================
+FAIL: test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) (proof={'job.service': None})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 39, in test_unknown_or_missing_no_resident_proof_fails_closed
+    self.assertIsNotNone(subject,'Approved classifier missing')
+AssertionError: unexpectedly None : Approved classifier missing
+
+======================================================================
+FAIL: test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) (proof={'job.service': 1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 39, in test_unknown_or_missing_no_resident_proof_fails_closed
+    self.assertIsNotNone(subject,'Approved classifier missing')
+AssertionError: unexpectedly None : Approved classifier missing
+
+======================================================================
+FAIL: test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) (proof={'job.service': 'true'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/test_repeatability_transient_units.py", line 39, in test_unknown_or_missing_no_resident_proof_fails_closed
+    self.assertIsNotNone(subject,'Approved classifier missing')
+AssertionError: unexpectedly None : Approved classifier missing
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+FAILED (failures=18)
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 48ms
+CPU time consumed: 48ms
+Memory peak: 2.8M
+Memory swap peak: 0B

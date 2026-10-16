@@ -1,0 +1,11 @@
+SUPPLEMENTAL_FULL_HOLD_RAW_REPLAY_RETAINED 3 upper_anchor 12250 fail 20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3
+SUPPLEMENTAL_FULL_HOLD_RAW_REPLAY_RETAINED 4 boundary_probe 11750 fail 20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3
+SUPPLEMENTAL_FULL_HOLD_RAW_REPLAY_RETAINED 5 boundary_probe 11500 fail 20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3
+SUPPLEMENTAL_FULL_HOLD_RAW_REPLAY_RETAINED 6 candidate_confirmation 11250 pass 20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3
+SUPPLEMENTAL_FULL_HOLD_RAW_REPLAY_RETAINED 7 candidate_confirmation 11250 fail 20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3
+SUPPLEMENTAL_TERMINAL_STATUS paused_unconfirmed
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-rebracket-controller.py", line 143, in <module>
+    if result['status']!='confirmed_pending_evidence_review':raise RuntimeError('Supplemental campaign PAUSED: '+result.get('reason','inspect evidence'))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Supplemental campaign PAUSED: candidate_confirmation contradicted required pass; stop and investigate

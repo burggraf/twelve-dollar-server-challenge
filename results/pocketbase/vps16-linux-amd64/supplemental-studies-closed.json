@@ -1,0 +1,1066 @@
+{
+  "tested_software": {
+    "product": "v0.40.5",
+    "go": "1.27.2",
+    "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+    "sqlite_engine": "3.53.4",
+    "sqlite_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+    "native_build": {
+      "native_platform": "linux/amd64",
+      "app_source_sha256": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+      "image_id": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+      "executable_sha256": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+      "builder": "golang:1.27.2-bookworm@sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+      "runtime": "debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+      "builder_budget": {
+        "cpus": 2,
+        "memory_bytes": 8589934592,
+        "swap_bytes": 0
+      },
+      "build_flags": [
+        "CGO_ENABLED=0",
+        "-trimpath",
+        "-buildvcs=false",
+        "-ldflags=-s -w"
+      ],
+      "versions": {
+        "service": "PocketBase",
+        "version": "v0.40.5",
+        "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+        "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+        "go_module": "github.com/pocketbase/pocketbase",
+        "go_version": "1.27.2",
+        "sqlite_engine_version": "3.53.4",
+        "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+        "native_platform": "linux/amd64",
+        "builder": {
+          "tag": "golang:1.27.2-bookworm",
+          "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+          "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+        },
+        "runtime": {
+          "tag": "debian:bookworm-slim",
+          "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+          "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+        },
+        "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+        "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+        "serving_budget": {
+          "cpus": 1,
+          "memory_bytes": 4294967296,
+          "swap_bytes": 0
+        },
+        "runner_profile": "k6-2cpu-8g-v3"
+      }
+    }
+  },
+  "serving_budget": {
+    "cpus": 1,
+    "memory_gib": 4,
+    "memory_bytes": 4294967296,
+    "swap_bytes": 0,
+    "allocation_type": "Quota-limited shared-host slice; entire serving stack"
+  },
+  "runner_budget": {
+    "software": "k6",
+    "version": "1.3.0",
+    "cpus": 2,
+    "memory_gib": 8,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "profile": "k6-2cpu-8g-v3"
+  },
+  "status": "owner_accepted_final_confirmed_lower_bound_supplemental_studies_closed_incomplete",
+  "final_confirmed_lower_bound_vus": 10000,
+  "original_confirmation_cohort_unchanged": true,
+  "new_higher_capacity_established": false,
+  "maximum_established": false,
+  "exact_250_vu_boundary_established": false,
+  "owner_acceptance": {
+    "interview": "f2f0a222-edaf-4a91-a568-1cdf2105bb55",
+    "approved": true,
+    "final_confirmed_lower_bound_vus": 10000,
+    "accept_lower_bound_as_final_finding": true,
+    "waive_250_vu_resolved_completion_requirement": true,
+    "exact_250_vu_boundary_established": false,
+    "maximum_established": false,
+    "supplemental_study_remains_incomplete": true,
+    "seventh_fixed_study_continuity_gate_remains_failed": true,
+    "authorize_report_and_approved_evidence_commit_and_ordinary_nonforce_push_after_all_publication_audits_pass": true,
+    "allow_actual_convex_plan_work_only_after_verified_pocketbase_publication": true,
+    "new_pocketbase_load_authorized": false,
+    "unrelated_service_changes_authorized": false,
+    "nhost_remains_paused": true,
+    "directus_authorized": false
+  },
+  "fixed_study_status_preserved": "paused_unconfirmed",
+  "fixed_study_result_preserved": "incomplete",
+  "fixed_study_terminal_reason": "Persistent-service lifecycle events observed; keep continuity failed",
+  "accounting": {
+    "historical_full_physical_attempts": 11,
+    "supplemental_full_physical_attempts": 14,
+    "all_full_physical_attempts": 25,
+    "last_fixed_rows_started": 7,
+    "last_fixed_rows_scheduled": 12,
+    "last_fixed_rows_unstarted": 5,
+    "unstarted_rows_are_resume_authority": false,
+    "approved_supplemental_ceiling": 19,
+    "approved_all_physical_ceiling": 30
+  },
+  "post_update_host": {
+    "os": "Ubuntu 24.04.5",
+    "kernel": "6.8.0-147-generic",
+    "docker": "29.9.1",
+    "containerd": "2.4.2",
+    "runc": "1.5.2",
+    "physical_cpus": 4,
+    "physical_memory_bytes": 16770064384,
+    "swap_bytes": 0,
+    "shared_host_not_dedicated_or_measured_12_dollar_vps": true,
+    "price_region_unknown": true
+  },
+  "prior_host_comparison": "Historical published host context Docker29.8.1/16,770,072,576 bytes is separate; historical listener identity remains false after owner reboot. No cross-host confirmation pooling.",
+  "frozen_source_and_module_metadata": "supplemental-evidence/input-identities/complete-frozen-input-identities.json",
+  "post_update_catalog_sha256": "043a6c0d00f897053f224ff298ac4c95d391c565fb0e27d5164af9789901c567",
+  "fresh_post_update_correctness_sha256": "6593b816db71a9335377267e259517745e3e53233c8af96e70c6e755646140cc",
+  "raw_replays_are_per_hold_not_pooled": true,
+  "rows": [
+    {
+      "supplemental_slot": 1,
+      "physical_slot_overall": 12,
+      "cohort": "pre-security-update",
+      "vus": 10000,
+      "ledger_outcome": "pass",
+      "native_measurement_outcome": "pass",
+      "host_continuity": "not_certified_uninterrupted; retrospective dmarie lifecycle variation",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 316761,
+      "all_request_rps": 1055.87,
+      "request_errors": 0,
+      "error_fraction": 0.0,
+      "schema_errors": 0,
+      "run": "20261016T034903946160Z-standard-10000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.213409,
+        "max": 3804.333537,
+        "med": 16.478484,
+        "p(95)": 67.42185,
+        "p(99)": 256.2459410000007
+      },
+      "requests_by_endpoint": {
+        "feed": 145846,
+        "detail": 145996,
+        "like": 22028,
+        "create": 2891
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 0,
+        "create": 0
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 145846
+        },
+        "detail": {
+          "200": 145996
+        },
+        "like": {
+          "201": 22028
+        },
+        "create": {
+          "201": 2891
+        }
+      },
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 296.81783080101013,
+      "runner_peak_cpu_percent_one_core": 202.7,
+      "runner_peak_memory_percent_8gib": 54.98,
+      "parent_peak_memory_bytes_including_cache": 1529053184,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/raw-reviews/20261016T034903946160Z-standard-10000vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 2,
+      "physical_slot_overall": 13,
+      "cohort": "pre-security-update",
+      "vus": 11250,
+      "ledger_outcome": "pass",
+      "native_measurement_outcome": "pass",
+      "host_continuity": "not_certified_uninterrupted; retrospective dmarie lifecycle variation",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 354474,
+      "all_request_rps": 1181.58,
+      "request_errors": 4,
+      "error_fraction": 1.1284325507653594e-05,
+      "schema_errors": 0,
+      "run": "20261016T035933324654Z-standard-11250vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.220152,
+        "max": 10000.794725,
+        "med": 25.910453,
+        "p(95)": 122.0333512499999,
+        "p(99)": 940.809371500005
+      },
+      "requests_by_endpoint": {
+        "feed": 163312,
+        "detail": 163632,
+        "like": 24325,
+        "create": 3205
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 3,
+        "create": 1
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 163312
+        },
+        "detail": {
+          "200": 163632
+        },
+        "like": {
+          "201": 24322,
+          "0": 3
+        },
+        "create": {
+          "201": 3204,
+          "0": 1
+        }
+      },
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 295.86067295074463,
+      "runner_peak_cpu_percent_one_core": 201.23,
+      "runner_peak_memory_percent_8gib": 61.75,
+      "parent_peak_memory_bytes_including_cache": 2156240896,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/raw-reviews/20261016T035933324654Z-standard-11250vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 3,
+      "physical_slot_overall": 14,
+      "cohort": "pre-security-update",
+      "vus": 12250,
+      "ledger_outcome": "fail",
+      "native_measurement_outcome": "fail",
+      "host_continuity": "not_certified_uninterrupted; retrospective dmarie lifecycle variation",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 370553,
+      "all_request_rps": 1235.1766666666667,
+      "request_errors": 9903,
+      "error_fraction": 0.0267249219409909,
+      "schema_errors": 0,
+      "run": "20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3",
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "fail",
+        "hold latency/error/schema gate failed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.393037,
+        "max": 10119.296731,
+        "med": 31.556283,
+        "p(95)": 3305.549336999994,
+        "p(99)": 10000.54157252
+      },
+      "requests_by_endpoint": {
+        "feed": 170643,
+        "detail": 170911,
+        "like": 25565,
+        "create": 3434
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 8694,
+        "create": 1209
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 170643
+        },
+        "detail": {
+          "200": 170911
+        },
+        "like": {
+          "201": 16871,
+          "0": 8694
+        },
+        "create": {
+          "201": 2225,
+          "0": 1209
+        }
+      },
+      "hold_monitor_samples": 59,
+      "hold_monitor_span_seconds": 291.87795758247375,
+      "runner_peak_cpu_percent_one_core": 207.11,
+      "runner_peak_memory_percent_8gib": 67.28,
+      "parent_peak_memory_bytes_including_cache": 2192252928,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/raw-reviews/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 4,
+      "physical_slot_overall": 15,
+      "cohort": "pre-security-update",
+      "vus": 11750,
+      "ledger_outcome": "fail",
+      "native_measurement_outcome": "fail",
+      "host_continuity": "not_certified_uninterrupted; retrospective dmarie lifecycle variation",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 365244,
+      "all_request_rps": 1217.48,
+      "request_errors": 1170,
+      "error_fraction": 0.0032033380425140453,
+      "schema_errors": 0,
+      "run": "20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3",
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "fail",
+        "hold latency/error/schema gate failed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.226725,
+        "max": 10052.510738,
+        "med": 28.704693499999998,
+        "p(95)": 654.2898254499997,
+        "p(99)": 5271.910355740018
+      },
+      "requests_by_endpoint": {
+        "feed": 168238,
+        "detail": 168454,
+        "create": 3396,
+        "like": 25156
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "create": 148,
+        "like": 1022
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 168238
+        },
+        "detail": {
+          "200": 168454
+        },
+        "create": {
+          "201": 3248,
+          "0": 148
+        },
+        "like": {
+          "201": 24134,
+          "0": 1022
+        }
+      },
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 295.8619055747986,
+      "runner_peak_cpu_percent_one_core": 204.46,
+      "runner_peak_memory_percent_8gib": 64.98,
+      "parent_peak_memory_bytes_including_cache": 2410356736,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/raw-reviews/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 5,
+      "physical_slot_overall": 16,
+      "cohort": "pre-security-update",
+      "vus": 11500,
+      "ledger_outcome": "fail",
+      "native_measurement_outcome": "fail",
+      "host_continuity": "not_certified_uninterrupted; retrospective dmarie lifecycle variation",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 361212,
+      "all_request_rps": 1204.04,
+      "request_errors": 29,
+      "error_fraction": 8.028526184069189e-05,
+      "schema_errors": 0,
+      "run": "20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3",
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "fail",
+        "hold latency/error/schema gate failed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.223958,
+        "max": 10001.170267,
+        "med": 27.488936,
+        "p(95)": 247.14611560000066,
+        "p(99)": 2162.856081320002
+      },
+      "requests_by_endpoint": {
+        "feed": 166256,
+        "detail": 166491,
+        "like": 25151,
+        "create": 3314
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 26,
+        "create": 3
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 166256
+        },
+        "detail": {
+          "200": 166491
+        },
+        "like": {
+          "201": 25125,
+          "0": 26
+        },
+        "create": {
+          "201": 3311,
+          "0": 3
+        }
+      },
+      "hold_monitor_samples": 59,
+      "hold_monitor_span_seconds": 290.8329589366913,
+      "runner_peak_cpu_percent_one_core": 201.76,
+      "runner_peak_memory_percent_8gib": 63.58,
+      "parent_peak_memory_bytes_including_cache": 2535251968,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/raw-reviews/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 6,
+      "physical_slot_overall": 17,
+      "cohort": "pre-security-update",
+      "vus": 11250,
+      "ledger_outcome": "pass",
+      "native_measurement_outcome": "pass",
+      "host_continuity": "not_certified_uninterrupted; retrospective dmarie lifecycle variation",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 354823,
+      "all_request_rps": 1182.7433333333333,
+      "request_errors": 0,
+      "error_fraction": 0.0,
+      "schema_errors": 0,
+      "run": "20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.227646,
+        "max": 9192.468122,
+        "med": 25.395711,
+        "p(95)": 120.69124919999906,
+        "p(99)": 885.4131329799997
+      },
+      "requests_by_endpoint": {
+        "detail": 163606,
+        "feed": 163379,
+        "like": 24618,
+        "create": 3220
+      },
+      "errors_by_endpoint": {
+        "detail": 0,
+        "feed": 0,
+        "like": 0,
+        "create": 0
+      },
+      "statuses_by_endpoint": {
+        "detail": {
+          "200": 163606
+        },
+        "feed": {
+          "200": 163379
+        },
+        "like": {
+          "201": 24618
+        },
+        "create": {
+          "201": 3220
+        }
+      },
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 295.8858823776245,
+      "runner_peak_cpu_percent_one_core": 202.9,
+      "runner_peak_memory_percent_8gib": 62.1,
+      "parent_peak_memory_bytes_including_cache": 2685050880,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/raw-reviews/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 7,
+      "physical_slot_overall": 18,
+      "cohort": "pre-security-update",
+      "vus": 11250,
+      "ledger_outcome": "fail",
+      "native_measurement_outcome": "fail",
+      "host_continuity": "not_certified_uninterrupted; retrospective dmarie lifecycle variation",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 353874,
+      "all_request_rps": 1179.58,
+      "request_errors": 66,
+      "error_fraction": 0.0001865070618355686,
+      "schema_errors": 0,
+      "run": "20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3",
+      "outcome": "fail",
+      "reason": "hold latency/error/schema gate failed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "fail",
+        "hold latency/error/schema gate failed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.235201,
+        "max": 10001.07769,
+        "med": 27.4594765,
+        "p(95)": 261.58182104999986,
+        "p(99)": 1831.5201392500003
+      },
+      "requests_by_endpoint": {
+        "like": 24548,
+        "feed": 162943,
+        "detail": 162979,
+        "create": 3404
+      },
+      "errors_by_endpoint": {
+        "like": 61,
+        "feed": 0,
+        "detail": 0,
+        "create": 5
+      },
+      "statuses_by_endpoint": {
+        "like": {
+          "201": 24487,
+          "0": 61
+        },
+        "feed": {
+          "200": 162943
+        },
+        "detail": {
+          "200": 162979
+        },
+        "create": {
+          "201": 3399,
+          "0": 5
+        }
+      },
+      "hold_monitor_samples": 59,
+      "hold_monitor_span_seconds": 290.79396772384644,
+      "runner_peak_cpu_percent_one_core": 199.01,
+      "runner_peak_memory_percent_8gib": 62.01,
+      "parent_peak_memory_bytes_including_cache": 2795728896,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/raw-reviews/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 8,
+      "physical_slot_overall": 19,
+      "cohort": "post-security-update-fixed-study",
+      "vus": 10000,
+      "ledger_outcome": "pass",
+      "native_measurement_outcome": "pass",
+      "host_continuity": "passed prospective per-attempt window; study remains incomplete",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 316598,
+      "all_request_rps": 1055.3266666666666,
+      "request_errors": 0,
+      "error_fraction": 0.0,
+      "schema_errors": 0,
+      "run": "20261016T132243742041Z-standard-10000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.220693,
+        "max": 2877.464535,
+        "med": 15.226774500000001,
+        "p(95)": 63.40116554999987,
+        "p(99)": 234.36128693999936
+      },
+      "requests_by_endpoint": {
+        "feed": 145814,
+        "detail": 146030,
+        "like": 21832,
+        "create": 2922
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 0,
+        "create": 0
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 145814
+        },
+        "detail": {
+          "200": 146030
+        },
+        "like": {
+          "201": 21832
+        },
+        "create": {
+          "201": 2922
+        }
+      },
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 296.7490072250366,
+      "runner_peak_cpu_percent_one_core": 202.59,
+      "runner_peak_memory_percent_8gib": 55.28,
+      "parent_peak_memory_bytes_including_cache": 3253559296,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/repeatability-post-update-01/raw-reviews/20261016T132243742041Z-standard-10000vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 9,
+      "physical_slot_overall": 20,
+      "cohort": "post-security-update-fixed-study",
+      "vus": 11000,
+      "ledger_outcome": "pass",
+      "native_measurement_outcome": "pass",
+      "host_continuity": "passed prospective per-attempt window; study remains incomplete",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 347697,
+      "all_request_rps": 1158.99,
+      "request_errors": 0,
+      "error_fraction": 0.0,
+      "schema_errors": 0,
+      "run": "20261016T133315240512Z-standard-11000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.227255,
+        "max": 5492.99665,
+        "med": 22.077261,
+        "p(95)": 89.2809904,
+        "p(99)": 513.9966175999994
+      },
+      "requests_by_endpoint": {
+        "feed": 160133,
+        "detail": 160375,
+        "like": 23973,
+        "create": 3216
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 0,
+        "create": 0
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 160133
+        },
+        "detail": {
+          "200": 160375
+        },
+        "like": {
+          "201": 23973
+        },
+        "create": {
+          "201": 3216
+        }
+      },
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 296.7877390384674,
+      "runner_peak_cpu_percent_one_core": 201.95,
+      "runner_peak_memory_percent_8gib": 60.16,
+      "parent_peak_memory_bytes_including_cache": 3473891328,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/repeatability-post-update-01/raw-reviews/20261016T133315240512Z-standard-11000vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 10,
+      "physical_slot_overall": 21,
+      "cohort": "post-security-update-fixed-study",
+      "vus": 11250,
+      "ledger_outcome": "pass",
+      "native_measurement_outcome": "pass",
+      "host_continuity": "passed prospective per-attempt window; study remains incomplete",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 354818,
+      "all_request_rps": 1182.7266666666667,
+      "request_errors": 1,
+      "error_fraction": 2.8183463071208336e-06,
+      "schema_errors": 0,
+      "run": "20261016T134348817451Z-standard-11250vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.223959,
+        "max": 10000.796472,
+        "med": 24.1849195,
+        "p(95)": 108.85967709999989,
+        "p(99)": 901.0447926900019
+      },
+      "requests_by_endpoint": {
+        "feed": 163470,
+        "detail": 163635,
+        "like": 24430,
+        "create": 3283
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 1,
+        "create": 0
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 163470
+        },
+        "detail": {
+          "200": 163635
+        },
+        "like": {
+          "201": 24429,
+          "0": 1
+        },
+        "create": {
+          "201": 3283
+        }
+      },
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 294.7952389717102,
+      "runner_peak_cpu_percent_one_core": 202.58,
+      "runner_peak_memory_percent_8gib": 61.62,
+      "parent_peak_memory_bytes_including_cache": 3647447040,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/repeatability-post-update-01/raw-reviews/20261016T134348817451Z-standard-11250vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 11,
+      "physical_slot_overall": 22,
+      "cohort": "post-security-update-fixed-study",
+      "vus": 10000,
+      "ledger_outcome": "pass",
+      "native_measurement_outcome": "pass",
+      "host_continuity": "passed prospective per-attempt window; study remains incomplete",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 316826,
+      "all_request_rps": 1056.0866666666666,
+      "request_errors": 0,
+      "error_fraction": 0.0,
+      "schema_errors": 0,
+      "run": "20261016T135423709666Z-standard-10000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.225934,
+        "max": 2907.419588,
+        "med": 16.719648,
+        "p(95)": 70.65705475,
+        "p(99)": 267.7025215
+      },
+      "requests_by_endpoint": {
+        "feed": 145848,
+        "detail": 146055,
+        "like": 21866,
+        "create": 3057
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 0,
+        "create": 0
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 145848
+        },
+        "detail": {
+          "200": 146055
+        },
+        "like": {
+          "201": 21866
+        },
+        "create": {
+          "201": 3057
+        }
+      },
+      "hold_monitor_samples": 59,
+      "hold_monitor_span_seconds": 291.76166915893555,
+      "runner_peak_cpu_percent_one_core": 202.73,
+      "runner_peak_memory_percent_8gib": 55.22,
+      "parent_peak_memory_bytes_including_cache": 3716800512,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/repeatability-post-update-01/raw-reviews/20261016T135423709666Z-standard-10000vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 12,
+      "physical_slot_overall": 23,
+      "cohort": "post-security-update-fixed-study",
+      "vus": 11250,
+      "ledger_outcome": "pass",
+      "native_measurement_outcome": "pass",
+      "host_continuity": "passed prospective per-attempt window; study remains incomplete",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 355120,
+      "all_request_rps": 1183.7333333333333,
+      "request_errors": 5,
+      "error_fraction": 1.4079747690921379e-05,
+      "schema_errors": 0,
+      "run": "20261016T140455380113Z-standard-11250vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.213381,
+        "max": 10000.339994,
+        "med": 23.340975,
+        "p(95)": 103.2623005,
+        "p(99)": 794.7933946799993
+      },
+      "requests_by_endpoint": {
+        "detail": 163646,
+        "feed": 163506,
+        "like": 24695,
+        "create": 3273
+      },
+      "errors_by_endpoint": {
+        "detail": 0,
+        "feed": 0,
+        "like": 5,
+        "create": 0
+      },
+      "statuses_by_endpoint": {
+        "detail": {
+          "200": 163646
+        },
+        "feed": {
+          "200": 163506
+        },
+        "like": {
+          "201": 24690,
+          "0": 5
+        },
+        "create": {
+          "201": 3273
+        }
+      },
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 294.80120515823364,
+      "runner_peak_cpu_percent_one_core": 203.13,
+      "runner_peak_memory_percent_8gib": 61.77,
+      "parent_peak_memory_bytes_including_cache": 3956097024,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/repeatability-post-update-01/raw-reviews/20261016T140455380113Z-standard-11250vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 13,
+      "physical_slot_overall": 24,
+      "cohort": "post-security-update-fixed-study",
+      "vus": 11000,
+      "ledger_outcome": "pass",
+      "native_measurement_outcome": "pass",
+      "host_continuity": "passed prospective per-attempt window; study remains incomplete",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 347862,
+      "all_request_rps": 1159.54,
+      "request_errors": 0,
+      "error_fraction": 0.0,
+      "schema_errors": 0,
+      "run": "20261016T141530600668Z-standard-11000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.219623,
+        "max": 5933.96751,
+        "med": 24.0161385,
+        "p(95)": 102.02521845000001,
+        "p(99)": 662.7923997000031
+      },
+      "requests_by_endpoint": {
+        "feed": 160150,
+        "detail": 160325,
+        "like": 24095,
+        "create": 3292
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 0,
+        "create": 0
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 160150
+        },
+        "detail": {
+          "200": 160325
+        },
+        "like": {
+          "201": 24095
+        },
+        "create": {
+          "201": 3292
+        }
+      },
+      "hold_monitor_samples": 60,
+      "hold_monitor_span_seconds": 294.7616271972656,
+      "runner_peak_cpu_percent_one_core": 199.99,
+      "runner_peak_memory_percent_8gib": 60.4,
+      "parent_peak_memory_bytes_including_cache": 4104896512,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/repeatability-post-update-01/raw-reviews/20261016T141530600668Z-standard-11000vu-k6-2cpu-8g-v3.json"
+    },
+    {
+      "supplemental_slot": 14,
+      "physical_slot_overall": 25,
+      "cohort": "post-security-update-fixed-study",
+      "vus": 10000,
+      "ledger_outcome": null,
+      "native_measurement_outcome": "pass",
+      "host_continuity": "FAILED: fwupd.service two persistent lifecycle events",
+      "overall_new_study_capacity_certified": false,
+      "requests_started_in_300s_hold": 316656,
+      "all_request_rps": 1055.52,
+      "request_errors": 0,
+      "error_fraction": 0.0,
+      "schema_errors": 0,
+      "run": "20261016T142606275166Z-standard-10000vu-k6-2cpu-8g-v3",
+      "outcome": "pass",
+      "reason": "hold gates passed",
+      "eligible_for_target_capacity_scoring": true,
+      "measurement_replay": [
+        "pass",
+        "hold gates passed"
+      ],
+      "all_original_checksums_verified": true,
+      "archive_app_and_verification_hashes_reproduced": true,
+      "raw_quantiles_reproduced": {
+        "min": 0.218992,
+        "max": 2515.281547,
+        "med": 15.3706365,
+        "p(95)": 62.50910575,
+        "p(99)": 220.51343705000016
+      },
+      "requests_by_endpoint": {
+        "feed": 145907,
+        "detail": 146111,
+        "like": 21774,
+        "create": 2864
+      },
+      "errors_by_endpoint": {
+        "feed": 0,
+        "detail": 0,
+        "like": 0,
+        "create": 0
+      },
+      "statuses_by_endpoint": {
+        "feed": {
+          "200": 145907
+        },
+        "detail": {
+          "200": 146111
+        },
+        "like": {
+          "201": 21774
+        },
+        "create": {
+          "201": 2864
+        }
+      },
+      "hold_monitor_samples": 59,
+      "hold_monitor_span_seconds": 290.7566018104553,
+      "runner_peak_cpu_percent_one_core": 198.83,
+      "runner_peak_memory_percent_8gib": 55.33,
+      "parent_peak_memory_bytes_including_cache": 4176531456,
+      "host_swapouts_before": 0,
+      "host_swapouts_after": 0,
+      "raw_review_path": "supplemental-evidence/retained/repeatability-post-update-01/raw-reviews/20261016T142606275166Z-standard-10000vu-k6-2cpu-8g-v3.json"
+    }
+  ],
+  "distribution": "Screened small evidence and source/identity metadata only. Raw samples, complete source/dependency/private archives, issued fixtures, keys, databases and unrelated raw journals remain private/unpublished. No public external download, fresh-build or new CI claim."
+}

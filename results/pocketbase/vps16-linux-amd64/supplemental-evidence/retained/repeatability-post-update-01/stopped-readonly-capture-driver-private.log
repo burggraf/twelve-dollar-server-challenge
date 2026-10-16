@@ -1,0 +1,12 @@
+Running as unit: tds-pocketbase-fixed-study-stopped-readonly-capture-20261016.service
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/capture-fixed-study-stop.py", line 79, in <module>
+    runtime=s.deployment_attestation('standard');att=json.loads((s.STATE/'correctness-manifest.json').read_text());bench.validate_correctness(att,bench.inputs(),sha(s.STATE/'correctness.log'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: deployment_attestation() takes 0 positional arguments but 1 was given
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 28.227s
+CPU time consumed: 28.181s
+Memory peak: 3.1M
+Memory swap peak: 0B

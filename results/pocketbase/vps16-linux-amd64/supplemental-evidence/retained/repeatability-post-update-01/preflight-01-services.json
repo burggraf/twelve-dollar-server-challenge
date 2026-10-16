@@ -1,0 +1,227 @@
+{
+  "services": {
+    "awanafrica.service": {
+      "MainPID": "784",
+      "NRestarts": "0",
+      "Id": "awanafrica.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7522779"
+    },
+    "azabab.service": {
+      "MainPID": "785",
+      "NRestarts": "0",
+      "Id": "azabab.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7523618"
+    },
+    "containerd.service": {
+      "MainPID": "6280",
+      "NRestarts": "0",
+      "Id": "containerd.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "879352731"
+    },
+    "cron.service": {
+      "MainPID": "11102",
+      "NRestarts": "0",
+      "Id": "cron.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "891027213"
+    },
+    "dbus.service": {
+      "MainPID": "788",
+      "NRestarts": "0",
+      "Id": "dbus.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7599714"
+    },
+    "docker.service": {
+      "MainPID": "6672",
+      "NRestarts": "0",
+      "Id": "docker.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "882885605"
+    },
+    "fail2ban.service": {
+      "MainPID": "792",
+      "NRestarts": "0",
+      "Id": "fail2ban.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7542121"
+    },
+    "getty@tty1.service": {
+      "MainPID": "840",
+      "NRestarts": "0",
+      "Id": "getty@tty1.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7662477"
+    },
+    "ModemManager.service": {
+      "MainPID": "886",
+      "NRestarts": "0",
+      "Id": "ModemManager.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7899256"
+    },
+    "multipathd.service": {
+      "MainPID": "387",
+      "NRestarts": "0",
+      "Id": "multipathd.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "3334460"
+    },
+    "nginx.service": {
+      "MainPID": "861",
+      "NRestarts": "0",
+      "Id": "nginx.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7714601"
+    },
+    "nmbd.service": {
+      "MainPID": "7324",
+      "NRestarts": "0",
+      "Id": "nmbd.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "885177890"
+    },
+    "pocketbase-server.service": {
+      "MainPID": "797",
+      "NRestarts": "0",
+      "Id": "pocketbase-server.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7555618"
+    },
+    "polkit.service": {
+      "MainPID": "798",
+      "NRestarts": "0",
+      "Id": "polkit.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7738566"
+    },
+    "rsyslog.service": {
+      "MainPID": "887",
+      "NRestarts": "0",
+      "Id": "rsyslog.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7805795"
+    },
+    "smbd.service": {
+      "MainPID": "7250",
+      "NRestarts": "0",
+      "Id": "smbd.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "884730205"
+    },
+    "ssh.service": {
+      "MainPID": "11111",
+      "NRestarts": "0",
+      "Id": "ssh.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "891064101"
+    },
+    "systemd-journald.service": {
+      "MainPID": "11106",
+      "NRestarts": "0",
+      "Id": "systemd-journald.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "891069191"
+    },
+    "systemd-logind.service": {
+      "MainPID": "810",
+      "NRestarts": "0",
+      "Id": "systemd-logind.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7714286"
+    },
+    "systemd-networkd.service": {
+      "MainPID": "11115",
+      "NRestarts": "0",
+      "Id": "systemd-networkd.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "891094199"
+    },
+    "systemd-resolved.service": {
+      "MainPID": "11116",
+      "NRestarts": "0",
+      "Id": "systemd-resolved.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "891127580"
+    },
+    "systemd-timesyncd.service": {
+      "MainPID": "11117",
+      "NRestarts": "0",
+      "Id": "systemd-timesyncd.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "891103521"
+    },
+    "systemd-udevd.service": {
+      "MainPID": "401",
+      "NRestarts": "0",
+      "Id": "systemd-udevd.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "3376425"
+    },
+    "trailbase-server.service": {
+      "MainPID": "812",
+      "NRestarts": "0",
+      "Id": "trailbase-server.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7595354"
+    },
+    "udisks2.service": {
+      "MainPID": "813",
+      "NRestarts": "0",
+      "Id": "udisks2.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7900132"
+    },
+    "unattended-upgrades.service": {
+      "MainPID": "872",
+      "NRestarts": "0",
+      "Id": "unattended-upgrades.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "7719891"
+    },
+    "user@0.service": {
+      "MainPID": "16729",
+      "NRestarts": "0",
+      "Id": "user@0.service",
+      "ActiveState": "active",
+      "SubState": "running",
+      "ActiveEnterTimestampMonotonic": "3010156202"
+    }
+  },
+  "port4000_listener": "LISTEN 0      128    127.0.0.1:4000 0.0.0.0:* users:((\"trail\",pid=812,fd=28))\n",
+  "port4000_processes": {
+    "812": {
+      "start_ticks": "759",
+      "executable": "/opt/trailbase-server/bin/trail"
+    }
+  }
+}

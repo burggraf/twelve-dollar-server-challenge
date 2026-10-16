@@ -1,0 +1,47 @@
+{
+  "run": "results/pocketbase/vps16-linux-amd64/20261016T140455380113Z-standard-11250vu-k6-2cpu-8g-v3",
+  "manifest_sha256": "19d328afd91467e6c25d7a162d3a4a70cd68a8b55db604c0e8c6182fe6c09309",
+  "original_checksum_manifest_sha256": "826ff1005ff60f7d5552daebdb62cddc2142e0894eb3e129b0ebf6a129782f78",
+  "outcome": "pass",
+  "reason": "hold gates passed",
+  "input_catalog_sha256": "043a6c0d00f897053f224ff298ac4c95d391c565fb0e27d5164af9789901c567",
+  "host_context": {
+    "boot": "77d80e459277950c488b0768305effffb0a9bf8682ca0ec55bf6aab84baa982c",
+    "kernel": "6.8.0-147-generic",
+    "docker": "02d7abb606f09937534db9515eb4e3c941a54100f4ca8ef2d0d4b4da6e58b422",
+    "memory_total": 16770064384,
+    "cpus": 4,
+    "machine": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43"
+  },
+  "service_events": {
+    "window_start": 1792159464.512704,
+    "window_end": 1792160096.854695,
+    "window_complete": true,
+    "persistent_service_event_counts": {},
+    "nonpersistent_oneshot_event_counts_disclosed": {
+      "sysstat-collect.service": 1
+    },
+    "oneshot_classification_authorization": "f81b2fc4-35f2-4a51-925b-aa303ea7b68d",
+    "unit_classification": {
+      "sysstat-collect.service": {
+        "type": "oneshot",
+        "active_state": "inactive",
+        "sub_state": "dead",
+        "main_pid_zero": true,
+        "control_pid_zero": true,
+        "job_pending": false,
+        "no_resident_processes": true,
+        "resident_evidence": "systemd_no_assigned_control_group",
+        "classification": "transient"
+      }
+    },
+    "private_raw": {
+      "bytes": 25626,
+      "sha256": "5ffd6a7afaa733376615e59c91d67ef2e5bf46ce44885da98584d515050e6e62",
+      "distribution": "PRIVATE VPS ONLY"
+    },
+    "scope": "Numeric metadata only; all raw messages stay private. Only existing SSH session exception and benchmark tds unit namespace; no persistent-service exclusions. No causality or isolation proof."
+  },
+  "historical_original_listener_equality": false,
+  "prospective_listener_equal_before_after": true
+}

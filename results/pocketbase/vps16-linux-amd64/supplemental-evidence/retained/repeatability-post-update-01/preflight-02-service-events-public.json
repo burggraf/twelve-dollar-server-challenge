@@ -1,0 +1,41 @@
+{
+  "window_start": 1792156191.606382,
+  "window_end": 1792156791.606382,
+  "window_complete": true,
+  "persistent_service_event_counts": {},
+  "nonpersistent_oneshot_event_counts_disclosed": {
+    "sysstat-collect.service": 1,
+    "user-runtime-dir@0.service": 10
+  },
+  "oneshot_classification_authorization": "f81b2fc4-35f2-4a51-925b-aa303ea7b68d",
+  "unit_classification": {
+    "sysstat-collect.service": {
+      "type": "oneshot",
+      "active_state": "inactive",
+      "sub_state": "dead",
+      "main_pid_zero": true,
+      "control_pid_zero": true,
+      "job_pending": false,
+      "no_resident_processes": true,
+      "resident_evidence": "systemd_no_assigned_control_group",
+      "classification": "transient"
+    },
+    "user-runtime-dir@0.service": {
+      "type": "oneshot",
+      "active_state": "active",
+      "sub_state": "exited",
+      "main_pid_zero": true,
+      "control_pid_zero": true,
+      "job_pending": false,
+      "no_resident_processes": true,
+      "resident_evidence": "systemd_no_assigned_control_group",
+      "classification": "transient"
+    }
+  },
+  "private_raw": {
+    "bytes": 88440,
+    "sha256": "ef24944388a318bc0b753b8541fc1621bbc44498dc2e2413d975d7bdc8ac6981",
+    "distribution": "PRIVATE VPS ONLY"
+  },
+  "scope": "Numeric metadata only; all raw messages stay private. Only existing SSH session exception and benchmark tds unit namespace; no persistent-service exclusions. No causality or isolation proof."
+}

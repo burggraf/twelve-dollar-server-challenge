@@ -1,0 +1,92 @@
+Running as unit: tds-pocketbase-approved-transient-units-green-20261016.service
+test_adjacent_confirmation_pass_stops_not_claim_boundary (__main__.PolicyTests.test_adjacent_confirmation_pass_stops_not_claim_boundary) ... ok
+test_all_five_possible_boundaries_get_three_additional_passes_and_three_adjacent_fails (__main__.PolicyTests.test_all_five_possible_boundaries_get_three_additional_passes_and_three_adjacent_fails) ... ok
+test_budget_nine_cannot_silently_spend_ten (__main__.PolicyTests.test_budget_nine_cannot_silently_spend_ten) ... ok
+test_candidate_confirmation_failure_stops_not_step_down (__main__.PolicyTests.test_candidate_confirmation_failure_stops_not_step_down) ... ok
+test_confirmation_counts_never_reuse_probes_as_additional_passes (__main__.PolicyTests.test_confirmation_counts_never_reuse_probes_as_additional_passes) ... ok
+test_historical_eleven_slots_are_explicit_and_never_reset (__main__.PolicyTests.test_historical_eleven_slots_are_explicit_and_never_reset) ... ok
+test_invalid_at_every_physical_slot_stops_immediately_and_is_not_a_target_failure (__main__.PolicyTests.test_invalid_at_every_physical_slot_stops_immediately_and_is_not_a_target_failure) ... ok
+test_lower_anchor_failure_stops_without_lowering_search_scope (__main__.PolicyTests.test_lower_anchor_failure_stops_without_lowering_search_scope) ... ok
+test_owner_limit_ten_cannot_be_raised_by_caller (__main__.PolicyTests.test_owner_limit_ten_cannot_be_raised_by_caller) ... ok
+test_slot_is_recorded_before_runner_side_effect_and_partial_runner_failure_retained (__main__.PolicyTests.test_slot_is_recorded_before_runner_side_effect_and_partial_runner_failure_retained) ... ok
+test_unknown_outcome_refused (__main__.PolicyTests.test_unknown_outcome_refused) ... ok
+test_upper_anchor_pass_stops_without_expanding_search_scope (__main__.PolicyTests.test_upper_anchor_pass_stops_without_expanding_search_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.009s
+
+OK
+test_adjacent_confirmation_pass_pauses_without_score (__main__.RebracketTests.test_adjacent_confirmation_pass_pauses_without_score) ... ok
+test_all_four_boundaries_preserve_two_slots_and_exact_additional_confirmations (__main__.RebracketTests.test_all_four_boundaries_preserve_two_slots_and_exact_additional_confirmations) ... ok
+test_budget_seven_cannot_spend_eight (__main__.RebracketTests.test_budget_seven_cannot_spend_eight) ... ok
+test_candidate_failure_pauses_without_stepdown (__main__.RebracketTests.test_candidate_failure_pauses_without_stepdown) ... ok
+test_invalid_at_each_remaining_slot_stops_and_preserves_all_accounting (__main__.RebracketTests.test_invalid_at_each_remaining_slot_stops_and_preserves_all_accounting) ... ok
+test_pending_slot_before_side_effect_and_exception_does_not_erase_it (__main__.RebracketTests.test_pending_slot_before_side_effect_and_exception_does_not_erase_it) ... ok
+test_prior_phase_and_earlier_snapshots_are_not_mutated (__main__.RebracketTests.test_prior_phase_and_earlier_snapshots_are_not_mutated) ... ok
+test_reject_missing_extra_invalid_or_relabelled_prior_attempts (__main__.RebracketTests.test_reject_missing_extra_invalid_or_relabelled_prior_attempts) ... ok
+test_remaining_budget_cannot_be_raised_or_invalid (__main__.RebracketTests.test_remaining_budget_cannot_be_raised_or_invalid) ... ok
+test_reused_anchor_is_never_counted_as_additional_confirmation (__main__.RebracketTests.test_reused_anchor_is_never_counted_as_additional_confirmation) ... ok
+test_unknown_outcome_is_never_a_failure_bound (__main__.RebracketTests.test_unknown_outcome_is_never_a_failure_bound) ... ok
+test_upper_pass_stops_after_one_new_attempt_no_expansion (__main__.RebracketTests.test_upper_pass_stops_after_one_new_attempt_no_expansion) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.009s
+
+OK
+test_all_256_candidate_upper_patterns_use_all_rows_without_selecting_favorable_subset (__main__.RepeatabilityTests.test_all_256_candidate_upper_patterns_use_all_rows_without_selecting_favorable_subset) ... ok
+test_budget_cannot_exceed_twelve_or_be_invalid (__main__.RepeatabilityTests.test_budget_cannot_exceed_twelve_or_be_invalid) ... ok
+test_cumulative_budget_preserves_seven_prior_and_eighteen_physical (__main__.RepeatabilityTests.test_cumulative_budget_preserves_seven_prior_and_eighteen_physical) ... ok
+test_each_control_failure_stops_and_retains_that_slot (__main__.RepeatabilityTests.test_each_control_failure_stops_and_retains_that_slot) ... ok
+test_each_smaller_budget_stops_without_replacement_or_resuming (__main__.RepeatabilityTests.test_each_smaller_budget_stops_without_replacement_or_resuming) ... ok
+test_exact_schedule_and_three_additional_candidate_passes (__main__.RepeatabilityTests.test_exact_schedule_and_three_additional_candidate_passes) ... ok
+test_exception_at_each_slot_preserves_pending_intent_and_does_not_retry (__main__.RepeatabilityTests.test_exception_at_each_slot_preserves_pending_intent_and_does_not_retry) ... ok
+test_first_candidate_fail_and_three_later_passes_not_confirmed (__main__.RepeatabilityTests.test_first_candidate_fail_and_three_later_passes_not_confirmed) ... ok
+test_invalid_at_each_slot_preserves_all_cumulative_accounting (__main__.RepeatabilityTests.test_invalid_at_each_slot_preserves_all_cumulative_accounting) ... ok
+test_missing_extra_invalid_relabelled_or_duplicate_prior_rows_rejected (__main__.RepeatabilityTests.test_missing_extra_invalid_relabelled_or_duplicate_prior_rows_rejected) ... ok
+test_nonmonotonic_results_are_retained_without_stepdown (__main__.RepeatabilityTests.test_nonmonotonic_results_are_retained_without_stepdown) ... ok
+test_pending_phase_cannot_be_implicitly_resumed (__main__.RepeatabilityTests.test_pending_phase_cannot_be_implicitly_resumed) ... ok
+test_physical_run_ids_must_be_new_and_unique (__main__.RepeatabilityTests.test_physical_run_ids_must_be_new_and_unique) ... ok
+test_prior_state_and_all_recorded_snapshots_are_deep_copies (__main__.RepeatabilityTests.test_prior_state_and_all_recorded_snapshots_are_deep_copies) ... ok
+test_record_failure_prevents_first_side_effect (__main__.RepeatabilityTests.test_record_failure_prevents_first_side_effect) ... ok
+test_three_failing_upper_and_one_passing_upper_is_mixed_not_boundary (__main__.RepeatabilityTests.test_three_failing_upper_and_one_passing_upper_is_mixed_not_boundary) ... ok
+test_unknown_and_malformed_results_never_count_as_failure_bound (__main__.RepeatabilityTests.test_unknown_and_malformed_results_never_count_as_failure_bound) ... ok
+test_upper_all_pass_does_not_expand (__main__.RepeatabilityTests.test_upper_all_pass_does_not_expand) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.474s
+
+OK
+test_added_removed_changed_persistent_units_stay_failed (__main__.GuardTests.test_added_removed_changed_persistent_units_stay_failed) ... ok
+test_approved_new_epoch_is_not_a_historical_equality_claim (__main__.GuardTests.test_approved_new_epoch_is_not_a_historical_equality_claim) ... ok
+test_before_snapshot_must_also_match_frozen_baseline (__main__.GuardTests.test_before_snapshot_must_also_match_frozen_baseline) ... ok
+test_disabled_inactive_dead_is_required_without_pending_job (__main__.GuardTests.test_disabled_inactive_dead_is_required_without_pending_job) ... ok
+test_host_context_reboot_kernel_docker_memory_or_cpu_drift_refused (__main__.GuardTests.test_host_context_reboot_kernel_docker_memory_or_cpu_drift_refused) ... ok
+test_incomplete_or_malformed_journal_counts_refused (__main__.GuardTests.test_incomplete_or_malformed_journal_counts_refused) ... ok
+test_lifecycle_classifier_restricts_output_to_numeric_watched_units (__main__.GuardTests.test_lifecycle_classifier_restricts_output_to_numeric_watched_units) ... ok
+test_listener_pid_ticks_or_executable_change_fail (__main__.GuardTests.test_listener_pid_ticks_or_executable_change_fail) ... ok
+test_only_existing_ssh_session_exception (__main__.GuardTests.test_only_existing_ssh_session_exception) ... ok
+test_unchanged_endpoints_cannot_hide_dmarie_or_other_restart_events (__main__.GuardTests.test_unchanged_endpoints_cannot_hide_dmarie_or_other_restart_events) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK
+test_completed_inactive_oneshot_is_transient_and_does_not_need_remain_active (__main__.TransientUnitTests.test_completed_inactive_oneshot_is_transient_and_does_not_need_remain_active) ... ok
+test_completed_oneshot_remain_active_without_residents_is_transient (__main__.TransientUnitTests.test_completed_oneshot_remain_active_without_residents_is_transient) ... ok
+test_inputs_immutable_and_partition_complete (__main__.TransientUnitTests.test_inputs_immutable_and_partition_complete) ... ok
+test_main_control_or_cgroup_residents_are_never_excluded (__main__.TransientUnitTests.test_main_control_or_cgroup_residents_are_never_excluded) ... ok
+test_malformed_unit_properties_fail_closed (__main__.TransientUnitTests.test_malformed_unit_properties_fail_closed) ... ok
+test_no_named_ssh_or_dmarie_exception (__main__.TransientUnitTests.test_no_named_ssh_or_dmarie_exception) ... ok
+test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) ... ok
+test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 760ms
+CPU time consumed: 760ms
+Memory peak: 2.9M
+Memory swap peak: 0B

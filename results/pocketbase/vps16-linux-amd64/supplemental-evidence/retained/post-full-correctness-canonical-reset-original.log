@@ -1,0 +1,5 @@
+ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+ Container baas-pocketbase-vps16-import Creating 
+ Container baas-pocketbase-vps16-import Created 
+{"counts": {"users": 50000, "posts": 500000, "likes": 2016005}, "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d", "platform_rows_before_sha256": "d5258946c5086312d63c1f256c3dd7dcc26024253b6b0b6b8e45950464aab047", "platform_rows_after_sha256": "d5258946c5086312d63c1f256c3dd7dcc26024253b6b0b6b8e45950464aab047", "next_post_id": 500001, "native_auth_accounts": {"users": 0, "_superusers": 1}, "storage_mapping": "Native base collections; decimal Text user/post IDs; extra deterministic imported like record IDs; logical compound likes key; persistent transactional post sequence", "scope": "Offline application-only import; native platform/Auth metadata retained; native relation validation is not a physical SQLite FK declaration"}

@@ -1,0 +1,125 @@
+test_adjacent_confirmation_pass_pauses_without_score (__main__.RebracketTests.test_adjacent_confirmation_pass_pauses_without_score) ... FAIL
+test_all_four_boundaries_preserve_two_slots_and_exact_additional_confirmations (__main__.RebracketTests.test_all_four_boundaries_preserve_two_slots_and_exact_additional_confirmations) ... FAIL
+test_budget_seven_cannot_spend_eight (__main__.RebracketTests.test_budget_seven_cannot_spend_eight) ... FAIL
+test_candidate_failure_pauses_without_stepdown (__main__.RebracketTests.test_candidate_failure_pauses_without_stepdown) ... FAIL
+test_invalid_at_each_remaining_slot_stops_and_preserves_all_accounting (__main__.RebracketTests.test_invalid_at_each_remaining_slot_stops_and_preserves_all_accounting) ... FAIL
+test_pending_slot_before_side_effect_and_exception_does_not_erase_it (__main__.RebracketTests.test_pending_slot_before_side_effect_and_exception_does_not_erase_it) ... FAIL
+test_prior_phase_and_earlier_snapshots_are_not_mutated (__main__.RebracketTests.test_prior_phase_and_earlier_snapshots_are_not_mutated) ... FAIL
+test_reject_missing_extra_invalid_or_relabelled_prior_attempts (__main__.RebracketTests.test_reject_missing_extra_invalid_or_relabelled_prior_attempts) ... FAIL
+test_remaining_budget_cannot_be_raised_or_invalid (__main__.RebracketTests.test_remaining_budget_cannot_be_raised_or_invalid) ... FAIL
+test_reused_anchor_is_never_counted_as_additional_confirmation (__main__.RebracketTests.test_reused_anchor_is_never_counted_as_additional_confirmation) ... FAIL
+test_unknown_outcome_is_never_a_failure_bound (__main__.RebracketTests.test_unknown_outcome_is_never_a_failure_bound) ... FAIL
+test_upper_pass_stops_after_one_new_attempt_no_expansion (__main__.RebracketTests.test_upper_pass_stops_after_one_new_attempt_no_expansion) ... FAIL
+
+======================================================================
+FAIL: test_adjacent_confirmation_pass_pauses_without_score (__main__.RebracketTests.test_adjacent_confirmation_pass_pauses_without_score)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_all_four_boundaries_preserve_two_slots_and_exact_additional_confirmations (__main__.RebracketTests.test_all_four_boundaries_preserve_two_slots_and_exact_additional_confirmations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_budget_seven_cannot_spend_eight (__main__.RebracketTests.test_budget_seven_cannot_spend_eight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_candidate_failure_pauses_without_stepdown (__main__.RebracketTests.test_candidate_failure_pauses_without_stepdown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_invalid_at_each_remaining_slot_stops_and_preserves_all_accounting (__main__.RebracketTests.test_invalid_at_each_remaining_slot_stops_and_preserves_all_accounting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_pending_slot_before_side_effect_and_exception_does_not_erase_it (__main__.RebracketTests.test_pending_slot_before_side_effect_and_exception_does_not_erase_it)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_prior_phase_and_earlier_snapshots_are_not_mutated (__main__.RebracketTests.test_prior_phase_and_earlier_snapshots_are_not_mutated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_reject_missing_extra_invalid_or_relabelled_prior_attempts (__main__.RebracketTests.test_reject_missing_extra_invalid_or_relabelled_prior_attempts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_remaining_budget_cannot_be_raised_or_invalid (__main__.RebracketTests.test_remaining_budget_cannot_be_raised_or_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_reused_anchor_is_never_counted_as_additional_confirmation (__main__.RebracketTests.test_reused_anchor_is_never_counted_as_additional_confirmation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_unknown_outcome_is_never_a_failure_bound (__main__.RebracketTests.test_unknown_outcome_is_never_a_failure_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+======================================================================
+FAIL: test_upper_pass_stops_after_one_new_attempt_no_expansion (__main__.RebracketTests.test_upper_pass_stops_after_one_new_attempt_no_expansion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/test_supplemental_rebracket_policy.py", line 17, in setUp
+    def setUp(self):self.assertTrue(policy is not None and callable(getattr(policy,'finish',None)),'Missing authorized bounded continuation policy')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing authorized bounded continuation policy
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.002s
+
+FAILED (failures=12)

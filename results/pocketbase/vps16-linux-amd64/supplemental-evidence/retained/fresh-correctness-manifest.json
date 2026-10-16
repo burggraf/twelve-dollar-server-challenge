@@ -1,0 +1,296 @@
+{
+  "inputs": {
+    "app": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+    "verification": "300bf1e09d624032c1c9d88c4862b688f18cd6294e8c906fc4d1f97341c84359",
+    "runtime": "830e10858906a952042d167da3c8d6847695bb861b213f8c38cb7c66774beb25",
+    "schema": "4c2fd006546e9691cd189f2a971d3c23b62a88da53ce371fa14cd1136d20d859",
+    "images": {
+      "pocketbase": {
+        "Image": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:bc371b827b558174e9d5f833cac457241574d6c3fe653b6a4453ca229c67e91f"
+      }
+    },
+    "host": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+    "tokens": "37c3f99e54809dcbc741053cf462a4b1f16e4d42f89fb12a9b9374e0cc2878b2",
+    "executable": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+    "tools_image": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2 linux/amd64"
+  },
+  "deployment": {
+    "app_source_sha256": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+    "verification_source_sha256": "300bf1e09d624032c1c9d88c4862b688f18cd6294e8c906fc4d1f97341c84359",
+    "runtime_inputs_sha256": "830e10858906a952042d167da3c8d6847695bb861b213f8c38cb7c66774beb25",
+    "schema": {
+      "sha256": "4c2fd006546e9691cd189f2a971d3c23b62a88da53ce371fa14cd1136d20d859",
+      "catalog": {
+        "ddl": [
+          {
+            "type": "index",
+            "name": "feed_likes_user_post_unique",
+            "tbl_name": "feed_likes",
+            "sql": "CREATE UNIQUE INDEX `feed_likes_user_post_unique` ON `feed_likes` (\n  `user_id`,\n  `post_id`\n)"
+          },
+          {
+            "type": "index",
+            "name": "feed_users_username_unique",
+            "tbl_name": "feed_users",
+            "sql": "CREATE UNIQUE INDEX `feed_users_username_unique` ON `feed_users` (`username`)"
+          },
+          {
+            "type": "index",
+            "name": "likes_post_id_idx",
+            "tbl_name": "feed_likes",
+            "sql": "CREATE INDEX `likes_post_id_idx` ON `feed_likes` (`post_id`)"
+          },
+          {
+            "type": "index",
+            "name": "posts_created_at_id_idx",
+            "tbl_name": "feed_posts",
+            "sql": "CREATE INDEX `posts_created_at_id_idx` ON `feed_posts` (\n  `created_at` DESC,\n  CAST(id AS INTEGER) DESC\n)"
+          },
+          {
+            "type": "index",
+            "name": "posts_user_id_idx",
+            "tbl_name": "feed_posts",
+            "sql": "CREATE INDEX `posts_user_id_idx` ON `feed_posts` (`user_id`)"
+          },
+          {
+            "type": "index",
+            "name": "sqlite_autoindex_feed_likes_1",
+            "tbl_name": "feed_likes",
+            "sql": null
+          },
+          {
+            "type": "index",
+            "name": "sqlite_autoindex_feed_posts_1",
+            "tbl_name": "feed_posts",
+            "sql": null
+          },
+          {
+            "type": "index",
+            "name": "sqlite_autoindex_feed_sequences_1",
+            "tbl_name": "feed_sequences",
+            "sql": null
+          },
+          {
+            "type": "index",
+            "name": "sqlite_autoindex_feed_users_1",
+            "tbl_name": "feed_users",
+            "sql": null
+          },
+          {
+            "type": "table",
+            "name": "feed_likes",
+            "tbl_name": "feed_likes",
+            "sql": "CREATE TABLE `feed_likes` (`created_at` TEXT DEFAULT '' NOT NULL, `id` TEXT PRIMARY KEY DEFAULT ('r'||lower(hex(randomblob(7)))) NOT NULL, `post_id` TEXT DEFAULT '' NOT NULL, `user_id` TEXT DEFAULT '' NOT NULL)"
+          },
+          {
+            "type": "table",
+            "name": "feed_posts",
+            "tbl_name": "feed_posts",
+            "sql": "CREATE TABLE `feed_posts` (`body` TEXT DEFAULT '' NOT NULL, `created_at` TEXT DEFAULT '' NOT NULL, `id` TEXT PRIMARY KEY DEFAULT ('r'||lower(hex(randomblob(7)))) NOT NULL, `user_id` TEXT DEFAULT '' NOT NULL)"
+          },
+          {
+            "type": "table",
+            "name": "feed_sequences",
+            "tbl_name": "feed_sequences",
+            "sql": "CREATE TABLE `feed_sequences` (`id` TEXT PRIMARY KEY DEFAULT ('r'||lower(hex(randomblob(7)))) NOT NULL, `last_id` TEXT DEFAULT '' NOT NULL)"
+          },
+          {
+            "type": "table",
+            "name": "feed_users",
+            "tbl_name": "feed_users",
+            "sql": "CREATE TABLE `feed_users` (`created_at` TEXT DEFAULT '' NOT NULL, `id` TEXT PRIMARY KEY DEFAULT ('r'||lower(hex(randomblob(7)))) NOT NULL, `username` TEXT DEFAULT '' NOT NULL)"
+          }
+        ],
+        "collections": [
+          {
+            "id": "pbc_1123364177",
+            "name": "feed_likes",
+            "type": "base",
+            "fields": "[{\"autogeneratePattern\":\"[a-z0-9]{15}\",\"help\":\"\",\"hidden\":false,\"id\":\"text3208210256\",\"max\":15,\"min\":15,\"name\":\"id\",\"pattern\":\"^[a-z0-9]+$\",\"presentable\":false,\"primaryKey\":true,\"required\":true,\"system\":true,\"type\":\"text\"},{\"cascadeDelete\":false,\"collectionId\":\"pbc_532465349\",\"help\":\"\",\"hidden\":false,\"id\":\"relation2809058197\",\"maxSelect\":1,\"minSelect\":0,\"name\":\"user_id\",\"presentable\":false,\"required\":true,\"system\":false,\"type\":\"relation\"},{\"cascadeDelete\":false,\"collectionId\":\"pbc_2204293590\",\"help\":\"\",\"hidden\":false,\"id\":\"relation1267270444\",\"maxSelect\":1,\"minSelect\":0,\"name\":\"post_id\",\"presentable\":false,\"required\":true,\"system\":false,\"type\":\"relation\"},{\"autogeneratePattern\":\"\",\"help\":\"\",\"hidden\":false,\"id\":\"text2341372968\",\"max\":24,\"min\":0,\"name\":\"created_at\",\"pattern\":\"^\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}\\\\.\\\\d{3}Z$\",\"presentable\":false,\"primaryKey\":false,\"required\":true,\"system\":false,\"type\":\"text\"}]",
+            "indexes": "[\"CREATE UNIQUE INDEX `feed_likes_user_post_unique` ON `feed_likes` (user_id, post_id)\",\"CREATE INDEX `likes_post_id_idx` ON `feed_likes` (post_id)\"]",
+            "listRule": "",
+            "viewRule": "",
+            "createRule": null,
+            "updateRule": null,
+            "deleteRule": null
+          },
+          {
+            "id": "pbc_2204293590",
+            "name": "feed_posts",
+            "type": "base",
+            "fields": "[{\"autogeneratePattern\":\"\",\"help\":\"\",\"hidden\":false,\"id\":\"text3208210256\",\"max\":19,\"min\":1,\"name\":\"id\",\"pattern\":\"^[1-9][0-9]{0,18}$\",\"presentable\":false,\"primaryKey\":true,\"required\":true,\"system\":true,\"type\":\"text\"},{\"cascadeDelete\":false,\"collectionId\":\"pbc_532465349\",\"help\":\"\",\"hidden\":false,\"id\":\"relation2809058197\",\"maxSelect\":1,\"minSelect\":0,\"name\":\"user_id\",\"presentable\":false,\"required\":true,\"system\":false,\"type\":\"relation\"},{\"autogeneratePattern\":\"\",\"help\":\"\",\"hidden\":false,\"id\":\"text3685223346\",\"max\":500,\"min\":1,\"name\":\"body\",\"pattern\":\"\",\"presentable\":false,\"primaryKey\":false,\"required\":true,\"system\":false,\"type\":\"text\"},{\"autogeneratePattern\":\"\",\"help\":\"\",\"hidden\":false,\"id\":\"text2341372968\",\"max\":24,\"min\":0,\"name\":\"created_at\",\"pattern\":\"^\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}\\\\.\\\\d{3}Z$\",\"presentable\":false,\"primaryKey\":false,\"required\":true,\"system\":false,\"type\":\"text\"}]",
+            "indexes": "[\"CREATE INDEX `posts_created_at_id_idx` ON `feed_posts` (created_at DESC, CAST(id AS INTEGER) DESC)\",\"CREATE INDEX `posts_user_id_idx` ON `feed_posts` (user_id)\"]",
+            "listRule": "",
+            "viewRule": "",
+            "createRule": null,
+            "updateRule": null,
+            "deleteRule": null
+          },
+          {
+            "id": "pbc_3633915607",
+            "name": "feed_sequences",
+            "type": "base",
+            "fields": "[{\"autogeneratePattern\":\"[a-z0-9]{15}\",\"help\":\"\",\"hidden\":false,\"id\":\"text3208210256\",\"max\":15,\"min\":15,\"name\":\"id\",\"pattern\":\"^[a-z0-9]+$\",\"presentable\":false,\"primaryKey\":true,\"required\":true,\"system\":true,\"type\":\"text\"},{\"autogeneratePattern\":\"\",\"help\":\"\",\"hidden\":false,\"id\":\"text3523056870\",\"max\":19,\"min\":0,\"name\":\"last_id\",\"pattern\":\"^(0|[1-9][0-9]{0,18})$\",\"presentable\":false,\"primaryKey\":false,\"required\":true,\"system\":false,\"type\":\"text\"}]",
+            "indexes": "[]",
+            "listRule": null,
+            "viewRule": null,
+            "createRule": null,
+            "updateRule": null,
+            "deleteRule": null
+          },
+          {
+            "id": "pbc_532465349",
+            "name": "feed_users",
+            "type": "base",
+            "fields": "[{\"autogeneratePattern\":\"\",\"help\":\"\",\"hidden\":false,\"id\":\"text3208210256\",\"max\":19,\"min\":1,\"name\":\"id\",\"pattern\":\"^[1-9][0-9]{0,18}$\",\"presentable\":false,\"primaryKey\":true,\"required\":true,\"system\":true,\"type\":\"text\"},{\"autogeneratePattern\":\"\",\"help\":\"\",\"hidden\":false,\"id\":\"text4166911607\",\"max\":5000,\"min\":0,\"name\":\"username\",\"pattern\":\"\",\"presentable\":false,\"primaryKey\":false,\"required\":true,\"system\":false,\"type\":\"text\"},{\"autogeneratePattern\":\"\",\"help\":\"\",\"hidden\":false,\"id\":\"text2341372968\",\"max\":24,\"min\":0,\"name\":\"created_at\",\"pattern\":\"^\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}\\\\.\\\\d{3}Z$\",\"presentable\":false,\"primaryKey\":false,\"required\":true,\"system\":false,\"type\":\"text\"}]",
+            "indexes": "[\"CREATE UNIQUE INDEX `feed_users_username_unique` ON `feed_users` (username)\"]",
+            "listRule": "",
+            "viewRule": "",
+            "createRule": null,
+            "updateRule": null,
+            "deleteRule": null
+          }
+        ],
+        "native_connection_defaults": {
+          "source": "PocketBase v0.40.5 core/db_connect.go; real Go App pragma tests",
+          "sqlite_engine_version": "3.53.4",
+          "sqlite_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+          "journal_mode": "wal",
+          "synchronous": "NORMAL",
+          "foreign_keys": "ON",
+          "busy_timeout_ms": 10000,
+          "temp_store": "MEMORY",
+          "cache_size_kib": -32000
+        }
+      }
+    },
+    "serving_profile": {
+      "parent": {
+        "cpu.max": "100000 100000\n",
+        "cpu.stat": "usage_usec 3027510348\nuser_usec 2773621794\nsystem_usec 253888554\ncore_sched.force_idle_usec 0\nnr_periods 59499\nnr_throttled 1234\nthrottled_usec 973882\nnr_bursts 0\nburst_usec 0\n",
+        "cpu.pressure": "some avg10=0.00 avg60=0.01 avg300=0.00 total=37359051\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=33821934\n",
+        "memory.max": "4294967296\n",
+        "memory.current": "1262858240\n",
+        "memory.swap.max": "0\n",
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "memory.stat": "anon 85434368\nfile 1165049856\nkernel 12374016\nkernel_stack 98304\npagetables 348160\nsec_pagetables 0\npercpu 123096\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 65536\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 85434368\ninactive_file 1136214016\nactive_file 28835840\nunevictable 0\nslab_reclaimable 11457048\nslab_unreclaimable 248808\nslab 11705856\nworkingset_refault_anon 0\nworkingset_refault_file 55502\nworkingset_activate_anon 0\nworkingset_activate_file 114\nworkingset_restore_anon 0\nworkingset_restore_file 26\nworkingset_nodereclaim 0\npgscan 349375\npgsteal 349367\npgscan_kswapd 349183\npgscan_direct 192\npgscan_khugepaged 0\npgsteal_kswapd 349175\npgsteal_direct 192\npgsteal_khugepaged 0\npgfault 2293216\npgmajfault 0\npgrefill 173228\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+        "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=240\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=240\n",
+        "io.stat": "8:0 rbytes=1233563648 wbytes=50807721984 rios=51776 wios=4612385 dbytes=0 dios=0\n",
+        "io.pressure": "some avg10=0.01 avg60=0.43 avg300=0.19 total=14053347\nfull avg10=0.01 avg60=0.43 avg300=0.19 total=13701033\n",
+        "children": [
+          "docker-2a0f167dc2ffb7f0f396a00fe455d996c6aaccecfa6ae934b3f6b8173890e8b9.scope"
+        ]
+      },
+      "targets": {
+        "pocketbase": {
+          "Id": "2a0f167dc2ffb7f0f396a00fe455d996c6aaccecfa6ae934b3f6b8173890e8b9",
+          "Image": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+          "RestartCount": 0,
+          "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 2419073,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-16T03:27:11.861689458Z",
+            "FinishedAt": "2026-10-16T03:27:10.926315766Z"
+          },
+          "limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "MemorySwap": 4294967296
+          },
+          "source_sha256": null,
+          "platform": "linux/amd64",
+          "image_manifest_digest": "sha256:bc371b827b558174e9d5f833cac457241574d6c3fe653b6a4453ca229c67e91f",
+          "compose_project": "baas-pocketbase-vps16",
+          "cgroup_parent": "tdsbaaspocketbasevps16.slice",
+          "process_cgroup": "0::/tdsbaaspocketbasevps16.slice/docker-2a0f167dc2ffb7f0f396a00fe455d996c6aaccecfa6ae934b3f6b8173890e8b9.scope\n"
+        }
+      },
+      "observed_health": {
+        "status": "ok",
+        "db": "ok",
+        "uptime_s": 2
+      }
+    },
+    "images": {
+      "pocketbase": {
+        "Image": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:bc371b827b558174e9d5f833cac457241574d6c3fe653b6a4453ca229c67e91f"
+      }
+    },
+    "host_identity_sha256": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+    "native_build": {
+      "native_platform": "linux/amd64",
+      "app_source_sha256": "985a44c5d53a0167ecaba053d7e07bc5fb63c02ff47902f074dd631367abe801",
+      "image_id": "sha256:489cba19771795f5378e440c7f6d83d81f8460bf31e673aff8a392b080a9b131",
+      "executable_sha256": "0e31cb09904df2e7cfb8a8e8d2fe18a577a1a2e4e55b92e7b937f1ee157123f8",
+      "builder": "golang:1.27.2-bookworm@sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad",
+      "runtime": "debian:bookworm-slim@sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91",
+      "builder_budget": {
+        "cpus": 2,
+        "memory_bytes": 8589934592,
+        "swap_bytes": 0
+      },
+      "build_flags": [
+        "CGO_ENABLED=0",
+        "-trimpath",
+        "-buildvcs=false",
+        "-ldflags=-s -w"
+      ],
+      "versions": {
+        "service": "PocketBase",
+        "version": "v0.40.5",
+        "upstream_commit": "6f370ea741f33adf889eef02e3c1b884a47aa522",
+        "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.5",
+        "go_module": "github.com/pocketbase/pocketbase",
+        "go_version": "1.27.2",
+        "sqlite_engine_version": "3.53.4",
+        "sqlite_engine_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+        "native_platform": "linux/amd64",
+        "builder": {
+          "tag": "golang:1.27.2-bookworm",
+          "index_digest": "sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61",
+          "amd64_manifest": "sha256:55395706e9703db746cc507abfc4eb2aea75918f8a8024e4848e2cb81004f5ad"
+        },
+        "runtime": {
+          "tag": "debian:bookworm-slim",
+          "index_digest": "sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+          "amd64_manifest": "sha256:a4672c0cb26fbdde88e38fa2dfb6c681942306680e41e4378b28770b6e79ee91"
+        },
+        "extension": "Native Go extension using PocketBase routing, collection/record APIs, supported DB query builder, and RunInTransaction",
+        "sqlite_driver": "PocketBase upstream default modernc.org/sqlite v1.60.1; no custom standalone serving driver",
+        "serving_budget": {
+          "cpus": 1,
+          "memory_bytes": 4294967296,
+          "swap_bytes": 0
+        },
+        "runner_profile": "k6-2cpu-8g-v3"
+      }
+    }
+  },
+  "log_sha256": "ce3040d9c8351babb9e01edb6c6d72a825293d27c2118ed487ff45d766fbe79d",
+  "finished_utc": "2026-10-16T03:27:14.981857+00:00",
+  "auth_scope": "Synthetic compatibility app users/JWTs; 0 regular native Auth users and 1 platform installer superuser; native signup/login/session throughput not measured",
+  "proofs": [
+    "10 real native Go tests including strict contracts, concurrent transactions, actual closed-DB 503/500, rollback, bootstrap and native pragmas",
+    "42 inherited exact-byte checks",
+    "6 shared concurrency/auth/Unicode tests",
+    "5 native REST/storage/permission/identity tests",
+    "3 real-native-schema import tests",
+    "seed logging privacy",
+    "4 fixed workload/scoring tests",
+    "24 original benchmark and 3 original isolation tests; shared Supabase harness regressions",
+    "PocketBase source-snapshot/config/budget/ownership/frozen-evidence regressions",
+    "3 repository artifact-policy regressions",
+    "actual owned transport stop and real process restart preserving acknowledged post/exactly-once like/ID sequence; not provider power-loss durability"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "expected_vus": 11000,
+  "purpose": "candidate_confirmation",
+  "cli_exit_code": 0,
+  "new_full_directories": [
+    "20261016T141530600668Z-standard-11000vu-k6-2cpu-8g-v3"
+  ],
+  "before_count": 23,
+  "after_count": 24,
+  "pending_slot_consumed_even_if_later_guard_raises": true
+}

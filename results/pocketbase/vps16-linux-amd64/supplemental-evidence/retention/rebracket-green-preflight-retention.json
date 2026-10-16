@@ -1,0 +1,48 @@
+{
+  "actual_private_candidates_checked": 3,
+  "actual_issued_signatures_checked": 20000,
+  "all_http_query_strings_and_jwt_shapes_screened": true,
+  "originals_unchanged": true,
+  "artifacts": [
+    {
+      "original": "rebracket-policy-green-original.log",
+      "original_sha256": "c2e94b2c44750bfe2b5e3cf39cc635a3086f484a639548dafdf8270bcfcb7465",
+      "original_bytes": 3796,
+      "public_derivative": "screened-rebracket-policy-green-original.log",
+      "derivative_sha256": "c2e94b2c44750bfe2b5e3cf39cc635a3086f484a639548dafdf8270bcfcb7465",
+      "derivative_bytes": 3796,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "rebracket-controller-preflight-private.log",
+      "original_sha256": "2309aee525063e27587980b2033e164f90817c194085b87c50e65aaed74b618a",
+      "original_bytes": 105,
+      "public_derivative": "screened-rebracket-controller-preflight-private.log",
+      "derivative_sha256": "2309aee525063e27587980b2033e164f90817c194085b87c50e65aaed74b618a",
+      "derivative_bytes": 105,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "rebracket-external-harness-before-first-new-hold.json",
+      "original_sha256": "7377b6221042d29f91be82cc5faaa99a07fb4d37b89c52420d96521672bda8d6",
+      "original_bytes": 2335,
+      "public_derivative": "screened-rebracket-external-harness-before-first-new-hold.json",
+      "derivative_sha256": "7377b6221042d29f91be82cc5faaa99a07fb4d37b89c52420d96521672bda8d6",
+      "derivative_bytes": 2335,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "before-rebracket-controller-services.json",
+      "original_sha256": "a86779c17ebc7093a88f407227478b4a830069986a98a6303f758fdf52bc05df",
+      "original_bytes": 6479,
+      "public_derivative": "screened-before-rebracket-controller-services.json",
+      "derivative_sha256": "a86779c17ebc7093a88f407227478b4a830069986a98a6303f758fdf52bc05df",
+      "derivative_bytes": 6479,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    }
+  ]
+}

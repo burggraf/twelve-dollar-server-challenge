@@ -1,0 +1,38 @@
+{
+  "actual_private_candidates_checked": 3,
+  "actual_issued_signatures_checked": 20000,
+  "all_http_query_strings_and_jwt_shapes_screened": true,
+  "originals_unchanged": true,
+  "artifacts": [
+    {
+      "original": "controller-preflight-driver-private.log",
+      "original_sha256": "0df9f1c1f0456255c503821427df71cf4c19782b195f1c149b50dc77632c4163",
+      "original_bytes": 98,
+      "public_derivative": "screened-controller-preflight-driver-private.log",
+      "derivative_sha256": "0df9f1c1f0456255c503821427df71cf4c19782b195f1c149b50dc77632c4163",
+      "derivative_bytes": 98,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "before-controller-full-attempts-services.json",
+      "original_sha256": "c797c90dfb27c11df55cd709081ac86149c921be03f3a992cbdc2289f231710a",
+      "original_bytes": 6479,
+      "public_derivative": "screened-before-controller-full-attempts-services.json",
+      "derivative_sha256": "c797c90dfb27c11df55cd709081ac86149c921be03f3a992cbdc2289f231710a",
+      "derivative_bytes": 6479,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    },
+    {
+      "original": "external-harness-frozen-before-first-hold.json",
+      "original_sha256": "8fb22cf8c78478bd88f5b4e77f4ccc7ab771c443f01e1da7a0e8db3383122ab6",
+      "original_bytes": 663,
+      "public_derivative": "screened-external-harness-frozen-before-first-hold.json",
+      "derivative_sha256": "8fb22cf8c78478bd88f5b4e77f4ccc7ab771c443f01e1da7a0e8db3383122ab6",
+      "derivative_bytes": 663,
+      "jwt_shape_redactions": 0,
+      "http_query_redactions": 0
+    }
+  ]
+}

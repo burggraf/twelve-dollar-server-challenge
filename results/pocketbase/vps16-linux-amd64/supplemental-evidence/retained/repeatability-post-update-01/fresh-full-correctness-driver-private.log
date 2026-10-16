@@ -1,0 +1,11 @@
+Running as unit: tds-pocketbase-post-update-frozen-full-correctness-20261016.service; invocation ID: 03ba6129453747b7a3849c0af4c781cd
+Read-only service snapshot saved; service count: 27 ; existing listener PID count: 1
+FULL_POCKETBASE_CORRECTNESS_GATE_PASSED
+Read-only service snapshot saved; service count: 27 ; existing listener PID count: 1
+POST_UPDATE_FRESH_ORIGINAL_FULL_CORRECTNESS_SAME_IMMUTABLE_IMAGE_CANONICAL_RESTORED_PASSED
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 1min 56.911s
+CPU time consumed: 6.480s
+Memory peak: 332.0K
+Memory swap peak: 0B

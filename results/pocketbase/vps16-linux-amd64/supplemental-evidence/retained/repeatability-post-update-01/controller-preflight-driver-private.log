@@ -1,0 +1,13 @@
+Running as unit: tds-pocketbase-post-update-controller-preflight-20261016.service
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/post-update-repeatability-controller.py", line 235, in <module>
+    guards.require_continuity(baseline,before,before,observed['persistent_service_event_counts'],observed['window_complete'])
+  File "/opt/twelve-dollar-baas-pocketbase-16g/supplemental-20261016/repeatability-post-update-01/repeatability_guards.py", line 36, in require_continuity
+    raise RuntimeError('Persistent-service lifecycle events observed; keep continuity failed')
+RuntimeError: Persistent-service lifecycle events observed; keep continuity failed
+Finished with result: exit-code
+Main processes terminated with: code=exited/status=1
+Service runtime: 3.462s
+CPU time consumed: 3.397s
+Memory peak: 3.0M
+Memory swap peak: 0B
