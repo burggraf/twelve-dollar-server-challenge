@@ -1,0 +1,140 @@
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:74: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:75: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:76: trailing whitespace.
++ Container baas-pocketbase-vps16-import Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:77: trailing whitespace.
++ Container baas-pocketbase-vps16-import Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:79: trailing whitespace.
++ Container baas-pocketbase-vps16-correctness Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:80: trailing whitespace.
++ Container baas-pocketbase-vps16-correctness Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:296: trailing whitespace.
++ Container baas-pocketbase-vps16-persist-prepare Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:297: trailing whitespace.
++ Container baas-pocketbase-vps16-persist-prepare Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:299: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:300: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:301: trailing whitespace.
++ Container baas-pocketbase-vps16-stopped-transport Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:302: trailing whitespace.
++ Container baas-pocketbase-vps16-stopped-transport Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:304: trailing whitespace.
++ Container baas-pocketbase-vps16-persist-verify Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/fresh-correctness.log:305: trailing whitespace.
++ Container baas-pocketbase-vps16-persist-verify Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/post-full-correctness-canonical-reset-original.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/post-full-correctness-canonical-reset-original.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/post-full-correctness-canonical-reset-original.log:3: trailing whitespace.
++ Container baas-pocketbase-vps16-import Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/post-full-correctness-canonical-reset-original.log:4: trailing whitespace.
++ Container baas-pocketbase-vps16-import Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T043528119331Z-standard-12250vu-k6-2cpu-8g-v3/k6.log:10487: new blank line at EOF.
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T044605205968Z-standard-11750vu-k6-2cpu-8g-v3/k6.log:1201: new blank line at EOF.
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T045642345263Z-standard-11500vu-k6-2cpu-8g-v3/k6.log:33: new blank line at EOF.
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T050718032204Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/rebracket-paused-attempt-evidence/20261016T051753209322Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:70: new blank line at EOF.
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:74: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:75: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:76: trailing whitespace.
++ Container baas-pocketbase-vps16-import Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:77: trailing whitespace.
++ Container baas-pocketbase-vps16-import Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:79: trailing whitespace.
++ Container baas-pocketbase-vps16-correctness Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:80: trailing whitespace.
++ Container baas-pocketbase-vps16-correctness Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:296: trailing whitespace.
++ Container baas-pocketbase-vps16-persist-prepare Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:297: trailing whitespace.
++ Container baas-pocketbase-vps16-persist-prepare Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:299: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:300: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:301: trailing whitespace.
++ Container baas-pocketbase-vps16-stopped-transport Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:302: trailing whitespace.
++ Container baas-pocketbase-vps16-stopped-transport Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:304: trailing whitespace.
++ Container baas-pocketbase-vps16-persist-verify Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/fresh-correctness.log:305: trailing whitespace.
++ Container baas-pocketbase-vps16-persist-verify Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/post-full-correctness-canonical-reset-original.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopping 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/post-full-correctness-canonical-reset-original.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-pocketbase-1 Stopped 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/post-full-correctness-canonical-reset-original.log:3: trailing whitespace.
++ Container baas-pocketbase-vps16-import Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/post-full-correctness-canonical-reset-original.log:4: trailing whitespace.
++ Container baas-pocketbase-vps16-import Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T132243742041Z-standard-10000vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T132243742041Z-standard-10000vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T133315240512Z-standard-11000vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T133315240512Z-standard-11000vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T134348817451Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T134348817451Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T135423709666Z-standard-10000vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T135423709666Z-standard-10000vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T140455380113Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T140455380113Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T141530600668Z-standard-11000vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T141530600668Z-standard-11000vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T142606275166Z-standard-10000vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/stopped-attempt-evidence2/20261016T142606275166Z-standard-10000vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/transient-units-red-original.log:5: trailing whitespace.
++test_main_control_or_cgroup_residents_are_never_excluded (__main__.TransientUnitTests.test_main_control_or_cgroup_residents_are_never_excluded) ... 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/transient-units-red-original.log:10: trailing whitespace.
++test_no_named_ssh_or_dmarie_exception (__main__.TransientUnitTests.test_no_named_ssh_or_dmarie_exception) ... 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/transient-units-red-original.log:14: trailing whitespace.
++test_running_failed_activating_or_pending_job_remains_watched (__main__.TransientUnitTests.test_running_failed_activating_or_pending_job_remains_watched) ... 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/repeatability-post-update-01/transient-units-red-original.log:19: trailing whitespace.
++test_unknown_or_missing_no_resident_proof_fails_closed (__main__.TransientUnitTests.test_unknown_or_missing_no_resident_proof_fails_closed) ... 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/stopped-attempt-evidence/20261016T034903946160Z-standard-10000vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/stopped-attempt-evidence/20261016T034903946160Z-standard-10000vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/stopped-attempt-evidence/20261016T035933324654Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:1: trailing whitespace.
++ Container baas-pocketbase-vps16-load Creating 
+results/pocketbase/vps16-linux-amd64/supplemental-evidence/retained/stopped-attempt-evidence/20261016T035933324654Z-standard-11250vu-k6-2cpu-8g-v3/k6.log:2: trailing whitespace.
++ Container baas-pocketbase-vps16-load Created 
