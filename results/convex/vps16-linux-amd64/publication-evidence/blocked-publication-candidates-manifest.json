@@ -1,0 +1,737 @@
+{
+  "scope": "Exact staged bytes, including unchanged raw whitespace, not current later overlays",
+  "base": "ae4ab27bec789009a1d6221eef44ec5f45a8497b",
+  "git_index_tree": "139f8be77d3179fec3bf789b3258d10677d48234",
+  "files": [
+    {
+      "path": "MASTER_PLAN.md",
+      "bytes": 62401,
+      "sha256": "bb7d0fa666f48a2beba308e69764ac3d972de80ee08a5346c62c5b05d2589ebc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13356,
+      "sha256": "690b0813a0570e6f828a430f42361f419e6668cae4c62555545ac4f3c85283c0"
+    },
+    {
+      "path": "results/convex/README.md",
+      "bytes": 12758,
+      "sha256": "110b135328996870677ea8720047e885a4a8c985916393d03762a48ed7c9d055"
+    },
+    {
+      "path": "results/convex/implementation-checks/COMPLETE_RUNTIME_AND_BENCHMARK_PREPARATION.md",
+      "bytes": 7551,
+      "sha256": "28fb7bf5d4d7bafbb61b223b056ca64335c6c0ca9984a072918ff5ae0bb9bca0"
+    },
+    {
+      "path": "results/convex/implementation-checks/FULL_FROZEN_CORRECTNESS.md",
+      "bytes": 6928,
+      "sha256": "333176ae118ff1a62710c5af8f655e74845b7da9660119bc764a52f4874cfcd1"
+    },
+    {
+      "path": "results/convex/implementation-checks/NATIVE_BENCHMARK_PREPARATION_SHA256SUMS",
+      "bytes": 2319,
+      "sha256": "912c7a37bff4225e97d5871e36e323082fc30d7dc12b616a4f8227bf7e69b303"
+    },
+    {
+      "path": "results/convex/implementation-checks/NATIVE_BLOCKED_UNSCORED_SHA256SUMS",
+      "bytes": 5616,
+      "sha256": "301487de09554feb4cea91b496a96f179260bbbcaf5f40df1100a5fb8ead994d"
+    },
+    {
+      "path": "results/convex/implementation-checks/NATIVE_CALIBRATIONS_SHA256SUMS",
+      "bytes": 4135,
+      "sha256": "221df9bd907076d5ba3942a6a2b5b277bda3166f5b883eceacce8a1e80c54482"
+    },
+    {
+      "path": "results/convex/implementation-checks/NATIVE_FULL_FROZEN_SHA256SUMS",
+      "bytes": 1593,
+      "sha256": "37cb7c5d60dec2adb35c784e0379c90e92be49b803c45fe297e7139d983e3355"
+    },
+    {
+      "path": "results/convex/implementation-checks/NATIVE_RUNNER_PREFLIGHT_SHA256SUMS",
+      "bytes": 767,
+      "sha256": "e2a9b20ee5a6888dd354037ab35e5fcd5c03d581601dd0c501d2b10632dd5497"
+    },
+    {
+      "path": "results/convex/implementation-checks/RUNNER_RESERVE_PREFLIGHT.md",
+      "bytes": 4463,
+      "sha256": "a57c690f5335063aaca60309dc6d39f12553482badfc1df043e9a595d1a975a3"
+    },
+    {
+      "path": "results/convex/implementation-checks/UNSCORED_CALIBRATIONS.md",
+      "bytes": 8140,
+      "sha256": "ac0f65a1d264e96a317b5c763ea1aa15a8a824523446012a223d64c3179fb665"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-benchmark-adapter-green-original-public.log",
+      "bytes": 10226,
+      "sha256": "2447443501ddd9114851b1155205dfacf26f48905a80a5c72954df8dc9be1e3a"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-benchmark-adapter-green-retention.json",
+      "bytes": 1349,
+      "sha256": "0c81176fd6566de28434dad5cc9036e0459017c587ec2ed0bfd3cf8d256bd475"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-benchmark-adapter-green-state-public.json",
+      "bytes": 559728,
+      "sha256": "08eed257a2c33614cdb7732ed4f7c6af3043b76c2eb3831cb03ab58f0a96beac"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-benchmark-evidence-red-public.log",
+      "bytes": 3127,
+      "sha256": "3cc6d211884d002a5eb4b136b4e3b0968ea865334fc98ddae925326968ee5720"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-benchmark-harness-red-public.log",
+      "bytes": 3120,
+      "sha256": "ad805a091c6d23e2c76ab2ca4e2e2bd7e59514967deaff15f501b8b6b18fda01"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-benchmark-reds-retention.json",
+      "bytes": 2812,
+      "sha256": "0a45153b30a7ff4d5ddec6619537aa5b3b348dfdc0fe772c62a3eef45e08fd85"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-controller-frozen-source-public.py",
+      "bytes": 3187,
+      "sha256": "cc9f6eaa7e92347d5c79262bdcb47405a4052993c92fa88136a6d9c49223ec03"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-controller-original-public.log",
+      "bytes": 1885,
+      "sha256": "09f25af8dc220b61a096843fbfdd20b9f013da59f793b1545f1488c93f1fb4d3"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-first-stop-campaign-public.json",
+      "bytes": 271,
+      "sha256": "1552ebe25bf4b65ae4c385145bc66199ac448e513f13e993b765f3eefbfc2f6a"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-first-stop-current-state-public.json",
+      "bytes": 11608,
+      "sha256": "1fe80c056627b8823548fa998f867e71b344b90cc01519dd7669999511e834bf"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-first-stop-retention.json",
+      "bytes": 10396,
+      "sha256": "e66596dd3dc3295bfa89f3db47610b6bbf341500e2dbfbd46512ef65ae9a32f4"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-after-services-public.json",
+      "bytes": 6479,
+      "sha256": "d525b670801e816da3652c6b2c4f6852a72f7b9fe6f1ba8a4c2cc1c157502d68"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-backend-original-public.log",
+      "bytes": 11002276,
+      "sha256": "690313633f80f097e1fe8bf9e9a355cedaa941593617862a6221365faaa6ca70"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-dmarie-manager-original-public.log",
+      "bytes": 340817,
+      "sha256": "0bafbad9d717e5ed952fc8920b1f0280e4ee836ad614bb70eac1b8b8b858bbd4"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-dmarie-manager-state-public.txt",
+      "bytes": 286,
+      "sha256": "003be690846930799d64190bc959f74096b353280b81728f5dbecf68d7b20352"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-docker-events-original-public.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log",
+      "bytes": 20659,
+      "sha256": "0e503912d3e7c21c5a11bf62d4fdbf5f2d3598aaa6679d88808acda347c3a009"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-postmortem-driver-original-public.log",
+      "bytes": 485,
+      "sha256": "f9b4c3df92595120394ab88c8a69c6fce7738e332d6d7ded80e518a5a2b464c4"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-postmortem-first-retention.json",
+      "bytes": 3497,
+      "sha256": "20385896e6d437d1b458c19318e942f91db48baa79d22ca6c7802ae6bfd9e648"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-raw-replay-driver-original-public.log",
+      "bytes": 121,
+      "sha256": "09bd3a8a5583c1b15878b5769b8cd350936b7d780cc7310c634b860aaa1ce469"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-raw-replayed-retention.json",
+      "bytes": 2437,
+      "sha256": "cf1628c100faa976eef87e6806a260f7144fca19e24ea985a8ffe1265b38280c"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-oom-read-only-postmortem-public.json",
+      "bytes": 18714,
+      "sha256": "de39654684816eade0f3a75234647283ecb59f87446bca4c7ca3b3b95ea92fc2"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-owned-postgres-after-stop-original-public.log",
+      "bytes": 120984,
+      "sha256": "86802b94f295e30a273c713df8a5e945dcdfbb731bd854239353b2514ed1bdf5"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-owned-postgres-stop-after-public.json",
+      "bytes": 7161,
+      "sha256": "e81a360a8c9c77e13ad214ccec687deac3b8dcafebb589fedf522a6db09c3c7c"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-owned-postgres-stop-before-public.json",
+      "bytes": 9094,
+      "sha256": "d7e91a5cd43948988cfbbdb92136b657548ff389108dc9547f781d4c2c54ca45"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-owned-postgres-stop-original-public.log",
+      "bytes": 120,
+      "sha256": "d8def323ca5380b5432b27c098092f6a76125f1b19b2d85302696b810d0a09f5"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-owned-stop-after-services-public.json",
+      "bytes": 6479,
+      "sha256": "dcc05b9aa9e0cc991837cc5e57578a4931cbeafe7ca2d51366ad9b4cbde32c1b"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-owned-stop-driver-original-public.log",
+      "bytes": 205,
+      "sha256": "949b98edb71a60b7f2f9b885e5d2743fb317f6f19b334491b1838bb8e71acd78"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-owned-stop-retention.json",
+      "bytes": 3545,
+      "sha256": "66125bc31bdc15f3735b307860e2fc0a0d3420ce8481ec9f80d6d88bfe18458c"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-capacity-unit-driver-original-public.log",
+      "bytes": 1282,
+      "sha256": "de156f7b46018815ab1a43636d14dd705fb2e97f638e82b4530bc9d1a49e0a47"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-current-published-git-baseline-public.json",
+      "bytes": 553201,
+      "sha256": "0628eae8c413c5cd1d86bcbc7367bc04e313b6fe4c572dead885770c82951aed"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-executed-cleanup-benchmark-controller-public.py",
+      "bytes": 973,
+      "sha256": "6432cddfa77b1b7346487b865873b0fb017dda927975baa8e0fb111c213d075d"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-executed-collect-native-capacity-oom-postmortem-public.py",
+      "bytes": 4110,
+      "sha256": "3fc6b2ffe6fb5b6cca65939aa077131e263d1b2e4a9fb5f49f507d7616d12cd4"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-executed-external-harness-retention.json",
+      "bytes": 3551,
+      "sha256": "c37da16fabf0ef7fa4c97b9fa7e422929bebee40bc3cd6fc999125b0f2aecea4"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-executed-review-native-oom-run-public.py",
+      "bytes": 6968,
+      "sha256": "f1ed04a4ca20e48ee64a90daae726d53e8ff72c7c9938efe5bb8380527174cf8"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-executed-review-native-run-public.py",
+      "bytes": 6182,
+      "sha256": "ed2644bf5f9207896756e682341a0d87fca4531e0ed8c16d8d3ffb40800bc0f8"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-executed-runner-reserve-preflight-public.py",
+      "bytes": 2975,
+      "sha256": "7f774d2e14a47a208c9e0de112c8056aee21fa5ff1d6d55753ab248166a287a7"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-executed-stop-only-owned-postgres-after-blocked-acceptance-public.py",
+      "bytes": 3522,
+      "sha256": "9a218c0ac1d985ce82603fb1e2363f05da9cee2afd519ec1ba5c88f39795b20b"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-SHA256SUMS-public",
+      "bytes": 1221,
+      "sha256": "9b5019645a73897873f287a28733c964e40eaf3e868f203f2a64555726c91ee3"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-correctness-manifest-public.json",
+      "bytes": 28030,
+      "sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-correctness-public.log",
+      "bytes": 22452,
+      "sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-current-native-state-public.json",
+      "bytes": 14671,
+      "sha256": "61cc7a8e2ca3cb31fdf29f6e2ae5dc5ecdb7c389117ecfd725b053f5832ed613"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-dataset-public.json",
+      "bytes": 299,
+      "sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-k6-public.log",
+      "bytes": 170208,
+      "sha256": "e3766c730b515ee5443efcb3c975e6f48b07c8a3f9b9f993dd490740d88162c2"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-k6-summary-public.json",
+      "bytes": 10309,
+      "sha256": "753be9237664dca22600c697c705d9777feab7129337f7d5de976b8b213deb0a"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-manifest-before-public.json",
+      "bytes": 40175,
+      "sha256": "625a250779e6ba42cb4dc54cf69e51717dc1334081d0e4ea17f387910019a386"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-manifest-public.json",
+      "bytes": 51900,
+      "sha256": "d977856752d20d83bcc6b6191b24be52c38f016ca16fb8a2c0fb6477872e687d"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-raw-review-public.json",
+      "bytes": 1752,
+      "sha256": "54d2fa5e71974936ddc9bfadceac224272372acac8e814c646bf1cbf54e3890a"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-report-public.md",
+      "bytes": 2094,
+      "sha256": "7618944a2e2b6b66afe3e3e2e31c7df4446982c007eed90aaa0e97f85aa7fa6d"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-reset-public.log",
+      "bytes": 1177,
+      "sha256": "a3d60cc5f9c1881a6cb6d1ecd49b07aedf873d557d839380b9b0520aad5ac3fd"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-resources-public.jsonl",
+      "bytes": 105458,
+      "sha256": "d2be9ff8a0d843251a37cb162d78b5bf672bb6832c28f1b4066d413a048cb862"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-retention.json",
+      "bytes": 8705,
+      "sha256": "6c4001a51c17e69abf75616cf693e20075a8bee731f51f4756f67f15546588f7"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-runtime-freeze-public.json",
+      "bytes": 26283,
+      "sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-summary-public.json",
+      "bytes": 2111,
+      "sha256": "359bbb4f42a7f9a6d1aec7b751af32a5a6159f5da8983cfb92f1171df4edb299"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch",
+      "bytes": 60644,
+      "sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-fixture-generation-original-public.log",
+      "bytes": 278,
+      "sha256": "64df84a1b26873ebada1069c7d3e3ef3e2dc1bf839d34ce1d9a3ff6be07e8d33"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness-before-public.json",
+      "bytes": 25666,
+      "sha256": "6548136c14698d700ee98c1e4e58f3e6834273c2a15be92405b986274ad37753"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness-driver-original-public.log",
+      "bytes": 673,
+      "sha256": "d63825f5a95c99295502b8aebb5842dbfcef1331a1751a49d95527003eb6182b"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness-final-state-public.json",
+      "bytes": 14275,
+      "sha256": "1b7e33d8e57847591430e4a580d4666e55e83a09df71471e9d79824e86830049"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness-first-controller-public.py",
+      "bytes": 7762,
+      "sha256": "32a1529f1ffee151b4f5623ddd6423c177fd79a232ae1321cd7f5b39402173b1"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness-first-dataset-public.json",
+      "bytes": 299,
+      "sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness-first-original-public.log",
+      "bytes": 21256,
+      "sha256": "f5ebb7c64e2f1bc89ee0b698b4dfa9beafc30dd7606579bdf16099c53d1e982d"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness-first-retention.json",
+      "bytes": 2413,
+      "sha256": "7f9912066a363038f7e9a60897243c6f6937ccb3f2614f354b9647ff750ae38a"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-after-public.json",
+      "bytes": 25698,
+      "sha256": "68dd84d1b6f45f7a78237b9120ab200df493a7826315f7e4c76aab2770a568d0"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-after-services-public.json",
+      "bytes": 6715,
+      "sha256": "b2ce005dbba3a0e3fc25caa4b2682b49fa7cf13c8543b4089e11a44612285e89"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-before-public.json",
+      "bytes": 25692,
+      "sha256": "5d7aa1f0c1fd09f2838ee2ab2b20ac55ae8b24359cbe8d7731c4a4e8c5f075e6"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-before-services-public.json",
+      "bytes": 6479,
+      "sha256": "1018607f6b83270652b57fc54bfd738ee326fc70caf45857497f2399af5d120b"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-controller-public.py",
+      "bytes": 8323,
+      "sha256": "063c8f4a3959c151c58cec4abf32cc312cb38122c408aee017d93124c285a4ae"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-dataset-public.json",
+      "bytes": 299,
+      "sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-driver-original-public.log",
+      "bytes": 903,
+      "sha256": "8bab105e97484b9bdb24eb0adc7635cb2f4a26cc20ebd97a05dcb0bed446df12"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-final-state-public.json",
+      "bytes": 14277,
+      "sha256": "165059242a7033b9cb90afca6ef42bb9fbeefc3f843c07405ad78f7411431c93"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-manifest-public.json",
+      "bytes": 28030,
+      "sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-original-public.log",
+      "bytes": 22452,
+      "sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-frozen-correctness2-retention.json",
+      "bytes": 6677,
+      "sha256": "fcd106c4eb4751c4ce8f5ea9616bb4df580b78fb2e35ce2bf46abcad3c1d9d9c"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-full-current-freeze-original-public.log",
+      "bytes": 995,
+      "sha256": "e9469e558e47a7f3536c1872f7829cc924987a9894c54ff432af841b5a8bd6d7"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-full-current-freeze-public.json",
+      "bytes": 26283,
+      "sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-full-current-freeze-retention.json",
+      "bytes": 2898,
+      "sha256": "06e695a4a3900902798458a92ad24734465bfb047dbcb84a883b892d9e59316c"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-full-freeze-red-public.log",
+      "bytes": 2697,
+      "sha256": "f5bda3158031face0288324c883d3c520aee855ba30d4e043eb04a55197e8188"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-load-config-red-public.log",
+      "bytes": 972,
+      "sha256": "7203d0f49a2b909fa9cc431cde4b7931e7435a07e6000f5dde2416df0ad5c3ce"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-parent-oom-stop-red-public.log",
+      "bytes": 988,
+      "sha256": "49708db20aae07e315075d0026b06cf74618cd9456acf8da65131f36d99a4fe2"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-published-git-base-original-public.log",
+      "bytes": 375,
+      "sha256": "e6aafaa8b121f010e1ac678061a680cd780cb762b8a9830cb8593f04d57275b3"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-runner-reserve-preflight-driver-original-public.log",
+      "bytes": 108,
+      "sha256": "692c559277be3032098b0c94edb8a14c9a6d0b12754983fc76de6f4f8f38383b"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-runner-reserve-preflight-public.json",
+      "bytes": 21254,
+      "sha256": "3698fc74294684b4415d8fdb516fced14b90fd56b2b6b261f05bd20d97bd2c8e"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-runner-reserve-preflight-retention.json",
+      "bytes": 1864,
+      "sha256": "8edc6802cb43649ef4b469079a0b4eb7cfaf9f439d6ad6982fa0854d68c3b354"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-runner-version-original-public.log",
+      "bytes": 176,
+      "sha256": "4acf69c1c04cc51d5de61ff5060439b716aa7e627a53e642f037e2406c886ffc"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke-launch-first-retention.json",
+      "bytes": 796,
+      "sha256": "4dcb640f057da5b7850d6a392e7e05c41e07a620b4e83f764676e5af14685ea3"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-SHA256SUMS-public",
+      "bytes": 1221,
+      "sha256": "7ab8cca9d235c33f7a61742a03b352a93e91e3bd9e963abeebda4df731a5d779"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-correctness-manifest-public.json",
+      "bytes": 28030,
+      "sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-correctness-public.log",
+      "bytes": 22452,
+      "sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-current-native-state-public.json",
+      "bytes": 14553,
+      "sha256": "b358cd734384f7a8aac2cc1613e4a92be312b6bda16973ae63fcee919e3eedef"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-dataset-public.json",
+      "bytes": 299,
+      "sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-driver-original-public.log",
+      "bytes": 1914,
+      "sha256": "2b12798f66380aab62542d3652f572a3fb367e51c3bd160ce469cd29cd561059"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-k6-public.log",
+      "bytes": 91,
+      "sha256": "819d2906c65cbd0086bdb92689c4da83bfa97c03fce8958506be60d919904a8e"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-k6-summary-public.json",
+      "bytes": 10034,
+      "sha256": "6b1c3e5cdbba2cde493e2604fe06bc2331c439bbae89830fdc23bec0e1b0157b"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-manifest-before-public.json",
+      "bytes": 40196,
+      "sha256": "dcefea91bb603f875a9044544b41044da50b30ad386c880ca4a868b6743e7de3"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-manifest-public.json",
+      "bytes": 51889,
+      "sha256": "b46be8b07dd1464c339ddc835321d1c5cda8dd6d7a4630c064ccaad70f8c255d"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-raw-review-public.json",
+      "bytes": 1648,
+      "sha256": "30b2fd79edf693ff9cd7249e171ab3b215283367080e3328a039d9563b745fe7"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-report-public.md",
+      "bytes": 2048,
+      "sha256": "b2152a3e55a4fda621a63d87a8e3a7e9fdf13fe62b876588e39278b7d496b523"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-reset-public.log",
+      "bytes": 1178,
+      "sha256": "4a4ef7a08229d760eec3b9a5904d3d150d214ef67ae48282ee94b5dd0f54fd7b"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-resources-public.jsonl",
+      "bytes": 105380,
+      "sha256": "8b6316f37ac5a2dbadeba2e48d13de0ca3bd4e1c044344d730a6124207716707"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-runtime-freeze-public.json",
+      "bytes": 26283,
+      "sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-summary-public.json",
+      "bytes": 2059,
+      "sha256": "aaab65aceca6febf9d22c7c62bcf92ce95cb55593f64a6369b21067991cc2346"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke100-working-tree-public.patch",
+      "bytes": 60644,
+      "sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke1000-actual-driver-original-public.log",
+      "bytes": 1967,
+      "sha256": "1a3a0e317ff96eb29fef18065a07194ac323aa3c40397e62f3d4714f0185b898"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-smoke1000-driver-original-public.log",
+      "bytes": 283,
+      "sha256": "315ae25d6751dc7c4763930c116b26867d98cb0f27fbc6ddfed6ed7daa03412b"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-oom-raw-review-public.json",
+      "bytes": 2022,
+      "sha256": "c1554a3e8611324f1363a3d193d5523ff99c6dc06a552195ff7f140f2933ad25"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-SHA256SUMS-public",
+      "bytes": 1221,
+      "sha256": "5fe5fda51e7f29cb913d7e2e0af0cc5d6b9d4d5df8e0ad199ae8d6adbc038c9c"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-correctness-manifest-public.json",
+      "bytes": 28030,
+      "sha256": "70eb8430b807560d49d64733d2c6723f09c936f4243c9cafa0d435c739bc0831"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-correctness-public.log",
+      "bytes": 22452,
+      "sha256": "19a550f6de3529966732336a059730499e2c728b957de637de381264bb6ce9b9"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-dataset-public.json",
+      "bytes": 299,
+      "sha256": "dfb4a8f4f2aebbd1864596de1a21fe0b59fae4931596dcfa8fbb1872ac0dd36e"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-k6-public.log",
+      "bytes": 8352023,
+      "sha256": "adb70b8b342839a5033318a5385c6e224449dd476056ae304dca95deb7a98f44"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-k6-summary-public.json",
+      "bytes": 9929,
+      "sha256": "8d3a8dd7bb297d3962917fe98dc5b3d6c7a23d7367fd41c669ac56a146be5ce7"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-manifest-before-public.json",
+      "bytes": 40202,
+      "sha256": "43c268ae39769760aa2b492efbe790726602409950b46fd02564c8b2a757270c"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-manifest-public.json",
+      "bytes": 50041,
+      "sha256": "42688699b3d58eae6cadabe152579fc51876dc7d939b355bd74f6ee26b40a4d5"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-report-public.md",
+      "bytes": 2126,
+      "sha256": "fa5b90ed829d2cd13e0a4512b014428b00018894f33220ff23ed01cab76ab894"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-reset-public.log",
+      "bytes": 1178,
+      "sha256": "5d787649122936db01a21e5711581427f51d7c1a899b9f6533e94aded61dfbfd"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-resources-public.jsonl",
+      "bytes": 1299274,
+      "sha256": "48bc8b530df933fb2878603f8072855fae4bc627915f4f3c0f4a33a7fb1a7fb4"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-runtime-freeze-public.json",
+      "bytes": 26283,
+      "sha256": "880384531c8e373c1c375e5b8565e87b81870a2fc784c38d1d23eb8dc452c305"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-summary-public.json",
+      "bytes": 2112,
+      "sha256": "c6c2da32b9c585d3a9de184f3b36ebaf2f5a2e3654eb953f31c22f16463217a7"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch",
+      "bytes": 60644,
+      "sha256": "5fa18b50203db47e5447f62a406d7c5398acab0f0433ddb245381cd19870c7a9"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-two-calibrations-raw-review-driver-original-public.log",
+      "bytes": 230,
+      "sha256": "9850ee511c13a686fece1a92af48921c9ccd0facd72906273c8cdd4defa5a21d"
+    },
+    {
+      "path": "results/convex/implementation-checks/native-two-calibrations-raw-reviewed-retention.json",
+      "bytes": 10062,
+      "sha256": "5db64bfb6b51d92914756b29767a6ecc630c17ef799f2f56f24f266870691a10"
+    },
+    {
+      "path": "results/convex/vps16-linux-amd64/BLOCKED_UNSCORED.md",
+      "bytes": 11521,
+      "sha256": "70eb68e579f57167d15cf4247e120d7ad9e8e8486b298d3453802bb557b72cd1"
+    },
+    {
+      "path": "results/convex/vps16-linux-amd64/README.md",
+      "bytes": 2156,
+      "sha256": "4d6e258aaf6e6935a830e4440e53bd3cd4544e412891414d1cc3b5b9812f65ba"
+    },
+    {
+      "path": "results/convex/vps16-linux-amd64/blocked-unscored.json",
+      "bytes": 5616,
+      "sha256": "f551bce729455c20b02fa7fe42e3830330b9e14c96fba15996797f4f37f4d082"
+    },
+    {
+      "path": "scripts/benchmark.py",
+      "bytes": 29085,
+      "sha256": "fbe8212bf1bb38ef35d8bd646674bc8d0ecd970d44c435b357c513f9737f5838"
+    },
+    {
+      "path": "scripts/convex_benchmark.py",
+      "bytes": 18926,
+      "sha256": "546d4d08e8579ecdba68c1fc84f9b709c3ebaadf7a1eb1cd0b6a6e507c6cfe8c"
+    },
+    {
+      "path": "scripts/convex_profile.py",
+      "bytes": 12365,
+      "sha256": "e3c636bfeea4d737373cc0671cf1297f7e484952ef5b4415ca1ac1f5d8fcd581"
+    },
+    {
+      "path": "services/convex/README.md",
+      "bytes": 21758,
+      "sha256": "e71be988180ccfe2d523e6692d188cfeda22a95cbe06d773aeb4f4a84706796b"
+    },
+    {
+      "path": "services/convex/compose.benchmark.yaml",
+      "bytes": 797,
+      "sha256": "ba45ed496f8bd673e17ba22b6f9194522b08d551774d0c2a7178c253a2a82040"
+    },
+    {
+      "path": "test/baas/test_convex_evidence.py",
+      "bytes": 3701,
+      "sha256": "c8726e3899e312a485401923b5d043aa2635404770ba818714fb257025438aef"
+    },
+    {
+      "path": "test/baas/test_convex_freeze.py",
+      "bytes": 2279,
+      "sha256": "45f18976ba0f03106f04b82fd42b5ea5786ab459340e37a62fc98eb508cf9444"
+    },
+    {
+      "path": "test/baas/test_convex_harness.py",
+      "bytes": 2411,
+      "sha256": "e4535ceecca40424e7a705eb184623f244fbc5bf0cb164a01bed4f702655956e"
+    },
+    {
+      "path": "test/baas/test_convex_load_config.py",
+      "bytes": 2237,
+      "sha256": "b7d45550a7444545b81bcb015bd1917c70b087450a51d567f5c94613ad21aee5"
+    }
+  ]
+}

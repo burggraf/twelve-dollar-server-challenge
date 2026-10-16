@@ -1,0 +1,378 @@
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:1: trailing whitespace.
++2026-10-16T02:09:15.588014+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:cc:1a:a3:84:af:4b:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:2: trailing whitespace.
++2026-10-16T02:09:36.906906+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:44:4c:a8:6f:20:ab:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:3: trailing whitespace.
++2026-10-16T02:09:56.161097+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.59 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=49009 PROTO=TCP SPT=47909 DPT=40817 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:17: trailing whitespace.
++2026-10-16T02:10:16.474125+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.38 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=53 ID=53275 PROTO=TCP SPT=39664 DPT=5633 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:18: trailing whitespace.
++2026-10-16T02:10:37.784547+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.44 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=50 ID=60603 PROTO=TCP SPT=40968 DPT=42350 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:19: trailing whitespace.
++2026-10-16T02:10:57.222196+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=102.88.21.136 DST=38.49.214.235 LEN=40 TOS=0x08 PREC=0x20 TTL=239 ID=17249 PROTO=TCP SPT=53649 DPT=10269 WINDOW=1024 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:20: trailing whitespace.
++2026-10-16T02:11:15.953905+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.71 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=41623 PROTO=TCP SPT=32954 DPT=23382 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:21: trailing whitespace.
++2026-10-16T02:11:36.282929+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=195.182.16.23 DST=38.49.214.235 LEN=40 TOS=0x08 PREC=0x60 TTL=245 ID=54321 PROTO=TCP SPT=46395 DPT=8080 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:22: trailing whitespace.
++2026-10-16T02:11:55.547859+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:44:4c:a8:a7:3a:e3:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:23: trailing whitespace.
++2026-10-16T02:12:16.165108+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.68 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=49012 PROTO=TCP SPT=60542 DPT=36926 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:24: trailing whitespace.
++2026-10-16T02:12:35.987956+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.25 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=2426 PROTO=TCP SPT=37624 DPT=8082 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:25: trailing whitespace.
++2026-10-16T02:12:55.878627+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.52 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=47065 PROTO=TCP SPT=45129 DPT=33991 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:26: trailing whitespace.
++2026-10-16T02:13:15.595923+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:44:4c:a8:dd:82:91:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:27: trailing whitespace.
++2026-10-16T02:13:37.305946+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.42 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=32780 PROTO=TCP SPT=43869 DPT=21089 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:28: trailing whitespace.
++2026-10-16T02:13:55.807913+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.59 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=17703 PROTO=TCP SPT=59826 DPT=45736 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:29: trailing whitespace.
++2026-10-16T02:14:15.579543+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.25 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=60348 PROTO=TCP SPT=52991 DPT=53397 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:30: trailing whitespace.
++2026-10-16T02:14:35.502187+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.58 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=13558 PROTO=TCP SPT=52940 DPT=51468 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:31: trailing whitespace.
++2026-10-16T02:14:56.721905+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.10 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=50 ID=60562 PROTO=TCP SPT=33446 DPT=50075 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:32: trailing whitespace.
++2026-10-16T02:15:15.867370+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:00:1c:73:8e:dd:4b:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:33: trailing whitespace.
++2026-10-16T02:15:36.408931+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.38 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=53 ID=3460 PROTO=TCP SPT=37454 DPT=4829 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:34: trailing whitespace.
++2026-10-16T02:15:55.564916+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:28:99:3a:4c:e6:67:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:35: trailing whitespace.
++2026-10-16T02:16:15.428919+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.63 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=9213 PROTO=TCP SPT=55825 DPT=59313 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:36: trailing whitespace.
++2026-10-16T02:16:36.906960+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.58 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=41559 PROTO=TCP SPT=45072 DPT=49066 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:37: trailing whitespace.
++2026-10-16T02:16:56.148908+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.26 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=57959 PROTO=TCP SPT=59340 DPT=23955 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:133: trailing whitespace.
++2026-10-16T02:17:16.004901+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.44 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=52782 PROTO=TCP SPT=48906 DPT=7681 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:140: trailing whitespace.
++2026-10-16T02:17:35.581163+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=01:00:5e:00:00:01:28:99:3a:9c:f6:cf:08:00 SRC=1.1.1.1 DST=224.0.0.1 LEN=32 TOS=0x00 PREC=0xC0 TTL=1 ID=0 PROTO=2 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:141: trailing whitespace.
++2026-10-16T02:17:56.452742+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.25 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=15055 PROTO=TCP SPT=41013 DPT=51849 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:142: trailing whitespace.
++2026-10-16T02:18:16.872422+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.38 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=51 ID=14165 PROTO=TCP SPT=37199 DPT=40521 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:143: trailing whitespace.
++2026-10-16T02:18:35.939917+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=94.154.43.131 DST=38.49.214.235 LEN=60 TOS=0x00 PREC=0x00 TTL=239 ID=22486 DF PROTO=TCP SPT=40002 DPT=3740 WINDOW=64240 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:144: trailing whitespace.
++2026-10-16T02:18:56.215693+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.10 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=50 ID=16787 PROTO=TCP SPT=57136 DPT=51507 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:145: trailing whitespace.
++2026-10-16T02:19:15.778490+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.140.42 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=62761 PROTO=TCP SPT=60077 DPT=5845 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:152: trailing whitespace.
++2026-10-16T02:19:35.662298+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.63 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=54 ID=53370 PROTO=TCP SPT=60404 DPT=5510 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-capacity-oom-kernel-original-public.log:153: trailing whitespace.
++2026-10-16T02:19:55.710912+00:00 claudius.azabab.com kernel: [UFW BLOCK] IN=eth0 OUT= MAC=bc:24:11:84:cb:35:02:01:01:01:01:02:08:00 SRC=85.217.149.56 DST=38.49.214.235 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=15444 PROTO=TCP SPT=36127 DPT=31979 WINDOW=65535 RES=0x00 SYN URGP=0 
+results/convex/implementation-checks/native-first-smoke1000-correctness-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Creating 
+results/convex/implementation-checks/native-first-smoke1000-correctness-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Created 
+results/convex/implementation-checks/native-first-smoke1000-k6-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-load Creating 
+results/convex/implementation-checks/native-first-smoke1000-k6-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-load Created 
+results/convex/implementation-checks/native-first-smoke1000-k6-public.log:1398: new blank line at EOF.
+results/convex/implementation-checks/native-first-smoke1000-reset-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-reset-tools Creating 
+results/convex/implementation-checks/native-first-smoke1000-reset-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-reset-tools Created 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:15: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:17: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:28: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:30: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:33: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:36: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:38: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:46: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:49: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:51: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:58: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:61: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:75: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:77: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:81: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:84: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:86: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:89: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:91: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:106: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:107: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:109: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:110: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:140: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:149: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:150: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:313: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:315: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:317: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:320: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:322: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:335: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:337: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:340: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:346: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:349: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:351: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:353: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:355: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:358: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:360: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:362: trailing whitespace.
++ 
+results/convex/implementation-checks/native-first-smoke1000-working-tree-public.patch:364: trailing whitespace.
++ 
+results/convex/implementation-checks/native-fixture-generation-original-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-benchmark-fixture-tools Creating 
+results/convex/implementation-checks/native-fixture-generation-original-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-benchmark-fixture-tools Created 
+results/convex/implementation-checks/native-frozen-correctness-first-original-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Creating 
+results/convex/implementation-checks/native-frozen-correctness-first-original-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Created 
+results/convex/implementation-checks/native-frozen-correctness2-original-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Creating 
+results/convex/implementation-checks/native-frozen-correctness2-original-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Created 
+results/convex/implementation-checks/native-runner-version-original-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-runner-version Creating 
+results/convex/implementation-checks/native-runner-version-original-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-runner-version Created 
+results/convex/implementation-checks/native-smoke100-correctness-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Creating 
+results/convex/implementation-checks/native-smoke100-correctness-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Created 
+results/convex/implementation-checks/native-smoke100-k6-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-load Creating 
+results/convex/implementation-checks/native-smoke100-k6-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-load Created 
+results/convex/implementation-checks/native-smoke100-reset-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-reset-tools Creating 
+results/convex/implementation-checks/native-smoke100-reset-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-reset-tools Created 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:15: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:17: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:28: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:30: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:33: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:36: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:38: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:46: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:49: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:51: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:58: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:61: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:75: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:77: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:81: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:84: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:86: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:89: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:91: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:106: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:107: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:109: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:110: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:140: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:149: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:150: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:313: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:315: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:317: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:320: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:322: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:335: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:337: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:340: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:346: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:349: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:351: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:353: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:355: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:358: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:360: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:362: trailing whitespace.
++ 
+results/convex/implementation-checks/native-smoke100-working-tree-public.patch:364: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-correctness-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Creating 
+results/convex/implementation-checks/native-standard-first-stop-correctness-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-final-frozen-tools Created 
+results/convex/implementation-checks/native-standard-first-stop-k6-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-load Creating 
+results/convex/implementation-checks/native-standard-first-stop-k6-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-load Created 
+results/convex/implementation-checks/native-standard-first-stop-k6-public.log:69112: new blank line at EOF.
+results/convex/implementation-checks/native-standard-first-stop-reset-public.log:1: trailing whitespace.
++ Container baas-convexpg-vps16-reset-tools Creating 
+results/convex/implementation-checks/native-standard-first-stop-reset-public.log:2: trailing whitespace.
++ Container baas-convexpg-vps16-reset-tools Created 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:15: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:17: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:28: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:30: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:33: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:36: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:38: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:46: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:49: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:51: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:58: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:61: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:75: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:77: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:81: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:84: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:86: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:89: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:91: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:106: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:107: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:109: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:110: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:140: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:149: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:150: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:313: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:315: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:317: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:320: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:322: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:335: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:337: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:340: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:346: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:349: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:351: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:353: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:355: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:358: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:360: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:362: trailing whitespace.
++ 
+results/convex/implementation-checks/native-standard-first-stop-working-tree-public.patch:364: trailing whitespace.
++ 

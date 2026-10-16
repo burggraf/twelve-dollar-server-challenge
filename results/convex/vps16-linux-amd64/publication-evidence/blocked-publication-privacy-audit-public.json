@@ -1,0 +1,30 @@
+{
+  "scope": "Exact proposed git index publication bytes checked against actual private values from BOTH preserved SQLite and current PostgreSQL attempts; not a public download/CI claim",
+  "files": 146,
+  "bytes": 24082070,
+  "actual_private_candidates_checked": 7,
+  "manifest_sha256": "d20f580c6a2d567a1d296c87b4567188d9d581134c9865db74b259b3c7d211d1",
+  "private_match_paths": [],
+  "forbidden_private_file_paths": [],
+  "unredacted_http_log_query_paths": [],
+  "jwt_shaped_value_paths": [],
+  "exact_public_monitor_event_jsonl_allowlist": [
+    "results/convex/implementation-checks/native-capacity-oom-docker-events-original-public.jsonl",
+    "results/convex/implementation-checks/native-first-smoke1000-resources-public.jsonl",
+    "results/convex/implementation-checks/native-smoke100-resources-public.jsonl",
+    "results/convex/implementation-checks/native-standard-first-stop-resources-public.jsonl"
+  ],
+  "all_other_jsonl_private_storage_formats_remain_forbidden": true,
+  "staged_product_harness_code_equal_to_frozen_vps_paths": [
+    "scripts/benchmark.py",
+    "scripts/convex_benchmark.py",
+    "scripts/convex_profile.py",
+    "services/convex/compose.benchmark.yaml",
+    "test/baas/test_convex_evidence.py",
+    "test/baas/test_convex_freeze.py",
+    "test/baas/test_convex_harness.py",
+    "test/baas/test_convex_load_config.py"
+  ],
+  "staged_product_harness_code_mismatch_paths": [],
+  "git_index_tree": "139f8be77d3179fec3bf789b3258d10677d48234"
+}

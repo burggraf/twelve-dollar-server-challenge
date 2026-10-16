@@ -1,0 +1,16 @@
+{
+  "scope": "Exact proposed git index publication bytes checked against actual private values from BOTH preserved SQLite and current PostgreSQL attempts; not a public download/CI claim",
+  "files": 146,
+  "bytes": 24082070,
+  "actual_private_candidates_checked": 7,
+  "manifest_sha256": "d20f580c6a2d567a1d296c87b4567188d9d581134c9865db74b259b3c7d211d1",
+  "private_match_paths": [],
+  "forbidden_private_file_paths": [
+    "results/convex/implementation-checks/native-capacity-oom-docker-events-original-public.jsonl",
+    "results/convex/implementation-checks/native-first-smoke1000-resources-public.jsonl",
+    "results/convex/implementation-checks/native-smoke100-resources-public.jsonl",
+    "results/convex/implementation-checks/native-standard-first-stop-resources-public.jsonl"
+  ],
+  "unredacted_http_log_query_paths": [],
+  "jwt_shaped_value_paths": []
+}

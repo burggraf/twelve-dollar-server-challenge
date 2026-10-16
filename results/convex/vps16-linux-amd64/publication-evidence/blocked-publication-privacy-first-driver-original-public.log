@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/opt/twelve-dollar-baas-convexpg-16g/blocked-publication-privacy-first.py", line 45, in <module>
+    assert not matches and not forbidden and not queries and not jwts, 'Publication audit failed; inspect path-only report, never print matches'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Publication audit failed; inspect path-only report, never print matches

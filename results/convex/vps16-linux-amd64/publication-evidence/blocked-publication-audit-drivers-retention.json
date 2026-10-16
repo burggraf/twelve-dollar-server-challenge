@@ -1,0 +1,62 @@
+{
+  "scope": "Native benchmark preparation/correctness stage; original clean shutdown remainsFAILED139; only separately approved capacity under unchanged budgets; actual private values screened before retrieval",
+  "actual_private_candidates_checked": 7,
+  "artifacts": [
+    {
+      "original_private_file": "blocked-publication-privacy-first-driver-original.log",
+      "original_bytes": 443,
+      "original_sha256": "22205fa5e2f67755ae21dcf48e3bc98ba0bac9a53d5898d2f787903a55bb9cfa",
+      "public_derivative": "blocked-publication-privacy-first-driver-original-public.log",
+      "derivative_bytes": 443,
+      "derivative_sha256": "22205fa5e2f67755ae21dcf48e3bc98ba0bac9a53d5898d2f787903a55bb9cfa",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "blocked-publication-privacy-final-driver-original.log",
+      "original_bytes": 80,
+      "original_sha256": "fe2a216f11cd5e67e3986b789e59d78e3188b42d6e4dbb935f3c34f994f3c5fa",
+      "public_derivative": "blocked-publication-privacy-final-driver-original-public.log",
+      "derivative_bytes": 80,
+      "derivative_sha256": "fe2a216f11cd5e67e3986b789e59d78e3188b42d6e4dbb935f3c34f994f3c5fa",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "blocked-publication-audit-first-source.py",
+      "original_bytes": 3596,
+      "original_sha256": "f9ae7ca341a5b8c29b53288ee39e91dfed1a5d11656ae315e7621c0ccbe6dc14",
+      "public_derivative": "blocked-publication-audit-first-source-public.py",
+      "derivative_bytes": 3596,
+      "derivative_sha256": "f9ae7ca341a5b8c29b53288ee39e91dfed1a5d11656ae315e7621c0ccbe6dc14",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    },
+    {
+      "original_private_file": "blocked-publication-audit-final-source.py",
+      "original_bytes": 5304,
+      "original_sha256": "636cf7d56ff803043882b5056b7d15444dcedf73ac93b6ad7a3843d02591fe56",
+      "public_derivative": "blocked-publication-audit-final-source-public.py",
+      "derivative_bytes": 5304,
+      "derivative_sha256": "636cf7d56ff803043882b5056b7d15444dcedf73ac93b6ad7a3843d02591fe56",
+      "query_string_redactions_by_pattern": [
+        0,
+        0,
+        0
+      ],
+      "jwt_redactions": 0
+    }
+  ]
+}
