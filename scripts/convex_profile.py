@@ -11,8 +11,21 @@ import urllib.error
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-PROJECT = 'baas-convexpg-vps16'
-SLICE = 'tdsbaasconvexpgvps16.slice'
+DEPLOYMENTS = {
+    'historical': ('baas-convexpg-vps16', 'tdsbaasconvexpgvps16.slice', 14000, 13210),
+    'retest-v1': ('baas-convex4g-retest-v1', 'tdsbaasconvex4gretestv1.slice', 14100, 13211),
+}
+
+
+def deployment_settings(name='historical'):
+    if name not in DEPLOYMENTS:
+        raise ValueError('Unknown explicit Convex deployment profile')
+    return DEPLOYMENTS[name]
+
+
+DEPLOYMENT_NAME = os.environ.get('CONVEX_DEPLOYMENT_PROFILE', 'historical')
+PROJECT, SLICE, SITE_PORT, CONTROL_PORT = deployment_settings(DEPLOYMENT_NAME)
+STAGE = os.environ.get('CONVEX_RETEST_STAGE', 'baseline')
 MEMORY = {'backend': 3221225472, 'postgres': 1073741824}
 STATE = ROOT / '.state/convex'
 SERVICES = ('backend', 'postgres')
@@ -20,8 +33,67 @@ PINS = json.loads((ROOT / 'services/convex/versions.json').read_text())
 POSTGRES = json.loads((ROOT / 'services/convex/postgres-versions.json').read_text())
 
 
-def validate_stack(value):
-    """Require both native servers and their actual shared parent/child limits."""
+SIZING_KEYS = (
+    'APPLICATION_MAX_CONCURRENT_QUERIES', 'APPLICATION_MAX_CONCURRENT_MUTATIONS',
+    'APPLICATION_MAX_CONCURRENT_V8_ACTIONS', 'APPLICATION_MAX_CONCURRENT_NODE_ACTIONS',
+    'POSTGRES_MAX_CONNECTIONS', 'MAX_ISOLATE_WORKERS',
+)
+STAGES = ('baseline', 'official', 'pg32', 'workers64', 'http8', 'mutation1', 'http1')
+NATIVE_LIMIT_KEYS = (
+    'TRANSACTION_MAX_READ_SIZE_ROWS', 'TRANSACTION_MAX_READ_SIZE_BYTES',
+    'TRANSACTION_MAX_READ_SET_INTERVALS', 'TRANSACTION_MAX_NUM_USER_WRITES',
+    'TRANSACTION_MAX_USER_WRITE_SIZE_BYTES', 'DATABASE_UDF_USER_TIMEOUT_SECONDS',
+    'DATABASE_UDF_SYSTEM_TIMEOUT_SECONDS',
+)
+
+
+def sizing_settings(deployment='historical', stage='baseline'):
+    deployment_settings(deployment)
+    if stage not in STAGES or (deployment == 'historical' and stage != 'baseline'):
+        raise ValueError('Unapproved Convex sizing stage')
+    if stage in ('mutation1', 'http1'):
+        return {'APPLICATION_MAX_CONCURRENT_MUTATIONS': '1', **({'APPLICATION_MAX_CONCURRENT_V8_ACTIONS': '1'} if stage == 'http1' else {})}
+    expected = {}
+    if stage != 'baseline':
+        expected.update({key: '16' for key in SIZING_KEYS[:4]})
+    if stage in ('pg32', 'workers64', 'http8'):
+        expected['POSTGRES_MAX_CONNECTIONS'] = '32'
+    if stage in ('workers64', 'http8'):
+        expected['MAX_ISOLATE_WORKERS'] = '64'
+    if stage == 'http8':
+        expected['APPLICATION_MAX_CONCURRENT_V8_ACTIONS'] = '8'
+    return expected
+
+
+# Fail closed even at import; selecting a profile is not permission to run it.
+sizing_settings(DEPLOYMENT_NAME, STAGE)
+
+
+def validate_backend_environment(env, deployment='historical', stage='baseline'):
+    expected = sizing_settings(deployment, stage)
+    if env.get('UDF_CACHE_MAX_SIZE') != '0' or env.get('RUNTIME_WORKER_THREADS') != '1':
+        raise RuntimeError('Serving cache/thread configuration differs')
+    if any(key in env for key in NATIVE_LIMIT_KEYS):
+        raise RuntimeError('Native serving defaults overridden')
+    if {key: env[key] for key in SIZING_KEYS if key in env} != expected:
+        raise RuntimeError('Effective sizing settings differ from the explicitly selected profile')
+    return True
+
+
+def compose_files(deployment='historical', stage='baseline'):
+    sizing_settings(deployment, stage)
+    names = ['compose.yaml', 'compose.postgres.yaml', 'compose.benchmark.yaml']
+    if deployment == 'retest-v1':
+        names.append('compose.retest-v1.yaml')
+        trials = ('mutation1', 'http1') if stage == 'http1' else ('mutation1',) if stage == 'mutation1' else STAGES[1:STAGES.index(stage)+1]
+        for trial in trials:
+            names.append('compose.retest-' + trial + '.yaml')
+    return [ROOT / 'services/convex' / name for name in names]
+
+
+def validate_stack(value, deployment='historical'):
+    """Require exact budgets; a new ownership profile must be explicitly named."""
+    project, slice_name, _, _ = deployment_settings(deployment)
     def require(condition, message):
         if not condition:
             raise RuntimeError(message)
@@ -43,10 +115,10 @@ def validate_stack(value):
             require(bool(re.fullmatch(r'[0-9a-f]{64}', identity)), 'Missing full native container identity')
             require(target['platform'] == 'linux/amd64', 'Serving images must be native Linux AMD64')
             require(target['image_manifest_digest'] == manifest, 'Pinned serving image differs: ' + role)
-            require(target['compose_project'] == PROJECT, 'Serving project ownership differs: ' + role)
-            require(target['cgroup_parent'] == SLICE, 'Serving parent differs: ' + role)
+            require(target['compose_project'] == project, 'Serving project ownership differs: ' + role)
+            require(target['cgroup_parent'] == slice_name, 'Serving parent differs: ' + role)
             scope = 'docker-' + identity + '.scope'
-            require(target['process_cgroup'].strip() == f'0::/{SLICE}/{scope}', 'Actual process is outside serving parent: ' + role)
+            require(target['process_cgroup'].strip() == f'0::/{slice_name}/{scope}', 'Actual process is outside serving parent: ' + role)
             children.append(scope)
             state = target['State']
             require(state['Running'] is True and state['OOMKilled'] is False, 'Native serving process is not healthy/running: ' + role)
@@ -161,10 +233,7 @@ def targets():
         item = json.loads(capture(['docker', 'inspect', name]))[0]
         env = dict(entry.split('=', 1) for entry in item['Config']['Env'])
         if role == 'backend':
-            if env.get('UDF_CACHE_MAX_SIZE') != '0' or env.get('RUNTIME_WORKER_THREADS') != '1':
-                raise RuntimeError('Serving cache/thread configuration differs')
-            for key in ['TRANSACTION_MAX_READ_SIZE_ROWS', 'TRANSACTION_MAX_READ_SIZE_BYTES', 'TRANSACTION_MAX_READ_SET_INTERVALS', 'TRANSACTION_MAX_NUM_USER_WRITES', 'TRANSACTION_MAX_USER_WRITE_SIZE_BYTES', 'DATABASE_UDF_USER_TIMEOUT_SECONDS', 'DATABASE_UDF_SYSTEM_TIMEOUT_SECONDS']:
-                if key in env: raise RuntimeError('Native serving defaults overridden')
+            validate_backend_environment(env, deployment=DEPLOYMENT_NAME, stage=STAGE)
         pid = item['State']['Pid']; process = Path('/proc', str(pid), 'cgroup')
         cgroup = process.read_text() if pid and process.exists() else ''
         group = Path('/sys/fs/cgroup' + cgroup.strip().split('::')[1]) if cgroup else None
@@ -175,8 +244,8 @@ def targets():
 def profile():
     require_native()
     value = {'targets': targets(), 'parent': parent_sample()}
-    validate_stack(value)
-    with urllib.request.urlopen('http://127.0.0.1:14000/health', timeout=15) as response:
+    validate_stack(value, deployment=DEPLOYMENT_NAME)
+    with urllib.request.urlopen(f'http://127.0.0.1:{SITE_PORT}/health', timeout=15) as response:
         health = json.load(response)
     if health.get('status') != 'ok' or health.get('db') != 'ok':
         raise RuntimeError('Native storage health is not ready')
@@ -189,7 +258,7 @@ def admin_query(path):
         raise ValueError('Unsupported native deployment catalog')
     from convex import _NoRedirect
     values = dict(line.split('=', 1) for line in (STATE / 'cli.env').read_text().splitlines())
-    request = urllib.request.Request('http://127.0.0.1:13210/api/query', data=json.dumps({'path': path, 'args': {}, 'format': 'json'}).encode(), headers={'Content-Type': 'application/json', 'Authorization': 'Convex ' + values['CONVEX_SELF_HOSTED_ADMIN_KEY']})
+    request = urllib.request.Request(f'http://127.0.0.1:{CONTROL_PORT}/api/query', data=json.dumps({'path': path, 'args': {}, 'format': 'json'}).encode(), headers={'Content-Type': 'application/json', 'Authorization': 'Convex ' + values['CONVEX_SELF_HOSTED_ADMIN_KEY']})
     try:
         with urllib.request.build_opener(urllib.request.ProxyHandler({}), _NoRedirect()).open(request, timeout=30) as response: value = json.load(response)
         if value.get('status') != 'success': raise ValueError()

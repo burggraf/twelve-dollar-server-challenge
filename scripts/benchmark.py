@@ -30,6 +30,10 @@ def deployment_settings(system, machine, environ):
     if environ.get('BENCHMARK_PLATFORM', native) != native:
         raise ValueError('Primary benchmark requires native images, not emulation')
     project = environ.get('BENCHMARK_PROJECT', 'baas-trailbase')
+    if project == 'baas-convex4g-retest-v1':
+        if system != 'Linux' or arch != 'amd64':
+            raise ValueError('The versioned Convex retest requires native Linux AMD64')
+        return {'project': project, 'platform': native, 'track': 'vps16-linux-amd64-convex4g-retest-v1'}
     if len(project) > 63 or not re.fullmatch(r'baas-(?:trailbase|supabase|pocketbase|convexpg|nhost)(?:-[a-z0-9]+)*', project):
         raise ValueError('Project must use the isolated baas-trailbase benchmark namespace')
     prefix = 'local-orbstack-' if system == 'Darwin' else ('vps16-linux-' if project in ('baas-trailbase-vps16', 'baas-supabase-vps16', 'baas-pocketbase-vps16', 'baas-convexpg-vps16', 'baas-nhost-vps16') else 'vps-linux-')

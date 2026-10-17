@@ -1,0 +1,5 @@
+# Layer only after mutation1: serialize installed HTTP handlers through commit.
+services:
+  backend:
+    environment:
+      APPLICATION_MAX_CONCURRENT_V8_ACTIONS: "1"

@@ -64,7 +64,8 @@ def report_header():
 
 
 def compose():
-    return ['docker', 'compose', '-p', s.PROJECT, '-f', str(ROOT / 'services/convex/compose.yaml'), '-f', str(ROOT / 'services/convex/compose.postgres.yaml'), '-f', str(ROOT / 'services/convex/compose.benchmark.yaml')]
+    files = s.compose_files(s.DEPLOYMENT_NAME, s.STAGE)
+    return ['docker', 'compose', '-p', s.PROJECT] + [arg for path in files for arg in ['-f', str(path)]]
 
 
 def token_hash():
@@ -133,6 +134,10 @@ def monitor(stop, destination):
 
 
 def attempt(vus, tier='standard', smoke=False):
+    if s.DEPLOYMENT_NAME == 'retest-v1':
+        from convex_retest_safety import validate_attempt
+        validate_attempt(vus, tier, smoke)
+        raise RuntimeError('Fresh serving attempts require their versioned adapter and actual new lifecycle/budget/monitoring evidence')
     require_headroom()
     if tier != 'standard' or not 1 <= vus <= 20000: raise ValueError('Only approved standard tier and1..20000VUs')
     if b.capture(['docker', 'ps', '-aq', '--filter', 'name=^' + b.LOAD + '$']).strip(): raise RuntimeError('Owned runner name occupied; inspect before cleanup')
@@ -205,6 +210,8 @@ Outcome: **{outcome}** — {reason}. One attempt, not a maximum-capacity score. 
 
 
 def main():
+    if s.DEPLOYMENT_NAME == 'retest-v1':
+        raise RuntimeError('Fresh retest requires its versioned shared-budget controller, not the historical CLI')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--smoke', action='store_true'); parser.add_argument('--vus', type=int, default=1000); parser.add_argument('--campaign', action='store_true'); parser.add_argument('--max-vus', type=int, default=20000); parser.add_argument('--max-attempts', type=int, default=12)
     args = parser.parse_args()

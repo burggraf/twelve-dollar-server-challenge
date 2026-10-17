@@ -1,0 +1,6 @@
+# Named trial 2: add only after measured server/pool/client headroom permits.
+# Combine after the official tuple trial; never raise server max_connections.
+services:
+  backend:
+    environment:
+      POSTGRES_MAX_CONNECTIONS: "32"

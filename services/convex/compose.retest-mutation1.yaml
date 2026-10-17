@@ -1,0 +1,6 @@
+# One evidence-driven decrease from BASELINE; no pg32/isolate/official overlay.
+# Native retry/time/durability limits and aggregate budgets remain unchanged.
+services:
+  backend:
+    environment:
+      APPLICATION_MAX_CONCURRENT_MUTATIONS: "1"

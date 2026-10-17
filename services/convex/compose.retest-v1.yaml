@@ -1,0 +1,15 @@
+# Explicit new namespace only; combine AFTER all three historical Compose files.
+# Fresh volumes, unchanged 3-GiB/1-GiB children under one 1-CPU/4-GiB parent.
+name: baas-convex4g-retest-v1
+services:
+  backend:
+    cgroup_parent: tdsbaasconvex4gretestv1.slice
+    environment:
+      INSTANCE_NAME: baas-convex4g-retest-v1
+    ports: !override
+      - "127.0.0.1:14100:3211"
+      - "127.0.0.1:13211:3210"
+    restart: "no"
+  postgres:
+    cgroup_parent: tdsbaasconvex4gretestv1.slice
+    restart: "no"

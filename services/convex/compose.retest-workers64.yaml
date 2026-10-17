@@ -1,0 +1,6 @@
+# Named trial 3: cap the separate isolate pool, not the Tokio worker threads.
+# Requires native nested action/query/mutation progress and full correctness.
+services:
+  backend:
+    environment:
+      MAX_ISOLATE_WORKERS: "64"

@@ -1,0 +1,9 @@
+# Named trial 1: match the pinned official example's concurrency tuple.
+# Query/mutation defaults were already16; HTTP/V8 and Node binary defaults64.
+services:
+  backend:
+    environment:
+      APPLICATION_MAX_CONCURRENT_QUERIES: "16"
+      APPLICATION_MAX_CONCURRENT_MUTATIONS: "16"
+      APPLICATION_MAX_CONCURRENT_V8_ACTIONS: "16"
+      APPLICATION_MAX_CONCURRENT_NODE_ACTIONS: "16"

@@ -1,0 +1,6 @@
+# Conditional final diagnostic ONLY if observed HTTP/V8 queue/CPU/memory pressure
+# supports this one-variable decrease; not execution authority or an optimum.
+services:
+  backend:
+    environment:
+      APPLICATION_MAX_CONCURRENT_V8_ACTIONS: "8"
