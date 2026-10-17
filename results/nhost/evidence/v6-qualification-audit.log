@@ -1,0 +1,1224 @@
+COMPLETE_UNALTERED_NEW_QUALIFICATION_ORIGINAL correctness.log 9094 51a6e805b9edd57c08b8e405b0295431d2185fb73b7f720e2400ee0bb5fa179a
+
+=== complete-original-shared-native ===
+ Container baas-nhost-vps16-complete-original-shared-native-7e909bb373f548c7869c81a351c20d88 Creating 
+ Container baas-nhost-vps16-complete-original-shared-native-7e909bb373f548c7869c81a351c20d88 Created 
+v22.20.0
+TAP version 13
+# Subtest: health requires a successful storage-backed native result
+ok 1 - health requires a successful storage-backed native result
+  ---
+  duration_ms: 100.867394
+  type: 'test'
+  ...
+# Subtest: feed and detail preserve exact numeric IDs, Unicode and property order
+ok 2 - feed and detail preserve exact numeric IDs, Unicode and property order
+  ---
+  duration_ms: 11.004127
+  type: 'test'
+  ...
+# Subtest: create verifies compatibility JWT and sends only signed native identity and bytes
+ok 3 - create verifies compatibility JWT and sends only signed native identity and bytes
+  ---
+  duration_ms: 50.184701
+  type: 'test'
+  ...
+# Subtest: authentication and request validation fail before native calls
+ok 4 - authentication and request validation fail before native calls
+  ---
+  duration_ms: 8.11205
+  type: 'test'
+  ...
+# Subtest: duplicate likes preserve status and exact response fields
+ok 5 - duplicate likes preserve status and exact response fields
+  ---
+  duration_ms: 8.745116
+  type: 'test'
+  ...
+# Subtest: missing posts and unknown routes keep distinct error contracts
+ok 6 - missing posts and unknown routes keep distinct error contracts
+  ---
+  duration_ms: 5.772286
+  type: 'test'
+  ...
+# Subtest: backend errors and malformed native successes fail closed without diagnostics
+ok 7 - backend errors and malformed native successes fail closed without diagnostics
+  ---
+  duration_ms: 82.364025
+  type: 'test'
+  ...
+# Subtest: stored body reads preserve a leading BOM exactly
+ok 8 - stored body reads preserve a leading BOM exactly
+  ---
+  duration_ms: 4.476246
+  type: 'test'
+  ...
+# Subtest: native escaped lone surrogates fail closed instead of successful invalid Unicode
+ok 9 - native escaped lone surrogates fail closed instead of successful invalid Unicode
+  ---
+  duration_ms: 2.699147
+  type: 'test'
+  ...
+# Subtest: native invalid UTF-8 fails closed without lossy replacement
+ok 10 - native invalid UTF-8 fails closed without lossy replacement
+  ---
+  duration_ms: 3.459903
+  type: 'test'
+  ...
+# Subtest: adapter handles SIGTERM with a completed clean exit
+ok 11 - adapter handles SIGTERM with a completed clean exit
+  ---
+  duration_ms: 6.529845
+  type: 'test'
+  ...
+# Subtest: native JWT carries only the verified actor and restricted Hasura role
+ok 12 - native JWT carries only the verified actor and restricted Hasura role
+  ---
+  duration_ms: 1.967777
+  type: 'test'
+  ...
+# Subtest: signed64 IDs and counts serialize as exact JSON numbers, never rounded or quoted
+ok 13 - signed64 IDs and counts serialize as exact JSON numbers, never rounded or quoted
+  ---
+  duration_ms: 0.254187
+  type: 'test'
+  ...
+# Subtest: invalid native integer payloads fail closed instead of malformed successful JSON
+ok 14 - invalid native integer payloads fail closed instead of malformed successful JSON
+  ---
+  duration_ms: 0.404838
+  type: 'test'
+  ...
+# Subtest: JSON rejects invalid UTF-8, unpaired surrogates and non-finite numbers without lossy replacement
+ok 15 - JSON rejects invalid UTF-8, unpaired surrogates and non-finite numbers without lossy replacement
+  ---
+  duration_ms: 1.682813
+  type: 'test'
+  ...
+# Subtest: positive IDs preserve exact signed-64-bit identity and canonical decimal form
+ok 16 - positive IDs preserve exact signed-64-bit identity and canonical decimal form
+  ---
+  duration_ms: 0.662853
+  type: 'test'
+  ...
+# Subtest: body uses ECMAScript trim and a 500 Unicode-code-point limit
+ok 17 - body uses ECMAScript trim and a 500 Unicode-code-point limit
+  ---
+  duration_ms: 0.321523
+  type: 'test'
+  ...
+# Subtest: every write verifies signature, algorithm, numeric expiry/nbf and strict signed payload
+ok 18 - every write verifies signature, algorithm, numeric expiry/nbf and strict signed payload
+  ---
+  duration_ms: 14.255089
+  type: 'test'
+  ...
+# Subtest: native bridge binds only verified subject, never caller role or arbitrary username metadata
+ok 19 - native bridge binds only verified subject, never caller role or arbitrary username metadata
+  ---
+  duration_ms: 0.987619
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 530.809885
+Testing http://adapter:4000
+-- golden reads (fresh database)
+  ok   GET /feed == golden -> 200
+  ok   GET /feed content-type (application/json)
+  ok   GET /posts/1 == golden -> 200
+  ok   GET /posts/250000 == golden -> 200
+  ok   GET /posts/500000 == golden -> 200
+  ok   GET /posts/:id content-type (application/json)
+-- health, 404s, id validation
+  ok   GET /health -> 200 {"status":"ok","db":"ok","uptime_s":12}
+  ok   GET /nope -> 404
+  ok   GET /posts/0 -> 400
+  ok   GET /posts/-1 -> 400
+  ok   GET /posts/abc -> 400
+  ok   GET /posts/1.5 -> 400
+  ok   GET /posts/999999999 -> 404
+-- auth
+  ok   POST /posts, no token -> 401
+  ok   POST /posts, Basic auth -> 401
+  ok   POST /posts, garbage token -> 401
+  ok   POST /posts, bad signature -> 401
+  ok   POST /posts, alg=none -> 401
+  ok   POST /posts, expired token -> 401
+  ok   POST /posts, sub not an integer -> 401
+  ok   POST /posts, no username -> 401
+  ok   POST /posts/abc/like, no token (auth before id) -> 401
+-- create validation
+  ok   empty body -> 400
+  ok   whitespace body -> 400
+  ok   numeric body -> 400
+  ok   missing body -> 400
+  ok   malformed JSON -> 400
+  ok   501-char body -> 400
+-- create, like, read back
+  ok   special characters round-trip (trimmed) -> 201
+  ok   create 500-char post -> 201
+  ok   POST /posts content-type (application/json)
+  ok   created_at format 2026-10-17T17:05:04.174Z
+  ok   created_at is now (UTC, 0s)
+  ok   like (first) -> 201
+  ok   like (repeat) -> 200
+  ok   like missing post -> 404
+  ok   like bad id (with token) -> 400
+  ok   read back, like_count 1 -> 200
+  ok   like on a seeded post is counted at once (12)
+  ok   feed has 20 posts
+  ok   new post is at the top of the feed
+  ok   feed entry matches the post
+passed=42 failed=0
+test_concurrent_duplicate_likes_commit_once (__main__.FeedContract.test_concurrent_duplicate_likes_commit_once) ... ok
+test_concurrent_post_ids_and_immediate_reads (__main__.FeedContract.test_concurrent_post_ids_and_immediate_reads) ... ok
+test_identity_is_bound_to_signed_subject (__main__.FeedContract.test_identity_is_bound_to_signed_subject) ... ok
+test_storage_health (__main__.FeedContract.test_storage_health) ... ok
+test_strict_jwt_payload_and_expiry (__main__.FeedContract.test_strict_jwt_payload_and_expiry) ... ok
+test_unicode_limits_and_ecmascript_trim (__main__.FeedContract.test_unicode_limits_and_ecmascript_trim) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.604s
+
+OK
+test_anonymous_cannot_write_or_access_application_tables (__main__.NativeNhost.test_anonymous_cannot_write_or_access_application_tables) ... ok
+test_compatibility_signer_cannot_forge_native_writer (__main__.NativeNhost.test_compatibility_signer_cannot_forge_native_writer) ... ok
+test_explicit_metadata_template_matches_real_native_permissions (__main__.NativeNhost.test_explicit_metadata_template_matches_real_native_permissions) ... ok
+test_native_feed_uses_real_supported_function (__main__.NativeNhost.test_native_feed_uses_real_supported_function) ... ok
+test_session_argument_is_hidden_even_from_signed_writer (__main__.NativeNhost.test_session_argument_is_hidden_even_from_signed_writer) ... ok
+test_stored_wide_id_bom_nul_and_binary_roundtrip (__main__.NativeNhost.test_stored_wide_id_bom_nul_and_binary_roundtrip) ... ok
+test_unicode_nul_and_bom_http_write_read_roundtrip (__main__.NativeNhost.test_unicode_nul_and_bom_http_write_read_roundtrip) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.136s
+
+OK
+
+=== acknowledged-http-prepare ===
+ Container baas-nhost-vps16-acknowledged-http-prepare-dea9199ba1454c9ab1537d3a0b5ce526 Creating 
+ Container baas-nhost-vps16-acknowledged-http-prepare-dea9199ba1454c9ab1537d3a0b5ce526 Created 
+Acknowledged HTTP post and exactly-once like recorded; no tokens retained.
+
+=== storage-unavailable-contract ===
+ Container baas-nhost-vps16-storage-unavailable-contract-7eeba0bd89154e2cb42b8fdfa82cf11e Creating 
+ Container baas-nhost-vps16-storage-unavailable-contract-7eeba0bd89154e2cb42b8fdfa82cf11e Created 
+Stopped native storage yields degraded health and sanitized failed writes, never false acknowledgement.
+
+=== acknowledged-http-restart-verify ===
+ Container baas-nhost-vps16-acknowledged-http-restart-verify-0762cb1e5d774620a4e9102cdb12ec03 Creating 
+ Container baas-nhost-vps16-acknowledged-http-restart-verify-0762cb1e5d774620a4e9102cdb12ec03 Created 
+Acknowledged HTTP post and exactly-once like survived actual database/application process restart; not a power-loss claim.
+
+NHOST_FULL_CANONICAL_ORIGINAL42_NODE19_SHARED6_NATIVE7_DEPENDENCY_HTTP_ACK_RESTART_RESET_FREEZE_PASS
+COMPLETE_UNALTERED_NEW_QUALIFICATION_ORIGINAL correctness-manifest.json 32745 5f810093f7cc061d764ecb62804facd733584ec076604b9b5a55e6d5857d8274
+{
+  "inputs": {
+    "app": "4880698fde7c5b947305482566f47282e08c43126ba985f86c37200de2916fbb",
+    "verification": "32e6f7ac0e9c97537ce60a22dd5d62b498ccbfae8943b1bf77e03e4236cb8122",
+    "runtime": "c5c2d4ba7dade44d6307ab714abeb7c2893dcbeb1ca52d393a75c99fd25682e4",
+    "schema": "9dcad27c0bab1fda14259542d0e17a27055fec2003034b618c333487cfc583bc",
+    "metadata": "878265df621985eb399dd087fdefae4e7618fd5d9502e9ab8173703b58da9da1",
+    "images": {
+      "graphql": {
+        "manifest": "sha256:2e024eca819824fe288f9d43a77008fda66b7266cf5be60002a56e6d73073e1a",
+        "platform": "linux/amd64"
+      },
+      "auth": {
+        "manifest": "sha256:1e8c3e8bb4c6977098c87aa8643d60d7e00fd9042d48b43f49226e21efe5a727",
+        "platform": "linux/amd64"
+      },
+      "db": {
+        "manifest": "sha256:ec9f656f17c8b4dfebf49e58cf5c46d493d4846d4ea6d8b85d0637f68ee33bfc",
+        "platform": "linux/amd64"
+      },
+      "adapter": {
+        "manifest": "sha256:868499d55378719bffa87b0ed1f099591823c029b543043c09c2483468e93201",
+        "platform": "linux/amd64"
+      }
+    },
+    "host": {
+      "identity_sha256": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+      "native": {
+        "boot": "77d80e459277950c488b0768305effffb0a9bf8682ca0ec55bf6aab84baa982c",
+        "machine": "515a4c1e73a0e635fe23cfb26f61ef15285da73be8fb0c58e309e37720d8cf43",
+        "kernel": "6.8.0-147-generic",
+        "docker": "84a8553077099a6a56b5ec36651dc17f5a1b89c26e33971e02906818c2f2626d",
+        "packages": "1de3eab84d7c063a19b03637c1c907dd13dc7c087da175e7f8f7bb303570ad9b",
+        "cpus": 4,
+        "memory_total": "MemTotal:       16377016 kB"
+      }
+    },
+    "tokens": "a76364006f50b28ff7c503fd1737d8f63766c1bd9baa226de03c8ad94c2b628b",
+    "physical_attempt_policy": {
+      "version": 2,
+      "project": "baas-nhost-vps16",
+      "runner": "k6-2cpu-8g-v3",
+      "maximum_full_attempts": 24,
+      "maximum_smoke_attempts": 6,
+      "base_policy": {
+        "version": 1,
+        "project": "baas-nhost-vps16",
+        "runner": "k6-2cpu-8g-v3",
+        "maximum_full_attempts": 24,
+        "maximum_smoke_attempts": 4
+      },
+      "owner_amendment_sha256": "0853e766456d1540aa4336b43966ec8327d6730a0619ab0feb1a92073041b049"
+    },
+    "tools_image": "sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2 linux/amd64"
+  },
+  "log_sha256": "51a6e805b9edd57c08b8e405b0295431d2185fb73b7f720e2400ee0bb5fa179a",
+  "original_contract_checks": 42,
+  "node_tests": 19,
+  "shared_contract_methods": 6,
+  "native_methods": 7,
+  "acknowledged_http_write_restart": true,
+  "storage_failure_contract": true,
+  "canonical_data": {
+    "counts": {
+      "users": 50000,
+      "posts": 500000,
+      "likes": 2016005
+    },
+    "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d"
+  },
+  "final_profile": {
+    "parent": {
+      "cpu.max": "100000 100000\n",
+      "cpu.stat": "usage_usec 5437719535\nuser_usec 4895136816\nsystem_usec 542582719\ncore_sched.force_idle_usec 0\nnr_periods 94335\nnr_throttled 34652\nthrottled_usec 3112281079\nnr_bursts 0\nburst_usec 0\n",
+      "cpu.pressure": "some avg10=0.15 avg60=1.00 avg300=0.70 total=1128459851\nfull avg10=0.13 avg60=0.97 avg300=0.67 total=890026710\n",
+      "memory.max": "4294967296\n",
+      "memory.current": "1610297344\n",
+      "memory.swap.max": "0\n",
+      "memory.events": "low 0\nhigh 0\nmax 5986\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.stat": "anon 185495552\nfile 1375834112\nkernel 48967680\nkernel_stack 737280\npagetables 4251648\nsec_pagetables 0\npercpu 457152\nsock 0\nvmalloc 65536\nshmem 146812928\nzswap 0\nzswapped 0\nfile_mapped 145711104\nfile_dirty 212992\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 1081344\nactive_anon 331227136\ninactive_file 1223794688\nactive_file 5226496\nunevictable 0\nslab_reclaimable 40957504\nslab_unreclaimable 2247784\nslab 43205288\nworkingset_refault_anon 0\nworkingset_refault_file 78315\nworkingset_activate_anon 0\nworkingset_activate_file 76664\nworkingset_restore_anon 0\nworkingset_restore_file 7522\nworkingset_nodereclaim 384\npgscan 1384929\npgsteal 1384929\npgscan_kswapd 1010009\npgscan_direct 374920\npgscan_khugepaged 0\npgsteal_kswapd 1010009\npgsteal_direct 374920\npgsteal_khugepaged 0\npgfault 28515377\npgmajfault 42\npgrefill 234104\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+      "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=217102\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=120212\n",
+      "io.stat": "8:0 rbytes=386297856 wbytes=37513003008 rios=5147 wios=290241 dbytes=0 dios=0\n",
+      "io.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=5562702\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=4637430\n",
+      "children": [
+        "docker-01006a40bffb52b75c0f4ac7f209ce6e4e79de6c6c999796aae3c058570cd2f7.scope",
+        "docker-0b4e613ab6f99cee1cc1cdf20f47b42851d05e30f658d857cf1c3cf5e88d36ee.scope",
+        "docker-7d36c386c99dbfc933353758ce54c268d6ce58753fe88b43eb5e0ccc4ed15d70.scope",
+        "docker-9bfa7be97200a0a9c740fed5153dd7e86a40dd6cda7ead5f3e126ab12c283b39.scope"
+      ]
+    },
+    "targets": {
+      "db": {
+        "Id": "01006a40bffb52b75c0f4ac7f209ce6e4e79de6c6c999796aae3c058570cd2f7",
+        "Image": "sha256:ec9f656f17c8b4dfebf49e58cf5c46d493d4846d4ea6d8b85d0637f68ee33bfc",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 407322,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-17T17:07:00.498613402Z",
+          "FinishedAt": "2026-10-17T17:05:06.486073308Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-17T17:10:43.907491006Z",
+                "End": "2026-10-17T17:10:43.965322833Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-17T17:10:48.96668108Z",
+                "End": "2026-10-17T17:10:49.026452642Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-17T17:10:54.027762209Z",
+                "End": "2026-10-17T17:10:54.087809829Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-17T17:10:59.089098785Z",
+                "End": "2026-10-17T17:10:59.147593966Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              },
+              {
+                "Start": "2026-10-17T17:11:04.148151591Z",
+                "End": "2026-10-17T17:11:04.206463739Z",
+                "ExitCode": 0,
+                "Output": "/var/run/postgresql:5432 - accepting connections\n"
+              }
+            ]
+          }
+        },
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:ec9f656f17c8b4dfebf49e58cf5c46d493d4846d4ea6d8b85d0637f68ee33bfc",
+        "compose_project": "baas-nhost-vps16",
+        "cgroup_parent": "tdsbaasnhostvps16.slice",
+        "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-01006a40bffb52b75c0f4ac7f209ce6e4e79de6c6c999796aae3c058570cd2f7.scope\n",
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 1073741824,
+          "MemorySwap": 1073741824
+        }
+      },
+      "graphql": {
+        "Id": "0b4e613ab6f99cee1cc1cdf20f47b42851d05e30f658d857cf1c3cf5e88d36ee",
+        "Image": "sha256:2e024eca819824fe288f9d43a77008fda66b7266cf5be60002a56e6d73073e1a",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 410443,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-17T17:10:42.712287074Z",
+          "FinishedAt": "2026-10-17T17:09:00.563843627Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-17T17:08:57.298302227Z",
+                "End": "2026-10-17T17:08:57.335345655Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:10:47.807093114Z",
+                "End": "2026-10-17T17:10:47.845240771Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:10:52.84574203Z",
+                "End": "2026-10-17T17:10:52.884246886Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:10:57.885167062Z",
+                "End": "2026-10-17T17:10:57.921941144Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:11:02.922876479Z",
+                "End": "2026-10-17T17:11:02.958348401Z",
+                "ExitCode": 0,
+                "Output": ""
+              }
+            ]
+          }
+        },
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:2e024eca819824fe288f9d43a77008fda66b7266cf5be60002a56e6d73073e1a",
+        "compose_project": "baas-nhost-vps16",
+        "cgroup_parent": "tdsbaasnhostvps16.slice",
+        "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-0b4e613ab6f99cee1cc1cdf20f47b42851d05e30f658d857cf1c3cf5e88d36ee.scope\n",
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 2147483648,
+          "MemorySwap": 2147483648
+        }
+      },
+      "auth": {
+        "Id": "7d36c386c99dbfc933353758ce54c268d6ce58753fe88b43eb5e0ccc4ed15d70",
+        "Image": "sha256:1e8c3e8bb4c6977098c87aa8643d60d7e00fd9042d48b43f49226e21efe5a727",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 410627,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-17T17:10:48.541744935Z",
+          "FinishedAt": "2026-10-17T17:07:30.422419807Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-17T17:07:22.406486933Z",
+                "End": "2026-10-17T17:07:22.444532408Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:07:27.44585076Z",
+                "End": "2026-10-17T17:07:27.481921926Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:10:53.646308877Z",
+                "End": "2026-10-17T17:10:53.683617761Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:10:58.684262321Z",
+                "End": "2026-10-17T17:10:58.718300698Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:11:03.718814052Z",
+                "End": "2026-10-17T17:11:03.751971979Z",
+                "ExitCode": 0,
+                "Output": ""
+              }
+            ]
+          }
+        },
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:1e8c3e8bb4c6977098c87aa8643d60d7e00fd9042d48b43f49226e21efe5a727",
+        "compose_project": "baas-nhost-vps16",
+        "cgroup_parent": "tdsbaasnhostvps16.slice",
+        "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-7d36c386c99dbfc933353758ce54c268d6ce58753fe88b43eb5e0ccc4ed15d70.scope\n",
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 536870912,
+          "MemorySwap": 536870912
+        }
+      },
+      "adapter": {
+        "Id": "9bfa7be97200a0a9c740fed5153dd7e86a40dd6cda7ead5f3e126ab12c283b39",
+        "Image": "sha256:868499d55378719bffa87b0ed1f099591823c029b543043c09c2483468e93201",
+        "RestartCount": 0,
+        "State": {
+          "Status": "running",
+          "Running": true,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 410842,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-17T17:10:54.372434544Z",
+          "FinishedAt": "2026-10-17T17:07:30.247763275Z",
+          "Health": {
+            "Status": "healthy",
+            "FailingStreak": 0,
+            "Log": [
+              {
+                "Start": "2026-10-17T17:02:46.005841932Z",
+                "End": "2026-10-17T17:02:46.137212501Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:05:01.272125449Z",
+                "End": "2026-10-17T17:05:01.39372533Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:05:11.394330335Z",
+                "End": "2026-10-17T17:05:11.617236152Z",
+                "ExitCode": 1,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:07:28.243886089Z",
+                "End": "2026-10-17T17:07:28.363055644Z",
+                "ExitCode": 0,
+                "Output": ""
+              },
+              {
+                "Start": "2026-10-17T17:11:04.488180988Z",
+                "End": "2026-10-17T17:11:04.605991267Z",
+                "ExitCode": 0,
+                "Output": ""
+              }
+            ]
+          }
+        },
+        "platform": "linux/amd64",
+        "image_manifest_digest": "sha256:868499d55378719bffa87b0ed1f099591823c029b543043c09c2483468e93201",
+        "compose_project": "baas-nhost-vps16",
+        "cgroup_parent": "tdsbaasnhostvps16.slice",
+        "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-9bfa7be97200a0a9c740fed5153dd7e86a40dd6cda7ead5f3e126ab12c283b39.scope\n",
+        "limits": {
+          "NanoCpus": 0,
+          "Memory": 536870912,
+          "MemorySwap": 536870912
+        }
+      }
+    }
+  },
+  "restart_before": {
+    "db": {
+      "Id": "01006a40bffb52b75c0f4ac7f209ce6e4e79de6c6c999796aae3c058570cd2f7",
+      "Image": "sha256:ec9f656f17c8b4dfebf49e58cf5c46d493d4846d4ea6d8b85d0637f68ee33bfc",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 403838,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-17T17:04:29.193320455Z",
+        "FinishedAt": "2026-10-17T17:04:17.540066308Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-17T17:04:44.435632606Z",
+              "End": "2026-10-17T17:04:44.497330117Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-17T17:04:49.497781204Z",
+              "End": "2026-10-17T17:04:49.557331402Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-17T17:04:54.557843021Z",
+              "End": "2026-10-17T17:04:54.618675222Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-17T17:04:59.619342622Z",
+              "End": "2026-10-17T17:04:59.679947817Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-17T17:05:04.680767729Z",
+              "End": "2026-10-17T17:05:04.930854275Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            }
+          ]
+        }
+      },
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:ec9f656f17c8b4dfebf49e58cf5c46d493d4846d4ea6d8b85d0637f68ee33bfc",
+      "compose_project": "baas-nhost-vps16",
+      "cgroup_parent": "tdsbaasnhostvps16.slice",
+      "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-01006a40bffb52b75c0f4ac7f209ce6e4e79de6c6c999796aae3c058570cd2f7.scope\n",
+      "limits": {
+        "NanoCpus": 0,
+        "Memory": 1073741824,
+        "MemorySwap": 1073741824
+      }
+    },
+    "graphql": {
+      "Id": "0b4e613ab6f99cee1cc1cdf20f47b42851d05e30f658d857cf1c3cf5e88d36ee",
+      "Image": "sha256:2e024eca819824fe288f9d43a77008fda66b7266cf5be60002a56e6d73073e1a",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 404250,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-17T17:04:39.405307031Z",
+        "FinishedAt": "2026-10-17T17:04:17.285732338Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-17T17:04:44.507857562Z",
+              "End": "2026-10-17T17:04:44.546832738Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:04:49.547509329Z",
+              "End": "2026-10-17T17:04:49.586359453Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:04:54.587033706Z",
+              "End": "2026-10-17T17:04:54.625015672Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:04:59.625633149Z",
+              "End": "2026-10-17T17:04:59.665852217Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:05:04.667194297Z",
+              "End": "2026-10-17T17:05:04.844050922Z",
+              "ExitCode": 0,
+              "Output": ""
+            }
+          ]
+        }
+      },
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:2e024eca819824fe288f9d43a77008fda66b7266cf5be60002a56e6d73073e1a",
+      "compose_project": "baas-nhost-vps16",
+      "cgroup_parent": "tdsbaasnhostvps16.slice",
+      "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-0b4e613ab6f99cee1cc1cdf20f47b42851d05e30f658d857cf1c3cf5e88d36ee.scope\n",
+      "limits": {
+        "NanoCpus": 0,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648
+      }
+    },
+    "auth": {
+      "Id": "7d36c386c99dbfc933353758ce54c268d6ce58753fe88b43eb5e0ccc4ed15d70",
+      "Image": "sha256:1e8c3e8bb4c6977098c87aa8643d60d7e00fd9042d48b43f49226e21efe5a727",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 404437,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-17T17:04:45.292052693Z",
+        "FinishedAt": "2026-10-17T17:02:47.13327819Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-17T17:02:45.217982188Z",
+              "End": "2026-10-17T17:02:45.253535443Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:04:50.400741199Z",
+              "End": "2026-10-17T17:04:50.436618771Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:04:55.437268605Z",
+              "End": "2026-10-17T17:04:55.472456656Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:05:00.472911708Z",
+              "End": "2026-10-17T17:05:00.508090693Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:05:05.509346472Z",
+              "End": "2026-10-17T17:05:05.545494584Z",
+              "ExitCode": 0,
+              "Output": ""
+            }
+          ]
+        }
+      },
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:1e8c3e8bb4c6977098c87aa8643d60d7e00fd9042d48b43f49226e21efe5a727",
+      "compose_project": "baas-nhost-vps16",
+      "cgroup_parent": "tdsbaasnhostvps16.slice",
+      "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-7d36c386c99dbfc933353758ce54c268d6ce58753fe88b43eb5e0ccc4ed15d70.scope\n",
+      "limits": {
+        "NanoCpus": 0,
+        "Memory": 536870912,
+        "MemorySwap": 536870912
+      }
+    },
+    "adapter": {
+      "Id": "9bfa7be97200a0a9c740fed5153dd7e86a40dd6cda7ead5f3e126ab12c283b39",
+      "Image": "sha256:868499d55378719bffa87b0ed1f099591823c029b543043c09c2483468e93201",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 404629,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-17T17:04:51.16355289Z",
+        "FinishedAt": "2026-10-17T17:02:46.962379858Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-17T16:26:01.960024198Z",
+              "End": "2026-10-17T16:26:02.061590747Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T16:26:12.062078518Z",
+              "End": "2026-10-17T16:26:12.167992452Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T16:59:08.622274065Z",
+              "End": "2026-10-17T16:59:08.747137995Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:02:46.005841932Z",
+              "End": "2026-10-17T17:02:46.137212501Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:05:01.272125449Z",
+              "End": "2026-10-17T17:05:01.39372533Z",
+              "ExitCode": 0,
+              "Output": ""
+            }
+          ]
+        }
+      },
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:868499d55378719bffa87b0ed1f099591823c029b543043c09c2483468e93201",
+      "compose_project": "baas-nhost-vps16",
+      "cgroup_parent": "tdsbaasnhostvps16.slice",
+      "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-9bfa7be97200a0a9c740fed5153dd7e86a40dd6cda7ead5f3e126ab12c283b39.scope\n",
+      "limits": {
+        "NanoCpus": 0,
+        "Memory": 536870912,
+        "MemorySwap": 536870912
+      }
+    }
+  },
+  "restart_after": {
+    "db": {
+      "Id": "01006a40bffb52b75c0f4ac7f209ce6e4e79de6c6c999796aae3c058570cd2f7",
+      "Image": "sha256:ec9f656f17c8b4dfebf49e58cf5c46d493d4846d4ea6d8b85d0637f68ee33bfc",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 407322,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-17T17:07:00.498613402Z",
+        "FinishedAt": "2026-10-17T17:05:06.486073308Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-17T17:07:05.617179286Z",
+              "End": "2026-10-17T17:07:05.67758649Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-17T17:07:10.678274596Z",
+              "End": "2026-10-17T17:07:10.736425402Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-17T17:07:15.737199959Z",
+              "End": "2026-10-17T17:07:15.797383253Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-17T17:07:20.798252526Z",
+              "End": "2026-10-17T17:07:20.85889489Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-17T17:07:25.860317188Z",
+              "End": "2026-10-17T17:07:25.918770851Z",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            }
+          ]
+        }
+      },
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:ec9f656f17c8b4dfebf49e58cf5c46d493d4846d4ea6d8b85d0637f68ee33bfc",
+      "compose_project": "baas-nhost-vps16",
+      "cgroup_parent": "tdsbaasnhostvps16.slice",
+      "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-01006a40bffb52b75c0f4ac7f209ce6e4e79de6c6c999796aae3c058570cd2f7.scope\n",
+      "limits": {
+        "NanoCpus": 0,
+        "Memory": 1073741824,
+        "MemorySwap": 1073741824
+      }
+    },
+    "graphql": {
+      "Id": "0b4e613ab6f99cee1cc1cdf20f47b42851d05e30f658d857cf1c3cf5e88d36ee",
+      "Image": "sha256:2e024eca819824fe288f9d43a77008fda66b7266cf5be60002a56e6d73073e1a",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 407494,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-17T17:07:06.371414758Z",
+        "FinishedAt": "2026-10-17T17:06:48.820530677Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-17T17:06:47.618979546Z",
+              "End": "2026-10-17T17:06:47.762432201Z",
+              "ExitCode": 22,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:07:11.473977388Z",
+              "End": "2026-10-17T17:07:11.512580557Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:07:16.513523847Z",
+              "End": "2026-10-17T17:07:16.551948352Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:07:21.553297273Z",
+              "End": "2026-10-17T17:07:21.594531843Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:07:26.59526478Z",
+              "End": "2026-10-17T17:07:26.63275825Z",
+              "ExitCode": 0,
+              "Output": ""
+            }
+          ]
+        }
+      },
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:2e024eca819824fe288f9d43a77008fda66b7266cf5be60002a56e6d73073e1a",
+      "compose_project": "baas-nhost-vps16",
+      "cgroup_parent": "tdsbaasnhostvps16.slice",
+      "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-0b4e613ab6f99cee1cc1cdf20f47b42851d05e30f658d857cf1c3cf5e88d36ee.scope\n",
+      "limits": {
+        "NanoCpus": 0,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648
+      }
+    },
+    "auth": {
+      "Id": "7d36c386c99dbfc933353758ce54c268d6ce58753fe88b43eb5e0ccc4ed15d70",
+      "Image": "sha256:1e8c3e8bb4c6977098c87aa8643d60d7e00fd9042d48b43f49226e21efe5a727",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 407678,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-17T17:07:12.250981437Z",
+        "FinishedAt": "2026-10-17T17:05:18.666498264Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-17T17:05:10.545889978Z",
+              "End": "2026-10-17T17:05:10.586717557Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:05:15.587068168Z",
+              "End": "2026-10-17T17:05:15.629042764Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:07:17.368267297Z",
+              "End": "2026-10-17T17:07:17.405023817Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:07:22.406486933Z",
+              "End": "2026-10-17T17:07:22.444532408Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:07:27.44585076Z",
+              "End": "2026-10-17T17:07:27.481921926Z",
+              "ExitCode": 0,
+              "Output": ""
+            }
+          ]
+        }
+      },
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:1e8c3e8bb4c6977098c87aa8643d60d7e00fd9042d48b43f49226e21efe5a727",
+      "compose_project": "baas-nhost-vps16",
+      "cgroup_parent": "tdsbaasnhostvps16.slice",
+      "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-7d36c386c99dbfc933353758ce54c268d6ce58753fe88b43eb5e0ccc4ed15d70.scope\n",
+      "limits": {
+        "NanoCpus": 0,
+        "Memory": 536870912,
+        "MemorySwap": 536870912
+      }
+    },
+    "adapter": {
+      "Id": "9bfa7be97200a0a9c740fed5153dd7e86a40dd6cda7ead5f3e126ab12c283b39",
+      "Image": "sha256:868499d55378719bffa87b0ed1f099591823c029b543043c09c2483468e93201",
+      "RestartCount": 0,
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 407873,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-17T17:07:18.131305482Z",
+        "FinishedAt": "2026-10-17T17:05:18.468976638Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-17T16:59:08.622274065Z",
+              "End": "2026-10-17T16:59:08.747137995Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:02:46.005841932Z",
+              "End": "2026-10-17T17:02:46.137212501Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:05:01.272125449Z",
+              "End": "2026-10-17T17:05:01.39372533Z",
+              "ExitCode": 0,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:05:11.394330335Z",
+              "End": "2026-10-17T17:05:11.617236152Z",
+              "ExitCode": 1,
+              "Output": ""
+            },
+            {
+              "Start": "2026-10-17T17:07:28.243886089Z",
+              "End": "2026-10-17T17:07:28.363055644Z",
+              "ExitCode": 0,
+              "Output": ""
+            }
+          ]
+        }
+      },
+      "platform": "linux/amd64",
+      "image_manifest_digest": "sha256:868499d55378719bffa87b0ed1f099591823c029b543043c09c2483468e93201",
+      "compose_project": "baas-nhost-vps16",
+      "cgroup_parent": "tdsbaasnhostvps16.slice",
+      "process_cgroup": "0::/tdsbaasnhostvps16.slice/docker-9bfa7be97200a0a9c740fed5153dd7e86a40dd6cda7ead5f3e126ab12c283b39.scope\n",
+      "limits": {
+        "NanoCpus": 0,
+        "Memory": 536870912,
+        "MemorySwap": 536870912
+      }
+    }
+  },
+  "full_stack_clean_stop": false,
+  "qualification_name": "qualification-v6",
+  "power_loss_certification": false
+}
+COMPLETE_UNALTERED_QUALIFICATION_PHASE_CLOSURE before-qualification-v6-reset 766 bbeefe1643856d03058113925e78c8ce05b1537ea3d321791e7292fd21277b38 {
+  "terminal": {
+    "db": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 0,
+      "oom": false,
+      "restarts": 0
+    },
+    "graphql": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 137,
+      "oom": false,
+      "restarts": 0
+    },
+    "auth": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 2,
+      "oom": false,
+      "restarts": 0
+    },
+    "adapter": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 0,
+      "oom": false,
+      "restarts": 0
+    }
+  },
+  "failures": [],
+  "all_stopped": true,
+  "full_stack_clean_stop": false,
+  "remaining_untimed_tools": [],
+  "changed_persistent_services": []
+}
+
+COMPLETE_UNALTERED_QUALIFICATION_PHASE_CLOSURE qualification-v6-prepare 766 bbeefe1643856d03058113925e78c8ce05b1537ea3d321791e7292fd21277b38 {
+  "terminal": {
+    "db": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 0,
+      "oom": false,
+      "restarts": 0
+    },
+    "graphql": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 137,
+      "oom": false,
+      "restarts": 0
+    },
+    "auth": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 2,
+      "oom": false,
+      "restarts": 0
+    },
+    "adapter": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 0,
+      "oom": false,
+      "restarts": 0
+    }
+  },
+  "failures": [],
+  "all_stopped": true,
+  "full_stack_clean_stop": false,
+  "remaining_untimed_tools": [],
+  "changed_persistent_services": []
+}
+
+COMPLETE_UNALTERED_QUALIFICATION_PHASE_CLOSURE qualification-v6-restart 766 bbeefe1643856d03058113925e78c8ce05b1537ea3d321791e7292fd21277b38 {
+  "terminal": {
+    "db": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 0,
+      "oom": false,
+      "restarts": 0
+    },
+    "graphql": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 137,
+      "oom": false,
+      "restarts": 0
+    },
+    "auth": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 2,
+      "oom": false,
+      "restarts": 0
+    },
+    "adapter": {
+      "state": "exited",
+      "running": false,
+      "pid": 0,
+      "exit_code": 0,
+      "oom": false,
+      "restarts": 0
+    }
+  },
+  "failures": [],
+  "all_stopped": true,
+  "full_stack_clean_stop": false,
+  "remaining_untimed_tools": [],
+  "changed_persistent_services": []
+}
+
+COMPLETE_V6_QUALIFICATION_ORIGINALS_READONLY_AUDIT_VERIFIED {"proof_sha256": "5f810093f7cc061d764ecb62804facd733584ec076604b9b5a55e6d5857d8274", "changed_input_dimensions": ["app", "physical_attempt_policy", "verification"], "all13_previous_slots_unchanged": true, "new_proof_measurements": 0, "full_remaining": 15, "new_smokes_remaining": 2, "policy": {"version": 2, "project": "baas-nhost-vps16", "runner": "k6-2cpu-8g-v3", "maximum_full_attempts": 24, "maximum_smoke_attempts": 6, "base_policy": {"version": 1, "project": "baas-nhost-vps16", "runner": "k6-2cpu-8g-v3", "maximum_full_attempts": 24, "maximum_smoke_attempts": 4}, "owner_amendment_sha256": "0853e766456d1540aa4336b43966ec8327d6730a0619ab0feb1a92073041b049"}}
+NATIVE_CURRENT_UTC_AND_READONLY_FWUPD_CONTEXT 2026-10-17T17:13:43Z
+ Type=dbus
+MainPID=0
+ActiveState=inactive
+ NextElapseUSecRealtime=Sat 2026-10-17 18:11:48 UTC
+LastTriggerUSec=Sat 2026-10-17 17:05:31 UTC
+
+{"unit": "tds-nhost-qualification-v6-complete-originals-readonly-audit-v1", "native_exit": 0, "raw_log_bytes": 45775, "raw_log_sha256": "ee9246006f727957917b3a655f746a39ef33ffc2f9be27e671cbbc1bc99ad127", "actual_private_candidates_checked": 20054, "issued_signatures_checked": 80034, "transfer_and_privacy_limits": {"cpu.max": "200000 100000", "memory.max": "4294967296", "memory.swap.max": "0"}, "findings": []}

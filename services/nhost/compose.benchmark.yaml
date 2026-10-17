@@ -1,0 +1,33 @@
+# Untimed tools and separately budgeted generator; never part of the serving slice.
+services:
+  tools:
+    profiles: [tools]
+    image: sha256:7b35188938d0b5a3b50178d6a85e776b09db24314a2643c64b95b3da49f4f9f2
+    pull_policy: never
+    platform: linux/amd64
+    cpus: 1
+    mem_limit: 1g
+    memswap_limit: 1g
+    working_dir: /work
+    volumes:
+      - ../../:/work:ro
+      - ../supabase/functions/feed:/shared:ro
+      - ../../.state/nhost:/state
+      - ../../.state/seed:/seed
+    environment:
+      BASE_URL: http://adapter:4000
+  k6:
+    profiles: [benchmark]
+    image: grafana/k6:1.3.0@sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656
+    platform: linux/amd64
+    restart: "no"
+    cpus: 2
+    mem_limit: 8g
+    memswap_limit: 8g
+    user: "0:0"
+    volumes:
+      - ../../bench:/work/bench:ro
+      - ../../.state/seed/tokens.json:/tokens.json:ro
+      - ../../.state/nhost/runs:/runs
+    environment:
+      BASE_URL: http://adapter:4000

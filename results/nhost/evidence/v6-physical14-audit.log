@@ -1,0 +1,568 @@
+correctness-manifest.json: OK
+correctness.log: OK
+dataset.json: OK
+k6-summary.json: OK
+k6.log: OK
+manifest.json: OK
+report.md: OK
+resources.jsonl: OK
+samples.json.gz: OK
+source.tar.gz: OK
+summary.json: OK
+working-tree.patch: OK
+ORIGINAL_CONTINUITY_SUMMARY_AND_JOURNAL_REPLAY pre-load-quiet {"valid": true, "window_complete": true, "window_start": 1792257143.4201012, "window_end": 1792257743.5830293, "policy": "strict; no Nhost-specific fwupd exception", "possible_performance_interference_not_ruled_out": true, "persistent_service_event_counts": {}, "nonpersistent_oneshot_event_counts_disclosed": {"user-runtime-dir@0.service": 12, "sysstat-collect.service": 2}, "unit_classification": {"sysstat-collect.service": {"type": "oneshot", "active_state": "inactive", "sub_state": "dead", "no_resident_processes": true}, "user-runtime-dir@0.service": {"type": "oneshot", "active_state": "active", "sub_state": "exited", "no_resident_processes": true}}, "manager_events": {"bytes": 96339, "sha256": "9337041abe07bc3be9e3a3ab6a22567a0da6f67ff14a38d1b65a1b7cc99b0f91", "distribution": "PRIVATE NATIVE HOST ONLY"}, "coverage_anchor": {"bytes": 736, "sha256": "36128f10f8836017ca1f846639b957e4215a631a9641e24cf930e12a711d3839", "distribution": "PRIVATE NATIVE HOST ONLY"}}
+ORIGINAL_CONTINUITY_SUMMARY_AND_JOURNAL_REPLAY continuity {"valid": true, "window_complete": true, "window_start": 1792257963.807178, "window_end": 1792258007.2657511, "policy": "strict; no Nhost-specific fwupd exception", "possible_performance_interference_not_ruled_out": true, "persistent_service_event_counts": {}, "nonpersistent_oneshot_event_counts_disclosed": {}, "unit_classification": {}, "manager_events": {"bytes": 6428, "sha256": "2d42182abc441a56e8ac639cc54a53816aa0f5ff5b82a027f1b96a792b75808f", "distribution": "PRIVATE NATIVE HOST ONLY"}, "coverage_anchor": {"bytes": 805, "sha256": "2d6b7a2c8ef5025090d32d77df7e65f06f7f08077d90d72006408666c680da72", "distribution": "PRIVATE NATIVE HOST ONLY"}}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792257974.0639575, "runner": {"BlockIO": "102kB / 0B", "CPUPerc": "0.42%", "Container": "baas-nhost-vps16-load", "ID": "895c0dcd1dc5", "MemPerc": "0.74%", "MemUsage": "60.85MiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "145kB / 11.9kB", "PIDs": "9"}, "serving_memory_current": "1619001344\n", "serving_memory_events": "low 0\nhigh 0\nmax 6362\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792257979.0973558, "runner": {"BlockIO": "102kB / 4.1kB", "CPUPerc": "0.79%", "Container": "baas-nhost-vps16-load", "ID": "895c0dcd1dc5", "MemPerc": "0.74%", "MemUsage": "60.82MiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "155kB / 17.8kB", "PIDs": "9"}, "serving_memory_current": "1619902464\n", "serving_memory_events": "low 0\nhigh 0\nmax 6362\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792257984.1317966, "runner": {"BlockIO": "102kB / 4.1kB", "CPUPerc": "0.27%", "Container": "baas-nhost-vps16-load", "ID": "895c0dcd1dc5", "MemPerc": "0.74%", "MemUsage": "60.79MiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "168kB / 19.8kB", "PIDs": "9"}, "serving_memory_current": "1622081536\n", "serving_memory_events": "low 0\nhigh 0\nmax 6362\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792257989.161545, "runner": {"BlockIO": "102kB / 4.1kB", "CPUPerc": "0.44%", "Container": "baas-nhost-vps16-load", "ID": "895c0dcd1dc5", "MemPerc": "0.74%", "MemUsage": "60.84MiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "223kB / 24.5kB", "PIDs": "9"}, "serving_memory_current": "1624215552\n", "serving_memory_events": "low 0\nhigh 0\nmax 6362\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+COMPLETE_RAW_K6_LOG_RETAINED_UNALTERED_NATIVE_REPORT_ONLY {"bytes": 85, "sha256": "7322ff8274b57f7063d918a30b86118b50c6761d0fa5b086fe724f7ef08f391a", "lines": 2, "request_failed_lines": 0, "timeout_lines": 0, "connection_reset_lines": 0}
+COMPLETE_UNALTERED_ORIGINAL k6-summary.json 10089 744b7d4a52320d92eed1b139c0275af08928503430af583bb741a1ea26a4622c
+{
+  "options": {
+    "summaryTimeUnit": "",
+    "noColor": false,
+    "summaryTrendStats": [
+      "avg",
+      "med",
+      "p(95)",
+      "p(99)",
+      "min",
+      "max"
+    ]
+  },
+  "state": {
+    "isStdOutTTY": false,
+    "isStdErrTTY": false,
+    "testRunDurationMs": 40001.013802
+  },
+  "metrics": {
+    "http_req_duration{phase:hold,endpoint:feed}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 4.890208409090909,
+        "med": 4.8911385,
+        "p(95)": 5.978701749999999,
+        "p(99)": 6.696518259999999,
+        "min": 3.945162,
+        "max": 6.8797
+      },
+      "thresholds": {
+        "max>=0": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 4.398567623655915,
+        "med": 4.187106,
+        "p(95)": 6.7532336,
+        "p(99)": 14.437711959999993,
+        "min": 2.143346,
+        "max": 18.627311
+      }
+    },
+    "request_errors{phase:hold,endpoint:detail}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "passes": 0,
+        "fails": 27,
+        "rate": 0
+      },
+      "thresholds": {
+        "rate<=1": {
+          "ok": true
+        }
+      }
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "max": 25,
+        "value": 25,
+        "min": 25
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "rate": 224.6693057452124,
+        "count": 8987
+      }
+    },
+    "request_errors{phase:hold,endpoint:create}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 1
+      },
+      "thresholds": {
+        "rate<=1": {
+          "ok": true
+        }
+      }
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "rate": 6128.619669828036,
+        "count": 245151
+      }
+    },
+    "request_errors": {
+      "contains": "default",
+      "values": {
+        "fails": 93,
+        "rate": 0,
+        "passes": 0
+      },
+      "type": "rate"
+    },
+    "http_req_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 4.511603655913979,
+        "med": 4.302252,
+        "p(95)": 6.8985275999999995,
+        "p(99)": 14.607237119999992,
+        "min": 2.219369,
+        "max": 18.709806
+      }
+    },
+    "http_req_tls_handshaking": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(95)": 0,
+        "p(99)": 0,
+        "min": 0,
+        "max": 0,
+        "avg": 0,
+        "med": 0
+      }
+    },
+    "checks": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 1,
+        "passes": 93,
+        "fails": 0
+      }
+    },
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(99)": 28206.00039625,
+        "min": 13709.864373,
+        "max": 28268.487818,
+        "avg": 22546.248245192306,
+        "med": 22922.2687695,
+        "p(95)": 27994.92223
+      }
+    },
+    "http_req_duration{phase:hold,endpoint:detail}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 3.665427518518519,
+        "med": 3.222858,
+        "p(95)": 3.9443839999999994,
+        "p(99)": 14.910306399999978,
+        "min": 2.219369,
+        "max": 18.709806
+      },
+      "thresholds": {
+        "max>=0": {
+          "ok": true
+        }
+      }
+    },
+    "http_reqs{phase:hold}": {
+      "contains": "default",
+      "values": {
+        "rate": 1.3499657850496796,
+        "count": 54
+      },
+      "thresholds": {
+        "count>0": {
+          "ok": true
+        }
+      },
+      "type": "counter"
+    },
+    "request_errors{phase:hold}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 54
+      },
+      "thresholds": {
+        "rate<0.01": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_duration{phase:hold}": {
+      "values": {
+        "avg": 4.36792662962963,
+        "med": 3.9645279999999996,
+        "p(95)": 6.801566749999999,
+        "p(99)": 13.95475199999999,
+        "min": 2.219369,
+        "max": 18.709806
+      },
+      "thresholds": {
+        "p(95)<500": {
+          "ok": true
+        },
+        "p(99)<1000": {
+          "ok": true
+        }
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_connecting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(99)": 0.31933703999999996,
+        "min": 0,
+        "max": 0.338324,
+        "avg": 0.11236094623655915,
+        "med": 0.142287,
+        "p(95)": 0.24472619999999995
+      }
+    },
+    "schema_errors": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 93
+      }
+    },
+    "http_reqs{phase:hold,endpoint:feed}": {
+      "values": {
+        "rate": 0.5499860605757954,
+        "count": 22
+      },
+      "thresholds": {
+        "count>=0": {
+          "ok": true
+        }
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "http_reqs{phase:hold,endpoint:create}": {
+      "values": {
+        "count": 1,
+        "rate": 0.02499936638980888
+      },
+      "thresholds": {
+        "count>=0": {
+          "ok": true
+        }
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "http_req_sending": {
+      "contains": "time",
+      "values": {
+        "min": 0.009097,
+        "max": 0.090328,
+        "avg": 0.04162580645161292,
+        "med": 0.041818,
+        "p(95)": 0.0699644,
+        "p(99)": 0.07764579999999997
+      },
+      "type": "trend"
+    },
+    "http_reqs{phase:hold,endpoint:detail}": {
+      "values": {
+        "count": 27,
+        "rate": 0.6749828925248398
+      },
+      "thresholds": {
+        "count>=0": {
+          "ok": true
+        }
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 93,
+        "rate": 2.324941074252226
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 1,
+        "max": 25
+      }
+    },
+    "http_req_receiving": {
+      "values": {
+        "min": 0.03758,
+        "max": 0.116418,
+        "avg": 0.07141022580645161,
+        "med": 0.068149,
+        "p(95)": 0.102036,
+        "p(99)": 0.10766143999999998
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_failed": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "fails": 93,
+        "rate": 0,
+        "passes": 0
+      }
+    },
+    "benchmark_scenario_start_ms": {
+      "contains": "default",
+      "values": {
+        "max": 1792257964550,
+        "value": 1792257964550,
+        "min": 1792257964550
+      },
+      "type": "gauge"
+    },
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 0.6499835261350309,
+        "count": 26
+      }
+    },
+    "request_errors{phase:hold,endpoint:like}": {
+      "thresholds": {
+        "rate<=1": {
+          "ok": true
+        }
+      },
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 4
+      }
+    },
+    "http_req_blocked": {
+      "values": {
+        "p(95)": 0.3460485999999998,
+        "p(99)": 0.46213563999999957,
+        "min": 0.004057,
+        "max": 0.677699,
+        "avg": 0.1641993548387097,
+        "med": 0.210545
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_duration{phase:hold,endpoint:like}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "med": 4.5413035,
+        "p(95)": 8.987625899999998,
+        "p(99)": 9.587929979999998,
+        "min": 3.736802,
+        "max": 9.738006,
+        "avg": 5.639353750000001
+      },
+      "thresholds": {
+        "max>=0": {
+          "ok": true
+        }
+      }
+    },
+    "request_errors{phase:hold,endpoint:feed}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 22
+      },
+      "thresholds": {
+        "rate<=1": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_duration{phase:hold,endpoint:create}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(95)": 6.759495,
+        "p(99)": 6.759495,
+        "min": 6.759495,
+        "max": 6.759495,
+        "avg": 6.759495,
+        "med": 6.759495
+      },
+      "thresholds": {
+        "max>=0": {
+          "ok": true
+        }
+      }
+    },
+    "http_reqs{phase:hold,endpoint:like}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 4,
+        "rate": 0.09999746555923553
+      },
+      "thresholds": {
+        "count>=0": {
+          "ok": true
+        }
+      }
+    },
+    "schema_errors{phase:hold}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "passes": 0,
+        "fails": 54,
+        "rate": 0
+      },
+      "thresholds": {
+        "rate==0": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "values": {
+        "avg": 4.511603655913979,
+        "med": 4.302252,
+        "p(95)": 6.8985275999999995,
+        "p(99)": 14.607237119999992,
+        "min": 2.219369,
+        "max": 18.709806
+      },
+      "type": "trend",
+      "contains": "time"
+    }
+  },
+  "benchmark": {
+    "workload": "baas-v1",
+    "vus": 25,
+    "hold_seconds": 20,
+    "warmup_ramp_seconds": 0,
+    "warmup_seconds": 0,
+    "ramp_seconds": 5,
+    "mode": "smoke",
+    "warmup_vus": 0,
+    "drain_seconds": 5
+  },
+  "root_group": {
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [],
+    "name": "",
+    "path": ""
+  }
+}
+COMPLETE_UNALTERED_ORIGINAL summary.json 600 6d7840b3473eb80e2c6f3c349fc2310eca8fce2fc7ae9591fecb4ae942fc3dce
+{
+  "outcome": "pass",
+  "reason": "hold gates passed",
+  "vus": 25,
+  "tier": "standard",
+  "mode": "smoke",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "platform": "linux/amd64",
+  "hold_requests": 54,
+  "hold_rps": 2.7,
+  "latency_ms": {
+    "avg": 4.36792662962963,
+    "med": 3.9645279999999996,
+    "p(95)": 6.801566749999999,
+    "p(99)": 13.95475199999999,
+    "min": 2.219369,
+    "max": 18.709806
+  },
+  "request_errors": {
+    "rate": 0,
+    "passes": 0,
+    "fails": 54
+  },
+  "schema_errors": {
+    "passes": 0,
+    "fails": 54,
+    "rate": 0
+  }
+}
+COMPLETE_UNALTERED_ORIGINAL report.md 1580 b8dcc62101ac8dbf7d115d8f32c0be4a934653b6039232f00be1d152694dbd5e
+Tested software and VPS slice
+=============================
+
+Nhost GraphQL + measured HTTP adapter, standard shared-host slice, 25 VUs (smoke).
+Outcome **pass**: hold gates passed. One attempt, NOT a maximum-capacity claim.
+
+Four serving components (PostgreSQL, Hasura GraphQL, native Auth, adapter) share one kernel-enforced1CPU/4GiB/no-swap parent. Separate native k6 runner:2CPU/8GiB/no-swap, k6-2cpu-8g-v3.
+Compatibility authentication is measured; native signup/login/session throughput is not. No adapter DB driver, response/count/JWT-verification cache or development Functions simulator. The disclosed packaged serving subset is not a cloud/default-whole-platform equivalence claim.
+
+Hold requests 54; requests/s 2.7; unrounded latency/error observations: summary.json and original k6-summary.json. Short calibration only, unscored.
+Raw start-tagged endpoint samples: samples.json.gz. Aggregate/component/runner/host metrics: resources.jsonl. Continuity, identities, actual budgets and source/runtime/schema/metadata/image/token fingerprints: manifest.json. Canonical dataset/full frozen qualification: dataset.json, correctness.log and correctness-manifest.json.
+Reproduction overlay source.tar.gz and working-tree.patch bind the recorded base commit; verify SHA256SUMS. Native private runtime inputs, JWT fixtures and pre-reset database dumps are deliberately excluded.
+Shared VPS price/region unknown. No cost/request, dedicated-$12 or power-loss certification claim. Stock GraphQL137(nonOOM)/Auth2 shutdown history is retained; do not call it a clean full-stack exit.
+COMPLETE_UNALTERED_ORIGINAL dataset.json 427 ecc333ff615bdf0d78f0ad6e99c25f11374b6dd6ebed2633b22123a957d686db
+{
+  "counts": {
+    "users": 50000,
+    "posts": 500000,
+    "likes": 2016005
+  },
+  "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d",
+  "pre_reset_dump_sha256": "6512b11d35c5c8279003fdbd1a01ad415a5b161711b94a1d75b91cd5b921af3e",
+  "native_auth_accounts_before": 0,
+  "native_auth_accounts_after": 0,
+  "body_storage": "UTF-8 bytea; native GraphQL transport; full stored logical-row hash"
+}
+RECORDED_RUNNER_WHITELIST_AND_CLOSURE {"load_after": {"Id": "895c0dcd1dc5860e944e936f5942865c7adf954626abe1c61f294c71911f8e2b", "Image": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656", "RestartCount": 0, "State": {"Status": "exited", "Running": false, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 0, "ExitCode": 0, "Error": "", "StartedAt": "2026-10-17T17:26:04.143962829Z", "FinishedAt": "2026-10-17T17:26:44.597120372Z"}, "limits": {"NanoCpus": 2000000000, "Memory": 8589934592, "MemorySwap": 8589934592}, "source_sha256": null, "platform": "linux/amd64", "image_manifest_digest": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656"}, "closure": {"terminal": {"db": {"state": "exited", "running": false, "pid": 0, "exit_code": 0, "oom": false, "restarts": 0}, "graphql": {"state": "exited", "running": false, "pid": 0, "exit_code": 137, "oom": false, "restarts": 0}, "auth": {"state": "exited", "running": false, "pid": 0, "exit_code": 2, "oom": false, "restarts": 0}, "adapter": {"state": "exited", "running": false, "pid": 0, "exit_code": 0, "oom": false, "restarts": 0}}, "failures": [], "all_stopped": true, "full_stack_clean_stop": false, "remaining_untimed_tools": [], "changed_persistent_services": []}, "reservation": {"ordinal": 14, "vus": 25, "mode": "smoke", "proof_sha256": "5f810093f7cc061d764ecb62804facd733584ec076604b9b5a55e6d5857d8274", "pid": 413112}, "finished": {"ordinal": 14, "outcome": "pass", "path": "results/nhost/vps16-linux-amd64/20261017T172223404449Z-standard-25vu-k6-2cpu-8g-v3-smoke"}}
+RAW_START_TAGGED_SAMPLES_INDEPENDENT_REPLAY {"scenario_start": 1792257964.55, "hold_requests": 54, "hold_endpoint_requests": {"feed": 22, "detail": 27, "like": 4, "create": 1}, "latency_ms": {"p(95)": 6.801566749999999, "p(99)": 13.95475199999999}, "request_errors": 0, "unexpected_statuses": [], "schema_errors": 0, "resource_samples": 9, "scored_resource_samples": 4}
+NATIVE_ORIGINAL_FILE_HASHES {"SHA256SUMS": {"bytes": 972, "sha256": "4eba4d917da2a9260576e1f0cbdac2f6d86d957c469654b8cbc0f84c665b5885"}, "correctness-manifest.json": {"bytes": 32745, "sha256": "5f810093f7cc061d764ecb62804facd733584ec076604b9b5a55e6d5857d8274"}, "correctness.log": {"bytes": 9094, "sha256": "51a6e805b9edd57c08b8e405b0295431d2185fb73b7f720e2400ee0bb5fa179a"}, "dataset.json": {"bytes": 427, "sha256": "ecc333ff615bdf0d78f0ad6e99c25f11374b6dd6ebed2633b22123a957d686db"}, "k6-summary.json": {"bytes": 10089, "sha256": "744b7d4a52320d92eed1b139c0275af08928503430af583bb741a1ea26a4622c"}, "k6.log": {"bytes": 85, "sha256": "7322ff8274b57f7063d918a30b86118b50c6761d0fa5b086fe724f7ef08f391a"}, "manifest.json": {"bytes": 54246, "sha256": "1212e7d0f736c5676aebedb2935caee6bea9bdf5d2e99890d474cabe31037d7a"}, "report.md": {"bytes": 1580, "sha256": "b8dcc62101ac8dbf7d115d8f32c0be4a934653b6039232f00be1d152694dbd5e"}, "resources.jsonl": {"bytes": 109405, "sha256": "c3a202231a90fa4405063013cf90fc659c1aa39784c3437aefd6d783dcea7ee8"}, "samples.json.gz": {"bytes": 15410, "sha256": "cae5c406da8e3db83aec97f71dc5fd10908b2a14ceddd417299e39bfe7b68efa"}, "source.tar.gz": {"bytes": 188914, "sha256": "900ac69fdf6b7277278d95517b586c7b07d0072117f41322a75dc1a9e6ebb331"}, "summary.json": {"bytes": 600, "sha256": "6d7840b3473eb80e2c6f3c349fc2310eca8fce2fc7ae9591fecb4ae942fc3dce"}, "working-tree.patch": {"bytes": 2832, "sha256": "5472d57916eea2615984bb369802b19c5d652a2b045181c409ef3e24669e0cdb"}}
+CALIBRATION_OR_CAPACITY_RAW_RESOURCE_CONTINUITY_PROOF_SOURCE_CHECKSUM_REPLAY_VERIFIED smoke 14 pass 5f810093f7cc061d764ecb62804facd733584ec076604b9b5a55e6d5857d8274
+NATIVE_CURRENT_UTC 2026-10-17T17:29:34Z
+Type=dbus
+MainPID=0
+ActiveState=inactive
+NextElapseUSecRealtime=Sat 2026-10-17 18:11:48 UTC
+LastTriggerUSec=Sat 2026-10-17 17:05:31 UTC
+{"unit": "tds-nhost-v6-final-study-smoke25-slot14-raw-review-v1", "native_exit": 0, "raw_log_bytes": 21254, "raw_log_sha256": "80e7a80bf1e248ace1cf47578932dfb4716af185dc8ef02a12ea925c4665b7f2", "actual_private_candidates_checked": 20054, "issued_signatures_checked": 80034, "transfer_and_privacy_limits": {"cpu.max": "200000 100000", "memory.max": "4294967296", "memory.swap.max": "0"}, "findings": []}

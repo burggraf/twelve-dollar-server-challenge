@@ -1,0 +1,97 @@
+# API-serving subset of Nhost's official self-host example at26cb0f1.
+# Actual parent limits apply to ALL serving containers; child memory sums to4GiB.
+x-serving: &serving
+  platform: linux/amd64
+  cgroup_parent: tdsbaasnhostvps16.slice
+  restart: "no"
+services:
+  db:
+    <<: *serving
+    image: postgres:16-bookworm@sha256:ec9f656f17c8b4dfebf49e58cf5c46d493d4846d4ea6d8b85d0637f68ee33bfc
+    mem_limit: 1g
+    memswap_limit: 1g
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?private environment required}
+      POSTGRES_DB: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./bootstrap.sql:/docker-entrypoint-initdb.d/0001-create-schema.sql:ro
+    healthcheck:
+      test: [CMD, pg_isready, -U, postgres, -d, postgres]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+  graphql:
+    <<: *serving
+    image: nhost/graphql-engine:v2.46.0-ce@sha256:2e024eca819824fe288f9d43a77008fda66b7266cf5be60002a56e6d73073e1a
+    mem_limit: 2g
+    memswap_limit: 2g
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD}@db:5432/postgres
+      HASURA_GRAPHQL_ADMIN_SECRET: ${GRAPHQL_ADMIN_SECRET:?private admin key required}
+      HASURA_GRAPHQL_JWT_SECRET: ${NATIVE_JWT_CONFIG:?private native key required}
+      HASURA_GRAPHQL_UNAUTHORIZED_ROLE: feed_reader
+      HASURA_GRAPHQL_INFER_FUNCTION_PERMISSIONS: "false"
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "false"
+      HASURA_GRAPHQL_DEV_MODE: "false"
+      HASURA_GRAPHQL_ADMIN_INTERNAL_ERRORS: "false"
+      HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
+      HASURA_GRAPHQL_ENABLED_APIS: metadata,graphql
+    healthcheck:
+      test: [CMD-SHELL, "curl --fail --silent http://localhost:8080/healthz >/dev/null"]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+  auth:
+    <<: *serving
+    image: nhost/auth:0.40.2@sha256:1e8c3e8bb4c6977098c87aa8643d60d7e00fd9042d48b43f49226e21efe5a727
+    mem_limit: 512m
+    memswap_limit: 512m
+    depends_on:
+      graphql: {condition: service_healthy}
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD}@db:5432/postgres
+      POSTGRES_MIGRATIONS_CONNECTION: postgres://postgres:${POSTGRES_PASSWORD}@db:5432/postgres
+      HASURA_GRAPHQL_GRAPHQL_URL: http://graphql:8080/v1/graphql
+      HASURA_GRAPHQL_ADMIN_SECRET: ${GRAPHQL_ADMIN_SECRET}
+      HASURA_GRAPHQL_JWT_SECRET: ${NATIVE_JWT_CONFIG}
+      AUTH_HOST: 0.0.0.0
+      AUTH_PORT: "4000"
+      AUTH_API_PREFIX: /v1
+      AUTH_SERVER_URL: http://auth:4000/v1
+      AUTH_CLIENT_URL: http://127.0.0.1:14000
+      AUTH_DISABLE_SIGNUP: "true"
+      AUTH_DISABLE_NEW_USERS: "true"
+    healthcheck:
+      test: [CMD, wget, --spider, -q, http://localhost:4000/healthz]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+  adapter:
+    <<: *serving
+    profiles: [app]
+    image: node:22.22.2-bookworm-slim@sha256:868499d55378719bffa87b0ed1f099591823c029b543043c09c2483468e93201
+    mem_limit: 512m
+    memswap_limit: 512m
+    working_dir: /app
+    command: [node, server.mjs]
+    environment:
+      GRAPHQL_URL: http://graphql:8080/v1/graphql
+      COMPAT_JWT_SECRET: ${COMPAT_JWT_SECRET:?private compatibility key required}
+      NATIVE_JWT_SECRET: ${NATIVE_JWT_SECRET:?private native key required}
+    volumes:
+      - ./app:/app:ro
+      - ../supabase/functions/feed/contract.mjs:/shared/contract.mjs:ro
+    ports: ["127.0.0.1:14000:4000"]
+    depends_on:
+      graphql: {condition: service_healthy}
+      auth: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://localhost:4000/health').then(r=>process.exit(r.status===200?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+volumes:
+  pgdata:

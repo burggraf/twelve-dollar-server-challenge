@@ -1,0 +1,153 @@
+ACTUAL_NATIVE_SOURCE_DIFF_FROM_UNALTERED_SLOT13_ARCHIVE ["scripts/nhost.py", "scripts/nhost_benchmark.py", "scripts/nhost_budget.py", "services/nhost/README.md", "test/baas/test_nhost_attempt_budget.py", "test/baas/test_nhost_control.py", "test/baas/test_nhost_evidence.py", "test/baas/test_nhost_report_metadata.py"]
+SERVING_EXECUTABLE_SQL_METADATA_CONTAINER_CONFIG_SHARED_SCORER_WORKLOAD_AND_CONTRACT_UNCHANGED_ONLY_SERVICE_README_DOCUMENTATION_DIFF
+test_amendment_does_not_increase24_full_slots_across_revisions (test_nhost_attempt_budget.Budget.test_amendment_does_not_increase24_full_slots_across_revisions) ... ok
+test_changed_owner_amendment_fails_closed_before_any_reservation (test_nhost_attempt_budget.Budget.test_changed_owner_amendment_fails_closed_before_any_reservation) ... ok
+test_explicit_hash_bound_amendment_adds_only_two_slots_without_refunds_or_pooling (test_nhost_attempt_budget.Budget.test_explicit_hash_bound_amendment_adds_only_two_slots_without_refunds_or_pooling) ... ok
+test_invalid_full_attempts_consume_all24_slots (test_nhost_attempt_budget.Budget.test_invalid_full_attempts_consume_all24_slots) ... ok
+test_only_four_smokes_and_finish_never_overwrites_original (test_nhost_attempt_budget.Budget.test_only_four_smokes_and_finish_never_overwrites_original) ... ok
+test_proof_vus_mode_and_process_binding_fail_closed (test_nhost_attempt_budget.Budget.test_proof_vus_mode_and_process_binding_fail_closed) ... ok
+test_removing_used_extension_cannot_hide_over_base_budget_history (test_nhost_attempt_budget.Budget.test_removing_used_extension_cannot_hide_over_base_budget_history) ... ok
+test_reserved_original_exists_before_control_and_matches_exact_owner (test_nhost_attempt_budget.Budget.test_reserved_original_exists_before_control_and_matches_exact_owner) ... ok
+test_symlink_owner_amendment_is_not_accepted (test_nhost_attempt_budget.Budget.test_symlink_owner_amendment_is_not_accepted) ... ok
+test_unfinished_reservation_cannot_be_adopted_or_refilled (test_nhost_attempt_budget.Budget.test_unfinished_reservation_cannot_be_adopted_or_refilled) ... ok
+test_unknown_outcome_and_changed_budget_policy_rejected (test_nhost_attempt_budget.Budget.test_unknown_outcome_and_changed_budget_policy_rejected) ... ok
+test_invalid_vu_count_rejected (test_nhost_attempt_guards.AttemptAdmission.test_invalid_vu_count_rejected) ... ok
+test_nonstandard_tier_rejected (test_nhost_attempt_guards.AttemptAdmission.test_nonstandard_tier_rejected) ... ok
+test_stale_full_qualification_is_rejected_before_any_reset (test_nhost_attempt_guards.AttemptAdmission.test_stale_full_qualification_is_rejected_before_any_reset) ... ok
+test_wrong_project_platform_or_runner_rejected (test_nhost_attempt_guards.AttemptAdmission.test_wrong_project_platform_or_runner_rejected) ... ok
+test_runner_only_has_read_only_bench_tokens_and_writable_output (test_nhost_config.Configuration.test_runner_only_has_read_only_bench_tokens_and_writable_output) ... ok
+test_separate_runner_exact_budget_and_native_manifest (test_nhost_config.Configuration.test_separate_runner_exact_budget_and_native_manifest) ... ok
+test_tools_node_fixture_has_the_same_read_only_shared_contract_path (test_nhost_config.Configuration.test_tools_node_fixture_has_the_same_read_only_shared_contract_path) ... ok
+test_tools_use_retained_immutable_image_and_stay_outside_serving (test_nhost_config.Configuration.test_tools_use_retained_immutable_image_and_stay_outside_serving) ... ok
+test_events_count_without_fwupd_named_exception (test_nhost_continuity.Predicates.test_events_count_without_fwupd_named_exception) ... ok
+test_native_self_exit_and_reload_events_are_not_silently_ignored (test_nhost_continuity.Predicates.test_native_self_exit_and_reload_events_are_not_silently_ignored) ... ok
+test_only_positively_completed_nonresident_oneshots_are_transient (test_nhost_continuity.Predicates.test_only_positively_completed_nonresident_oneshots_are_transient) ... ok
+test_actual_lifecycle_event_fails (test_nhost_continuity.Window.test_actual_lifecycle_event_fails) ... ok
+test_clock_discontinuity_fails (test_nhost_continuity.Window.test_clock_discontinuity_fails) ... ok
+test_complete_unchanged_window_is_valid (test_nhost_continuity.Window.test_complete_unchanged_window_is_valid) ... ok
+test_deactivated_persistent_daemon_fails_complete_window (test_nhost_continuity.Window.test_deactivated_persistent_daemon_fails_complete_window) ... ok
+test_host_drift_fails (test_nhost_continuity.Window.test_host_drift_fails) ... ok
+test_identity_drift_fails (test_nhost_continuity.Window.test_identity_drift_fails) ... ok
+test_journal_command_failure_fails (test_nhost_continuity.Window.test_journal_command_failure_fails) ... ok
+test_missing_coverage_anchor_fails (test_nhost_continuity.Window.test_missing_coverage_anchor_fails) ... ok
+test_api_only_stop_keeps_database_running (test_nhost_control.StopSafety.test_api_only_stop_keeps_database_running) ... ok
+test_complete_cumulative_logs_have_a_bounded120s_capture_budget (test_nhost_control.StopSafety.test_complete_cumulative_logs_have_a_bounded120s_capture_budget) ... ok
+test_log_capture_timeout_is_retained_and_never_claimed_successful (test_nhost_control.StopSafety.test_log_capture_timeout_is_retained_and_never_claimed_successful) ... ok
+test_never_stops_a_mismatched_project_but_continues_other_owned_roles (test_nhost_control.StopSafety.test_never_stops_a_mismatched_project_but_continues_other_owned_roles) ... ok
+test_oom_diagnostic_cannot_skip_later_stops (test_nhost_control.StopSafety.test_oom_diagnostic_cannot_skip_later_stops) ... ok
+test_stop_timeout_cannot_skip_other_ids_or_claim_clean_stop (test_nhost_control.StopSafety.test_stop_timeout_cannot_skip_other_ids_or_claim_clean_stop) ... ok
+test_stops_every_exact_id_and_proves_terminal_state (test_nhost_control.StopSafety.test_stops_every_exact_id_and_proves_terminal_state) ... ok
+test_complete_correctness_binds_metadata_tokens_tools_source_and_original_log (test_nhost_evidence.Evidence.test_complete_correctness_binds_metadata_tokens_tools_source_and_original_log) ... ok
+test_every_required_role_lifecycle_and_health_drift_fails (test_nhost_evidence.Evidence.test_every_required_role_lifecycle_and_health_drift_fails) ... ok
+test_qualification_inputs_bind_owner_amended_budget (test_nhost_evidence.Evidence.test_qualification_inputs_bind_owner_amended_budget) ... ok
+test_unchanged_complete_stack_is_valid (test_nhost_evidence.Evidence.test_unchanged_complete_stack_is_valid) ... ok
+test_accepts_only_exact_owned_database_running (test_nhost_import.NativeImportBoundary.test_accepts_only_exact_owned_database_running) ... ok
+test_rejects_database_down_unhealthy_oom_or_restart (test_nhost_import.NativeImportBoundary.test_rejects_database_down_unhealthy_oom_or_restart) ... ok
+test_rejects_every_live_api_and_stale_api_pid (test_nhost_import.NativeImportBoundary.test_rejects_every_live_api_and_stale_api_pid) ... ok
+test_rejects_missing_extra_duplicate_or_malformed_id_before_docker (test_nhost_import.NativeImportBoundary.test_rejects_missing_extra_duplicate_or_malformed_id_before_docker) ... ok
+test_rejects_project_service_or_exact_identity_drift (test_nhost_import.NativeImportBoundary.test_rejects_project_service_or_exact_identity_drift) ... ok
+test_shared_exact_utf8_mapping_remains_unchanged (test_nhost_import.NativeImportBoundary.test_shared_exact_utf8_mapping_remains_unchanged) ... ok
+test_untimed_operator_targets_exact_native_id_and_postgres_role (test_nhost_import.NativeImportBoundary.test_untimed_operator_targets_exact_native_id_and_postgres_role) ... ok
+test_exact_stored_rows_hash_not_manifest_or_rounded_ids (test_nhost_import_hash.StoredHash.test_exact_stored_rows_hash_not_manifest_or_rounded_ids) ... ok
+test_rejects_correct_counts_with_changed_body (test_nhost_import_hash.StoredHash.test_rejects_correct_counts_with_changed_body) ... ok
+test_rejects_native_export_failure (test_nhost_import_hash.StoredHash.test_rejects_native_export_failure) ... ok
+test_rejects_nonexact_container_id_before_constructing_exec (test_nhost_import_hash.StoredHash.test_rejects_nonexact_container_id_before_constructing_exec) ... ok
+test_rejects_wrong_row_counts (test_nhost_import_hash.StoredHash.test_rejects_wrong_row_counts) ... ok
+test_active_lease_rejects_application_or_verification_source_drift (test_nhost_lifecycle_guards.LifecycleGuards.test_active_lease_rejects_application_or_verification_source_drift) ... ok
+test_changed_persistent_service_fails_closure_and_next_claim (test_nhost_lifecycle_guards.LifecycleGuards.test_changed_persistent_service_fails_closure_and_next_claim) ... {"all_stopped": true, "failures": ["Persistent-service identity continuity failed"], "terminal": {}, "full_stack_clean_stop": false, "remaining_untimed_tools": [], "changed_persistent_services": ["production.service"]}
+ok
+test_rechecks_admission_before_each_start_not_only_before_the_sequence (test_nhost_lifecycle_guards.LifecycleGuards.test_rechecks_admission_before_each_start_not_only_before_the_sequence) ... ok
+test_actual_pinned_invalid_jwt_response_with_no_data_and_no_write_is_rejection (test_nhost_native_assertions.NativeAssertions.test_actual_pinned_invalid_jwt_response_with_no_data_and_no_write_is_rejection) ... ok
+test_boundary_bom_is_trimmed_on_write_while_nul_and_unicode_survive (test_nhost_native_assertions.NativeAssertions.test_boundary_bom_is_trimmed_on_write_while_nul_and_unicode_survive) ... ok
+test_graphql_data_can_never_be_misclassified_as_rejected_signer (test_nhost_native_assertions.NativeAssertions.test_graphql_data_can_never_be_misclassified_as_rejected_signer) ... ok
+test_invalid_jwt_error_cannot_hide_an_actual_committed_write (test_nhost_native_assertions.NativeAssertions.test_invalid_jwt_error_cannot_hide_an_actual_committed_write) ... ok
+test_other_graphql_error_cannot_stand_in_for_signature_verification (test_nhost_native_assertions.NativeAssertions.test_other_graphql_error_cannot_stand_in_for_signature_verification) ... ok
+test_untrimmed_bom_cannot_be_accepted_as_correct_write (test_nhost_native_assertions.NativeAssertions.test_untrimmed_bom_cannot_be_accepted_as_correct_write) ... ok
+test_complete_native_four_component_budget (test_nhost_profile.Profile.test_complete_native_four_component_budget) ... ok
+test_rejects_each_component_identity_health_and_child_budget_drift (test_nhost_profile.Profile.test_rejects_each_component_identity_health_and_child_budget_drift) ... ok
+test_rejects_missing_auth_or_extra_parent_processes (test_nhost_profile.Profile.test_rejects_missing_auth_or_extra_parent_processes) ... ok
+test_rejects_parent_budget_drift (test_nhost_profile.Profile.test_rejects_parent_budget_drift) ... ok
+test_shared_runner_accepts_native_nhost_namespace (test_nhost_profile.Profile.test_shared_runner_accepts_native_nhost_namespace) ... ok
+test_invalid_measurement_metadata_retains_original_reason_and_missing_clock (test_nhost_report_metadata.ReportMetadata.test_invalid_measurement_metadata_retains_original_reason_and_missing_clock) ... ok
+test_report_records_actual_owner_extended_policy_not_base_four_smoke_cap (test_nhost_report_metadata.ReportMetadata.test_report_records_actual_owner_extended_policy_not_base_four_smoke_cap) ... ok
+test_successful_measurement_metadata_uses_declared_source_commit (test_nhost_report_metadata.ReportMetadata.test_successful_measurement_metadata_uses_declared_source_commit) ... ok
+test_rejects_changed_body_with_correct_input_counts (test_nhost_reset.Reset.test_rejects_changed_body_with_correct_input_counts) ... ok
+test_rejects_copy_failure_without_manifest (test_nhost_reset.Reset.test_rejects_copy_failure_without_manifest) ... ok
+test_rejects_missing_input_before_sql (test_nhost_reset.Reset.test_rejects_missing_input_before_sql) ... ok
+test_rejects_stored_export_failure_without_manifest (test_nhost_reset.Reset.test_rejects_stored_export_failure_without_manifest) ... ok
+test_rejects_wrong_input_count (test_nhost_reset.Reset.test_rejects_wrong_input_count) ... ok
+test_catalog_drift_prevents_start (test_nhost_reset_flow.ResetFlow.test_catalog_drift_prevents_start) ... ok
+test_failed_api_stop_never_reaches_copy (test_nhost_reset_flow.ResetFlow.test_failed_api_stop_never_reaches_copy) ... ok
+test_native_permission_metadata_drift_cannot_pass_reset (test_nhost_reset_flow.ResetFlow.test_native_permission_metadata_drift_cannot_pass_reset) ... ok
+test_stop_only_apis_then_copy_and_start_with_unchanged_catalog (test_nhost_reset_flow.ResetFlow.test_stop_only_apis_then_copy_and_start_with_unchanged_catalog) ... ok
+test_failed_ceiling_confirmation_cannot_be_retried (test_nhost_review_regressions.Ceiling.test_failed_ceiling_confirmation_cannot_be_retried) ... ok
+test_invalid_ceiling_cannot_be_hidden_by_later_four_passes (test_nhost_review_regressions.Ceiling.test_invalid_ceiling_cannot_be_hidden_by_later_four_passes) ... ok
+test_invalid_ceiling_confirmation_cannot_be_retried (test_nhost_review_regressions.Ceiling.test_invalid_ceiling_confirmation_cannot_be_retried) ... ok
+test_invalid_missing_summary_retains_explicitly_unavailable_clock (test_nhost_review_regressions.Clock.test_invalid_missing_summary_retains_explicitly_unavailable_clock) ... ok
+test_missing_clock_never_certifies_valid_measurement (test_nhost_review_regressions.Clock.test_missing_clock_never_certifies_valid_measurement) ... ok
+test_unchanged_original_suite_receives_adapter_base_url_as_its_positional_argument (test_nhost_review_regressions.Qualification.test_unchanged_original_suite_receives_adapter_base_url_as_its_positional_argument) ... ok
+test_client_timeout_removes_only_exact_created_owned_tools_id (test_nhost_review_regressions.Tools.test_client_timeout_removes_only_exact_created_owned_tools_id) ... ok
+test_down_cannot_cancel_deadline_with_project_tools_remaining (test_nhost_review_regressions.Tools.test_down_cannot_cancel_deadline_with_project_tools_remaining) ... {"all_stopped": false, "failures": ["Owned untimed tools remain; independent deadline retained"], "terminal": {}, "full_stack_clean_stop": false, "remaining_untimed_tools": ["bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]}
+ok
+test_failed_inspect_and_failed_independent_absence_lookup_never_certify_cleanup (test_nhost_review_regressions.Tools.test_failed_inspect_and_failed_independent_absence_lookup_never_certify_cleanup) ... ok
+test_native_lowercase_absence_after_auto_remove_preserves_original_command_result (test_nhost_review_regressions.Tools.test_native_lowercase_absence_after_auto_remove_preserves_original_command_result) ... ok
+test_tools_have_independent_inner_execution_deadline (test_nhost_review_regressions.Tools.test_tools_have_independent_inner_execution_deadline) ... ok
+test_every_executed_node_test_invalidates_frozen_verification (test_nhost_review_regressions.Verification.test_every_executed_node_test_invalidates_frozen_verification) ... ok
+test_nhost_archive_contains_shared_contract_and_no_private_state (test_nhost_snapshot.Snapshot.test_nhost_archive_contains_shared_contract_and_no_private_state) ... ok
+test_complete_fixture_hash_and_each_trust_boundary (test_nhost_token_fixture.TokenFixture.test_complete_fixture_hash_and_each_trust_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 93 tests in 2.175s
+
+OK
+test_direct_controller_exports_inferred_platform_and_namespace_to_compose (test_benchmark.HostPortability.test_direct_controller_exports_inferred_platform_and_namespace_to_compose) ... ok
+test_foreign_architecture_load_image_is_invalid (test_benchmark.HostPortability.test_foreign_architecture_load_image_is_invalid) ... ok
+test_foreign_platforms_and_unrelated_project_names_are_rejected (test_benchmark.HostPortability.test_foreign_platforms_and_unrelated_project_names_are_rejected) ... ok
+test_linux_samples_preserve_raw_proc_evidence_without_mac_commands (test_benchmark.HostPortability.test_linux_samples_preserve_raw_proc_evidence_without_mac_commands) ... ok
+test_linux_swapouts_are_checked_without_weakening_mac_checks (test_benchmark.HostPortability.test_linux_swapouts_are_checked_without_weakening_mac_checks) ... ok
+test_native_platforms_and_result_tracks_are_separate (test_benchmark.HostPortability.test_native_platforms_and_result_tracks_are_separate) ... ok
+test_new_host_track_cannot_pool_with_original_vps (test_benchmark.HostPortability.test_new_host_track_cannot_pool_with_original_vps) ... ok
+test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect (test_benchmark.HostPortability.test_selected_container_manifest_overrides_ambiguous_multiarch_image_inspect) ... ok
+test_accepts_complete_passing_hold (test_benchmark.Scoring.test_accepts_complete_passing_hold) ... ok
+test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host (test_benchmark.Scoring.test_cpu_reserve_rejects_four_cpu_serving_with_two_cpu_runner_on_four_cpu_host) ... ok
+test_generator_cpu_saturation_and_host_swap_are_not_target_failures (test_benchmark.Scoring.test_generator_cpu_saturation_and_host_swap_are_not_target_failures) ... ok
+test_incomplete_or_nonfinite_evidence_is_invalid (test_benchmark.Scoring.test_incomplete_or_nonfinite_evidence_is_invalid) ... ok
+test_limits_are_strict_and_bad_success_bodies_fail (test_benchmark.Scoring.test_limits_are_strict_and_bad_success_bodies_fail) ... ok
+test_mismatched_actual_runner_budget_cannot_claim_the_new_profile (test_benchmark.Scoring.test_mismatched_actual_runner_budget_cannot_claim_the_new_profile) ... ok
+test_missing_clock_still_invalidates_non_oom_attempt (test_benchmark.Scoring.test_missing_clock_still_invalidates_non_oom_attempt) ... ok
+test_monitor_errors_fail_closed_even_with_other_samples_present (test_benchmark.Scoring.test_monitor_errors_fail_closed_even_with_other_samples_present) ... ok
+test_oom_remains_primary_reason_when_k6_loses_summary_and_clock (test_benchmark.Scoring.test_oom_remains_primary_reason_when_k6_loses_summary_and_clock) ... ok
+test_owner_approved_eight_gib_runner_has_distinct_verified_limits (test_benchmark.Scoring.test_owner_approved_eight_gib_runner_has_distinct_verified_limits) ... ok
+test_resource_clock_uses_k6_scenario_start_not_container_creation (test_benchmark.Scoring.test_resource_clock_uses_k6_scenario_start_not_container_creation) ... ok
+test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures (test_benchmark.Scoring.test_runner_crash_and_unexplained_exit_are_not_target_capacity_failures) ... ok
+test_runner_profile_is_versioned_and_matches_the_approved_budget (test_benchmark.Scoring.test_runner_profile_is_versioned_and_matches_the_approved_budget) ... ok
+test_sparse_monitoring_cannot_certify_a_hold (test_benchmark.Scoring.test_sparse_monitoring_cannot_certify_a_hold) ... ok
+test_standard_tier_is_one_cpu_four_gib_with_memory_reserve (test_benchmark.Scoring.test_standard_tier_is_one_cpu_four_gib_with_memory_reserve) ... ok
+test_vm_headroom_accepts_small_but_rejects_large_on_current_vm (test_benchmark.Scoring.test_vm_headroom_accepts_small_but_rejects_large_on_current_vm) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.005s
+
+OK
+test_k6_cannot_read_signing_keys_or_private_service_state (test_isolation.ContainerIsolation.test_k6_cannot_read_signing_keys_or_private_service_state) ... ok
+test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated (test_isolation.ContainerIsolation.test_new_host_standard_tier_and_eight_gib_runner_are_loopback_isolated) ... ok
+test_vps_platform_and_resources_are_isolated_from_existing_projects (test_isolation.ContainerIsolation.test_vps_platform_and_resources_are_isolated_from_existing_projects) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.225s
+
+OK
+NATIVE_OWNER_AMENDMENT_ADMISSION_SUITES_PASS_NO_NEW_RESERVATION {"effective_policy": {"version": 2, "project": "baas-nhost-vps16", "runner": "k6-2cpu-8g-v3", "maximum_full_attempts": 24, "maximum_smoke_attempts": 6, "base_policy": {"version": 1, "project": "baas-nhost-vps16", "runner": "k6-2cpu-8g-v3", "maximum_full_attempts": 24, "maximum_smoke_attempts": 4}, "owner_amendment_sha256": "0853e766456d1540aa4336b43966ec8327d6730a0619ab0feb1a92073041b049"}, "historical_policy_and_all13_slots_unchanged": {"0007-reserved.json": "6f41d298cb497877b7551849084a01fee0845d72370783050b7f0cfcbc2b8d25", "0009-reserved.json": "e4ab965caf900c9cdc123dca7fc596c8a7bac014274f0efaab1284b0affb55ac", "0002-reserved.json": "46004cbdd29f86bf0668a7fce5f8e46c83a06b0b11fe0e815fcb301145111cd0", "0005-finished.json": "3cb8f835b7b676056a46e584aea36f392ed12e78e6dac7bbe92d98ac244db692", "0003-reserved.json": "c6c16b32afbb38278d541f88956a144f6d979082e806d4530cbb3fbd094d4126", "0007-finished.json": "23052cda52586d3e1a54263ddad964da14dbd111ff8ce37d4d90e10ce7ad9610", "0001-finished.json": "95fe74dd1ed2cc01fedc483040f9b3ed83c4553a33279cd69df2f026031d83d4", "0004-reserved.json": "b4fb8cc5ef62cf99535e166815a72d05c0135eb205587e3d6ae5d3d958eb9742", "policy.json": "77c93e624ee33dd60bf75e3c5e290016d1c1c2f48e3b34badb7457e0a287f81b", "0010-reserved.json": "05970709bda97153a7c27dcbe7bf9b7a02127916b3d8d434a78e7e7af777813d", "0013-finished.json": "e43094fcb9c4b94d33460ea0ec818ae024d20da691c9e2cbd5875c3e4fba8362", "0006-reserved.json": "decd9e1d0f2a328678ea77b4434ba24efc56050a9b51699fdb0833e2e5a976df", "0001-reserved.json": "208bd4de31a89a39958a836ddf5129d6f98fb53ae5a401c269abc24936d65042", "0012-reserved.json": "59ad24a3258337ca1d7a44dce500c1fd381e1bef3bab57f3a88840f4ac8509a7", "0009-finished.json": "bab40b84f0afca7c907fda0fe1e995d815635fe875e326373ad98fcb381eb81e", "0012-finished.json": "6906ddc398809970a1a153fa8f0587eaa43cace65541ab6ec4e61b67a68c9193", "0004-finished.json": "6c03f6627176c012576980664cfe7b7d4d8183de8b4e30fdca460a884662c800", "0006-finished.json": "644a61f1da764ef08c46ae8c937f288912e503e67e053d9a3a8601f72a574e88", "0010-finished.json": "826a0c69c3eeffe066a6770a1c1915e8f8a36a2a4e94b49e223448994de6c23f", "0011-reserved.json": "eba486dc76e8df511737f7b414fcccf56d1b28169faa6d837e0d31c2a942f5c6", "0008-finished.json": "629bd2b73f7d977edcf665d6afced9a5cc9503b16366ec0d7b4fc5dea85a9c6f", "0003-finished.json": "530b103796a48060693baf54fd094689229020f3023334653c909e3630ed790e", "0008-reserved.json": "6e547538744224d5890a2014a62bf6a304ea06ea0508398bfe4441b9fe28d890", "0011-finished.json": "a830b675616a24c765ae915b5fdc11e724061f57cc6685d95602a42e4c8f4696", "0005-reserved.json": "571407f8315b9130e73ff9c1c6161624728fbec492f0b92dfc48c9f4f559ef45", "0002-finished.json": "4335047a8281d4f4162295267cc07901b71462192c266f019e6a84c7b70025b7", "0013-reserved.json": "b8ba770f699eafec066ffaaeff067ec140722973a7239f6eac705ede198a52d3"}, "new_attempts": 0, "source_differences": ["scripts/nhost.py", "scripts/nhost_benchmark.py", "scripts/nhost_budget.py", "services/nhost/README.md", "test/baas/test_nhost_attempt_budget.py", "test/baas/test_nhost_control.py", "test/baas/test_nhost_evidence.py", "test/baas/test_nhost_report_metadata.py"], "app_sha256": "4880698fde7c5b947305482566f47282e08c43126ba985f86c37200de2916fbb", "verification_sha256": "32e6f7ac0e9c97537ce60a22dd5d62b498ccbfae8943b1bf77e03e4236cb8122", "closure_original_sha256": "df45d1ff722a78a2cde337c7b093b9960ad9c3df70f542e9ad4b1dcbd53783d3"}
+NATIVE_CURRENT_UTC 2026-10-17T16:53:42Z
+
+READONLY_LIVE_SCHEDULE fwupd.service Type=dbus
+MainPID=0
+ActiveState=inactive
+SubState=dead
+
+READONLY_LIVE_SCHEDULE fwupd-refresh.timer NextElapseUSecRealtime=Sat 2026-10-17 17:05:30 UTC
+LastTriggerUSec=Sat 2026-10-17 16:39:58 UTC
+ActiveState=active
+SubState=waiting
+
+{"unit": "tds-nhost-verifier-v6-green-admission-v1", "native_exit": 0, "raw_log_bytes": 23552, "raw_log_sha256": "dbefee8bfd9939143c246da67384da410d895796a4b1a0009eb3ba0ee962e2c7", "actual_private_candidates_checked": 20052, "issued_signatures_checked": 80032, "transfer_and_privacy_limits": {"cpu.max": "200000 100000", "memory.max": "4294967296", "memory.swap.max": "0"}, "findings": []}

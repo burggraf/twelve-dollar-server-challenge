@@ -1,0 +1,201 @@
+[
+  {
+    "type": "pg_track_table",
+    "args": {
+      "source": "default",
+      "table": {
+        "schema": "feed_api",
+        "name": "result"
+      }
+    }
+  },
+  {
+    "type": "pg_create_select_permission",
+    "args": {
+      "source": "default",
+      "table": {
+        "schema": "feed_api",
+        "name": "result"
+      },
+      "role": "feed_reader",
+      "permission": {
+        "columns": [
+          "payload"
+        ],
+        "filter": {}
+      }
+    }
+  },
+  {
+    "type": "pg_create_select_permission",
+    "args": {
+      "source": "default",
+      "table": {
+        "schema": "feed_api",
+        "name": "result"
+      },
+      "role": "feed_writer",
+      "permission": {
+        "columns": [
+          "payload"
+        ],
+        "filter": {}
+      }
+    }
+  },
+  {
+    "type": "pg_track_function",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_health"
+      },
+      "configuration": {
+        "exposed_as": "query"
+      }
+    }
+  },
+  {
+    "type": "pg_create_function_permission",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_health"
+      },
+      "role": "feed_reader"
+    }
+  },
+  {
+    "type": "pg_create_function_permission",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_health"
+      },
+      "role": "feed_writer"
+    }
+  },
+  {
+    "type": "pg_track_function",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_feed"
+      },
+      "configuration": {
+        "exposed_as": "query"
+      }
+    }
+  },
+  {
+    "type": "pg_create_function_permission",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_feed"
+      },
+      "role": "feed_reader"
+    }
+  },
+  {
+    "type": "pg_create_function_permission",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_feed"
+      },
+      "role": "feed_writer"
+    }
+  },
+  {
+    "type": "pg_track_function",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_detail"
+      },
+      "configuration": {
+        "exposed_as": "query"
+      }
+    }
+  },
+  {
+    "type": "pg_create_function_permission",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_detail"
+      },
+      "role": "feed_reader"
+    }
+  },
+  {
+    "type": "pg_create_function_permission",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_detail"
+      },
+      "role": "feed_writer"
+    }
+  },
+  {
+    "type": "pg_track_function",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_create_post"
+      },
+      "configuration": {
+        "exposed_as": "mutation",
+        "session_argument": "hasura_session"
+      }
+    }
+  },
+  {
+    "type": "pg_create_function_permission",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_create_post"
+      },
+      "role": "feed_writer"
+    }
+  },
+  {
+    "type": "pg_track_function",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_like_post"
+      },
+      "configuration": {
+        "exposed_as": "mutation",
+        "session_argument": "hasura_session"
+      }
+    }
+  },
+  {
+    "type": "pg_create_function_permission",
+    "args": {
+      "source": "default",
+      "function": {
+        "schema": "public",
+        "name": "nhost_like_post"
+      },
+      "role": "feed_writer"
+    }
+  }
+]

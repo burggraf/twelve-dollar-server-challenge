@@ -1,0 +1,36 @@
+{
+  "profile": "nhost-native-graphql-adapter-profile-v1",
+  "source_commit": "26cb0f1b2ff3094b36cd984204a714357c9182c5",
+  "source_base_commit": "161af0ef353aa6842b15046090a9e1af0068632b",
+  "images": {
+    "graphql": {
+      "tag": "nhost/graphql-engine:v2.46.0-ce",
+      "index_digest": "sha256:bfc3e5fd51e87f99dc0894976f16c14165d9c0fbd1fe503a3ebfbaf02600fed0",
+      "amd64_manifest": "sha256:2e024eca819824fe288f9d43a77008fda66b7266cf5be60002a56e6d73073e1a",
+      "index_document_sha256": "bfc3e5fd51e87f99dc0894976f16c14165d9c0fbd1fe503a3ebfbaf02600fed0",
+      "platform": "linux/amd64"
+    },
+    "auth": {
+      "tag": "nhost/auth:0.40.2",
+      "index_digest": "sha256:8674c405184e0b14f5cb80912b1275ac51fb0325035862dacfe943ad77de95b3",
+      "amd64_manifest": "sha256:1e8c3e8bb4c6977098c87aa8643d60d7e00fd9042d48b43f49226e21efe5a727",
+      "index_document_sha256": "8674c405184e0b14f5cb80912b1275ac51fb0325035862dacfe943ad77de95b3",
+      "platform": "linux/amd64"
+    },
+    "db": {
+      "tag": "postgres:16-bookworm",
+      "index_digest": "sha256:0ea6700a3b4f0ae6ce746519073558aed4d88a79d8d07622a9a644946c7319c4",
+      "amd64_manifest": "sha256:ec9f656f17c8b4dfebf49e58cf5c46d493d4846d4ea6d8b85d0637f68ee33bfc",
+      "index_document_sha256": "0ea6700a3b4f0ae6ce746519073558aed4d88a79d8d07622a9a644946c7319c4",
+      "platform": "linux/amd64"
+    },
+    "adapter": {
+      "tag": "node:22.22.2-bookworm-slim",
+      "index_digest": "sha256:9f6d5975c7dca860947d3915877f85607946403fc55349f39b4bc3688448bb6e",
+      "amd64_manifest": "sha256:868499d55378719bffa87b0ed1f099591823c029b543043c09c2483468e93201",
+      "index_document_sha256": "9f6d5975c7dca860947d3915877f85607946403fc55349f39b4bc3688448bb6e",
+      "platform": "linux/amd64"
+    }
+  },
+  "notes": "Official self-host example component selection, not CLI1.52 as a full-stack version. API-serving subset; no Functions simulator. PostgreSQL patch and running binary versions must be collected natively."
+}

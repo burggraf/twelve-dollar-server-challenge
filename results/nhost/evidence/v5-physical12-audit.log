@@ -1,0 +1,622 @@
+correctness-manifest.json: OK
+correctness.log: OK
+dataset.json: OK
+k6-summary.json: OK
+k6.log: OK
+manifest.json: OK
+report.md: OK
+resources.jsonl: OK
+samples.json.gz: OK
+source.tar.gz: OK
+summary.json: OK
+working-tree.patch: OK
+ORIGINAL_CONTINUITY_SUMMARY_AND_JOURNAL_REPLAY pre-load-quiet {"valid": true, "window_complete": true, "window_start": 1792251989.9638267, "window_end": 1792252590.1284482, "policy": "strict; no Nhost-specific fwupd exception", "possible_performance_interference_not_ruled_out": true, "persistent_service_event_counts": {}, "nonpersistent_oneshot_event_counts_disclosed": {"sysstat-collect.service": 2, "user-runtime-dir@0.service": 8}, "unit_classification": {"sysstat-collect.service": {"type": "oneshot", "active_state": "inactive", "sub_state": "dead", "no_resident_processes": true}, "user-runtime-dir@0.service": {"type": "oneshot", "active_state": "active", "sub_state": "exited", "no_resident_processes": true}}, "manager_events": {"bytes": 88242, "sha256": "1837ebfa45950c8b502090921a1ba9466fd504cdeab46e6f643ab1e3eed0c0b1", "distribution": "PRIVATE NATIVE HOST ONLY"}, "coverage_anchor": {"bytes": 734, "sha256": "f0425e7d8e6b26b90946b1cf8539e8519a96b816ecd094e554e98968b2241c87", "distribution": "PRIVATE NATIVE HOST ONLY"}}
+ORIGINAL_CONTINUITY_SUMMARY_AND_JOURNAL_REPLAY continuity {"valid": true, "window_complete": true, "window_start": 1792252805.8743808, "window_end": 1792253359.3158393, "policy": "strict; no Nhost-specific fwupd exception", "possible_performance_interference_not_ruled_out": true, "persistent_service_event_counts": {}, "nonpersistent_oneshot_event_counts_disclosed": {}, "unit_classification": {}, "manager_events": {"bytes": 11404, "sha256": "df7fe94675899eb1d323ca58b8e8ca91f5c072a784a72519a17c8a1dd7282a00", "distribution": "PRIVATE NATIVE HOST ONLY"}, "coverage_anchor": {"bytes": 1059, "sha256": "8408db894d4c2561242dfb7489e1549d8aadb9b5aaa283b02ae08feb4e295865", "distribution": "PRIVATE NATIVE HOST ONLY"}}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253022.6476548, "runner": {"BlockIO": "0B / 4.56MB", "CPUPerc": "24.30%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "15.53%", "MemUsage": "1.242GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "71.2MB / 11.2MB", "PIDs": "10"}, "serving_memory_current": "1782173696\n", "serving_memory_events": "low 0\nhigh 0\nmax 4743\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253027.6857555, "runner": {"BlockIO": "0B / 4.56MB", "CPUPerc": "23.47%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "17.18%", "MemUsage": "1.374GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "75.6MB / 12MB", "PIDs": "10"}, "serving_memory_current": "1762635776\n", "serving_memory_events": "low 0\nhigh 0\nmax 4746\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253032.7255454, "runner": {"BlockIO": "0B / 5.05MB", "CPUPerc": "25.17%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "17.59%", "MemUsage": "1.407GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "79.2MB / 12.5MB", "PIDs": "10"}, "serving_memory_current": "1746571264\n", "serving_memory_events": "low 0\nhigh 0\nmax 4748\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253037.7687805, "runner": {"BlockIO": "0B / 5.05MB", "CPUPerc": "24.95%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "17.59%", "MemUsage": "1.407GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "82.2MB / 13MB", "PIDs": "10"}, "serving_memory_current": "1748750336\n", "serving_memory_events": "low 0\nhigh 0\nmax 4757\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253042.8041277, "runner": {"BlockIO": "0B / 5.05MB", "CPUPerc": "25.75%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "17.59%", "MemUsage": "1.407GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "85.8MB / 13.6MB", "PIDs": "10"}, "serving_memory_current": "1749741568\n", "serving_memory_events": "low 0\nhigh 0\nmax 4759\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253047.8525891, "runner": {"BlockIO": "0B / 5.81MB", "CPUPerc": "23.08%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "17.59%", "MemUsage": "1.407GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "89.7MB / 14.2MB", "PIDs": "10"}, "serving_memory_current": "1750392832\n", "serving_memory_events": "low 0\nhigh 0\nmax 4765\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253052.889666, "runner": {"BlockIO": "0B / 5.81MB", "CPUPerc": "25.08%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "17.59%", "MemUsage": "1.407GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "93.3MB / 14.8MB", "PIDs": "10"}, "serving_memory_current": "1767211008\n", "serving_memory_events": "low 0\nhigh 0\nmax 4842\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253057.9272351, "runner": {"BlockIO": "0B / 6.3MB", "CPUPerc": "23.16%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.16%", "MemUsage": "1.453GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "97.8MB / 15.6MB", "PIDs": "10"}, "serving_memory_current": "1754333184\n", "serving_memory_events": "low 0\nhigh 0\nmax 4847\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253062.9715571, "runner": {"BlockIO": "0B / 6.3MB", "CPUPerc": "24.49%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.57%", "MemUsage": "1.485GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "102MB / 16.2MB", "PIDs": "10"}, "serving_memory_current": "1759821824\n", "serving_memory_events": "low 0\nhigh 0\nmax 4851\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253068.0074716, "runner": {"BlockIO": "0B / 6.3MB", "CPUPerc": "24.34%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.57%", "MemUsage": "1.485GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "105MB / 16.8MB", "PIDs": "10"}, "serving_memory_current": "1756160000\n", "serving_memory_events": "low 0\nhigh 0\nmax 4851\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253073.0558987, "runner": {"BlockIO": "0B / 6.3MB", "CPUPerc": "24.03%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.57%", "MemUsage": "1.485GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "109MB / 17.3MB", "PIDs": "11"}, "serving_memory_current": "1753997312\n", "serving_memory_events": "low 0\nhigh 0\nmax 4854\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253078.0930915, "runner": {"BlockIO": "0B / 6.3MB", "CPUPerc": "24.79%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.57%", "MemUsage": "1.486GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "112MB / 17.9MB", "PIDs": "11"}, "serving_memory_current": "1758765056\n", "serving_memory_events": "low 0\nhigh 0\nmax 4882\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253083.1343985, "runner": {"BlockIO": "0B / 6.3MB", "CPUPerc": "24.47%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.57%", "MemUsage": "1.486GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "116MB / 18.5MB", "PIDs": "11"}, "serving_memory_current": "1754484736\n", "serving_memory_events": "low 0\nhigh 0\nmax 4901\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253088.1699812, "runner": {"BlockIO": "0B / 7.8MB", "CPUPerc": "24.22%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.57%", "MemUsage": "1.486GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "119MB / 19MB", "PIDs": "11"}, "serving_memory_current": "1758494720\n", "serving_memory_events": "low 0\nhigh 0\nmax 4904\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253093.206214, "runner": {"BlockIO": "0B / 7.8MB", "CPUPerc": "24.14%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.58%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "123MB / 19.6MB", "PIDs": "11"}, "serving_memory_current": "1761406976\n", "serving_memory_events": "low 0\nhigh 0\nmax 4988\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253098.2502437, "runner": {"BlockIO": "0B / 7.8MB", "CPUPerc": "25.45%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.58%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "126MB / 20.2MB", "PIDs": "11"}, "serving_memory_current": "1758310400\n", "serving_memory_events": "low 0\nhigh 0\nmax 5009\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253103.2860773, "runner": {"BlockIO": "0B / 7.8MB", "CPUPerc": "24.56%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.58%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "131MB / 20.9MB", "PIDs": "11"}, "serving_memory_current": "1758531584\n", "serving_memory_events": "low 0\nhigh 0\nmax 5011\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253108.3278959, "runner": {"BlockIO": "0B / 7.8MB", "CPUPerc": "25.24%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.58%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "134MB / 21.5MB", "PIDs": "11"}, "serving_memory_current": "1759522816\n", "serving_memory_events": "low 0\nhigh 0\nmax 5014\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253113.3721488, "runner": {"BlockIO": "0B / 7.8MB", "CPUPerc": "23.77%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "137MB / 22MB", "PIDs": "11"}, "serving_memory_current": "1774510080\n", "serving_memory_events": "low 0\nhigh 0\nmax 5014\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253118.406471, "runner": {"BlockIO": "0B / 9.27MB", "CPUPerc": "23.57%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.58%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "142MB / 22.7MB", "PIDs": "11"}, "serving_memory_current": "1760411648\n", "serving_memory_events": "low 0\nhigh 0\nmax 5015\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253123.454763, "runner": {"BlockIO": "0B / 9.27MB", "CPUPerc": "24.42%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "145MB / 23.2MB", "PIDs": "11"}, "serving_memory_current": "1760522240\n", "serving_memory_events": "low 0\nhigh 0\nmax 5015\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253128.4922771, "runner": {"BlockIO": "0B / 9.27MB", "CPUPerc": "24.69%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "149MB / 23.9MB", "PIDs": "11"}, "serving_memory_current": "1760317440\n", "serving_memory_events": "low 0\nhigh 0\nmax 5016\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253133.5334702, "runner": {"BlockIO": "0B / 9.27MB", "CPUPerc": "25.02%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.58%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "153MB / 24.5MB", "PIDs": "11"}, "serving_memory_current": "1760665600\n", "serving_memory_events": "low 0\nhigh 0\nmax 5018\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253138.57749, "runner": {"BlockIO": "0B / 10.1MB", "CPUPerc": "24.77%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "157MB / 25.1MB", "PIDs": "11"}, "serving_memory_current": "1775366144\n", "serving_memory_events": "low 0\nhigh 0\nmax 5018\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253143.615202, "runner": {"BlockIO": "0B / 10.1MB", "CPUPerc": "24.34%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.58%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "160MB / 25.6MB", "PIDs": "11"}, "serving_memory_current": "1760284672\n", "serving_memory_events": "low 0\nhigh 0\nmax 5020\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253148.6602745, "runner": {"BlockIO": "0B / 10.1MB", "CPUPerc": "22.78%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "163MB / 26.2MB", "PIDs": "11"}, "serving_memory_current": "1760796672\n", "serving_memory_events": "low 0\nhigh 0\nmax 5022\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253153.698182, "runner": {"BlockIO": "0B / 10.8MB", "CPUPerc": "22.71%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "167MB / 26.8MB", "PIDs": "11"}, "serving_memory_current": "1762000896\n", "serving_memory_events": "low 0\nhigh 0\nmax 5023\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253158.740854, "runner": {"BlockIO": "0B / 10.8MB", "CPUPerc": "22.26%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.488GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "171MB / 27.6MB", "PIDs": "11"}, "serving_memory_current": "1762369536\n", "serving_memory_events": "low 0\nhigh 0\nmax 5024\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253163.7797422, "runner": {"BlockIO": "0B / 10.8MB", "CPUPerc": "23.66%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "174MB / 28MB", "PIDs": "11"}, "serving_memory_current": "1762340864\n", "serving_memory_events": "low 0\nhigh 0\nmax 5028\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253168.816572, "runner": {"BlockIO": "0B / 11.6MB", "CPUPerc": "24.39%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "178MB / 28.7MB", "PIDs": "11"}, "serving_memory_current": "1763917824\n", "serving_memory_events": "low 0\nhigh 0\nmax 5028\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253173.8652668, "runner": {"BlockIO": "0B / 11.6MB", "CPUPerc": "21.72%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.488GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "182MB / 29.3MB", "PIDs": "11"}, "serving_memory_current": "1778937856\n", "serving_memory_events": "low 0\nhigh 0\nmax 5028\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253178.899115, "runner": {"BlockIO": "0B / 11.6MB", "CPUPerc": "22.34%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.59%", "MemUsage": "1.487GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "186MB / 30MB", "PIDs": "11"}, "serving_memory_current": "1770532864\n", "serving_memory_events": "low 0\nhigh 0\nmax 5028\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253183.9402876, "runner": {"BlockIO": "0B / 12.3MB", "CPUPerc": "23.86%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.63%", "MemUsage": "1.491GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "190MB / 30.5MB", "PIDs": "11"}, "serving_memory_current": "1760043008\n", "serving_memory_events": "low 0\nhigh 0\nmax 5036\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253188.9787366, "runner": {"BlockIO": "0B / 12.3MB", "CPUPerc": "24.23%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "194MB / 31.2MB", "PIDs": "11"}, "serving_memory_current": "1761947648\n", "serving_memory_events": "low 0\nhigh 0\nmax 5037\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253194.0149448, "runner": {"BlockIO": "0B / 12.3MB", "CPUPerc": "26.31%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.71%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "197MB / 31.7MB", "PIDs": "11"}, "serving_memory_current": "1759547392\n", "serving_memory_events": "low 0\nhigh 0\nmax 5041\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253199.0699444, "runner": {"BlockIO": "0B / 13.1MB", "CPUPerc": "24.62%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "201MB / 32.3MB", "PIDs": "11"}, "serving_memory_current": "1759379456\n", "serving_memory_events": "low 0\nhigh 0\nmax 5041\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253204.1046531, "runner": {"BlockIO": "0B / 13.1MB", "CPUPerc": "25.23%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.71%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "205MB / 32.9MB", "PIDs": "11"}, "serving_memory_current": "1761325056\n", "serving_memory_events": "low 0\nhigh 0\nmax 5041\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253209.1600947, "runner": {"BlockIO": "0B / 13.1MB", "CPUPerc": "126.80%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "209MB / 33.6MB", "PIDs": "11"}, "serving_memory_current": "1776173056\n", "serving_memory_events": "low 0\nhigh 0\nmax 5042\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253214.200652, "runner": {"BlockIO": "0B / 13.1MB", "CPUPerc": "24.27%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.71%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "213MB / 34.3MB", "PIDs": "11"}, "serving_memory_current": "1762344960\n", "serving_memory_events": "low 0\nhigh 0\nmax 5043\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253219.2431161, "runner": {"BlockIO": "0B / 13.1MB", "CPUPerc": "24.50%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "216MB / 34.8MB", "PIDs": "11"}, "serving_memory_current": "1764286464\n", "serving_memory_events": "low 0\nhigh 0\nmax 5044\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253224.280819, "runner": {"BlockIO": "0B / 13.1MB", "CPUPerc": "25.42%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "219MB / 35.4MB", "PIDs": "11"}, "serving_memory_current": "1765584896\n", "serving_memory_events": "low 0\nhigh 0\nmax 5045\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253229.3178186, "runner": {"BlockIO": "0B / 14.6MB", "CPUPerc": "24.28%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "223MB / 36MB", "PIDs": "11"}, "serving_memory_current": "1767706624\n", "serving_memory_events": "low 0\nhigh 0\nmax 5045\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253234.3679187, "runner": {"BlockIO": "0B / 14.6MB", "CPUPerc": "23.70%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.498GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "227MB / 36.7MB", "PIDs": "11"}, "serving_memory_current": "1757167616\n", "serving_memory_events": "low 0\nhigh 0\nmax 5045\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253239.4028447, "runner": {"BlockIO": "0B / 14.6MB", "CPUPerc": "99.59%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "231MB / 37.3MB", "PIDs": "11"}, "serving_memory_current": "1757683712\n", "serving_memory_events": "low 0\nhigh 0\nmax 5045\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253244.4462318, "runner": {"BlockIO": "0B / 14.6MB", "CPUPerc": "25.46%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.498GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "234MB / 37.8MB", "PIDs": "11"}, "serving_memory_current": "1765117952\n", "serving_memory_events": "low 0\nhigh 0\nmax 5065\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253249.4818988, "runner": {"BlockIO": "0B / 14.6MB", "CPUPerc": "23.00%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.498GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "238MB / 38.3MB", "PIDs": "11"}, "serving_memory_current": "1750556672\n", "serving_memory_events": "low 0\nhigh 0\nmax 5066\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253254.5168955, "runner": {"BlockIO": "0B / 14.6MB", "CPUPerc": "24.20%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.72%", "MemUsage": "1.497GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "242MB / 39.1MB", "PIDs": "11"}, "serving_memory_current": "1752551424\n", "serving_memory_events": "low 0\nhigh 0\nmax 5066\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253259.5655332, "runner": {"BlockIO": "0B / 16.1MB", "CPUPerc": "25.25%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "246MB / 39.7MB", "PIDs": "11"}, "serving_memory_current": "1752707072\n", "serving_memory_events": "low 0\nhigh 0\nmax 5066\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253264.6031876, "runner": {"BlockIO": "0B / 16.1MB", "CPUPerc": "25.41%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "249MB / 40.1MB", "PIDs": "11"}, "serving_memory_current": "1753837568\n", "serving_memory_events": "low 0\nhigh 0\nmax 5066\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253269.6485288, "runner": {"BlockIO": "0B / 16.1MB", "CPUPerc": "57.32%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "253MB / 40.8MB", "PIDs": "11"}, "serving_memory_current": "1753694208\n", "serving_memory_events": "low 0\nhigh 0\nmax 5066\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253274.6908443, "runner": {"BlockIO": "0B / 16.1MB", "CPUPerc": "25.00%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "257MB / 41.4MB", "PIDs": "11"}, "serving_memory_current": "1754378240\n", "serving_memory_events": "low 0\nhigh 0\nmax 5066\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253279.729756, "runner": {"BlockIO": "0B / 16.1MB", "CPUPerc": "24.62%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "260MB / 42MB", "PIDs": "11"}, "serving_memory_current": "1756155904\n", "serving_memory_events": "low 0\nhigh 0\nmax 5068\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253284.7730544, "runner": {"BlockIO": "0B / 16.1MB", "CPUPerc": "24.75%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "263MB / 42.5MB", "PIDs": "11"}, "serving_memory_current": "1755557888\n", "serving_memory_events": "low 0\nhigh 0\nmax 5069\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253289.81, "runner": {"BlockIO": "0B / 16.1MB", "CPUPerc": "26.23%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "267MB / 43.1MB", "PIDs": "11"}, "serving_memory_current": "1757003776\n", "serving_memory_events": "low 0\nhigh 0\nmax 5069\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253294.8590217, "runner": {"BlockIO": "0B / 17.6MB", "CPUPerc": "24.08%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "271MB / 43.7MB", "PIDs": "11"}, "serving_memory_current": "1757650944\n", "serving_memory_events": "low 0\nhigh 0\nmax 5069\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253299.8953876, "runner": {"BlockIO": "0B / 17.6MB", "CPUPerc": "24.14%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.504GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "275MB / 44.4MB", "PIDs": "11"}, "serving_memory_current": "1762852864\n", "serving_memory_events": "low 0\nhigh 0\nmax 5069\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253304.9370782, "runner": {"BlockIO": "0B / 17.6MB", "CPUPerc": "23.39%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "278MB / 44.9MB", "PIDs": "11"}, "serving_memory_current": "1762983936\n", "serving_memory_events": "low 0\nhigh 0\nmax 5069\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253309.9745288, "runner": {"BlockIO": "0B / 17.6MB", "CPUPerc": "25.70%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "282MB / 45.5MB", "PIDs": "11"}, "serving_memory_current": "1748869120\n", "serving_memory_events": "low 0\nhigh 0\nmax 5069\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+REVIEW_UNROUNDED_SCORED_RESOURCE_OBSERVATION_RAW_FILE_RETAINED_UNFILTERED {"time": 1792253315.009955, "runner": {"BlockIO": "0B / 17.6MB", "CPUPerc": "25.43%", "Container": "baas-nhost-vps16-load", "ID": "6865d985979b", "MemPerc": "18.81%", "MemUsage": "1.505GiB / 8GiB", "Name": "baas-nhost-vps16-load", "NetIO": "286MB / 46.1MB", "PIDs": "11"}, "serving_memory_current": "1750016000\n", "serving_memory_events": "low 0\nhigh 0\nmax 5069\noom 0\noom_kill 0\noom_group_kill 0\n", "host_swapouts": 0, "monitor_error": null}
+COMPLETE_RAW_K6_LOG_RETAINED_UNALTERED_NATIVE_REPORT_ONLY {"bytes": 3154, "sha256": "4cbc1e78bc4dad1e8df8a654b69f5076f40f92fdca45ade02c17ebc474348385", "lines": 20, "request_failed_lines": 16, "timeout_lines": 0, "connection_reset_lines": 14}
+COMPLETE_UNALTERED_ORIGINAL k6-summary.json 10295 36947403d41b999117aaa91bfd13e8edff2178f6b127e4ec6c1076714ee5f10d
+{
+  "root_group": {
+    "groups": [],
+    "checks": [],
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "options": {
+    "summaryTrendStats": [
+      "avg",
+      "med",
+      "p(95)",
+      "p(99)",
+      "min",
+      "max"
+    ],
+    "summaryTimeUnit": "",
+    "noColor": false
+  },
+  "state": {
+    "isStdOutTTY": false,
+    "isStdErrTTY": false,
+    "testRunDurationMs": 549994.842048
+  },
+  "metrics": {
+    "http_req_duration{phase:hold}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 932.0187343619605,
+        "med": 1289.8914585,
+        "p(95)": 1885.0945765499994,
+        "p(99)": 2031.08329081,
+        "min": 0.631783,
+        "max": 2242.656945
+      },
+      "thresholds": {
+        "p(95)<500": {
+          "ok": false
+        },
+        "p(99)<1000": {
+          "ok": false
+        }
+      }
+    },
+    "schema_errors": {
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 137992
+      },
+      "type": "rate"
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 13522967,
+        "rate": 24587.443310640727
+      }
+    },
+    "http_reqs{phase:hold,endpoint:feed}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 46595,
+        "rate": 84.71897632075155
+      },
+      "thresholds": {
+        "count>=0": {
+          "ok": true
+        }
+      }
+    },
+    "checks": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.9998840512493478,
+        "passes": 137976,
+        "fails": 16
+      }
+    },
+    "request_errors{phase:hold}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.0001482213438735178,
+        "passes": 15,
+        "fails": 101185
+      },
+      "thresholds": {
+        "rate<0.01": {
+          "ok": true
+        }
+      }
+    },
+    "request_errors{phase:hold,endpoint:detail}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 46661
+      },
+      "thresholds": {
+        "rate<=1": {
+          "ok": true
+        }
+      }
+    },
+    "request_errors{phase:hold,endpoint:feed}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "passes": 0,
+        "fails": 46595,
+        "rate": 0
+      },
+      "thresholds": {
+        "rate<=1": {
+          "ok": true
+        }
+      }
+    },
+    "http_reqs{phase:hold,endpoint:create}": {
+      "thresholds": {
+        "count>=0": {
+          "ok": true
+        }
+      },
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 914,
+        "rate": 1.6618337666523644
+      }
+    },
+    "http_req_duration{phase:hold,endpoint:like}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": 0.631783,
+        "max": 2161.282129,
+        "avg": 630.3025509980068,
+        "med": 85.3301415,
+        "p(95)": 1809.4729519499992,
+        "p(99)": 2001.9624627800001
+      },
+      "thresholds": {
+        "max>=0": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_duration{phase:hold,endpoint:detail}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 412.16953316997103,
+        "med": 59.44902,
+        "p(95)": 1735.313768,
+        "p(99)": 1950.9733044,
+        "min": 1.83024,
+        "max": 2144.814823
+      },
+      "thresholds": {
+        "max>=0": {
+          "ok": true
+        }
+      }
+    },
+    "iterations": {
+      "values": {
+        "count": 61701,
+        "rate": 112.18468844225113
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 23,
+        "min": 0,
+        "max": 3500
+      }
+    },
+    "http_req_duration{phase:hold,endpoint:feed}": {
+      "thresholds": {
+        "max>=0": {
+          "ok": true
+        }
+      },
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 1505.1221180374791,
+        "med": 1512.61031,
+        "p(95)": 1947.5415933,
+        "p(99)": 2061.66991382,
+        "min": 4.149905,
+        "max": 2242.656945
+      }
+    },
+    "request_errors{phase:hold,endpoint:create}": {
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 914
+      },
+      "thresholds": {
+        "rate<=1": {
+          "ok": true
+        }
+      },
+      "type": "rate"
+    },
+    "http_req_connecting": {
+      "values": {
+        "max": 43.073429,
+        "avg": 0.10279998923850713,
+        "med": 0.093555,
+        "p(95)": 0.18578799999999965,
+        "p(99)": 0.809592559999992,
+        "min": 0
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_duration{phase:hold,endpoint:create}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 2099.380501,
+        "avg": 575.3405981542671,
+        "med": 80.81065749999999,
+        "p(95)": 1815.7340195499994,
+        "p(99)": 2008.1807042400003,
+        "min": 4.600059
+      },
+      "thresholds": {
+        "max>=0": {
+          "ok": true
+        }
+      }
+    },
+    "http_reqs{phase:hold,endpoint:detail}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 46661,
+        "rate": 84.83897744613344
+      },
+      "thresholds": {
+        "count>=0": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.05357867220563619,
+        "med": 0.042449,
+        "p(95)": 0.088936,
+        "p(99)": 0.3030359999999993,
+        "min": 0,
+        "max": 18.111336
+      }
+    },
+    "http_req_failed": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.00011594875065221172,
+        "passes": 16,
+        "fails": 137976
+      }
+    },
+    "http_reqs{phase:hold}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 101200,
+        "rate": 184.00172558557907
+      },
+      "thresholds": {
+        "count>0": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 719.769228924933,
+        "med": 91.375318,
+        "p(95)": 1836.0821341999995,
+        "p(99)": 2010.24366601,
+        "min": 0.621635,
+        "max": 2242.599065
+      }
+    },
+    "iteration_duration": {
+      "values": {
+        "avg": 22187.355015359517,
+        "med": 22158.462907,
+        "p(95)": 28468.791258,
+        "p(99)": 30883.139314,
+        "min": 11565.920372,
+        "max": 35288.412419
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "schema_errors{phase:hold}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "fails": 101200,
+        "rate": 0,
+        "passes": 0
+      },
+      "thresholds": {
+        "rate==0": {
+          "ok": true
+        }
+      }
+    },
+    "http_reqs{phase:hold,endpoint:like}": {
+      "thresholds": {
+        "count>=0": {
+          "ok": true
+        }
+      },
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 7030,
+        "rate": 12.781938052041708
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "contains": "time",
+      "values": {
+        "min": 1.319854,
+        "max": 2242.656945,
+        "avg": 719.980471588745,
+        "med": 91.493835,
+        "p(95)": 1836.36773675,
+        "p(99)": 2010.32810825
+      },
+      "type": "trend"
+    },
+    "benchmark_scenario_start_ms": {
+      "contains": "default",
+      "values": {
+        "value": 1792252807998,
+        "min": 1792252807998,
+        "max": 1792252807998
+      },
+      "type": "gauge"
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 3500,
+        "min": 2970,
+        "max": 3500
+      }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 137992,
+        "rate": 250.89689838937971
+      }
+    },
+    "http_req_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "med": 91.4303315,
+        "p(95)": 1836.3495148,
+        "p(99)": 2010.32537209,
+        "min": 0.631783,
+        "max": 2242.656945,
+        "avg": 719.8991118773312
+      }
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 265861013,
+        "rate": 483388.19326017855
+      }
+    },
+    "http_req_sending": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "med": 0.024064,
+        "p(95)": 0.053821,
+        "p(99)": 0.13717879999999993,
+        "min": 0.005711,
+        "max": 102.733465,
+        "avg": 0.07630428019015564
+      }
+    },
+    "request_errors{phase:hold,endpoint:like}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "passes": 15,
+        "fails": 7015,
+        "rate": 0.0021337126600284497
+      },
+      "thresholds": {
+        "rate<=1": {
+          "ok": true
+        }
+      }
+    },
+    "request_errors": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.00011594875065221172,
+        "passes": 16,
+        "fails": 137976
+      }
+    },
+    "http_req_tls_handshaking": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(99)": 0,
+        "min": 0,
+        "max": 0,
+        "avg": 0,
+        "med": 0,
+        "p(95)": 0
+      }
+    },
+    "http_req_blocked": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.1370290157182998,
+        "med": 0.1323375,
+        "p(95)": 0.26202044999999996,
+        "p(99)": 0.9103226999999978,
+        "min": 0.002053,
+        "max": 43.109615
+      }
+    }
+  },
+  "benchmark": {
+    "warmup_seconds": 120,
+    "ramp_seconds": 60,
+    "warmup_vus": 1000,
+    "drain_seconds": 30,
+    "workload": "baas-v1",
+    "vus": 3500,
+    "mode": "capacity",
+    "hold_seconds": 300,
+    "warmup_ramp_seconds": 30
+  }
+}
+COMPLETE_UNALTERED_ORIGINAL summary.json 666 09f46271b7caa7ba583a7d807702d9c6a061fff7e9823c51e9549bfbfa3aa663
+{
+  "outcome": "fail",
+  "reason": "hold latency/error/schema gate failed",
+  "vus": 3500,
+  "tier": "standard",
+  "mode": "capacity",
+  "runner_profile": "k6-2cpu-8g-v3",
+  "deployment_track": "vps16-linux-amd64",
+  "platform": "linux/amd64",
+  "hold_requests": 101200,
+  "hold_rps": 337.3333333333333,
+  "latency_ms": {
+    "avg": 932.0187343619605,
+    "med": 1289.8914585,
+    "p(95)": 1885.0945765499994,
+    "p(99)": 2031.08329081,
+    "min": 0.631783,
+    "max": 2242.656945
+  },
+  "request_errors": {
+    "rate": 0.0001482213438735178,
+    "passes": 15,
+    "fails": 101185
+  },
+  "schema_errors": {
+    "fails": 101200,
+    "rate": 0,
+    "passes": 0
+  }
+}
+COMPLETE_UNALTERED_ORIGINAL report.md 1678 8abd8274571c99081a9d2f5d7cebb6cf95a0d0aafc4f2c81f4219a2ce9ed5f1e
+Tested software and VPS slice
+=============================
+
+Nhost GraphQL + measured HTTP adapter, standard shared-host slice, 3500 VUs (capacity).
+Outcome **fail**: hold latency/error/schema gate failed. One attempt, NOT a maximum-capacity claim.
+
+Four serving components (PostgreSQL, Hasura GraphQL, native Auth, adapter) share one kernel-enforced1CPU/4GiB/no-swap parent. Separate native k6 runner:2CPU/8GiB/no-swap, k6-2cpu-8g-v3.
+Compatibility authentication is measured; native signup/login/session throughput is not. No adapter DB driver, response/count/JWT-verification cache or development Functions simulator. The disclosed packaged serving subset is not a cloud/default-whole-platform equivalence claim.
+
+Hold requests 101200; requests/s 337.3333333333333; unrounded latency/error observations: summary.json and original k6-summary.json. Full300-second scored hold; capacity needs bounded search and independent confirmations.
+Raw start-tagged endpoint samples: samples.json.gz. Aggregate/component/runner/host metrics: resources.jsonl. Continuity, identities, actual budgets and source/runtime/schema/metadata/image/token fingerprints: manifest.json. Canonical dataset/full frozen qualification: dataset.json, correctness.log and correctness-manifest.json.
+Reproduction overlay source.tar.gz and working-tree.patch bind the recorded base commit; verify SHA256SUMS. Native private runtime inputs, JWT fixtures and pre-reset database dumps are deliberately excluded.
+Shared VPS price/region unknown. No cost/request, dedicated-$12 or power-loss certification claim. Stock GraphQL137(nonOOM)/Auth2 shutdown history is retained; do not call it a clean full-stack exit.
+COMPLETE_UNALTERED_ORIGINAL dataset.json 427 ed3669c5c3999241fe9ba274b914cfbf90e0314139bfc58d24594033e5a3df94
+{
+  "counts": {
+    "users": 50000,
+    "posts": 500000,
+    "likes": 2016005
+  },
+  "content_sha256": "738d11ab3164c13177e347f75038d1e80b43c64e754544a42d1c32bd8d7bcf1d",
+  "pre_reset_dump_sha256": "c4136bd30a2872952071b820d3ac2705faf2454f2ae7eed687d206b26941bfdd",
+  "native_auth_accounts_before": 0,
+  "native_auth_accounts_after": 0,
+  "body_storage": "UTF-8 bytea; native GraphQL transport; full stored logical-row hash"
+}
+RECORDED_RUNNER_WHITELIST_AND_CLOSURE {"load_after": {"Id": "6865d985979b00cc35eea727bcc286e04097b7669c567849efadf8c2c469605f", "Image": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656", "RestartCount": 0, "State": {"Status": "exited", "Running": false, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 0, "ExitCode": 99, "Error": "", "StartedAt": "2026-10-17T16:00:06.213294232Z", "FinishedAt": "2026-10-17T16:09:18.181247657Z"}, "limits": {"NanoCpus": 2000000000, "Memory": 8589934592, "MemorySwap": 8589934592}, "source_sha256": null, "platform": "linux/amd64", "image_manifest_digest": "sha256:a90b459a3768c46ad1013da53af24189f735d7112273c6ac3212ca8ed0e18656"}, "closure": {"terminal": {"db": {"state": "exited", "running": false, "pid": 0, "exit_code": 0, "oom": false, "restarts": 0}, "graphql": {"state": "exited", "running": false, "pid": 0, "exit_code": 137, "oom": false, "restarts": 0}, "auth": {"state": "exited", "running": false, "pid": 0, "exit_code": 2, "oom": false, "restarts": 0}, "adapter": {"state": "exited", "running": false, "pid": 0, "exit_code": 0, "oom": false, "restarts": 0}}, "failures": [], "all_stopped": true, "full_stack_clean_stop": false, "remaining_untimed_tools": [], "changed_persistent_services": []}, "reservation": {"ordinal": 12, "vus": 3500, "mode": "capacity", "proof_sha256": "9f15d527f382b2baaaa5ba8132a1d395b2988e27a474aa22fc9382698c7eb281", "pid": 364750}, "finished": {"ordinal": 12, "outcome": "fail", "path": "results/nhost/vps16-linux-amd64/20261017T155629948103Z-standard-3500vu-k6-2cpu-8g-v3"}}
+RAW_START_TAGGED_SAMPLES_INDEPENDENT_REPLAY {"scenario_start": 1792252807.998, "hold_requests": 101200, "hold_endpoint_requests": {"detail": 46661, "like": 7030, "feed": 46595, "create": 914}, "latency_ms": {"p(95)": 1885.0945765499994, "p(99)": 2031.08329081}, "request_errors": 15, "unexpected_statuses": [{"endpoint": "like", "status": "0", "error_code": "1000", "error": "", "count": 2}, {"endpoint": "like", "status": "0", "error_code": "1220", "error": "", "count": 13}], "schema_errors": 0, "resource_samples": 110, "scored_resource_samples": 59}
+NATIVE_ORIGINAL_FILE_HASHES {"SHA256SUMS": {"bytes": 972, "sha256": "602bdcb25e37b4768b05b3328bb7366fac946407ec350b595affd04ebacea55c"}, "correctness-manifest.json": {"bytes": 32215, "sha256": "9f15d527f382b2baaaa5ba8132a1d395b2988e27a474aa22fc9382698c7eb281"}, "correctness.log": {"bytes": 9098, "sha256": "da85006d8da41058b12e9e51676035f4a9e816a7649876101603364c9b66e3a9"}, "dataset.json": {"bytes": 427, "sha256": "ed3669c5c3999241fe9ba274b914cfbf90e0314139bfc58d24594033e5a3df94"}, "k6-summary.json": {"bytes": 10295, "sha256": "36947403d41b999117aaa91bfd13e8edff2178f6b127e4ec6c1076714ee5f10d"}, "k6.log": {"bytes": 3154, "sha256": "4cbc1e78bc4dad1e8df8a654b69f5076f40f92fdca45ade02c17ebc474348385"}, "manifest.json": {"bytes": 53488, "sha256": "1004f3a1e02974f9612af67b7e410f351347894af0fb6cbd1fa9be218073a849"}, "report.md": {"bytes": 1678, "sha256": "8abd8274571c99081a9d2f5d7cebb6cf95a0d0aafc4f2c81f4219a2ce9ed5f1e"}, "resources.jsonl": {"bytes": 1353743, "sha256": "3643a38fc0a27d06aed6be83cbb17c0aa46bbd716eadb8bcdceec11e9bcbe4fb"}, "samples.json.gz": {"bytes": 20027114, "sha256": "28166fdb1de8f25c8cbe4a8a17fc87b8cb7ea82c72cc471fe34ba6517c6a60ac"}, "source.tar.gz": {"bytes": 187273, "sha256": "705efde3a29802fe946f27a987680e8eccd07835972d3cf9004bcaac865e754e"}, "summary.json": {"bytes": 666, "sha256": "09f46271b7caa7ba583a7d807702d9c6a061fff7e9823c51e9549bfbfa3aa663"}, "working-tree.patch": {"bytes": 2832, "sha256": "5472d57916eea2615984bb369802b19c5d652a2b045181c409ef3e24669e0cdb"}}
+SCORED_ATTEMPT_RAW_RESOURCE_CONTINUITY_PROOF_SOURCE_CHECKSUM_REPLAY_VERIFIED 12 fail 9f15d527f382b2baaaa5ba8132a1d395b2988e27a474aa22fc9382698c7eb281
+NATIVE_CURRENT_UTC=2026-10-17T16:11:32Z
+NextElapseUSecRealtime=Sat 2026-10-17 16:39:40 UTC
+LastTriggerUSec=Sat 2026-10-17 15:03:04 UTC
+ActiveState=active
+SubState=waiting
+{"unit": "tds-nhost-strict-segment02-slot12-raw-review-v1", "native_exit": 0, "raw_log_bytes": 50592, "raw_log_sha256": "a28a24fe660dd1fd4a57cc04296fbc380855c0285a72ee66342a3ea9f32e7564", "actual_private_candidates_checked": 20052, "issued_signatures_checked": 80032, "transfer_and_privacy_limits": {"cpu.max": "200000 100000", "memory.max": "4294967296", "memory.swap.max": "0"}, "findings": []}

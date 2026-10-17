@@ -1,5 +1,14 @@
 # Benchmark artifact storage
 
+## Closed Nhost result
+
+[Nhost benchmark closure](nhost/README.md): highest tested passing load **3,250 VUs**;
+next higher tested load **3,500 VUs failed**. Exact maximum not established.
+Three fresh v6 confirmations separately establish a repeatable3,000-VU lower bound.
+The report includes previously cleared audit logs, **not complete raw bundles**;
+Nhost archives remain native because export privacy clearance is incomplete.
+No further tests or audits are scheduled.
+
 Git tracks the benchmark reports, summaries, manifests, checksums, resource samples,
 logs, and supporting review documents. It does **not** track these bulky generated
 files under `results/`:
